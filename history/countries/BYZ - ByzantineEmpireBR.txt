@@ -16,6 +16,21 @@ patriarch_authority = 0.15
 #BR initiator because Paradox coded on_actions weirdly. This flag is literally only here to tell on_startup that this mod is in fact loaded, without causing conflicts with my other mods that depend on on_actions.
 set_global_flag = byz_resurgence_loaded
 
+add_country_modifier = {
+	name = "byz_bad_navy"
+	duration = -1
+}
+
+add_country_modifier = {
+	name = "byz_bad_economy"
+	duration = -1
+}
+
+add_country_modifier = {
+	name = "byz_bad_military"
+	duration = -1
+}
+
 		
 1391.2.16 = {
 	monarch = {

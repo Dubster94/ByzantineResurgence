@@ -442,6 +442,16 @@
  gre_mission_flavor.2.b:0 "Release a March to relieve administrative & military duties"
  
  #Mission modifiers
+ byz_bad_navy:0 "Foreign Fleet"
+ desc_byz_bad_navy:0 "Since the neglect of the navy since the Angeloi prior to the 4th Crusade, the Byzantines have yet to manage a domestic fleet of their own. As a result of this, the Byzantines have been forced to rely on Genoese and Venetian seamen for their ventures, whose loyalty only lie in their greed."
+ byz_bad_economy:0 "Hyperinflation"
+ desc_byz_bad_economy:0 "Since the fall of Constantinople in the 4th Crusade, the Byzantine economy has had major issues. In no small part due to the destruction and plunder by the Crusaders, but also because of the lack of state income after the reconquest of the city. Since the Genoese and Italians were siphoning off the Byzantine trade, there was little way for the Emperors to generate revenue, and with an increased reliance on foreign military and navy, the Byzantine government lay heavily in debt that it was unable to pay off. Combined with the Bullion famine in Europe, not a single Hyperpyron, the Byzantine gold coin, was minted during the reign of the Palaiologan dynasty."
+ byz_bad_military:0 "Lack of Levies"
+ desc_byz_bad_military:0 "Due to the loss of the Anatolian and Greek heartlands, the Byzantines have not been able to field a proper army in a long time, the largest during the Palaiologan dynasty a mere 5000 men. This resulted in a large dependence on foreign mercenaries to do the Empire's bidding, culminating in further destruction as the Byzantine government was unable to pay them."
+ 
+ 
+ 
+ 
  byz_last_stand:0 "Last Stand"
  desc_byz_last_stand:0 ""
  byz_resettle_gallipoli:0 "Resettle Gallipoli"

@@ -3,6 +3,21 @@
 
 #Byzantium
 
+#Starting modifiers
+byz_bad_navy = {
+	disengagement_chance = -0.05
+	ship_durability = -0.1
+}
+
+byz_bad_economy = {
+	inflation_reduction = -0.2
+}
+
+byz_bad_military = {
+	global_manpower_modifier = -0.1
+	manpower_recovery_speed = -0.1
+}
+
 #Conquests
 byz_last_stand = {
 	land_morale = 0.1
