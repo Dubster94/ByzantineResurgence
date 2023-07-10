@@ -373,7 +373,7 @@
 #6036 = { "Laodikeia" "Laodikeia" } #First and only province that uses Laodikeia as a province name. It appears plenty of times as a city though, but that's fine.
 6037 = { "Eudokia" "Eudokia" } #Getting dangerously close to the issue I've had previously where both Eudokia & Eudoxia have been present. I have no idea whether they are alternate spellings or different names.
 6038 = { "Melanthios" "Meletios" } #This was an absolute pain to find. Apparently region is known as Mesudiye today. And all Greek names that exist seem to stem from Pontic names influenced heavily by Turkish. I ended up using a river name (Melanthios) and then Meletios as the city name. The other versions are Melet & Milas.
-6039 = { "Oinaion" "Oinaion" } #Oinoe is ancient Greek
+#6039 = { "Oinaion" "Oinaion" } #Oinoe is ancient Greek
 
 #East Pontus
 1846 = { "Kotyora" "Kotyora" }

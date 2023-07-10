@@ -174,9 +174,9 @@ lte_PFG_provinces = {
 		province_id = 4313
 		province_id = 322
 #		province_id = 6017
-		province_id = 6031
+#		province_id = 6031
 		province_id = 6016
-		province_id = 6032
+#		province_id = 6032
 		province_id = 6033
 	}
 }
@@ -220,7 +220,7 @@ lte_CSN_provinces = {
 		province_id = 5167
 		province_id = 5137
 		province_id = 329
-		province_id = 6026
+#		province_id = 6026
 		province_id = 6027
 		province_id = 6028
 	}
@@ -271,7 +271,7 @@ lte_EDE_provinces = {
 		province_id = 418
 		province_id = 4310
 		province_id = 2303
-		province_id = 6030
+#		province_id = 6030
 	}
 }
 lte_ATC_provinces = {
