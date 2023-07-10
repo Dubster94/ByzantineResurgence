@@ -126,14 +126,14 @@ lte_NCA_provinces = {
 	OR = {
 		province_id = 5157
 		province_id = 317
-		province_id = 5168
+		#province_id = 5168
 		#province_id = 322
 		province_id = 5171
 		province_id = 5156
 		province_id = 6001
 		province_id = 6002
 		province_id = 5130
-		province_id = 6003
+#		province_id = 6003
 	}
 }
 lte_CSM_provinces = {
@@ -145,9 +145,9 @@ lte_CSM_provinces = {
 		province_id = 5134
 		province_id = 6004
 		province_id = 6005
-		province_id = 6006
+#		province_id = 6006
 		province_id = 6007
-		province_id = 6008
+#		province_id = 6008
 		province_id = 6009
 	}
 }
@@ -158,9 +158,9 @@ lte_TCS_provinces = {
 		province_id = 5163
 		province_id = 1848
 		province_id = 4311
-		province_id = 6011
+#		province_id = 6011
 		province_id = 6041
-		province_id = 6015
+#		province_id = 6015
 		province_id = 6014
 	}
 }
@@ -173,7 +173,7 @@ lte_PFG_provinces = {
 		province_id = 325
 		province_id = 4313
 		province_id = 322
-		province_id = 6017
+#		province_id = 6017
 		province_id = 6031
 		province_id = 6016
 		province_id = 6032
@@ -216,7 +216,7 @@ lte_CIL_provinces = {
 lte_CSN_provinces = {
 	OR = {
 		province_id = 2301
-		province_id = 5165
+#		province_id = 5165
 		province_id = 5167
 		province_id = 5137
 		province_id = 329

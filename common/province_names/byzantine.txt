@@ -318,11 +318,11 @@
 317 = { "Opsikion" "Prousa" }
 4312 = { "Klaudioupolis" "Klaudioupolis" } #Pre 1.24 was 5149.
 5157 = { "Nikaia" "Nikaia" }
-5168 = { "Agrilion" "Agrilion" }
+#5168 = { "Agrilion" "Agrilion" }
 6001 = { "Thebasion" "Thebasion" } #Wikipage's translation
 6002 = { "Armenokastron" "Armenokastron" } #Found on Empire of Nicaea map
 6016 = { "Pontoherakleia" "Pontoherakleia" }
-6032 = { "Tios" "Parthenia" } #Using Tios because important, is in the province.
+#6032 = { "Tios" "Parthenia" } #Using Tios because important, is in the province.
 
 #Mysia
 5130 = { "Achyraous" "Achyraous" } #Found as a fortress of Mysia from a detailed map during the Nicaean period.
@@ -330,13 +330,13 @@
 5131 = { "Adramytteion" "Herakleia" } #Using Adramyttium because bigger and more important. Herakleia is given by Pleiades, wiki gives Kydonies. Other maps don't include the town whatsoever.
 5156 = { "Pegai" "Pegai" } #
 5171 = { "Kyzikos" "Michailites" } #Miletoupolis is ancient. I'm using a more Byzantine name, the one which Mihalich actually derives from. Kyzikos is the island, an important city during Byzantine times
-6003 = { "Pegadeia" "Pegadeia" }
+#6003 = { "Pegadeia" "Pegadeia" }
 6004 = { "Pergamon" "Pergamon" }
 
 #Ionia
 318 = { "Smyrna" "Smyrna" }
 6005 = { "Phokaia" "Phokaia" }
-6006 = { "Kysos" "Erythrai" }
+#6006 = { "Kysos" "Erythrai" }
 6007 = { "Ephesos" "Hagios Theologos" } #Using Efes, close by.
 
 #Caria
@@ -348,7 +348,7 @@
 
 #Lycia-Pamphylia
 5162 = { "Makre" "Makre" } #Alternative names for Makre are Telmessos & Anastasioupolis
-6012 = { "Kibyra" "Kibyra" } #Namesake for Kibyraeot theme.
+#6012 = { "Kibyra" "Kibyra" } #Namesake for Kibyraeot theme.
 2298 = { "Attaleia" "Attaleia" }
 5147 = { "Korakesion" "Kalon Oros" } #Kalon Oros is most definitely a correct name. I guess I just like Korakesion so much.
 6013 = { "Myros" "Myra" } #Using Greek name for river in the vicinity, plus Myra, probably the most important Greco-Roman city in the region. I believe the city was meant to represent Antiphellos, Phellos' port, but it is painfully insignificant for the Byzantines.
@@ -370,7 +370,7 @@
 329 = { "Sebasteia" "Sebasteia" }
 6034 = { "Merziphon" "Merziphounta" } #Similar case to 5206, mixing two versions of what might be Greek vs Pontic.
 6035 = { "Gadilon" "Gadilon" }
-6036 = { "Laodikeia" "Laodikeia" } #First and only province that uses Laodikeia as a province name. It appears plenty of times as a city though, but that's fine.
+#6036 = { "Laodikeia" "Laodikeia" } #First and only province that uses Laodikeia as a province name. It appears plenty of times as a city though, but that's fine.
 6037 = { "Eudokia" "Eudokia" } #Getting dangerously close to the issue I've had previously where both Eudokia & Eudoxia have been present. I have no idea whether they are alternate spellings or different names.
 6038 = { "Melanthios" "Meletios" } #This was an absolute pain to find. Apparently region is known as Mesudiye today. And all Greek names that exist seem to stem from Pontic names influenced heavily by Turkish. I ended up using a river name (Melanthios) and then Meletios as the city name. The other versions are Melet & Milas.
 6039 = { "Oinaion" "Oinaion" } #Oinoe is ancient Greek
@@ -386,7 +386,7 @@
 #Lydia
 2297 = { "Sardeis" "Magnesia" } #Manisa is Magnesia, yes, but Sardeis was way more important.
 5172 = { "Thrakesion" "Philadelphia" }
-6008 = { "Pyrgion" "Pyrgion" }
+#6008 = { "Pyrgion" "Pyrgion" }
 6041 = { "Thyateira" "Thyateira" }
 
 #Phrygia
@@ -396,24 +396,24 @@
 4311 = { "Kotyaion" "Kotyaion" }  #Pre 1.24 was 5133
 5155 = { "Anatolikon" "Germe" }  #Gordion wasn't exactly an important city. It also leaves Amorion without representation. I happened to come across a Colonia Augusta Felix Germa that was marked on a Byzantium 1045 map as Germe close by, so I pick that.
 5163 = { "Temenouthyrai" "Ousakeion" } #Ancient greek name of the city, which I do prefer over the newer Ousakeion
-6011 = { "Akrokos" "Tiberioupolis" } #Found a mention of the Egrigoz castle on the Turkish wikipage of Emet, which Pleiades had a location of called Akrokos. It matches Egrigoz phonetically as well, so that's what I'm going for. Tiberioupolis is fairly far away, but it seems somewhat connected.
-6015 = { "Polydorion" "Polydorion" }
+#6011 = { "Akrokos" "Tiberioupolis" } #Found a mention of the Egrigoz castle on the Turkish wikipage of Emet, which Pleiades had a location of called Akrokos. It matches Egrigoz phonetically as well, so that's what I'm going for. Tiberioupolis is fairly far away, but it seems somewhat connected.
+#6015 = { "Polydorion" "Polydorion" }
 6018 = { "Amorion" "Amorion" } #This being here hurts so much.
 6019 = { "Philomelion" "Philomelion" }
 
 #Lycaonia
 323 = { "Ikonion" "Konio" } #Wikipedia claims medieval Greek had turned city name into Kónio. The turkish name Konya makes a lot more sense then.
 324 = { "Laranda" "Laranda" }
-6024 = { "Kybistra" "Kybistra" } #Best I could find, outside of adding yet another Herakleia
+#6024 = { "Kybistra" "Kybistra" } #Best I could find, outside of adding yet another Herakleia
 
 
 #Galatia
 326 = { "Boukellarion" "Ankyra" }
-5165 = { "Halys" "Sarmalios" } #Better than the name of the river, is supposedly an ancient roman camp near Kirikkale.
+#5165 = { "Halys" "Sarmalios" } #Better than the name of the river, is supposedly an ancient roman camp near Kirikkale.
 5167 = { "Euchaita" "Euchaita" } #Capital of the Armeniacs upon its establishment
 5137 = { "Taouion" "Taouion" }
-6017 = { "Anastasioupolis" "Anastasioupolis" }
-6031 = { "Malos" "Malos" } #Straight off copying JP here because this was the best one I could find. There's two other areas nearby called Ikotarion and Konkarztiakon that I have no idea about whether they are legitimate or not.
+#6017 = { "Anastasioupolis" "Anastasioupolis" }
+#6031 = { "Malos" "Malos" } #Straight off copying JP here because this was the best one I could find. There's two other areas nearby called Ikotarion and Konkarztiakon that I have no idea about whether they are legitimate or not.
 
 
 #Cappadocia
@@ -425,19 +425,19 @@
 4314 = { "Nyssa" "Nyssa" } #Discarding latin Cochisia. Technically Kochisar means (travelling) coach fortress, i.e fortress on the road basically, so I suppose I could transliterate that. Nyssa was decently important however. Pre 1.24 was 5153
 6028 = { "Taranton" "Taranton" } #Using an important Byzantine fortress during Byzantine-Arab wars that is situated next to Darende.
 6029 = { "Arabissos" "Ablastha" } #This one was difficult to find, but it seems to stem from the Armenian Ablasta, transliterated into Greek. It is also next to Arabissos, which was an important fort during Byzantine times.
-6026 = { "Pterion" "Basilika Therma" } #Using a mix of ancient Pteria which is nearby, and a fort of Basilika Therma which was important during the Byzantine-Arab wars.
+#6026 = { "Pterion" "Basilika Therma" } #Using a mix of ancient Pteria which is nearby, and a fort of Basilika Therma which was important during the Byzantine-Arab wars.
 6027 = { "Charsianon" "Charsianon" } #Using the castle of Charsianon here, namesake for a Theme as well, which is decently close and probably in the province. Disregarding Tenos.
 
 #Cilicia
 5161 = { "Korykos" "Korykos" }
 2302 = { "Charadros" "Selinous" }
-6022 = { "Seleukeia" "Seleukeia" }
+#6022 = { "Seleukeia" "Seleukeia" }
 5135 = { "Zephyrion" "Zephyrion" } #Mersin is Zephyrion, yes, but Zephyrion was the port of Tarsos in Byzantine times and declined in favor of Mersin under the Turk. Most important city in Cilicia for Byzantines
 327 = { "Kilikia" "Manistra" } #One of the important port cities in Armenian Cilicia. Used to be Mallos, which was a city down there but seems to have become unimportant later on. 
 5154 = { "Sision" "Sision" }
 5138 = { "Anazarbos" "Anazarbos" } #Technically directly on the west side of the river, but this was important historically.
 6021 = { "Germanikoupolis" "Germanikoupolis" }
-6023 = { "Ninike" "Klaudioupolis" } #Using older name because duplicate Klaudioupoli
+#6023 = { "Ninike" "Klaudioupolis" } #Using older name because duplicate Klaudioupoli
 6025 = { "Tarsos" "Tarsos" } #Split from 5135
 
 #############
@@ -448,7 +448,7 @@
 407 = { "Kallinikos" "Kallinikos" } #Was 405 pre 1.24
 2303 = { "Melitene" "Melitene" }
 4298 = { "Telouch" "Telouch" } #Pre 1.24 was 5183
-6030 = { "Samosaton" "Samosaton" } #Using Samosata, hellenised similarly to how Arsamosata became Asmosaton
+#6030 = { "Samosaton" "Samosaton" } #Using Samosata, hellenised similarly to how Arsamosata became Asmosaton
 6091 = { "Barbalissos" "Barbalissos" }
 6092 = { "Bambyke" "Hierapolis" }
 
