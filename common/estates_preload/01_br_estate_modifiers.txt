@@ -1,0 +1,78 @@
+
+estate_generals = {
+	modifier_definition = {
+		type = loyalty
+		key = generals_loyalty_modifier
+		trigger = {
+			has_estate = estate_generals
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = generals_influence_modifier
+		trigger = {
+			has_estate = estate_generals
+		}
+	}
+
+	modifier_definition = {
+		type = privileges
+		key = generals_privilege_slots
+		trigger = {
+			has_estate = estate_generals
+		}
+	}
+}
+
+estate_exarches = {
+	modifier_definition = {
+		type = loyalty
+		key = exarches_loyalty_modifier
+		trigger = {
+			has_estate = estate_exarches
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = exarches_influence_modifier
+		trigger = {
+			has_estate = estate_exarches
+		}
+	}
+
+	modifier_definition = {
+		type = privileges
+		key = exarches_privilege_slots
+		trigger = {
+			has_estate = estate_exarches
+		}
+	}
+}
+
+estate_knightly_orders = {
+	modifier_definition = {
+		type = loyalty
+		key = knightly_orders_loyalty_modifier
+		trigger = {
+			has_estate = estate_knightly_orders
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = knightly_orders_influence_modifier
+		trigger = {
+			has_estate = estate_knightly_orders
+		}
+	}
+
+	modifier_definition = {
+		type = privileges
+		key = knightly_orders_privilege_slots
+		trigger = {
+			has_estate = estate_knightly_orders
+		}
+	}
+}

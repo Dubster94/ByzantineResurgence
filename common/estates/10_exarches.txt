@@ -1,0 +1,170 @@
+estate_exarches =
+{
+	icon = 13
+	
+	# Used for when declaring independence
+	independence_government = monarchy
+	starting_reform = exarchate_reform
+	independence_tech_group = eastern
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 2
+			province_distance = {
+				who = 151
+				distance = 250 #Arbitrary
+			}
+		}
+		modifier = {
+			factor = 2
+			province_distance = {
+				who = 151
+				distance = 500 #Arbitrary
+			}
+		}
+		modifier = {
+			factor = 2
+			province_distance = {
+				who = 151
+				distance = 750 #Arbitrary
+			}
+		}
+	}
+	
+	# If true, country will get estate
+	trigger = {	
+		has_government_attribute = enables_exarches_estate
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = cossacks_reform }
+		NOT = { government = native }
+		NOT = { has_reform = trading_city }
+		NOT = { has_reform = siberian_tribe }
+		NOT = { is_revolutionary_republic_trigger = yes }
+		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = { has_reform = peasants_republic }
+		NOT = { has_reform = american_republic }
+		NOT = { has_reform = federal_republic }
+		OR = {
+			NOT = { has_reform = celestial_empire }
+			has_dlc = "Mandate of Heaven"
+		}
+	}
+	
+	
+	country_modifier_happy = {
+		land_forcelimit_modifier = 0.2
+		naval_forcelimit_modifier = 0.2
+		global_unrest = -2
+		governing_capacity_modifier = 0.5
+	}
+	country_modifier_neutral = {
+		state_maintenance_modifier = 1
+	}	
+	country_modifier_angry = {
+		state_maintenance_modifier = 5
+		land_forcelimit_modifier = -0.4
+		naval_forcelimit_modifier = -0.4
+		governing_capacity_modifier = -0.5
+	}
+	
+	# These do not scale, but only applied in provinces owned by the estate
+	# province_modifier_happy = {
+		# local_development_cost = -0.33 #Regional capitals should get a hefty development cost modifier.
+		# local_build_cost = -0.33
+		# local_state_maintenance_modifier = -0.5	
+	# }
+	# province_modifier_neutral = {
+		# local_state_maintenance_modifier = 0.5
+	# }	
+	# province_modifier_angry = {
+		# local_unrest = 5
+		# local_state_maintenance_modifier = 1
+	# }
+	
+	#New in 1.30. Seems to be a modifier scaled to the percentage of crown land.
+	land_ownership_modifier = {
+		exarches_loyalty_modifier = 0.40 #Normal ones tend to be at 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+	
+	# Influence modifiers
+	base_influence = 20
+	
+	# Influence modifiers from Events:
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_nobility_disaster
+			}
+		}	
+		influence = -40
+	}
+	
+	influence_from_dev_modifier = 2
+	
+	# Loyalty modifiers
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_nobility_disaster
+			}
+		}
+		loyalty = -20
+	}
+	
+	# Alternative naming of estates
+	custom_name = {
+		desc = estate_exarchoi
+		trigger = {
+			tag = BYZ
+		}
+	}
+	
+	# Does the AI want to give any extra territory beyond the minimum?
+	# No.
+	
+	color = { 100 0 60 } #Semi-tyrian Purple
+	
+	privileges = {
+		estate_exarches_land_rights
+		estate_exarches_integrated_viceroys
+		estate_exarches_establish_new_viceroy_seat
+		estate_exarches_dynastic_exarches
+		estate_exarches_autonomous_exarches
+		estate_exarches_court_advisors
+	}
+	
+	agendas = {
+		#None at the moment, TODO.	
+	}
+	influence_from_dev_modifier = 1.0
+}

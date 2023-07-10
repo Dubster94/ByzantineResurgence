@@ -1,0 +1,1063 @@
+country_decisions = {
+	establish_vassal_ATH = { #Athens
+		potential = {
+			tag = LAE
+			NOT = { exists = ATH }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_ATH_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 146 #Athens
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_ATH_provinces
+				tag=ATH
+				capital = 146
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_LES = { #Lesbos
+		potential = {
+			tag = LAE
+			NOT = { exists = LES }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_LES_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 4700 #Lesbos
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_LES_provinces
+				tag=LES
+				capital = 4700
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_CYP = { #Cyprus
+		potential = {
+			tag = LAE
+			NOT = { exists = CYP }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_CYP_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 5139 #Nicosia
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_CYP_provinces
+				tag=CYP
+				capital = 5139
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_NAX = { #Naxos
+		potential = {
+			tag = LAE
+			NOT = { exists = NAX }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_NAX_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 164 #Naxos
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_NAX_provinces
+				tag=NAX
+				capital = 164
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_CDA = { #Candia 
+		potential = {
+			tag = LAE
+			NOT = { exists = CDA }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_CDA_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 163 #Candia
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_CDA_provinces
+				tag=CDA
+				capital = 163
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_CEP = { #Corfu/Cephalonia
+		potential = {
+			tag = LAE
+			NOT = { exists = CEP }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_CEP_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 4698 #Cephalonia
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_CEP_provinces
+				tag=CEP
+				capital = 4698
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_EPR = { #Epirus
+		potential = {
+			tag = LAE
+			NOT = { exists = EPR }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_EPR_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 144 #Arta/Ioannina
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_EPR_provinces
+				tag=EPR
+				capital = 144
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_ACH = { #Achaea
+		potential = {
+			tag = LAE
+			NOT = { exists = ACH }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_ACH_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 1773 #Clarence/Andravida. Funnily enough the principality also had Mystra as their capital at one point.
+		}
+		effect = {
+			hidden_effect = { #Because apparently Achaea in-game is Greek Orthodox by 1444...
+				ACH = {
+					change_primary_culture = cosmopolitan_french
+					change_religion = catholic
+				}
+			}
+			establish_vassal_lte_effect = {
+				provinces=lte_ACH_provinces
+				tag=ACH
+				capital = 1773
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_NEG = { #Negroponte
+		potential = {
+			tag = LAE
+			NOT = { exists = NEG }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_NEG_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 3003 #Negroponte
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_NEG_provinces
+				tag=NEG
+				capital = 3003
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_NEO = { #Neopatria
+		potential = {
+			tag = LAE
+			NOT = { exists = NEO }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_NEO_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 7108 #Neopatria
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_NEO_provinces
+				tag=NEO
+				capital = 7108
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_DYR = { #Dyrrachium
+		potential = {
+			tag = LAE
+			NOT = { exists = DYR }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_DYR_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 4174 #Durazzo
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_DYR_provinces
+				tag=DYR
+				capital = 4174
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_TSL = { #Thessalonica
+		potential = {
+			tag = LAE
+			NOT = { exists = TSL }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_TSL_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 148 #Thessalonica
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_TSL_provinces
+				tag=TSL
+				capital = 148
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_PHP = { #Philippopolis
+		potential = {
+			tag = LAE
+			NOT = { exists = PHP }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_PHP_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 2750 #Philippopoli
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_PHP_provinces
+				tag=PHP
+				capital = 2750
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_VNA = { #Varna
+		potential = {
+			tag = LAE
+			NOT = { exists = VNA }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_VNA_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 3165 #Varna
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_VNA_provinces
+				tag=VNA
+				capital = 3165
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_NCP = { #Nicopolis
+		potential = {
+			tag = LAE
+			NOT = { exists = NCP }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_NCP_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 150 #Nicopolis
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_NCP_provinces
+				tag=NCP
+				capital = 150
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_NCA = { #Nicaea
+		potential = {
+			tag = LAE
+			NOT = { exists = NCA }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_NCA_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 5157 #Nicaea
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_NCA_provinces
+				tag=NCA
+				capital = 5157
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_CSM = { #Samus
+		potential = {
+			tag = LAE
+			NOT = { exists = CSM }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_CSM_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 2348 #Scio
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_CSM_provinces
+				tag=CSM
+				capital = 2348
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_TCS = { #Philadelphia
+		potential = {
+			tag = LAE
+			NOT = { exists = TCS }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_TCS_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 4308 #Laodicea
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_TCS_provinces
+				tag=TCS
+				capital = 4308
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_PFG = { #Paphlagonia
+		potential = {
+			tag = LAE
+			NOT = { exists = PFG }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_PFG_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 326 #Angora
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_PFG_provinces
+				tag=PFG
+				capital = 326
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_CBT = { #Cibyrraeum
+		potential = {
+			tag = LAE
+			NOT = { exists = CBT }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_CBT_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 2298 #Attalia
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_CBT_provinces
+				tag=CBT
+				capital = 2298
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_ATO = { #Anatolia
+		potential = {
+			tag = LAE
+			NOT = { exists = ATO }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_ATO_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 323 #Iconium
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_ATO_provinces
+				tag=ATO
+				capital = 323
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_CIL = { #Cilicia
+		potential = {
+			tag = LAE
+			NOT = { exists = CIL }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_CIL_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 5154 #Sisium
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_CIL_provinces
+				tag=CIL
+				capital = 5154
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_CSN = { #Charsianum
+		potential = {
+			tag = LAE
+			NOT = { exists = CSN }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_CSN_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 2301 #Caesarea
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_CSN_provinces
+				tag=CSN
+				capital = 2301
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_AMK = { #Armeniacum 
+		potential = {
+			tag = LAE
+			NOT = { exists = AMK }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_AMK_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 5152 #Amasea
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_AMK_provinces
+				tag=AMK
+				capital = 5152
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_TBZ = { #Chaldea
+		potential = {
+			tag = LAE
+			NOT = { exists = TBZ }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_TBZ_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 330 #Trapezus
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_TBZ_provinces
+				tag=TBZ
+				capital = 330
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_CLO = { #Colonia
+		potential = {
+			tag = LAE
+			NOT = { exists = CLO }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_CLO_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 2305 #Acilisene/Colonia
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_CLO_provinces
+				tag=CLO
+				capital = 2305
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_VAN = { #Vaspurakania
+		potential = {
+			tag = LAE
+			NOT = { exists = VAN }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_VAN_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 2307 #Van
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_VAN_provinces
+				tag=VAN
+				capital = 2307
+			}
+			hidden_effect = { #To prevent funny things with the above.
+				VAN = {
+					change_religion = catholic
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_MSP = { #Mesopotamia
+		potential = {
+			tag = LAE
+			NOT = { exists = MSP }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_MSP_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 4295 #Cepha
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_MSP_provinces
+				tag=MSP
+				capital = 4295
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_EDE = { #Edessa
+		potential = {
+			tag = LAE
+			NOT = { exists = EDE }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_EDE_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 2308 #Edessa
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_EDE_provinces
+				tag=EDE
+				capital = 2308
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_ATC = { #Antioch
+		potential = {
+			tag = LAE
+			NOT = { exists = ATC }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_ATC_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 2313 #Antioch
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_ATC_provinces
+				tag=ATC
+				capital = 2313
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_TPL = { #Tripoli
+		potential = {
+			tag = LAE
+			NOT = { exists = TPL }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_TPL_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 378 #Tripoli
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_TPL_provinces
+				tag=TPL
+				capital = 378
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_KOJ = { #Jerusalem
+		potential = {
+			tag = LAE
+			NOT = { exists = KOJ }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_KOJ_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 379 #Jerusalem
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_KOJ_provinces
+				tag=KOJ
+				capital = 379
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_CRS = { #Chersum
+		potential = {
+			tag = LAE
+			NOT = { exists = CRS }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_CRS_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 7190 #Chersum
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_CRS_provinces
+				tag=CRS
+				capital = 7190
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_TSY = { #Thessaly
+		potential = {
+			tag = LAE
+			NOT = { exists = TSY }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_TSY_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 3174 #Trikala
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_TSY_provinces
+				tag=TSY
+				capital = 3174
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_vassal_OHR = { #Macedonia
+		potential = {
+			tag = LAE
+			NOT = { exists = OHR }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+		}
+		provinces_to_highlight = {
+			lte_OHR_provinces = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			#has_idea = lte_induct_knightly_orders
+			is_at_war = no
+			owns = 4780 #Ohrid
+		}
+		effect = {
+			establish_vassal_lte_effect = {
+				provinces=lte_OHR_provinces
+				tag=OHR
+				capital = 4780
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

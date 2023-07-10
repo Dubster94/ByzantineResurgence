@@ -1,0 +1,72 @@
+VAN = { #Vaspurakan shouldn't spawn before Armenians.
+	OR = {
+		is_core = VAN
+		exists = VAN
+	}
+}
+
+#All Exarch tags should not spawn unless they're a core of the culture.
+HSP = { #Hesperia
+	OR = {
+		is_core = HSP
+		exists = HSP
+	}
+}
+GLT = { #Galatia
+	OR = {
+		is_core = GLT
+		exists = GLT
+	}
+}
+KCD = { #Karchidon
+	OR = {
+		is_core = KCD
+		exists = KCD
+	}
+}
+ATL = { #Anatolia
+	OR = {
+		is_core = ATL
+		exists = ATL
+	}
+}
+PSI = { #Persis
+	OR = {
+		is_core = PSI
+		exists = PSI
+	}
+}
+RVN = { #Ravenna
+	OR = {
+		is_core = RVN
+		exists = RVN
+	}
+}
+ABN = { #Albion
+	OR = {
+		is_core = ABN
+		exists = ABN
+	}
+}
+AEG = { #Aegyptus
+	OR = {
+		is_core = AEG
+		exists = AEG
+	}
+}
+#Special cases that we don't want to rise up at all.
+MKB = { #Patriarch of Mecca & Medina
+	OR = {
+		is_core = MKB
+		exists = MKB
+	}
+}
+TRE = { #Trebizond getting same clause as vanilla Byzantium since we now have 
+	OR = {
+		is_core = TRE
+		NOT = { exists = PON }
+	}
+}
+PON = { #Pontus: Shall not rise up unless Trebizond is gone.
+	NOT = { exists = TRE }
+}

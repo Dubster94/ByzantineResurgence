@@ -1,0 +1,112 @@
+namespace = arm_mission_flavor
+
+country_event = {
+	id = arm_mission_flavor.1
+	title = "arm_mission_flavor.1.t"
+	desc = { #If Georgia is eligible to have its Bagratids invited, fire this description
+		trigger = { 
+			valid_for_personal_unions_trigger = yes
+			GEO = {
+				ai = yes
+				dynasty = "Bagrationi"
+				valid_for_personal_unions_trigger = yes
+			}
+		}
+		desc = "arm_mission_flavor.1.da"
+	}
+	desc = { #If not, fire this description
+		trigger = { 
+			NOT = {
+				valid_for_personal_unions_trigger = yes
+				GEO = {
+					ai = yes
+					dynasty = "Bagrationi"
+					valid_for_personal_unions_trigger = yes
+				}
+			}
+		}
+		desc = "arm_mission_flavor.1.db"
+	}
+	picture = LIBERUM_VETO_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = ARM #Redundant, but just to make sure I suppose.
+	}
+	
+	option = { #Invite the Bagratids!
+		name = "arm_mission_flavor.1.a"
+		ai_chance = { factor = 90 }
+		
+		
+		if = { #If AI & has right dynasty & is valid PU
+			limit = {
+				valid_for_personal_unions_trigger = yes
+				GEO = {
+					ai = yes
+					dynasty = "Bagrationi"
+					valid_for_personal_unions_trigger = yes
+				}
+			}
+			create_interregnum_effect = yes
+			create_union = GEO
+			hidden_effect = { #Changes Bagrationi to Bagratuni
+				set_dynasty = "Bagratuni"
+			}
+			set_country_flag = br_bagratunis_invited #Set country flag for the heir to fix heir dynasty if Georgia has one because the above doesn't actually set the dynasty of the heir AFAIK. If it does, this is unnecessary.
+		}
+		else = { #At this point, we cannot ensure Bagratuni from Georgia, or they are player-controlled. Thus, ensure Bagratuni ruler and grant PU CB
+			if = {
+				limit = {
+					NOT = { dynasty = "Bagratuni" }
+				}
+				define_ruler = {
+					dynasty = "Bagratuni"
+					culture = ROOT
+					religion = ROOT
+				}
+				hidden_effect = {
+					kill_heir = { allow_new_heir = no }
+				}
+			}
+			if = { #PU CB
+				limit = {
+					exists = GEO
+					is_subject = no
+					GEO = {
+						is_subject = no
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = GEO
+				}
+			}
+			else = { #If not applicable, give permaclaims
+				give_permaclaims_for_mission_provgroup = { mission=arm_union_with_georgia }
+			}
+		}
+	}
+	
+	option = { #Maintain current dynasty
+		name = "arm_mission_flavor.1.b"
+		ai_chance = { factor = 10 }
+		if = {
+			limit = {
+				exists = GEO
+			}
+			GEO = { #Stealing vanilla Poland's opinion modifier
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = lit_denied_birthright
+				}
+			}
+		}
+		give_permaclaims_for_mission_provgroup = { mission=arm_union_with_georgia }
+	}
+}

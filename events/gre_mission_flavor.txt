@@ -1,0 +1,91 @@
+namespace = gre_mission_flavor
+
+country_event = { #1 The City of Cities
+	id = gre_mission_flavor.1
+	title = "gre_mission_flavor.1.t" 
+	desc = "gre_mission_flavor.1.d"
+	picture = CONSTANTINOPLE_eventPicture
+	
+	#major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = { #Make it our new capital!
+		name = "gre_mission_flavor.1.a"
+		151 = { #Constantinople
+			move_capital_effect = yes
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		add_prestige = 10
+	}
+	option = { #Resettle it with Greeks only
+		name = "gre_mission_flavor.1.b"
+		151 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			change_culture = ROOT
+			change_religion = ROOT
+		}
+		add_prestige = 5
+		
+	}
+	option = { #Leave it as is
+		name = "gre_mission_flavor.1.c"
+		add_prestige = -5
+	}
+}
+
+country_event = { #2 A Pontic Vassal
+	id = gre_mission_flavor.2
+	title = "gre_mission_flavor.2.t" 
+	desc = "gre_mission_flavor.2.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	#major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = { #Keep the lands integrated
+		name = "gre_mission_flavor.2.a"
+	}
+	option = { #Release a Vassal
+		name = "gre_mission_flavor.2.b"
+		#custom_tooltip = gre_mission_flavor.2.b.tooltip
+		hidden_effect = {
+			gre_pontic_question_provinces = {
+				if = {
+					limit = { is_core = ROOT }
+					add_core = PON
+				}
+				else = {
+					add_permanent_claim = PON
+				}
+			}
+		}
+		release = PON
+		create_march = PON
+		PON = {
+			hidden_effect = { change_government = ROOT	} #Needs to be here it seems, otherwise things just break.
+			adopt_reform_progress = ROOT
+			define_ruler = {
+				dynasty = ROOT
+				claim = 100
+			}
+		}
+	}
+}

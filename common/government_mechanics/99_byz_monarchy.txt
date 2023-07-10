@@ -1,0 +1,164 @@
+# Representing the Byzantine monarchy, or monarchic theocracy, as it is referred to by historians, is a bit of a mess. What we do know is the following:
+# -The Empire had no formal imperial succession because it was by law, still a republic. Emperors were elected practically by the military.
+# -This highly militarised Empire essentially means that "bigger army diplomacy" (CGP Grey) rules.
+# -Emperors managed to secure succession using honorary titles as co-emperors for their children.
+
+
+# This government will not generate heirs automatically - the "Introduce heir" button must be used in order to name someone co-emperor, and this button will generate a heir
+# of your dynasty.
+
+# Using this idea, I want to represent the Byzantine monarchy's government mechanics as a set of ever-growing powers. These powers are:
+# -Military Influence (Megas Domestikos - Strategoi. Pre-Themes: Dynatoi)
+# -Administrative Influence (Megas Sakellarios - Dynatoi)
+# -State Official Influence (Megas Logothethes - Syntechnioi)
+
+# This system will replace the factions that were integrated from Renovatio Imperii.
+
+# Each has a 0-100 power that grows naturally by +1/year per 100% estate influence, with an additional +1/year if no heir apparent exists. 
+# If it reaches 100, a disaster starts ticking at +5/month that will result in a Civil War of sorts, with pretenders rising up:
+# Megas Domestikos:
+# +40% Strategoi Influence (Dynatoi pre-Theme System)
+# +30% Manpower Recovery Speed
+# +0.4 Monthly Byzantine Militarization
+# -40% Military Advisor Cost
+
+# Megas Sakellarios:
+# +40% Dynatoi Influence
+# +20% Tax Modifier
+# -2 Interest
+# -40% Admin Advisor Cost
+
+# Megas Logothetes:
+# +40% Syntechnioi Influence
+# +20% Production Efficiency
+# +4 Diplomatic Reputation
+# -40% Diplomatic Advisor Cost
+
+# These can be paid down with 20 power, costing 20 monarch points of each respective category.
+# At above 80 power in each, bad events start occuring.
+# The events will generally lower estate loyalty, give corruption and cause a modifier negating one of the buffs for 5 years. They pulse on a 2 year timer.
+# If kept between 20-50, good events occur.
+# The events will increase estate loyalty, reduce corruption and give additional modifiers for 5 years:
+# Domestikos: -20% General Cost
+# Sakellarios: -10% Development Cost
+# Logothetes: +25% Spy Defense
+
+# In total, this is somewhat a nerf in that it increases influence of estates and the size of the modifiers have generally gotten smaller.
+# It's also a slight buff because you can experience all modifiers at once, compared to the Faction system, and the drawbacks for each modifier are gone.
+
+#Also adding militarisation which has a bunch of fun bonuses. Tie these to missions! More army!
+
+
+
+byzantine_government_mechanic_1 = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 11
+	available = {
+	}
+
+	powers = {
+		byzantine_militarization = {
+			max = 100
+			reset_on_new_ruler = yes
+			base_monthly_growth = -0.1
+			development_scaled_monthly_growth = 0.1
+			scaled_modifier = {
+				modifier = {
+					discipline = 1
+					country_military_power = 5
+				}
+			}
+			reverse_scaled_modifier = {
+				modifier = {
+					discipline = -0.5
+				}
+			}
+			is_good = yes
+		}
+	}
+	
+	interactions = {
+		promote_hessian_militarization = {
+			gui = hessian_militarization_gov_mech
+			cost_type = hessian_militarization
+			center = no
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = hessian_militarization_mechanic
+						power_type = hessian_militarization
+						value = 100
+					}
+				}
+				years_of_income = 0.1
+			}
+			effect = {
+				add_years_of_income = -0.1
+				add_government_power = {
+					mechanic_type = hessian_militarization_mechanic
+					power_type = hessian_militarization
+					value = 5
+				}
+			}
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 0
+					is_at_war = no
+				}
+				modifier = {
+					factor = 0
+					NOT = { num_of_mercenaries = 1 }
+				}
+				modifier = {
+					factor = 0
+					is_in_deficit = yes
+					num_of_loans = 3
+				}
+				modifier = {
+					factor = 0
+					NOT = { years_of_income = 0.25 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_government_power = {
+							mechanic_type = hessian_militarization_mechanic
+							power_type = hessian_militarization
+							value = 90
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

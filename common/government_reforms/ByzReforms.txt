@@ -1,0 +1,356 @@
+#Reforms
+exarchate_reform = {
+	icon = "exarchate"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = exarchate_legacy
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+		is_subject = yes
+	}
+	trigger = {
+		OR = {
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+		is_subject = yes
+	}
+	modifiers = {
+		administrative_efficiency = 0.1
+		culture_conversion_cost = -0.8
+		#New idea: Exarchates should just convert cultures, not accept them.
+		num_accepted_cultures = -5
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+pronoiar_reform = { #Needs updating or just downright removal
+	icon = "basileus"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			#Byzantine tags
+			tag = BYZ
+			tag = TRE
+			tag = CAP
+			#Exarch tags
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+	}
+	
+	modifiers = {
+		global_autonomy = -0.1
+		nobles_influence_modifier = -0.1
+		nobles_loyalty_modifier = -0.1
+		
+	}
+
+	conditional = {
+		#allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			byzantine_government_mechanic_1
+		}
+	}
+	conditional = {
+		#allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			byzantine_government_mechanic_2
+		}
+	}
+
+	conditional = {
+		#allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			byzantine_government_mechanic_3
+		}
+	}
+
+	conditional = {
+		#allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			byzantine_government_mechanic_4
+		}
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+roman_bureaucracy_reform = { #Needs updating or just downright removal
+	icon = "byzantine_court"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			#Byzantine tags
+			tag = BYZ
+			tag = TRE
+			tag = CAP
+			#Exarch tags
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+	}
+	
+	modifiers = {
+		global_tax_modifier = 0.10
+		global_trade_goods_size_modifier = 0.10
+	}
+	
+	factions = {
+		logothete_military
+		logothete_postal
+		logothete_general
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+theme_system_reform = {
+	icon = "soldiers_3"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			#Byzantine tags
+			tag = BYZ
+			tag = TRE
+			tag = CAP
+			#Exarch tags
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+	}
+	trigger = {
+		#has_reform = roman_bureaucracy_reform
+	}
+	
+	modifiers = {
+		land_forcelimit_modifier = 0.25
+		nobles_influence_modifier = -0.1
+	}
+	#On taken effect, on removed effect, deal with Strategoi land share and all.
+	
+	effect = { #Shuffle over 10% of Noble lands and 5% of burgher lands to the Strategoi. An additional 5% will be taken from crown land.
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -10
+		}
+		change_estate_land_share = {
+			estate = estate_burghers
+			share = -5
+		}
+		change_estate_land_share = {
+			estate = estate_generals
+			share = 20
+		}
+	}
+	
+	custom_attributes = {
+		enables_strategoi_estate = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+basileus_protostrategos_reform = { #Needs updating
+	icon = "justinian"
+	allow_normal_conversion = yes	
+	potential = {
+		OR = {
+			#Byzantine tags
+			tag = BYZ
+			tag = TRE
+			tag = CAP
+			#Exarch tags
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+		has_dlc = "Rights of Man"
+	}
+	trigger = {
+		OR = {
+			has_reform = theme_system_reform
+			full_idea_group = quality_ideas
+		}
+		OR = {
+			is_monarch_leader = yes
+			has_reform = basileus_protostrategos_reform
+		}
+	}
+	modifiers = {
+		monarch_military_power = 3
+		max_absolutism = 10
+		generals_loyalty_modifier = 0.1
+		governing_capacity_modifier = -0.50
+	}
+	custom_attributes = {
+		forces_ruler_general = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		#militarised_society = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+exarch_system_reform = {
+	icon = "maurice"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes	
+	potential = {
+		OR = {
+			#Byzantine tags
+			tag = BYZ
+			tag = TRE
+			tag = CAP
+			#Exarch tags
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+	}
+	trigger = {
+		OR = {
+			adm = 5
+			full_idea_group = administrative_ideas
+			has_reform = exarch_system_reform
+		}
+	}
+	modifiers = {
+		governing_capacity = 500
+		max_absolutism = -20
+		generals_influence_modifier = -0.1
+	}
+	custom_attributes = {
+		enables_exarches = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+revoke_exarch_autonomy_reform = {
+	icon = "heraclius"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes	
+	potential = {
+		OR = {
+			#Byzantine tags
+			tag = BYZ
+			tag = TRE
+			tag = CAP
+			#Exarch tags
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = revoke_exarch_autonomy_reform
+			AND = {
+				has_reform = exarch_system_reform
+				absolutism = 65
+				any_country = {
+					is_exarch_tag_and_exarch_of_root_trigger = yes
+				}
+				NOT = {
+					any_country = {
+						is_exarch_tag_and_exarch_of_root_trigger = yes
+						liberty_desire = 50
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = byz_revoke_exarch_autonomy_tooltip
+		hidden_effect = {
+			country_event = { id = resurgent_BYZ.34 } #Exarch integrate event
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -2
+		}
+		change_estate_land_share = {
+			estate = estate_burghers
+			share = -2
+		}
+		change_estate_land_share = {
+			estate = estate_generals
+			share = -1
+		}
+		change_estate_land_share = {
+			estate = estate_exarches
+			share = 10
+		}
+	}
+	modifiers = {
+		yearly_absolutism = 1
+		max_absolutism = 10 #Counteracts some of the -20 from the Exarches
+	}
+	custom_attributes = {
+		enables_exarches_estate = yes
+	}
+	ai = {
+		factor = 100
+	}
+}

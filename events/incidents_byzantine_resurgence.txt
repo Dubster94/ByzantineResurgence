@@ -1,0 +1,443 @@
+namespace = incidents_byzantine_resurgence
+
+
+#TODO: Entire Siege of Constantinople incident/event chain
+# country_event = { #1 Siege of Constantinople
+	# id = incidents_byzantine_resurgence.1
+	# title = "incidents_byzantine_resurgence.1.t" 
+	# desc = "incidents_byzantine_resurgence.1.d"
+	# picture = ORTHODOX_eventPicture
+	
+# }
+
+#TODO: Make chain work for a Holy Roman Empire that has united into a single tag? Not sure actually if that's even relevant. Maybe it's better to put them as historical rivals at that point.
+#Byzantine Resurgence Incident event chain
+country_event = { #2 Byzantine Resurges!
+	id = incidents_byzantine_resurgence.2
+	title = "incidents_byzantine_resurgence.2.t" 
+	desc = "incidents_byzantine_resurgence.2.d"
+	picture = HRE_eventPicture
+	
+	major = yes
+	major_trigger = {
+		tag = BYZ
+	}
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_emperor = yes
+	}
+	
+	immediate = {
+		emperor = {
+			save_global_event_target_as = br_emperor 
+		}
+	}
+	
+	option = { #Hah, they are merely Greeks, not Romans!
+		name = "incidents_byzantine_resurgence.2.a"
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.125
+				OR = {
+					ai_attitude = {
+						who = BYZ
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = BYZ
+						attitude = attitude_loyal
+					}
+					ai_attitude = {
+						who = BYZ
+						attitude = attitude_allied
+					}
+				}
+			}
+		}
+		
+		#Enables the War of the Two Romes CB.
+		BYZ = {
+			custom_tooltip = byz_challenged_hremperor_tooltip
+			set_country_flag = byz_challenged_hremperor
+			country_event = { id = incidents_byzantine_resurgence.201 days = 5 tooltip = incidents_byzantine_resurgence.201.tt }
+		}
+		add_prestige = 10
+		#WIP
+		custom_tooltip = hremperor_challenged_byz_tooltip
+		set_country_flag = hremperor_challenged_byz
+	}
+	
+	option = { #Concede the Greeks as the true Romans
+		name = "incidents_byzantine_resurgence.2.b"
+		ai_chance = {
+			factor = 10
+		}
+		
+		add_imperial_influence = -100
+	}
+	
+	option = { #Attempt to negotiate with the Greeks
+		name = "incidents_byzantine_resurgence.2.c"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 8
+				OR = {
+					ai_attitude = {
+						who = BYZ
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = BYZ
+						attitude = attitude_loyal
+					}
+					ai_attitude = {
+						who = BYZ
+						attitude = attitude_allied
+					}
+				}
+			}
+		}
+		
+		BYZ = {
+			country_event = { id = incidents_byzantine_resurgence.202 days = 5 tooltip = incidents_byzantine_resurgence.202.tt }
+		}
+	}
+}
+
+country_event = { #200 Incident starter of Byzantine Resurges
+	id = incidents_byzantine_resurgence.200
+	title = "incidents_byzantine_resurgence.200.t" 
+	desc = "incidents_byzantine_resurgence.200.d"
+	picture = ORTHODOX_eventPicture
+	
+	#major = yes
+	hidden = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	
+	trigger = {
+		tag = BYZ
+		is_part_of_hre = no
+		is_emperor = no #I believe being emperor of the HRE is possible without actually being part of the HRE in some fringe cases.
+		total_development = 1000
+		num_of_cities = 50 #Should likely be reached by the time you have 1000 dev.
+		owns = 151 #Constantinople, just in case something breaks somehow.
+	}
+	
+	option = { #Byzantium has resurged!
+		name = "incidents_byzantine_resurgence.200.a"
+		emperor = {
+			if = {
+				limit = {
+					has_dlc = "Emperor"
+				}
+				set_imperial_incident = incident_byzantine_resurgence
+			}
+			else = {
+				country_event = {
+					id = incidents_byzantine_resurgence.2
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = { #201 The Emperor has denounced us!
+	id = incidents_byzantine_resurgence.201
+	title = "incidents_byzantine_resurgence.201.t" 
+	desc = "incidents_byzantine_resurgence.201.d"
+	picture = BATTLE_eventPicture
+	
+	#major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = BYZ
+	}
+	
+	option = { #If they want war... We'll give them war!
+		name = "incidents_byzantine_resurgence.201.a"
+		
+		tooltip = {
+			#Enables the War of the Two Romes CB.
+			custom_tooltip = byz_challenged_hremperor_tooltip
+			set_country_flag = byz_challenged_hremperor
+			emperor = {
+				add_prestige = 10
+				#WIP
+				custom_tooltip = hremperor_challenged_byz_tooltip
+				set_country_flag = hremperor_challenged_byz
+			}
+		}
+		clear_global_event_target = br_emperor
+	}
+}
+
+country_event = { #202 The Emperor wants to negotiate
+	id = incidents_byzantine_resurgence.202
+	title = "incidents_byzantine_resurgence.202.t" 
+	desc = "incidents_byzantine_resurgence.202.d"
+	picture = COURT_eventPicture
+	
+	#major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = BYZ
+	}
+	
+	option = { #Just like that of the Franks, these barbarians cannot be trusted!
+		name = "incidents_byzantine_resurgence.202.a"
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.25
+				OR = {
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_loyal
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_allied
+					}
+				}
+			}
+		}
+		
+		add_prestige = 10
+		custom_tooltip = byz_challenged_hremperor_tooltip
+		set_country_flag = byz_challenged_hremperor
+		emperor = {
+			#WIP
+			custom_tooltip = hremperor_challenged_byz_tooltip
+			set_country_flag = hremperor_challenged_byz
+			country_event = { id = incidents_byzantine_resurgence.203 days = 5 tooltip = incidents_byzantine_resurgence.203.tt }
+		}
+	}
+	
+	option = { #Let's sign the treaty.. They may have come to their senses.
+		name = "incidents_byzantine_resurgence.202.b"
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 4
+				OR = {
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_loyal
+					}
+					ai_attitude = {
+						who = emperor
+						attitude = attitude_allied
+					}
+				}
+			}
+		}
+		
+		emperor = {
+			country_event = { id = incidents_byzantine_resurgence.204 days = 5 tooltip = incidents_byzantine_resurgence.204.tt }
+		}
+	}
+	
+	option = { #Send the diplomat to the Oubliette so that I may cut out his eyes, personally...
+		name = "incidents_byzantine_resurgence.202.c"
+		
+		highlight = yes
+		trigger = {
+			ruler_has_personality = cruel_personality
+		}
+		add_legitimacy = 25
+		add_patriarch_authority = -0.05
+		custom_tooltip = byz_challenged_hremperor_tooltip
+		set_country_flag = byz_challenged_hremperor
+		set_country_flag = byz_resurgence_blinded_diplomat
+		emperor = {
+			custom_tooltip = hremperor_challenged_byz_tooltip
+			set_country_flag = hremperor_challenged_byz
+			country_event = { id = incidents_byzantine_resurgence.203 days = 5 tooltip = incidents_byzantine_resurgence.203.ttb }
+		}
+	}
+}
+
+country_event = { #203 The Greeks reject the treaty!
+	id = incidents_byzantine_resurgence.203
+	title = "incidents_byzantine_resurgence.203.t" 
+	desc = {
+		trigger = { NOT = { BYZ = { has_country_flag = byz_resurgence_blinded_diplomat  } } }
+		desc = "incidents_byzantine_resurgence.203.da"
+	}
+	desc = {
+		trigger = { BYZ = { has_country_flag = byz_resurgence_blinded_diplomat  } }
+		desc = "incidents_byzantine_resurgence.203.db"
+	}
+	picture = BATTLE_eventPicture
+	
+	#major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_emperor = yes
+	}
+	
+	option = { #We did at least try to negotiate.
+		name = "incidents_byzantine_resurgence.203.a"
+		
+		tooltip = {
+			#Enables the War of the Two Romes CB.
+			BYZ = {
+				custom_tooltip = byz_challenged_hremperor_tooltip
+				set_country_flag = byz_challenged_hremperor
+			}
+			add_prestige = 10
+			#WIP
+			custom_tooltip = hremperor_challenged_byz_tooltip
+			set_country_flag = hremperor_challenged_byz
+		}
+		clear_global_event_target = br_emperor
+	}
+}
+
+country_event = { #204 The Treaty of Two Romes
+	id = incidents_byzantine_resurgence.204
+	title = "incidents_byzantine_resurgence.204.t" 
+	desc = "incidents_byzantine_resurgence.204.d"
+	picture = COURT_eventPicture
+	
+	major = yes
+    major_trigger = {
+        NOT = { tag = BYZ } #They already see this.
+    }
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_emperor = yes
+	}
+	
+	option = { #May this treaty stand the test of time!
+		name = "incidents_byzantine_resurgence.204.a"
+		
+		set_global_flag = br_byz_resurgence_treaty_enforced		
+		custom_tooltip = incidents_byzantine_resurgence.204.a.tt
+		hidden_effect = {
+			every_province = {
+				limit = {
+					is_part_of_hre = yes
+					owned_by = BYZ
+				}
+				set_in_empire = no
+			}
+			every_province = {
+				limit = {
+					is_part_of_hre = yes
+					region = balkan_region
+				}
+				set_province_flag = br_byz_resurgence_treaty_exception
+			}
+		}
+		clear_global_event_target = br_emperor
+	}
+}
+
+country_event = { #205 The Treaty of Two Romes has been broken!
+	id = incidents_byzantine_resurgence.205
+	title = "incidents_byzantine_resurgence.205.t" 
+	desc = "incidents_byzantine_resurgence.205.d"
+	picture = CIVIL_WAR_eventPicture
+	
+	major = yes
+	
+	fire_only_once = yes
+		
+	mean_time_to_happen = {
+		days = 30
+	}
+	trigger = {
+		OR = {
+			AND = { #Emperor breaching treaty
+				is_emperor = yes #To make it fire for the Emperor specifically
+				any_province = {
+					is_part_of_hre = yes
+					region = balkan_region
+					NOT = { has_province_flag = br_byz_resurgence_treaty_exception }
+				}
+			}
+			AND = { #Byzantium breaching treaty
+				tag = BYZ #Firing for Byzantium specifically
+				any_owned_province = {
+					is_part_of_hre = yes
+				}
+			}
+		}
+		has_global_flag = br_byz_resurgence_treaty_enforced		
+	}
+	
+	option = { #That good-for-nothing treaty was never fair anyway!
+		name = "incidents_byzantine_resurgence.205.a"
+		
+		if = {
+			limit = {
+				tag = BYZ
+			}
+			add_prestige = -20
+			add_country_modifier = { #-2 diplo rep
+				name = "br_treaty_of_two_romes_violated"
+				duration = 9125
+			}
+			custom_tooltip = byz_challenged_hremperor_tooltip
+			set_country_flag = byz_challenged_hremperor
+			emperor = {
+				#WIP
+				custom_tooltip = hremperor_challenged_byz_tooltip
+				set_country_flag = hremperor_challenged_byz
+				country_event = { id = incidents_byzantine_resurgence.203 days = 5 tooltip = incidents_byzantine_resurgence.203.tt }
+			}
+		}
+		else = { #You're the emperor.
+			add_prestige = -20
+			add_country_modifier = { #-2 diplo rep
+				name = "br_treaty_of_two_romes_violated"
+				duration = 9125
+			}
+			#Enables the War of the Two Romes CB.
+			BYZ = {
+				custom_tooltip = byz_challenged_hremperor_tooltip
+				set_country_flag = byz_challenged_hremperor
+			}
+			#WIP
+			custom_tooltip = hremperor_challenged_byz_tooltip
+			set_country_flag = hremperor_challenged_byz
+		}
+	}
+}

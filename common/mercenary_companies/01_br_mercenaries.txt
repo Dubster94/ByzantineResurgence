@@ -1,0 +1,78 @@
+br_varangian_guard_elite = {
+    regiments_per_development = 0.005
+    cavalry_weight = 0.2
+	artillery_weight = 0.4
+    cavalry_cap = 4
+	cost_modifier = 1.2 #Not sure what to put here, but this works.
+    home_province = 151 #Constantinople
+	trigger = {
+		tag = BYZ	
+		custom_trigger_tooltip = {
+			tooltip = br_varangian_guard_enabled_tt
+			has_country_flag = br_varangian_guard_enabled
+		}
+	}
+	modifier = { #Elite unit. Should be powerful.
+		land_morale = 0.15
+		shock_damage = 0.10
+		fire_damage = 0.10
+	}
+}
+br_varangian_guard = {
+    regiments_per_development = 0.01
+    cavalry_weight = 0.2
+	artillery_weight = 0.2
+    cavalry_cap = 4
+	cost_modifier = 0.9 #Not sure what to put here, but this works.
+    home_province = 151 #Constantinople
+	trigger = {
+		tag = BYZ
+		custom_trigger_tooltip = {
+			tooltip = br_varangian_guard_enabled_tt
+			has_country_flag = br_varangian_guard_enabled
+		}
+	}
+	modifier = { #Elite unit. Should be powerful.
+		land_morale = 0.1
+		shock_damage = 0.05
+		fire_damage = 0.05
+	}
+}
+br_varangian_guard_rowdy = {
+    regiments_per_development = 0.02
+    cavalry_weight = 0.1
+	artillery_weight = 0.05
+    cavalry_cap = 2
+	cost_modifier = 0.6
+    home_province = 151 #Constantinople
+	trigger = {
+		tag = BYZ
+		custom_trigger_tooltip = {
+			tooltip = br_varangian_guard_enabled_tt
+			has_country_flag = br_varangian_guard_enabled
+		}
+	}
+	modifier = { #(Not so) Elite unit. Should (Not) be powerful.
+		land_morale = 0.1
+	}
+}
+br_turkic_cavalry = {
+    regiments_per_development = 0.02
+    cavalry_weight = 0.8
+	artillery_weight = 0.2
+    cavalry_cap = 200
+	cost_modifier = 0.5
+	sprites = { dlc042_tur_sprite_pack dlc002_tur_sprite_pack muslimgfx_sprite_pack } #Should use Ottoman units, to my knowledge
+	trigger = {
+		tag = BYZ
+		custom_trigger_tooltip = {
+			tooltip = br_turkic_cavalry_enabled_tt
+			has_country_flag = br_turkic_cavalry_enabled
+		}
+	}
+	modifier = {
+		cavalry_flanking = 0.25
+		cavalry_power = 0.1
+		cav_to_inf_ratio = 0.7 #Should hopefully work
+	}
+}

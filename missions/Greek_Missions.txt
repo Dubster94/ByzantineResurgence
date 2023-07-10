@@ -1,0 +1,470 @@
+#The idea is to consolidate a Hellenic Empire based on the Megali Idea.
+
+#TODO: REWARDS, ICONS & FLAVOUR FOR CONQUESTS
+gre_conquest_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRE
+	}
+	has_country_shield = yes
+
+	gre_consolidate_south_greece = { #Consolidate South Greece
+		icon = mission_mediterranean_castle
+		position = 1 #1-1
+		required_missions = {  } #None, first mission
+		
+		provinces_to_highlight = {
+			province_group = gre_consolidate_south_greece_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=gre_consolidate_south_greece_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			145 = { #Mystra
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			146 = { #Athens
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=gre_consolidate_north_greece }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	gre_consolidate_north_greece = { #Consolidate North Greece
+		icon = mission_odeon
+		position = 3 #1-3
+		required_missions = { gre_consolidate_south_greece }
+		
+		provinces_to_highlight = {
+			province_group = gre_consolidate_north_greece_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=gre_consolidate_north_greece_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			148 = { #Thessaloniki
+				add_base_tax = 4
+				add_base_production = 4
+				add_base_manpower = 2
+				add_or_spawn_center_of_trade = { level = 1 }
+			}
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=gre_take_constantinople }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	gre_take_constantinople = { #Take Constantinople
+		icon = mission_constantinople
+		position = 5 #1-5
+		required_missions = { gre_consolidate_north_greece }
+		
+		provinces_to_highlight = {
+			province_group = gre_take_constantinople_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=gre_take_constantinople_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			country_event = { id = gre_mission_flavor.1 }
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=gre_reclaim_aegean_islands }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	gre_reclaim_aegean_islands = { #Reclaim Aegean Islands
+		icon = mission_mediterranean_castle
+		position = 6 #1-6
+		required_missions = { gre_take_constantinople }
+		
+		provinces_to_highlight = {
+			province_group = gre_reclaim_aegean_islands_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=gre_reclaim_aegean_islands_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_naval_ambition"
+				duration = 3650
+			}
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=gre_integrate_cyprus }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	gre_integrate_cyprus = { #Integrate Cyprus
+		icon = mission_galleys_in_port
+		position = 7 #1-7
+		required_missions = { gre_reclaim_aegean_islands }
+		
+		provinces_to_highlight = {
+			province_group = gre_integrate_cyprus_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=gre_integrate_cyprus_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "gre_united_greeks"
+				duration = 9125
+			}
+			
+			#Claims
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+gre_conquest_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRE
+	}
+	has_country_shield = yes
+
+	gre_megali_idea = { #The Megali Idea
+		icon = mission_invade_island
+		position = 6 #6-2
+		required_missions = { gre_take_constantinople }
+		
+		provinces_to_highlight = {
+			province_group = gre_megali_idea_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=gre_megali_idea_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			318 = { #Smyrna
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 1
+				change_culture = ROOT
+				change_religion = ROOT
+				on_province_religion_converted_estate_privileges_effect = yes
+			}
+			random_owned_province = {
+				limit = {
+					province_group = gre_megali_idea_provinces
+					NOT = { province_id = 318 } #Exclude Smyrna
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				change_culture = ROOT
+				change_religion = ROOT
+				on_province_religion_converted_estate_privileges_effect = yes
+			}
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=gre_pontic_question }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	gre_pontic_question = { #The Pontic Question
+		icon = mission_mesopotamia
+		position = 6 #6-2
+		required_missions = { gre_megali_idea }
+		
+		provinces_to_highlight = {
+			province_group = gre_pontic_question_provinces
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=gre_pontic_question_provinces
+				owner_type=owned_by
+			}
+		}
+		
+		effect = {
+			#EVENT: Establish Pontic March of Pontus, or claim lands for yourself, integrating Pontic culture.
+			country_event = { id = gre_mission_flavor.2 }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+gre_internal_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRE
+	}
+	has_country_shield = yes
+	
+	gre_greek_philosophy = { #Greek Philosophers
+		icon = mission_aristotle
+		position = 1 #4-1
+		required_missions = {  } #None
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "gre_greek_philosophy_mod"
+				duration = 10950
+			}
+		}		
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	gre_scholastika = { #Scholastika
+		icon = mission_early_modern_university
+		position = 2 #4-2
+		required_missions = { gre_greek_philosophy }
+		
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_building = university }
+		}
+		
+		trigger = {
+			university = 3
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "gre_scholastika_mod"
+				duration = 10950
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	gre_temples = { #Restore the Temples
+		icon = mission_early_game_buildings
+		position = 3 #4-3
+		required_missions = { } #None
+		
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_building = temple }
+		}
+		
+		trigger = {
+			temple = 15
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "gre_temple_influence"
+				duration = 10950
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	gre_develop_greece = { #Develop Greece
+		icon = mission_colonial
+		position = 5 #4-5
+		required_missions = { gre_temples }
+		
+		provinces_to_highlight = {
+			culture_group = byzantine
+			OR = {
+				region = anatolia_region
+				region = balkan_region
+			}
+		}
+		
+		trigger = {
+			development_in_provinces = { 
+				value = 800
+				culture_group = byzantine
+				OR = {
+					region = anatolia_region
+					region = balkan_region
+				}
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = { has_dlc = "Mandate of Heaven"	}
+				add_splendor = 200
+			}
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = philosopher
+				religion = root
+				discount = yes
+			}
+			generate_scaled_advisor_of_type_and_religion_effect = {
+				type = trader
+				religion = root
+				discount = yes
+			}
+			capital_scope = { #A decent reward for a developed nation
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 1
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+}
+
+gre_internal_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRE
+	}
+	has_country_shield = yes
+	gre_ellenika = { #Ellenika
+		icon = mission_alliances
+		position = 4 #5-4
+		required_missions = { gre_temples }
+		
+		provinces_to_highlight = {
+			NOT = { culture_group = ROOT }
+			province_group = gre_ellenika_provinces
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=highlighted_provinces_converted_to_culture_group 
+				provinces=gre_ellenika_provinces
+				owner_type=culture_group
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "gre_ellenika_mod"
+				duration = 10950
+			}
+		}		
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	gre_hellenic_empire = { #Hellenic Empire
+		icon = mission_empire
+		position = 6 #5-6
+		required_missions = { gre_ellenika gre_develop_greece }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			development = 1500
+			prestige = 50
+		}
+		
+		effect = {
+			set_government_rank = 3
+		}		
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}

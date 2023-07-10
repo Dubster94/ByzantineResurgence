@@ -1,0 +1,112 @@
+namespace = winds_from_btp
+
+country_event = {
+	id = winds_from_btp.1
+	title = "winds_from_btp.1.t" 
+	desc = "winds_from_btp.1.d"
+	picture = SHIP_SAILING_eventPicture
+	
+	major = yes
+	major_trigger = {
+		ai = no
+	}
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		ai = no
+		#NOT = { has_global_flag = bt_storms_a_brewin }
+		NOT = { has_global_flag = bt_april_storms_passed }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			973 = {
+				add_core = CSC
+				change_culture = celtic_irish_culture
+				cede_province = CSC
+				change_religion = animism
+				add_institution_embracement = {
+					which = feudalism
+					value = 100
+				}
+			}
+			cascadia_region = {
+				add_core = CSC
+				change_culture = celtic_irish_culture
+				cede_province = CSC
+				change_religion = animism
+				add_institution_embracement = {
+					which = feudalism
+					value = 100
+				}
+			}
+			CSC = {
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				change_primary_culture = celtic_irish_culture
+				change_technology_group = high_american
+				change_unit_type = high_american
+				change_religion = animism
+				add_treasury = 5000
+				add_manpower = 50
+				define_ruler = {
+					name = "Draíocht I"
+					dynasty = "of Beyond the Pale"
+					culture = celtic_irish_culture
+					religion = animism
+					adm = 6
+					dip = 4
+					mil = 5
+					age = 30
+					claim = 95
+				}
+				define_heir = {
+					name = "Chairman Meow"
+					dynasty = "of Beyond the Pale"
+					culture = celtic_irish_culture
+					religion = animism
+					adm = 3
+					dip = 6
+					mil = 4
+					age = 25
+					claim = 95
+				}
+				define_ruler_to_general = {
+					fire = 6
+					shock = 6
+					manuever = 5
+					siege = 4
+					trait = inspirational_leader_general_personality
+				}
+				add_ruler_personality = immortal_personality
+				add_ruler_personality = just_personality
+				add_ruler_personality = obsessive_perfectionist_personality
+				add_heir_personality = immortal_personality
+				swap_non_generic_missions = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "winds_from_btp.1.a"
+		trigger = {
+			NOT = { has_global_flag = bt_april_storms_passed }
+		}
+		
+		custom_tooltip = winds_from_btp.1.a.tt
+		#set_global_flag = bt_storms_a_brewin
+	}
+	
+	option = {
+		name = "winds_from_btp.1.b"
+		trigger = {
+			has_global_flag = bt_april_storms_passed
+		}
+		switch_tag = CSC
+		custom_tooltip = winds_from_btp.1.b.tt
+		#set_global_flag = bt_storms_a_brewin
+	}
+}

@@ -1,0 +1,162 @@
+# incident_siege_of_constantinople = { #Triggers when and if Byzantium has converted to Catholicism & are in a defensive war against Ottomans.
+    # event = incidents_byzantine_resurgence.1
+	# default_option = 0
+	
+	# can_stop = {
+		# NOT = {
+			# exists = BYZ
+		# }
+	# }
+
+	# 0 = { #Do not offer help
+		# factor = 4
+		# modifier = {
+			# factor = 100
+			# is_neighbor_of = BYZ
+			# NOT = {
+				# alliance_with = BYZ
+			# }
+		# }
+		# modifier = {
+			# factor = 100
+			# OR = {
+				# ai_attitude = {
+					# who = BYZ
+					# attitude = attitude_rivalry
+				# }
+				# ai_attitude = {
+					# who = BYZ
+					# attitude = attitude_hostile
+				# }
+				# ai_attitude = {
+					# who = BYZ
+					# attitude = attitude_threatened
+				# }
+				# ai_attitude = {
+					# who = BYZ
+					# attitude = attitude_outraged
+				# }
+				# ai_attitude = {
+					# who = BYZ
+					# attitude = attitude_disloyal
+				# }
+				# ai_attitude = {
+					# who = BYZ
+					# attitude = attitude_rebellious
+				# }
+			# }
+		# }
+	# }
+	
+	# 1 = { #Attempt to protect the Byzantines
+		# factor = 1
+		# modifier = {
+			# factor = 100
+			# OR = {
+				# ai_attitude = {
+					# who = BYZ
+					# attitude = attitude_friendly
+				# }
+				# ai_attitude = {
+					# who = BYZ
+					# attitude = attitude_loyal
+				# }
+				# ai_attitude = {
+					# who = BYZ
+					# attitude = attitude_allied
+				# }
+			# }
+		# }
+	# }
+# }
+
+incident_byzantine_resurgence = { #Triggered when and if Byzantium resurges (Gets more than 1k development while being independent)
+    event = incidents_byzantine_resurgence.2
+	default_option = 0
+	
+	can_stop = {
+		OR = {
+			NOT = {
+				exists = BYZ
+			}
+			BYZ = {
+				is_subject = yes
+			}
+			BYZ = {
+				NOT = { total_development = 1000 }
+			}
+		}
+	}
+
+	0 = { #Hah, they are merely Greeks, not Romans!
+		factor = 3
+		modifier = {
+			factor = 100
+			is_neighbor_of = BYZ
+			NOT = {
+				alliance_with = BYZ
+			}
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = BYZ
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = BYZ
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = BYZ
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = BYZ
+					attitude = attitude_outraged
+				}
+				ai_attitude = {
+					who = BYZ
+					attitude = attitude_disloyal
+				}
+				ai_attitude = {
+					who = BYZ
+					attitude = attitude_rebellious
+				}
+			}
+		}
+	}
+	
+	1 = { #Concede the Greeks as the true Romans
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = BYZ
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = BYZ
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = BYZ
+					attitude = attitude_allied
+				}
+			}
+		}
+	}
+	
+	2 = { #Attempt to negotiate with the Greeks
+		factor = 2
+		modifier = {
+			factor = 100
+			ai_attitude = {
+				who = BYZ
+				attitude = attitude_neutral
+			}
+		}
+	}
+}

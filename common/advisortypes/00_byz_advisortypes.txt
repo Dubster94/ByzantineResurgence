@@ -1,0 +1,159 @@
+provincial_governor = {
+	monarch_power = ADM
+	
+	# Bonus
+	core_creation = -0.1
+	skill_scaled_modifier = {
+		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
+		modifier = { reform_progress_growth = 0.03 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = 5_gov_cap_bonus_flag 
+			}
+		}
+		modifier = {
+			governing_capacity_modifier = 0.03
+		}
+	}	
+
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = fin_fine_finances_flag 
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+	}	
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = republican_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			republican_tradition = 0.02 
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = {  
+				is_emperor_of_china = yes 
+			}
+		}
+		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = mng_dev_per_adm_advisor_level_flag 
+			}
+		}
+		modifier = {
+			development_cost = -0.02
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_modifier = eng_foreign_religious_control }
+		}
+		modifier = { tolerance_heretic = 1 }
+	}
+
+	chance = { #Only gotten from Exarches estate privilege.
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = {
+				NOT = { has_estate_privilege = estate_exarches_court_advisors }
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+military_general = {
+	monarch_power = MIL
+	
+	# Bonus
+	army_tradition = 1
+	skill_scaled_modifier = {
+		trigger = { owner = {  has_government_attribute = reform_progress_from_advisors  } }
+		modifier = { reform_progress_growth = 0.03 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = 5_gov_cap_bonus_flag 
+			}
+		}
+		modifier = {
+			governing_capacity_modifier = 0.03
+		}
+	}	
+
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = fin_fine_finances_flag 
+			}
+		}
+		modifier = {
+			global_tax_modifier = 0.05
+		}
+	}	
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = republican_tradition_from_advisors 
+			}
+		}
+		modifier = {
+			republican_tradition = 0.02 
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = {  
+				is_emperor_of_china = yes 
+			}
+		}
+		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = { 
+			owner = { 
+				has_country_flag = mng_dev_per_adm_advisor_level_flag 
+			}
+		}
+		modifier = {
+			development_cost = -0.02
+		}
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { has_country_modifier = eng_foreign_religious_control }
+		}
+		modifier = { tolerance_heretic = 1 }
+	}
+
+	chance = { #Only gotten from Strategoi estate privilege.
+		factor = 1
+		modifier = {
+			factor = 0
+			owner = {
+				NOT = { has_estate_privilege = estate_generals_bring_to_court }
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

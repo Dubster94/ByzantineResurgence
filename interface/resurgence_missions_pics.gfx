@@ -1,0 +1,123 @@
+spriteTypes = {
+	spriteType = {
+		name = "mission_constantinople"
+		texturefile = "gfx//interface//missions//mission_constantinople.dds"
+	}
+	spriteType = {
+		name = "mission_skoutatoi"
+		texturefile = "gfx//interface//missions//mission_skoutatoi.dds"
+	}
+	spriteType = {
+		name = "mission_varangians"
+		texturefile = "gfx//interface//missions//mission_varangians.dds"
+	}
+	spriteType = {
+		name = "mission_strategoi"
+		texturefile = "gfx//interface//missions//mission_strategoi.dds"
+	}
+	spriteType = {
+		name = "mission_army_camp"
+		texturefile = "gfx//interface//missions//mission_army_camp.dds"
+	}
+	spriteType = {
+		name = "mission_desert"
+		texturefile = "gfx//interface//missions//mission_desert.dds"
+	}
+	spriteType = {
+		name = "mission_pyramids"
+		texturefile = "gfx//interface//missions//mission_pyramids.dds"
+	}
+	spriteType = {
+		name = "mission_mesopotamia"
+		texturefile = "gfx//interface//missions//mission_mesopotamia.dds"
+	}
+	spriteType = {
+		name = "mission_curtained_window"
+		texturefile = "gfx//interface//missions//mission_curtained_window.dds"
+	}
+	spriteType = {
+		name = "mission_aristotle"
+		texturefile = "gfx//interface//missions//mission_aristotle.dds"
+	}
+	spriteType = {
+		name = "mission_odeon"
+		texturefile = "gfx//interface//missions//mission_odeon.dds"
+	}
+	spriteType = {
+		name = "mission_mediterranean_castle"
+		texturefile = "gfx//interface//missions//mission_mediterranean_castle.dds"
+	}
+	spriteType = {
+		name = "mission_etchmiadzin"
+		texturefile = "gfx//interface//missions//mission_etchmiadzin.dds"
+	}
+	spriteType = {
+		name = "mission_etchmiadzin_2"
+		texturefile = "gfx//interface//missions//mission_etchmiadzin_2.dds"
+	}
+	spriteType = {
+		name = "mission_mesopotamia_plain"
+		texturefile = "gfx//interface//missions//mission_mesopotamia_plain.dds"
+	}
+	spriteType = {
+		name = "mission_great_hayk"
+		texturefile = "gfx//interface//missions//mission_great_hayk.dds"
+	}
+	spriteType = {
+		name = "mission_shirvanshah_palace"
+		texturefile = "gfx//interface//missions//mission_shirvanshah_palace.dds"
+	}
+	spriteType = {
+		name = "mission_mamluks"
+		texturefile = "gfx//interface//missions//mission_mamluks.dds"
+	}
+	spriteType = {
+		name = "mission_ottomans"
+		texturefile = "gfx//interface//missions//mission_ottomans.dds"
+	}
+	spriteType = {
+		name = "mission_persian_art"
+		texturefile = "gfx//interface//missions//mission_persian_art.dds"
+	}
+	spriteType = {
+		name = "mission_persian_architecture"
+		texturefile = "gfx//interface//missions//mission_persian_architecture.dds"
+	}
+	spriteType = {
+		name = "mission_persian_mosque"
+		texturefile = "gfx//interface//missions//mission_persian_mosque.dds"
+	}
+	spriteType = {
+		name = "mission_persian_carpets"
+		texturefile = "gfx//interface//missions//mission_persian_carpets.dds"
+	}
+	spriteType = {
+		name = "mission_qizilbash_generals"
+		texturefile = "gfx//interface//missions//mission_qizilbash_generals.dds"
+	}
+	spriteType = {
+		name = "mission_royal_court"
+		texturefile = "gfx//interface//missions//mission_royal_court.dds"
+	}
+	spriteType = {
+		name = "mission_xerxes"
+		texturefile = "gfx//interface//missions//mission_xerxes.dds"
+	}
+	spriteType = {
+		name = "mission_persian_highlands"
+		texturefile = "gfx//interface//missions//mission_persian_highlands.dds"
+	}
+	spriteType = {
+		name = "mission_afghan_village"
+		texturefile = "gfx//interface//missions//mission_afghan_village.dds"
+	}
+	spriteType = {
+		name = "mission_zourkhaneh"
+		texturefile = "gfx//interface//missions//mission_zourkhaneh.dds"
+	}
+	spriteType = {
+		name = "mission_sufi_orders"
+		texturefile = "gfx//interface//missions//mission_sufi_orders.dds"
+	}
+}
+

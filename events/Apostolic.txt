@@ -1,0 +1,586 @@
+#Copy of Coptic Flavor Events written by Milla Isaksson & Mathilda Bjaernehed as a template for holy site events.
+#Further modified by Dub
+# Do correct me if I'm wrong, but I could find no mention of important monasteries to the Armenian Apostolic Church, unlike that of the Coptic wikipage which lists probably 10 or so important monasteries in a variety of areas.
+# It does seem like monasticism wasn't as important to the Apostolic Church as it was for the Coptic church. Because of this, I've cut pretty much all the events relating to monasteries in random provinces, and only kept those
+# of relevance to the Holy Sites.
+
+namespace = apostolic_flavor
+
+#Yerevan
+# Do not change effects without also updating tooltips in Apostolic missions
+country_event = {
+	id = apostolic_flavor.1
+	title = apostolic_flavor.1.t
+	picture = POPE_PREACHING_eventPicture
+
+	desc = {
+		trigger = { tag = ARM }
+		desc = "apostolic_flavor.1.da"
+	}
+	desc = {
+		trigger = { NOT = { tag = ARM } }
+		desc = "apostolic_flavor.1.db"
+	}
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 419
+		419 = {
+			religion = apostolic
+		}
+		OR = {
+			NOT = {
+				has_mission = apostolic_conquest_of_yerevan
+			}
+			has_country_flag = yerevan_mission_flag
+		}
+		OR = {
+			religion = apostolic
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+		NOT = { has_global_flag = apostolic_yerevan_liberated } #Cancels Mission 
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = apostolic_yerevan_liberated
+			armenia_area = { #Armenia
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+			north_kurdistan_area = { #Van
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = apostolic_flavor.1.a
+		custom_tooltip = apostolic_flavor.1.a.tt
+
+		add_prestige = 10
+
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = copts_liberated
+				}
+			}
+			every_owned_province = {
+				limit = { has_province_flag = copts_liberated }
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+				clr_province_flag = copts_liberated
+			}
+		}
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = apostolic ai = no }
+				country_event = { id = apostolic_flavor.2 }
+			}
+		}
+	}
+}
+
+#Yerevan (for other apostolics)
+country_event = {
+	id = apostolic_flavor.2
+	title = apostolic_flavor.1.t
+	desc = apostolic_flavor.2.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = apostolic_flavor.1.a
+		custom_tooltip = apostolic_flavor.1.a.tt
+		
+		tooltip = {
+			armenia_area = { #Armenia
+				add_province_modifier = {
+					name = "the_faithful_liberated"
+					duration = 3650
+				}
+			}
+			north_kurdistan_area = { #Van
+				add_province_modifier = {
+					name = "the_faithful_liberated"
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+#Sis
+# Do not change effects without also updating tooltips in Apostolic missions
+country_event = {
+	id = apostolic_flavor.3
+	title = apostolic_flavor.3.t
+	desc = apostolic_flavor.3.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 5154
+		5154 = {
+			religion = apostolic
+		}
+		OR = {
+			NOT = {
+				has_mission = apostolic_conquest_of_sis
+			}
+			has_country_flag = sis_mission_flag
+		}
+		OR = {
+			religion = apostolic
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+		NOT = { has_global_flag = apostolic_sis_liberated } #Cancels Mission 
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = apostolic_sis_liberated
+			cukurova_area = { #Cilicia
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+			aleppo_area = { #Aleppo, on the basis that there is no Antioch mission.
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+			mardin_area = { #Mardin, on the basis that there is no Antioch mission.
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+		}
+	}
+
+	option = {
+		name = apostolic_flavor.3.a
+		custom_tooltip = apostolic_flavor.3.a.tt
+
+		add_prestige = 10
+
+
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = copts_liberated
+				}
+			}
+			every_owned_province = {
+				limit = { has_province_flag = copts_liberated }
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+				clr_province_flag = copts_liberated
+			}
+		}
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = apostolic ai = no }
+				country_event = { id = apostolic_flavor.4 }
+			} 
+		}
+	}
+}
+
+#Sis (for other apostolics)
+country_event = {
+	id = apostolic_flavor.4
+	title = apostolic_flavor.3.t
+	desc = apostolic_flavor.4.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = apostolic_flavor.3.a
+		custom_tooltip = apostolic_flavor.3.a.tt
+
+		tooltip = {
+			cukurova_area = { #Cilicia
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+			}
+			aleppo_area = { #Aleppo, on the basis that there is no Antioch mission.
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+			}
+			mardin_area = { #Mardin, on the basis that there is no Antioch mission.
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+#Jerusalem
+# Do not change effects without also updating tooltips in Apostolic missions
+country_event = {
+	id = apostolic_flavor.5
+	title = apostolic_flavor.5.t
+	desc = apostolic_flavor.5.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			NOT = {
+				has_mission = apostolic_conquest_of_jerusalem
+			}
+			has_country_flag = jerusalem_mission_flag
+		}
+		owns = 379
+		379 = {
+			religion = apostolic
+		}
+		OR = {
+			religion = apostolic
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+		NOT = { has_global_flag = apostolic_jerusalem_liberated }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = apostolic_jerusalem_liberated
+			palestine_area = { #Palestine
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+		}	
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = apostolic_flavor.5.a
+		custom_tooltip = apostolic_flavor.5.a.tt
+
+		add_prestige = 10
+
+
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = copts_liberated
+				}
+			}
+			every_owned_province = {
+				limit = { has_province_flag = copts_liberated }
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+				clr_province_flag = copts_liberated
+			}
+		}
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = apostolic ai = no }
+				country_event = { id = apostolic_flavor.6 }
+			}
+		}
+	}
+}
+
+#Jerusalem (for other apostolics)
+country_event = {
+	id = apostolic_flavor.6
+	title = apostolic_flavor.5.t
+	desc = apostolic_flavor.6.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = apostolic_flavor.6.a
+
+		tooltip = {
+			palestine_area = { #Palestine
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+#Sebastia
+# Do not change effects without also updating tooltips in Apostolic missions
+country_event = {
+	id = apostolic_flavor.7
+	title = apostolic_flavor.7.t
+	desc = apostolic_flavor.7.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			NOT = {
+				has_mission = apostolic_conquest_of_sebastia
+			}
+			has_country_flag = sebastia_mission_flag
+		}
+		owns = 329
+		329 = {
+			religion = apostolic
+		}
+		OR = {
+			religion = apostolic
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+		NOT = { has_global_flag = apostolic_sebastia_liberated }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = apostolic_sebastia_liberated
+			rum_area = { #West Pontus
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+			erzurum_area = { #Upper Euphrates
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+		}
+	}
+
+	option = {
+		name = apostolic_flavor.7.a
+		custom_tooltip = apostolic_flavor.7.a.tt
+
+		add_prestige = 10
+
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = copts_liberated
+				}
+			}
+			every_owned_province = {
+				limit = { has_province_flag = copts_liberated }
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+				clr_province_flag = copts_liberated
+			}
+		}
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = apostolic ai = no }
+				country_event = { id = apostolic_flavor.8 }
+			}
+		}
+	}
+}
+
+#Sebastia (for other apostolics)
+country_event = {
+	id = apostolic_flavor.8
+	title = apostolic_flavor.7.t
+	desc = apostolic_flavor.8.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = apostolic_flavor.7.a
+		custom_tooltip = apostolic_flavor.7.a.tt
+
+		tooltip = {
+			rum_area = { #West Pontus
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+			}
+			erzurum_area = { #Upper Euphrates
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+#Constantinople
+# Do not change effects without also updating tooltips in Apostolic missions
+country_event = {
+	id = apostolic_flavor.9
+	title = apostolic_flavor.9.t
+	desc = apostolic_flavor.9.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			NOT = {
+				has_mission = apostolic_conquest_of_constantinople
+			}
+			has_country_flag = constantinople_mission_flag
+		}
+		owns = 151
+		151 = {
+			religion = apostolic
+		}
+		OR = {
+			religion = apostolic
+			uses_blessings = yes
+		}
+		has_dlc = "Rights of Man"
+		NOT = { has_global_flag = apostolic_constantinople_liberated }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = apostolic_constantinople_liberated
+			thrace_area = { #Thrace
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+			hudavendigar_area = { #Bithynia, the logic being that the first Armenian Patriarch of Constantinople was from Bursa.
+				limit = { 
+					NOT = { religion = apostolic } 
+					owned_by = ROOT
+				}
+				set_province_flag = copts_liberated
+			}
+		}
+	}
+
+	option = {
+		name = apostolic_flavor.9.a
+		custom_tooltip = apostolic_flavor.9.a.tt
+
+		add_prestige = 10
+
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = copts_liberated
+				}
+			}
+			every_owned_province = {
+				limit = { has_province_flag = copts_liberated }
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+				clr_province_flag = copts_liberated
+			}
+		}
+
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = apostolic ai = no }
+				country_event = { id = apostolic_flavor.10 }
+			}
+		}
+	}
+}
+
+#Constantinople (for other apostolics)
+country_event = {
+	id = apostolic_flavor.10
+	title = apostolic_flavor.9.t
+	desc = apostolic_flavor.10.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = apostolic_flavor.10.a
+		custom_tooltip = apostolic_flavor.9.a.tt
+
+		tooltip = {
+			thrace_area = { #Thrace
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+			}
+			hudavendigar_area = { #Bithynia, the logic being that the first Armenian Patriarch of Constantinople was from Bursa.
+				add_province_modifier = {
+					name = the_faithful_liberated
+					duration = 3650
+				}
+			}
+		}
+	}
+}

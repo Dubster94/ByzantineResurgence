@@ -1,0 +1,423 @@
+namespace = br_decision_events
+
+country_event = { #Cede lands Karchidon
+	id = br_decision_events.1
+	title = "br_decision_events.1.t" 
+	desc = "br_decision_events.1.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		cede_land_to_exarch_effect = {
+			exarch = KCD
+			provinces = byz_exarch_karchidon_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.1.a"	
+	}
+}
+
+country_event = { #Cede lands Hesperia
+	id = br_decision_events.2
+	title = "br_decision_events.2.t" 
+	desc = "br_decision_events.2.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		cede_land_to_exarch_effect = {
+			exarch = HSP
+			provinces = byz_exarch_hesperia_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.2.a"	
+	}
+}
+
+country_event = { #Cede lands Galatia
+	id = br_decision_events.3
+	title = "br_decision_events.3.t" 
+	desc = "br_decision_events.3.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		cede_land_to_exarch_effect = {
+			exarch = GLT
+			provinces = byz_exarch_galatia_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.3.a"	
+	}
+}
+
+country_event = { #Cede lands Albion
+	id = br_decision_events.4
+	title = "br_decision_events.4.t" 
+	desc = "br_decision_events.4.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		cede_land_to_exarch_effect = {
+			exarch = ABN
+			provinces = byz_exarch_albion_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.4.a"	
+	}
+}
+
+country_event = { #Cede lands Persis
+	id = br_decision_events.5
+	title = "br_decision_events.5.t" 
+	desc = "br_decision_events.5.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		cede_land_to_exarch_effect = {
+			exarch = PSI
+			provinces = byz_exarch_persis_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.5.a"	
+	}
+}
+
+country_event = { #Cede lands Ravenna
+	id = br_decision_events.6
+	title = "br_decision_events.6.t" 
+	desc = "br_decision_events.6.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		cede_land_to_exarch_effect = {
+			exarch = RVN
+			provinces = byz_exarch_ravenna_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.6.a"	
+	}
+}
+
+country_event = { #Cede lands Antioch
+	id = br_decision_events.7
+	title = "br_decision_events.7.t" 
+	desc = "br_decision_events.7.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		cede_land_to_exarch_effect = {
+			exarch = ATL
+			provinces = byz_exarch_anatolia_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.7.a"	
+	}
+}
+
+country_event = { #Cede lands Alexandria
+	id = br_decision_events.8
+	title = "br_decision_events.8.t" 
+	desc = "br_decision_events.8.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		cede_land_to_exarch_effect = {
+			exarch = AEG
+			provinces = byz_exarch_aegyptus_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.8.a"	
+	}
+}
+
+country_event = { #Establish Karchidon
+	id = br_decision_events.11
+	title = "br_decision_events.11.t" 
+	desc = "br_decision_events.11.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		establish_vassal_byz_effect = {
+			capital = 341
+			tag = KCD
+			culture = karchidoniac
+			provinces = byz_exarch_karchidon_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.11.a"	
+	}
+}
+
+country_event = { #Establish Hesperia
+	id = br_decision_events.12
+	title = "br_decision_events.12.t" 
+	desc = "br_decision_events.12.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		establish_vassal_byz_effect = {
+			capital = 3099
+			tag = HSP
+			culture = hesperic
+			provinces = byz_exarch_hesperia_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.12.a"	
+	}
+}
+
+country_event = { #Establish Galatia
+	id = br_decision_events.13
+	title = "br_decision_events.13.t" 
+	desc = "br_decision_events.13.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		if = { #If Bourdigala is owned by Byzantium
+			limit = {
+				174 = { #Bourdigala, historical capital of the lower region in 395AD Rome
+					owner = {
+						OR = {
+							tag = BYZ
+							AND = {
+								is_subject_of = ROOT
+								NOT = { is_subject_of_type = tributary_state }
+								is_lesser_in_union = no
+							}
+						}
+					}
+				}
+			}
+			establish_vassal_byz_effect = {
+				capital = 174
+				tag = GLT
+				culture = galatian
+				provinces = byz_exarch_galatia_provinces
+			}
+		}
+		else_if = { #If Treveron is owned by Byzantium
+			limit = {
+				80 = {
+					owner = {
+						OR = {
+							tag = BYZ
+							AND = {
+								is_subject_of = ROOT
+								NOT = { is_subject_of_type = tributary_state }
+								is_lesser_in_union = no
+							}
+						}
+					}
+				}
+			}
+			establish_vassal_byz_effect = {
+				capital = 80
+				tag = GLT
+				culture = galatian
+				provinces = byz_exarch_galatia_provinces
+			}
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.13.a"	
+	}
+}
+
+country_event = { #Establish Albion
+	id = br_decision_events.14
+	title = "br_decision_events.14.t" 
+	desc = "br_decision_events.14.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		establish_vassal_byz_effect = {
+			capital = 236
+			tag = ABN
+			culture = albian
+			provinces = byz_exarch_albion_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.14.a"	
+	}
+}
+
+country_event = { #Establish Persis
+	id = br_decision_events.15
+	title = "br_decision_events.15.t" 
+	desc = "br_decision_events.15.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		establish_vassal_byz_effect = {
+			capital = 2218
+			tag = PSI
+			culture = persic
+			provinces = byz_exarch_persis_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.15.a"	
+	}
+}
+
+country_event = { #Establish Ravenna
+	id = br_decision_events.16
+	title = "br_decision_events.16.t" 
+	desc = "br_decision_events.16.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		establish_vassal_byz_effect = {
+			capital = 114
+			tag = RVN
+			culture = griko
+			provinces = byz_exarch_ravenna_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.16.a"	
+	}
+}
+
+country_event = { #Establish Antioch
+	id = br_decision_events.17
+	title = "br_decision_events.17.t" 
+	desc = "br_decision_events.17.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		establish_vassal_byz_effect = {
+			capital = 2313
+			tag = ATL
+			culture = anatolian
+			provinces = byz_exarch_anatolia_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.17.a"	
+	}
+}
+
+country_event = { #Establish Alexandria
+	id = br_decision_events.18
+	title = "br_decision_events.18.t" 
+	desc = "br_decision_events.18.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	immediate = {
+		establish_vassal_byz_effect = {
+			capital = 358
+			tag = AEG
+			culture = alexandrian
+			provinces = byz_exarch_aegyptus_provinces
+		}
+	}
+	option = { #Integrate
+		name = "br_decision_events.18.a"	
+	}
+}

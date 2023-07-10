@@ -1,0 +1,69 @@
+add_or_spawn_center_of_trade = {
+	if = { #If has center of trade, add level.
+		limit = {
+			OR = { #TODO: Change this as this trigger apparently checks for at least level X, not specifically level X.
+				province_has_center_of_trade_of_level = 1
+				province_has_center_of_trade_of_level = 2
+				province_has_center_of_trade_of_level = 3
+			}
+		}
+		add_center_of_trade_level = $level$
+	}
+	else = {
+		center_of_trade = $level$
+	}
+}
+
+swap_ideas = { #Should really be this easy, i.e "swap_ideas = yes"
+	if = {
+		limit = { has_custom_ideas = no }
+		country_event = { id = ideagroups.1 } #Swap Ideas
+	}
+}
+
+create_interregnum_effect = {
+	hidden_effect = {
+		every_country = {
+			limit = {
+				marriage_with = ROOT
+			}
+			break_marriage = ROOT
+		}
+		kill_heir = { allow_new_heir = no }
+	}
+	define_ruler = {
+		name = "(Interregnum)"
+		adm = 0
+		dip = 0
+		mil = 0
+		regency = yes
+	}
+}
+
+#Same version as vanilla's move_capital_effect, but using a custom tag instead of ROOT for the country in question. Important for subject country formations used in this mod.
+#THIS = Province Scope, tag = Country Scope
+#Usage: tag_move_capital_effect = { tag=XXX } inside a province scope to move the tag's capital to.
+tag_move_capital_effect = {
+	if = {
+		limit = {
+			is_part_of_hre = yes
+			$tag$ = {
+				is_part_of_hre = no
+			}
+		}
+		set_in_empire = no
+		emperor = {
+			add_opinion = {
+				who = $tag$
+				modifier = hre_province_left
+			}
+		}
+		add_imperial_influence = -1
+	}
+	if = {
+		limit = { is_capital = no }
+		$tag$ = {
+			set_capital = PREV
+		}
+	}
+}

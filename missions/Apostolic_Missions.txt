@@ -1,0 +1,227 @@
+#Created by Dub, using Coptic missions as a template
+apostolic_missions = {
+	slot = 1
+	generic = yes
+	ai = yes
+	
+	potential_on_load = { #DLC-unique because Apostolic features are DLC-unique
+		has_dlc = "Rights of Man"
+	}
+	
+	potential = {
+		religion = apostolic
+		has_dlc = "Rights of Man"
+	}
+
+	apostolic_conquest_of_yerevan = {
+		icon = mission_etchmiadzin
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 419
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = apostolic
+			}
+			has_discovered = ROOT
+		}
+		trigger = {
+			419 = {
+				owned_by = ROOT
+				religion = apostolic
+			}
+		}
+		effect = {
+			set_country_flag = yerevan_mission_flag
+			tooltip = { 
+				add_prestige = 10 
+				armenia_area = {
+					add_province_modifier = {
+						name = "the_faithful_liberated"
+						duration = 3650
+					}
+				}
+				north_kurdistan_area = {
+					add_province_modifier = {
+						name = "the_faithful_liberated"
+						duration = 3650
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = { id = apostolic_flavor.1 }
+			}
+		}
+	}
+	apostolic_conquest_of_sis = {
+		icon = mission_egyptian_mamluk_soldier
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 5154
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = apostolic
+			}
+			has_discovered = ROOT
+		}
+		trigger = {
+			5154 = {
+				owned_by = ROOT
+				religion = apostolic
+			}
+		}
+		effect = {
+			set_country_flag = sis_mission_flag
+			tooltip = {
+				add_prestige = 10
+				cukurova_area = { #Cilicia
+					limit = { 
+						NOT = { religion = apostolic } 
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = the_faithful_liberated
+						duration = 3650
+					}
+				}
+				aleppo_area = { #Aleppo, on the basis that there is no Antioch mission.
+					limit = { 
+						NOT = { religion = apostolic } 
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = the_faithful_liberated
+						duration = 3650
+					}
+				}
+				mardin_area = { #Mardin, on the basis that there is no Antioch mission.
+					limit = { 
+						NOT = { religion = apostolic } 
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = the_faithful_liberated
+						duration = 3650
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = { id = apostolic_flavor.3 }
+			}
+		}
+	}
+	apostolic_conquest_of_jerusalem = {
+		icon = mission_religious
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 379
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = apostolic
+			}
+			has_discovered = ROOT
+		}
+		trigger = {
+			379 = {
+				owned_by = ROOT
+				religion = apostolic
+			}
+		}
+		effect = {
+			set_country_flag = jerusalem_mission_flag
+			tooltip = { 
+				add_prestige = 10 
+				palestine_area = { #Cilicia
+					limit = { 
+						NOT = { religion = apostolic } 
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = the_faithful_liberated
+						duration = 3650
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = { id = apostolic_flavor.5 }
+			}
+		}
+	}
+	apostolic_conquest_of_sebastia = {
+		icon = mission_non-western_soldiers
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 329
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = apostolic
+			}
+			has_discovered = ROOT
+		}
+		trigger = {
+			329 = {
+				owned_by = ROOT
+				religion = apostolic
+			}
+		}
+		effect = {
+			set_country_flag = sebastia_mission_flag
+			tooltip = {
+				add_prestige = 10
+				rum_area = {
+					add_province_modifier = {
+						name = the_faithful_liberated
+						duration = 3650
+					}
+				}
+				erzurum_area = {
+					add_province_modifier = {
+						name = the_faithful_liberated
+						duration = 3650
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = { id = apostolic_flavor.7 }
+			}
+		}
+	}
+	apostolic_conquest_of_constantinople = {
+		icon = mission_constantinople
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 151
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = apostolic
+			}
+			has_discovered = ROOT
+		}
+		trigger = {
+			151 = {
+				owned_by = ROOT
+				religion = apostolic
+			}
+		}
+		effect = {
+			set_country_flag = constantinople_mission_flag
+			tooltip = {
+				add_prestige = 10
+				thrace_area = { #Thrace
+					add_province_modifier = {
+						name = the_faithful_liberated
+						duration = 3650
+					}
+				}
+				hudavendigar_area = { #Bithynia, the logic being that the first Armenian Patriarch of Constantinople was from Bursa.
+					add_province_modifier = {
+						name = the_faithful_liberated
+						duration = 3650
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = { id = apostolic_flavor.9 }
+			}
+		}	
+	}
+}

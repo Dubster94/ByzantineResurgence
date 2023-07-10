@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_holy_order_hurufi"
+		texturefile = "gfx/interface/holy_orders/Hurufi.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_holy_order_zahabi"
+		texturefile = "gfx/interface/holy_orders/Zahabi.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_holy_order_safavi"
+		texturefile = "gfx/interface/holy_orders/Safavi.dds"
+		noOfFrames = 4
+	}
+}

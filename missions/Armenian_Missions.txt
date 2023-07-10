@@ -1,0 +1,1038 @@
+#Created by Dub
+
+#Some statistics:
+#Num. of missions: 22
+#Num. of conquest missions: 9
+#Permanent modifiers: 5 separate, giving:
+#	+25% national manpower modifier
+#	+10% national tax modifier
+#	-2 national unrest
+#	+20% (+10% & +10%) clergy loyalty
+#	-15% shock damage taken
+#	-10% general cost
+#	-25% advisor cost with primary culture
+#	+10% trade efficiency
+#	+1 merchant
+#Estate privilege giving -50% dev cost in mountains & highlands terrain, granting +10% nobility loyalty & influence.
+
+
+
+armenian_missions_religious_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		primary_culture = armenian
+	}
+	has_country_shield = yes
+	
+	arm_expand_apostolic_church = { #Expand The Apostolic Church
+		icon = mission_hands_praying
+		position = 1 #2-1
+		required_missions = {}
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			OR = {
+				AND = { #Etchmiadzin if not owned
+					province_id = 419
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					owned_by = ROOT
+					NOT = { religion = apostolic }
+				}
+				
+			}
+		}
+		
+		trigger = {
+			owns_core_province = 419
+			religion = apostolic
+			custom_trigger_tooltip = {
+				tooltip = obj_convert_10_provinces_tooltip
+				check_variable = { which = num_converted_religion value = 10 }
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "arm_expand_apostolic_church"
+				duration = 7300
+			}
+			419 = {
+				add_province_modifier = {
+					name = "arm_etchmiadzin_restoration"
+					duration = 36500
+				}
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+}
+
+armenian_missions_religious_slot_2_dlc = { #Because monuments are Leviathan-exclusive and this mission deals with monuments.
+	slot = 2
+	generic = no
+	ai = yes
+	
+	potential_on_load = {
+		has_dlc = "Leviathan"
+	}
+	
+	potential = {
+		primary_culture = armenian
+		has_dlc = "Leviathan"
+	}
+	has_country_shield = yes
+	
+	arm_restore_etchmiadzin = { #Restore Etchmiadzin
+		icon = mission_etchmiadzin_2
+		position = 2 #2-2
+		required_missions = { arm_expand_apostolic_church }
+		
+		provinces_to_highlight = {
+			province_id = 419
+		}
+		
+		trigger = {
+			419 = {
+				has_great_project = {
+					type = etchimiadzin_cathedral
+					tier = 3
+				}
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				add_splendor = 200
+			}
+			add_country_modifier = {
+				name = "arm_etchmiadzin_restored"
+				duration = -1
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+}
+
+armenian_missions_conquest_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		primary_culture = armenian
+	}
+	has_country_shield = yes
+	
+	arm_prove_sovereignty = { #Prove Sovereignty
+		icon = mission_build_up_to_force_limit
+		position = 1 #3-1
+		required_missions = {}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			army_size_percentage = 0.85
+			OR = { #In case you use Armenia as a vassal, this trigger would cause issues, and I also don't want people to just release Armenia from QQ and autocomplete this mission either.
+				is_free_or_tributary_trigger = yes
+				num_of_cities = 12
+				total_development = 250
+			}
+		}
+		
+		effect = {
+			give_permaclaims_for_mission = { mission=arm_restore_armenia_proper }
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_restore_armenia_proper = { #Restore Armenia Proper
+		icon = mission_dominate_home_trade_node
+		position = 3 #3-3
+		required_missions = { arm_prove_sovereignty }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_restore_armenia_proper_provinces
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted_num
+				provinces=arm_restore_armenia_proper_provinces #19
+				owner_type=owned_by
+				value=12
+			}
+		}
+		
+		effect = {
+			give_permaclaims_for_mission = { mission=arm_along_euphrates }
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_along_euphrates = { #Along the Euphrates
+		icon = mission_mesopotamia
+		position = 4 #3-4
+		required_missions = { arm_restore_armenia_proper }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_along_euphrates_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted_num
+				provinces=arm_along_euphrates_provinces #17
+				owner_type=country_or_non_sovereign_subject_holds
+				value=11
+			}
+		}
+		
+		effect = {
+			if = { #If has formed Armenia already, then give permaclaims for next missions. Otherwise, these are granted upon forming Armenia.
+				limit = {
+					tag = ARM
+				}
+				give_permaclaims_for_mission = { mission=arm_conquer_lesser_armenia }
+				give_permaclaims_for_mission = { mission=arm_city_of_winds }
+			}
+			#Claiming some minor stuff to help Armenia form if it hasn't, while giving earlier claims for a later mission.
+			mardin_area = { #Osrhoene
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corduene_area = { #Corduene
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			adiabene_area = { #Adiabene
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+}
+
+armenian_missions_internal_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		primary_culture = armenian
+	}
+	has_country_shield = yes
+	
+	arm_royal_seat = { #A Royal Seat
+		icon = mission_empire
+		position = 1 #4-1
+		required_missions = {}
+		
+		provinces_to_highlight = {
+			owned_by = ROOT
+			is_capital = yes
+		}
+		
+		trigger = {
+			capital_scope = {
+				if = { #If concentrate development feature is active, increase dev requirement.
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					development = 40
+				}
+				else = {
+					development = 20
+				}
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_manpower_building_trigger = yes
+			}
+		}
+		
+		effect = {
+			custom_tooltip = arm_royal_seat_effect_tooltip
+			set_country_flag = estate_nobles_nakharar_titles_enabled #Enable Nakharar privilege of halved dev cost malus from Mountains & Highlands terrain
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_rebuild_armenia = { #Rebuild Armenia
+		icon = mission_colonial
+		position = 2 #4-2
+		required_missions = { arm_royal_seat }
+		
+		provinces_to_highlight = {
+			OR = {
+				culture = armenian
+				AND = { #Big block of culture-convertible. Not sure if it should exist because it might cause confusion. Keeping it for now because why not.
+					nationalism = 0
+					NOT = { culture = armenian }
+					any_neighbor_province = {
+						culture = armenian
+					}
+				}
+			}
+			
+		}
+		
+		trigger = {
+			development_in_provinces = { #In 1444, 212 dev is Armenian culture. 300 is therefore reasonable considering you can culture-convert OR dev to reach this number.
+                value = 300
+                culture = armenian
+            }
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "arm_armenian_diaspora_returned"
+				duration = -1
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_fortify_armenia = { #Fortify Armenia
+		icon = mission_conquer_50_development
+		position = 3 #4-3
+		required_missions = { arm_rebuild_armenia }
+		
+		provinces_to_highlight = {
+			province_group = arm_unite_armenia_provinces
+			NOT = { fort_level = 2 }
+		}
+		
+		trigger = {
+			calc_true_if = {
+				desc = arm_fortify_armenia_tooltip
+				amount = 6
+				all_owned_province = {
+					province_group = arm_unite_armenia_provinces
+					fort_level = 2
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = arm_unite_armenia_provinces_effect
+			hidden_effect = {
+				arm_unite_armenia_provinces = { #Tooltip needed?
+					add_prosperity = 50
+				}
+			}
+			add_country_modifier = {
+				name = "arm_mountains_of_armenia"
+				duration = -1
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+}
+
+armenian_missions_bagratids_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		primary_culture = armenian
+	}
+	has_country_shield = yes
+	
+	arm_unite_armenia = { #Unite Armenia
+		icon = mission_unite_home_region
+		position = 1 #5-1
+		required_missions = {}
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_unite_armenia_provinces
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			tag = ARM
+			is_free_or_tributary_trigger = yes
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted_num
+				provinces=arm_unite_armenia_provinces #36
+				owner_type=owned_by
+				value=23
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "arm_resurgent"
+				duration = 7300
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+}
+
+#From here on you need to unite & form Armenia.
+arm_missions_conquest_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ARM
+	}
+	has_country_shield = yes
+	
+	arm_conquer_lesser_armenia = { #Conquer Lesser Armenia
+		icon = mission_crusade_for_varna
+		position = 5 #2-5
+		required_missions = { arm_along_euphrates }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_conquer_lesser_armenia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=arm_conquer_lesser_armenia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			custom_tooltip = arm_conquer_lesser_armenia_provinces_effect
+			hidden_effect = {
+				arm_conquer_lesser_armenia_provinces = { #Tooltip needed?
+					if = {
+						limit = {
+							culture_group = turkish_g
+						}
+						add_province_modifier = {
+							name = "arm_suppressed_turks"
+							duration = 7300
+						}
+					}
+					else = {
+						add_province_modifier = {
+							name = "arm_freed_from_turks"
+							duration = 7300
+						}
+					}
+				}
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_conquer_syria = { #Conquer Syria
+		icon = mission_arabian_fort
+		position = 7 #2-7
+		required_missions = { arm_drive_off_turks }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_conquer_syria_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=arm_conquer_syria_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_claim_mesopotamia = { #Claim Mesopotamia
+		icon = mission_mesopotamia_plain
+		position = 9 #2-9
+		required_missions = { arm_great_hayk }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_claim_mesopotamia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=arm_claim_mesopotamia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					arm_claim_mesopotamia_provinces = { #Using different trigger here to reduce lag. Should default to any, so no type declaration required
+						owned_by = ROOT
+						province_has_center_of_trade_of_level = 1
+						NOT = { province_has_center_of_trade_of_level = 3 }
+					}
+				}
+			}
+			random_owned_province = { #Random CoT gets upgraded
+				limit = {
+					province_group = arm_claim_mesopotamia_provinces
+					province_has_center_of_trade_of_level = 1
+					NOT = { province_has_center_of_trade_of_level = 3 }
+				}
+				add_center_of_trade_level = 1
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+		
+}
+
+arm_missions_internal_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ARM
+	}
+	has_country_shield = yes
+	
+	arm_turkey_sandwich = { #A Turkey Sandwich
+		icon = mission_alliances
+		position = 5 #3-5
+		required_missions = { arm_along_euphrates }
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			num_of_allies = 3
+			any_ally = {
+				is_rival = TUR
+			}
+			is_rival = TUR
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "arm_turkic_sandwich_repelled"
+				duration = 7300
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_drive_off_turks = { #Drive off the Turks
+		icon = mission_non-western_soldiers
+		position = 6 #3-6
+		required_missions = { arm_conquer_lesser_armenia arm_turkey_sandwich arm_city_of_winds }
+		
+		provinces_to_highlight = {
+			province_group = arm_drive_off_turks_provinces
+			culture_group = turkish_g
+			#owned_by = ROOT
+		}
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = arm_drive_off_turks_trigger_tooltip
+				arm_drive_off_turks_provinces = {
+					type = all
+					NOT = { culture_group = turkish_g }
+				}
+			}
+		}
+		
+		effect = {
+			give_permaclaims_for_mission = { mission=arm_conquer_syria }
+			give_permaclaims_for_mission = { mission=arm_reclaim_atropatene }
+			add_country_modifier = {
+				name = "arm_united_people"
+				duration = -1
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_great_hayk = { #The Great Hayk
+		icon = mission_great_hayk
+		position = 8 #3-8
+		required_missions = { arm_conquer_syria arm_reclaim_atropatene }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 151 #Constantinople
+				province_id = 419 #Yerevan
+				province_id = 5154 #Sis
+				province_id = 379 #Jerusalem
+				province_id = 329 #Sebastia
+			}
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = {	religion = apostolic }
+			}
+		}
+		
+		trigger = {
+			calc_true_if = {
+				mission_completed = apostolic_conquest_of_yerevan
+				mission_completed = apostolic_conquest_of_sis
+				mission_completed = apostolic_conquest_of_jerusalem
+				mission_completed = apostolic_conquest_of_sebastia
+				mission_completed = apostolic_conquest_of_constantinople
+				amount = 4 #4 out of 5 holy sites restored.
+			}
+		}
+		
+		effect = {
+			if = { #Empire rank if not Empire already
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			else = { #Equivalent of granting the epithet "the Great"
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
+			give_permaclaims_for_mission = { mission=arm_conquer_anatolia }
+			give_permaclaims_for_mission = { mission=arm_claim_mesopotamia }
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_restoring_silk_road = { #Restoring the Silk Road
+		icon = mission_market_place_with_asian_traders
+		position = 10 #3-10
+		required_missions = { arm_claim_mesopotamia arm_great_hayk }
+		
+		provinces_to_highlight = {
+			OR = { #If not strongest trade power in trade node, highlight province.
+				AND = {
+					377 = { #Aleppo
+						NOT = { is_strongest_trade_power = ROOT }
+					}
+					province_id = 377
+				}
+				AND = {
+					330 = { #Pontus
+						NOT = { is_strongest_trade_power = ROOT }
+					}
+					province_id = 330
+				}
+				AND = {
+					4341 = { #Persia
+						NOT = { is_strongest_trade_power = ROOT }
+					}
+					province_id = 4341
+				}
+				AND = {
+					410 = { #Baghdad
+						NOT = { is_strongest_trade_power = ROOT }
+					}
+					province_id = 410
+				}
+			}
+		}
+		
+		trigger = {
+			377 = { #Aleppo
+				is_strongest_trade_power = ROOT
+			}
+			330 = { #Pontus
+				is_strongest_trade_power = ROOT
+			}
+			4341 = { #Persia
+				is_strongest_trade_power = ROOT
+			}
+			410 = { #Baghdad
+				is_strongest_trade_power = ROOT
+			}
+			trading_bonus = {
+				trade_goods = silk
+				value = yes
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "arm_restored_silk_road"
+				duration = -1
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+		
+}
+
+arm_missions_conquest_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ARM
+	}
+	has_country_shield = yes
+	
+	arm_city_of_winds = { #The City of Winds
+		icon = mission_shirvanshah_palace
+		position = 5 #4-5
+		required_missions = { arm_along_euphrates }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_city_of_winds_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=arm_city_of_winds_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			custom_tooltip = arm_city_of_winds_provinces_effect
+			hidden_effect = {
+				arm_city_of_winds_provinces = {
+					if = {
+						limit = {
+							culture_group = turkish_g
+						}
+						add_province_modifier = {
+							name = "arm_suppressed_turks"
+							duration = 7300
+						}
+					}
+					else = {
+						add_province_modifier = {
+							name = "arm_freed_from_turks"
+							duration = 7300
+						}
+					}
+				}
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_reclaim_atropatene = { #Reclaim Atropatene
+		icon = mission_central_asian_city
+		position = 7 #4-7
+		required_missions = { arm_drive_off_turks }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_reclaim_atropatene_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=arm_reclaim_atropatene_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_conquer_anatolia = { #Conquer Anatolia
+		icon = mission_non-western_cavalry_raid
+		position = 9 #4-9
+		required_missions = { arm_great_hayk }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_conquer_anatolia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=arm_conquer_anatolia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			give_permaclaims_for_mission = { mission=arm_third_rome }
+			
+			add_country_modifier = {
+				name = "arm_beaten_turks"
+				duration = 7300
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_third_rome = { #Third Rome?
+		icon = mission_empire
+		position = 10 #4-10
+		required_missions = { arm_conquer_anatolia }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_third_rome_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=arm_third_rome_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+			151 = { has_owner_religion = yes }
+		}
+		
+		effect = {
+			151 = { #A small boost because why not.
+				change_culture = ROOT
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 1
+			}
+			eastern_macedonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			macedonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_greece_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aetolia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thessaly_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_aegean_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			morea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+arm_missions_bagratids_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ARM
+	}
+	has_country_shield = yes
+	
+	arm_invite_bagratids = { #Invite the Bagratids
+		icon = mission_monarch_in_throne_room
+		position = 3 #5-3
+		required_missions = { arm_unite_armenia }
+		
+		provinces_to_highlight = {
+			AND = { #Complicated just because I only want this to highlight if Georgia doesn't exist, and I want it to stop highlighting if you own at least one province. Technically not necessary, but hey, it's a special case.
+				NOT = { exists = GEO }
+				has_discovered = ROOT
+				province_group = arm_union_with_georgia_provinces
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				arm_union_with_georgia_provinces = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		}
+		
+		trigger = {
+			if = {
+				limit = {
+					exists = GEO
+				}
+				alliance_with = GEO
+				marriage_with = GEO
+				reverse_has_opinion = {
+					who = GEO
+					value = 100
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = country_holds_or_non_sovereign_subject_holds_any_highlighted
+					arm_union_with_georgia_provinces = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				
+			}
+		}
+		
+		effect = {
+			country_event = { id = arm_mission_flavor.1 }
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	arm_union_with_georgia = { #Union with Georgia
+		icon = mission_empire
+		position = 5 #5-5
+		required_missions = { arm_invite_bagratids }
+		
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			province_group = arm_union_with_georgia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=arm_union_with_georgia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "arm_unified_with_georgia"
+				duration = 7300
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}

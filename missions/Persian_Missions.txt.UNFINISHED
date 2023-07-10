@@ -1,0 +1,996 @@
+persian_conquest_missions_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_reclaim_west_persia = {
+		icon = mission_persian_highlands
+		position = 1 #1-1
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Conquest of Persia region
+		}
+		
+		effect = {
+			#Country modifier with dev cost reduction & probably legitimacy
+		}
+	}
+	
+	per_seat_of_shah = {
+		icon = mission_build_up_to_force_limit
+		position = 2 #1-2
+		required_missions = { per_reclaim_west_persia per_great_cities_of_persia }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Capital is at least 50 dev if Leviathan is installed. 30 dev otherwise. Require Kingdom rank. NB: Change to 40/20 if and when Persia is overhauled because less dev in individual provinces.
+		}
+		
+		effect = {
+			#Give permaclaims for mesopotamia & caucasus
+		}
+	}
+	
+	per_conquer_mesopotamia = {
+		icon = mission_mesopotamia_plain
+		position = 3 #1-3
+		required_missions = { per_seat_of_shah }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Own Lower Mesopotamia (QQ provinces essentially). Should not require provinces in Ottomans or Mamluks.
+		}
+		
+		effect = {
+			#Give 20 year Tolerance of true faith modifier because conquered Shia holy shrines.
+		}
+	}
+	
+	per_defy_mamluks = {
+		icon = mission_mamluks
+		position = 5 #1-5
+		required_missions = { per_conquer_mesopotamia }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Insult or scornfully insult Mamluks
+			#Mamluks is either rival or is at less than 50% military strength of ROOT.
+		}
+		
+		effect = {
+			#Permaclaims on Syria. If scornfully insulted Mamluks, also give general with 50 tradition.
+		}
+		
+	}
+	
+	per_conquer_syria = {
+		icon = mission_egyptian_mamluk_soldier
+		position = 6 #1-6
+		required_missions = { per_defy_mamluks }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Conquer Syria
+		}
+		
+		effect = {
+			#Give 20 year tolerance modifier for conquering Jerusalem
+		}
+		
+	}
+	
+	per_seat_of_shahanshah = {
+		icon = mission_build_up_to_force_limit
+		position = 7 #1-7
+		required_missions = { per_conquer_lesser_armenia per_conquer_syria }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require 80 dev in capital if owning Leviathan. 50 dev otherwise. Also require Empire rank
+		}
+		
+		effect = {
+			#Give permaclaims on Egypt & Anatolia. Also give permanent provincial modifier in capital that gives +legitimacy and construction cost.
+		}
+	}
+	
+	per_conquer_egypt = {
+		icon = mission_pyramids
+		position = 8 #2-8
+		required_missions = { per_seat_of_shahanshah }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Conquer all colonised provinces in Egypt
+			#Mamluks may not exist
+		}
+		
+		effect = {
+			#Give 20 year legitimacy & establish order cost for conquering Cairo.
+		}
+		
+	}	
+	
+	per_custodian_of_holy_cities = {
+		icon = mission_mosque
+		position = 10 #2-10
+		required_missions = { per_conquer_egypt }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Conquer Mecca & Medina & surrounding lands, convert these two cities to Shia.
+		}
+		
+		effect = {
+			#Give permanent tolerance of true faith & monthly piety for conquering Mecca & Medina.
+		}
+		
+	}
+	
+}
+
+persian_internal_missions_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_great_cities_of_persia = {
+		icon = mission_central_asian_city
+		position = 1 #2-1
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#At least 20 dev in X provinces in Persia region
+		}
+		
+		effect = {
+			#10 year country modifier to reduce move capital cost by -75%.
+		}
+		
+	}
+}
+
+persian_conquest_missions_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_caucasus_mountains = {
+		icon = mission_shahanshah_palace
+		position = 3 #2-3
+		required_missions = { per_seat_of_shah }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Own provinces in Caucasia south of Caucasus Mountains
+		}
+		
+		effect = {
+			#Give 20 year warscore cost against other religions modifier
+		}
+		
+	}
+	
+	per_defy_turks = {
+		icon = mission_ottomans
+		position = 5 #2-5
+		required_missions = { per_caucasus_mountains }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Insult or scornfully insult Ottomans
+			#Ottomans is either rival or is at less than 50% military strength of ROOT.
+		}
+		
+		effect = {
+			#Permaclaims on Lesser Armenia. If scornfully insulted Ottomans, also give general with 50 tradition.
+		}
+	}
+	
+	per_conquer_lesser_armenia = {
+		icon = mission_mesopotamia
+		position = 6 #2-6
+		required_missions = { per_defy_turks }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Own Lesser Armenia (Basically Armenian lands not covered by prior missions)
+		}
+		
+		effect = {
+			#Gain 20 year morale of armies modifier for beating Ottomans
+		}
+	}
+}
+
+persian_trade_missions_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_dominate_persian_gulf = {
+		icon = mission_invade_island
+		position = 7 #2-7
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require strongest trade power in Basra & Hormuz trade nodes
+			#Controls X centers of trade of at least level 2 in Basra & Hormuz trade nodes combined
+		}
+		
+		effect = {
+			#Gain 20 year trade steering modifier
+		}
+		
+	}	
+}
+
+persian_conquest_missions_part_2_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_conquer_anatolia = {
+		icon = mission_non-western_soldiers
+		position = 8 #2-8
+		required_missions = { per_seat_of_shahanshah }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Conquer Anatolia that hasn't been covered by Lesser Armenia.
+		}
+		
+		effect = {
+			#Give 20 year prestige modifier.
+			#Add 1 to each monarch stat to current ruler.
+		}
+	}
+	
+	per_xerxes_legacy = {
+		icon = mission_xerxes
+		position = 10 #2-10
+		required_missions = { per_conquer_anatolia }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Own mainland Greece provinces including Thrace.
+			#Ottomans may not exist (For symmetry with Mamluks in a sense, and for them to finally obliterate their main rival).
+		}
+		
+		effect = {
+			#20 year country modifier that gives prestige and morale of armies.
+		}
+	}
+}
+
+persian_internal_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_persian_architecture = {
+		icon = mission_persian_architecture
+		position = 1 #3-1
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require building one of Mosques, Workshops & Marketplaces in X provinces
+		}
+		
+		effect = {
+			#Give 20 year build cost modifier & monthly splendor
+		}
+	}
+	
+	per_royal_court = {
+		icon = mission_royal_court
+		position = 2 #3-2
+		required_missions = { per_persian_architecture per_complex_bureaucracy }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require 3 Persian advisors, optionally at level X (Administrative class was Persian)
+		}
+		
+		effect = {
+			#Give modifier that gives great project upgrade cost for Leviathan users. Non-leviathan users... advisor cost or something.
+		}
+	}
+	
+}
+
+persian_internal_missions_slot_3_dlc = {
+	slot = 3
+	generic = no
+	ai = yes
+	
+	potential_on_load = {
+		has_dlc = "Leviathan"
+	}
+	
+	potential = {
+		tag = PER
+		has_dlc = "Leviathan"
+	}
+	has_country_shield = yes
+	
+	per_monuments_of_persia = {
+		icon = mission_build_up_to_force_limit
+		position = 3 #3-3
+		required_missions = { per_royal_court }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require one monument of at least level 3.
+		}
+		
+		effect = {
+			#100 year modifier giving -5% all power costs (Persian Golden Age modifier)
+		}
+		
+	}	
+}
+
+persian_internal_missions_part_2_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_establish_ghulams = {
+		icon = mission_persian_soldiers
+		position = 4 #3-4
+		required_missions = { per_caucasus_mountains per_qizilbash_generals }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require X provinces of Caucasian culture, in which there are regimental camps or barracks
+		}
+		
+		effect = {
+			#Give permanent modifier with -10% nobility influence & +25% drill gain modifier (NB: Cradle of Civilization DLC-exclusive modifier)
+			#The best option here is to create an entire estate representing the Ghulams. Unfortunately, I don't really have the energy to do something like that at this point in time.
+		}
+	}	
+}
+
+persian_trade_missions_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_persian_dyes = {
+		icon = mission_market_place_with_asian_traders
+		position = 5 #3-5
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require trading in dyes and X production dev in dye-producing provinces
+		}
+		
+		effect = {
+			#Give +25% goods produced in provinces producing dyes for 25 years
+		}
+	}
+	
+	per_persian_carpets = {
+		icon = mission_persian_carpets
+		position = 6 #3-6
+		required_missions = { per_persian_dyes }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require trading in silk and X production dev in silk-producing provinces.
+		}
+		
+		effect = {
+			#Give +25% goods produced in provinces producing silk for 25 years
+		}
+	}
+	
+	per_promote_persian_art = {
+		icon = mission_persian_art
+		position = 7 #3-7
+		required_missions = { per_persian_carpets }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Employ Iranian-cultured artist of level 3
+			#Have X provinces producing books and/or paper. 
+			#Have innovativeness of at least X for Rule Britannia users.
+		}
+		
+		effect = {
+			#Give 50 year innovativeness gain modifier (Turns into idea cost for non-RB users)
+		}
+	}
+	
+	per_silk_road = {
+		icon = mission_indian_statesman
+		position = 8 #3-8
+		required_missions = { per_promote_persian_art per_dominate_persian_gulf }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require 50% of income from trade
+			#Require strongest trade power in several trade nodes around Persia.
+		}
+		
+		effect = {
+			#Cause price change of Dyes & Silk to increase by +10%.
+		}
+	}
+}
+
+persian_internal_missions_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_complex_bureaucracy = {
+		icon = mission_build_up_to_force_limit
+		position = 1 #4-1
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Has enacted 3 reforms (Bureaucracy tier)
+			#Has all estates of at least 60& loyalty
+			#Has X provinces with a Courthouse
+			#Has at least 40% crown land.
+		}
+		
+		effect = {
+			#Enact unique gov reform - Persianate Bureaucracy (T3), giving advisor cost of own culture reduction and +2 max promoted cultures? Or some other idea that I cannot think of at the moment.
+		}
+	}
+	
+	per_qizilbash_generals = {
+		icon = mission_qizilbash_generals
+		position = 3 #4-3
+		required_missions = { per_complex_bureaucracy }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Require at least 4 generals
+			#Require 60% nobility loyalty & 60% nobility influence.
+			#Army of at least 50k.
+		}
+		
+		effect = {
+			#20 year country modifier giving general cost reduction & +1 land leader shock.
+		}
+	}
+	
+	per_absolute_rule = {
+		icon = mission_build_up_to_force_limit
+		position = 5 #4-5
+		required_missions = { per_establish_ghulams per_zourkhaneh_rituals }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#No estate at more than 20% influence
+			#50 absolutism
+		}
+		
+		effect = {
+			#Give Absolutism modifier from vanilla? Or power projection? Not sure yet.
+		}
+	}
+	
+	per_ideas_of_revolution = {
+		icon = mission_build_up_to_force_limit
+		position = 7 #4-7
+		required_missions = { per_absolute_rule }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Either at war with revolutionary target, or be revolutionary.
+		}
+		
+		effect = {
+			#If fighting revolutionary target, give -unrest modifier. If revolutionary, give revolutionary zeal or something?
+		}
+	}
+}
+
+persian_conquest_missions_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_subjugate_steppes = {
+		icon = mission_non-western_cavalry_raid
+		position = 8 #4-8
+		required_missions = { per_fortify_east }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Have at least one march of Altaic or Oghuz culture that has its capital in Central Asia. Needs to own certain parts of Central Asia? Maybe.
+		}
+		
+		effect = {
+			#Something about prosperity, maybe.
+		}
+	}
+}
+
+persian_religious_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_spreading_word = {
+		icon = mission_persian_mosque
+		position = 1 #5-1
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Convert X provinces (Ages has a trigger for this)
+		}
+		
+		effect = {
+			#Give negative piety? Not sure.
+		}
+	}
+	
+	per_clerical_aristocracy = {
+		icon = mission_muslim_piety
+		position = 2 #5-2
+		required_missions = { per_spreading_word }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		}
+		
+		effect = {
+		}
+	}
+	
+	per_zourkhaneh_rituals = {
+		icon = mission_zourkhaneh
+		position = 4 #5-4
+		required_missions = { per_qizilbash_generals per_clerical_aristocracy }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Drilling X armies? Army tradition? Army professionalism even maybe? Though that's Cradle-unique.
+		}
+		
+		effect = {
+			#Gain army professionalism. Otherwise 20 year +2.5% discipline.
+		}
+	}
+	
+	per_persian_caliphate = {
+		icon = mission_build_up_to_force_limit
+		position = 5 #5-5
+		required_missions = { per_zourkhaneh_rituals }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		}
+		
+		effect = {
+		}
+	}
+}
+
+persian_conquest_missions_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = PER
+	}
+	has_country_shield = yes
+	
+	per_restore_east_persia = {
+		icon = mission_afghan_village
+		position = 6 #5-6
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		}
+		
+		effect = {
+		}
+	}
+	
+	per_fortify_east = {
+		icon = mission_arabian_fort
+		position = 7 #5-7
+		required_missions = { per_restore_east_persia }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		}
+		
+		effect = {
+		}
+	}
+	
+	per_dominate_india = {
+		icon = mission_indian_soldier_elephant
+		position = 9 #5-9
+		required_missions = { per_fortify_east per_silk_road }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		}
+		
+		effect = {
+		}
+	}
+}
+
+persian_religious_missions_slot_5_dlc = {
+	slot = 5
+	generic = no
+	ai = yes
+	
+	potential_on_load = {
+		has_dlc = "Golden Century"
+	}
+	
+	potential = {
+		tag = PER
+		has_dlc = "Golden Century"
+	}
+	has_country_shield = yes
+	
+	per_sufi_orders = {
+		icon = mission_sufi_orders
+		position = 10 #5-10
+		required_missions = { per_dominate_india }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			#Establish X sufi orders
+			#Propagate religion in any of the Indian trade nodes
+		}
+		
+		effect = {
+			#Something something something
+		}
+	}
+}

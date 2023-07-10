@@ -1,0 +1,84 @@
+#File mainly contains timeline changes of Trebizonder rulers.
+1417.10.29 = {
+	monarch = {
+		name = "Alexios IV"
+		dynasty = "Komnenos"
+		adm = 1
+		dip = 2
+		mil = 1
+		birth_date = 1379.1.1 #Born around 1379
+		death_date = 1429.4.26
+	}
+	queen = {
+		country_of_origin = BYZ #Might be daughter of a prominent advisor/nobleman/diplomat in Byzantium
+		name = "Theodora"
+		dynasty = "Kantakouzenos"
+		birth_date = 1382.1.1 #Born around 1382
+		death_date = 1426.11.12
+		adm = 3
+		dip = 5 #Very beautiful and committed a certain amount of debauchery & intrigue. Also mediated a great degree of rivalry between Alexios IV and his son Ioannes.
+		mil = 2
+		female = yes
+	}
+}
+
+
+1417.10.29 = {
+	heir = {
+		name = "Ioannes"
+		monarch_name = "Ioannes IV"
+		dynasty = "Komnenos"
+		birth_date = 1403.1.1
+		death_date = 1459.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1429.10.29 = {
+	monarch = {
+		name = "Ioannes IV"
+		dynasty = "Komnenos"
+		adm = 3
+		dip = 4
+		mil = 2 #I am not entirely sure why Ioannes has a mil of 5 above and 2 down here. Reducing the above.
+	} #Unfortunately, the wife of Ioannes IV has no known name. We know she was part of the Georgian Bagrationi branch, her birthyear (1411-1412) and death (1438), but we have no idea what her name was. His second wife was supposedly yet another unnamed, but this time Turkish, lady, who was a daughter of Dawlat/Devlet Berdi of the Golden Horde.
+	queen = {
+		country_of_origin = BYZ #Might be daughter of a prominent advisor/nobleman/diplomat in Byzantium
+		name = "Theodora"
+		dynasty = "Bagrationi"
+		birth_date = 1411.12.12 #Born 1411-1412
+		death_date = 1438.12.12 #Died in 1438
+		adm = 2
+		dip = 2
+		mil = 2
+		female = yes
+	}
+}
+
+1429.10.29 = {
+	heir = {
+		name = "Dauid"
+		monarch_name = "Dauid"
+		dynasty = "Komnenos"
+		birth_date = 1408.1.1
+		death_date = 1463.11.1
+		claim = 95
+		adm =  3
+		dip = 0
+		mil = 1
+	}
+}
+		
+
+1459.1.1 = {
+	monarch = {
+		name = "Dauid"
+		dynasty = "Komnenos"
+		adm = 3 #Same as above, not sure why Dauid has 6 above and 3 down here. Reducing the above.
+		dip = 0
+		mil = 1
+	} #Unfortunately, Dauid's wife, Maria Gabras, daughter of the ruler of Theodoro, died prior to Dauid's succession in 1426. There were reports of a second wife, however her mere existence has been disputed as a confusion of Dauid's mother being his wife. Talk about an Oedipus complex.
+}

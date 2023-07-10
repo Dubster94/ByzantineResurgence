@@ -1,0 +1,10 @@
+spriteTypes = {
+		spriteType = {
+			name = "GFX_great_project_hippodrome_of_constantinople"	
+			texturefile = "gfx//interface//great_projects//great_project_hippodrome_of_constantinople.dds"
+		}
+		spriteType = {
+			name = "GFX_great_project_circus_maximus"	
+			texturefile = "gfx//interface//great_projects//great_project_circus_maximus.dds"
+		}
+}

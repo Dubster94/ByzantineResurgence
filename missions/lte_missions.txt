@@ -1,0 +1,514 @@
+#Written by Dub
+#Every single one of these missions that deals with multiple tag uses custom triggers for designating tag, because I keep repeating the same code every time. As such it's simpler to refer to them there instead.
+#If you want to check them out, go to lte_mission_triggers.txt
+
+#Commented out until I fix the old scripted trigger stuff to province groups.
+
+# lte_conquests_chain = {
+	# slot = 1
+	# generic = no
+	# ai = yes
+	# potential = {
+		# tag = LAE
+	# }
+	# has_country_shield = yes
+	
+	# lte_conquer_greece = {
+		# icon = mission_cannons_firing
+		# position = 1 #1-1
+		# required_missions = { }
+		
+		# provinces_to_highlight = {
+			# lte_conquer_greece_provinces = yes
+			# NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		# }
+		
+		# trigger = {
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				# provinces=lte_conquer_greece_provinces
+				# owner_type=country_or_non_sovereign_subject_holds
+			# }
+		# }
+		
+		# effect = {
+			# #Claims
+			# give_permaclaims_for_mission = { mission=lte_conquer_anatolia }
+			# give_permaclaims_for_mission = { mission=lte_conquer_balkans }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+	
+	# lte_conquer_anatolia = {
+		# icon = mission_arabian_fort
+		# position = 3 #1-3
+		# required_missions = { lte_conquer_greece }
+		
+		# provinces_to_highlight = {
+			# lte_conquer_anatolia_provinces = yes
+			# NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		# }
+		
+		# trigger = {
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				# provinces=lte_conquer_anatolia_provinces
+				# owner_type=country_or_non_sovereign_subject_holds
+			# }
+		# }
+		
+		# effect = {
+			# #Claims
+			# give_permaclaims_for_mission = { mission=lte_conquer_the_orient }
+			# give_permaclaims_for_mission = { mission=lte_conquer_lesser_armenia }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+	
+	# lte_conquer_the_orient = {
+		# icon = mission_mosque
+		# position = 5 #1-5
+		# required_missions = { lte_conquer_anatolia }
+		
+		# provinces_to_highlight = {
+			# lte_conquer_the_orient_provinces = yes
+			# NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		# }
+		
+		# trigger = {
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				# provinces=lte_conquer_the_orient_provinces
+				# owner_type=country_or_non_sovereign_subject_holds
+			# }
+		# }
+		
+		# effect = {
+			# add_prestige = 20
+			# add_country_modifier = {
+				# name = "lte_jerusalem_reclaimed"
+				# duration = 18250
+			# }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+	
+	
+# }
+# lte_conquests_2_chain = {
+	# slot = 2
+	# generic = no
+	# ai = yes
+	# potential = {
+		# tag = LAE
+	# }
+	# has_country_shield = yes
+	
+	# lte_conquer_balkans = {
+		# icon = mission_assemble_an_army
+		# position = 2 #2-2
+		# required_missions = { lte_conquer_greece }
+		
+		# provinces_to_highlight = {
+			# lte_conquer_balkans_provinces = yes
+			# NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		# }
+		
+		# trigger = {
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				# provinces=lte_conquer_balkans_provinces
+				# owner_type=country_or_non_sovereign_subject_holds
+			# }
+		# }
+		
+		# effect = {
+			# add_country_modifier = {
+				# name = "lte_western_border_established"
+				# duration = 18250 #50 years
+			# }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+	
+	# lte_conquer_lesser_armenia = {
+		# icon = mission_have_two_subjects
+		# position = 4 #2-4
+		# required_missions = { lte_conquer_anatolia }
+		
+		# provinces_to_highlight = {
+			# lte_conquer_lesser_armenia_provinces = yes
+			# NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		# }
+		
+		# trigger = {
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				# provinces=lte_conquer_lesser_armenia_provinces
+				# owner_type=country_or_non_sovereign_subject_holds
+			# }
+		# }
+		
+		# effect = {
+			# add_country_modifier = {
+				# name = "lte_eastern_border_established"
+				# duration = 18250 #50 years
+			# }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+
+	# lte_convert_the_orient = {
+		# icon = mission_hands_praying
+		# position = 6 #2-6
+		# required_missions = { lte_conquer_the_orient }
+		
+		# provinces_to_highlight = {
+			# lte_conquer_the_orient_provinces = yes
+			# NOT = { religion = ROOT }
+		# }
+		# trigger = {
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=highlighted_provinces_converted_to_religion 
+				# provinces=lte_conquer_the_orient_provinces
+				# owner_type=religion
+			# }
+		# }
+		
+		# effect = {
+			# add_legitimacy = 20
+			# 379 = { #Jerusalem
+				# add_base_tax = 3
+				# add_base_production = 3
+				# add_base_manpower = 1
+			# }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+# }
+
+
+# lte_claim_legacy_chain = {
+	# slot = 5
+	# generic = no
+	# ai = yes
+	# potential_on_load = {
+		# NOT = { has_dlc = "Emperor" }
+	# }
+	# potential = {
+		# OR = {
+			# tag = KNI
+			# tag = CYP
+			# tag = ATH
+			# tag = NAX
+			# tag = CEP
+			# tag = LES
+			# tag = ACH
+			# tag = NEO
+			# AND = { 
+				# tag = NAP
+				# is_year = 1383 #The Anjous were given the title of Latin Emperor in 1383. However they never styled themselves with it.
+			# }
+			# AND = {
+				# tag = PRO
+				# is_year = 1383 #The Anjous were given the title of Latin Emperor in 1383. However they never styled themselves with it.
+			# }
+			# tag = LAE
+		# }
+		# NOT = { has_dlc = "Emperor" }
+	# }
+	# has_country_shield = yes
+	
+	# lte_claim_legacy = { #Claim Legacy
+		# icon = mission_european_church
+		# position = 1 #5-1
+		# required_missions = { }
+		
+		# provinces_to_highlight = {
+			# #None
+		# }
+		
+		# trigger = {
+			# OR = {
+				# is_defender_of_faith = yes
+				# NOT = { exists = BYZ }
+			# }
+		# }
+		
+		
+		
+		# effect = {
+			# add_country_modifier = {
+				# name = "gen_eur_defender"
+				# duration = 7300
+			# }
+			
+			# #Claims
+			# give_permaclaims_for_mission = { mission=lte_reclaim_constantinople }
+			
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+	
+	# lte_reclaim_constantinople = { #Reclaim Constantinople
+		# icon = mission_unite_home_region
+		# position = 3 #5-3
+		# required_missions = { lte_claim_legacy }
+		
+		# provinces_to_highlight = {
+			# lte_reclaim_constantinople_provinces = yes
+			# NOT = { owned_by = ROOT }
+		# }
+		
+		# trigger = {
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=country_holds_highlighted 
+				# provinces=lte_reclaim_constantinople_provinces
+				# owner_type=owned_by
+			# }
+		# }
+		
+		# effect = {
+			# add_prestige = 10
+			# add_legitimacy = 10
+			# give_permaclaims_for_mission = { mission=lte_conquer_greece }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+# }	
+
+# lte_claim_legacy_chain_2 = {
+	# slot = 2
+	# generic = no
+	# ai = yes
+	# potential = {
+		# tag = LAE
+	# }
+	# has_country_shield = yes
+	
+	# lte_eclipse_greeks = { #Eclipse the Greeks
+		# icon = mission_pf_map_table
+		# position = 5 #5-3
+		# required_missions = { }
+		
+		# provinces_to_highlight = {
+			# owned_by = BYZ
+		# }
+		
+		# trigger = {
+			# NOT = { exists = BYZ }
+		# }
+		
+		# effect = {
+			# 151 = { #Latin settlement of Constantinople
+				# if = {
+					# limit = {
+						# NOT = { has_global_flag = constantinople_restored }
+					# }
+					# add_base_tax = 7
+					# add_base_production = 7
+					# add_base_manpower = 3
+					# set_global_flag = constantinople_restored
+				# }
+				# else = {
+					# add_base_tax = 5
+					# add_base_production = 5
+					# add_base_manpower = 2
+				# }
+				# change_culture = ROOT
+				# change_religion = ROOT
+				# on_province_religion_converted_estate_privileges_effect = yes
+			# }
+			# add_country_modifier = {
+				# name = "lte_legacy_asserted"
+				# duration = 7300 #20 years
+			# }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+# }
+
+
+# lte_consolidation_of_state_chain = {
+	# slot = 3
+	# generic = no
+	# ai = yes
+	# potential = {
+		# tag = LAE
+	# }
+	# has_country_shield = yes
+	
+	# lte_consolidate_the_empire = {
+		# icon = mission_teutonic_knights
+		# position = 6 #3-6
+		# required_missions = { lte_eclipse_greeks lte_conquer_the_orient }
+		
+		# provinces_to_highlight = {
+			# lte_spread_latin_provinces = yes
+			# OR = {
+				# NOT = { owned_by = ROOT }
+				# NOT = { religion = ROOT }
+			# }
+		# }
+		
+		# trigger = {
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=country_holds_highlighted
+				# provinces=lte_spread_latin_provinces
+				# owner_type=owned_by
+			# }
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=highlighted_provinces_converted_to_religion 
+				# provinces=lte_spread_latin_provinces
+				# owner_type=religion
+			# }
+		# }
+		# effect = {
+			# custom_tooltip = lte_consolidate_the_empire_effect.tooltip
+			# hidden_effect = {
+				# every_owned_province = {
+					# limit = {
+						# lte_spread_latin_provinces = yes
+					# }
+				# }
+				# add_province_modifier = {
+					# name = "lte_empire_consolidated"
+					# duration = 18250 #50 years
+				# }
+			# }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+	
+	# lte_spread_latin = {
+		# icon = mission_monarch_in_throne_room
+		# position = 7 #3-7
+		# required_missions = { lte_consolidate_the_empire }
+		
+		# provinces_to_highlight = {
+			# lte_spread_latin_provinces = yes
+			# NOT = { 
+				# if = { #CI compatibility on vulgar latin cultures.
+					# limit = {
+						# has_global_flag = cultural_influence_installed_flag
+					# }
+					# latin_languages_trigger = yes
+				# }
+				# else = {
+					# OR = {
+						# culture_group = latin
+						# culture_group = french
+						# culture_group = iberian
+					# }
+				# }
+			# }
+		# }
+		
+		# trigger = {
+			# #Slightly modified trigger using the requirements fulfilled scripted trigger as a base.
+			# custom_trigger_tooltip = {
+				# tooltip = lte_spread_latin_trigger.tooltip
+				# NOT = {
+					# any_province = {
+						# lte_spread_latin_provinces = yes
+						# NOT = { 
+							# if = { #CI compatibility on vulgar latin cultures.
+								# limit = {
+									# has_global_flag = cultural_influence_installed_flag
+								# }
+								# latin_languages_trigger = yes
+							# }
+							# else = {
+								# OR = {
+									# culture_group = latin
+									# culture_group = french
+									# culture_group = iberian
+								# }
+							# }
+						# }
+					# }
+				# }
+			# }
+		# }
+		# effect = {
+			# add_adm_power = 100
+			# add_dip_power = 100
+			# add_mil_power = 100
+			# give_permaclaims_for_mission = { mission=lte_third_rome }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+	
+	# lte_third_rome = {
+		# icon = mission_empire
+		# position = 8 #3-8
+		# required_missions = { lte_spread_latin }
+		
+		# provinces_to_highlight = {
+			# lte_third_rome_provinces = yes
+			# NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		# }
+		
+		# trigger = {
+			# has_fulfiled_province_requirement_for_mission_trigger = {
+				# tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				# provinces=lte_third_rome_provinces
+				# owner_type=country_or_non_sovereign_subject_holds
+			# }
+			# OR = {
+				# custom_trigger_tooltip = {
+					# tooltip = restore_roman_empire_byzantium_dismantle_hre_tooltip
+					# NOT = { hre_size = 1 }
+				# }
+				# is_emperor = yes
+			# }
+		# }
+		
+		# effect = {
+			# add_country_modifier = {
+				# name = "byz_european_ambition"
+				# duration = 18250 #50 years
+			# }
+			# #Add super-opinion to Pope for restored Third Rome, +200 relations.
+			# #Add permaclaims for Roman Empire.
+			# give_permaclaims_for_mission = { mission=lte_third_rome_2 }
+		# }
+		
+		# ai_weight = {
+			# factor = 500	#AI gogo!
+		# }
+	# }
+# }	

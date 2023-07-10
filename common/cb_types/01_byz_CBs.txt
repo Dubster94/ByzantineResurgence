@@ -1,0 +1,73 @@
+cb_recover_balkans = {
+
+	prerequisites = {
+		tag = BYZ
+		is_free_or_tributary_trigger = yes
+		any_province = {
+			region = balkan_region
+			owned_by = TUR
+		}
+		FROM = { tag = TUR }
+	}
+
+	war_goal = take_balkan_provinces
+	
+}
+cb_recover_anatolia = {
+
+	prerequisites = {
+		tag = BYZ
+		is_free_or_tributary_trigger = yes
+		any_province = {
+			region = anatolia_region
+			owned_by = TUR
+		}
+		NOT = {
+			any_province = {
+				region = balkan_region
+				owned_by = TUR
+			}
+		}
+		FROM = { tag = TUR }
+	}
+
+	war_goal = take_anatolia_provinces
+	
+}
+
+cb_war_of_two_romes = {
+	valid_for_subject = no
+	ai_peace_desire = -30
+
+	prerequisites = {
+		tag = BYZ
+		is_free_or_tributary_trigger = yes
+		has_country_flag = byz_challenged_hremperor #Flag set by incident.
+		hre_size = 1 #HRE has to NOT be disbanded.
+		FROM = { is_emperor = yes }
+	}
+
+	war_goal = byz_war_of_two_romes
+}
+
+cb_war_of_two_romes_opp = {
+	valid_for_subject = no
+	ai_peace_desire = -30
+
+	prerequisites = {
+		is_emperor = yes
+		is_free_or_tributary_trigger = yes
+		has_country_flag = hremperor_challenged_byz #Flag set by incident.
+		hre_size = 1 #HRE has to NOT be disbanded.
+		FROM = { tag = BYZ }
+		balkan_region = { #Added requirement so that once you've done the peacedeal, you can't do this again unless Byz regains a province.
+			owned_by = BYZ #Owned by Byz
+			any_core_country = { #Any country that has the primary culture of this province and a core on it that is not Byz.
+				primary_culture = PREV
+				NOT = { tag = BYZ }
+			}
+		}
+	}
+
+	war_goal = byz_war_of_two_romes_opp
+}

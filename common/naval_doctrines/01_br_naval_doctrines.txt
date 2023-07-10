@@ -1,0 +1,16 @@
+doctrine_greek_fire =
+{
+	can_select = {
+		is_primitive = no
+		culture_group = byzantine
+		has_country_flag = br_rediscovered_greek_fire
+	}
+
+	country_modifier = {
+		galley_power = 0.2
+		heavy_ship_power = 0.1
+		leader_naval_fire = 1
+	}
+
+	button_gfx = 8
+}

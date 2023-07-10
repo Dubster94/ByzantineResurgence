@@ -1,0 +1,96 @@
+estate_nobles_nakharar_titles = {
+	icon = privilege_autonomous_defences
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		has_country_flag = estate_nobles_nakharar_titles_enabled
+	}
+	can_select = {
+		any_owned_province = {
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+			}
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_nobles_nakharar_titles_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_terrain = mountain
+						has_terrain = highlands
+					}
+				}
+				if = {
+					limit = {
+						has_terrain = mountain
+					}
+					add_province_modifier = {
+						name = estate_nobles_nakharar_titles_mountains
+						duration = -1
+					}
+				}
+				else = {
+					add_province_modifier = {
+						name = estate_nobles_nakharar_titles_highlands
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_nobles_nakharar_titles_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = estate_nobles_nakharar_titles_mountains
+						has_province_modifier = estate_nobles_nakharar_titles_highlands						
+					}
+				}
+				if = {
+					limit = {
+						has_province_modifier = estate_nobles_nakharar_titles_mountains
+					}
+					remove_province_modifier = estate_nobles_nakharar_titles_mountains
+				}
+				else = {
+					remove_province_modifier = estate_nobles_nakharar_titles_highlands
+				}
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_nobles_nakharar_titles_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = estate_nobles_nakharar_titles_mountains
+						has_province_modifier = estate_nobles_nakharar_titles_highlands						
+					}
+				}
+				if = {
+					limit = {
+						has_province_modifier = estate_nobles_nakharar_titles_mountains
+					}
+					remove_province_modifier = estate_nobles_nakharar_titles_mountains
+				}
+				else = {
+					remove_province_modifier = estate_nobles_nakharar_titles_highlands
+				}
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

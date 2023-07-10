@@ -1,0 +1,115 @@
+#################
+#Estate triggers
+#################
+
+#Generals estate
+
+#Used to define a Theme Capital province.
+estate_generals_is_theme_capital_trigger = {
+	#custom_trigger_tooltip = {
+		#tooltip = estate_generals_is_theme_capital_tooltip
+		OR = {
+			has_building = fort_15th
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+		}
+		has_forcelimit_building_trigger = yes
+		NOT = { is_capital = yes } #Let's exclude Constantinople from this.
+	#}
+}
+
+#Call using estate_generals_country_has_num_of_theme_capitals_trigger = { value = X }
+estate_generals_country_has_num_of_theme_capitals_trigger = { 
+	calc_true_if = {
+		desc = estate_generals_is_theme_capital_tooltip
+		all_owned_province = {
+			estate_generals_is_theme_capital_trigger = yes
+		}
+		amount = $value$
+	}
+}
+
+#Used to check for Exarchate tags
+is_exarch_tag_and_exarch_of_root_trigger = {
+	custom_trigger_tooltip = { 
+		tooltip = any_exarch_tag_under_root_exists_trigger
+		OR = { #I wonder if this is even necessary to check for.
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+		is_subject_of_type = byz_exarch
+		is_subject_of = ROOT
+	}
+}
+
+#If BYZ or ROM formed from BYZ 
+is_byz_or_hellenic_rome_trigger = { #Deprecated
+	#tag = BYZ
+}
+
+#LTE-related
+#LTE knightly order province triggers found in separate file.
+
+#Used to check for Knightly Order tags
+is_knightly_order_tag_and_knightly_order_of_root_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = any_knightly_order_tag_under_root_exists_trigger
+		OR = { #I wonder if this is even necessary to check for.
+			#Vanilla & BT:
+			tag = ATH
+			tag = LES
+			tag = CYP
+			tag = NAX
+			tag = CEP
+			tag = ACH
+			#SE:
+			tag = EDE
+			tag = ATC
+			tag = TPL
+			tag = NEG
+			tag = NEO
+			#New tags:
+			tag = DYR
+			tag = TSL
+			tag = PHP
+			tag = VNA
+			tag = NCP
+			tag = AMK
+			tag = NCA
+			tag = PFG
+			tag = ATO
+			tag = TCS
+			tag = CSM
+			tag = CSN
+			tag = CLO
+			tag = CBT
+			tag = MSP
+			tag = TBZ
+			tag = CRS
+			tag = CDA
+			tag = EPR
+			tag = TSY
+			tag = OHR
+		}
+		is_subject_of_type = byz_crusader_vassal
+		is_subject_of = ROOT
+	}
+}
+
+#Used to check if province has no religious center modifier.
+province_has_no_religious_center_modifier_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = province_has_no_religious_center_modifier
+		NOT = {
+			has_province_modifier = religious_center
+			has_province_modifier = orthodox_religious_center
+		}
+	}
+}

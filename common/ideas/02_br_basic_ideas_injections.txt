@@ -1,0 +1,37 @@
+#Due to how the ideas files are structured, the game will inject these into 00_basic_ideas.txt as an addon.
+
+aristocracy_ideas = {
+	bonus = {
+		leader_siege = 1
+		nobles_loyalty_modifier = 0.1
+		generals_loyalty_modifier = -0.1
+	}
+}
+
+offensive_ideas = {
+	bonus = {
+		recover_army_morale_speed = 0.05
+		generals_loyalty_modifier = 0.05
+	}
+}
+
+defensive_ideas = {
+	bonus = {
+		hostile_attrition = 1
+		generals_loyalty_modifier = 0.05
+	}
+}
+
+quality_ideas = {
+	bonus = {
+		discipline = 0.05
+		generals_loyalty_modifier = 0.05
+	}
+}
+
+quantity_ideas = {
+	bonus = {
+		land_forcelimit_modifier  = 0.50
+		generals_loyalty_modifier = 0.05
+	}
+}
