@@ -1,7 +1,7 @@
 version="7.0.0"
 dependencies={
 	"Beyond Typus"
-	"Beyond Typus BETA"
+	"Beyond TypusInternal"
 }
 tags={
 	"Alternative History"
@@ -13,5 +13,5 @@ tags={
 }
 picture="thumbnail.png"
 name="-BT Addon: Byzantine Resurgence"
-supported_version="1.33.*.*"
+supported_version="1.35.*.*"
 remote_file_id="1088606279"

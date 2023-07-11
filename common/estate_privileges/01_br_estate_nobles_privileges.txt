@@ -94,3 +94,166 @@ estate_nobles_nakharar_titles = {
 		factor = 0
 	}
 }
+#Kantakouzenos (20%), Philantropenos (10%), Metochites (10%), Choumnos (5%), Melissenos (5%), Tornikes (5%) Totalling 55%
+estate_nobles_latifundia_kantakouzenos = {
+	icon = privilege_land_rights
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+	}
+	can_select = {
+	}
+	on_granted = {
+	}
+	on_revoked = {
+		byz_revoke_latifundia_effect = { large=yes name="Alexios" dynasty="Kantakouzenos" }
+	}
+	on_invalid = {
+	}
+	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100 #I don't want Byzantium killing itself as an AI.
+	}
+}
+estate_nobles_latifundia_philantropenos = {
+	icon = privilege_land_rights
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+	}
+	can_select = {
+	}
+	on_granted = {
+	}
+	on_revoked = {
+		byz_revoke_latifundia_effect = { medium = yes name="Georgios" dynasty="Philantropenos" }
+	}
+	on_invalid = {
+	}
+	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100 #I don't want Byzantium killing itself as an AI.
+	}
+}
+estate_nobles_latifundia_metochites = {
+	icon = privilege_land_rights
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+	}
+	can_select = {
+	}
+	on_granted = {
+	}
+	on_revoked = {
+		byz_revoke_latifundia_effect = { medium = yes name="Ioannes" dynasty="Metochites" }
+	}
+	on_invalid = {
+	}
+	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100 #I don't want Byzantium killing itself as an AI.
+	}
+}
+estate_nobles_latifundia_choumnos= {
+	icon = privilege_land_rights
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+	}
+	can_select = {
+	}
+	on_granted = {
+	}
+	on_revoked = {
+		byz_revoke_latifundia_effect = { small = yes name="Leon" dynasty="Choumnos" }
+	}
+	on_invalid = {
+	}
+	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100 #I don't want Byzantium killing itself as an AI.
+	}
+}
+estate_nobles_latifundia_melissenos = {
+	icon = privilege_land_rights
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+	}
+	can_select = {
+	}
+	on_granted = {
+	}
+	on_revoked = {
+		byz_revoke_latifundia_effect = { small = yes name="Ioulianos" dynasty="Melissenos" }
+	}
+	on_invalid = {
+	}
+	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100 #I don't want Byzantium killing itself as an AI.
+	}
+}
+estate_nobles_latifundia_tornikes = {
+	icon = privilege_land_rights
+	max_absolutism = -10
+	loyalty = 0
+	influence = 0.05
+	is_valid = {
+	}
+	can_select = {
+	}
+	on_granted = {
+	}
+	on_revoked = {
+		byz_revoke_latifundia_effect = { small = yes name="Demetrios" dynasty="Tornikes" }
+	}
+	on_invalid = {
+	}
+	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 100 #I don't want Byzantium killing itself as an AI.
+	}
+}

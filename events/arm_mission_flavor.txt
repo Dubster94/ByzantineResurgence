@@ -88,7 +88,7 @@ country_event = {
 				}
 			}
 			else = { #If not applicable, give permaclaims
-				give_permaclaims_for_mission_provgroup = { mission=arm_union_with_georgia }
+				give_permaclaims_for_mission = { mission=arm_union_with_georgia }
 			}
 		}
 	}
@@ -107,6 +107,6 @@ country_event = {
 				}
 			}
 		}
-		give_permaclaims_for_mission_provgroup = { mission=arm_union_with_georgia }
+		give_permaclaims_for_mission = { mission=arm_union_with_georgia }
 	}
 }

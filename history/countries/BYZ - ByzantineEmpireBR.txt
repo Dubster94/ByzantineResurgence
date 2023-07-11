@@ -5,11 +5,16 @@ historical_rival = LAE
 
 change_estate_land_share = {
 	estate = estate_burghers
-	share = -10
+	share = -9
+}
+
+change_estate_land_share = {
+	estate = estate_church
+	share = -11
 }
 change_estate_land_share = {
 	estate = estate_nobles
-	share = 10
+	share = 20
 }
 #To allow for the conversion to Catholic if draining Patriarch Authority.
 patriarch_authority = 0.15

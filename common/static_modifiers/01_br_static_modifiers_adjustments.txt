@@ -14,6 +14,7 @@ stability = {
 }
 
 war = {
+	monthly_militarized_society = 0.1
 	rr_girondists_influence = 0.15
 	logothete_military_influence = 0.1 #BT Added
 }
@@ -25,6 +26,8 @@ peace = {
 	global_institution_spread = 0.1
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
+	monthly_militarized_society = -0.1
+	monthly_ottoman_decadence = 0.1
 	logothete_postal_influence = 0.1 #BT Added
 }
 
@@ -41,6 +44,9 @@ army_tradition = {
 	nobles_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
+	janissaries_loyalty_modifier = 0.05
+	allowed_tercio_fraction = 0.1
+	allowed_samurai_fraction = 0.1
 	generals_loyalty_modifier = 0.1 #BR Added
 	logothete_military_influence = 0.1 #BR Added
 }
@@ -79,10 +85,13 @@ corruption = {
 	dhimmi_loyalty_modifier = 0.1
 	jains_loyalty_modifier = 0.1
 	rajput_loyalty_modifier = 0.1
+	janissaries_loyalty_modifier = 0.1
+	eunuchs_loyalty_modifier = 0.1
+	monthly_heir_claim_increase = 0.025
+	monthly_russian_modernization = -1
+	monthly_ottoman_decadence = 10
 	generals_loyalty_modifier = 0.1 #BR Added
 	exarches_loyalty_modifier = 0.1 #BR Added
-
-	monthly_heir_claim_increase = 0.025
 }
 
 prestige = {
@@ -95,7 +104,8 @@ prestige = {
 	monthly_fervor_increase = 1
 	ae_impact = -0.10
 	#embracement_cost = -0.1			#BTAddOn removed - no real reason other than I don't like it. It does make balance easier to plan too, though, when not having to factor this into AI chance to embrace.
-
+	monthly_heir_claim_increase = 0.05
+	
 	all_estate_loyalty_equilibrium = 0.05 #BR Tweaked for better interface.
 	logothete_postal_influence = 0.1 #BR Added
 

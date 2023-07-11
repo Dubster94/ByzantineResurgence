@@ -113,3 +113,15 @@ province_has_no_religious_center_modifier_trigger = {
 		}
 	}
 }
+
+
+
+has_non_capital_state_province_of_dev = {
+	any_owned_province = {
+		limit = {
+			is_state = yes
+			NOT = { is_capital = yes }
+			development = $dev$
+		}
+	}
+}

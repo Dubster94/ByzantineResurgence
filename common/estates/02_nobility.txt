@@ -506,6 +506,12 @@ estate_nobles =
 		#End of BT-specific privileges
 		#BR-specific privileges
 		estate_nobles_nakharar_titles
+		estate_nobles_latifundia_kantakouzenos
+		estate_nobles_latifundia_philantropenos
+		estate_nobles_latifundia_metochites
+		estate_nobles_latifundia_choumnos
+		estate_nobles_latifundia_melissenos
+		estate_nobles_latifundia_tornikes
 		#End of BR-secific privileges
 		#BR added for BTIP
 		estate_nobles_court_titles

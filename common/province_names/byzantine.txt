@@ -457,15 +457,15 @@
 4292 = { "Margdis" "Margdis" } #Not sure where Merida comes from - Pleiades has completely disregarded this name and it seems very much like Latin anyway, even so I only find it on Wikipedia. Ancient Greek was Marde/Margdis, so I'm going for the latter. Previously I had used a Nea Ioustiniana, however I don't know where I got that from. Was 5295 pre 1.24
 5293 = { "Rhaisena" "Rhaisena" }
 6090 = { "Dabana" "Dabana" } #There's nothing here.
-6100 = { "Konstantia" "Konstantia" } #This city has so many names it's not even funny, from Konstantina, Maximianopolis, Antinopolis, Nikephorion, Antiochia, even Konstantinoupolis. I took Konstantia because it was pretty much the only one not already present.
-6102 = { "Chasanara" "Chasanara " } #Escorial Taktikon, from wiki.
+#6100 = { "Konstantia" "Konstantia" } #This city has so many names it's not even funny, from Konstantina, Maximianopolis, Antinopolis, Nikephorion, Antiochia, even Konstantinoupolis. I took Konstantia because it was pretty much the only one not already present.
+#6102 = { "Chasanara" "Chasanara " } #Escorial Taktikon, from wiki.
 
 #Sophene
 418 = { "Amida" "Amida" }
 4310 = { "Anzitene" "Charpete" } #Pre 1.24 was 5148
 5330 = { "Arzanene" "Martyropolis" } #New in 1.24
 6104 = { "Ingilene" "Ingila" }
-6105 = { "Belabitene" "Asmosaton" } #Replacing Mesopotamia theme with something else.
+#6105 = { "Belabitene" "Asmosaton" } #Replacing Mesopotamia theme with something else.
 6107 = { "Chorzane" "Kitharizon" }
 
 #Lesser Armenia
@@ -481,7 +481,7 @@
 4302 = { "Valarsakert" "Valarsakert" } #Alashkert otherwise is Valarsakert according to the wiki. Ancient Roman name was Chadas. Pre 1.24 was 5291
 6110 = { "Mantzikert" "Mantzikert" } #NOTE: Comment remedied in BT15.
 6109 = { "Asthianene" "Barzanissa" }
-6111 = { "Kolchion" "Kolchion" }
+#6111 = { "Kolchion" "Kolchion" }
 
 #Vaspurakan
 2306 = { "Taron" "Mous" } #Moved to Upper Euphrates in 1.24
@@ -490,8 +490,8 @@
 5332 = { "Arzes" "Arzes" } #New in 1.24
 6112 = { "Perkri" "Perkri" } #Admistrando Imperio
 6113 = { "Adamakert" "Adamakert" } #Using an Armenian name for now because I cannot find an actual Greek match.
-6115 = { "Kalata" "Kalata" }
-6116 = { "Moxoene" "Bastauna" }
+#6115 = { "Kalata" "Kalata" }
+#6116 = { "Moxoene" "Bastauna" }
 
 #Corduene
 4179 = { "Hagios Maras" "Hagios Maras" } #There's just nothing here outside of the Mar Mamo, or Church of Saint Mammes. So I just use the Greek word for said saint and went with that.
@@ -499,7 +499,7 @@
 5295 = { "Kordyene" "Zabdaion" } #Removed Gazarta due to it seemingly being referenced in Catholic. Was moved from 2308 in 1.24
 5331 = { "Sirte" "Sirte" } #Pre 1.24 was 5294
 6114 = { "Echares" "Echares" } #There's nothing here. Modern Hakkari city, but no Greek name available. Greekifying Syrian etymology Ekkare into Echaris
-6117 = { "Tiarion" "Tiarion" } #There's nothing here. Modern Cukurca city, but no Greek name available. Just greekifying/latinised Tyare into Tiarium
+#6117 = { "Tiarion" "Tiarion" } #There's nothing here. Modern Cukurca city, but no Greek name available. Just greekifying/latinised Tyare into Tiarium
 6119 = { "Nouadrion" "Nouadrion" } #Using Syriac Beth Nuhadra/Nohdry and then transliterating.
 6121 = { "Amidia" "Amidia" } #Using Syriac Amedya
 
