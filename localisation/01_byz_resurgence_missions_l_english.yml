@@ -440,18 +440,28 @@
  gre_mission_flavor.2.d:0 "The Pontic Mountains have now been conquered, and therefore the Pontic Greeks are safe from external pressure. There is however the issue of the region being on our very border. Our military generals have come forth and proposed that the region be ruled autonomously under a Pontic March, which would promote the region's natural defensiveness. On the other hand, the region could prove valuable in protecting our trading assets in the Black Sea."
  gre_mission_flavor.2.a:0 "Keep it under our banner"
  gre_mission_flavor.2.b:0 "Release a March to relieve administrative & military duties"
- 
- #Mission modifiers
+ #Byz Startup-related thingimajigs
+ estate_nobles_latifundia_kantakouzenos:0 "Kantakouzenoi Latifundia"
+ estate_nobles_latifundia_kantakouzenos_desc:0 "The Kantakouzenoi were a majorly influential dynastic family in Palaiologan Byzantium and one of the most prominent Greek noble families in the Empire whose history traces back to the Komnenoi period. Having caused a major civil war in the 1350s by usurping the throne, the family remained one of the most powerful families rivalling the Palaiologoi."
+ estate_nobles_latifundia_philantropenos:0 "Philantropenoi Latifundia"
+ estate_nobles_latifundia_philantropenos_desc:0 "The Philantropenoi rose to prominence during the Palaiologan period of the Byzantine Empire. They held several senior civil and military offices within the Empire and even held the title of Mesazon, prime minister, at one point."
+ estate_nobles_latifundia_metochites:0 "Metochitioi Latifundia"
+ estate_nobles_latifundia_metochites_desc:0 "A most influential Byzantine noble family, giving several statesmen and intellectuals to the Byzantine Empire. Having held titles such as Archon of Thessalonica prior to its conquest by the Ottomans as well as the governor of Constantinople and being intermarried with the Palaiologoi, they have close ties to the Imperial family themselves."
+ estate_nobles_latifundia_choumnos:0 "Choumnoi Latifundia"
+ estate_nobles_latifundia_choumnos_desc:0 "The Choumnoi rose to prominence around the mid-11th century as part of the Komnenian Pronoiar system. Having held important civil and military offices such as the Grand Domestikos of the Empire, they had lands in and around Thessaloniki prior to Ottoman conquest."
+ estate_nobles_latifundia_melissenos:0 "Melissenoi Latifundia"
+ estate_nobles_latifundia_melissenos_desc:0 "One of the oldest noble families of Byzantium, their posessions mainly centered around Anatolia and in the Peloponnese. The family held several civil offices as well, however their importance during the last decades of the Empire has waned."
+ estate_nobles_latifundia_tornikes:0 "Tornikioi Latifundia"
+ estate_nobles_latifundia_tornikes_desc:0 "A family supposedly stemming from 10th Century Byzantine Armenia, during the last decades of the Empire, their lands were centered around Macedonia. A notable Greek noble family that helped the Palaiologoi rise to power during the recovery of Constantinople in 1263."
+  
  byz_bad_navy:0 "Foreign Fleet"
  desc_byz_bad_navy:0 "Since the neglect of the navy since the Angeloi prior to the 4th Crusade, the Byzantines have yet to manage a domestic fleet of their own. As a result of this, the Byzantines have been forced to rely on Genoese and Venetian seamen for their ventures, whose loyalty only lie in their greed."
  byz_bad_economy:0 "Hyperinflation"
  desc_byz_bad_economy:0 "Since the fall of Constantinople in the 4th Crusade, the Byzantine economy has had major issues. In no small part due to the destruction and plunder by the Crusaders, but also because of the lack of state income after the reconquest of the city. Since the Genoese and Italians were siphoning off the Byzantine trade, there was little way for the Emperors to generate revenue, and with an increased reliance on foreign military and navy, the Byzantine government lay heavily in debt that it was unable to pay off. Combined with the Bullion famine in Europe, not a single Hyperpyron, the Byzantine gold coin, was minted during the reign of the Palaiologan dynasty."
  byz_bad_military:0 "Lack of Levies"
  desc_byz_bad_military:0 "Due to the loss of the Anatolian and Greek heartlands, the Byzantines have not been able to field a proper army in a long time, the largest during the Palaiologan dynasty a mere 5000 men. This resulted in a large dependence on foreign mercenaries to do the Empire's bidding, culminating in further destruction as the Byzantine government was unable to pay them."
- 
- 
- 
- 
+  
+ #Mission modifiers
  byz_last_stand:0 "Last Stand"
  desc_byz_last_stand:0 ""
  byz_resettle_gallipoli:0 "Resettle Gallipoli"

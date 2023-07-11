@@ -1,8 +1,9 @@
-add_government_reform = autocracy_reform #Was Byzantium feudal or despotic? Well, they did have a feudal-esque system by 1444, but that was mostly in terms of hereditary land grants. The ruling family still had most of the power. I'll go for this for now with very influential nobles. They styled themselves autocrats either way, so I'll go for despotic for now.
-set_legacy_government = roman_autocracy_legacy
+add_government_reform = pronoiar_reform #Was Byzantium feudal or despotic? Well, they did have a feudal-esque system by 1444, but that was mostly in terms of hereditary land grants. The ruling family still had most of the power. I'll go for this for now with very influential nobles. They styled themselves autocrats either way, so I'll go for despotic for now.
+#set_legacy_government = roman_autocracy_legacy
 #Latin Empire surely should be a historical rival, no?
 historical_rival = LAE
 
+#Land rebalance
 change_estate_land_share = {
 	estate = estate_burghers
 	share = -9
@@ -10,17 +11,27 @@ change_estate_land_share = {
 
 change_estate_land_share = {
 	estate = estate_church
-	share = -11
+	share = -16
 }
 change_estate_land_share = {
 	estate = estate_nobles
-	share = 20
+	share = 30
 }
+
 #To allow for the conversion to Catholic if draining Patriarch Authority.
 patriarch_authority = 0.15
 #BR initiator because Paradox coded on_actions weirdly. This flag is literally only here to tell on_startup that this mod is in fact loaded, without causing conflicts with my other mods that depend on on_actions.
 set_global_flag = byz_resurgence_loaded
 
+#Starting privileges
+set_estate_privilege = estate_nobles_latifundia_kantakouzenos
+set_estate_privilege = estate_nobles_latifundia_philantropenos
+set_estate_privilege = estate_nobles_latifundia_metochites
+set_estate_privilege = estate_nobles_latifundia_choumnos
+set_estate_privilege = estate_nobles_latifundia_melissenos
+set_estate_privilege = estate_nobles_latifundia_tornikes
+
+#Starting modifiers
 add_country_modifier = {
 	name = "byz_bad_navy"
 	duration = -1

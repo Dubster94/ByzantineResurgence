@@ -233,7 +233,7 @@ estate_nobles_latifundia_melissenos = {
 estate_nobles_latifundia_tornikes = {
 	icon = privilege_land_rights
 	max_absolutism = -10
-	loyalty = 0
+	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
 	}
