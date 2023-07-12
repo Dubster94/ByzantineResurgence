@@ -110,6 +110,10 @@ estate_nobles_latifundia_kantakouzenos = {
 	}
 	on_revoked = {
 		byz_revoke_latifundia_effect = { large=yes name="Alexios Kantakouzenos" dynasty="Kantakouzenos" }
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -20
+		}
 	}
 	on_invalid = {
 	}
@@ -139,6 +143,10 @@ estate_nobles_latifundia_philantropenos = {
 	}
 	on_revoked = {
 		byz_revoke_latifundia_effect = { medium = yes name="Georgios Philantropenos" dynasty="Philantropenos" }
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -10
+		}
 	}
 	on_invalid = {
 	}
@@ -168,6 +176,10 @@ estate_nobles_latifundia_metochites = {
 	}
 	on_revoked = {
 		byz_revoke_latifundia_effect = { medium = yes name="Ioannes Metochites" dynasty="Metochites" }
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -10
+		}
 	}
 	on_invalid = {
 	}
@@ -197,6 +209,10 @@ estate_nobles_latifundia_choumnos= {
 	}
 	on_revoked = {
 		byz_revoke_latifundia_effect = { small = yes name="Leon Choumnos" dynasty="Choumnos" }
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -5
+		}
 	}
 	on_invalid = {
 	}
@@ -226,6 +242,10 @@ estate_nobles_latifundia_melissenos = {
 	}
 	on_revoked = {
 		byz_revoke_latifundia_effect = { small = yes name="Ioulianos Melissenos" dynasty="Melissenos" }
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -5
+		}
 	}
 	on_invalid = {
 	}
@@ -255,6 +275,10 @@ estate_nobles_latifundia_tornikes = {
 	}
 	on_revoked = {
 		byz_revoke_latifundia_effect = { small = yes name="Demetrios Tornikes" dynasty="Tornikes" }
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -5
+		}
 	}
 	on_invalid = {
 	}
