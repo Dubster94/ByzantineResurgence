@@ -101,13 +101,15 @@ estate_nobles_latifundia_kantakouzenos = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
+		has_estate_privilege = estate_nobles_latifundia_kantakouzenos
 	}
 	can_select = {
+		always = no
 	}
 	on_granted = {
 	}
 	on_revoked = {
-		byz_revoke_latifundia_effect = { large=yes name="Alexios" dynasty="Kantakouzenos" }
+		byz_revoke_latifundia_effect = { large=yes name="Alexios Kantakouzenos" dynasty="Kantakouzenos" }
 	}
 	on_invalid = {
 	}
@@ -128,13 +130,15 @@ estate_nobles_latifundia_philantropenos = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
+		has_estate_privilege = estate_nobles_latifundia_philantropenos
 	}
 	can_select = {
+		always = no
 	}
 	on_granted = {
 	}
 	on_revoked = {
-		byz_revoke_latifundia_effect = { medium = yes name="Georgios" dynasty="Philantropenos" }
+		byz_revoke_latifundia_effect = { medium = yes name="Georgios Philantropenos" dynasty="Philantropenos" }
 	}
 	on_invalid = {
 	}
@@ -155,13 +159,15 @@ estate_nobles_latifundia_metochites = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
+		has_estate_privilege = estate_nobles_latifundia_metochites
 	}
 	can_select = {
+		always = no
 	}
 	on_granted = {
 	}
 	on_revoked = {
-		byz_revoke_latifundia_effect = { medium = yes name="Ioannes" dynasty="Metochites" }
+		byz_revoke_latifundia_effect = { medium = yes name="Ioannes Metochites" dynasty="Metochites" }
 	}
 	on_invalid = {
 	}
@@ -182,13 +188,15 @@ estate_nobles_latifundia_choumnos= {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
+		has_estate_privilege = estate_nobles_latifundia_choumnos
 	}
 	can_select = {
+		always = no
 	}
 	on_granted = {
 	}
 	on_revoked = {
-		byz_revoke_latifundia_effect = { small = yes name="Leon" dynasty="Choumnos" }
+		byz_revoke_latifundia_effect = { small = yes name="Leon Choumnos" dynasty="Choumnos" }
 	}
 	on_invalid = {
 	}
@@ -209,13 +217,15 @@ estate_nobles_latifundia_melissenos = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
+		has_estate_privilege = estate_nobles_latifundia_melissenos
 	}
 	can_select = {
+		always = no
 	}
 	on_granted = {
 	}
 	on_revoked = {
-		byz_revoke_latifundia_effect = { small = yes name="Ioulianos" dynasty="Melissenos" }
+		byz_revoke_latifundia_effect = { small = yes name="Ioulianos Melissenos" dynasty="Melissenos" }
 	}
 	on_invalid = {
 	}
@@ -236,13 +246,15 @@ estate_nobles_latifundia_tornikes = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
+		has_estate_privilege = estate_nobles_latifundia_kantakouzenos
 	}
 	can_select = {
+		always = no
 	}
 	on_granted = {
 	}
 	on_revoked = {
-		byz_revoke_latifundia_effect = { small = yes name="Demetrios" dynasty="Tornikes" }
+		byz_revoke_latifundia_effect = { small = yes name="Demetrios Tornikes" dynasty="Tornikes" }
 	}
 	on_invalid = {
 	}
