@@ -47,35 +47,16 @@
 # It's also a slight buff because you can experience all modifiers at once, compared to the Faction system, and the drawbacks for each modifier are gone.
 
 #Also adding militarisation which has a bunch of fun bonuses. Tie these to missions! More army!
-#Fully upgraded!
-byzantine_militarization_mechanic = {
+
+byzantine_bureaucracy_mechanic = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics_byzantium
-	alert_icon_index = 1
+	alert_icon_index = 3
 	available = {
 	}
 	
 	powers = {
-		byzantine_militarization = {
-			gui = byzantine_militarization_gov_mech
-			max = 100
-			reset_on_new_ruler = yes
-			base_monthly_growth = -0.1
-			development_scaled_monthly_growth = 0.001
-			scaled_modifier = {
-				modifier = {
-					discipline = 1
-					country_military_power = 5
-				}
-			}
-			reverse_scaled_modifier = {
-				modifier = {
-					discipline = -0.5
-				}
-			}
-			is_good = yes
-		}
-		megas_domestikos_power = {
-			gui = byzantine_government_bar_interaction
+		byzantine_megas_domestikos_power = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
 			max = 100
 			base_monthly_growth = 0.5
 			scaled_modifier = {
@@ -86,15 +67,15 @@ byzantine_militarization_mechanic = {
 					monthly_megas_domestikos_power = 0.5
 					yearly_corruption  = 0.3
 				}
-				reverse_scaled_modifier = {
-					modifier = {
-						yearly_corruption  = -0.1
-					}
+			}
+			reverse_scaled_modifier = {
+				modifier = {
+					yearly_corruption  = -0.1
 				}
 			}
 		}
-		megas_logariastes_power = {
-			gui = byzantine_government_bar_interaction
+		byzantine_megas_logariastes_power = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
 			max = 100
 			base_monthly_growth = 0.5
 			scaled_modifier = {
@@ -106,15 +87,15 @@ byzantine_militarization_mechanic = {
 					monthly_megas_logariastes_power = 0.5
 					yearly_corruption  = 0.3
 				}
-				reverse_scaled_modifier = {
-					modifier = {
-						yearly_corruption  = -0.1
-					}
+			}
+			reverse_scaled_modifier = {
+				modifier = {
+					yearly_corruption  = -0.1
 				}
 			}
 		}
-		megas_logothetes_power = {
-			gui = byzantine_government_bar_interaction
+		byzantine_megas_logothetes_power = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
 			max = 100
 			base_monthly_growth = 0.5
 			scaled_modifier = {
@@ -125,36 +106,88 @@ byzantine_militarization_mechanic = {
 					monthly_megas_logothetes_power = 0.5
 					yearly_corruption  = 0.3
 				}
-				reverse_scaled_modifier = {
-					modifier = {
-						yearly_corruption  = -0.1
-					}
+			}
+			reverse_scaled_modifier = {
+				modifier = {
+					yearly_corruption  = -0.1
 				}
 			}
 		}
 	}
 	
 	interactions = {
+		megas_domestikos_interaction = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
+			icon = GFX_byz_megas_domestikos_button
+			cost_type = byzantine_megas_domestikos_power
+			cost = 25
+			trigger = {
+				mil_power = 25
+			}
+			
+			effect = {
+				add_mil_power = -25
+			}
+		}
+		megas_logariastes_interaction = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
+			icon = GFX_byz_megas_logariastes_button
+			cost_type = byzantine_megas_logariastes_power
+			cost = 25
+			trigger = {
+				adm_power = 25
+			}
+			
+			effect = {
+				add_adm_power = -25
+			}
+		}
+		megas_logothetes_interaction = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
+			icon = GFX_byz_megas_logothetes_button
+			cost_type = byzantine_megas_logothetes_power
+			cost = 25
+			trigger = {
+				dip_power = 25
+			}
+			
+			effect = {
+				add_dip_power = -25
+			}
+		}
+	}
+}
+
+byzantine_pronoia_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics_byzantium
+	alert_icon_index = 1
+	available = {
+	}
+	
+	powers = {
+		byzantine_pronoia_power = {
+			gui = byzantine_pronoia_gov_mech_power
+			max = 150
+			monarch_power = ADM
+			is_good = yes
+		}
+	}
+	
+	interactions = {
 		demand_state_tax = {
-			gui = byzantine_government_interaction
+			gui = byzantine_pronoia_gov_mech_button
 			icon = GFX_pronoia_demand_state_tax
+			cost_type = byzantine_pronoia_power
+			cost = 100
 			trigger = {
 			}
 			effect = {
-				add_country_modifier = {
-					name = efficient_tax_farming_modifier
-					duration = 7300
-				}
-				add_government_power = {
-					mechanic_type = byzantine_militarization_mechanic
-					power_type = byzantine_militarization
-					value = 100
-				}
+				# add_country_modifier = {
+					# name = efficient_tax_farming_modifier
+					# duration = 7300
+				# }
 				add_years_of_income = 2
 			}
-			cooldown_years = 20
-			cooldown_token = pronoia_mechanic
-			cooldown_desc = AN_IQTA_TAXATION_POLICY
 			ai_chance = {
 				factor = 20
 				modifier = {
@@ -194,25 +227,20 @@ byzantine_militarization_mechanic = {
 			}
 		}
 		raise_tagmata = {
-			gui = byzantine_government_interaction
+			gui = byzantine_pronoia_gov_mech_button
 			icon = GFX_pronoia_raise_tagmata_button
+			cost_type = byzantine_pronoia_power
+			cost = 100
 			trigger = { 
 			}
 			effect = { 
-				add_country_modifier = {
-					name = land_acquisition_modifier
-					duration = 7300
-				}
-				add_years_of_owned_provinces_manpower = {
-					years = 2
-				}
-				add_years_of_owned_provinces_sailors = {
-					years = 2
-				}
+				# add_country_modifier = {
+					# name = land_acquisition_modifier
+					# duration = 7300
+				# }
+				add_yearly_manpower = 2
+				add_yearly_sailors = 2
 			}
-			cooldown_years = 20
-			cooldown_token = pronoia_mechanic
-			cooldown_desc = AN_IQTA_TAXATION_POLICY
 			ai_chance = {
 				factor = 2
 				modifier = {
@@ -251,8 +279,10 @@ byzantine_militarization_mechanic = {
 			}
 		}
 		lenient_state_tax = {
-			gui = byzantine_government_interaction
+			gui = byzantine_pronoia_gov_mech_button
 			icon = GFX_pronoia_lenient_state_tax
+			cost_type = byzantine_pronoia_power
+			cost = 100
 			trigger = {
 			}
 			effect = { 
@@ -261,9 +291,6 @@ byzantine_militarization_mechanic = {
 					duration = 7300
 				}
 			}
-			cooldown_years = 20
-			cooldown_token = pronoia_mechanic
-			cooldown_desc = AN_IQTA_TAXATION_POLICY
 			ai_chance = {
 				factor = 5
 				modifier = {
@@ -294,45 +321,64 @@ byzantine_militarization_mechanic = {
 				}
 			}
 		}
-		megas_domestikos_interaction = {
-			gui = byzantine_government_bar_interaction
-			icon = GFX_byz_megas_domestikos_button
-			cost_type = megas_domestikos_power
-			cost = 25
-			trigger = {
-				mil_power = 25
+	}
+	
+}
+
+#Militarization
+byzantine_militarization_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics_byzantium
+	alert_icon_index = 2
+	available = {
+	}
+	
+	powers = {
+		byzantine_militarization = {
+			gui = byzantine_militarization_gov_mech_power
+			max = 200 #Scales to 200 because monarch power is hardcoded to +1/year/skill
+			monarch_power = MIL
+			reset_on_new_ruler = yes
+			scaled_modifier = {
+				modifier = {
+					generals_loyalty_modifier = 0.4
+					drill_decay_modifier = -0.5
+					drill_gain_modifier = 0.5
+				}
 			}
-			
-			effect = {
-				add_mil_power = -25
+			range_modifier = {
+				modifier = {
+					monarch_military_power = 1
+				}
+				start_value = 50
+				end_value = 200
 			}
+			range_modifier = {
+				modifier = {
+					monarch_military_power = 1
+				}
+				start_value = 100
+				end_value = 200
+			}
+			range_modifier = {
+				modifier = {
+					monarch_military_power = 1
+				}
+				start_value = 150
+				end_value = 200
+			}
+			range_modifier = {
+				modifier = {
+					monarch_military_power = 1
+				}
+				start_value = 200
+				end_value = 200
+			}
+			is_good = yes
 		}
-		megas_logariastes_interaction = {
-			gui = byzantine_government_bar_interaction
-			icon = GFX_byz_megas_logariastes_button
-			cost_type = megas_logariastes_power
-			cost = 25
-			trigger = {
-				adm_power = 25
-			}
-			
-			effect = {
-				add_adm_power = -25
-			}
-		}
-		megas_logothetes_interaction = {
-			gui = byzantine_government_bar_interaction
-			icon = GFX_byz_megas_logothetes_button
-			cost_type = megas_logothetes_power
-			cost = 25
-			trigger = {
-				dip_power = 25
-			}
-			
-			effect = {
-				add_dip_power = -25
-			}
-		}
+	}
+	
+	interactions = {
+		#None
 	}
 }
 

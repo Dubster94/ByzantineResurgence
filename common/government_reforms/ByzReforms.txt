@@ -73,7 +73,13 @@ pronoiar_reform = { #Needs updating or just downright removal
 	conditional = {
 		#allow = { has_dlc = "Cradle of Civilization" }
 		government_abilities = {
-			pronoia_mechanic
+			byzantine_bureaucracy_mechanic
+		}
+	}
+	conditional = {
+		#allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			byzantine_pronoia_mechanic
 		}
 	}
 	conditional = {
