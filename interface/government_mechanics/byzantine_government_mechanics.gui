@@ -1,0 +1,65 @@
+guiTypes = {
+	windowType = {
+		name = "byzantine_militarization_gov_mech"
+		size = { x = 300 y = 79 }
+		moveable = 0
+
+		#bar and frame
+		iconType = {
+			name = "government_power_bar"
+			spriteType = "GFX_byz_militarization_progress_bar"
+			position = { x = 15 y = 57 }
+		}
+
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_byz_militarization_bar_frame"
+			position = { x = -1 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+
+	windowType = {
+		name = "byzantine_government_interaction"
+		size = { x = 100 y = 42 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			#position = { x = 0 y = 0 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+
+	windowType = {
+		name = "byzantine_government_bar_interaction"
+		size = { x = 100 y = 58 }
+		moveable = 0
+		#orientation = "UPPER_RIGHT"
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			position = { x = 0 y = 0 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+		
+		iconType = {
+			name = "government_power_bar"
+			spriteType = "GFX_byz_bureaucracy_progress_bar"
+			position = { x = 25 y = 44 }
+		}
+
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_byz_bureaucracy_bar_frame"
+			position = { x = 22 y = 43 }
+			alwaystransparent = yes
+		}
+	}
+}

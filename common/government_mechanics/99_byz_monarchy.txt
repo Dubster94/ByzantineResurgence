@@ -47,21 +47,20 @@
 # It's also a slight buff because you can experience all modifiers at once, compared to the Faction system, and the drawbacks for each modifier are gone.
 
 #Also adding militarisation which has a bunch of fun bonuses. Tie these to missions! More army!
-
-
-
-byzantine_government_mechanic_1 = {
-	alert_icon_gfx = GFX_alerticons_government_mechanics
-	alert_icon_index = 11
+#Fully upgraded!
+byzantine_militarization_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics_byzantium
+	alert_icon_index = 1
 	available = {
 	}
-
+	
 	powers = {
 		byzantine_militarization = {
+			gui = byzantine_militarization_gov_mech
 			max = 100
 			reset_on_new_ruler = yes
 			base_monthly_growth = -0.1
-			development_scaled_monthly_growth = 0.1
+			development_scaled_monthly_growth = 0.001
 			scaled_modifier = {
 				modifier = {
 					discipline = 1
@@ -75,60 +74,263 @@ byzantine_government_mechanic_1 = {
 			}
 			is_good = yes
 		}
+		megas_domestikos_power = {
+			gui = byzantine_government_bar_interaction
+			max = 100
+			base_monthly_growth = 0.5
+			scaled_modifier = {
+				modifier = {
+					manpower_recovery_speed = 0.4
+					general_cost = -0.2
+					mil_advisor_cost = -0.4
+					monthly_megas_domestikos_power = 0.5
+					yearly_corruption  = 0.3
+				}
+				reverse_scaled_modifier = {
+					modifier = {
+						yearly_corruption  = -0.1
+					}
+				}
+			}
+		}
+		megas_logariastes_power = {
+			gui = byzantine_government_bar_interaction
+			max = 100
+			base_monthly_growth = 0.5
+			scaled_modifier = {
+				modifier = {
+					global_tax_modifier = 0.2
+					production_efficiency = 0.2
+					interest = -2
+					adm_advisor_cost = -0.4
+					monthly_megas_logariastes_power = 0.5
+					yearly_corruption  = 0.3
+				}
+				reverse_scaled_modifier = {
+					modifier = {
+						yearly_corruption  = -0.1
+					}
+				}
+			}
+		}
+		megas_logothetes_power = {
+			gui = byzantine_government_bar_interaction
+			max = 100
+			base_monthly_growth = 0.5
+			scaled_modifier = {
+				modifier = {
+					improve_relation_modifier = 0.4
+					diplomatic_reputation = 4
+					dip_advisor_cost = -0.4
+					monthly_megas_logothetes_power = 0.5
+					yearly_corruption  = 0.3
+				}
+				reverse_scaled_modifier = {
+					modifier = {
+						yearly_corruption  = -0.1
+					}
+				}
+			}
+		}
 	}
 	
 	interactions = {
-		promote_hessian_militarization = {
-			gui = hessian_militarization_gov_mech
-			cost_type = hessian_militarization
-			center = no
+		demand_state_tax = {
+			gui = byzantine_government_interaction
+			icon = GFX_pronoia_demand_state_tax
 			trigger = {
-				NOT = {
-					has_government_power = {
-						mechanic_type = hessian_militarization_mechanic
-						power_type = hessian_militarization
-						value = 100
-					}
-				}
-				years_of_income = 0.1
 			}
 			effect = {
-				add_years_of_income = -0.1
+				add_country_modifier = {
+					name = efficient_tax_farming_modifier
+					duration = 7300
+				}
 				add_government_power = {
-					mechanic_type = hessian_militarization_mechanic
-					power_type = hessian_militarization
-					value = 5
+					mechanic_type = byzantine_militarization_mechanic
+					power_type = byzantine_militarization
+					value = 100
 				}
+				add_years_of_income = 2
 			}
+			cooldown_years = 20
+			cooldown_token = pronoia_mechanic
+			cooldown_desc = AN_IQTA_TAXATION_POLICY
 			ai_chance = {
-				factor = 10
+				factor = 20
 				modifier = {
 					factor = 0
-					is_at_war = no
+					NOT = { num_of_loans = 1 }
 				}
 				modifier = {
-					factor = 0
-					NOT = { num_of_mercenaries = 1 }
+					factor = 0.5
+					is_in_deficit = no
 				}
 				modifier = {
-					factor = 0
+					factor = 1.25
+					has_any_disaster = yes
+				}
+				modifier = {
+					factor = 1.5
+					num_of_loans = 2
 					is_in_deficit = yes
+				}
+				modifier = {
+					factor = 20
+					num_of_loans = 1
+				}
+				modifier = {
+					factor = 100
 					num_of_loans = 3
 				}
 				modifier = {
-					factor = 0
-					NOT = { years_of_income = 0.25 }
+					factor = 100
+					num_of_loans = 5
 				}
+				modifier = {
+					factor = 100
+					num_of_loans = 7
+				}
+
+			}
+		}
+		raise_tagmata = {
+			gui = byzantine_government_interaction
+			icon = GFX_pronoia_raise_tagmata_button
+			trigger = { 
+			}
+			effect = { 
+				add_country_modifier = {
+					name = land_acquisition_modifier
+					duration = 7300
+				}
+				add_years_of_owned_provinces_manpower = {
+					years = 2
+				}
+				add_years_of_owned_provinces_sailors = {
+					years = 2
+				}
+			}
+			cooldown_years = 20
+			cooldown_token = pronoia_mechanic
+			cooldown_desc = AN_IQTA_TAXATION_POLICY
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 0
+					is_at_war = no
+					OR = {
+						NOT = {
+							any_neighbor_country = {
+								NOT = { truce_with = ROOT }
+							}
+						}
+						manpower_percentage = 0.9
+					}
+				}
+				modifier = {
+					factor = 1.5
+					not = { manpower_percentage = 0.3 }
+				}
+				modifier = {
+					factor = 1.5
+					not = { manpower_percentage = 0.2 }
+				}
+				modifier = {
+					factor = 1.5
+					not = { manpower_percentage = 0.1 }
+				}
+				modifier = {
+					factor = 10
+					is_in_important_war = yes
+				}
+				modifier = {
+					factor = 3
+					is_at_war = yes
+					is_in_deficit = no
+				}
+			}
+		}
+		lenient_state_tax = {
+			gui = byzantine_government_interaction
+			icon = GFX_pronoia_lenient_state_tax
+			trigger = {
+			}
+			effect = { 
+				add_country_modifier = {
+					name = lenient_taxation_modifier
+					duration = 7300
+				}
+			}
+			cooldown_years = 20
+			cooldown_token = pronoia_mechanic
+			cooldown_desc = AN_IQTA_TAXATION_POLICY
+			ai_chance = {
+				factor = 5
 				modifier = {
 					factor = 0
 					NOT = {
-						has_government_power = {
-							mechanic_type = hessian_militarization_mechanic
-							power_type = hessian_militarization
-							value = 90
+						any_subject_country = {
+							liberty_desire = 40
 						}
 					}
 				}
+				modifier = {
+					factor = 2
+					any_subject_country = {
+						liberty_desire = 45
+					}
+				}
+				modifier = {
+					factor = 5
+					any_subject_country = {
+						liberty_desire = 50
+					}
+				}
+				modifier = {
+					factor = 10
+					any_subject_country = {
+						liberty_desire = 60
+					}
+				}
+			}
+		}
+		megas_domestikos_interaction = {
+			gui = byzantine_government_bar_interaction
+			icon = GFX_byz_megas_domestikos_button
+			cost_type = megas_domestikos_power
+			cost = 25
+			trigger = {
+				mil_power = 25
+			}
+			
+			effect = {
+				add_mil_power = -25
+			}
+		}
+		megas_logariastes_interaction = {
+			gui = byzantine_government_bar_interaction
+			icon = GFX_byz_megas_logariastes_button
+			cost_type = megas_logariastes_power
+			cost = 25
+			trigger = {
+				adm_power = 25
+			}
+			
+			effect = {
+				add_adm_power = -25
+			}
+		}
+		megas_logothetes_interaction = {
+			gui = byzantine_government_bar_interaction
+			icon = GFX_byz_megas_logothetes_button
+			cost_type = megas_logothetes_power
+			cost = 25
+			trigger = {
+				dip_power = 25
+			}
+			
+			effect = {
+				add_dip_power = -25
 			}
 		}
 	}

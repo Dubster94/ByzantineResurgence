@@ -1,0 +1,96 @@
+spriteTypes = {
+	#### All of these is related to "game/common/government_mechanics"
+	
+	spriteType = {
+		name "GFX_alerticons_government_mechanics_byzantium"
+		texturefile = "gfx//interface//alterticons_government_mechanics_byzantium.dds"
+		noOfFrames = 1
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_pronoia_bg"
+		texturefile = "gfx/interface/government_mechanics/pronoia/pronoia_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_pronoia_raise_tagmata_button"
+		texturefile = "gfx/interface/government_mechanics/pronoia/pronoia_raise_tagmata_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_pronoia_demand_state_tax"
+		texturefile = "gfx/interface/government_mechanics/pronoia/pronoia_demand_state_tax_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_pronoia_lenient_state_tax"
+		texturefile = "gfx/interface/government_mechanics/pronoia/pronoia_lenient_state_tax_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_byz_militarization_bar_frame"
+		texturefile = "gfx/interface/government_mechanics/byzantine_militarization/byzantine_bar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	progressbartype = {
+		name = "GFX_byz_militarization_progress_bar"
+		color = { 1.0 0 0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/byzantine_militarization/byzantine_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/byzantine_militarization/byzantine_progress_bar_empty.dds"
+		size = { x = 267 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_byz_militarization_increase_button"
+		texturefile = "gfx/interface/government_mechanics/byzantine_militarization/byz_militarization_increase_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_byz_bureaucracy_bar_frame"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/byzantine_bureaucracy_bar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	progressbartype = {
+		name = "GFX_byz_bureaucracy_progress_bar"
+		color = { 1.0 0 0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/bureaucracy/byzantine_bureaucracy_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/bureaucracy/byzantine_bureaucracy_progress_bar_empty.dds"
+		size = { x = 52 y = 5 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_byz_megas_domestikos_button"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/byz_megas_domestikos_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_byz_megas_logariastes_button"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/byz_megas_logariastes_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_byz_megas_logothetes_button"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/byz_megas_logothetes_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}
