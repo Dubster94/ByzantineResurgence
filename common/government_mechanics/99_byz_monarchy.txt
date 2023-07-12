@@ -64,7 +64,7 @@ byzantine_bureaucracy_mechanic = {
 					manpower_recovery_speed = 0.4
 					general_cost = -0.2
 					mil_advisor_cost = -0.4
-					monthly_megas_domestikos_power = 0.5
+					monthly_byzantine_megas_domestikos_power = 0.5
 					yearly_corruption  = 0.3
 				}
 			}
@@ -84,7 +84,7 @@ byzantine_bureaucracy_mechanic = {
 					production_efficiency = 0.2
 					interest = -2
 					adm_advisor_cost = -0.4
-					monthly_megas_logariastes_power = 0.5
+					monthly_byzantine_megas_logariastes_power = 0.5
 					yearly_corruption  = 0.3
 				}
 			}
@@ -103,7 +103,7 @@ byzantine_bureaucracy_mechanic = {
 					improve_relation_modifier = 0.4
 					diplomatic_reputation = 4
 					dip_advisor_cost = -0.4
-					monthly_megas_logothetes_power = 0.5
+					monthly_byzantine_megas_logothetes_power = 0.5
 					yearly_corruption  = 0.3
 				}
 			}
