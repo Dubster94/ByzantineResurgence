@@ -1,0 +1,1114 @@
+#Written by Dub
+#Every single one of these missions that deals with multiple provinces uses province groups for designating provinces, because I keep repeating the same code every time. As such it's simpler to refer to them there instead.
+#If you want to check the province IDs, check provincegroup.txt in the map folder.
+
+byz_economic_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_refill_imperial_treasury = { #Refill Imperial Treasury
+		icon = mission_war_chest
+		position = 1 #1-1
+		required_missions = {}
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			treasury = 250
+			share_of_starting_income = 9 #Byzantium starts with 5.55 starting income. This should in theory require about 50 ducats/month.
+			NOT = { num_of_loans = 1 }
+			NOT = { inflation = 0.1 }
+		}
+		
+		effect = {
+			define_advisor = {
+				type = treasurer
+				skill = 3
+				discount = yes
+			}
+			define_advisor = {
+				type = master_of_mint
+				skill = 3
+				discount = yes
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	byz_revive_hyperpyron = { #New in BR 8.0
+		icon = mission_establish_mint_towns
+		position = 2 #1-2
+		required_missions = { byz_refill_imperial_treasury }
+		
+		provinces_to_highlight = {
+			trade_goods = gold
+			has_discovered = ROOT
+		}
+		
+		trigger = {
+			trade_goods_produced_amount = {
+				trade_goods = gold
+				amount = 2 #This corresponds to 20 production dev in gold provinces. Byzantium has 4 potential gold provinces to collect from, so this should be fairly easy.
+			}
+		}
+		
+		effect = {
+			add_years_of_income = 2.5
+			remove_country_modifier = byz_bad_economy
+			add_country_modifier = {
+				name = "byz_restored_hyperpyron"
+				duration = 9125
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_restore_crown_authority = { #New in BR 8.0
+		icon = mission_crown_authority
+		position = 3 #1-3
+		required_missions = { byz_revive_hyperpyron byz_state_trade_hegemon }
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			crown_land_share = 0.5
+			NOT = { average_home_autonomy = 0.1 }
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_crown_authority_restored"
+				duration = -1
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_economic_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	
+	byz_state_trade_hegemon = { #New in BR 8.0
+		icon = mission_dominate_home_trade_node
+		position = 1 #2-1
+		required_missions = {}
+		
+		provinces_to_highlight = {
+			OR = {
+				province_group = byz_no_latins_in_greece_provinces
+				province_group = byz_retake_greek_islands_provinces
+				province_group = byz_reconquer_west_anatolia_provinces
+				province_group = byz_reconquer_ottoman_greece_provinces
+				province_group = byz_deny_ottoman_access_provinces
+			}
+			owner = {
+				has_government_attribute = is_merchant_republic
+			}
+		}
+		
+		trigger = {
+			1320 = { #Constantinople
+				trade_share = 0.75
+			}
+			5493 = { #Aegean Sea
+				trade_share = 0.75
+			}
+			custom_trigger_tooltip = {
+				tooltip = byz_restore_trade_hegemon
+				byz_no_latins_in_greece_provinces = {
+					type = all
+					owner = {
+						NOT = { has_government_attribute = is_merchant_republic }
+					}
+				}
+				byz_retake_greek_islands_provinces = {
+					type = all
+					owner = {
+						NOT = { has_government_attribute = is_merchant_republic }
+					}
+				}
+				byz_reconquer_west_anatolia_provinces = {
+					type = all
+					owner = {
+						NOT = { has_government_attribute = is_merchant_republic }
+					}
+				}
+				byz_reconquer_ottoman_greece_provinces = {
+					type = all
+					owner = {
+						NOT = { has_government_attribute = is_merchant_republic }
+					}
+				}
+				byz_deny_ottoman_access_provinces = {
+					type = all
+					owner = {
+						NOT = { has_government_attribute = is_merchant_republic }
+					}
+				}
+			}
+			
+		}
+		
+		effect = {
+			add_mercantilism = 5
+			151 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			add_country_modifier = {
+				name = "byz_restored_trade_hegemon"
+				duration = 9125
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+}
+
+byz_reconquest_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_reconquer_ottoman_greece = { #Ottomans out of Greece
+		icon = mission_unite_home_region
+		position = 4 #2-4
+		required_missions = { byz_deny_ottoman_access }
+		
+		provinces_to_highlight = {
+			province_group = byz_reconquer_ottoman_greece_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				has_fulfiled_province_requirement_for_mission_trigger = {
+					tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+					provinces=byz_reconquer_ottoman_greece_provinces
+					owner_type=country_or_non_sovereign_subject_holds
+				}
+				custom_trigger_tooltip = {
+					tooltip = byz_turn_the_tide_tooltip
+					NOT = {
+						OR = {
+							byz_deny_ottoman_access_provinces = {
+								owned_by = TUR
+							}
+							byz_reconquer_ottoman_greece_provinces = {
+								owned_by = TUR
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byzantium_resurgent"
+				duration = 5475
+			}
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_reconquer_west_anatolia }
+			give_permaclaims_for_mission = { mission=byz_safeguard_balkan_border }
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	byz_reconquer_west_anatolia = { #Recover West Anatolia
+		icon = mission_invade_island
+		position = 6 #2-6
+		required_missions = { byz_reconquer_ottoman_greece }
+		
+		provinces_to_highlight = {
+			province_group = byz_reconquer_west_anatolia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_reconquer_west_anatolia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {			
+			#Dev bonuses
+			316 = { #Nicomedia
+				add_base_tax = 3
+				add_base_manpower = 3
+				if = {
+					limit = {
+						has_global_flag = byz_byzantine_silk_restored
+					}
+					change_trade_goods = silk
+				}
+			}
+			5157 = { #Nicaea
+				add_base_tax = 3
+				add_base_production = 3
+				if = {
+					limit = {
+						has_global_flag = byz_favored_glassmakers
+					}
+					add_base_production = 2
+					add_or_spawn_center_of_trade = { level = 2 }
+				}
+			}
+			random_owned_province = { #RandProv 1
+				limit = {
+					province_group = byz_reconquer_west_anatolia_provinces
+					NOT = { #To prevent picking Nicaea/Nicomedia
+						province_id = 316
+						province_id = 5157
+					}
+				}
+				add_base_tax = 1
+				add_base_manpower = 1
+				set_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+			}
+			random_owned_province = { #RandProv 2
+				limit = {
+					province_group = byz_reconquer_west_anatolia_provinces
+					NOT = { #To prevent picking Nicaea/Nicomedia
+						province_id = 316
+						province_id = 5157
+						has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+					}
+				}
+				add_base_tax = 1
+				add_base_manpower = 1
+			}
+			hidden_effect = { #Clearing the flag above.
+				every_owned_province = {
+					limit = {
+						has_province_flag = byz_prov_1_to_dev
+					}
+					clr_province_flag = byz_prov_1_to_dev 
+				}
+			}
+			
+			#Misc
+			create_general = { tradition = 80 }
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_reclaim_anatolia }
+			#CB
+			if = { #Trebizond
+				limit = {
+					does_tag_exist_and_have_less_than_provided_dev_trigger = {
+						tag=TRE
+						dev=200
+					}
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300 #25 years. I'm not sure if you can actually make it infinite.
+					target = TRE
+				}
+			}
+			if = { #Epirus
+				limit = {
+					does_tag_exist_and_have_less_than_provided_dev_trigger = {
+						tag=EPI
+						dev=200
+					}
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300 #25 years. I'm not sure if you can actually make it infinite.
+					target = EPI
+				}
+			}
+			if = { #Cappadocia
+				limit = {
+					does_tag_exist_and_have_less_than_provided_dev_trigger = {
+						tag=CAP
+						dev=200
+					}
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300 #25 years. I'm not sure if you can actually make it infinite.
+					target = CAP
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	byz_reclaim_anatolia = { #Anatolian Reclamation
+		icon = mission_empire
+		position = 9 #2-9
+		required_missions = { byz_reconquer_west_anatolia }
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_group = byz_reclaim_anatolia_provinces
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				owner = { #Added because people don't understand Aq Qoyunlu is Turkish culture.
+					primary_culture = turkish
+				}
+			}
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_reclaim_anatolia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+			custom_trigger_tooltip = {
+				tooltip = byz_no_turkish_country
+				NOT = {
+					any_country = {
+						primary_culture = turkish
+					}
+				}
+			}
+			
+			NOT = { exists = TRE }
+			NOT = { exists = EPI }
+			NOT = { exists = CAP }
+			has_reform = theme_system_reform
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byzantium_resurgent"
+				duration = 5475
+			}
+			
+			#Dev bonuses
+			326 = { #Ancyra
+				add_base_tax = 3
+				add_base_manpower = 3
+			}
+			151 = { #Constantinople
+				add_base_tax = 3
+				add_base_production = 3
+			}
+			random_owned_province = { #RandProv 1
+				limit = {
+					province_group = byz_reclaim_anatolia_provinces
+					NOT = { #To prevent picking Ancyra
+						province_id = 326
+					}
+				}
+				add_base_tax = 1
+				add_base_manpower = 1
+				set_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+			}
+			random_owned_province = { #RandProv 2
+				limit = {
+					province_group = byz_reclaim_anatolia_provinces
+					NOT = { #To prevent picking Ancyra
+						province_id = 326
+						has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+					}
+				}
+				add_base_tax = 1
+				add_base_manpower = 1
+				set_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+			}
+			random_owned_province = { #RandProv 3
+				limit = {
+					province_group = byz_reclaim_anatolia_provinces
+					NOT = { #To prevent picking Ancyra
+						province_id = 326
+						has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+					}
+				}
+				add_base_tax = 1
+				add_base_manpower = 1
+				set_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+			}
+			random_owned_province = { #RandProv 4
+				limit = {
+					province_group = byz_reclaim_anatolia_provinces
+					NOT = { #To prevent picking Ancyra
+						province_id = 326
+						has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+					}
+				}
+				add_base_tax = 1
+				add_base_manpower = 1
+				set_province_flag = byz_prov_4_to_dev #To prevent same province picked twice in practice
+			}
+			random_owned_province = { #RandProv 5
+				limit = {
+					province_group = byz_reclaim_anatolia_provinces
+					NOT = { #To prevent picking Ancyra
+						province_id = 326
+						has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_4_to_dev #To prevent same province picked twice in practice
+					}
+				}
+				add_base_tax = 1
+				add_base_manpower = 1
+			}
+			hidden_effect = { #Clearing the flags above.
+				every_owned_province = {
+					limit = {
+						has_province_flag = byz_prov_1_to_dev
+					}
+					clr_province_flag = byz_prov_1_to_dev 
+				}
+				every_owned_province = {
+					limit = {
+						has_province_flag = byz_prov_2_to_dev
+					}
+					clr_province_flag = byz_prov_2_to_dev 
+				}
+				every_owned_province = {
+					limit = {
+						has_province_flag = byz_prov_3_to_dev
+					}
+					clr_province_flag = byz_prov_3_to_dev 
+				}
+				every_owned_province = {
+					limit = {
+						has_province_flag = byz_prov_4_to_dev
+					}
+					clr_province_flag = byz_prov_4_to_dev 
+				}
+			}
+			
+			custom_tooltip = reclaim_anatolia_tooltip
+			hidden_effect = {
+				byz_reconquer_west_anatolia_provinces = {
+					add_province_modifier = {
+						name = "byz_resettlement_act"
+						duration = 18250
+					}
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	byz_turkic_question = { #The Turkic Question
+		icon = mission_non-western_cavalry_raid
+		position = 10 #2-10
+		required_missions = { byz_reclaim_anatolia }
+		
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					NOT = { accepted_culture = turkish }
+				}
+				region = anatolia_region
+			}
+			culture = turkish
+		}
+		
+		trigger = {
+			OR = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = byz_owns_all_turkish_provinces_tooltip
+						NOT = {
+							any_province = {
+								culture = turkish
+								NOT = { owned_by = ROOT }
+							}
+						}
+					}
+					accepted_culture = turkish
+				}
+				NOT = {
+					any_province = {
+						region = anatolia_region
+						culture = turkish
+					}
+				}
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						any_province = {
+							culture = turkish
+							NOT = { owned_by = ROOT }
+						}
+					}
+					accepted_culture = turkish
+				}
+				add_country_modifier = {
+					name = "byz_turkic_cavalry"
+					duration = 9125
+				}
+				custom_tooltip = br_turkic_cavalry_enabler_tt
+				set_country_flag = br_turkic_cavalry_enabled
+			}
+			else_if = {
+				limit = {
+					any_province = {
+						region = anatolia_region
+						culture = turkish
+					}
+				}
+				#Tooltip part.
+				custom_tooltip = turkic_question_tooltip_1
+				tooltip = {
+					add_country_modifier = {
+						name = "byz_turkic_cavalry"
+						duration = 9125
+					}
+					custom_tooltip = br_turkic_cavalry_enabler_tt
+				}
+				custom_tooltip = turkic_question_tooltip_2
+				add_country_modifier = {
+					name = "byz_rid_of_turkish_influence"
+					duration = 9125
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "byz_rid_of_turkish_influence"
+					duration = 9125
+				}
+			}
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_armenia_minor }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_anatolian_restoration = { #Anatolian Restoration
+		icon = mission_monarch_in_throne_room
+		position = 11 #2-11
+		required_missions = { byz_turkic_question }
+		
+		provinces_to_highlight = {
+			region = anatolia_region
+		}
+		
+		trigger = {
+			development_in_provinces = { #Anatolia starts with 702 dev. (Used to be 665 in BT 13 and 593 dev in BT 12 with Bugfixes) I think this is a fair adjustment.
+				value = 900 #750
+				region = anatolia_region
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = { has_dlc = "Mandate of Heaven"	}
+				add_splendor = 200
+			}
+			anatolia_region = {
+				add_province_modifier = {
+					name = "byz_anatolian_restoration"
+					duration = -1
+				}
+			}
+			319 = { #To prep it for coal!
+				add_base_tax = 7
+				add_base_production = 7
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_reconquest_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_turn_the_tide = { #Turn the Tide
+		icon = mission_constantinople
+		position = 1 #3-1
+		required_missions = {  } #None, first mission
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			OR = {
+				war_with = TUR
+				custom_trigger_tooltip = {
+					tooltip = byz_turn_the_tide_tooltip
+					NOT = {
+						OR = {
+							byz_deny_ottoman_access_provinces = {
+								owned_by = TUR
+							}
+							byz_reconquer_ottoman_greece_provinces = {
+								owned_by = TUR
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_last_stand"
+				duration = 3650
+			}
+			
+			#Claims
+			give_cores_for_mission = { mission=byz_deny_ottoman_access }
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_deny_ottoman_access = { #Deny Ottomans Access
+		icon = mission_pf_map_table
+		position = 2 #1-2
+		required_missions = { byz_turn_the_tide }
+		
+		provinces_to_highlight = {
+			province_group = byz_deny_ottoman_access_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				has_fulfiled_province_requirement_for_mission_trigger = {
+					tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+					provinces=byz_deny_ottoman_access_provinces
+					owner_type=country_or_non_sovereign_subject_holds
+				}
+				custom_trigger_tooltip = {
+					tooltip = byz_turn_the_tide_tooltip
+					NOT = {
+						OR = {
+							byz_deny_ottoman_access_provinces = {
+								owned_by = TUR
+							}
+							byz_reconquer_ottoman_greece_provinces = {
+								owned_by = TUR
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			4779 = { #Gallipoli
+				change_religion = ROOT
+				on_province_religion_converted_estate_privileges_effect = yes
+				change_culture = ROOT
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = "byz_resettle_gallipoli"
+					duration = 5475
+				}
+			}
+			
+			#Claims
+			give_cores_for_mission = { mission=byz_reconquer_ottoman_greece }
+			give_cores_for_mission = { mission=byz_no_latins_in_greece }
+			
+			#Misc
+			custom_tooltip = byz_reconquer_ottoman_greece_nationalism
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = balkan_region
+						owned_by = TUR
+					}
+					add_nationalism = 30 #This effect is apparently modified by country modifiers. Thus, expect Ottomans to get only 20 years of separatism since they start as Conqueror personality and have years of separatism from some Misc change somewhere I can't recall.
+				}
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	byz_safeguard_balkan_border = { #Safeguard Constantinople (& Thessalonica!)
+		icon = mission_assemble_an_army
+		position = 5 #3-5
+		required_missions = { byz_reconquer_ottoman_greece }
+		
+		provinces_to_highlight = {
+			province_group = byz_safeguard_balkan_border_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_safeguard_balkan_border_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {			
+			#Effects:
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				thrace_area = {
+					add_prosperity = 50
+				}
+				macedonia_area = {
+					add_prosperity = 50
+				}
+				eastern_macedonia_area = {
+					add_prosperity = 50
+				}
+			}
+			
+			#Claims & CBs
+			if = { #Bulgaria
+				limit = {
+					exists = BUL
+					BUL = {
+						NOT = { total_development = 200 }
+					}
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300 #25 years. I'm not sure if you can actually make it infinite.
+					target = BUL
+				}
+			}
+			give_permaclaims_for_mission = { mission=byz_subjugate_bulgaria }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_reconquest_3 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_no_latins_in_greece = { #No Latins in Greece
+		icon = mission_mediterranean_castle
+		position = 4 #4-4
+		required_missions = { byz_deny_ottoman_access }
+		
+		provinces_to_highlight = {
+			province_group = byz_no_latins_in_greece_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			NOT = { exists = ATH }
+			NOT = { exists = EPI }
+			NOT = { exists = LES }
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_no_latins_in_greece_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_latin_expulsion"
+				duration = 5475
+			}
+			if = { #If Genoa controls Chios & has capital in Italy still (Genoa)
+				limit = {
+					exists = GEN
+					GEN = { 
+						capital_scope = {
+							region = italy_region
+						}
+						owns = 2348 #Chios
+					}
+				}
+				country_event = { id = resurgent_BYZ.14 }
+			}
+			else = {
+				add_permanent_claim = 2348
+			}
+		
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_diplomacy = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_gather_alliances = { #Gather Alliances
+		icon = mission_alliances
+		position = 1 #5-1
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			OR = {
+				alliance_with = POL
+				alliance_with = HAB
+				alliance_with = HUN
+				num_of_allies = 3
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_light_in_the_darkness"
+				duration = 5475
+			}
+			add_dip_power = 100
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	byz_northern_chersonese = { #The Northern Chersonese
+		icon = mission_cossack_cavalry
+		position = 4 #5-4
+		required_missions = { byz_gather_alliances byz_deny_ottoman_access }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			any_country = {
+				culture_group = east_slavic
+				OR = {
+					alliance_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		effect = {
+			crimea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2447 = {
+				add_permanent_claim = ROOT
+			}
+			286 = {
+				add_claim = ROOT
+			}
+			add_dip_power = 100
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_navy_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_modernize_navy = {
+		icon = mission_high_seas_navy
+		required_missions = { byz_no_latins_in_greece }
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+			naval_forcelimit = 50
+			navy_tradition = 40
+			max_sailors = 5000
+		}
+		
+		effect = {
+			remove_country_modifier = byz_bad_navy
+		}
+	}
+}
+
+byz_navy_1 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_expand_naval_dominance = { #Restore the Navy
+		icon = mission_galleys_in_port
+		required_missions = { byz_no_latins_in_greece byz_northern_chersonese }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			num_of_galley = 50
+		}
+		
+		effect = {
+			if = {
+				limit = { 
+					has_dlc = "Golden Century" 
+					has_spare_flagship_capacity = yes 
+				}
+				151 = {
+					ROOT = {
+						create_flagship = {    
+							name = "Eleutherios"
+							type = galley
+						}
+					}
+				}
+			}
+			else = {
+				151 = {
+					ROOT = {
+						create_named_ship = {    
+							name = "Eleutherios"
+							type = galley
+						}
+					}
+				}
+			}
+			add_yearly_sailors = 1	
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_retake_greek_islands }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	
+
+	byz_retake_greek_islands = { #Retake Greek Islands!
+		icon = mission_galleys_in_port
+		position = 3
+		required_missions = { byz_modernize_navy byz_expand_naval_dominance }
+		
+		provinces_to_highlight = {
+			province_group = byz_retake_greek_islands_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			NOT = { exists = NAX }
+			NOT = { exists = CDA }
+			NOT = { exists = KNI }
+			NOT = { exists = CYP }
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_retake_greek_islands_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_imperial_navy"
+				duration = 7300
+			}
+			
+			148 = { #Thessalonica grows as an important port city and trade prospers as Byzantium controls the Aegean.
+				add_base_tax = 4
+				add_base_production = 4
+				add_base_manpower = 2
+			}
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_reconquer_albania }
+		}
+	}
+}

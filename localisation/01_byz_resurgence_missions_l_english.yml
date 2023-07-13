@@ -20,7 +20,7 @@
  byz_gather_alliances_title:0 "Gather Alliances"
  byz_gather_alliances_desc:0 "Our situation is a perilous one indeed. With the Turk standing on our doorstep, many of our brethren do naught but pray for a miracle. In these times, we need to look outwards, for there is no way we can stand alone in these times: We need a light, a beacon, in these dark times, one that can help us survive the Turkish onslaught that is to come. Let us therefore send our diplomats far and gather allies. We will need them now that end is nigh."
  byz_northern_chersonese_title:0 "The Northern Chersonese"
- byz_northern_chersonese_desc:0 "With the help of our allies we have survived the Turkish onslaught and retaken the Imperial co-capital of Thessalonica. But there is no time to rest or feel safe, for enemies are lurking at our every flank. While we have gained momentary allies of different faiths, there is no doubt that we need to find a strong ally among our brethren. There just so happens that during the times of the Kievan Rus, our envoys christanized the Slavic savages, pulling them closer to us. It would prove that in our absence, these Slavic peoples have now pushed back the Turkic Tatars up north and are establishing a new Empire of the Rus. It would prove vital that we send our envoys to the North in an attempt to establish long-lasting ties, providing us with an ally that shares our struggles, and that in the end can stand with us as the last bastions of Orthodoxy in the world."
+ byz_northern_chersonese_desc:0 "With the help of our allies we have survived the Turkish onslaught and pushed back the Turk over the straits of Gallipoli. But there is no time to rest or feel safe, for enemies are lurking at our every flank. While we have gained momentary allies of different faiths, there is no doubt that we need to find a strong ally among our brethren. There just so happens that during the times of the Kievan Rus, our envoys christanized the Slavic savages, pulling them closer to us. It would prove that in our absence, these Slavic peoples have now pushed back the Turkic Tatars up north and are establishing a new Empire of the Rus. It would prove vital that we send our envoys to the North in an attempt to establish long-lasting ties, providing us with an ally that shares our struggles, and that in the end can stand with us as the last bastions of Orthodoxy in the world."
  byz_unite_orthodox_churches_title:0 "Unite Orthodoxy"
  byz_unite_orthodox_churches_desc:0 "Ever since our power has waned in our home region, our northern brethren have fallen out of our sphere of influence. The self-proclaimed Tsardom of Russia have declared themselves the new Rome, the Bastion of Orthodoxy. This cannot do. We need to show them that the Ecumenical Patriarch still resides in Constantinople and that here is where he stays!"
  byz_refill_imperial_treasury_title:0 "Refill Imperial Treasury"
@@ -82,8 +82,8 @@
  byz_no_latins_in_greece_provinces: ""
  byz_no_latins_in_greece_title:0 "No Latins in Greece!"
  byz_no_latins_in_greece_desc:0 "The current state of Greece is disastrous - While we hold the despotate of Morea, and we have reclaimed parts of Greece held by the heathen Turk, the rest is still owned by despicable Latins. Not even the Despotate of Epirus can claim any of its heritage, now being ruled by the Latin Tocco. While we have managed to exact tribute over the lord of Athens and secured the loyalty of the Gattilusi in Lesbos through intermarriage, they are very autonomous. While beating back the Turk from Greece has been a very difficult task, we believe it just as necessary to rid these lands from current Latin influence, lest we risk the loss of Constantinople; not to the Turks, but to them."
- byz_expand_naval_dominance_title:0 "Naval Dominance"
- byz_expand_naval_dominance_desc:0 "Our shipbuilders have deserted us and defected to the Ottomans. Once upon a time, [Root.GetName] had a grand navy. We shall strive to establish a naval force that can mirror the glories of the past. Only then can we hope to compete with our rivals."
+ byz_expand_naval_dominance_title:0 "Restore the Navy"
+ byz_expand_naval_dominance_desc:0 "Once upon a time, [Root.GetName] had a grand navy. Those times are since long gone, however. Centuries ago, the navy was disbanded for fiscal reasons, forcing us to rely on foreign Italian ships. What shipbuilders that were left have since then deserted us and defected to the Ottomans. We must reverse this and establish a naval force that can mirror the glories of the past. Only then can we hope to rise once again!"
  byz_retake_greek_islands_claims:0 "Grants permanent claims on the provinces required for the mission §YProtect the Aegean!§!"
  byz_retake_greek_islands_provinces: ""
  byz_retake_greek_islands_title:0 "Protect the Aegean!"
@@ -460,8 +460,25 @@
  desc_byz_bad_economy:0 "Since the fall of Constantinople in the 4th Crusade, the Byzantine economy has had major issues. In no small part due to the destruction and plunder by the Crusaders, but also because of the lack of state income after the reconquest of the city. Since the Genoese and Italians were siphoning off the Byzantine trade, there was little way for the Emperors to generate revenue, and with an increased reliance on foreign military and navy, the Byzantine government lay heavily in debt that it was unable to pay off. Combined with the Bullion famine in Europe, not a single Hyperpyron, the Byzantine gold coin, was minted during the reign of the Palaiologan dynasty."
  byz_bad_military:0 "Lack of Levies"
  desc_byz_bad_military:0 "Due to the loss of the Anatolian and Greek heartlands, the Byzantines have not been able to field a proper army in a long time, the largest during the Palaiologan dynasty a mere 5000 men. This resulted in a large dependence on foreign mercenaries to do the Empire's bidding, culminating in further destruction as the Byzantine government was unable to pay them."
-  
+ 
+ #New BR 8.0 missions
+ byz_revive_hyperpyron_title:0 "Revive the Hyperpyron"
+ byz_revive_hyperpyron_desc:0 "The Empire has been through dire times. With massive debts that need repaying and a state treasury that only just has been restored, we must ensure that we establish a permanent currency. One that lies in the past is the Hyperpyron, a solid gold coin that has not been minted in [Root.GetName] for centuries, instead being replaced with silver coins of ever degrading quality. Let us instead secure a steady supply of gold, such that we once more may mint this shining coin of brilliance!"
+ byz_restore_crown_authority_title:0 "Restore Crown Authority"
+ byz_restore_crown_authority_desc:0 "With state financials being sorted, we must now move towards reasserting the authority of the [Root.Monarch.GetTitle] that has waned since several centuries past. Only then may we finally achieve what we seek, the rise like a Purple Phoenix!"
+ byz_restore_trade_hegemon_title:0 "Restore Trade Hegemon"
+ byz_restore_trade_hegemon_desc:0 "Once upon a time, the city of Constantinople flourished with traders and aristocrats, relishing in the vast luxuries that the city produced and displayed. Centuries have been hard, however, and the once monopolized trade has been seized by filthy Italian merchants. It is imperative we restore the influence over the trade that used to flow through the region centuries ago. Only then may the city be the glimmering pearl it once was."
+ 
  #Mission modifiers
+ byz_restored_hyperpyron:0 "Revived the Hyperpyron"
+ desc_byz_restored_hyperpyron:0 "The Hyperpyron, the gold coin that once proved the most valuable, has returned to the minting facilities of Constantinople. Finally, we can pay our armies!"
+ byz_crown_authority_restored:0 "Crown Authority Restored"
+ desc_byz_crown_authority_restored:0 "With most of the lands now belonging to the [Root.Monarch], we finally stand a chance against the many peoples that lust for the Imperial Crown."
+ 
+ 
+ 
+ 
+ 
  byz_last_stand:0 "Last Stand"
  desc_byz_last_stand:0 ""
  byz_resettle_gallipoli:0 "Resettle Gallipoli"

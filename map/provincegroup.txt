@@ -1462,6 +1462,7 @@ byz_no_latins_in_greece_provinces = { #Used in tre_restore_byzantine_empire_prov
 byz_retake_greek_islands_provinces = { #Used in tre_restore_byzantine_empire_provinces
 	164 320 2348 3195 4700 6096
 	163 3180 7106 7107
+	321 5139 5145 6076 6077 6078
 }
 
 byz_reconquer_albania_provinces = {

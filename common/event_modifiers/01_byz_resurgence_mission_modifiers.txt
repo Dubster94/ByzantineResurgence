@@ -18,6 +18,19 @@ byz_bad_military = {
 	manpower_recovery_speed = -0.1
 }
 
+#BR 8.0 Mission modifiers
+byz_restored_hyperpyron = {
+	land_maintenance_modifier = -0.20
+}
+
+byz_crown_authority_restored = { #Permanent
+	all_estate_influence_modifier = -0.1
+}
+
+byz_restored_trade_hegemon = {
+	trade_efficiency = 0.1
+}
+
 #Conquests
 byz_last_stand = {
 	land_morale = 0.1
