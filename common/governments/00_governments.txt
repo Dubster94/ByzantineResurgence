@@ -283,6 +283,8 @@ monarchy = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
+				#BR Added:
+				theme_system_reform
 			}
 		}
 		deliberative_assembly = {
@@ -332,8 +334,6 @@ monarchy = {
 				direct_royal_administration_reform
 				administration_of_the_parliament_reform
 				strengthened_parliament_reform
-				#BR Added:
-				theme_system_reform
 			}
 		}
 		economical_matters = {

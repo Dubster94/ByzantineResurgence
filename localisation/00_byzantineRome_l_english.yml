@@ -28,6 +28,7 @@
  
  #Greek Estates
  estate_dynatoi:0 "Dynatoi"
+ estate_penetes:0 "Penetes"
  estate_syntekhnioi:0 "Syntechnioi"
  estate_klerikoi:0 "Klerikoi"
  #Strategoi have been moved to a separate localisation file due to their extreme scope.
@@ -119,9 +120,9 @@
  reform_varangian_guard_title:0 "Reform the Varangian Guard"
  reform_varangian_guard_desc:0 "The Varangian Guard was an elite military unit of the Imperial Army who served as the personal bodyguards of the Emperor. The Varangian Guard consisted of mercenaries from the Scandinavian and Russian regions, as well as Englishmen in later eras, who were all known for their trememdous fighting power. If we can reform this mercenary unit, we will have a core of dedicated soldiers capable of destroying the enemy on the battlefield, as well as protecting our Emperor from political intrigues in Constantinople. Incidentally, it is also a good way for mercenaries to earn Byzantine citizenship, and bind them closer to the Empire."
  br_varangian_guard_enabled_tt:0 "Has reformed §YThe Varangian Guard§!"
- br_varangian_guard_elite:0 "Varangian Guard Elites"
- br_varangian_guard:0 "The Varangian Guard"
- br_varangian_guard_rowdy:0 "Varangian Guard Recruits"
+ br_varangian_guard_elite:0 "Elite Varangian Guard"
+ br_varangian_guard:0 "Varangian Guard"
+ br_varangian_guard_rowdy:0 "Varangian Guard Reserves"
  #desc_varangian_guard:0 "The Varangian Guard is an elite mercenary unit feared for their fighting strength in the Imperial Army."
  br_varangian_guard_enabled_tooltip:0 "Enables the Varangian Guard mercenary company"
  varangians:0 "Varangian Quarters"

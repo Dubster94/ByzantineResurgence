@@ -22,7 +22,7 @@ byz_economic_1 = {
 		
 		trigger = {
 			treasury = 250
-			share_of_starting_income = 9 #Byzantium starts with 5.55 starting income. This should in theory require about 50 ducats/month.
+			share_of_starting_income = 7 #Byzantium starts with 7.24 starting income. This should in theory require about 50 ducats/month.
 			NOT = { num_of_loans = 1 }
 			NOT = { inflation = 0.1 }
 		}
@@ -114,8 +114,8 @@ byz_economic_2 = {
 	
 	byz_state_trade_hegemon = { #New in BR 8.0
 		icon = mission_dominate_home_trade_node
-		position = 1 #2-1
-		required_missions = {}
+		position = 2 #2-2
+		required_missions = { byz_refill_imperial_treasury }
 		
 		provinces_to_highlight = {
 			OR = {
@@ -132,10 +132,16 @@ byz_economic_2 = {
 		
 		trigger = {
 			1320 = { #Constantinople
-				trade_share = 0.75
+				trade_share = {
+					country = ROOT
+					share = 0.75
+				}
 			}
 			5493 = { #Aegean Sea
-				trade_share = 0.75
+				trade_share = {
+					country = ROOT
+					share = 0.75
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = byz_restore_trade_hegemon
@@ -170,18 +176,17 @@ byz_economic_2 = {
 					}
 				}
 			}
-			
 		}
 		
 		effect = {
 			add_mercantilism = 5
-			151 = {
-				add_base_tax = 1
-				add_base_production = 1
-			}
 			add_country_modifier = {
 				name = "byz_restored_trade_hegemon"
 				duration = 9125
+			}
+			151 = {
+				add_base_tax = 1
+				add_base_production = 1
 			}
 		}
 		
@@ -190,6 +195,196 @@ byz_economic_2 = {
 		}
 	}
 
+}
+
+byz_religious_tree = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+
+	byz_question_of_schismatics = { #A Question of Schismatics
+		icon = mission_pf_cross
+		position = 5 #1-5
+		required_missions = { byz_reconquer_ottoman_greece }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_group = byz_deny_ottoman_access_provinces
+				province_group = byz_reconquer_ottoman_greece_provinces
+				province_group = byz_no_latins_in_greece_provinces
+			}
+			NOT = { religion = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				AND = {
+					religion = orthodox
+					custom_trigger_tooltip = {
+						tooltip = obj_convert_10_provinces_tooltip
+						check_variable = { which = num_converted_religion value = 10 }
+					}
+				}
+				AND = {
+					religion = catholic
+					151 = { religion = catholic }
+				}
+			}
+			temple = 15
+			custom_trigger_tooltip = {
+				tooltip = byz_question_of_schismatics_tooltip
+				NOT = {
+					OR = {
+						byz_deny_ottoman_access_provinces = {
+							NOT = { religion = ROOT }
+						}
+						byz_reconquer_ottoman_greece_provinces = {
+							NOT = { religion = ROOT }
+						}
+						byz_no_latins_in_greece_provinces = {
+							NOT = { religion = ROOT }
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			increase_religious_currency_effect = yes
+			if = {
+				limit = {
+					ruler_religion = catholic
+					religion = orthodox
+				}
+				set_ruler_religion = orthodox
+			}
+			if = {
+				limit = {
+					heir_religion = catholic
+					religion = orthodox
+				}
+				set_heir_religion = orthodox
+			}
+			if = {
+				limit = {
+					religion = orthodox
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+				add_estate_loyalty_modifier = {
+					estate = estate_church
+					desc = EST_REMAINED_ORTHODOX
+					loyalty = 10
+					duration = -1
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	convert_asia_minor = { #Directly taken from vanilla Byzantine Missions
+		icon = mission_hands_praying
+		required_missions = { byz_question_of_schismatics byz_reconquer_west_anatolia }
+		position = 7 #1-7
+		
+		provinces_to_highlight = {
+			province_group = byz_reconquer_west_anatolia_provinces
+			OR = {
+				NOT = { religion = ROOT }
+				NOT = { owned_by = ROOT }
+			}
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_reconquer_west_anatolia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=highlighted_provinces_converted_to_religion 
+				provinces=byz_reconquer_west_anatolia_provinces
+				owner_type=religion
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					religion = orthodox
+				}
+				add_country_modifier = {
+					name = "growth_of_the_orthodox_church"
+					duration = 7300
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+			}
+			increase_religious_currency_effect = yes
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	convert_anatolia = { #Convert Anatolia
+		icon = mission_religious
+		required_missions = { convert_asia_minor byz_reclaim_anatolia }
+		position = 11 #1-11
+		provinces_to_highlight = {
+			province_group = byz_reclaim_anatolia_provinces
+			OR = {
+				NOT = { religion = ROOT }
+				NOT = { owned_by = ROOT }
+			}
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_reclaim_anatolia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=highlighted_provinces_converted_to_religion 
+				provinces=byz_reclaim_anatolia_provinces
+				owner_type=religion
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					religion = orthodox
+				}
+				add_country_modifier = {
+					name = "growth_of_the_orthodox_church"
+					duration = 7300
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+			}
+			increase_religious_currency_effect = yes
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
 }
 
 byz_reconquest_2 = {
@@ -251,7 +446,7 @@ byz_reconquest_2 = {
 	}
 
 	byz_reconquer_west_anatolia = { #Recover West Anatolia
-		icon = mission_invade_island
+		icon = mission_theodosian_walls
 		position = 6 #2-6
 		required_missions = { byz_reconquer_ottoman_greece }
 		
@@ -378,7 +573,7 @@ byz_reconquest_2 = {
 
 	byz_reclaim_anatolia = { #Anatolian Reclamation
 		icon = mission_empire
-		position = 9 #2-9
+		position = 10 #2-10
 		required_missions = { byz_reconquer_west_anatolia }
 		
 		provinces_to_highlight = {
@@ -411,7 +606,6 @@ byz_reconquest_2 = {
 			NOT = { exists = TRE }
 			NOT = { exists = EPI }
 			NOT = { exists = CAP }
-			has_reform = theme_system_reform
 		}
 		
 		effect = {
@@ -529,6 +723,8 @@ byz_reconquest_2 = {
 					}
 				}
 			}
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_armenia_minor }
 		}
 	
 		ai_weight = {
@@ -538,7 +734,7 @@ byz_reconquest_2 = {
 
 	byz_turkic_question = { #The Turkic Question
 		icon = mission_non-western_cavalry_raid
-		position = 10 #2-10
+		position = 11 #2-11
 		required_missions = { byz_reclaim_anatolia }
 		
 		provinces_to_highlight = {
@@ -621,7 +817,6 @@ byz_reconquest_2 = {
 				}
 			}
 			#Claims
-			give_permaclaims_for_mission = { mission=byz_armenia_minor }
 		}
 	
 		ai_weight = {
@@ -631,7 +826,7 @@ byz_reconquest_2 = {
 	
 	byz_anatolian_restoration = { #Anatolian Restoration
 		icon = mission_monarch_in_throne_room
-		position = 11 #2-11
+		position = 12 #2-12
 		required_missions = { byz_turkic_question }
 		
 		provinces_to_highlight = {
@@ -722,7 +917,7 @@ byz_reconquest_1 = {
 	
 	byz_deny_ottoman_access = { #Deny Ottomans Access
 		icon = mission_pf_map_table
-		position = 2 #1-2
+		position = 3 #1-3
 		required_missions = { byz_turn_the_tide }
 		
 		provinces_to_highlight = {
@@ -994,8 +1189,8 @@ byz_navy_2 = {
 	}
 	has_country_shield = yes
 	
-	byz_modernize_navy = {
-		icon = mission_high_seas_navy
+	byz_modernize_navy = { #New in BR 8.0
+		icon = mission_establish_high_seas_navy
 		required_missions = { byz_no_latins_in_greece }
 		
 		provinces_to_highlight = {
@@ -1003,12 +1198,38 @@ byz_navy_2 = {
 		}
 		
 		trigger = {
-			naval_forcelimit = 50
+			shipyard = 7
+			dock = 7
 			navy_tradition = 40
 			max_sailors = 5000
+			if = { limit = { has_dlc = "Rule Brittania" }
+				has_naval_doctrine = any
+			}
 		}
 		
 		effect = {
+			151 = {
+				if = {
+					limit = { 
+						NOT = { has_building = naval_battery } 
+						NOT = { has_construction = building }
+					}
+					add_building_construction = {
+						building = naval_battery
+						speed = 0.25
+						cost = 0
+					}
+				}
+				else_if = {
+					limit = { 
+						NOT = { has_building = naval_battery } 
+					}
+					add_building = naval_battery
+				}
+				else = {
+					add_treasury = 200 #Fallback
+				}
+			}
 			remove_country_modifier = byz_bad_navy
 		}
 	}
@@ -1032,6 +1253,7 @@ byz_navy_1 = {
 		}
 		
 		trigger = {
+			naval_forcelimit = 70
 			num_of_galley = 50
 		}
 		
@@ -1071,10 +1293,8 @@ byz_navy_1 = {
 		}
 	}
 	
-	
-
 	byz_retake_greek_islands = { #Retake Greek Islands!
-		icon = mission_galleys_in_port
+		icon = mission_invade_island
 		position = 3
 		required_missions = { byz_modernize_navy byz_expand_naval_dominance }
 		
@@ -1112,3 +1332,695 @@ byz_navy_1 = {
 		}
 	}
 }
+
+byz_military_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+
+	byz_restore_imperial_army = { #The Imperial Army
+		icon = mission_pf_soldier
+		position = 6 #3-6
+		required_missions = { byz_safeguard_balkan_border }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			army_size = 100
+			army_tradition = 75
+			num_of_generals = 3
+		}
+		effect = {
+			add_legitimacy = 20
+			remove_country_modifier = byz_bad_military
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_varangian_guard = { #New in BR 8.0
+		icon = mission_varangians
+		position = 7 #3-7
+		required_missions = { byz_restore_imperial_army }
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = br_varangian_guard_enabled_tt
+				has_country_flag = br_varangian_guard_enabled
+			}
+			any_hired_mercenary_company = {
+				OR = {
+					template = br_varangian_guard
+					template = br_varangian_guard_elite
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" }
+				add_army_professionalism = 0.1
+			}
+			else = {
+				add_army_tradition = 25
+				add_mil_power = 100
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_admin = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_revoke_latifundia = { #New in BR 8.0
+		icon = mission_revoke_latifundia
+		position = 8 #4-8
+		required_missions = { byz_resurgent }
+		
+		provinces_to_highlight = {
+			
+		}
+		
+		trigger = {
+			NOT = { has_estate_privilege = estate_nobles_latifundia_kantakouzenos }
+			NOT = { has_estate_privilege = estate_nobles_latifundia_philantropenos }
+			NOT = { has_estate_privilege = estate_nobles_latifundia_metochites }
+			NOT = { has_estate_privilege = estate_nobles_latifundia_choumnos }
+			NOT = { has_estate_privilege = estate_nobles_latifundia_melissenos }
+			NOT = { has_estate_privilege = estate_nobles_latifundia_tornikes }
+		}
+		
+		effect = {
+			custom_tooltip = byzantine_pronoia_tooltip
+			set_country_flag = byz_restored_pronoia_mechanic
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	byz_imperial_great_projects = { #New in BR 8.0
+		icon = mission_parthenon
+		position = 10 #4-10
+		required_missions = { byz_revoke_latifundia byz_pandidakterion }
+		
+		provinces_to_highlight = {
+			has_great_project = {
+				type = any
+				tier = 0
+			}
+			NOT = {
+				has_great_project = {
+					type = any
+					tier = 3
+				}
+			}
+			owned_by = ROOT
+		}
+		
+		trigger = {
+			calc_true_if = {
+				desc = byz_imperial_great_projects_tooltip
+				all_owned_province = {
+					has_great_project = {
+						type = any
+						tier = 3
+					}
+				}
+				amount = 3
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_great_projects"
+				duration = 9125
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_resurgence = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_resurgent = { #New in BR 8.0
+		icon = mission_byzantine_resurgence
+		position = 7 #4-7
+		required_missions = { byz_reconquer_west_anatolia byz_restore_imperial_army byz_retake_greek_islands }
+		
+		provinces_to_highlight = {
+			
+		}
+		
+		trigger = {
+			mission_completed = byz_restore_crown_authority
+			if = { #Feature locked behind DLC.
+				limit = {
+					OR = {
+						has_dlc = "Rights of Man"
+						has_dlc = "Emperor"
+					}
+				}
+				is_great_power = yes
+			}
+		}
+		
+		effect = {
+			remove_government_reform = byzantine_autocracy_reform
+			add_government_reform = reformed_byzantine_monarchy_reform
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_bureaucracy = { #New in BR 8.0
+		icon = mission_byzantine_bureaucracy
+		position = 8 #4-8
+		required_missions = { byz_resurgent }
+		
+		provinces_to_highlight = {
+			
+		}
+		
+		trigger = {
+			reform_level = 3
+			OR = {
+				adm = 4
+				monthly_adm = 12 #Base is +3, so generating 8 adm from other sources should be possible, especially considering national foci exist.
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byzantine_bureaucracy_tooltip
+			set_country_flag = byz_restored_bureaucracy_mechanic
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+}
+
+byz_development = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_restore_city_of_cities = { #Restore the City of Cities
+		icon = mission_constantinople
+		position = 8 #5-8
+		required_missions = { byz_resurgent }
+		
+		provinces_to_highlight = {
+			province_id = 151
+		}
+		
+		trigger = {
+			151 = {
+				development = 75
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					OR = {
+						has_great_project = {
+							type = hagia_sophia
+							tier = 3
+						}
+						has_great_project = {
+							type = theodosian_walls
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			151 = {
+				area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = "growth_of_capital"
+						duration = 9125 #25 years
+					}
+				}
+				add_province_modifier = {
+					name = "byz_city_of_cities"
+					duration = -1
+				}
+				if = {
+					limit = {
+						has_great_project = {
+							type = hagia_sophia
+							tier = 3
+						}
+					}
+					ROOT = { 
+						change_adm = 1
+						change_dip = 1 
+					}
+					
+				}
+				if = {
+					limit = {
+						has_great_project = {
+							type = hagia_sophia
+							tier = 3
+						}
+					}
+					ROOT = { 
+						change_adm = 1
+						change_mil = 1 
+					}
+				}
+			}
+			add_prestige = 35
+			add_legitimacy = 35
+			if = {
+				limit = { has_dlc = "Mandate of Heaven"	}
+				add_splendor = 50
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_restore_imperial_co_capital = { #The Imperial Co-Capital
+		icon = mission_early_game_buildings
+		position = 9 #5-9
+		required_missions = { byz_restore_city_of_cities }
+		
+		provinces_to_highlight = {
+			province_id = 148
+		}
+		
+		trigger = {
+			148 = {
+				development = 30
+			}
+		}
+		
+		effect = {
+			148 = {
+				add_province_modifier = {
+					name = "byz_co_capital"
+					duration = -1
+				}
+			}
+			add_legitimacy = 20
+			if = {
+				limit = { has_dlc = "Mandate of Heaven"	}
+				add_splendor = 50
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_innovative_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_pandidakterion = { #New in BR 8.0
+		icon = mission_pandidakterion
+		position = 9 #4-9
+		required_missions = { byz_bureaucracy byz_restore_city_of_cities }
+		
+		provinces_to_highlight = {
+			province_id = 151
+			NOT = { has_building = university }
+		}
+		
+		trigger = {
+			151 = {
+				has_building = university
+			}
+			university = 4
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				change_innovativeness = 3
+			}
+			else = { #Fallback
+				add_adm_power = 25
+				add_dip_power = 25
+				add_mil_power = 25
+			}
+			change_adm = 1
+			change_dip = 1
+			
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_military_education = { #New in BR 8.0
+		icon = mission_skoutatoi
+		position = 10 #4-10
+		required_missions = { byz_pandidakterion }
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			OR = {
+				fortification_expert = 3
+				commandant = 3
+			}
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				army_professionalism = 0.4
+			}
+			else = {
+				army_tradition = 70
+			}
+		}
+		
+		effect = {
+			change_government_reform_progress = 40
+			add_country_modifier = {
+				name = "byz_military_education"
+				duration = -1
+			}
+			
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_innovative_1 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_new_renaissance = { #New in BR 8.0
+		icon = mission_byzantine_renaissance
+		position = 10 #5-10
+		required_missions = { byz_pandidakterion byz_restore_imperial_co_capital }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			OR = {
+				full_idea_group = innovative_ideas
+				philosopher = 3
+				natural_scientist = 3
+			}
+		}
+		
+		effect = {
+			change_government_reform_progress = 60
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_basileus_protostrategos = { #New in BR 8.0
+		icon = mission_basileus_protostrategos
+		position = 11 #5-11
+		required_missions = { byz_military_education byz_new_renaissance }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			is_monarch_leader = yes
+			OR = {
+				mil = 4
+				monthly_mil = 12 #Base is +3, so generating 8 mil from other sources should be possible, especially considering national foci exist.
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byzantine_militarization_tooltip
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				add_army_professionalism = 0.1
+			}
+			else = {
+				add_army_tradition = 10
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_armenia_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	
+	byz_rebuild_armenia = {
+		icon = mission_pf_soldier
+		position = 12 #4-12
+		required_missions = { byz_reconquer_lesser_armenia }
+		
+		provinces_to_highlight = {
+			culture = armenian
+		}
+		
+		trigger = {
+			accepted_culture = armenian
+			development_in_provinces = { #In 1444, 212 dev is Armenian culture. 300 is therefore reasonable considering you can culture-convert OR dev to reach this number.
+                value = 300
+                culture = armenian
+            }
+		}
+		
+		effect = {
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				custom_tooltip = byz_rebuild_armenia_effect_tooltip
+				hidden_effect = {
+					rum_area = {
+						add_prosperity = 50
+					}
+					hudavendigar_area = {
+						add_prosperity = 50
+					}
+					germiyan_area = {
+						add_prosperity = 50
+					}
+					aydin_area = {
+						add_prosperity = 50
+					}
+					ankara_area = {
+						add_prosperity = 50
+					}
+					kastamonu_area = {
+						add_prosperity = 50
+					}
+					karaman_area = {
+						add_prosperity = 50
+					}
+					cukurova_area = {
+						add_prosperity = 50
+					}
+					dulkadir_area = {
+						add_prosperity = 50
+					}
+					pontus_area = {
+						add_prosperity = 50
+					}
+					karasi_area = {
+						add_prosperity = 50
+					}
+					pamphylia_area = {
+						add_prosperity = 50
+					}
+					lydia_area = {
+						add_prosperity = 50
+					}
+				}
+			}
+			add_country_modifier = {
+				name = byz_armenian_auxillaries
+				duration = -1
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_armenia_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_reconquer_lesser_armenia = { #Protect Lesser Armenia!
+		icon = mission_mesopotamia
+		position = 10 #5-10
+		required_missions = { byz_reclaim_anatolia }
+		
+		provinces_to_highlight = {
+			province_group = byz_armenia_minor_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_armenia_minor_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = byz_armenian_ambition
+				duration = 5475
+			}
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_armenia_major }
+			give_permaclaims_for_mission = { mission=byz_subjugate_lazica }
+			
+			#Misc
+			add_accepted_culture = cilician
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_fortify_armenia = {
+		icon = mission_conquer_50_development
+		position = 11 #3-11
+		required_missions = { byz_reconquer_lesser_armenia }
+		
+		provinces_to_highlight = {
+			province_group = byz_armenia_minor_provinces
+			NOT = { fort_level = 2 }
+		}
+		
+		trigger = {
+			calc_true_if = {
+				desc = byz_rebuild_armenia_tooltip
+				amount = 4
+				all_owned_province = {
+					province_group = byz_armenia_minor_provinces
+					fort_level = 2
+				}
+			}
+		}
+		
+		effect = {
+			every_owned_province = {
+				limit = {
+					province_group = byz_armenia_minor_provinces
+					fort_level = 2
+				}
+				add_base_manpower = 2
+				add_province_modifier = {
+					name = local_fortress
+					duration = -1
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

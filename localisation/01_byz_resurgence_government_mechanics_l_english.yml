@@ -1,5 +1,6 @@
 ﻿l_english:
  #Bureaucracy
+ byzantine_bureaucracy_tooltip:0 "Enables the $YByzantine Bureaucracy$! Government mechanic for the $YReformed Byzantine Monarchy$!."
  megas_domestikos_interaction:0 "Placate the Megas Domestikos"
  megas_domestikos_interaction_desc:0 "The Megas Domestikos is one of the most influential peoples in the Empire, being the field commander of our armies. Placating them would ensure they remain loyal to us, while simultaneously reducing their standing in the Byzantine Bureaucracy."
  byzantine_megas_domestikos_power:0 "Megas Domestikos Influence"
@@ -11,6 +12,7 @@
  byzantine_megas_logothetes_interaction:0 "Megas Logothetes Influence"
  
  #Pronoia
+ byzantine_pronoia_tooltip:0 "Enables the $YPronoiar$! Government mechanic for the $YReformed Byzantine Monarchy$!."
  byzantine_pronoia_power:0 "Pronoiar Power"
  demand_state_tax:0 "Demand State Tax from Pronoiar"
  demand_state_tax_desc:0 "Collect additional tax from our taxable land grants"
@@ -22,6 +24,7 @@
  lenient_state_tax_mod_desc:0 "We have shown leniency towards our taxable land grants, making our subjects loyal and content"
  
  #Byzantine Militarization
+ byzantine_militarization_tooltip:0 "Enables the $YProtostrategos Prominence$! Government mechanic for the $YReformed Byzantine Monarchy$!."
  byzantine_militarization:0 "Protostrategos Prominence"
  
  

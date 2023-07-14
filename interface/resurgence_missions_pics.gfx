@@ -119,5 +119,37 @@ spriteTypes = {
 		name = "mission_sufi_orders"
 		texturefile = "gfx//interface//missions//mission_sufi_orders.dds"
 	}
+	spriteType = {
+		name = "mission_crown_authority"
+		texturefile = "gfx//interface//missions//mission_crown_authority.dds"
+	}
+	spriteType = {
+		name = "mission_byzantine_resurgence"
+		texturefile = "gfx//interface//missions//mission_byzantine_resurgence.dds"
+	}
+	spriteType = {
+		name = "mission_byzantine_bureaucracy"
+		texturefile = "gfx//interface//missions//mission_byzantine_bureaucracy.dds"
+	}
+	spriteType = {
+		name = "mission_revoke_latifundia"
+		texturefile = "gfx//interface//missions//mission_revoke_latifundia.dds"
+	}
+	spriteType = {
+		name = "mission_pandidakterion"
+		texturefile = "gfx//interface//missions//mission_pandidakterion.dds"
+	}
+	spriteType = {
+		name = "mission_byzantine_renaissance"
+		texturefile = "gfx//interface//missions//mission_byzantine_renaissance.dds"
+	}
+	spriteType = {
+		name = "mission_basileus_protostrategos"
+		texturefile = "gfx//interface//missions//mission_basileus_protostrategos.dds"
+	}
+	spriteType = {
+		name = "mission_theodosian_walls"
+		texturefile = "gfx//interface//missions//mission_theodosian_walls.dds"
+	}
 }
 

@@ -73,6 +73,7 @@
  #Byz Religious Tree chain
  byz_question_of_schismatics_title:0 "A Question of Schismatics"
  byz_question_of_schismatics_desc:0 "With the Council of Florence culminating in the conversion of John VIII and the rest of the Palaiologos except Demetrios, the religious question of the Empire is a difficult one - what John VIII and the now dead Patriarch Joseph II did was not something that the [Root.GetAdjective] monks would abide to, not only due to the separation of power in the Orthodox Church, but also due to principles. This created a divide of unionists and anti-unionists which up until this point has not been solved and causes great turmoil among our populace. We need to pick a side and then \"convince\" the other that our faith is the future of [Root.GetName]!"
+ byz_question_of_schismatics_tooltip:0 "None of the highlighted provinces are following a heretic or heathen religion."
  EST_REMAINED_ORTHODOX:0 "Remained loyal to Orthodoxy: $VAL$"
  convert_anatolia_title:0 "Convert Anatolia"
  convert_anatolia_desc:0 "The people of Anatolia were once proud followers of Christianity, however have since the conquests by the Turk been forced into heathenism. We need to undo this and bring them back to the true faith if these lands are to remain in our hands!"
@@ -466,19 +467,44 @@
  byz_revive_hyperpyron_desc:0 "The Empire has been through dire times. With massive debts that need repaying and a state treasury that only just has been restored, we must ensure that we establish a permanent currency. One that lies in the past is the Hyperpyron, a solid gold coin that has not been minted in [Root.GetName] for centuries, instead being replaced with silver coins of ever degrading quality. Let us instead secure a steady supply of gold, such that we once more may mint this shining coin of brilliance!"
  byz_restore_crown_authority_title:0 "Restore Crown Authority"
  byz_restore_crown_authority_desc:0 "With state financials being sorted, we must now move towards reasserting the authority of the [Root.Monarch.GetTitle] that has waned since several centuries past. Only then may we finally achieve what we seek, the rise like a Purple Phoenix!"
- byz_restore_trade_hegemon_title:0 "Restore Trade Hegemon"
- byz_restore_trade_hegemon_desc:0 "Once upon a time, the city of Constantinople flourished with traders and aristocrats, relishing in the vast luxuries that the city produced and displayed. Centuries have been hard, however, and the once monopolized trade has been seized by filthy Italian merchants. It is imperative we restore the influence over the trade that used to flow through the region centuries ago. Only then may the city be the glimmering pearl it once was."
+ byz_state_trade_hegemon_title:0 "State Trade Hegemon"
+ byz_state_trade_hegemon_desc:0 "Once upon a time, the city of Constantinople flourished with traders and aristocrats, relishing in the vast luxuries that the city produced and displayed. Centuries have been hard, however, and the once monopolized trade has been seized by filthy Italian merchants. It is imperative we restore the influence over the trade that used to flow through the region centuries ago. Only then may the city be the glimmering pearl it once was."
+ byz_modernize_navy_title:0 "Modernize the Navy"
+ byz_modernize_navy_desc:0 "While any country can construct more ships, having a skillful navy is much more than just boats. It needs skillful dockyard workers, hardy seamen and naval tradition. All of which [Root.GetName] has lost over the centuries. We must strive towards restoring the glory of the Byzantine navy at all costs, for once more shall the [Root.GetAdjective] Imperial Navy be a force to be reckoned with!"
+ byz_varangian_guard_title:0 "The Varangian Guard"
+ byz_varangian_guard_desc:0 "With the [Root.GetAdjective] Army restored, we must now look towards creating an elite palace guard such that no unruly subject feels the need to topple the government. The Varangian Guard that exists in a rump state in our current Empire might just fit our purposes..."
+ byz_resurgent_title:0 "The Purple Phoenix"
+ byz_resurgent_desc:0 "With the Imperial Army restored and Constantinople secure, we have managed to turn the tide and rise from the ashes like a Purple Phoenix. It is finally time to proclaim Byzantium reborn from the ashes!"
+ byz_revoke_latifundia_title:0 "Revoke the Latifundia!"
+ byz_revoke_latifundia_desc:0 "Over the centuries, certain prominent families have managed to secure lands within the Empire, leaving the Crown weaker in the process. Eons ago, any land within the Empire belonged to the Emperor only, and was handed out to the lesser nobility known as Penetes as part of the Pronoiar or Theme System. As a result, the Dynatoi have grown very powerful, something we need to adress now that we have risen from the ashes."
+ byz_bureaucracy_title:0 "Byzantine Bureaucracy"
+ byz_bureaucracy_desc:0 "The Byzantine Empire has always been known for its many offices and therefore titles, all serving under a single person; the Basileus. These offices have changed, morphed and waned over time, however their mere existence is warranted for a large Empire such as ours. With our recent resurgence, we deem it necessary we reform the bureaucracy and expand it, to meet the needs of the expanding bureaucracy."
+ byz_pandidakterion_title:0 "Pandidakterion"
+ byz_pandidakterion_desc:0 "The Pandidakterion, or the University of the Palace Hall of Magnaura, is an education institution that has been on the decline ever since the Latin conquest of Constantinople in 1204. With the restoration of Constantinople achieved and our Empire and Bureaucracy ever expanding, it is only natural for a state such as ours that we restore the Pandidakterion, and the remainder of educational institutions in our Empire, as well."
+ byz_imperial_great_projects_title:0 "Imperial Great Projects"
+ byz_imperial_great_projects_desc:0 "A restored Empire centered on the city of Cities, Constantinople, needs not only heed the wishes of the Capital. Truly, every part of our country needs to bask in the glory that is our Empire. To let them, we must construct magnificent monuments to signify the power of the [Root.Monarch.GetTitle]!"
+ byz_imperial_great_projects_tooltip:0 " provinces with monuments of at least $YMagnificent$! level"
+ byz_military_education_title:0 "Military Education"
+ byz_military_education_desc:0 "What with the restoration of the Pandidakterion and our educational system, it would only be natural that we let these institutions teach military tactics as well. To do so however, we need to find the right source of knowledge first, as well as finding suitable students for our first programmes."
+ byz_new_renaissance_title:0 "A New Renaissance"
+ byz_new_renaissance_desc:0 "With the restoration of both capitals and our educational system, the [Root.GetAdjective] Empire is about to flourish in a grand new Renaissance. It only needs a small push to get going. We shall provide it, for it can only lead to good!"
+ byz_basileus_protostrategos_title:0 "Basileus Protostrategos"
+ byz_basileus_protostrategos_desc:0 "In our grand Empire, the Emperor shall not only be the king of kings - he shall also be the general of generals. Our Emperor shall ride forth into battle with his men, greatly bolstering our armies' fighting strength."
  
  #Mission modifiers
+ #New in BR 8.0
  byz_restored_hyperpyron:0 "Revived the Hyperpyron"
  desc_byz_restored_hyperpyron:0 "The Hyperpyron, the gold coin that once proved the most valuable, has returned to the minting facilities of Constantinople. Finally, we can pay our armies!"
  byz_crown_authority_restored:0 "Crown Authority Restored"
  desc_byz_crown_authority_restored:0 "With most of the lands now belonging to the [Root.Monarch], we finally stand a chance against the many peoples that lust for the Imperial Crown."
+ byz_restored_trade_hegemon:0 "Restored Trade Hegemon"
+ desc_byz_restored_trade_hegemon:0 "Trade has finally returned to Constantinople, but this time, it's under our control!"
+ byz_great_projects:0 "Great Monuments of Byzantium"
+ desc_byz_great_projects:0 "We have restored many monuments in many parts of our Empire, resulting in our subjects being more willing to fight for our country."
+ byz_military_education:0 "Military Education"
+ desc_byz_military_education:0 "Our State Universities provide programmes for educating our army commanders, making them more efficient in the field."
  
- 
- 
- 
- 
+ #From prior mission tree. Some have been cut.
  byz_last_stand:0 "Last Stand"
  desc_byz_last_stand:0 ""
  byz_resettle_gallipoli:0 "Resettle Gallipoli"

@@ -34,13 +34,13 @@ Features:
 					-This reform also spawns pretender rebels if the new ruler legitimacy is low, akin to what vanilla Purple Phoenix does.
 				-Upon completing the mission "Byzantine Resurgence" you are awarded with a better T1 government reform, and you can start accumulating unique government mechanics.
 					-This reformed Byzantine monarchy has the following unlockable government mechanics:
-						-Pronoiar: Upon completing "Revoke the Latifundia!", Byzantium gets three incredibly immersive buttons to press, similar to the old Iqta system in previous patches. These however give bonuses not based on subjects, but on own state development.
+						-Pronoiar: Upon completing "Revoke the Latifundia!", Byzantium gets three incredibly immersive buttons to press, similar to the old Iqta system in previous patches. These however give bonuses not based on subjects, but on own state development. As a sidenote, completing this mission also renames the nobles from Dynatoi to Penetes.
 						-Militarization of State: Upon completing "Basileus Protostrategos", the Byzantines get access to Protostrategos Prominence. This mechanic resets upon monarch death, and forces your ruler as a general. In order to raise Protostrategos Prominence, you need to win battles with the monarch as the army leader. Doing so nets bonuses to army drilling, as well as Strategoi loyalty.
 						-Byzantine Bureaucracy: Upon completing "Byzantine Bureacucracy", Byzantium gets access to three ever-increasing government powers that grant scaling bonuses to the state. However, these government powers also severely increase corruption in the country, and they have several bad events tied to them if the power is high. To reduce it, you pay monarch points in the relevant category.
 					-As a sidenote, with regards to these government mechanics, I could not get the interface to align more than 3 icons per line, causing the interface to take up much more space than required. This appears to be a hardcoded limit that other modders have stumbled upon, so there is little I can do to fix the necessary scrolling to see all buttons. A bandaid would be to adjust the entire interface, but that is not something I am willing to do at the moment.
 -The Latin Imperial mission trees have been cut as a result of vanilla adding the Latin Empire, while me simultaneously not having updated them for a while, simultaneously to them not being particularly impressive.
 	-In general, Latin Imperial content has been put on hold for a while.
-
+-The Varangian Guards mercenary companies can now drill by default.
 		
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.

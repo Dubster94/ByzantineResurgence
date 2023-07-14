@@ -1,0 +1,71 @@
+#Testing to see whether I can inject reforms through a separate file and have the game read these overwrites.
+byzantine_autocracy_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = byzantine_autocracy_reform
+			have_had_reform = byzantine_autocracy_reform
+		}
+	}
+	modifiers = {
+		max_absolutism = -25
+		prestige = 0.5
+	}
+	
+	#custom_attributes = {
+	#	civil_war_on_every_new_ruler = yes
+	#}
+}
+
+reformed_byzantine_monarchy_reform = {
+	icon = "byzantine_rule"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = reformed_byzantine_monarchy_reform
+			have_had_reform = reformed_byzantine_monarchy_reform
+		}
+	}
+	nation_designer_cost = 30
+	valid_for_nation_designer = yes
+	modifiers = {
+		global_autonomy = -0.05
+		#culture_conversion_cost = -0.2 #BR Cut because Byzantium gets this in their idea set. It gets other modifiers in the below stuff anyway.
+		years_of_nationalism = -5
+		max_possible_parliament_seats = 8
+	}
+	
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	
+	conditional = {
+		allow = { has_country_flag = byz_restored_bureaucracy_mechanic }
+		government_abilities = {
+			byzantine_bureaucracy_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_country_flag = byz_restored_pronoia_mechanic }
+		government_abilities = {
+			byzantine_pronoia_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_country_flag = byz_restored_militarization_mechanic }
+		government_abilities = {
+			byzantine_militarization_mechanic
+		}
+		mechanic_forces_ruler_general = yes
+	}
+}

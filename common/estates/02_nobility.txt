@@ -218,6 +218,14 @@ estate_nobles =
 		desc = estate_dynatoi
 		trigger = {
 			tag = BYZ
+			NOT = { mission_completed = byz_revoke_latifundia }
+		}
+	}
+	custom_name = {
+		desc = estate_penetes
+		trigger = {
+			tag = BYZ
+			mission_completed = byz_revoke_latifundia
 		}
 	}
 	#Byz_Resurgence added: Armenians referred to their landed aristocracy as Nakharars.

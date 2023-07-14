@@ -31,6 +31,16 @@ byz_restored_trade_hegemon = {
 	trade_efficiency = 0.1
 }
 
+byz_great_projects = {
+	land_morale = 0.1
+	naval_morale = 0.1
+}
+
+byz_military_education = { #Permanent
+	leader_land_fire = 1
+	leader_naval_fire = 1
+}
+
 #Conquests
 byz_last_stand = {
 	land_morale = 0.1

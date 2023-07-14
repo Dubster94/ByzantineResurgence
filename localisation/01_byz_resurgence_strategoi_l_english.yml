@@ -289,7 +289,7 @@
  strategoi_estate_events.13.a:0 "Side with the [Root.GetGeneralsName]"
  strategoi_estate_events.13.b:0 "Side with the $ESTATE_NOBLES$"
  EST_VAL_SIDED_WITH_THE_STRATEGOI:0 "Sided with the Strategoi: §Y$VAL$%§!"
- EST_VAL_SIDED_WITH_THE_NOBLES:0 "Sided with the Dynatoi: §Y$VAL$%§!"
+ EST_VAL_SIDED_WITH_THE_NOBLES:0 "Sided with the $ESTATE_NOBLES$: §Y$VAL$%§!"
  
  strategoi_estate_events.14.t:0 "The inclusion of the $ESTATE_BURGHERS$ in the Themata"
  strategoi_estate_events.14.d:0 "The $ESTATE_BURGHERS$ have come before you to tell of how the [Root.GetGeneralsName] are currently attempting to draft them into the armies as if there were mere peasantfolk. While the idea that any citizen shall serve its nation is sound, perhaps the $ESTATE_BURGHERS$ may be better serving as merchants rather than cannon fodder. Either way, they expect the [Root.Monarch.GetTitle] to take a stance in the issue at hand."
