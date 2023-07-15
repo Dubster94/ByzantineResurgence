@@ -438,6 +438,7 @@ on_monarch_death = {
 		limit = {
 			has_global_flag = byz_resurgence_loaded
 			has_government_attribute = forces_ruler_general
+			has_country_flag = byz_restored_militarization_mechanic
 			is_monarch_leader = no
 		}
 		if = {

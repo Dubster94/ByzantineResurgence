@@ -315,7 +315,7 @@ byz_resurging_diplomacy = {
 	}
 }
 
-byz_economic_1 = {
+byz_economic_1 = { #COPIED OVER
 	slot = 5
 	generic = no
 	ai = yes
@@ -1191,7 +1191,7 @@ byz_resurges = { #COPIED OVER
 	}
 }
 
-byz_religious_tree = {
+byz_religious_tree = { #COPIED OVER
 	slot = 2
 	generic = no
 	ai = yes
@@ -1359,7 +1359,7 @@ byz_religious_tree = {
 	}
 }
 
-byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
+byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = { #COPIED OVER
 	slot = 4
 	generic = no
 	ai = yes
@@ -1551,7 +1551,7 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 	}
 }
 
-byz_all_your_balkan_base_are_belong_to_us = {
+byz_all_your_balkan_base_are_belong_to_us = { #COPIED OVER
 	slot = 5
 	generic = no
 	ai = yes
@@ -1806,7 +1806,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 	}
 }
 
-byz_roman_italy = {
+byz_roman_italy = { #COPIED OVER
 	slot = 3
 	generic = no
 	ai = yes
@@ -2134,7 +2134,7 @@ byz_italian_islands = {
 	
 }
 
-byz_rebuild_armenian_frontier_1 = {
+byz_rebuild_armenian_frontier_1 = { #COPIED OVER
 	slot = 2
 	generic = no
 	ai = yes
@@ -2218,7 +2218,7 @@ byz_rebuild_armenian_frontier_1 = {
 	}
 }
 
-byz_rebuild_armenian_frontier_2 = {
+byz_rebuild_armenian_frontier_2 = { #COPIED OVER
 	slot = 3
 	generic = no
 	ai = yes
@@ -2268,7 +2268,7 @@ byz_rebuild_armenian_frontier_2 = {
 	}
 }
 
-byz_armenia_into_mesopotamia = {
+byz_armenia_into_mesopotamia = { #COPIED OVER
 	slot = 5
 	generic = no
 	ai = yes
@@ -2554,7 +2554,7 @@ byz_armenia_into_mesopotamia = {
 	
 }
 
-byz_georgia_mission = {
+byz_georgia_mission = { #COPIED OVER
 	slot = 4
 	generic = no
 	ai = yes
@@ -2598,7 +2598,7 @@ byz_georgia_mission = {
 
 }
 
-byz_crusade_1_plus_egypt = {
+byz_crusade_1_plus_egypt = { #COPIED OVER
 	slot = 1
 	generic = no
 	ai = yes

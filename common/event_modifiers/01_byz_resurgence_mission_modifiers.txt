@@ -41,6 +41,10 @@ byz_military_education = { #Permanent
 	leader_naval_fire = 1
 }
 
+byz_naval_theme = { #Permanent province modifier
+	local_sailors_modifier = 1
+}
+
 #Conquests
 byz_last_stand = {
 	land_morale = 0.1

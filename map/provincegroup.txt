@@ -84,7 +84,14 @@ austrian_defeat_the_serbs_provinces = {
 }
 
 austrian_take_the_bishoprics_provinces = {
-	8216 8475 4759 8480 110 8446 1868 4709 8474 4708 7760 8457 8471 76 8462 8463 8464 8465
+	8483 73 8482 4758 3048 110 1768  	#Tirol area     
+	8481 4759 128 8480     				#Carinthia area
+	8462 8463 8465 76 8464     			#Salzburg area
+	8475 8216							#Salzburg exclaves
+	8469								#Eferding
+	4751 7762 7760  					#Cilli provinces      
+	4752 4738          					#Coastal minors
+	8471 8474							#Austria proper minors
 }
 
 austrian_bayern_provinces = {
@@ -1625,7 +1632,7 @@ byz_lombardy_provinces = {
 }
 
 #byz_mesopotamia chain
-byz_armenia_minor_provinces = { #Used in tre_conquer_lesser_armenia_provinces
+byz_reconquer_lesser_armenia_provinces = { #Used in tre_conquer_lesser_armenia_provinces
 	331 2305 5151 5158 6106 6149
 	2303 6101
 	3254 4302 6109 6110
@@ -1634,7 +1641,7 @@ byz_armenia_minor_provinces = { #Used in tre_conquer_lesser_armenia_provinces
 	4303	
 }
 
-byz_armenia_major_provinces = {
+byz_conquer_armenia_major_provinces = {
 	423 2203 3250 3251 4301 
 	419 2202 2204 2205 3253 3256 
 	420 421 424 4299 4305 4340 

@@ -151,5 +151,25 @@ spriteTypes = {
 		name = "mission_theodosian_walls"
 		texturefile = "gfx//interface//missions//mission_theodosian_walls.dds"
 	}
+	spriteType = {
+		name = "mission_dyrrachium"
+		texturefile = "gfx//interface//missions//mission_dyrrachium.dds"
+	}
+	spriteType = {
+		name = "mission_belgrade"
+		texturefile = "gfx//interface//missions//mission_belgrade.dds"
+	}
+	spriteType = {
+		name = "mission_manasija_monastery"
+		texturefile = "gfx//interface//missions//mission_manasija_monastery.dds"
+	}
+	spriteType = {
+		name = "mission_frangokastello"
+		texturefile = "gfx//interface//missions//mission_frangokastello.dds"
+	}
+	spriteType = {
+		name = "mission_balkan_hegemon"
+		texturefile = "gfx//interface//missions//mission_balkan_hegemon.dds"
+	}
 }
 

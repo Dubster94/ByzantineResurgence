@@ -42,93 +42,95 @@ exarchate_reform = {
 	}
 }
 
-pronoiar_reform = { #Needs updating or just downright removal
-	icon = "basileus"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			#Byzantine tags
-			tag = BYZ
-			tag = TRE
-			tag = CAP
-			#Exarch tags
-			tag = KCD
-			tag = HSP
-			tag = GLT
-			tag = ATL
-			tag = PSI
-			tag = RVN
-			tag = ABN
-			tag = AEG
-		}
-	}
+#Cut in BR 8.0
+# pronoiar_reform = {
+	# icon = "basileus"
+	# allow_normal_conversion = yes
+	# potential = {
+		# OR = {
+			# #Byzantine tags
+			# tag = BYZ
+			# tag = TRE
+			# tag = CAP
+			# #Exarch tags
+			# tag = KCD
+			# tag = HSP
+			# tag = GLT
+			# tag = ATL
+			# tag = PSI
+			# tag = RVN
+			# tag = ABN
+			# tag = AEG
+		# }
+	# }
 	
-	modifiers = {
-		global_autonomy = -0.1
-		nobles_influence_modifier = -0.1
-		nobles_loyalty_modifier = -0.1
+	# modifiers = {
+		# global_autonomy = -0.1
+		# nobles_influence_modifier = -0.1
+		# nobles_loyalty_modifier = -0.1
 		
-	}
+	# }
 
-	conditional = {
-		#allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			byzantine_bureaucracy_mechanic
-		}
-	}
-	conditional = {
-		#allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			byzantine_pronoia_mechanic
-		}
-	}
-	conditional = {
-		#allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			byzantine_militarization_mechanic
-		}
-	}
+	# conditional = {
+		# #allow = { has_dlc = "Cradle of Civilization" }
+		# government_abilities = {
+			# byzantine_bureaucracy_mechanic
+		# }
+	# }
+	# conditional = {
+		# #allow = { has_dlc = "Cradle of Civilization" }
+		# government_abilities = {
+			# byzantine_pronoia_mechanic
+		# }
+	# }
+	# conditional = {
+		# #allow = { has_dlc = "Cradle of Civilization" }
+		# government_abilities = {
+			# byzantine_militarization_mechanic
+		# }
+	# }
 	
-	ai = {
-		factor = 100
-	}
-}
+	# ai = {
+		# factor = 100
+	# }
+# }
 
-roman_bureaucracy_reform = { #Needs updating or just downright removal
-	icon = "byzantine_court"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			#Byzantine tags
-			tag = BYZ
-			tag = TRE
-			tag = CAP
-			#Exarch tags
-			tag = KCD
-			tag = HSP
-			tag = GLT
-			tag = ATL
-			tag = PSI
-			tag = RVN
-			tag = ABN
-			tag = AEG
-		}
-	}
+#Cut in BR 8.0
+# roman_bureaucracy_reform = { #Needs updating or just downright removal
+	# icon = "byzantine_court"
+	# allow_normal_conversion = yes
+	# potential = {
+		# OR = {
+			# #Byzantine tags
+			# tag = BYZ
+			# tag = TRE
+			# tag = CAP
+			# #Exarch tags
+			# tag = KCD
+			# tag = HSP
+			# tag = GLT
+			# tag = ATL
+			# tag = PSI
+			# tag = RVN
+			# tag = ABN
+			# tag = AEG
+		# }
+	# }
 	
-	modifiers = {
-		global_tax_modifier = 0.10
-		global_trade_goods_size_modifier = 0.10
-	}
+	# modifiers = {
+		# global_tax_modifier = 0.10
+		# global_trade_goods_size_modifier = 0.10
+	# }
 	
-	factions = {
-		logothete_military
-		logothete_postal
-		logothete_general
-	}
-	ai = {
-		factor = 100
-	}
-}
+	# factions = {
+		# logothete_military
+		# logothete_postal
+		# logothete_general
+	# }
+	# ai = {
+		# factor = 100
+	# }
+# }
 
 theme_system_reform = {
 	icon = "soldiers_3"
@@ -152,11 +154,16 @@ theme_system_reform = {
 		}
 	}
 	trigger = {
-		#has_reform = roman_bureaucracy_reform
+		if = {
+			limit = {
+				tag = BYZ
+			}
+			completed_mission = byz_theme_system
+		}
 	}
 	
 	modifiers = {
-		land_forcelimit_modifier = 0.25
+		land_forcelimit_modifier = 0.2
 		nobles_influence_modifier = -0.1
 	}
 	#On taken effect, on removed effect, deal with Strategoi land share and all.
@@ -184,55 +191,56 @@ theme_system_reform = {
 	}
 }
 
-basileus_protostrategos_reform = { #Needs updating
-	icon = "justinian"
-	allow_normal_conversion = yes	
-	potential = {
-		OR = {
-			#Byzantine tags
-			tag = BYZ
-			tag = TRE
-			tag = CAP
-			#Exarch tags
-			tag = KCD
-			tag = HSP
-			tag = GLT
-			tag = ATL
-			tag = PSI
-			tag = RVN
-			tag = ABN
-			tag = AEG
-		}
-		has_dlc = "Rights of Man"
-	}
-	trigger = {
-		OR = {
-			has_reform = theme_system_reform
-			full_idea_group = quality_ideas
-		}
-		OR = {
-			is_monarch_leader = yes
-			has_reform = basileus_protostrategos_reform
-		}
-	}
-	modifiers = {
-		monarch_military_power = 3
-		max_absolutism = 10
-		generals_loyalty_modifier = 0.1
-		governing_capacity_modifier = -0.50
-	}
-	custom_attributes = {
-		forces_ruler_general = yes
-	}
+#Cut in BR 8.0
+# basileus_protostrategos_reform = { #Needs updating
+	# icon = "justinian"
+	# allow_normal_conversion = yes	
+	# potential = {
+		# OR = {
+			# #Byzantine tags
+			# tag = BYZ
+			# tag = TRE
+			# tag = CAP
+			# #Exarch tags
+			# tag = KCD
+			# tag = HSP
+			# tag = GLT
+			# tag = ATL
+			# tag = PSI
+			# tag = RVN
+			# tag = ABN
+			# tag = AEG
+		# }
+		# has_dlc = "Rights of Man"
+	# }
+	# trigger = {
+		# OR = {
+			# has_reform = theme_system_reform
+			# full_idea_group = quality_ideas
+		# }
+		# OR = {
+			# is_monarch_leader = yes
+			# has_reform = basileus_protostrategos_reform
+		# }
+	# }
+	# modifiers = {
+		# monarch_military_power = 3
+		# max_absolutism = 10
+		# generals_loyalty_modifier = 0.1
+		# governing_capacity_modifier = -0.50
+	# }
+	# custom_attributes = {
+		# forces_ruler_general = yes
+	# }
 
-	conditional = {
-		allow = { has_dlc = "Rights of Man" }
-		#militarised_society = yes
-	}
-	ai = {
-		factor = 100
-	}
-}
+	# conditional = {
+		# allow = { has_dlc = "Rights of Man" }
+		# #militarised_society = yes
+	# }
+	# ai = {
+		# factor = 100
+	# }
+# }
 
 exarch_system_reform = {
 	icon = "maurice"

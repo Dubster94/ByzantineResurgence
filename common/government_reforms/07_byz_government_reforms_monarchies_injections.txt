@@ -49,23 +49,14 @@ reformed_byzantine_monarchy_reform = {
 		has_parliament = yes
 	}
 	
-	conditional = {
-		allow = { has_country_flag = byz_restored_bureaucracy_mechanic }
-		government_abilities = {
-			byzantine_bureaucracy_mechanic
-		}
+	government_abilities = {
+		byzantine_bureaucracy_mechanic
+		byzantine_pronoia_mechanic
+		byzantine_militarization_mechanic
 	}
-	conditional = {
-		allow = { has_country_flag = byz_restored_pronoia_mechanic }
-		government_abilities = {
-			byzantine_pronoia_mechanic
-		}
-	}
-	conditional = {
-		allow = { has_country_flag = byz_restored_militarization_mechanic }
-		government_abilities = {
-			byzantine_militarization_mechanic
-		}
-		mechanic_forces_ruler_general = yes
+	
+	
+	custom_attributes = {
+		forces_ruler_general = yes
 	}
 }

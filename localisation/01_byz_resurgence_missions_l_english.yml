@@ -193,12 +193,12 @@
  byz_subjugate_lazica_desc:0 "The Laz and subsequent Georgians have had a deep history and connection to our realm, sometimes as vassals, sometimes as allies. As we have grown in power while they have remained stagnant, it is time that we add them to our sphere of influence." 
  
  #Armenia into Mesopotamia mission chain
- byz_armenia_minor_claims:0 "Grants permanent claims on the provinces required for the mission §YProtect Lesser Armenia§!"
- byz_armenia_minor_provinces: ""
+ byz_reconquer_lesser_armenia_claims:0 "Grants permanent claims on the provinces required for the mission §YProtect Lesser Armenia§!"
+ byz_reconquer_lesser_armenia_provinces: ""
  byz_reconquer_lesser_armenia_title:0 "Protect Lesser Armenia"
  byz_reconquer_lesser_armenia_desc:0 "In the times before the Seljuks, Lesser Armenia had been an integral part of our empire, being home to many of our later themas. We need to undo the muslim conquests and bring these lands under our rule!"
- byz_armenia_major_claims:0 "Grants permanent claims on the provinces required for the mission §YInto Greater Armenia§!"
- byz_armenia_major_provinces: ""
+ byz_conquer_armenia_major_claims:0 "Grants permanent claims on the provinces required for the mission §YInto Greater Armenia§!"
+ byz_conquer_armenia_major_provinces: ""
  byz_conquer_armenia_major_title:0 "Into Greater Armenia"
  byz_conquer_armenia_major_desc:0 "To liberate the eastern orthodox people from their muslim oppressors, the heartlands of Armenia need to be brought under our wings!"
  byz_north_mesopotamia_claims:0 "Grants permanent claims on the provinces required for the mission §YTake Upper Mesopotamia§!"
@@ -441,6 +441,7 @@
  gre_mission_flavor.2.d:0 "The Pontic Mountains have now been conquered, and therefore the Pontic Greeks are safe from external pressure. There is however the issue of the region being on our very border. Our military generals have come forth and proposed that the region be ruled autonomously under a Pontic March, which would promote the region's natural defensiveness. On the other hand, the region could prove valuable in protecting our trading assets in the Black Sea."
  gre_mission_flavor.2.a:0 "Keep it under our banner"
  gre_mission_flavor.2.b:0 "Release a March to relieve administrative & military duties"
+ 
  #Byz Startup-related thingimajigs
  estate_nobles_latifundia_kantakouzenos:0 "Kantakouzenoi Latifundia"
  estate_nobles_latifundia_kantakouzenos_desc:0 "The Kantakouzenoi were a majorly influential dynastic family in Palaiologan Byzantium and one of the most prominent Greek noble families in the Empire whose history traces back to the Komnenoi period. Having caused a major civil war in the 1350s by usurping the throne, the family remained one of the most powerful families rivalling the Palaiologoi."
@@ -456,7 +457,7 @@
  estate_nobles_latifundia_tornikes_desc:0 "A family supposedly stemming from 10th Century Byzantine Armenia, during the last decades of the Empire, their lands were centered around Macedonia. A notable Greek noble family that helped the Palaiologoi rise to power during the recovery of Constantinople in 1263."
   
  byz_bad_navy:0 "Foreign Fleet"
- desc_byz_bad_navy:0 "Since the neglect of the navy since the Angeloi prior to the 4th Crusade, the Byzantines have yet to manage a domestic fleet of their own. As a result of this, the Byzantines have been forced to rely on Genoese and Venetian seamen for their ventures, whose loyalty only lie in their greed."
+ desc_byz_bad_navy:0 "Since the neglect of the navy by the Angeloi prior to the 4th Crusade, the Byzantines have yet to manage a domestic fleet of their own. As a result of this, the Byzantines have been forced to rely on Genoese and Venetian seamen for their ventures, whose loyalties lie only in their greed."
  byz_bad_economy:0 "Hyperinflation"
  desc_byz_bad_economy:0 "Since the fall of Constantinople in the 4th Crusade, the Byzantine economy has had major issues. In no small part due to the destruction and plunder by the Crusaders, but also because of the lack of state income after the reconquest of the city. Since the Genoese and Italians were siphoning off the Byzantine trade, there was little way for the Emperors to generate revenue, and with an increased reliance on foreign military and navy, the Byzantine government lay heavily in debt that it was unable to pay off. Combined with the Bullion famine in Europe, not a single Hyperpyron, the Byzantine gold coin, was minted during the reign of the Palaiologan dynasty."
  byz_bad_military:0 "Lack of Levies"
@@ -475,6 +476,7 @@
  byz_varangian_guard_desc:0 "With the [Root.GetAdjective] Army restored, we must now look towards creating an elite palace guard such that no unruly subject feels the need to topple the government. The Varangian Guard that exists in a rump state in our current Empire might just fit our purposes..."
  byz_resurgent_title:0 "The Purple Phoenix"
  byz_resurgent_desc:0 "With the Imperial Army restored and Constantinople secure, we have managed to turn the tide and rise from the ashes like a Purple Phoenix. It is finally time to proclaim Byzantium reborn from the ashes!"
+ byz_resurgent_tooltip:0 "Enact §YReformed Byzantine Monarchy§! Tier 1 Government Reform.\nGives the following effects:\nEnables Byzantine Bureaucracy Ability once the §YByzantine Bureaucracy§! mission is completed.\nEnables Pronoiar Ability once the §YRevoke the Latifundia!§! mission is completed.\nEnables Protostrategos Prominence Ability once the §YBasileus Protostrategos§! mission is completed.\nForces the ruler to become a general upon succeeding to the throne once the §YProtostrategos Prowess§! Government mechanic has been unlocked.\nEnables §YParliament§!\n\n§YReform Modifiers:§!\nMonthly Autonomy Change: §G-0.05§!\nYears of Separatism: §G-5§!\nMax possble Parliament Seats: §G+8.00§!\n(§RThis is a locked reform. You will not be able to switch to other reforms on the same Tier.§!)"
  byz_revoke_latifundia_title:0 "Revoke the Latifundia!"
  byz_revoke_latifundia_desc:0 "Over the centuries, certain prominent families have managed to secure lands within the Empire, leaving the Crown weaker in the process. Eons ago, any land within the Empire belonged to the Emperor only, and was handed out to the lesser nobility known as Penetes as part of the Pronoiar or Theme System. As a result, the Dynatoi have grown very powerful, something we need to adress now that we have risen from the ashes."
  byz_bureaucracy_title:0 "Byzantine Bureaucracy"
@@ -483,13 +485,26 @@
  byz_pandidakterion_desc:0 "The Pandidakterion, or the University of the Palace Hall of Magnaura, is an education institution that has been on the decline ever since the Latin conquest of Constantinople in 1204. With the restoration of Constantinople achieved and our Empire and Bureaucracy ever expanding, it is only natural for a state such as ours that we restore the Pandidakterion, and the remainder of educational institutions in our Empire, as well."
  byz_imperial_great_projects_title:0 "Imperial Great Projects"
  byz_imperial_great_projects_desc:0 "A restored Empire centered on the city of Cities, Constantinople, needs not only heed the wishes of the Capital. Truly, every part of our country needs to bask in the glory that is our Empire. To let them, we must construct magnificent monuments to signify the power of the [Root.Monarch.GetTitle]!"
- byz_imperial_great_projects_tooltip:0 " provinces with monuments of at least $YMagnificent$! level"
+ byz_imperial_great_projects_tooltip:0 " provinces with monuments of at least §YMagnificent§! level"
  byz_military_education_title:0 "Military Education"
  byz_military_education_desc:0 "What with the restoration of the Pandidakterion and our educational system, it would only be natural that we let these institutions teach military tactics as well. To do so however, we need to find the right source of knowledge first, as well as finding suitable students for our first programmes."
  byz_new_renaissance_title:0 "A New Renaissance"
  byz_new_renaissance_desc:0 "With the restoration of both capitals and our educational system, the [Root.GetAdjective] Empire is about to flourish in a grand new Renaissance. It only needs a small push to get going. We shall provide it, for it can only lead to good!"
  byz_basileus_protostrategos_title:0 "Basileus Protostrategos"
  byz_basileus_protostrategos_desc:0 "In our grand Empire, the Emperor shall not only be the king of kings - he shall also be the general of generals. Our Emperor shall ride forth into battle with his men, greatly bolstering our armies' fighting strength."
+ byz_theme_system_title:0 "The Theme System"
+ byz_theme_system_desc:0 "Once upon a time, the Byzantine army was divided up into regional units from which they were drafted and localized when they were not needed in the field. The land was never owned directly by them - it belonged to the Emperor, but in return for their service in the Imperial army, they were allowed to work and live on these lands. This system provided the [Root.Adjective] Empire with vast armies numbering in the tens, maybe hundreds of thousands. With the lands that now belong to the Crown, we should move towards re-establishing this system!"
+ byz_theme_system_tooltip:0 " highlighted provinces have both a §YCastle§! and a §YRegimental Camp§!, or better."
+ byz_theme_system_development_tooltip:0 "5 owned provinces that fulfilled the mission requirements will gain §G1§! Base Tax, §G1§! Base Production and §G1§! Base Manpower."
+ byz_greek_themes_title:0 "The Greek Themes"
+ byz_greek_themes_desc:0 "With the restoration of the Theme System in Anatolia, we must now move towards re-establishing the Greek Themes as well. Many of them were home to naval Themes that supplied our vast navy."
+ byz_greek_themes_2_tooltip:0 " provinces in the §YAegean Islands§!, §YCrete§! or §YCyprus§! areas have both a §YCastle§! and a §YRegimental Camp§!, or better."
+ byz_greek_themes_development_tooltip:0 "3 owned provinces that fulfilled the first trigger of the mission requirements will gain §G1§! Base Tax, §G1§! Base Production and §G1§! Base Manpower."
+ byz_balkan_themes_title:0 "Balkan Themes"
+ byz_balkan_themes_desc:0 "With the Orthodox Balkan Slavs subjugated and pacified, to truly integrate them into our Empire, they too, must fight in our armies as part of our grand Theme System!"
+ byz_balkan_themes_development_tooltip:0 "4 owned provinces that fulfilled the mission requirements will gain §G1§! Base Tax, §G1§! Base Production and §G1§! Base Manpower."
+ byz_brothers_of_faith_title:0 "Brothers of Faith"
+ byz_brothers_of_faith_desc:0 "With the Balkan Themes restored, we have entered areas inhabited by Slavic people who did not convert to Orthodoxy. If we are to rule a united Balkan region, it is necessary that we ensure the region stays united through a single unitary faith - that being our faith."
  
  #Mission modifiers
  #New in BR 8.0
@@ -503,6 +518,9 @@
  desc_byz_great_projects:0 "We have restored many monuments in many parts of our Empire, resulting in our subjects being more willing to fight for our country."
  byz_military_education:0 "Military Education"
  desc_byz_military_education:0 "Our State Universities provide programmes for educating our army commanders, making them more efficient in the field."
+ byz_naval_theme:0 "Naval Theme"
+ desc_byz_naval_theme:0 "This province is part of a Naval Theme and is thus specialized in providing us with a grand navy."
+ 
  
  #From prior mission tree. Some have been cut.
  byz_last_stand:0 "Last Stand"

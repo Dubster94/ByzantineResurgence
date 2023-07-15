@@ -8,12 +8,7 @@
 estate_generals_is_theme_capital_trigger = {
 	#custom_trigger_tooltip = {
 		#tooltip = estate_generals_is_theme_capital_tooltip
-		OR = {
-			has_building = fort_15th
-			has_building = fort_16th
-			has_building = fort_17th
-			has_building = fort_18th
-		}
+		has_fort_building_trigger = yes
 		has_forcelimit_building_trigger = yes
 		NOT = { is_capital = yes } #Let's exclude Constantinople from this.
 	#}
