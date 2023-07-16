@@ -198,7 +198,7 @@ country_decisions = {
 						mission_completed = tre_conquer_lesser_armenia
 					}
 					complete_mission = byz_reconquer_lesser_armenia
-					give_permaclaims_for_mission = { mission = byz_armenia_major }
+					give_permaclaims_for_mission = { mission = byz_conquer_armenia_major }
 					give_permaclaims_for_mission = { mission = byz_subjugate_lazica }
 				}
 				if = { #Restore the Empire

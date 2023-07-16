@@ -705,8 +705,6 @@ republic = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
-				#BR Added:
-				roman_bureaucracy_reform
 			}
 		}
 		military_doctrines = {
@@ -908,8 +906,6 @@ republic = {
 		#Added by Beyond Typus
 		puppet_kingdom_reform
 		transitional_government_reform
-		#BR Added:
-		roman_bureaucracy_reform
 	}
 	exclusive_reforms = {
 		lottery_reform

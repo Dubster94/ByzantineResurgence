@@ -4902,7 +4902,7 @@ byz_religious_3 = {
 	}
 }
 
-byz_italy_4 = {
+byz_italy_5 = {
 	slot = 4
 	generic = no
 	ai = yes
@@ -4975,7 +4975,7 @@ byz_italy_4 = {
 	}
 }
 
-byz_italy_3 = {
+byz_italy_4 = {
 	slot = 5
 	generic = no
 	ai = yes

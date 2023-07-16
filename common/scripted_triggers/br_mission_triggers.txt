@@ -177,7 +177,7 @@ byz_exarch_anatolia_provinces = {
 		province_group = byz_north_mesopotamia_provinces
 		province_group = byz_south_mesopotamia_provinces
 		province_group = byz_reconquer_lesser_armenia_provinces
-		province_group = byz_armenia_major_provinces
+		province_group = byz_conquer_armenia_major_provinces
 	}
 }
 
