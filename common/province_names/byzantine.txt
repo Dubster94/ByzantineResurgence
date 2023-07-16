@@ -449,13 +449,13 @@
 2303 = { "Melitene" "Melitene" }
 4298 = { "Telouch" "Telouch" } #Pre 1.24 was 5183
 #6030 = { "Samosaton" "Samosaton" } #Using Samosata, hellenised similarly to how Arsamosata became Asmosaton
-6091 = { "Barbalissos" "Barbalissos" }
-6092 = { "Bambyke" "Hierapolis" }
+#6091 = { "Barbalissos" "Barbalissos" }
+#6092 = { "Bambyke" "Hierapolis" }
 
 #Osrhoene
 2308 = { "Edessa" "Edessa" } #Was 407 pre 1.24, moved to Mardin in 1.24. It was rebuilt by Justin II and named Justiniopolis in the 500's, however later on during Byzantine resurgence in the 1000s it was once more known as Edessa, so I pick that.
 4292 = { "Margdis" "Margdis" } #Not sure where Merida comes from - Pleiades has completely disregarded this name and it seems very much like Latin anyway, even so I only find it on Wikipedia. Ancient Greek was Marde/Margdis, so I'm going for the latter. Previously I had used a Nea Ioustiniana, however I don't know where I got that from. Was 5295 pre 1.24
-5293 = { "Rhaisena" "Rhaisena" }
+#5293 = { "Rhaisena" "Rhaisena" }
 6090 = { "Dabana" "Dabana" } #There's nothing here.
 #6100 = { "Konstantia" "Konstantia" } #This city has so many names it's not even funny, from Konstantina, Maximianopolis, Antinopolis, Nikephorion, Antiochia, even Konstantinoupolis. I took Konstantia because it was pretty much the only one not already present.
 #6102 = { "Chasanara" "Chasanara " } #Escorial Taktikon, from wiki.
@@ -508,17 +508,17 @@
 411 = { "Mepsila" "Mepsila" } #Alternatively Mosoule. Nineveh was destroyed and replaced by minor greek settlements such as this one. Moved to Al Jazira in 1.24
 2309 = { "Singara" "Singara" }
 4293 = { "Arbela" "Arbela" } #Now that in 1.24 Arbela has gotten representance, there is no need to rename Mosul to Arbela.
-5296 = { "Mindouos" "Mindouos" } #This settlement was moved away to another place, and to this one, the closest is Thannuris/Mindouos. I do quite like Nisibis, but I'll leave it out for now.
+5296 = { "Nisibis" "Nisibis" } #This settlement was moved away to another place, and to this one, the closest is Thannuris/Mindouos. I do quite like Nisibis, but I'll leave it out for now.
 6118 = { "Gephyros" "Gephyros" } #Roman name is Ad Pontem, which means by the Bridge. Just using Gephyros, which means "Bridge" or something along those lines.
 6120 = { "Gaugamela" "Gaugamela" } #Going with this because there's very little in the area that would work.
-6122 = { "Akyra" "Akyra" } #Using Syriac Aqra and transliterating it.
+#6122 = { "Akyra" "Akyra" } #Using Syriac Aqra and transliterating it.
 6123 = { "Diana" "Diana" } #Just doing the Syriac name because seriously, there's nothing here.
 6125 = { "Kalakene" "Larisa" } #Kalakene was the regional name around the alternate name for Nimrud 'Kalhu'
 
 
 #Middle Euphrates
 406 = { "Dakira" "Dakira" }
-2314 = { "Azdra" "Azdra" } #Found on the wikipage. Uncertain claim. Halaibe further north is known as Zenobia.
+#2314 = { "Azdra" "Azdra" } #Found on the wikipage. Uncertain claim. Halaibe further north is known as Zenobia. #NOTE: This is a very dodgy cut by JP as this is a vanilla ID.
 6089 = { "Europos" "Doura Europos" }
 6099 = { "Kirkesion" "Kirkesion" }
 6135 = { "Anatho" "Anatho" }
@@ -530,9 +530,9 @@
 2310 = { "Birtha" "Birtha" }
 6126 = { "Atra" "Atra" } #This city is technically in the wastelands to the west, but oh well.
 6127 = { "Senna" "Senna" } #Wiki claims a location known as "Shenna" in Syriac. Using that for this city because there's nothing else here.
-6128 = { "Libanai" "Libanai" } #Going for this one. It's otherwise the Assyrian city of Ashur, or potentially Lamban.
+#6128 = { "Libanai" "Libanai" } #Going for this one. It's otherwise the Assyrian city of Ashur, or potentially Lamban.
 6132 = { "Souma" "Souma" }
-6134 = { "Iakobion" "Iakobion" } #Wiki claims heritage to Beth Yaqub, so I'm using Iakob to make Jacobium
+#6134 = { "Iakobion" "Iakobion" } #Wiki claims heritage to Beth Yaqub, so I'm using Iakob to make Jacobium
 
 #Shahrizor
 4294 = { "Siasouron" "Siasouron" } #This is ridiculously uncertain: It's taken from a place that is actually much further southeast that has little evidence backing up its existence. I want it there because it makes the borders look nice, but I don't know whether it's correct. The name bears a striking resemblance to Shahrizor, funnily enough. There is the Qizqapan mountain close by, where a competent ruler of Media was buried, but that's a stretch honestly.
@@ -548,7 +548,7 @@
 #Lower Tigris
 410 = { "Ktesiphon" "Ktesiphon" } #Technically Baghdad or Bagdata exists, but I figured representing the ancient Roman enemy of Parthia's capital Ctesiphon was more important.
 4291 = { "Bendinkon" "Bendinkon" } #Made up based on the claim that this city was known as Bendink in the 10th/11th century or so.
-6137 = { "Deron" "Deron" } #Located on the ancient Sumerian city of Deru, which possible may have been called Derum. As such, I use Deron.
+#6137 = { "Deron" "Deron" } #Located on the ancient Sumerian city of Deru, which possible may have been called Derum. As such, I use Deron.
 6138 = { "Noumaneia" "Noumaneia" } #There's nothing here. City founded around 6th century by a Christian Arab Nu'man or so.
 6139 = { "Medareia" "Medareia" } #Using Medieval Madhariya as a jumping-off point for hellenising.
 6140 = { "Mesene" "Mesene" }
@@ -768,14 +768,14 @@
 2313 = { "Antiocheia" "Antiocheia" }
 5170 = { "Theodorias" "Laodikeia" } #City is a Laodicea, yes, but this is what Justinian called the area, after his wide Theodora
 6094 = { "Myriandros" "Alexandreia" } #Using province port for province name.
-6079 = { "Marakas" "Marakas" } #Maraccas
+#6079 = { "Marakas" "Marakas" } #Maraccas
 6080 = { "Antarados" "Arados" } #Antaradus, later Tartus/Tartous
 
 #Aleppo
 377 = { "Beroia" "Beroia" }
 4271 = { "Apameia" "Apameia" } #There's literally nothing here pre-Ottomans. Technically this city was actually located way south in another province, but frankly I cannot do better at this point. Used to be called Arrha, which was "North of Idlib", then Emathous. I now go with Apameia due to it being pointed out on the map in 400AD as the capital of Syria IV.
-6087 = { "Telmenissos" "Telmenissos" } #Telmenissus at Tell Menis, next to what the province is in-game.
-6093 = { "Homeros" "Homeros" } #Going with this because Azaz/Ezaz doesn't have any data from what I can tell.
+#6087 = { "Telmenissos" "Telmenissos" } #Telmenissus at Tell Menis, next to what the province is in-game.
+#6093 = { "Homeros" "Homeros" } #Going with this because Azaz/Ezaz doesn't have any data from what I can tell.
 6095 = { "Kyrrhos" "Kiliza" } #Using larger Cyrrus in nearby Amaranli. Kilis is Kiliza.
 
 #Lebanon
@@ -800,23 +800,23 @@
 1854 = { "Sebastos" "Neapolis" } #Don't want to add another Neapolis, so using Caesarea Maritima and its harbor Sebastos.
 5180 = { "Gaza" "Gaza" }
 6071 = { "Berosaba" "Berosaba" } #Bersabee/Bersabe in Latin.
-6072 = { "Georgioupolis" "Georgioupolis" } #Using Lod/Lydda, which was in the 6th century named Georgiopolis. Was once known as Diospolis, but we already have several of those.
+#6072 = { "Georgioupolis" "Georgioupolis" } #Using Lod/Lydda, which was in the 6th century named Georgiopolis. Was once known as Diospolis, but we already have several of those.
 
 #Hauran
-6069 = { "Bostra" "Bostra" }
-6070 = { "Dekapolis" "Arbela" } #Using the Dekapolis area because I don't want to double up on Arbela (Erbil in Mesopotamia)
+#6069 = { "Bostra" "Bostra" }
+#6070 = { "Dekapolis" "Arbela" } #Using the Dekapolis area because I don't want to double up on Arbela (Erbil in Mesopotamia)
 6081 = { "Adraa" "Adraa" } #Adraha/Adraa. Supposedly the latter is Greek, but I presume the H is herely there to show pronounciation.
-6082 = { "Dionysias" "Dionysias" } #Found a reference to Soada which might be the namesake of as-Suwayda.
-6083 = { "Aire" "Aire" } #Aere, as identified by the wiki.
+#6082 = { "Dionysias" "Dionysias" } #Found a reference to Soada which might be the namesake of as-Suwayda.
+#6083 = { "Aire" "Aire" } #Aere, as identified by the wiki.
 
 #Transjordan
 380 = { "Harreketh" "Harreketh" }
 381 = { "Gerasa" "Gerasa" } #Gerasa/Antiochia ad  Chrysorhoam at Jersah, because Aljoun was hard to find any information about. Curiously, the city/citadel/castle of Aljoun seems to be named after a Byzantine monk whose inscription from a monastery reads, "diakon Aryano", but I could find no reference to the name for the place itself.
 4270 = { "Adrou" "Adrou" } #Using Udruh instead of Ma'an.
 5203 = { "Negla" "Negla" } #Ain Najil, next to Shubak, ended up being used.
-6066 = { "Arindela" "Arindela" } #Using Gharandal a bit further south because Tafilah has no Roman name.
-6067 = { "Philadelpheia" "Philadelpheia" } #Philadelphia.
-6068 = { "Basienis" "Basienis" } #Basienis
+#6066 = { "Arindela" "Arindela" } #Using Gharandal a bit further south because Tafilah has no Roman name.
+#6067 = { "Philadelpheia" "Philadelpheia" } #Philadelphia.
+#6068 = { "Basienis" "Basienis" } #Basienis
 
 #Unused nowadays.
 #{ "Petra" "Petra" }
