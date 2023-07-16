@@ -124,7 +124,6 @@ monarchy = {
 				bt_ayyubid_sultanate_reform
 				#BR Added:
 				exarchate_reform
-				pronoiar_reform #Pushed down here temporarily for testing purposes.
 			}
 		}
 		hereditary_vs_nobility = {
@@ -157,7 +156,6 @@ monarchy = {
 				house_of_lords_reform
 				ministerialis_promotion_reform
 				separation_of_boyars_from_court_reform
-				#BR Added:
 			}
 		}
 		bureaucracy = {
@@ -183,8 +181,6 @@ monarchy = {
 				ottoman_provincial_government_system_reform
 				namestnik_reform
 				consulate_of_the_sea
-				#BR Added:
-				roman_bureaucracy_reform
 			}
 		}
 		state_and_religion = {
@@ -310,8 +306,6 @@ monarchy = {
 				catalan_cortes_reform
 				great_council_of_mechelen_reform
 				parliament_vs_monarchy_reform
-				#BR Added:
-				basileus_protostrategos_reform
 			}
 		}
 		growth_of_administration = {

@@ -327,7 +327,7 @@ spawn_rebels_in_state_province_of_dev = {
 #$small$, $medium$ & $large$
 #Supply parameters $name$ and $dynasty$
 byz_revoke_latifundia_effect = {
-	spawn_small_scaled_rebels = { leader=$name$ dynasty_name=$dynasty$ }
+	spawn_small_scaled_rebels = { leader="$name$" dynasty_name="$dynasty$" }
 	if = {
 		limit = {
 			num_of_provinces_in_states = 200
