@@ -158,7 +158,7 @@ theme_system_reform = {
 			limit = {
 				tag = BYZ
 			}
-			completed_mission = byz_theme_system
+			mission_completed = byz_theme_system
 		}
 	}
 	

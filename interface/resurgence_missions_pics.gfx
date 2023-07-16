@@ -171,5 +171,29 @@ spriteTypes = {
 		name = "mission_balkan_hegemon"
 		texturefile = "gfx//interface//missions//mission_balkan_hegemon.dds"
 	}
+	spriteType = {
+		name = "mission_singara"
+		texturefile = "gfx//interface//missions//mission_singara.dds"
+	}
+	spriteType = {
+		name = "mission_babylon_fortress"
+		texturefile = "gfx//interface//missions//mission_babylon_fortress.dds"
+	}
+	spriteType = {
+		name = "mission_bari_fortress"
+		texturefile = "gfx//interface//missions//mission_bari_fortress.dds"
+	}
+	spriteType = {
+		name = "mission_roman_laurel_wreath"
+		texturefile = "gfx//interface//missions//mission_roman_laurel_wreath.dds"
+	}
+	spriteType = {
+		name = "mission_roman_italy"
+		texturefile = "gfx//interface//missions//mission_roman_italy.dds"
+	}
+	spriteType = {
+		name = "mission_ounga_fort"
+		texturefile = "gfx//interface//missions//mission_ounga_fort.dds"
+	}
 }
 

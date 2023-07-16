@@ -1119,10 +1119,10 @@
 7034 = { "Pitinon" "Pitinon" } #Carpegna did not exist in ancient times it seems, though legends seem to claim it existed during the conquest of West Rome. Using Pitinum Pisaurense
 
 #Romagna
-114 = { "Rabenna" "Rabenna" } #Ravenna
+114 = { "Raouenna" "Raouenna" } #Ravenna
 7032 = { "Ariminon" "Ariminon" } #Ariminum
-7031 = { "Libia" "Libia" } #Forum Livii
-7033 = { "Mebaniola" "Mebaniola" } #Not sure on the greekification of this one, but Mevaniola instead of Portico since Portico does not have a latin equivalent.
+7031 = { "Phorili" "Phorlimpopouli" } #Forum Livii
+7033 = { "Meouaniola" "Meouaniola" } #Not sure on the greekification of this one, but Mevaniola instead of Portico since Portico does not have a latin equivalent.
 7028 = { "Phabenteia" "Phabenteia" } #Faventia
 
 #South Tuscany

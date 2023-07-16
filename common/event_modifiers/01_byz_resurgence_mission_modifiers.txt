@@ -45,6 +45,11 @@ byz_naval_theme = { #Permanent province modifier
 	local_sailors_modifier = 1
 }
 
+byz_staple_food_supply = { #Permanent
+	land_maintenance_modifier = -0.05
+	global_unrest = -1
+}
+
 #Conquests
 byz_last_stand = {
 	land_morale = 0.1
@@ -177,7 +182,7 @@ byz_pope_subjugated = {
 
 byz_italy_restored = {
 	possible_condottieri = 0.5
-	religious_unity = 0.1
+	governing_capacity_modifier = 0.1
 }
 
 byz_flowing_spice = {

@@ -203,7 +203,7 @@ byz_silk_road = {
 	}
 }
 
-byz_resurging_diplomacy = {
+byz_resurging_diplomacy = { #COPIED OVER
 	slot = 3
 	generic = no
 	ai = yes
@@ -411,7 +411,7 @@ byz_economic_1 = { #COPIED OVER
 	}
 }
 
-byz_economic_2_plus_military_bonus = {
+byz_economic_2_plus_military_bonus = { #COPIED OVER
 	slot = 4
 	generic = no
 	ai = yes
@@ -2060,7 +2060,7 @@ byz_roman_italy = { #COPIED OVER
 	}
 }
 
-byz_italian_islands = {
+byz_italian_islands = { #COPIED OVER
 	slot = 2
 	generic = no
 	ai = yes
@@ -2811,7 +2811,7 @@ byz_crusade_1_plus_egypt = { #COPIED OVER
 
 }
 
-byz_crusade_2 = {
+byz_crusade_2 = { #COPIED OVER
 	slot = 2
 	generic = no
 	ai = yes
@@ -2887,7 +2887,7 @@ byz_crusade_2 = {
 	
 }
 
-byz_cyrenaica_tripolitania = {
+byz_cyrenaica_tripolitania = { #COPIED OVER
 	slot = 2
 	generic = no
 	ai = yes
