@@ -126,7 +126,6 @@ estate_exarches =
 		influence = -40
 	}
 	
-	influence_from_dev_modifier = 2
 	
 	# Loyalty modifiers
 	loyalty_modifier = {

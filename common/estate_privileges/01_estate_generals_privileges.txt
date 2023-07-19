@@ -2,6 +2,21 @@ estate_generals_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			has_absolutism_reduction_for_estate_privileges = yes
+		} 
+		modifier = { max_absolutism = 4 } 
+	}
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			NOT = { has_absolutism_reduction_for_estate_privileges = yes }
+		} 
+		modifier = { max_absolutism = 5 } 
+	}
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
@@ -74,6 +89,21 @@ estate_generals_land_rights = {
 estate_generals_autonomous_defences = {
 	icon = privilege_autonomous_defences
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			has_absolutism_reduction_for_estate_privileges = yes
+		} 
+		modifier = { max_absolutism = 4 } 
+	}
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			NOT = { has_absolutism_reduction_for_estate_privileges = yes }
+		} 
+		modifier = { max_absolutism = 5 } 
+	}
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
@@ -130,6 +160,21 @@ estate_generals_settled_armies = {
 	icon = privilege_settled_armies
 	land_share = 5
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			has_absolutism_reduction_for_estate_privileges = yes
+		} 
+		modifier = { max_absolutism = 4 } 
+	}
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			NOT = { has_absolutism_reduction_for_estate_privileges = yes }
+		} 
+		modifier = { max_absolutism = 5 } 
+	}
 	influence = 0.1
 	is_valid = {
 	}
@@ -148,6 +193,9 @@ estate_generals_settled_armies = {
 	}
 	penalties = {
 	}
+	mechanics = {
+		exempt_from_seize_land
+	}
 	benefits = {
 	}
 	ai_will_do = {
@@ -158,6 +206,21 @@ estate_generals_settled_armies = {
 estate_generals_promote_to_katepano = {
 	icon = privilege_promote_to_katepano
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			has_absolutism_reduction_for_estate_privileges = yes
+		} 
+		modifier = { max_absolutism = 4 } 
+	}
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			NOT = { has_absolutism_reduction_for_estate_privileges = yes }
+		} 
+		modifier = { max_absolutism = 5 } 
+	}
 	loyalty = 0.1
 	influence = 0.05
 	is_valid = {
@@ -231,8 +294,6 @@ estate_generals_promote_to_katepano = {
 
 estate_generals_military_parades = {
 	icon = privilege_settled_armies
-	#land_share = 0
-	#max_absolutism = -5
 	influence = 0.1
 	is_valid = {
 	}
@@ -269,8 +330,22 @@ estate_generals_military_parades = {
 
 estate_generals_dynastic_support = {
 	icon = privilege_royal_authority
-	#land_share = 0
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			has_absolutism_reduction_for_estate_privileges = yes
+		} 
+		modifier = { max_absolutism = 4 } 
+	}
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			NOT = { has_absolutism_reduction_for_estate_privileges = yes }
+		} 
+		modifier = { max_absolutism = 5 } 
+	}
 	influence = 0.05
 	is_valid = {
 	}
@@ -304,6 +379,21 @@ estate_generals_pike_formation_training = {
 	icon = privilege_limited_war_support
 	land_share = 5
 	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			has_absolutism_reduction_for_estate_privileges = yes
+		} 
+		modifier = { max_absolutism = 8 } 
+	}
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			NOT = { has_absolutism_reduction_for_estate_privileges = yes }
+		} 
+		modifier = { max_absolutism = 10 } 
+	}
 	influence = 0.10
 	is_valid = {
 		NOT = { mil_tech = 12 }
@@ -348,6 +438,21 @@ estate_generals_combined_arms_training = {
 	icon = privilege_supply_arms
 	land_share = 5
 	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			has_absolutism_reduction_for_estate_privileges = yes
+		} 
+		modifier = { max_absolutism = 8 } 
+	}
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			NOT = { has_absolutism_reduction_for_estate_privileges = yes }
+		} 
+		modifier = { max_absolutism = 10 } 
+	}
 	influence = 0.1
 	is_valid = {
 		mil_tech = 12
@@ -393,6 +498,21 @@ estate_generals_flintlock_musket_training = {
 	icon = privilege_promote_purbias
 	land_share = 5
 	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			has_absolutism_reduction_for_estate_privileges = yes
+		} 
+		modifier = { max_absolutism = 8 } 
+	}
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			NOT = { has_absolutism_reduction_for_estate_privileges = yes }
+		} 
+		modifier = { max_absolutism = 10 } 
+	}
 	influence = 0.1
 	is_valid = {
 		mil_tech = 21
@@ -428,6 +548,21 @@ estate_generals_bring_to_court = {
 	icon = privilege_bring_to_court
 	land_share = 5
 	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			has_absolutism_reduction_for_estate_privileges = yes
+		} 
+		modifier = { max_absolutism = 8 } 
+	}
+	conditional_modifier = { 
+		trigger = { 
+			has_country_flag = byz_generals_no_absolutism_privilege_cost
+			NOT = { has_absolutism_reduction_for_estate_privileges = yes }
+		} 
+		modifier = { max_absolutism = 10 } 
+	}
 	influence = 0.1
 	is_valid = {
 	}

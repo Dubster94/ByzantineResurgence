@@ -13,57 +13,61 @@
 	# local_unrest = -2
 # }
 
-# exarch_seat_modifier_med_dev = {
-	# potential = {
-		# has_estate = estate_exarches
-		# NOT = { development = 40 }
-	# }
+exarch_seat_modifier_med_dev = {
+	potential = {
+		is_state = yes
+		is_state_core = owner
+		development = 50
+		NOT = { development = 80 }
+	}
 
-	# trigger = {
-		# has_estate = estate_exarches
-		# development = 20
-		# hidden_trigger = {
-			# NOT = { development = 40 }
-		# }
-	# }
+	trigger = {
+		is_state = yes
+		development = 50
+		hidden_trigger = {
+			NOT = { development = 80 }
+		}
+	}
 	
-	# picture = "exarch_seat_modifier_states"
-	# max_states = 4
-# }
+	picture = "exarch_seat_modifier_states"
+	governing_capacity = 250
+}
 
-# exarch_seat_modifier_high_dev = {
-	# potential = {
-		# has_estate = estate_exarches
-		# development = 40
-		# NOT = { development = 60 }
-	# }
+exarch_seat_modifier_high_dev = {
+	potential = {
+		is_state = yes
+		is_state_core = owner
+		development = 80
+		NOT = { development = 100 }
+	}
 
-	# trigger = {
-		# has_estate = estate_exarches
-		# development = 40
-		# hidden_trigger = {
-			# NOT = { development = 60 }
-		# }
-	# }
+	trigger = {
+		is_state = yes
+		development = 80
+		hidden_trigger = {
+			NOT = { development = 100 }
+		}
+	}
 	
-	# picture = "exarch_seat_modifier_states_big"
-	# max_states = 9
-# }
+	picture = "exarch_seat_modifier_states_big"
+	governing_capacity = 500
+}
 
-# exarch_seat_modifier_very_high_dev = {
-	# potential = {
-		# has_estate = estate_exarches
-		# development = 60
-	# }
+exarch_seat_modifier_very_high_dev = {
+	potential = {
+		is_state = yes
+		is_state_core = owner
+		development = 100
+	}
 
-	# trigger = {
-		# has_estate = estate_exarches
-		# development = 60
-	# }
+	trigger = {
+		is_state = yes
+		development = 100
+	}
 	
-	# picture = "exarch_seat_modifier_states_bigger"
-	# max_states = 18
-# }
+	picture = "exarch_seat_modifier_states_bigger"
+	governing_capacity = 750
+}
 
 orthodox_religious_center = {
 	potential = {

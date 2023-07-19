@@ -169,7 +169,7 @@
  mechanic_enables_strategoi_estate_yes:0 "Enables Generals estate."
  basileus_protostrategos_reform:0 "Basileus Protostrategos"
  basileus_protostrategos_reform_desc:0 "The Emperor shall not only be the king of kings - he shall also be the general of generals. Our Emperor shall ride forth into battle with his men, greatly bolstering our armies' fighting strength." # \n\n§YGovernment Mechanics:§!\nForces the ruler to become a general upon succeeding to the throne.
- forces_ruler_general_yes:0 "Forces the ruler to become a general upon succeeding to the throne once the §YProtostrategos Prowess§! Government mechanic has been unlocked."
+ mechanic_forces_ruler_general_yes:0 "Forces the ruler to become a general upon succeeding to the throne once the §YProtostrategos Prominence§! Government mechanic has been unlocked."
  exarch_system_reform:0 "Re-establish the Exarches"
  exarch_system_reform_desc:0 "Our Empire stretches far and wide and has managed to get to the point where our administrative capabilities disallows proper rule of our distant provinces. If we reintroduce the Exarches of old, we can designate viceroys to regions in order to expand our bureaucratic reach."
  mechanic_enables_exarches_yes:0 "Allows the designation of Exarches in your realm, greatly increasing administrative capability in exchange for great autonomy."

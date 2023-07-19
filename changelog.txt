@@ -14,10 +14,13 @@ Byz Resurgence 8.0.0
 
 Features:
 -This patch features a fairly comprehensive rework of Byzantium.
-	-The Byzantine mission tree has been overhauled for a 4th time, marking the entry of the 4th iteration of the Byzantine mission tree.
-		-The mission tree has been reworked to include a LOT more flavour-related missions. Previously, there were a mere 14 flavour missions in the Byzantine tree. Now it includes over 40.
+	-The Byzantine mission tree has been overhauled for a 4th time, marking the entry of the 4th iteration of the Byzantine mission tree, with a grand total of 123 missions.
+		-The mission tree has been reworked to include a LOT more flavour-related missions. Previously, there were a mere 14 flavour missions in the Byzantine tree. Now it includes a total of 69 flavour missions.
 			-Flavour missions now span the entirety of the Roman Empire, though a lot of them are concentrated around the central parts of the Empire, that being the Balkans and Anatolia.
-		-The addition of so many flavour missions necessitated a complete redrawal of the tree. Now where the Rhenus border mission was at row 22, the mission tree has only reached its midpoint, now ending past row 40.
+				-Featuring establishment of Themes, Exarches, production focuses of certain regions, building buildings, handling of estates, religious matters, conversions, development, you name it!
+		-The addition of so many flavour missions necessitated a complete redrawal of the tree. Now where the Rhenus border mission was at row 22, the mission tree has only reached its midpoint, now ending at row 38.
+		-Unfortunately, due to the change and work put into the new iteration, the Persian branch of the mission tree, which consisted of about 10 conquest missions and nothing else, was cut for the time being.
+			-This particular branch is likely to resurface as part of a future Greece mission tree update, to emulate Alexander's Empire of Macedon.
 	-Byzantium's startup is heavily overhauled.
 		-Byzantium now starts with 6 negative estate privileges for the Dynatoi called <Family name> Latifundia. These indicate the incredibly influential and wealthy dynasties of the Byzantine Empire that crippled the central government during the Palaiologan period. Each of these prevent seizing land from the Dynatoi, and revoking them is the only way to curb their massive land share in the Empire. Revoking them, however, results in massive revolts throughout the Empire, the size depending on the crown land gained from revoking the privilege.
 		-Byzantium also has some bad modifiers at the game start.
@@ -28,15 +31,15 @@ Features:
 			-"Lack of Levies", which gives -10% national manpower modifier and -10% manpower recovery speed.
 				-This modifier is revoked through the Byzantine mission "The Imperial Army"
 			-The Byzantine unique government reforms that gave new mechanics have been cut and replaced with two Byzantine T1 government reforms.
-				-The starting government reform has major maluses in the beginning of the game to symbolize the large decentralization of the Empire.
+				-The starting government reform has major maluses in the beginning of the game to symbolize the large decentralization of the Empire and the lack of power in the Byzantine Crown.
 					-This government reform has -10% reform progress as well as +0.05 autonomy change.
-					-This reform also spawns pretender rebels if the new ruler legitimacy is low, akin to what vanilla Purple Phoenix does.
 				-Upon completing the mission "Byzantine Resurgence" you are awarded with a better T1 government reform, and you can start accumulating unique government mechanics.
 					-This reformed Byzantine monarchy has the following unlockable government mechanics:
 						-Pronoiar: Upon completing "Revoke the Latifundia!", Byzantium gets three incredibly immersive buttons to press, similar to the old Iqta system in previous patches. These however give bonuses not based on subjects, but on own state development. As a sidenote, completing this mission also renames the nobles from Dynatoi to Penetes.
 						-Militarization of State: Upon completing "Basileus Protostrategos", the Byzantines get access to Protostrategos Prominence. This mechanic resets upon monarch death, and forces your ruler as a general. In order to raise Protostrategos Prominence, you need to win battles with the monarch as the army leader. Doing so nets bonuses to army drilling, as well as Strategoi loyalty.
 						-Byzantine Bureaucracy: Upon completing "Byzantine Bureacucracy", Byzantium gets access to three ever-increasing government powers that grant scaling bonuses to the state. However, these government powers also severely increase corruption in the country, and they have several bad events tied to them if the power is high. To reduce it, you pay monarch points in the relevant category.
 					-As a sidenote, with regards to these government mechanics, I could not get the interface to align more than 3 icons per line, causing the interface to take up much more space than required. This appears to be a hardcoded limit that other modders have stumbled upon, so there is little I can do to fix the necessary scrolling to see all buttons. A bandaid would be to adjust the entire interface, but that is not something I am willing to do at the moment.
+					-I would also take the opportunity to credit the user by the name of Roi that created the Byzantine Militarization icon as well as the Pronoiar icons back in the day. The graphics for all three government mechanics are derived from those that Roi created.
 -The Latin Imperial mission trees have been cut as a result of vanilla adding the Latin Empire, while me simultaneously not having updated them for a while, simultaneously to them not being particularly impressive.
 	-In general, Latin Imperial content has been put on hold for a while.
 -The Varangian Guards mercenary companies can now drill by default.

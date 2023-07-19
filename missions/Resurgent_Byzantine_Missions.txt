@@ -2,6 +2,16 @@
 #Every single one of these missions that deals with multiple provinces uses province groups for designating provinces, because I keep repeating the same code every time. As such it's simpler to refer to them there instead.
 #If you want to check the province IDs, check provincegroup.txt in the map folder.
 
+#Once again, this mission tree has been rewritten for the 3rd time, marking the 4th iteration of the Byzantine mission tree.
+#This time, we're looking at a total of 123 missions spanning 38 rows in the entire tree. This is likely the largest mission tree in the entirety of EU4.
+#Every mission should now also have an icon not used anywhere else in the tree.
+#Out of all of these, we are looking at a total of:
+#49 new missions, all flavour missions.
+#20 old flavour missions.
+#For a grand total of 69 (Nice) flavour missions.
+#That leaves a total of 54 missions dealing with conquests.
+#I hope that this 4th and probably final iteration, barring any small changes that may occur in the future, will be fun to play with.
+
 byz_economic_1 = {
 	slot = 1
 	generic = no
@@ -46,7 +56,7 @@ byz_economic_1 = {
 	}
 
 	byz_revive_hyperpyron = { #New in BR 8.0
-		icon = mission_establish_mint_towns
+		icon = dominant_economy
 		position = 2 #1-2
 		required_missions = { byz_refill_imperial_treasury }
 		
@@ -85,8 +95,8 @@ byz_economic_1 = {
 		}
 		
 		trigger = {
-			crown_land_share = 0.5
-			NOT = { average_home_autonomy = 0.1 }
+			crown_land_share = 50
+			NOT = { average_home_autonomy = 10 }
 		}
 		
 		effect = {
@@ -144,7 +154,7 @@ byz_economic_2 = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = byz_restore_trade_hegemon
+				tooltip = byz_restore_trade_hegemon_tooltip
 				byz_no_latins_in_greece_provinces = {
 					type = all
 					owner = {
@@ -496,7 +506,7 @@ byz_reconquest_2 = {
 				}
 				add_base_tax = 1
 				add_base_manpower = 1
-				set_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+				set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 			}
 			random_owned_province = { #RandProv 2
 				limit = {
@@ -504,7 +514,7 @@ byz_reconquest_2 = {
 					NOT = { #To prevent picking Nicaea/Nicomedia
 						province_id = 316
 						province_id = 5157
-						has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 					}
 				}
 				add_base_tax = 1
@@ -513,9 +523,9 @@ byz_reconquest_2 = {
 			hidden_effect = { #Clearing the flag above.
 				every_owned_province = {
 					limit = {
-						has_province_flag = byz_prov_1_to_dev
+						has_province_flag = byz_prov_to_dev
 					}
-					clr_province_flag = byz_prov_1_to_dev 
+					clr_province_flag = byz_prov_to_dev 
 				}
 			}
 			
@@ -879,7 +889,7 @@ byz_reconquest_1 = {
 						region = balkan_region
 						owned_by = TUR
 					}
-					add_nationalism = 30 #This effect is apparently modified by country modifiers. Thus, expect Ottomans to get only 20 years of separatism since they start as Conqueror personality and have years of separatism from some Misc change somewhere I can't recall.
+					add_nationalism = 20 #This used to be 30, but apparently vanilla had a hardcap of +10 nationalism added through effect in a defines entry. This is changed to +30 in 1.35, which would in theory make the lands act as if they were newly conquered. That is a bit harsh, so I'm pushing it down to +20.
 				}
 			}
 		}
@@ -1469,7 +1479,7 @@ byz_development_1 = {
 	has_country_shield = yes
 	
 	byz_restore_city_of_cities = { #Restore the City of Cities
-		icon = mission_constantinople
+		icon = take_constantinople
 		position = 8 #5-8
 		required_missions = { byz_resurgent }
 		
@@ -1479,11 +1489,11 @@ byz_development_1 = {
 		
 		trigger = {
 			151 = {
-				development = 75
 				if = {
 					limit = {
 						has_dlc = "Leviathan"
 					}
+					development = 75 #Because this is the capital and dev in capital in Leviathan is craycray
 					OR = {
 						has_great_project = {
 							type = hagia_sophia
@@ -1494,6 +1504,10 @@ byz_development_1 = {
 							tier = 3
 						}
 					}
+					num_of_times_expanded_infrastructure = 2
+				}
+				else = {
+					development = 50
 				}
 			}
 		}
@@ -1537,7 +1551,7 @@ byz_development_1 = {
 					}
 				}
 			}
-			add_prestige = 35
+			add_prestige_or_monarch_power = { amount = 35 }
 			add_legitimacy = 35
 			if = {
 				limit = { has_dlc = "Mandate of Heaven"	}
@@ -1561,7 +1575,16 @@ byz_development_1 = {
 		
 		trigger = {
 			148 = {
-				development = 30
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					development = 30
+					num_of_times_expanded_infrastructure = 2
+				}
+				else = {
+					development = 25
+				}
 			}
 		}
 		
@@ -1700,6 +1723,10 @@ byz_innovative_1 = {
 		
 		effect = {
 			change_government_reform_progress = 60
+			country_event_with_insight = {
+				id = resurgent_BYZ.38
+				insight_tooltip = byz_new_renaissance_event_insight
+			}
 		}
 		
 		ai_weight = {
@@ -2065,6 +2092,11 @@ byz_themes_1 = {
 		required_missions = { byz_anatolian_restoration byz_fortify_armenia byz_rebuild_armenia }
 		
 		provinces_to_highlight = {
+			OR = {
+				province_group = byz_reclaim_anatolia_provinces
+				province_group = byz_reconquer_west_anatolia_provinces
+			}
+			NOT = { estate_generals_is_theme_capital_trigger = yes }
 		}
 		
 		trigger = {
@@ -2098,7 +2130,7 @@ byz_themes_1 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+					set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 				}
 				random_owned_province = { #RandProv 2
 					limit = {
@@ -2107,14 +2139,14 @@ byz_themes_1 = {
 							province_group = byz_reconquer_west_anatolia_provinces
 						}
 						estate_generals_is_theme_capital_trigger = yes
-						NOT = { #To prevent picking Ancyra
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+						NOT = { 
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+					set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 				}
 				random_owned_province = { #RandProv 3
 					limit = {
@@ -2123,15 +2155,14 @@ byz_themes_1 = {
 							province_group = byz_reconquer_west_anatolia_provinces
 						}
 						estate_generals_is_theme_capital_trigger = yes
-						NOT = { #To prevent picking Ancyra
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+						NOT = { 
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+					set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 				}
 				random_owned_province = { #RandProv 4
 					limit = {
@@ -2140,16 +2171,14 @@ byz_themes_1 = {
 							province_group = byz_reconquer_west_anatolia_provinces
 						}
 						estate_generals_is_theme_capital_trigger = yes
-						NOT = { #To prevent picking Ancyra
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+						NOT = { 
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_4_to_dev #To prevent same province picked twice in practice
+					set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 				}
 				random_owned_province = { #RandProv 5
 					limit = {
@@ -2158,11 +2187,8 @@ byz_themes_1 = {
 							province_group = byz_reconquer_west_anatolia_provinces
 						}
 						estate_generals_is_theme_capital_trigger = yes
-						NOT = { #To prevent picking Ancyra
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_4_to_dev #To prevent same province picked twice in practice
+						NOT = { 
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
@@ -2172,27 +2198,9 @@ byz_themes_1 = {
 				every_owned_province = { #Clearing the flags above.
 					if = {
 						limit = {
-							has_province_flag = byz_prov_1_to_dev
+							has_province_flag = byz_prov_to_dev
 						}
-						clr_province_flag = byz_prov_1_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_2_to_dev
-						}
-						clr_province_flag = byz_prov_2_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_3_to_dev
-						}
-						clr_province_flag = byz_prov_3_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_4_to_dev
-						}
-						clr_province_flag = byz_prov_4_to_dev 
+						clr_province_flag = byz_prov_to_dev 
 					}
 				}
 			}
@@ -2295,7 +2303,7 @@ byz_themes_1 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+					set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 				}
 				random_owned_province = { #RandProv 2
 					limit = {
@@ -2305,14 +2313,14 @@ byz_themes_1 = {
 							area = thrace_area
 						}
 						estate_generals_is_theme_capital_trigger = yes
-						NOT = { #To prevent picking Ancyra
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+						NOT = { 
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+					set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 				}
 				random_owned_province = { #RandProv 3
 					limit = {
@@ -2322,9 +2330,8 @@ byz_themes_1 = {
 							area = thrace_area
 						}
 						estate_generals_is_theme_capital_trigger = yes
-						NOT = { #To prevent picking Ancyra
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+						NOT = { 
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
@@ -2334,15 +2341,9 @@ byz_themes_1 = {
 				every_owned_province = { #Clearing the flags above.
 					if = {
 						limit = {
-							has_province_flag = byz_prov_1_to_dev
+							has_province_flag = byz_prov_to_dev
 						}
-						clr_province_flag = byz_prov_1_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_2_to_dev
-						}
-						clr_province_flag = byz_prov_2_to_dev 
+						clr_province_flag = byz_prov_to_dev 
 					}
 				}
 			}
@@ -2533,7 +2534,7 @@ byz_themes_2 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_1_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = {
 					limit = {
@@ -2545,13 +2546,13 @@ byz_themes_2 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_2_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 3
 					limit = {
@@ -2563,14 +2564,13 @@ byz_themes_2 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_3_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 4
 					limit = {
@@ -2582,9 +2582,7 @@ byz_themes_2 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
@@ -2594,21 +2592,9 @@ byz_themes_2 = {
 				every_owned_province = {  #Clearing the flags above.
 					if = {
 						limit = {
-							has_province_flag = byz_prov_1_to_dev
+							has_province_flag = byz_prov_to_dev
 						}
-						clr_province_flag = byz_prov_1_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_2_to_dev
-						}
-						clr_province_flag = byz_prov_2_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_3_to_dev
-						}
-						clr_province_flag = byz_prov_3_to_dev 
+						clr_province_flag = byz_prov_to_dev 
 					}
 				}
 			}
@@ -2689,7 +2675,7 @@ byz_venice_1 = {
 		}
 		
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_adm_power = 100
 			country_event = { id = flavor_byz.1 }
 			112 = {
@@ -2771,7 +2757,7 @@ byz_balkan_2 = {
 	}
 	
 	byz_balkan_hegemony = { #Balkan Hegemony
-		icon = mission_balkan_hegemon
+		icon = mission_balkan_conquest
 		position = 17 #3-17
 		required_missions = { byz_subjugate_serbia }
 		
@@ -2897,7 +2883,7 @@ byz_east_1 = {
 					culture = armenian
 				}
 				add_base_manpower = 2
-				set_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+				set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 			}
 			random_owned_province = { #RandProv 2
 				limit = {
@@ -2907,11 +2893,11 @@ byz_east_1 = {
 					}
 					culture = armenian
 					NOT = {
-						has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 					}
 				}
 				add_base_manpower = 2
-				set_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+				set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 			}
 			random_owned_province = { #RandProv 3
 				limit = {
@@ -2921,12 +2907,11 @@ byz_east_1 = {
 					}
 					culture = armenian
 					NOT = {
-						has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-						has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 					}
 				}
 				add_base_manpower = 2
-				set_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+				set_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 			}
 			random_owned_province = { #RandProv 4
 				limit = {
@@ -2936,9 +2921,7 @@ byz_east_1 = {
 					}
 					culture = armenian
 					NOT = {
-						has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-						has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-						has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+						has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 					}
 				}
 				add_base_manpower = 2
@@ -2946,21 +2929,9 @@ byz_east_1 = {
 			hidden_effect = { #Clearing the flags above.
 				every_owned_province = {
 					limit = {
-						has_province_flag = byz_prov_1_to_dev
+						has_province_flag = byz_prov_to_dev
 					}
-					clr_province_flag = byz_prov_1_to_dev 
-				}
-				every_owned_province = {
-					limit = {
-						has_province_flag = byz_prov_2_to_dev
-					}
-					clr_province_flag = byz_prov_2_to_dev 
-				}
-				every_owned_province = {
-					limit = {
-						has_province_flag = byz_prov_3_to_dev
-					}
-					clr_province_flag = byz_prov_3_to_dev 
+					clr_province_flag = byz_prov_to_dev 
 				}
 			}
 			
@@ -2977,7 +2948,7 @@ byz_east_1 = {
 	}
 	
 	byz_north_mesopotamia = { #Into Upper Mesopotamia
-		icon = mission_mesopotamia
+		icon = mission_mesopotamia_plain
 		position = 15 #5-15
 		required_missions = { byz_conquer_armenia_major }
 		
@@ -3065,13 +3036,166 @@ byz_east_1 = {
 			factor = 500	#AI gogo!
 		}
 	}
+}
+
+byz_themes_7 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
 	
-	#TODO: Put Mesopotamian theme mission in-between, split branches
-	
-	byz_establish_indian_trade_company = { #Coast of India
-		icon = mission_establish_high_seas_navy
+	byz_mesopotamian_themes = { #New in BR 8.0
+		icon = mission_singara
 		position = 17 #5-17
 		required_missions = { byz_south_mesopotamia }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_group = byz_conquer_armenia_major_provinces
+				province_group = byz_north_mesopotamia_provinces
+				province_group = byz_south_mesopotamia_provinces
+			}
+			NOT = {
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+		
+		trigger = {
+			calc_true_if = {
+				desc = byz_theme_system_tooltip
+				byz_conquer_armenia_major_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_north_mesopotamia_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_south_mesopotamia_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				amount = 10
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byz_mesopotamian_themes_development_tooltip
+			hidden_effect = {
+				random_owned_province = { #RandProv 1
+					limit = {
+						OR = {
+							province_group = byz_conquer_armenia_major_provinces
+							province_group = byz_north_mesopotamia_provinces
+							province_group = byz_south_mesopotamia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 2
+					limit = {
+						OR = {
+							province_group = byz_conquer_armenia_major_provinces
+							province_group = byz_north_mesopotamia_provinces
+							province_group = byz_south_mesopotamia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 3
+					limit = {
+						OR = {
+							province_group = byz_conquer_armenia_major_provinces
+							province_group = byz_north_mesopotamia_provinces
+							province_group = byz_south_mesopotamia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 4
+					limit = {
+						OR = {
+							province_group = byz_conquer_armenia_major_provinces
+							province_group = byz_north_mesopotamia_provinces
+							province_group = byz_south_mesopotamia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 5
+					limit = {
+						OR = {
+							province_group = byz_conquer_armenia_major_provinces
+							province_group = byz_north_mesopotamia_provinces
+							province_group = byz_south_mesopotamia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				every_owned_province = {  #Clearing the flags above.
+					if = {
+						limit = {
+							has_province_flag = byz_prov_to_dev
+						}
+						clr_province_flag = byz_prov_to_dev 
+					}
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_india_1 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_establish_indian_trade_company = { #Coast of India
+		icon = mission_bengal_entrepot
+		position = 18 #5-18
+		required_missions = { byz_mesopotamian_themes }
 		
 		provinces_to_highlight = {
 			superregion = india_superregion
@@ -3459,7 +3583,7 @@ byz_egypt_1 = {
 	}
 	
 	byz_upper_egypt = { #Conquer Upper Egypt
-		icon = mission_unite_home_region
+		icon = mission_egyptian_mamluk_soldier
 		position = 21 #2-21
 		required_missions = { byz_lower_egypt }
 		
@@ -3496,7 +3620,7 @@ byz_themes_3 = {
 	has_country_shield = yes
 	
 	byz_themes_of_syria_palestina = { #New in BR 8.0
-		icon = mission_singara
+		icon = mission_mobene
 		position = 20 #1-20
 		required_missions = { byz_arabia }
 		
@@ -3562,7 +3686,7 @@ byz_themes_3 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_1_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = {
 					limit = {
@@ -3573,13 +3697,13 @@ byz_themes_3 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_2_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 3
 					limit = {
@@ -3590,8 +3714,7 @@ byz_themes_3 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
@@ -3601,15 +3724,9 @@ byz_themes_3 = {
 				every_owned_province = {  #Clearing the flags above.
 					if = {
 						limit = {
-							has_province_flag = byz_prov_1_to_dev
+							has_province_flag = byz_prov_to_dev
 						}
-						clr_province_flag = byz_prov_1_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_2_to_dev
-						}
-						clr_province_flag = byz_prov_2_to_dev 
+						clr_province_flag = byz_prov_to_dev 
 					}
 				}
 			}
@@ -3619,6 +3736,84 @@ byz_themes_3 = {
 			factor = 500	#AI gogo!
 		}
 	}
+}
+
+byz_tyrian_purple_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_tyrian_purple = { #New in BR 8.0
+		icon = mission_finest_carpets
+		position = 21 #1-21
+		required_missions = { byz_themes_of_syria_palestina }
+		
+		provinces_to_highlight = {
+			OR = {
+				trade_goods = silk
+				trade_goods = dyes
+			}
+			owned_by = ROOT
+			NOT = {
+				has_production_building_trigger = yes
+				has_manufactory_trigger = yes
+			}
+		}
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = byz_tyrian_purple_tooltip
+				has_global_flag = byz_tyrian_purple_restored
+			}
+			trade_goods_produced_amount = {
+				trade_goods = silk
+				amount = 20 #This is 200 silk production dev, post-goods produced + production efficiency and manufactory stuff.
+			}
+			trading_bonus = {
+				trade_goods = silk
+				value = yes
+			}
+			trade_goods_produced_amount = {
+				trade_goods = dyes
+				amount = 10 #This is 100 dyes production dev, post-goods produced + production efficiency and manufactory stuff.
+			}
+			trading_bonus = {
+				trade_goods = dyes
+				value = yes
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byz_tyrian_purple_effect_tooltip
+			if = {
+				limit = {
+					has_global_flag = byz_tyrian_purple_expanded
+				}
+				clr_global_flag = byz_tyrian_purple_expanded
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						trade_goods = silk
+					}
+					add_base_tax = 2
+					add_base_production = 2
+				}
+				random_owned_province = {
+					limit = {
+						trade_goods = dyes
+					}
+					add_base_tax = 2
+					add_base_production = 2
+				}
+			}
+		}
+	}
+	
 }
 
 byz_egypt_2 = {
@@ -3669,7 +3864,7 @@ byz_egypt_3 = {
 	has_country_shield = yes
 	
 	byz_mediterranean_bread_basket = { #New in BR 8.0
-		icon = mission_desert
+		icon = mission_panis_quadratus
 		position = 22 #1-22
 		required_missions = { byz_upper_egypt }
 		
@@ -3779,7 +3974,7 @@ byz_themes_5 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_1_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = {
 					limit = {
@@ -3790,13 +3985,13 @@ byz_themes_5 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_2_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 3
 					limit = {
@@ -3807,8 +4002,7 @@ byz_themes_5 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
@@ -3818,15 +4012,9 @@ byz_themes_5 = {
 				every_owned_province = {  #Clearing the flags above.
 					if = {
 						limit = {
-							has_province_flag = byz_prov_1_to_dev
+							has_province_flag = byz_prov_to_dev
 						}
-						clr_province_flag = byz_prov_1_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_2_to_dev
-						}
-						clr_province_flag = byz_prov_2_to_dev 
+						clr_province_flag = byz_prov_to_dev 
 					}
 				}
 			}
@@ -3848,7 +4036,7 @@ byz_africa_1 = {
 	has_country_shield = yes
 	
 	byz_tripolitania = { #Tripolitana will be ours!
-		icon = mission_early_game_buildings
+		icon = mission_conquer_tunisia
 		position = 24 #1-24
 		required_missions = { byz_themes_of_egypt }
 		
@@ -3868,6 +4056,90 @@ byz_africa_1 = {
 		effect = {
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_africa }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	byz_conquer_numidia = { #Into Numidia!
+		icon = mission_control_the_barbary_coast
+		position = 26 #1-26
+		required_missions = { byz_africa }
+		
+		provinces_to_highlight = {
+			province_group = byz_numidia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_numidia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_east_mauretania }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_east_mauretania = { #East Mauretania shall be ours!
+		icon = mission_conquer_algiers
+		position = 27 #1-27
+		required_missions = { byz_conquer_numidia }
+		
+		provinces_to_highlight = {
+			province_group = byz_east_mauretania_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_east_mauretania_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_west_mauretania }
+			give_permaclaims_for_mission = { mission=byz_baetica }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_west_mauretania = { #Finalize our African conquests!
+		icon = mission_moroccan_ports
+		position = 28 #1-28
+		required_missions = { byz_east_mauretania }
+		
+		provinces_to_highlight = {
+			province_group = byz_west_mauretania_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_west_mauretania_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
 		}
 	
 		ai_weight = {
@@ -3935,7 +4207,7 @@ byz_themes_4 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_1_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = {
 					limit = {
@@ -3946,13 +4218,13 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_2_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 3
 					limit = {
@@ -3963,14 +4235,13 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_3_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 4
 					limit = {
@@ -3981,9 +4252,7 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
@@ -3993,21 +4262,9 @@ byz_themes_4 = {
 				every_owned_province = {  #Clearing the flags above.
 					if = {
 						limit = {
-							has_province_flag = byz_prov_1_to_dev
+							has_province_flag = byz_prov_to_dev
 						}
-						clr_province_flag = byz_prov_1_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_2_to_dev
-						}
-						clr_province_flag = byz_prov_2_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_3_to_dev
-						}
-						clr_province_flag = byz_prov_3_to_dev 
+						clr_province_flag = byz_prov_to_dev 
 					}
 				}
 			}
@@ -4074,7 +4331,7 @@ byz_themes_4 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_1_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 2
 					limit = {
@@ -4086,13 +4343,13 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_2_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 3
 					limit = {
@@ -4104,14 +4361,13 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_3_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 4
 					limit = {
@@ -4123,15 +4379,13 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_4_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 5
 					limit = {
@@ -4143,16 +4397,13 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_4_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_5_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 6
 					limit = {
@@ -4164,17 +4415,13 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_4_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_5_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_6_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 7
 					limit = {
@@ -4186,18 +4433,13 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_4_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_5_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_6_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_7_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 8
 					limit = {
@@ -4209,13 +4451,7 @@ byz_themes_4 = {
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_3_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_4_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_5_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_6_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_7_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
@@ -4225,45 +4461,9 @@ byz_themes_4 = {
 				every_owned_province = {  #Clearing the flags above.
 					if = {
 						limit = {
-							has_province_flag = byz_prov_1_to_dev
+							has_province_flag = byz_prov_to_dev
 						}
-						clr_province_flag = byz_prov_1_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_2_to_dev
-						}
-						clr_province_flag = byz_prov_2_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_3_to_dev
-						}
-						clr_province_flag = byz_prov_3_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_4_to_dev
-						}
-						clr_province_flag = byz_prov_4_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_5_to_dev
-						}
-						clr_province_flag = byz_prov_5_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_6_to_dev
-						}
-						clr_province_flag = byz_prov_6_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_7_to_dev
-						}
-						clr_province_flag = byz_prov_7_to_dev 
+						clr_province_flag = byz_prov_to_dev 
 					}
 				}
 			}
@@ -4287,7 +4487,7 @@ byz_unite_orthodox_2 = {
 	has_country_shield = yes
 	
 	byz_east_oriental_schism = { #Copied over from Pentarchy, adjusted to become 
-		icon = mission_empire
+		icon = mission_etchmiadzin
 		position = 23 #2-23
 		required_missions = {}
 		provinces_to_highlight = {
@@ -4373,7 +4573,7 @@ byz_unite_orthodox_2 = {
 					}
 				}
 			}
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = {
 					NOT = {
@@ -4394,6 +4594,46 @@ byz_unite_orthodox_2 = {
 	}
 }
 
+byz_religious_4 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+		religion_group = christian
+	}
+	has_country_shield = yes
+	
+	byz_mecca_medina = { #Take the Holy Cities of Islam!
+		icon = mission_into_arabia
+		position = 24 #3-24
+		required_missions = { byz_east_oriental_schism }
+		
+		provinces_to_highlight = {
+			province_group = byz_mecca_medina_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_mecca_medina_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {			
+			#Misc
+			add_prestige_or_monarch_power = { amount = 20 }
+			add_patriarch_authority = 0.1
+		}
+	
+		ai_weight = {
+			factor = 0	#AI nogo!
+		}
+	}
+}
+
 byz_africa_2 = {
 	slot = 2
 	generic = no
@@ -4404,7 +4644,7 @@ byz_africa_2 = {
 	has_country_shield = yes
 	
 	byz_africa = { #Take Karchidon!
-		icon = mission_invade_island
+		icon = africa_proconsulare
 		position = 25 #2-25
 		required_missions = { byz_tripolitania }
 		
@@ -4432,7 +4672,7 @@ byz_africa_2 = {
 	}
 	
 	byz_sardinia_corsica = { #Sardinia & Corsica
-		icon = mission_galleys_in_port
+		icon = seize_sardinia
 		position = 26 #2-26
 		required_missions = { byz_africa }
 		
@@ -4450,6 +4690,8 @@ byz_africa_2 = {
 		}
 		
 		effect = {
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_baleares }
 		}
 	
 		ai_weight = {
@@ -4458,49 +4700,8 @@ byz_africa_2 = {
 	}
 }
 
-
-byz_religious_4 = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		tag = BYZ
-		religion_group = christian
-	}
-	has_country_shield = yes
-	
-	byz_mecca_medina = { #Take the Holy Cities of Islam!
-		icon = mission_mosque
-		position = 24 #3-24
-		required_missions = { byz_east_oriental_schism }
-		
-		provinces_to_highlight = {
-			province_group = byz_mecca_medina_provinces
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		
-		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=byz_mecca_medina_provinces
-				owner_type=country_or_non_sovereign_subject_holds
-			}
-		}
-		
-		effect = {			
-			#Misc
-			add_prestige = 20
-			add_patriarch_authority = 0.1
-		}
-	
-		ai_weight = {
-			factor = 0	#AI nogo!
-		}
-	}
-}
-
 byz_themes_6 = {
-	slot = 3
+	slot = 1
 	generic = no
 	ai = yes
 	potential = {
@@ -4508,16 +4709,18 @@ byz_themes_6 = {
 	}
 	has_country_shield = yes
 	
-	byz_roman_african_themes = { #New in BR 8.0	#This might get moved later as the rest of the African conquests are re-added.
+	byz_roman_african_themes = { #New in BR 8.0
 		icon = mission_ounga_fort
-		position = 27 #3-27
-		required_missions = { byz_sardinia_corsica }
+		position = 29 #1-29
+		required_missions = { byz_west_mauretania }
 		
 		provinces_to_highlight = {
 			OR = {
 				province_group = byz_tripolitania_provinces
 				province_group = byz_africa_provinces
 				province_group = byz_sardinia_corsica_provinces
+				province_group = byz_east_mauretania_provinces
+				province_group = byz_west_mauretania_provinces
 			}
 			NOT = {
 				estate_generals_is_theme_capital_trigger = yes
@@ -4539,11 +4742,36 @@ byz_themes_6 = {
 					type = all
 					estate_generals_is_theme_capital_trigger = yes
 				}
+				byz_east_mauretania_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_west_mauretania_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
 				amount = 6
 			}
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					341 = {
+						owned_by = KCD
+					}
+				}
+				341 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				341 = {
+					change_culture = karchidoniac
+				}
+			}
 			custom_tooltip = byz_roman_african_themes_development_tooltip
 			hidden_effect = {
 				random_owned_province = {
@@ -4552,13 +4780,15 @@ byz_themes_6 = {
 							province_group = byz_tripolitania_provinces
 							province_group = byz_africa_provinces
 							province_group = byz_sardinia_corsica_provinces
+							province_group = byz_east_mauretania_provinces
+							province_group = byz_west_mauretania_provinces
 						}
 						estate_generals_is_theme_capital_trigger = yes
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_1_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = {
 					limit = {
@@ -4566,16 +4796,18 @@ byz_themes_6 = {
 							province_group = byz_tripolitania_provinces
 							province_group = byz_africa_provinces
 							province_group = byz_sardinia_corsica_provinces
+							province_group = byz_east_mauretania_provinces
+							province_group = byz_west_mauretania_provinces
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					set_province_flag = byz_prov_2_to_dev
+					set_province_flag = byz_prov_to_dev
 				}
 				random_owned_province = { #RandProv 3
 					limit = {
@@ -4583,11 +4815,12 @@ byz_themes_6 = {
 							province_group = byz_tripolitania_provinces
 							province_group = byz_africa_provinces
 							province_group = byz_sardinia_corsica_provinces
+							province_group = byz_east_mauretania_provinces
+							province_group = byz_west_mauretania_provinces
 						}
 						estate_generals_is_theme_capital_trigger = yes
 						NOT = {
-							has_province_flag = byz_prov_1_to_dev #To prevent same province picked twice in practice
-							has_province_flag = byz_prov_2_to_dev #To prevent same province picked twice in practice
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
 						}
 					}
 					add_base_tax = 1
@@ -4597,15 +4830,9 @@ byz_themes_6 = {
 				every_owned_province = {  #Clearing the flags above.
 					if = {
 						limit = {
-							has_province_flag = byz_prov_1_to_dev
+							has_province_flag = byz_prov_to_dev
 						}
-						clr_province_flag = byz_prov_1_to_dev 
-					}
-					if = {
-						limit = {
-							has_province_flag = byz_prov_2_to_dev
-						}
-						clr_province_flag = byz_prov_2_to_dev 
+						clr_province_flag = byz_prov_to_dev 
 					}
 				}
 			}	
@@ -4628,7 +4855,7 @@ byz_unite_orthodox_1 = {
 	has_country_shield = yes
 	
 	the_pentarchy = { #From vanilla Byzantine Missions, but modified slightly to require them being your religion as well.
-		icon = mission_etchmiadzin
+		icon = new_st_peters_basilica
 		position = 23 #4-23
 		required_missions = {}
 		
@@ -4911,7 +5138,6 @@ byz_italy_5 = {
 	}
 	has_country_shield = yes
 	
-	
 	byz_italian_restoration = { #New in BR 8.0
 		icon = mission_roman_laurel_wreath
 		position = 25 #4-25
@@ -5147,12 +5373,2420 @@ byz_italy_4 = {
 	}
 }
 
+byz_exarch_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_establish_exarches = {
+		icon = mission_mare_nostrum
+		position = 27 #4-27
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			has_reform = exarch_system_reform
+			is_subject = no
+		}
+		
+		effect = {
+			add_prestige_or_monarch_power = { amount = 20 }
+			
+			#Claims
+			# give_permaclaims_for_mission = { mission=byz_numidia }
+			# give_permaclaims_for_mission = { mission=byz_baleares }
+			# give_permaclaims_for_mission = { mission=byz_pannonia }
+			# give_permaclaims_for_mission = { mission=byz_conquer_media }
+			
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_exarchate_of_africa = { #New in BR 8.0
+		icon = mission_african_exarch
+		position = 28 #4-28
+		required_missions = { byz_establish_exarches }
+		
+		provinces_to_highlight = {
+			province_id = 341
+		}
+		
+		trigger = {
+			OR = {
+				KCD = {
+					exists = yes
+					is_subject_of_type = byz_exarch
+					is_subject_of = ROOT
+					total_development = 600
+				}
+				341 = {
+					development = 50
+					is_state = yes
+					is_state_core = ROOT
+					if = {
+						limit = {
+							has_dlc = "Leviathan"
+						}
+						num_of_times_expanded_infrastructure = 1 
+					}
+					else = {
+						num_of_buildings_in_province = 5
+					}
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byz_exarchate_of_africa_1
+			tooltip = {
+				KCD = {
+					add_liberty_desire = -50
+					add_country_modifier = {
+						name = "byz_exarchate"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = byz_exarchate_of_africa_2
+			tooltip = {
+				341 = {
+					custom_tooltip = byz_establish_exarch_seat_tooltip
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						KCD = {
+							exists = yes
+							is_subject_of_type = byz_exarch
+							is_subject_of = ROOT
+							total_development = 600
+						}
+					}
+					KCD = {
+						add_liberty_desire = -50
+						add_country_modifier = {
+							name = "byz_exarchate"
+							duration = -1
+						}
+					}
+				}
+				else = {
+					341 = {
+						add_province_triggered_modifier = exarch_seat_modifier_med_dev
+						add_province_triggered_modifier = exarch_seat_modifier_high_dev
+						add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
+					}
+				}
+			}
+			
+			
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+		
+	}
+}
 
+byz_exarch_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_egyptian_exarch = { #New in BR 8.0
+		icon = mission_exarch_of_egypt
+		position = 28 #3-28
+		required_missions = { byz_establish_exarches }
+		
+		provinces_to_highlight = {
+			province_id = 341
+		}
+		
+		trigger = {
+			OR = {
+				AEG = {
+					exists = yes
+					is_subject_of_type = byz_exarch
+					is_subject_of = ROOT
+					total_development = 600
+				}
+				358 = {
+					development = 50
+					is_state = yes
+					is_state_core = ROOT
+					if = {
+						limit = {
+							has_dlc = "Leviathan"
+						}
+						num_of_times_expanded_infrastructure = 1 
+					}
+					else = {
+						num_of_buildings_in_province = 5
+					}
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byz_egyptian_exarch_1
+			tooltip = {
+				AEG = {
+					add_liberty_desire = -50
+					add_country_modifier = {
+						name = "byz_exarchate"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = byz_egyptian_exarch_2
+			tooltip = {
+				358 = {
+					custom_tooltip = byz_establish_exarch_seat_tooltip
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						AEG = {
+							exists = yes
+							is_subject_of_type = byz_exarch
+							is_subject_of = ROOT
+							total_development = 600
+						}
+					}
+					AEG = {
+						add_liberty_desire = -50
+						add_country_modifier = {
+							name = "byz_exarchate"
+							duration = -1
+						}
+					}
+				}
+				else = {
+					358 = {
+						add_province_triggered_modifier = exarch_seat_modifier_med_dev
+						add_province_triggered_modifier = exarch_seat_modifier_high_dev
+						add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
+					}
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
 
+byz_exarch_3 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_exarch_ravenna = { #New in BR 8.0
+		icon = mission_italian_exarch
+		position = 28 #5-28
+		required_missions = { byz_establish_exarches }
+		
+		provinces_to_highlight = {
+			province_id = 114
+		}
+		
+		trigger = {
+			OR = {
+				RVN = {
+					exists = yes
+					is_subject_of_type = byz_exarch
+					is_subject_of = ROOT
+					total_development = 600
+				}
+				114 = {
+					development = 50
+					is_state = yes
+					is_state_core = ROOT
+					if = {
+						limit = {
+							has_dlc = "Leviathan"
+						}
+						num_of_times_expanded_infrastructure = 1 
+					}
+					else = {
+						num_of_buildings_in_province = 5
+					}
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byz_exarch_ravenna_1
+			tooltip = {
+				RVN = {
+					add_liberty_desire = -50
+					add_country_modifier = {
+						name = "byz_exarchate"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = byz_exarch_ravenna_2
+			114 = {
+				custom_tooltip = byz_establish_exarch_seat_tooltip
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						RVN = {
+							exists = yes
+							is_subject_of_type = byz_exarch
+							is_subject_of = ROOT
+							total_development = 600
+						}
+					}
+					RVN = {
+						add_liberty_desire = -50
+						add_country_modifier = {
+							name = "byz_exarchate"
+							duration = -1
+						}
+					}
+				}
+				else = {
+					114 = {
+						add_province_triggered_modifier = exarch_seat_modifier_med_dev
+						add_province_triggered_modifier = exarch_seat_modifier_high_dev
+						add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
+					}
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
 
+byz_estates_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_emperor_of_romans = { #New in BR 8.0
+		icon = balance_the_estates
+		position = 29 #4-29
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			absolutism = 50
+			crown_land_share = 80
+			NOT = {
+				estate_influence = {
+					estate = all
+					influence = 40
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = byz_emperor_and_autocrat_of_the_romans
+				duration = -1
+			}
+			custom_tooltip = byz_emperor_of_romans_tooltip
+			set_country_flag = byz_generals_no_absolutism_privilege_cost
+		}
+	}
+}
 
+byz_iberia_1 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_baleares = {
+		icon = mission_rb_mediterranean_authority
+		position = 28 #2-28
+		required_missions = { byz_sardinia_corsica }
+		
+		provinces_to_highlight = {
+			province_group = byz_baleares_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_baleares_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_tarraconia }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
 
+	byz_tarraconia = {
+		icon = mission_tarragona_aqueduct
+		position = 30 #2-30
+		required_missions = { byz_baleares }
+		
+		provinces_to_highlight = {
+			province_group = byz_tarraconia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_tarraconia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_narbonia }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
 
+byz_iberia_2 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_baetica = { #Into Baetica!
+		icon = mission_retake_ceuta
+		position = 30 #1-30	
+		required_missions = { byz_roman_african_themes }
+		
+		provinces_to_highlight = {
+			province_group = byz_baetica_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_baetica_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_lusitania }
+			give_permaclaims_for_mission = { mission=byz_karchidonia }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_lusitania = { #Take Lusitania!
+		icon = mission_portuguese_interference
+		position = 31 #1-31
+		required_missions = { byz_baetica }
+		
+		provinces_to_highlight = {
+			province_group = byz_lusitania_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_lusitania_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_galicia }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
 
+byz_iberia_3 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_karchidonia = { #The New Karchidon
+		icon = mission_cartagena_theatre
+		position = 31 #2-31
+		required_missions = { byz_baetica }
+		
+		provinces_to_highlight = {
+			province_group = byz_karchidonia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_karchidonia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
+	byz_galicia = { #Finalize Iberian Conquests with Galicia!
+		icon = mission_hercules_tower
+		position = 32 #2-32
+		required_missions = { byz_lusitania byz_karchidonia }
+		
+		provinces_to_highlight = {
+			province_group = byz_galicia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_galicia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {	
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_themes_8 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_themes_of_hesperia = { #New in BR 8.0
+		icon = mission_lugo_walls
+		position = 33 #1-33
+		required_missions = { byz_galicia }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_group = byz_baleares_provinces
+				province_group = byz_tarraconia_provinces
+				province_group = byz_baetica_provinces
+				province_group = byz_lusitania_provinces
+				province_group = byz_karchidonia_provinces
+				province_group = byz_galicia_provinces
+			}
+			NOT = {
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+		
+		trigger = {
+			calc_true_if = {
+				desc = byz_theme_system_tooltip
+				byz_baleares_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_tarraconia_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_baetica_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_lusitania_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_karchidonia_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_galicia_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				amount = 16
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					3099 = {
+						owned_by = HSP
+					}
+				}
+				3099 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				3099 = {
+					change_culture = hesperic
+				}
+			}
+			custom_tooltip = byz_themes_of_hesperia_development_tooltip
+			hidden_effect = {
+				random_owned_province = { #RandProv 1
+					limit = {
+						OR = {
+							province_group = byz_baleares_provinces
+							province_group = byz_tarraconia_provinces
+							province_group = byz_baetica_provinces
+							province_group = byz_lusitania_provinces
+							province_group = byz_karchidonia_provinces
+							province_group = byz_galicia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 2
+					limit = {
+						OR = {
+							province_group = byz_baleares_provinces
+							province_group = byz_tarraconia_provinces
+							province_group = byz_baetica_provinces
+							province_group = byz_lusitania_provinces
+							province_group = byz_karchidonia_provinces
+							province_group = byz_galicia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 3
+					limit = {
+						OR = {
+							province_group = byz_baleares_provinces
+							province_group = byz_tarraconia_provinces
+							province_group = byz_baetica_provinces
+							province_group = byz_lusitania_provinces
+							province_group = byz_karchidonia_provinces
+							province_group = byz_galicia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 4
+					limit = {
+						OR = {
+							province_group = byz_baleares_provinces
+							province_group = byz_tarraconia_provinces
+							province_group = byz_baetica_provinces
+							province_group = byz_lusitania_provinces
+							province_group = byz_karchidonia_provinces
+							province_group = byz_galicia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 5
+					limit = {
+						OR = {
+							province_group = byz_baleares_provinces
+							province_group = byz_tarraconia_provinces
+							province_group = byz_baetica_provinces
+							province_group = byz_lusitania_provinces
+							province_group = byz_karchidonia_provinces
+							province_group = byz_galicia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 6
+					limit = {
+						OR = {
+							province_group = byz_baleares_provinces
+							province_group = byz_tarraconia_provinces
+							province_group = byz_baetica_provinces
+							province_group = byz_lusitania_provinces
+							province_group = byz_karchidonia_provinces
+							province_group = byz_galicia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 7
+					limit = {
+						OR = {
+							province_group = byz_baleares_provinces
+							province_group = byz_tarraconia_provinces
+							province_group = byz_baetica_provinces
+							province_group = byz_lusitania_provinces
+							province_group = byz_karchidonia_provinces
+							province_group = byz_galicia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 8
+					limit = {
+						OR = {
+							province_group = byz_baleares_provinces
+							province_group = byz_tarraconia_provinces
+							province_group = byz_baetica_provinces
+							province_group = byz_lusitania_provinces
+							province_group = byz_karchidonia_provinces
+							province_group = byz_galicia_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				every_owned_province = {  #Clearing the flags above.
+					if = {
+						limit = {
+							has_province_flag = byz_prov_to_dev
+						}
+						clr_province_flag = byz_prov_to_dev 
+					}
+				}
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_iberia_4 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_mineral_towns = { #New in BR 8.0
+		icon = mission_las_medulas
+		position = 34 #1-34
+		required_missions = { byz_themes_of_hesperia }
+		
+		provinces_to_highlight = {
+			
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = iberia_region
+				base_production = 10
+				OR = { #There are a total of 8 iron provinces, 1 gold province and 3 copper provinces, plus 4 additional coal provinces later on (One which is an iron one), totalling 15 potential provinces to get 10 production in.
+					trade_goods = copper
+					trade_goods = iron
+					trade_goods = gold
+					trade_goods = coal
+				}
+				amount = 10
+			}
+		}
+		
+		effect = {
+			#Iberian Pyrite Belt
+			8074 = { #Silver in these mountains
+				change_trade_goods = gold
+			}
+			8072 = { #A bunch of zinc and copper as well
+				change_trade_goods = copper
+			}
+			#Galician Gold
+			8039 = { #Contains a village that literally has a museum of Roman gold mining and practice Roman mining techniques for sport.
+				change_trade_goods = gold
+			}
+		}
+	}
+		
+	byz_supply_of_wine = { #New in BR 8.0
+		icon = mission_grapes
+		position = 35 #1-35
+		required_missions = { byz_mineral_towns }
+		
+		provinces_to_highlight = {
+			
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = iberia_region
+				OR = {
+					trade_goods = wine
+					trade_goods = bt_trade_good_fruit
+				}
+				has_building = farm_estate 
+				amount = 25 #I count 20 wine, 13 fruits.
+			}
+			trade_goods_produced_amount = {
+				trade_goods = wine
+				amount = 40 #This corresponds to 400 production dev in iron provinces. That should not be a problem.
+			}
+			trading_bonus = {
+				trade_goods = wine
+				value = yes
+			}
+		}
+		
+		effect = {
+			
+		}
+		
+	}
+		
+	byz_iberian_coal = { #New in BR 8.0
+		icon = mission_rb_build_furnaces
+		position = 36 #1-36
+		required_missions = { byz_supply_of_wine }
+		
+		provinces_to_highlight = {
+			
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = iberia_region
+				trade_goods = coal
+				has_building = furnace
+				amount = 3
+			}
+			trade_goods_produced_amount = {
+				trade_goods = coal
+				amount = 6 #This corresponds to 60 production dev in coal provinces. That should not be a problem.
+			}
+		}
+		
+		effect = {
+			
+		}
+	
+	}
+	
+}
+
+byz_exarch_4 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_exarch_hesperia = { #New in BR 8.0
+		icon = mission_hesperia_exarch
+		position = 34 #2-34
+		required_missions = { byz_themes_of_hesperia }
+		
+		provinces_to_highlight = {
+			province_id = 3099
+		}
+		
+		trigger = {
+			OR = {
+				HSP = {
+					exists = yes
+					is_subject_of_type = byz_exarch
+					is_subject_of = ROOT
+					total_development = 600
+				}
+				3099 = {
+					development = 50
+					is_state = yes
+					is_state_core = ROOT
+					if = {
+						limit = {
+							has_dlc = "Leviathan"
+						}
+						num_of_times_expanded_infrastructure = 1 
+					}
+					else = {
+						num_of_buildings_in_province = 5
+					}
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byz_exarch_hesperia_1
+			tooltip = {
+				HSP = {
+					add_liberty_desire = -50
+					add_country_modifier = {
+						name = "byz_exarchate"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = byz_exarch_hesperia_2
+			tooltip = {
+				3099 = {
+					custom_tooltip = byz_establish_exarch_seat_tooltip
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						HSP = {
+							exists = yes
+							is_subject_of_type = byz_exarch
+							is_subject_of = ROOT
+							total_development = 600
+						}
+					}
+					HSP = {
+						add_liberty_desire = -50
+						add_country_modifier = {
+							name = "byz_exarchate"
+							duration = -1
+						}
+					}
+				}
+				else = {
+					3099 = {
+						add_province_triggered_modifier = exarch_seat_modifier_med_dev
+						add_province_triggered_modifier = exarch_seat_modifier_high_dev
+						add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
+					}
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	
+	}
+}
+
+byz_colonial_1 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_search_for_atlantis = { #New in BR 8.0
+		icon = mission_look_west
+		position = 35 #2-35
+		required_missions = { byz_exarch_hesperia }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = obj_discover_america_tooltip
+				OR = {
+					north_america = { has_discovered = ROOT }
+					south_america = { has_discovered = ROOT }
+					new_world = { has_discovered = ROOT }
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_atlantis"
+				duration = 3650
+			}
+		}
+		
+	}
+		
+	byz_atlantean_colony = { #New in BR 8.0
+		icon = mission_atlantean_colony
+		position = 36 #2-36
+		required_missions = { byz_search_for_atlantis }
+		
+		provinces_to_highlight = {
+			OR = { #New World
+				superregion = north_america_superregion
+				superregion = central_america_superregion
+				superregion = south_america_superregion
+				superregion = andes_superregion
+			}
+			is_empty = yes
+			has_discovered = ROOT
+		}
+		
+		trigger = {
+			any_subject_country = {
+				is_colonial_nation = yes
+			}
+		}
+		
+		effect = {
+			random_subject_country = { #I had to do this. It's just too cool to not do.
+				limit = {
+					is_colonial_nation = yes
+				}
+				change_primary_culture = atlantean
+				every_owned_province = {
+					change_culture = atlantean
+				}
+			}
+			add_country_modifier = {
+				name = "byz_third_odyssey"
+				duration = 9125
+			}
+		}
+	}
+}
+
+byz_themes_9 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_north_galatian_themes = { #New in BR 8.0
+		icon = mission_jublains
+		position = 37 #2-37
+		required_missions = { byz_germania_minor }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_group = byz_lougdonia_provinces
+				province_group = byz_belgica_provinces
+				province_group = byz_germania_minor_provinces
+			}
+			NOT = {
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+		
+		trigger = {
+			calc_true_if = {
+				desc = byz_theme_system_tooltip
+				byz_lougdonia_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_belgica_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_germania_minor_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				amount = 20
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					80 = {
+						owned_by = GLT
+					}
+				}
+				80 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				80 = {
+					change_culture = galatian
+				}
+			}
+			custom_tooltip = byz_north_galatian_themes_development_tooltip
+			hidden_effect = {
+				random_owned_province = { #RandProv 1
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 2
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 3
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 4
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 5
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 6
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 7
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 8
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 9
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 10
+					limit = {
+						OR = {
+							province_group = byz_lougdonia_provinces
+							province_group = byz_belgica_provinces
+							province_group = byz_germania_minor_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				every_owned_province = {  #Clearing the flags above.
+					if = {
+						limit = {
+							has_province_flag = byz_prov_to_dev
+						}
+						clr_province_flag = byz_prov_to_dev 
+					}
+				}
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_galatia_1 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_narbonia = { #Get Narbonia
+		icon = toulon_dockyards
+		position = 31 #3-31
+		required_missions = { byz_tarraconia }
+		
+		provinces_to_highlight = {
+			province_group = byz_narbonia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_narbonia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_aquitania }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_aquitania = { #Into Aquitania!
+		icon = the_seven_provinces
+		position = 33 #3-33
+		required_missions = { byz_narbonia }
+		
+		provinces_to_highlight = {
+			province_group = byz_aquitania_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_aquitania_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_lougdonia }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_lougdonia = { #Lougdonia is next!
+		icon = mission_rb_conquer_brittany
+		position = 34 #3-34
+		required_missions = { byz_aquitania }
+		
+		provinces_to_highlight = {
+			province_group = byz_lougdonia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_lougdonia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_belgica }
+			give_permaclaims_for_mission = { mission=byz_albion }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_belgica = { #Get the lands of Belgica!
+		icon = king_of_the_franks
+		position = 35 #3-35
+		required_missions = { byz_lougdonia }
+		
+		provinces_to_highlight = {
+			province_group = byz_belgica_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_belgica_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_germania_minor }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_germania_minor = { #Finish off the Rhenus Border!
+		icon = mission_rhine
+		position = 36 #3-36
+		required_missions = { byz_belgica }
+		
+		provinces_to_highlight = {
+			province_group = byz_germania_minor_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_germania_minor_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {			
+			capital_scope = {
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 2
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_endgame = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_administrating_an_empire = { #New in BR 8.0
+		icon = mission_administrating_a_roman_empire
+		position = 38 #3-38
+		required_missions = { byz_germania_minor }
+		
+		provinces_to_highlight = {
+			owned_by = ROOT
+			#Honestly not sure how to do a good highlight for this mission. 
+			#If it's a state, you want it developed to a point. If it's not, you want to state it.
+			#There's also no trigger to check if you're above governing capacity.
+			#If there was, I could do some funky checks that, if you're below, target territories.
+			#If above, just dev existing ones, or something like that.
+		}
+		
+		trigger = {
+			development_in_provinces = {
+				value = 15000
+				is_state = yes
+				is_state_core = ROOT
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_empire_restored"
+				duration = -1
+			}
+		}
+	}
+}
+
+byz_hre_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_pannonia = { 
+		icon = danubian_power
+		position = 31 #4-31
+		required_missions = { byz_dismantle_hre }
+		
+		provinces_to_highlight = {
+			province_group = byz_pannonia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_pannonia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_danube_border_restored"
+				duration = 5475
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_hre_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	byz_dismantle_hre = { #Take down the false Empire!
+		icon = mission_dismantle_hre
+		position = 30 #5-30
+		required_missions = { byz_emperor_of_romans }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = restore_roman_empire_byzantium_dismantle_hre_tooltip
+				NOT = { hre_size = 1 }
+			}
+		}
+		
+		effect = {
+			add_permanent_power_projection = {
+				type = 25_permanent_power_projection
+				amount = 25
+			}
+			
+			#Claims
+			give_permaclaims_for_mission = { mission=byz_raetia_noricum }
+			give_permaclaims_for_mission = { mission=byz_pannonia }
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+	byz_raetia_noricum = { #Get Raetia & Noricum from the heathen Emperors!
+		icon = mission_rhine_gorge
+		position = 31 #5-31
+		required_missions = { byz_dismantle_hre }
+		
+		provinces_to_highlight = {
+			province_group = byz_raetia_noricum_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_raetia_noricum_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_european_ambition"
+				duration = 5475
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_themes_10 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_northern_themes = { #New in BR 8.0
+		icon = mission_saalburg_limes
+		position = 32 #4-32
+		required_missions = { byz_pannonia byz_raetia_noricum }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_group = byz_pannonia_provinces
+				province_group = byz_raetia_noricum_provinces
+			}
+			NOT = {
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+		
+		trigger = {
+			calc_true_if = {
+				desc = byz_theme_system_tooltip
+				byz_pannonia_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_raetia_noricum_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				amount = 10
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byz_northern_themes_development_tooltip
+			hidden_effect = {
+				random_owned_province = { #RandProv 1
+					limit = {
+						OR = {
+							province_group = byz_pannonia_provinces
+							province_group = byz_raetia_noricum_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 2
+					limit = {
+						OR = {
+							province_group = byz_pannonia_provinces
+							province_group = byz_raetia_noricum_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 3
+					limit = {
+						OR = {
+							province_group = byz_pannonia_provinces
+							province_group = byz_raetia_noricum_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 4
+					limit = {
+						OR = {
+							province_group = byz_pannonia_provinces
+							province_group = byz_raetia_noricum_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 5
+					limit = {
+						OR = {
+							province_group = byz_pannonia_provinces
+							province_group = byz_raetia_noricum_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				every_owned_province = {  #Clearing the flags above.
+					if = {
+						limit = {
+							has_province_flag = byz_prov_to_dev
+						}
+						clr_province_flag = byz_prov_to_dev 
+					}
+				}
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+}
+
+byz_hre_3 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_superior_steel = { #New in BR 8.0
+		icon = mission_rb_central_belt_coal_mining
+		position = 33 #4-33
+		required_missions = { byz_northern_themes }
+		
+		provinces_to_highlight = {
+			
+		}
+		
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = south_germany_region
+				OR = { #I count 11 potential iron provinces and 1 copper.
+					trade_goods = copper
+					trade_goods = iron
+				}
+				has_building = weapons
+				amount = 10
+			}
+			trade_goods_produced_amount = {
+				trade_goods = copper
+				amount = 15 #This corresponds to 150 production dev in copper provinces. That should not be a problem.
+			}
+			trading_bonus = {
+				trade_goods = copper
+				value = yes
+			}
+			trade_goods_produced_amount = {
+				trade_goods = iron
+				amount = 25 #This corresponds to 100 production dev in iron provinces. That should not be a problem.
+			}
+			trading_bonus = {
+				trade_goods = iron
+				value = yes
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "byz_steel_of_noricum"
+				duration = -1
+			}
+		}
+	}
+	
+}
+
+byz_themes_11 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_south_galatian_themes = { #New in BR 8.0
+		icon = mission_septimania_fort
+		position = 34 #4-34
+		required_missions = { byz_aquitania }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_group = byz_narbonia_provinces
+				province_group = byz_aquitania_provinces
+			}
+			NOT = {
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+		
+		trigger = {
+			calc_true_if = {
+				desc = byz_theme_system_tooltip
+				byz_narbonia_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				byz_aquitania_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				amount = 12
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					174 = {
+						owned_by = GLT
+					}
+				}
+				174 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				174 = {
+					change_culture = galatian
+				}
+			}
+			custom_tooltip = byz_south_galatian_themes_development_tooltip
+			hidden_effect = {
+				random_owned_province = { #RandProv 1
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 2
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 3
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 4
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 5
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 6
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				every_owned_province = {  #Clearing the flags above.
+					if = {
+						limit = {
+							has_province_flag = byz_prov_to_dev
+						}
+						clr_province_flag = byz_prov_to_dev 
+					}
+				}
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_galatia_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_lougdon_minting = { #New in BR 8.0
+		icon = mission_establish_mint_towns
+		position = 34 #4-34
+		required_missions = { byz_lougdonia }
+	
+		trigger = {
+			203 = {
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					num_of_times_expanded_infrastructure = 2
+				}
+				else = {
+					development = 40 #Starts at 31 in 1444
+				}
+			}
+			trade_goods_produced_amount = {
+				trade_goods = gold
+				amount = 25 #This corresponds to 250 production dev in gold provinces. Given where you are at this point, I do not think this will be hard to achieve.
+			}
+		}
+		
+		effect = {
+			203 = {
+				change_trade_goods = gold
+			}
+		}
+	}
+}
+
+byz_themes_12 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_themes_of_albion = { #New in BR 8.0
+		icon = mission_caer
+		position = 36 #4-36
+		required_missions = { byz_albion }
+		
+		provinces_to_highlight = {
+			province_group = byz_albion_provinces
+			NOT = {
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+		
+		trigger = {
+			calc_true_if = {
+				desc = byz_theme_system_tooltip
+				byz_albion_provinces = {
+					type = all
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				amount = 8
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					236 = {
+						owned_by = ABN
+					}
+				}
+				236 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 1
+				}
+			}
+			else = {
+				236 = {
+					change_culture = albian
+				}
+			}
+			custom_tooltip = byz_themes_of_albion_development_tooltip
+			hidden_effect = {
+				random_owned_province = { #RandProv 1
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 2
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 3
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					set_province_flag = byz_prov_to_dev
+				}
+				random_owned_province = { #RandProv 4
+					limit = {
+						OR = {
+							province_group = byz_narbonia_provinces
+							province_group = byz_aquitania_provinces
+						}
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_prov_to_dev #To prevent same province picked twice in practice
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				every_owned_province = {  #Clearing the flags above.
+					if = {
+						limit = {
+							has_province_flag = byz_prov_to_dev
+						}
+						clr_province_flag = byz_prov_to_dev 
+					}
+				}
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
+
+byz_exarch_5 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_exarch_galatia = { #New in BR 8.0
+		icon = mission_galatia_exarch
+		position = 37 #4-37
+		required_missions = { byz_germania_minor }
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 174
+				province_id = 80
+			}
+		}
+		
+		trigger = {
+			OR = {
+				GLT = {
+					exists = yes
+					is_subject_of_type = byz_exarch
+					is_subject_of = ROOT
+					total_development = 600
+				}
+				AND = {
+					174 = {
+						development = 50
+						is_state = yes
+						is_state_core = ROOT
+						if = {
+							limit = {
+								has_dlc = "Leviathan"
+							}
+							num_of_times_expanded_infrastructure = 1 
+						}
+						else = {
+							num_of_buildings_in_province = 5
+						}
+					}
+					80 = {
+						development = 50
+						is_state = yes
+						is_state_core = ROOT
+						if = {
+							limit = {
+								has_dlc = "Leviathan"
+							}
+							num_of_times_expanded_infrastructure = 1 
+						}
+						else = {
+							num_of_buildings_in_province = 5
+						}
+					}					
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byz_exarch_galatia_1
+			tooltip = {
+				GLT = {
+					add_liberty_desire = -50
+					add_country_modifier = {
+						name = "byz_exarchate"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = byz_exarch_galatia_2
+			174 = {
+				custom_tooltip = byz_establish_exarch_seat_tooltip
+			}
+			80 = {
+				custom_tooltip = byz_establish_exarch_seat_tooltip
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						GLT = {
+							exists = yes
+							is_subject_of_type = byz_exarch
+							is_subject_of = ROOT
+							total_development = 600
+						}
+					}
+					GLT = {
+						add_liberty_desire = -50
+						add_country_modifier = {
+							name = "byz_exarchate"
+							duration = -1
+						}
+					}
+				}
+				else = {
+					174 = {
+						add_province_triggered_modifier = exarch_seat_modifier_med_dev
+						add_province_triggered_modifier = exarch_seat_modifier_high_dev
+						add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
+					}
+					80 = {
+						add_province_triggered_modifier = exarch_seat_modifier_med_dev
+						add_province_triggered_modifier = exarch_seat_modifier_high_dev
+						add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
+					}
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+	
+}
+
+byz_england_1 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_albion = {
+		icon = defeat_the_english
+		position = 35 #5-35
+		required_missions = { byz_lougdonia }
+		
+		provinces_to_highlight = {
+			province_group = byz_albion_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=byz_albion_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+			}
+		}
+		
+		effect = {
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}	
+}
+
+byz_exarch_6 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BYZ
+	}
+	has_country_shield = yes
+		
+	byz_exarch_albion = { #New in BR 8.0
+		icon = mission_albion_exarch
+		position = 36 #5-35
+		required_missions = { byz_albion }
+		
+		provinces_to_highlight = {
+			province_id = 114
+		}
+		
+		trigger = {
+			OR = {
+				ABN = {
+					exists = yes
+					is_subject_of_type = byz_exarch
+					is_subject_of = ROOT
+					total_development = 600
+				}
+				236 = {
+					development = 50
+					is_state = yes
+					is_state_core = ROOT
+					if = {
+						limit = {
+							has_dlc = "Leviathan"
+						}
+						num_of_times_expanded_infrastructure = 1 
+					}
+					else = {
+						num_of_buildings_in_province = 5
+					}
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = byz_exarch_albion_1
+			tooltip = {
+				ABN = {
+					add_liberty_desire = -50
+					add_country_modifier = {
+						name = "byz_exarchate"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = byz_exarch_albion_2
+			236 = {
+				custom_tooltip = byz_establish_exarch_seat_tooltip
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						ABN = {
+							exists = yes
+							is_subject_of_type = byz_exarch
+							is_subject_of = ROOT
+							total_development = 600
+						}
+					}
+					ABN = {
+						add_liberty_desire = -50
+						add_country_modifier = {
+							name = "byz_exarchate"
+							duration = -1
+						}
+					}
+				}
+				else = {
+					236 = {
+						add_province_triggered_modifier = exarch_seat_modifier_med_dev
+						add_province_triggered_modifier = exarch_seat_modifier_high_dev
+						add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
+					}
+				}
+			}
+		}
+	
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+}
 
 

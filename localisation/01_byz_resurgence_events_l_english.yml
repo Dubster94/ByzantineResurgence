@@ -178,11 +178,29 @@
  resurgent_BYZ.37.a:0 "Let's use this against our enemies once more!"
  resurgent_BYZ.37.b:0 "Let's sell it to one of our allies"
  resurgent_BYZ.37.c:0 "Let's burn the documents and refrain from using it"
+ 
  byz_greek_fire:0 "Greek Fire"
  desc_byz_greek_fire:0 "The rediscovery of Greek Fire has allowed us to improve our galleys and artillery. However, due to the nature of this substance, the costs of fabricating the equipment to use it make these units more expensive to build and maintain."
  br_rediscovered_greek_fire_tooltip:0 "Enables the §YGreek Fire§! Naval Doctrine"
  doctrine_greek_fire:0 "Greek Fire"
  doctrine_greek_fire_desc:0 "The rediscovery of Greek Fire has allowed us to once more equip our sea vessels with nozzles spewing fiery flames. Let our enemies cower in fear as we set them ablaze."
+ 
+ resurgent_BYZ.38.t:0 "The Return of Byzantine Freethinkers?"
+ resurgent_BYZ.38.d:0 "The news of a new Byzantine Renaissance flourishing in the capital has spread to people in Italy, where many people who once lived in Constantinople fled as a result of the city's conquest in 1204. Their descendants have heard of this and wish to return. Do we let them?"
+ resurgent_BYZ.38.a:0 "Invite the freethinkers!"
+ resurgent_BYZ.38.b:0 "Do not"
+ 
+ resurgent_BYZ.39.t:0 "Return of Byzantine Freethinkers"
+ resurgent_BYZ.39.d:0 "It appears that the Empire of the Greeks has risen once again, and a new renaissance is flourishing in [event_target:byz_capital.GetName]. People in our lands whose ancestors fled from the city in 1204 now wish to return. Do we let them go?"
+ resurgent_BYZ.39.a:0 "Let them go"
+ resurgent_BYZ.39.b:0 "We must keep them here!"
+ 
+ resurgent_BYZ.40.t:0 "The Return of Byzantine Freethinkers!"
+ resurgent_BYZ.40.da:0 "Today, a huge flock of people approached the gates of Constantinople. It appears that they have left Italy to live in our capital!"
+ resurgent_BYZ.40.db:0 "... Or so we thought. We've been waiting for months, but it appears nobody came to live in Constantinople. Whether because they were forced to stay or not is uncertain, or whether they simply didn't make it here, we'll never know..."
+ resurgent_BYZ.40.a:0 "Guards! Open the gates!"
+ byz_refugees_return_tooltip:0 "Gain §G[Root.Capital.byzConstantinopleFreeThinkers.GetValue]§! Base Tax in §Y[Root.Capital.GetName]§!\n      Gain §G[Root.Capital.byzConstantinopleFreeThinkers.GetValue]§! Base Production in §Y[Root.Capital.GetName]§!\n      Gain §G[Root.Capital.byzConstantinopleFreeThinkers.GetValue]§! Base Manpower in §Y[Root.Capital.GetName]§!"
+ resurgent_BYZ.40.b:0 "I suppose we'll have to take our people back by force!"
  
  sufi_shrine_removal.1.t:0 "A Sufi shrine within our borders"
  sufi_shrine_removal.1.d:0 "It just so happens that a province within our borders contains a sufi shrine. Our recent religious campaign however have lead to the province following our faith instead of that of the heathens. The question now remains what to do with the sufi shrine - do we destroy it and risk angering our minorities, or do we let it be?"

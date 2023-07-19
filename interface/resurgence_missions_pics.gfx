@@ -195,5 +195,101 @@ spriteTypes = {
 		name = "mission_ounga_fort"
 		texturefile = "gfx//interface//missions//mission_ounga_fort.dds"
 	}
+	spriteType = {
+		name = "mission_panis_quadratus"
+		texturefile = "gfx//interface//missions//mission_panis_quadratus.dds"
+	}
+	spriteType = {
+		name = "mission_administrating_a_roman_empire"
+		texturefile = "gfx//interface//missions//mission_administrating_a_roman_empire.dds"
+	}
+	spriteType = {
+		name = "mission_african_exarch"
+		texturefile = "gfx//interface//missions//mission_african_exarch.dds"
+	}
+	spriteType = {
+		name = "mission_italian_exarch"
+		texturefile = "gfx//interface//missions//mission_italian_exarch.dds"
+	}
+	spriteType = {
+		name = "mission_exarch_of_egypt"
+		texturefile = "gfx//interface//missions//mission_exarch_of_egypt.dds"
+	}
+	spriteType = {
+		name = "mission_galatia_exarch"
+		texturefile = "gfx//interface//missions//mission_galatia_exarch.dds"
+	}
+	spriteType = {
+		name = "mission_hesperia_exarch"
+		texturefile = "gfx//interface//missions//mission_hesperia_exarch.dds"
+	}
+	spriteType = {
+		name = "mission_albion_exarch"
+		texturefile = "gfx//interface//missions//mission_albion_exarch.dds"
+	}
+	spriteType = {
+		name = "mission_rhine_gorge"
+		texturefile = "gfx//interface//missions//mission_rhine_gorge.dds"
+	}
+	spriteType = {
+		name = "mission_rhine"
+		texturefile = "gfx//interface//missions//mission_rhine.dds"
+	}
+	spriteType = {
+		name = "mission_mobene"
+		texturefile = "gfx//interface//missions//mission_mobene.dds"
+	}
+	spriteType = {
+		name = "mission_tyrian_purple"
+		texturefile = "gfx//interface//missions//mission_tyrian_purple.dds"
+	}
+	spriteType = {
+		name = "mission_grapes"
+		texturefile = "gfx//interface//missions//mission_grapes.dds"
+	}
+	spriteType = {
+		name = "mission_vineyard"
+		texturefile = "gfx//interface//missions//mission_vineyard.dds"
+	}
+	spriteType = {
+		name = "mission_tarragona_aqueduct"
+		texturefile = "gfx//interface//missions//mission_tarragona_aqueduct.dds"
+	}
+	spriteType = {
+		name = "mission_hercules_tower"
+		texturefile = "gfx//interface//missions//mission_hercules_tower.dds"
+	}
+	spriteType = {
+		name = "mission_cartagena_theatre"
+		texturefile = "gfx//interface//missions//mission_cartagena_theatre.dds"
+	}
+	spriteType = {
+		name = "mission_lugo_walls"
+		texturefile = "gfx//interface//missions//mission_lugo_walls.dds"
+	}
+	spriteType = {
+		name = "mission_jublains"
+		texturefile = "gfx//interface//missions//mission_jublains.dds"
+	}
+	spriteType = {
+		name = "mission_septimania_fort"
+		texturefile = "gfx//interface//missions//mission_septimania_fort.dds"
+	}
+	spriteType = {
+		name = "mission_atlantean_colony"
+		texturefile = "gfx//interface//missions//mission_atlantean_colony.dds"
+	}
+	spriteType = {
+		name = "mission_saalburg_limes"
+		texturefile = "gfx//interface//missions//mission_saalburg_limes.dds"
+	}
+	spriteType = {
+		name = "mission_caer"
+		texturefile = "gfx//interface//missions//mission_caer.dds"
+	}
+	spriteType = {
+		name = "mission_las_medulas"
+		texturefile = "gfx//interface//missions//mission_las_medulas.dds"
+	}
 }
 

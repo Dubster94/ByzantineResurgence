@@ -90,7 +90,7 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx/interface/government_mechanics/bureaucracy/byzantine_bureaucracy_progress_bar.dds"
 		textureFile2 = "gfx/interface/government_mechanics/bureaucracy/byzantine_bureaucracy_progress_bar_empty.dds"
-		size = { x = 52 y = 5 }
+		size = { x = 53 y = 11 }
 		effectFile = "gfx/FX/progress.lua"
 	}
 	spriteType = {

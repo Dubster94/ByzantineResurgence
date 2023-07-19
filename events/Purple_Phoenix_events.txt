@@ -423,7 +423,7 @@ country_event = {
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
 			power_type = byzantine_megas_domestikos_power
-			value = -5
+			value = 5
 		}	
 	}
 }
@@ -457,7 +457,7 @@ country_event = {
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
 			power_type = byzantine_megas_domestikos_power
-			value = 5
+			value = -5
 		}	
 	}
 }
@@ -490,7 +490,7 @@ country_event = {
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
 			power_type = byzantine_megas_logothetes_power
-			value = -5
+			value = 5
 		}	
 	}
 }
@@ -523,7 +523,7 @@ country_event = {
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
 			power_type = byzantine_megas_logothetes_power
-			value = 5
+			value = -5
 		}
 	}
 }
@@ -556,7 +556,7 @@ country_event = {
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
 			power_type = byzantine_megas_logariastes_power
-			value = -5
+			value = 5
 		}
 	}
 }
@@ -589,7 +589,7 @@ country_event = {
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
 			power_type = byzantine_megas_logariastes_power
-			value = 5
+			value = -5
 		}
 	}
 }

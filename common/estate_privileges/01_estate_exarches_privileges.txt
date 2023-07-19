@@ -2,6 +2,7 @@ estate_exarches_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
@@ -75,6 +76,7 @@ estate_exarches_integrated_viceroys = {
 	icon = privilege_integrated_viceroys
 	land_share = 5
 	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	loyalty = -0.05
 	influence = 0.1
 	is_valid = {
@@ -141,6 +143,7 @@ estate_exarches_dynastic_exarches = {
 	icon = privilege_dynastic_exarches
 	land_share = 0
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.05
 	influence = 0.1
 	is_valid = {
@@ -177,6 +180,7 @@ estate_exarches_autonomous_exarches = {
 	icon = privilege_autonomous_exarches
 	land_share = 0
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {
@@ -210,6 +214,7 @@ estate_exarches_court_advisors = {
 	icon = privilege_bring_to_court
 	land_share = 0
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {

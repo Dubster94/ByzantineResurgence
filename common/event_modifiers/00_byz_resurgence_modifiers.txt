@@ -1,6 +1,11 @@
 #Event modifiers
 ################
 
+lenient_state_tax_mod = {
+	global_unrest = -2
+	monthly_reform_progress_modifier = 0.1
+}
+
 built_third_temple = {
 	local_unrest = -10
 	local_tax_modifier = 0.1

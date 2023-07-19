@@ -13,6 +13,8 @@ byzantine_autocracy_reform = {
 	modifiers = {
 		max_absolutism = -25
 		prestige = 0.5
+		monthly_reform_progress_modifier = -0.1
+		global_autonomy = 0.05
 	}
 	
 	#custom_attributes = {

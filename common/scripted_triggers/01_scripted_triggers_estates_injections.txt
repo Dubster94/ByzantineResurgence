@@ -1,0 +1,36 @@
+has_exempt_from_seize_land_for_estate_nobles = {
+	OR = {
+		has_estate_privilege = estate_nobles_levies
+		has_estate_privilege = estate_nobles_golden_liberty
+		#Jolof's starting privileges
+		has_estate_privilege = estate_nobles_decentralized_tribe
+		has_estate_privilege = estate_nobles_tribe_unification
+		#Norway's starting privileges
+		has_estate_privilege = estate_nobles_danish_nobility
+		has_estate_privilege = estate_nobles_nobles_instead_of_royal_court
+		#England's starting privilege
+		has_estate_privilege = estate_nobles_english_villeinage
+		#Prussia's privilege
+		has_estate_privilege = estate_nobles_consolidated_noble_contracts
+		#BR Added: Byzantium's starting privileges
+		has_estate_privilege = estate_nobles_latifundia_kantakouzenos
+		has_estate_privilege = estate_nobles_latifundia_philantropenos
+		has_estate_privilege = estate_nobles_latifundia_metochites
+		has_estate_privilege = estate_nobles_latifundia_choumnos
+		has_estate_privilege = estate_nobles_latifundia_melissenos
+		has_estate_privilege = estate_nobles_latifundia_tornikes
+	}
+}
+
+#Adding these just in case they are called - currently no privileges exist for this, hence this is fine.
+has_exempt_from_seize_land_for_estate_generals = {
+	always = no
+}
+
+has_exempt_from_seize_land_for_estate_exarches = {
+	always = no
+}
+
+has_exempt_from_seize_land_for_estate_knightly_orders = {
+	always = no
+}

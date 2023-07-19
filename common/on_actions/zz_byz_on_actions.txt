@@ -194,6 +194,7 @@ on_startup = {
 			# }
 			# set_global_flag = br_schismatic_relations_added
 		# }
+		set_global_flag = bt_april_storms_passed
 	}
 }
 #Byz adding Demetrios Palaiologos as pretender event, as well as the Basileus Protostrategos mechanic.

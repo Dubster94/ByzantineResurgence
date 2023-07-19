@@ -27,3 +27,37 @@ namespace = resurgent_purple_phoenix
 		# add_legitimacy = 10
 	# }
 # }
+
+country_event = {
+	id = purple_phoenix.12
+	
+	title = "purple_phoenix.12.t"
+	desc = "purple_phoenix.12.d"
+	
+	picture = BYZANTINE_EAGLE_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		has_dlc = "Purple Phoenix"
+		has_government_mechanic = byzantine_bureaucracy_mechanic
+		OR = {
+			NOT = { has_country_flag = recent_BYZ_factions }
+			had_country_flag = { flag = recent_BYZ_factions days = 365 }
+		}
+	}
+	
+	immediate = { set_country_flag = recent_BYZ_factions }
+	
+	mean_time_to_happen = {
+		months = 72	
+	}
+	
+	option = {
+		name = "purple_phoenix.12.a"
+		add_government_power = { 
+			mechanic_type = byzantine_bureaucracy_mechanic  
+			power_type = byzantine_megas_domestikos_power
+			value = -5
+		}	
+	}
+}

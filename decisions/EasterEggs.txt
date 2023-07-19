@@ -112,7 +112,7 @@ country_decisions = {
 		}
 		effect = {
 			set_global_flag = bt_storms_a_brewin
-			set_global_flag = bt_april_storms_passed
+			#set_global_flag = bt_april_storms_passed
 			country_event = { id = winds_from_btp.1 }
 		}
 	}

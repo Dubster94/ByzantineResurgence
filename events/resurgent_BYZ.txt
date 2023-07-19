@@ -2668,3 +2668,215 @@ country_event = { #37 The Rediscovery of Greek Fire
 	}
 }
 
+country_event = { #38 The Return of Byzantine Freethinkers?
+	id = resurgent_BYZ.38
+	title = "resurgent_BYZ.38.t" 
+	desc = "resurgent_BYZ.38.d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	major_trigger = {
+		capital_scope = { region = italy_region }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			capital_scope = { 
+				save_global_event_target_as = byz_capital 
+				set_variable = {
+					which = byzConstantinopleFreeThinkers
+					value = 0
+				}
+			}
+		}
+	}
+	
+	option = { #Invite the freethinkers!
+		name = "resurgent_BYZ.38.a"
+		ai_chance = { factor = 90 }
+		add_prestige = 5
+		every_country = {
+			limit = {
+				capital_scope = { region = italy_region }
+				any_owned_province = { development = 20 }
+			}
+			country_event = {
+				id = resurgent_BYZ.39
+				days = 5
+				random = 5
+			}
+		}
+		country_event = {
+			id = resurgent_BYZ.40
+			days = 180
+			random = 30
+		}
+	}
+	
+	option = { #Do not
+		name = "resurgent_BYZ.38.b"
+		ai_chance = { factor = 10 }
+		add_prestige = -5
+	}
+}
+
+country_event = { #39 Do we let Byzantine Freethinkers go?
+	id = resurgent_BYZ.39
+	title = "resurgent_BYZ.39.t" 
+	desc = "resurgent_BYZ.39.d"
+	picture = BIG_BOOK_eventPicture
+	
+	major = yes
+	
+	major_trigger = {
+		tag = BYZ
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Let them go
+		name = "resurgent_BYZ.39.a"
+		ai_chance = {
+			factor = 25
+		}
+		random_owned_province = {
+			limit = { development = 20 }
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		event_target:byz_capital = {
+			change_variable = {
+				which = byzConstantinopleFreeThinkers
+				value = 1
+			}
+		}
+	}
+	
+	option = { #We must keep them here!
+		name = "resurgent_BYZ.39.b"
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				has_opinion = {
+					who = BYZ
+					value = 50
+				}
+			}
+		}
+		random_owned_province = {
+			limit = { development = 20 }
+			add_unrest = 5
+		}
+		
+	}
+}
+
+country_event = { #40 The Freethinkers return!
+	id = resurgent_BYZ.40
+	title = "resurgent_BYZ.40.t"
+	desc = { #If someone let freethinkers go
+		trigger = {
+			event_target:byz_capital = {
+				check_variable = {
+					which = byzConstantinopleFreeThinkers
+					value = 1
+				}
+			}
+		}
+		desc = "resurgent_BYZ.40.da"
+	}
+	desc = { #If nobody let freethinkers go
+		trigger = {
+			NOT = {
+				event_target:byz_capital = {
+					check_variable = {
+						which = byzConstantinopleFreeThinkers
+						value = 1
+					}
+				}
+			}
+		}
+		desc = "resurgent_BYZ.40.db"
+	}
+	picture = { #If someone let freethinkers go
+		trigger = {
+			event_target:byz_capital = {
+				check_variable = {
+					which = byzConstantinopleFreeThinkers
+					value = 1
+				}
+			}
+		}
+		picture = GOOD_WITH_MONARCH_eventPicture
+	}
+	picture = { #If nobody let freethinkers go
+		trigger = {
+			NOT = {
+				event_target:byz_capital = {
+					check_variable = {
+						which = byzConstantinopleFreeThinkers
+						value = 1
+					}
+				}
+			}
+		}
+		picture = BAD_WITH_MONARCH_eventPicture
+	}
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Guards! Let them in!
+		name = "resurgent_BYZ.40.a"
+		trigger = {
+			event_target:byz_capital = {
+				check_variable = {
+					which = byzConstantinopleFreeThinkers
+					value = 1
+				}
+			}
+		}
+		event_target:byz_capital = {
+			for = {
+				custom_tooltip = byz_refugees_return_tooltip
+				amount = "byzConstantinopleFreeThinkers"
+				effect = "
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				"
+			}
+		}
+		hidden_effect = {
+			event_target:byz_capital = {
+				set_variable = {
+					which = byzConstantinopleFreeThinkers
+					value = 0
+				}
+			}
+			clear_global_event_target = byz_capital
+		}
+	}
+	
+	option = { #We'll have to take back our people by force!
+		name = "resurgent_BYZ.40.b"
+		trigger = {
+			NOT = {
+				event_target:byz_capital = {
+					check_variable = {
+						which = byzConstantinopleFreeThinkers
+						value = 1
+					}
+				}
+			}
+		}
+	}
+}

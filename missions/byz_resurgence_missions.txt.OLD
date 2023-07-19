@@ -2976,7 +2976,7 @@ byz_cyrenaica_tripolitania = { #COPIED OVER
 	
 }
 
-byz_exarches = {
+byz_exarches = { #COPIED OVER
 	slot = 3
 	generic = no
 	ai = yes
@@ -3016,7 +3016,7 @@ byz_exarches = {
 	}
 }
 
-byz_pannonia = {
+byz_pannonia = { #COPIED OVER
 	slot = 4
 	generic = no
 	ai = yes
@@ -3057,7 +3057,7 @@ byz_pannonia = {
 	
 }
 
-byz_africa = {
+byz_africa = { #COPIED OVER
 	slot = 1
 	generic = no
 	ai = yes
@@ -3206,7 +3206,7 @@ byz_africa = {
 
 }
 
-byz_iberia_2 = {
+byz_iberia_2 = { #COPIED OVER
 	slot = 1
 	generic = no
 	ai = yes
@@ -3293,7 +3293,7 @@ byz_iberia_2 = {
 
 }
 
-byz_false_emperors = {
+byz_false_emperors = { #COPIED OVER
 	slot = 2
 	generic = no
 	ai = yes
@@ -3360,7 +3360,7 @@ byz_false_emperors = {
 	}
 }
 
-byz_iberia = {
+byz_iberia = { #COPIED OVER
 	slot = 2
 	generic = no
 	ai = yes
@@ -3434,7 +3434,7 @@ byz_iberia = {
 
 }
 
-byz_england = {
+byz_england = { #COPIED OVER
 	slot = 2
 	generic = no
 	ai = yes
@@ -3488,7 +3488,7 @@ byz_england = {
 	
 }
 
-byz_iberia_3 = {
+byz_iberia_3 = { #COPIED OVER
 	slot = 3
 	generic = no
 	ai = yes
@@ -3564,7 +3564,7 @@ byz_iberia_3 = {
 	
 }
 
-byz_galatia = {
+byz_galatia = { #COPIED OVER
 	slot = 3
 	generic = no
 	ai = yes

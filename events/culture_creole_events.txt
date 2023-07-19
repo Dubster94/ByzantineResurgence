@@ -19,30 +19,19 @@ province_event = { #1 The Greek Language is settling in [ROOT.GetName]
 				}
 			}
 		}
+		OR = {  #CI Compat - disable event in CI
+			NOT = { has_global_flag = cultural_influence_installed_flag }
+			has_global_flag = CI_events_disabled
+		}
 		owner = {
 			#If Hellenic Exarchate
 			culture_group = byzantine
-			if = {
-				limit = {
-					has_dlc = "Dharma"
-				}
-				has_reform = exarchate_reform
-			}
-			else = { #I hope this works. Non-Dharma users will have to report about this.
-				government = exarchate_legacy
-			}
+			has_reform = exarchate_reform
 			#Only triggers if AI, as player can culture-convert.
 			ai = yes
 			adm_power = 100 #Because for some weird reason, culture conversions using the below effect uses admin points and not diplo points.
 		}
 		NOT = { has_construction = culture } #Don't want to convert something that is already being converted.
-		#Lifted this restriction because there is no such restriction any more, and the event now forces the AI to culture-convert.
-		# NOT = { #NOT any country of primary culture of province existing & having cores on it. I.e does not fire for Syrian provinces if a Syrian primary cultured nation exists, but it doesn't care about brother cultures.
-			# any_country = {
-				# primary_culture = PREV
-				# is_core = PREV
-			# }
-		# }
 	}
 
 	mean_time_to_happen = {
@@ -75,57 +64,6 @@ province_event = { #1 The Greek Language is settling in [ROOT.GetName]
 			speed = 1
 			cost = 1
 		}
-		# if = { #Karchidoniac Greek
-			# limit = {
-				# owned_by = KCD
-			# }
-			# change_culture = karchidoniac
-		# }
-		# else_if = {#Hersperic Greek
-			# limit = {
-				# owned_by = HSP
-			# }
-			# change_culture = hesperic
-		# }
-		# else_if = {#Galatian Greek
-			# limit = {
-				# owned_by = GLT
-			# }
-			# change_culture = galatian
-		# }
-		# else_if = {#Antiochian Greek
-			# limit = {
-				# owned_by = ATL
-			# }
-			# change_culture = anatolian
-		# }
-		# else_if = {#Alexandrian Greek
-			# limit = {
-				# owned_by = AEG
-			# }
-			# change_culture = alexandrian
-		# }
-		# else_if = {#Persic Greek
-			# limit = {
-				# owned_by = PSI
-			# }
-			# change_culture = persic
-		# }
-		# else_if = {#Albian Greek
-			# limit = {
-				# owned_by = ABN
-			# }
-			# change_culture = albian
-		# }
-		# else_if = {#Ravennan Greek (Griko)
-			# limit = {
-				# owned_by = RVN
-			# }
-			# change_culture = griko
-		# }
-		# ai_chance = { 
-			# factor = 100
-		# }
 	}
 }
 
