@@ -420,46 +420,6 @@ on_monarch_death = {
 			}
 		}
 	}
-	
-	#BR
-	if = {
-		limit = {
-			has_global_flag = byz_resurgence_loaded
-			tag = BYZ
-			BYZ = {
-				has_country_flag = rebellious_demetrios_flag
-			}
-		}
-		BYZ = {
-			country_event = { id = integrated_byz_events.16 } #The Rebellion of Demetrios Palaiologos
-			clr_country_flag = rebellious_demetrios_flag #Just to be sure
-		}
-	}
-	if = { #Making the ruler a general if you've got the Basileus Protostrategos reform.
-		limit = {
-			has_global_flag = byz_resurgence_loaded
-			has_government_attribute = forces_ruler_general
-			has_country_flag = byz_restored_militarization_mechanic
-			is_monarch_leader = no
-		}
-		if = {
-			limit = {
-				is_female = yes
-			}
-			convert_female_ruler_to_general = yes
-		}
-		else = {
-			convert_ruler_to_general = yes
-		}
-	}
-	if = { #Fixing Armenian-Georgian Bagrationi-Bagratuni spelling issue making the game consider them separate dynasties. Does not clear flag because I am worried the game will autogenerate a new heir of Bagrationi before the new dynasty is set. Will have to test this I suppose.
-		limit = {
-			tag = ARM
-			has_country_flag = br_bagratunis_invited
-			dynasty = "Bagrationi"
-		}
-		set_dynasty = "Bagratuni"
-	}
 }
 #Byz_estates
 on_five_year_pulse_2 = {

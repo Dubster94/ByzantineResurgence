@@ -5515,7 +5515,7 @@ byz_exarch_2 = {
 		required_missions = { byz_establish_exarches }
 		
 		provinces_to_highlight = {
-			province_id = 341
+			province_id = 358
 		}
 		
 		trigger = {
@@ -6896,6 +6896,8 @@ byz_endgame = {
 				name = "byz_empire_restored"
 				duration = -1
 			}
+			
+			hidden_effect = { 1321 = { change_province_name = "Thanks for Playing!" } }
 		}
 	}
 }

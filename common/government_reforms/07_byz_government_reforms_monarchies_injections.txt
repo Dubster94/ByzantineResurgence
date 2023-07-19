@@ -17,9 +17,9 @@ byzantine_autocracy_reform = {
 		global_autonomy = 0.05
 	}
 	
-	#custom_attributes = {
-	#	civil_war_on_every_new_ruler = yes
-	#}
+	custom_attributes = { #Enabling this because it's truly this bad.
+		civil_war_on_every_new_ruler = yes
+	}
 }
 
 reformed_byzantine_monarchy_reform = {

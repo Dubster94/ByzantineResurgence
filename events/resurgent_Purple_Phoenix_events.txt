@@ -1,52 +1,25 @@
 namespace = resurgent_purple_phoenix
 
-# country_event = {
-	# id = resurgent_purple_phoenix.1
-	
-	# title = "resurgent_purple_phoenix.2.t"
-	# desc = "resurgent_purple_phoenix.2.d"
-	
-	# picture = ATHENS_eventPicture
-	
-	# fire_only_once = yes
-	
-	# trigger = {
-		# tag = BYZ
-		# has_dlc = "Purple Phoenix"
-		# religion = orthodox
-		# owns = 146 #Athens
-	# }
-	
-	# mean_time_to_happen = {
-		# days = 7
-	# }
-	
-	# option = {
-		# name = "resurgent_purple_phoenix.2.a"
-		# add_prestige = 10
-		# add_legitimacy = 10
-	# }
-# }
-
 country_event = {
-	id = purple_phoenix.12
+	id = resurgent_purple_phoenix.1
 	
-	title = "purple_phoenix.12.t"
-	desc = "purple_phoenix.12.d"
+	title = "resurgent_purple_phoenix.1.t"
+	desc = "resurgent_purple_phoenix.1.d"
 	
 	picture = BYZANTINE_EAGLE_eventPicture
 	
 	trigger = {
 		tag = BYZ
-		has_dlc = "Purple Phoenix"
+		#has_dlc = "Purple Phoenix"
 		has_government_mechanic = byzantine_bureaucracy_mechanic
 		OR = {
-			NOT = { has_country_flag = recent_BYZ_factions }
-			had_country_flag = { flag = recent_BYZ_factions days = 365 }
+			NOT = { has_country_flag = recent_BYZ_factions_2 }
+			had_country_flag = { flag = recent_BYZ_factions_2 days = 365 }
 		}
+		has_government_power = {  }
 	}
 	
-	immediate = { set_country_flag = recent_BYZ_factions }
+	immediate = { set_country_flag = recent_BYZ_factions_2 }
 	
 	mean_time_to_happen = {
 		months = 72	

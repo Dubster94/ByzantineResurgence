@@ -30,9 +30,10 @@ Features:
 				-This modifier is revoked through the new Byzantine mission "Revive the Hyperpyron".
 			-"Lack of Levies", which gives -10% national manpower modifier and -10% manpower recovery speed.
 				-This modifier is revoked through the Byzantine mission "The Imperial Army"
-			-The Byzantine unique government reforms that gave new mechanics have been cut and replaced with two Byzantine T1 government reforms.
+			-The Byzantine unique government reforms that gave new mechanics have been cut and replaced with vanilla's two Byzantine T1 government reforms, albeit modified:
 				-The starting government reform has major maluses in the beginning of the game to symbolize the large decentralization of the Empire and the lack of power in the Byzantine Crown.
 					-This government reform has -10% reform progress as well as +0.05 autonomy change.
+					-The mechanic of "civil war on every new ruler" is now re-enabled. As such, Byzantium has to deal with a stack of Pretender Rebels each time a new monarch comes onto the throne.
 				-Upon completing the mission "Byzantine Resurgence" you are awarded with a better T1 government reform, and you can start accumulating unique government mechanics.
 					-This reformed Byzantine monarchy has the following unlockable government mechanics:
 						-Pronoiar: Upon completing "Revoke the Latifundia!", Byzantium gets three incredibly immersive buttons to press, similar to the old Iqta system in previous patches. These however give bonuses not based on subjects, but on own state development. As a sidenote, completing this mission also renames the nobles from Dynatoi to Penetes.
@@ -43,7 +44,7 @@ Features:
 -The Latin Imperial mission trees have been cut as a result of vanilla adding the Latin Empire, while me simultaneously not having updated them for a while, simultaneously to them not being particularly impressive.
 	-In general, Latin Imperial content has been put on hold for a while.
 -The Varangian Guards mercenary companies can now drill by default.
-		
+
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
 

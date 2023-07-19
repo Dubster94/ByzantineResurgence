@@ -1,0 +1,207 @@
+on_new_monarch_effect = {
+	if = {
+		limit = {
+			has_consort_regency = no
+			any_owned_province = {
+				has_province_modifier = domain_of_spouses_family
+			}
+		}
+		every_owned_province = {
+			limit = { has_province_modifier = domain_of_spouses_family }
+			remove_province_modifier = domain_of_spouses_family
+		}
+	}
+	if = {
+		limit = {
+			has_consort_regency = no
+			any_owned_province = {
+				has_province_modifier = home_of_consort
+			}
+		}
+		every_owned_province = {
+			limit = { has_province_modifier = home_of_consort }
+			remove_province_modifier = home_of_consort
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_dlc = "Mandate of Heaven" }
+			has_country_modifier = the_mandate_of_heaven
+			NOT = { legitimacy = 80 }
+		}
+		country_event = { id = china_events.32 }	# History of last ruler
+	}
+	if = {
+		limit = {
+			religion = jewish
+		}
+		clr_country_flag = ruler_is_messiah
+	}
+	if = {
+		limit = {
+			is_or_was_tag = {
+				tag = TEU
+			}
+			is_emperor = no
+			NOT = { tag = HLR }
+			has_country_modifier = teu_pru_imperial_crown
+		}
+		remove_country_modifier = teu_pru_imperial_crown
+	}
+	if = {
+		limit = { has_any_heir_cult_active = yes }
+		remove_heir_cult = yes
+	}
+	if = {
+		limit = { 
+			has_government_attribute = kalmar_union_succession
+			has_regency = no
+			has_consort_regency = no
+		}
+		if = {
+			limit = { has_country_flag = dan_new_elected_ruler }
+			clr_country_flag = dan_new_elected_ruler
+		}
+		else = {
+			country_event = {
+				id = kalmar_union_events.1	# A new king of the Kalmar Union
+			}
+		}
+	}
+	if = {
+		limit = { has_government_attribute = absolutism_reduction_on_ruler_death }
+		add_absolutism = -60
+	}
+	if = {
+		limit = {
+			has_country_modifier = eng_the_age_of_reformation
+			is_religion_enabled = protestant
+		}
+		if = {
+			limit = {
+				religion = catholic
+			}
+			random = {
+				chance = 50
+				if = {
+					limit = { is_religion_enabled = anglican }
+					set_ruler_religion = anglican
+				}
+				else = {
+					set_ruler_religion = protestant
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = protestant
+					religion = reformed
+					religion = anglican
+					religion = hussite
+				}
+			}
+			set_ruler_religion = catholic
+		}
+	}
+	if = {
+		limit = { has_government_attribute = civil_war_on_every_new_ruler }
+		if = { #First revolt for Byzantium is Demetrios Palaiologos
+			limit = { 
+				has_global_flag = byz_resurgence_loaded
+				tag = BYZ
+				has_country_flag = rebellious_demetrios_flag 
+			}
+			country_event = { id = integrated_byz_events.16 } #The Rebellion of Demetrios Palaiologos
+			clr_country_flag = rebellious_demetrios_flag #Just to be sure
+			
+		}
+		else = {
+			capital_scope = {
+				area = {
+					random_owned_province = {
+						limit = { NOT = { is_capital = yes } }
+					}
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 2
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_government_mechanic = russian_rule_mechanic
+		}
+		add_government_power = { mechanic_type = russian_rule_mechanic power_type = russian_administrative_rule value = -50 }
+		add_government_power = { mechanic_type = russian_rule_mechanic power_type = russian_diplomatic_rule value = -50 }
+		add_government_power = { mechanic_type = russian_rule_mechanic power_type = russian_military_rule value = -50 }
+	}
+	if = {
+		limit = {
+			has_government_attribute = theocratic_monarchy_mechanic
+		}
+		#Setting it to 0
+		change_statists_vs_orangists = -10
+		change_statists_vs_orangists = 1
+		if = {
+			limit = { has_ruler_flag = monarchistic_heir }
+			change_statists_vs_orangists = 0.25
+		}
+		if = {
+			limit = { has_ruler_flag = theocratic_heir }
+			change_statists_vs_orangists = -0.25
+		}
+		if = {
+			limit = {
+				has_government_attribute = theocratic_monarchy_mechanic
+			}
+			country_event = {
+				id = flavor_sca.2
+			}
+			country_event = {
+				id = theocracy.1
+				days = 3
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government_attribute = absolutism_reduction_on_ruler_death
+				has_government_attribute = has_limited_terms
+			}
+		}
+		set_variable = {
+			which = election_term
+			value = 1
+		}
+	}
+	#BR Stuff
+	if = { #Making the ruler a general if you've got the Basileus Protostrategos reform.
+		limit = {
+			has_global_flag = byz_resurgence_loaded
+			has_government_attribute = forces_ruler_general
+			has_country_flag = byz_restored_militarization_mechanic
+			is_monarch_leader = no
+		}
+		if = {
+			limit = {
+				is_female = yes
+			}
+			convert_female_ruler_to_general = yes
+		}
+		else = {
+			convert_ruler_to_general = yes
+		}
+	}
+	if = { #Fixing Armenian-Georgian Bagrationi-Bagratuni spelling issue making the game consider them separate dynasties. Does not clear flag because I am worried the game will autogenerate a new heir of Bagrationi before the new dynasty is set. Will have to test this I suppose.
+		limit = {
+			tag = ARM
+			has_country_flag = br_bagratunis_invited
+			dynasty = "Bagrationi"
+		}
+		set_dynasty = "Bagratuni"
+	}
+}
