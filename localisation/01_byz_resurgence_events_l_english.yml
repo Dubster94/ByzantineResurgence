@@ -219,9 +219,9 @@
  circus_maximus_title:0 "Circus Maximus"
  
  byz_chariot_race_events.1.t:0 "The Quadrennial Chariot Race"
- byz_chariot_race_events.1.d:0 "The time has come for the Quadrennial Chariot Races to begin. Factions from all over the Empire have flocked in [151.GetName] to compete and the populace have donned the color of their favorite competitors. As usual, the traditional Prasinoi (Greens), Venetoi (Blues), Rousioi (Reds) and Leukoi (Whites) are ready to compete for glory, but other independent factions are also trying their hand at it, including a particular newcomer, a crowd favorite, that may have a chance at completely dominating the others. As per tradition, the races are funded from the state treasury, to ensure quick preparations and a fair competition. \n\nNow, my [Root.Monarch.GetTitle], shall we head out the balcony of the Great Palace and take our rightful seats to watch the games?"
+ byz_chariot_race_events.1.d:0 "The time has come for the Quadrennial Chariot Races to begin. Factions from all over the Empire have flocked in [Root.Capital.GetName] to compete and the populace have donned the color of their favorite competitors. As usual, the traditional Prasinoi (Greens), Venetoi (Blues), Rousioi (Reds) and Leukoi (Whites) are ready to compete for glory, but other independent factions are also trying their hand at it, including a particular newcomer, a crowd favorite, that may have a chance at completely dominating the others. As per tradition, the races are funded from the state treasury, to ensure quick preparations and a fair competition. \n\nNow, my [Root.Monarch.GetTitle], shall we head out the balcony of the Great Palace and take our rightful seats to watch the games?"
  byz_chariot_race_events.1.a:0 "Let the races begin!"
- chariot_race_effect_tooltip:0 "Chariot races will commence in [151.GetName]. Over the following days, the results of the races will be determined."
+ chariot_race_effect_tooltip:0 "Chariot races will commence in [Root.Capital.GetName]. Over the following days, the results of the races will be determined."
  
  byz_chariot_race_events.2.t:0 "Favourite Candidate wins"
  byz_chariot_race_events.2.d:0 "As the chariots reach the finish line for the final race, the crowd goes absolute mad, cheering hysterically and spreading flower petals all over the Hippodrome. It appears that the crowd favourite has won the races! After an hour of celebrations, the crowd leaves the Hippodrome, calm and content."
@@ -244,7 +244,7 @@
  byz_chariot_race_events.4.b:0 "Pacify them!"
  
  byz_chariot_race_events.5.t:0 "Tourist Revenue"
- byz_chariot_race_events.5.d:0 "The chariot races this time around have attracted an unusually high number of visitors in Constantinople, causing a great increase in the city's commerce."
+ byz_chariot_race_events.5.d:0 "The chariot races this time around have attracted an unusually high number of visitors in the capital, causing a great increase in the city's commerce."
  byz_chariot_race_events.5.a:0 "This is worth exploiting..."
  byz_tourist_revenue_chariot_race:0 "Tourist Revenue"
  desc_byz_tourist_revenue_chariot_race:0 ""

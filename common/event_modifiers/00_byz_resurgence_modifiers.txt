@@ -1,6 +1,37 @@
 #Event modifiers
 ################
 
+byz_megas_domestikos_bad_1 = {
+	manpower_recovery_speed = -0.4
+}
+
+byz_megas_domestikos_bad_2 = {
+	general_cost = 0.2
+}
+
+byz_megas_logariastes_bad_1 = {
+	global_tax_modifier = -0.2
+	production_efficiency = -0.2
+}
+
+byz_megas_logariastes_bad_2 = {
+	interest = 2
+}
+
+byz_megas_logothetes_bad_1 = {
+	improve_relation_modifier = -0.4
+}
+
+byz_megas_logothetes_bad_2 = {
+	diplomatic_reputation = -4
+}
+
+
+
+
+
+
+
 lenient_state_tax_mod = {
 	global_unrest = -2
 	monthly_reform_progress_modifier = 0.1

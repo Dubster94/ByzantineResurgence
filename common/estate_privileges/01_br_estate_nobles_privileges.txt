@@ -116,7 +116,9 @@ estate_nobles_latifundia_kantakouzenos = {
 		has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
-		spawn_small_scaled_rebels = { type = pretender_rebels leader="Alexios Kantakouzenos" leader_dynasty="Kantakouzenos" }
+		random_owned_province = {
+			spawn_small_scaled_rebels = { type = pretender_rebels leader="Alexios Kantakouzenos" leader_dynasty="Kantakouzenos" }
+		}
 		byz_revoke_latifundia_effect = { large = yes }
 		change_estate_land_share = {
 			estate = estate_nobles
@@ -136,6 +138,7 @@ estate_nobles_latifundia_kantakouzenos = {
 		factor = 100 #I don't want Byzantium killing itself as an AI.
 	}
 }
+
 estate_nobles_latifundia_philantropenos = {
 	icon = privilege_land_rights
 	max_absolutism = -10
@@ -154,7 +157,9 @@ estate_nobles_latifundia_philantropenos = {
 		has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
-		spawn_small_scaled_rebels = { type = pretender_rebels leader="Georgios Philantropenos" leader_dynasty="Philantropenos" }
+		random_owned_province = {
+			spawn_small_scaled_rebels = { type = pretender_rebels leader="Georgios Philantropenos" leader_dynasty="Philantropenos" }
+		}
 		byz_revoke_latifundia_effect = { medium = yes }
 		change_estate_land_share = {
 			estate = estate_nobles
@@ -174,6 +179,7 @@ estate_nobles_latifundia_philantropenos = {
 		factor = 100 #I don't want Byzantium killing itself as an AI.
 	}
 }
+
 estate_nobles_latifundia_metochites = {
 	icon = privilege_land_rights
 	max_absolutism = -10
@@ -192,7 +198,9 @@ estate_nobles_latifundia_metochites = {
 		has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
-		spawn_small_scaled_rebels = { type = pretender_rebels leader="Ioannes Metochites" leader_dynasty="Metochites" }
+		random_owned_province = {
+			spawn_small_scaled_rebels = { type = pretender_rebels leader="Ioannes Metochites" leader_dynasty="Metochites" }
+		}
 		byz_revoke_latifundia_effect = { medium = yes }
 		change_estate_land_share = {
 			estate = estate_nobles
@@ -212,6 +220,7 @@ estate_nobles_latifundia_metochites = {
 		factor = 100 #I don't want Byzantium killing itself as an AI.
 	}
 }
+
 estate_nobles_latifundia_choumnos = {
 	icon = privilege_land_rights
 	max_absolutism = -10
@@ -230,7 +239,9 @@ estate_nobles_latifundia_choumnos = {
 		has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
-		spawn_small_scaled_rebels = { type = pretender_rebels leader="Leon Choumnos" leader_dynasty="Choumnos" }
+		random_owned_province = {
+			spawn_small_scaled_rebels = { type = pretender_rebels leader="Leon Choumnos" leader_dynasty="Choumnos" }
+		}
 		byz_revoke_latifundia_effect = { small = yes }
 		change_estate_land_share = {
 			estate = estate_nobles
@@ -250,6 +261,7 @@ estate_nobles_latifundia_choumnos = {
 		factor = 100 #I don't want Byzantium killing itself as an AI.
 	}
 }
+
 estate_nobles_latifundia_melissenos = {
 	icon = privilege_land_rights
 	max_absolutism = -10
@@ -268,7 +280,9 @@ estate_nobles_latifundia_melissenos = {
 		has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
-		spawn_small_scaled_rebels = { type = pretender_rebels leader="Ioulianos Melissenos" leader_dynasty="Melissenos" }
+		random_owned_province = {
+			spawn_small_scaled_rebels = { type = pretender_rebels leader="Ioulianos Melissenos" leader_dynasty="Melissenos" }
+		}
 		byz_revoke_latifundia_effect = { small = yes }
 		change_estate_land_share = {
 			estate = estate_nobles
@@ -288,6 +302,7 @@ estate_nobles_latifundia_melissenos = {
 		factor = 100 #I don't want Byzantium killing itself as an AI.
 	}
 }
+
 estate_nobles_latifundia_tornikes = {
 	icon = privilege_land_rights
 	max_absolutism = -10
@@ -306,7 +321,9 @@ estate_nobles_latifundia_tornikes = {
 		has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
-		spawn_small_scaled_rebels = { type = pretender_rebels leader="Demetrios Tornikes" leader_dynasty="Tornikes" }
+		random_owned_province = {
+			spawn_small_scaled_rebels = { type = pretender_rebels leader="Demetrios Tornikes" leader_dynasty="Tornikes" }
+		}
 		byz_revoke_latifundia_effect = { small = yes }
 		change_estate_land_share = {
 			estate = estate_nobles

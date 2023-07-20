@@ -16,7 +16,7 @@ country_event = {
 			NOT = { has_country_flag = recent_BYZ_factions_2 }
 			had_country_flag = { flag = recent_BYZ_factions_2 days = 365 }
 		}
-		has_government_power = {  }
+		has_government_power = { mechanic_type = byzantine_bureaucracy_mechanic power_type = byzantine_megas_domestikos_power value = 75 }
 	}
 	
 	immediate = { set_country_flag = recent_BYZ_factions_2 }
@@ -26,11 +26,180 @@ country_event = {
 	}
 	
 	option = {
-		name = "purple_phoenix.12.a"
-		add_government_power = { 
-			mechanic_type = byzantine_bureaucracy_mechanic  
-			power_type = byzantine_megas_domestikos_power
-			value = -5
-		}	
+		name = "resurgent_purple_phoenix.1.a"
+		add_country_modifier = {
+			name = "byz_megas_domestikos_bad_1"
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = resurgent_purple_phoenix.2
+	
+	title = "resurgent_purple_phoenix.2.t"
+	desc = "resurgent_purple_phoenix.2.d"
+	
+	picture = BYZANTINE_EAGLE_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		#has_dlc = "Purple Phoenix"
+		has_government_mechanic = byzantine_bureaucracy_mechanic
+		OR = {
+			NOT = { has_country_flag = recent_BYZ_factions_2 }
+			had_country_flag = { flag = recent_BYZ_factions_2 days = 365 }
+		}
+		has_government_power = { mechanic_type = byzantine_bureaucracy_mechanic power_type = byzantine_megas_domestikos_power value = 75 }
+	}
+	
+	immediate = { set_country_flag = recent_BYZ_factions_2 }
+	
+	mean_time_to_happen = {
+		months = 72	
+	}
+	
+	option = {
+		name = "resurgent_purple_phoenix.2.a"
+		add_country_modifier = {
+			name = "byz_megas_domestikos_bad_2"
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = resurgent_purple_phoenix.3
+	
+	title = "resurgent_purple_phoenix.3.t"
+	desc = "resurgent_purple_phoenix.3.d"
+	
+	picture = BYZANTINE_EAGLE_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		#has_dlc = "Purple Phoenix"
+		has_government_mechanic = byzantine_bureaucracy_mechanic
+		OR = {
+			NOT = { has_country_flag = recent_BYZ_factions_2 }
+			had_country_flag = { flag = recent_BYZ_factions_2 days = 365 }
+		}
+		has_government_power = { mechanic_type = byzantine_bureaucracy_mechanic power_type = byzantine_megas_logariastes_power value = 75 }
+	}
+	
+	immediate = { set_country_flag = recent_BYZ_factions_2 }
+	
+	mean_time_to_happen = {
+		months = 72	
+	}
+	
+	option = {
+		name = "resurgent_purple_phoenix.3.a"
+		add_country_modifier = {
+			name = "byz_megas_logariastes_bad_1"
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = resurgent_purple_phoenix.4
+	
+	title = "resurgent_purple_phoenix.4.t"
+	desc = "resurgent_purple_phoenix.4.d"
+	
+	picture = BYZANTINE_EAGLE_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		#has_dlc = "Purple Phoenix"
+		has_government_mechanic = byzantine_bureaucracy_mechanic
+		OR = {
+			NOT = { has_country_flag = recent_BYZ_factions_2 }
+			had_country_flag = { flag = recent_BYZ_factions_2 days = 365 }
+		}
+		has_government_power = { mechanic_type = byzantine_bureaucracy_mechanic power_type = byzantine_megas_logariastes_power value = 75 }
+	}
+	
+	immediate = { set_country_flag = recent_BYZ_factions_2 }
+	
+	mean_time_to_happen = {
+		months = 72	
+	}
+	
+	option = {
+		name = "resurgent_purple_phoenix.4.a"
+		add_country_modifier = {
+			name = "byz_megas_logariastes_bad_2"
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = resurgent_purple_phoenix.5
+	
+	title = "resurgent_purple_phoenix.5.t"
+	desc = "resurgent_purple_phoenix.5.d"
+	
+	picture = BYZANTINE_EAGLE_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		#has_dlc = "Purple Phoenix"
+		has_government_mechanic = byzantine_bureaucracy_mechanic
+		OR = {
+			NOT = { has_country_flag = recent_BYZ_factions_2 }
+			had_country_flag = { flag = recent_BYZ_factions_2 days = 365 }
+		}
+		has_government_power = { mechanic_type = byzantine_bureaucracy_mechanic power_type = byzantine_megas_logothetes_power value = 75 }
+	}
+	
+	immediate = { set_country_flag = recent_BYZ_factions_2 }
+	
+	mean_time_to_happen = {
+		months = 72	
+	}
+	
+	option = {
+		name = "resurgent_purple_phoenix.5.a"
+		add_country_modifier = {
+			name = "byz_megas_logothetes_bad_1"
+			duration = 1825
+		}
+	}
+}
+
+country_event = {
+	id = resurgent_purple_phoenix.6
+	
+	title = "resurgent_purple_phoenix.6.t"
+	desc = "resurgent_purple_phoenix.6.d"
+	
+	picture = BYZANTINE_EAGLE_eventPicture
+	
+	trigger = {
+		tag = BYZ
+		#has_dlc = "Purple Phoenix"
+		has_government_mechanic = byzantine_bureaucracy_mechanic
+		OR = {
+			NOT = { has_country_flag = recent_BYZ_factions_2 }
+			had_country_flag = { flag = recent_BYZ_factions_2 days = 365 }
+		}
+		has_government_power = { mechanic_type = byzantine_bureaucracy_mechanic power_type = byzantine_megas_logothetes_power value = 75 }
+	}
+	
+	immediate = { set_country_flag = recent_BYZ_factions_2 }
+	
+	mean_time_to_happen = {
+		months = 72	
+	}
+	
+	option = {
+		name = "resurgent_purple_phoenix.6.a"
+		add_country_modifier = {
+			name = "byz_megas_logothetes_bad_2"
+			duration = 1825
+		}
 	}
 }

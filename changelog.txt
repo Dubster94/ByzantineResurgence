@@ -47,6 +47,7 @@ Features:
 
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
+-Fixed Chariot Races event localisation such that, if you move your capital to Rome, the event text will recognise that.
 
 ###########################################
 

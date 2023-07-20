@@ -2247,45 +2247,6 @@ country_event = { #26 The Genoese Decline our Offer...
 	}
 }
 
-#Scrapped because of:
-#1. There's no surefire way to detect if a foreign dynasty is on the throne. The problem is that leaders draw from the country file, but pretenders draw from the culture list.
-#Thus, the options are basically:
-#	i. Go through every possible Greek dynasty (There's hundreds of them because of CKII integration)
-#	ii. Use Byzantine leader names but risk Greek pretenders not being recognised.
-#	iii. Use pretender names from the Succession Crisis, risking certain leader names as well as Greek pretenders.
-#The first option is the surefire way, but takes an insane amount of trigger logic, which, well, I'd like to avoid at all costs.
-#2. Even if this happens, no other nation has anything like this, well, except the Habsburgs, and that's only one dynasty. I suppose that would be evidence enough, but... meh.
-#3. This would severely weaken Byzantium, as it would effectively re-run the Succession Crisis. Which doesn't have to be a bad thing I guess...
-#In the end, this needs a bit more contemplating.
-# country_event = { #27 False dynasty on the throne.
-	# id = resurgent_BYZ.27
-	# title = "resurgent_BYZ.27.t"
-	# desc = "resurgent_BYZ.27.d"
-	# picture = GOOD_WITH_MONARCH_eventPicture
-	
-	# trigger = {
-		# tag = BYZ
-		# is_subject = no
-		# NOT = {
-			# dynasty = "Palaiologos"
-			# dynasty = "Komnenos"
-			# dynasty = "Laskaris"
-			# dynasty = "Komnenodoukas"
-			# dynasty = "Doukas"
-			# dynasty = "Angelos Philanthropenos"
-			# dynasty = "Angelos"
-			# dynasty = "Philanthropenos"
-			# dynasty = "Kantakouzenos"
-			# dynasty = "Gabras"
-		# }
-	# }
-	
-	# mean_time_to_happen = {
-		# months = 600 #50 years MTTH, shouldn't happen *too* often.
-	# }
-# }
-
-
 country_event = { #32 The city of Ailia and the Jews
 	id = resurgent_BYZ.32
 	title = "resurgent_BYZ.32.t" 

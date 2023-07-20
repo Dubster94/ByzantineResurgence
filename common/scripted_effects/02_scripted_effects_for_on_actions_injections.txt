@@ -117,11 +117,29 @@ on_new_monarch_effect = {
 			
 		}
 		else = {
-			capital_scope = {
-				area = {
-					random_owned_province = {
-						limit = { NOT = { is_capital = yes } }
+			if = { #If owning a province in capital area that is not the capital
+				limit = {
+					capital_scope = {
+						area = {
+							owned_by = ROOT
+							NOT = { is_capital = yes }
+						}
 					}
+				}
+				capital_scope = {
+					area = {
+						random_owned_province = {
+							limit = { NOT = { is_capital = yes } }
+						}
+						spawn_rebels = {
+							type = pretender_rebels
+							size = 2
+						}
+					}
+				}
+			}
+			else = {
+				capital_scope = {
 					spawn_rebels = {
 						type = pretender_rebels
 						size = 2
