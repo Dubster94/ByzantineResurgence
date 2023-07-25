@@ -1920,9 +1920,9 @@ byz_armenia_2 = {
 					pamphylia_area = {
 						add_prosperity = 50
 					}
-					lydia_area = {
-						add_prosperity = 50
-					}
+					# lydia_area = {
+						# add_prosperity = 50
+					# }
 				}
 			}
 			add_country_modifier = {
@@ -6202,7 +6202,7 @@ byz_iberia_4 = {
 					trade_goods = gold
 					trade_goods = coal
 				}
-				amount = 10
+				value = 10
 			}
 		}
 		
@@ -6238,7 +6238,7 @@ byz_iberia_4 = {
 					trade_goods = bt_trade_good_fruit
 				}
 				has_building = farm_estate 
-				amount = 25 #I count 20 wine, 13 fruits.
+				value = 25 #I count 20 wine, 13 fruits.
 			}
 			trade_goods_produced_amount = {
 				trade_goods = wine
@@ -6270,7 +6270,7 @@ byz_iberia_4 = {
 				region = iberia_region
 				trade_goods = coal
 				has_building = furnace
-				amount = 3
+				value = 3
 			}
 			trade_goods_produced_amount = {
 				trade_goods = coal
@@ -7176,7 +7176,7 @@ byz_hre_3 = {
 					trade_goods = iron
 				}
 				has_building = weapons
-				amount = 10
+				value = 10
 			}
 			trade_goods_produced_amount = {
 				trade_goods = copper

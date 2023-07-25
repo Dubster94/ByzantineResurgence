@@ -117,7 +117,12 @@ estate_nobles_latifundia_kantakouzenos = {
 	}
 	on_revoked = {
 		random_owned_province = {
-			spawn_small_scaled_rebels = { type = pretender_rebels leader="Alexios Kantakouzenos" leader_dynasty="Kantakouzenos" }
+			spawn_rebels = {
+				size = 3
+				type = pretender_rebels
+				leader = "Alexios Kantakouzenos"
+				leader_dynasty = "Kantakouzenos"
+			}
 		}
 		byz_revoke_latifundia_effect = { large = yes }
 		change_estate_land_share = {
@@ -158,7 +163,12 @@ estate_nobles_latifundia_philantropenos = {
 	}
 	on_revoked = {
 		random_owned_province = {
-			spawn_small_scaled_rebels = { type = pretender_rebels leader="Georgios Philantropenos" leader_dynasty="Philantropenos" }
+			spawn_rebels = {
+				size = 3
+				type = pretender_rebels
+				leader = "Georgios Philantropenos"
+				leader_dynasty = "Philantropenos"
+			}
 		}
 		byz_revoke_latifundia_effect = { medium = yes }
 		change_estate_land_share = {
@@ -199,7 +209,12 @@ estate_nobles_latifundia_metochites = {
 	}
 	on_revoked = {
 		random_owned_province = {
-			spawn_small_scaled_rebels = { type = pretender_rebels leader="Ioannes Metochites" leader_dynasty="Metochites" }
+			spawn_rebels = {
+				size = 3
+				type = pretender_rebels
+				leader = "Ioannes Metochites"
+				leader_dynasty = "Metochites"
+			}
 		}
 		byz_revoke_latifundia_effect = { medium = yes }
 		change_estate_land_share = {
@@ -240,7 +255,12 @@ estate_nobles_latifundia_choumnos = {
 	}
 	on_revoked = {
 		random_owned_province = {
-			spawn_small_scaled_rebels = { type = pretender_rebels leader="Leon Choumnos" leader_dynasty="Choumnos" }
+			spawn_rebels = {
+				size = 3
+				type = pretender_rebels
+				leader = "Leon Choumnos"
+				leader_dynasty = "Choumnos"
+			}
 		}
 		byz_revoke_latifundia_effect = { small = yes }
 		change_estate_land_share = {
@@ -281,7 +301,12 @@ estate_nobles_latifundia_melissenos = {
 	}
 	on_revoked = {
 		random_owned_province = {
-			spawn_small_scaled_rebels = { type = pretender_rebels leader="Ioulianos Melissenos" leader_dynasty="Melissenos" }
+			spawn_rebels = {
+				size = 3
+				type = pretender_rebels
+				leader = "Ioulianos Melissenos"
+				leader_dynasty = "Melissenos"
+			}
 		}
 		byz_revoke_latifundia_effect = { small = yes }
 		change_estate_land_share = {
@@ -322,7 +347,12 @@ estate_nobles_latifundia_tornikes = {
 	}
 	on_revoked = {
 		random_owned_province = {
-			spawn_small_scaled_rebels = { type = pretender_rebels leader="Demetrios Tornikes" leader_dynasty="Tornikes" }
+			spawn_rebels = {
+				size = 3
+				type = pretender_rebels
+				leader = "Demetrios Tornikes"
+				leader_dynasty = "Tornikes"
+			}
 		}
 		byz_revoke_latifundia_effect = { small = yes }
 		change_estate_land_share = {

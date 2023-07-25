@@ -634,6 +634,8 @@
  desc_byz_third_odyssey:0 "With the discovery of the New World, people from our Empire flock to settle in faraway lands, seeking eternal glory for themselves, and us."
  byz_steel_of_noricum:0 "The Finest Steel"
  desc_byz_steel_of_noricum:0 "With the weapon manufactories in Noricum built, we have control over some of the finest steel that man can make."
+ byz_exarchate:0 "A Grand Exarchate"
+ desc_byz_exarchate:0 "We have been blessed by the [BYZ.Monarch.GetTitle] of [BYZ.GetName] as a grand Exarchate of their Empire. This has granted us several benefits in our rule."
  #From prior mission tree. Some have been cut.
  byz_last_stand:0 "Last Stand"
  desc_byz_last_stand:0 ""

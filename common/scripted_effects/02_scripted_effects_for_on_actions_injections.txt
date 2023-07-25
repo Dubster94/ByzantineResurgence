@@ -114,23 +114,20 @@ on_new_monarch_effect = {
 			}
 			country_event = { id = integrated_byz_events.16 } #The Rebellion of Demetrios Palaiologos
 			clr_country_flag = rebellious_demetrios_flag #Just to be sure
-			
 		}
 		else = {
 			if = { #If owning a province in capital area that is not the capital
 				limit = {
 					capital_scope = {
-						area = {
+						area_for_scope_province = {
 							owned_by = ROOT
 							NOT = { is_capital = yes }
 						}
 					}
 				}
 				capital_scope = {
-					area = {
-						random_owned_province = {
-							limit = { NOT = { is_capital = yes } }
-						}
+					random_province_in_state = {
+						limit = { NOT = { is_capital = yes } }
 						spawn_rebels = {
 							type = pretender_rebels
 							size = 2
