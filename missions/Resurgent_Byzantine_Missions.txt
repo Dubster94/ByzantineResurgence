@@ -749,8 +749,8 @@ byz_reconquest_2 = {
 		}
 		
 		trigger = {
-			development_in_provinces = { #Anatolia starts with 702 dev. (Used to be 665 in BT 13 and 593 dev in BT 12 with Bugfixes) I think this is a fair adjustment.
-				value = 900 #750
+			development_in_provinces = { #Anatolia starts with 524 dev (Used to be 702 dev in BT 15, 665 in BT 13 and 593 dev in BT 12 with Bugfixes). You also get a lot of dev in a lot of the missions as well, and you are expected to dev west Anatolia quite a bit with its rewards.
+				value = 750
 				region = anatolia_region
 			}
 		}
@@ -1354,7 +1354,7 @@ byz_monuments = { #Separated because uncompletable without Leviathan DLC.
 	byz_imperial_great_projects = { #New in BR 8.0
 		icon = mission_parthenon
 		position = 10 #4-10
-		required_missions = { byz_revoke_latifundia byz_pandidakterion }
+		required_missions = { byz_revoke_latifundia byz_city_of_cities }
 		
 		provinces_to_highlight = {
 			has_great_project = {
@@ -1484,7 +1484,7 @@ byz_resurgence = {
 }
 
 byz_development_1 = {
-	slot = 5
+	slot = 4
 	generic = no
 	ai = yes
 	potential = {
@@ -1494,8 +1494,8 @@ byz_development_1 = {
 	
 	byz_restore_city_of_cities = { #Restore the City of Cities
 		icon = take_constantinople
-		position = 8 #5-8
-		required_missions = { byz_resurgent }
+		position = 9 #4-9
+		required_missions = { byz_new_renaissance }
 		
 		provinces_to_highlight = {
 			province_id = 151
@@ -1580,7 +1580,7 @@ byz_development_1 = {
 	
 	byz_restore_imperial_co_capital = { #The Imperial Co-Capital
 		icon = mission_early_game_buildings
-		position = 9 #5-9
+		position = 10 #4-10
 		required_missions = { byz_restore_city_of_cities }
 		
 		provinces_to_highlight = {
@@ -1593,11 +1593,11 @@ byz_development_1 = {
 					limit = {
 						has_dlc = "Leviathan"
 					}
-					development = 30
+					development = 50
 					num_of_times_expanded_infrastructure = 2
 				}
 				else = {
-					development = 25
+					development = 35
 				}
 			}
 		}
@@ -1622,19 +1622,49 @@ byz_development_1 = {
 	}
 }
 
-byz_innovative_2 = {
-	slot = 4
+byz_innovative_1 = {
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
 		tag = BYZ
 	}
-	has_country_shield = yes
+	has_country_shield = yes	
+	
+	byz_new_renaissance = { #New in BR 8.0
+		icon = mission_byzantine_renaissance
+		position = 8 #5-8
+		required_missions = { byz_resurgent }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			OR = {
+				full_idea_group = innovativeness_ideas
+				philosopher = 3
+				natural_scientist = 3
+			}
+		}
+		
+		effect = {
+			change_government_reform_progress = 60
+			country_event_with_insight = {
+				id = resurgent_BYZ.38
+				insight_tooltip = byz_new_renaissance_event_insight
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
 	
 	byz_pandidakterion = { #New in BR 8.0
 		icon = mission_pandidakterion
-		position = 9 #4-9
-		required_missions = { byz_bureaucracy byz_restore_city_of_cities }
+		position = 9 #5-9
+		required_missions = { byz_bureaucracy byz_new_renaissance }
 		
 		provinces_to_highlight = {
 			province_id = 151
@@ -1672,7 +1702,7 @@ byz_innovative_2 = {
 	
 	byz_military_education = { #New in BR 8.0
 		icon = mission_skoutatoi
-		position = 10 #4-10
+		position = 10 #5-10
 		required_missions = { byz_pandidakterion }
 		
 		provinces_to_highlight = {
@@ -1707,51 +1737,11 @@ byz_innovative_2 = {
 			factor = 500	#AI gogo!
 		}
 	}
-}
-
-byz_innovative_1 = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential = {
-		tag = BYZ
-	}
-	has_country_shield = yes
-	
-	byz_new_renaissance = { #New in BR 8.0
-		icon = mission_byzantine_renaissance
-		position = 10 #5-10
-		required_missions = { byz_pandidakterion byz_restore_imperial_co_capital }
-		
-		provinces_to_highlight = {
-			#None
-		}
-		
-		trigger = {
-			OR = {
-				full_idea_group = innovativeness_ideas
-				philosopher = 3
-				natural_scientist = 3
-			}
-		}
-		
-		effect = {
-			change_government_reform_progress = 60
-			country_event_with_insight = {
-				id = resurgent_BYZ.38
-				insight_tooltip = byz_new_renaissance_event_insight
-			}
-		}
-		
-		ai_weight = {
-			factor = 500	#AI gogo!
-		}
-	}
 	
 	byz_basileus_protostrategos = { #New in BR 8.0
 		icon = mission_basileus_protostrategos
 		position = 11 #5-11
-		required_missions = { byz_military_education byz_new_renaissance }
+		required_missions = { byz_military_education byz_co_capital }
 		
 		provinces_to_highlight = {
 			#None

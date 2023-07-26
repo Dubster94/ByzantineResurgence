@@ -450,8 +450,8 @@
 407 = { "Kallinikos" "Kallinikos" } #Was 405 pre 1.24
 2303 = { "Melitene" "Melitene" }
 4298 = { "Telouch" "Telouch" } #Pre 1.24 was 5183
-#6030 = { "Samosaton" "Samosaton" } #Using Samosata, hellenised similarly to how Arsamosata became Asmosaton
-#6091 = { "Barbalissos" "Barbalissos" }
+6101 = { "Samosaton" "Samosaton" } #Using Samosata, hellenised similarly to how Arsamosata became Asmosaton
+6091 = { "Barbalissos" "Barbalissos" }
 #6092 = { "Bambyke" "Hierapolis" }
 
 #Osrhoene
@@ -464,10 +464,10 @@
 
 #Sophene
 418 = { "Amida" "Amida" }
-4310 = { "Anzitene" "Charpete" } #Pre 1.24 was 5148
+4310 = { "Anzitene" "Asmosaton" }  #Pre 1.24 was 5148
 5330 = { "Arzanene" "Martyropolis" } #New in 1.24
 6104 = { "Ingilene" "Ingila" }
-#6105 = { "Belabitene" "Asmosaton" } #Replacing Mesopotamia theme with something else.
+#6105 = { "Belabitene" "Charpete" }#Replacing Mesopotamia theme with something else.
 6107 = { "Chorzane" "Kitharizon" }
 
 #Lesser Armenia
@@ -488,7 +488,7 @@
 #Vaspurakan
 2306 = { "Taron" "Mous" } #Moved to Upper Euphrates in 1.24
 2307 = { "Baspurakan" "Thospitis" } #Or Aban/Iban, not sure. Wikipedia claims Eua, but I have NO idea wherever they may have gotten that from. The ancient Greek is Thospia or Thospitis. There is also a Bouana.
-4296 = { "Balaleison" "Balaleison" } #New in 1.24. Wikipedia claims Balales, Pleiades claims Balaleisa or Balouos mid-Byzantine times, but finally Balaleison up until 1200, which is what I'm going for. It might be a bit ancient, but it sounds good in my opinion.
+4296 = { "Moxoene" "Balaleison" } #New in 1.24. Wikipedia claims Balales, Pleiades claims Balaleisa or Balouos mid-Byzantine times, but finally Balaleison up until 1200, which is what I'm going for. It might be a bit ancient, but it sounds good in my opinion.
 5332 = { "Arzes" "Arzes" } #New in 1.24
 6112 = { "Perkri" "Perkri" } #Admistrando Imperio
 6113 = { "Adamakert" "Adamakert" } #Using an Armenian name for now because I cannot find an actual Greek match.
