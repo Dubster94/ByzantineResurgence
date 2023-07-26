@@ -1428,6 +1428,20 @@ byz_resurgence = {
 		}
 		
 		effect = {
+			emperor = {
+				if = {
+					limit = {
+						has_dlc = "Emperor"
+					}
+					set_imperial_incident = incident_byzantine_resurgence
+				}
+				else = {
+					country_event = {
+						id = incidents_byzantine_resurgence.2
+						days = 5
+					}
+				}
+			}
 			remove_government_reform = byzantine_autocracy_reform
 			custom_tooltip = byz_resurgent_tooltip #Because government mechanics are showing in tooltips.
 			hidden_effect = {

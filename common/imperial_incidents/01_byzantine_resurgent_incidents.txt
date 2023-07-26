@@ -83,7 +83,7 @@ incident_byzantine_resurgence = { #Triggered when and if Byzantium resurges (Get
 				is_subject = yes
 			}
 			BYZ = {
-				NOT = { total_development = 1000 }
+				NOT = { is_great_power = yes }
 			}
 		}
 	}

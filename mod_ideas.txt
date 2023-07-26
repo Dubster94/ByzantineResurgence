@@ -1,7 +1,21 @@
+#Future potential content:
+-Tie unique parliamentary issues to missions?
+-Tie new government mechanics to parliamentary issues?
+
+-Adjust Latin Imperial Authority to a new government mechanic.
+-Work on additional LTE missions to show up below Emperor Crusader missions, akin to what Russia has in Domination.
+
+Latin Empire's Knightly Orders:
+-------------------------------
+- Needs estate privileges
+- Needs estate events
+
+Privilege ideas:
+-Knightly Orders: Allow for a unique type of mercenary company for the Latin Empire.
+-Need their other estate interactions reworked into privileges.
+
 #1.30 ideas:
 -Estates: Can no longer own provinces directly. How to solve?
-	-Knightly Orders: Will allow for a unique type of mercenary company for the Latin Empire, but will otherwise be pretty much the same.
-		-Will need their estate interactions reworked into privileges.
 -Align Pentarchy/East Oriental Schism missions to the system the new Papal mission "Mend the Schism" mission will use?
 
 
@@ -56,21 +70,9 @@ Initial idea layout:
 #Things to implement#
 #####################
 
-Latin Empire's Knightly Orders:
--------------------------------
-- Needs estate privileges
-- Needs estate events
-
 Decisions:
 ----------
 Decision to form Dacia as a Romanian-cultured nation. Should rename Hunedoara to Sarmisegetusa.
-
--A couple of new internal missions for Byzantium.
-	-Recall Greek Philosophers: Requires improving relations with at least 5 italian nations & either picking up the Byzantine Renaissance national idea, or embracing Innovative ideas.
-	https://en.wikipedia.org/wiki/Greek_scholars_in_the_Renaissance
-	-Restore Imperial Navy: Repurposed from another mission which most people would autocomplete. Now requires you to establish a great navy.
-	-Restore the Pandidakterion (Admittedly inspired by an Ante Bellum post about a mission teaser using the same name) based on Byzantine higher learning. Requires a university in Constantinople. If universities have been built in Alexandria, Rome and Athens as well, it'll give an innovativeness gain modifier.
-	-Purple Phoenix: At least 1000 development, not part of the HRE.
 
 #######
 #Ideas#
@@ -79,7 +81,7 @@ Decision to form Dacia as a Romanian-cultured nation. Should rename Hunedoara to
 -Exarch Ravenna: Option to not cede Magna Graecia to Ravenna? Will cause issues with Exarch state blocking stating of provinces. Not sure.
 
 -Something mentioning the Monastery of the Pantocrator (Zeyrek Mosque) and how Byzantine emperors upon their death were buried there since the Komnenoi period.
-	
+
 Byzantine Succession Mechanics:
 -------------------------------
 Byzantine succession was non-hereditary, but was especially in the late Empire treated as if it was, with the firstborn son generally being expected to rule, being named co-emperor rather early. Generally, that is how it worked.

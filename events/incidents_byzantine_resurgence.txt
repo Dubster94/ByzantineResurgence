@@ -109,49 +109,49 @@ country_event = { #2 Byzantine Resurges!
 		}
 	}
 }
-
-country_event = { #200 Incident starter of Byzantine Resurges
-	id = incidents_byzantine_resurgence.200
-	title = "incidents_byzantine_resurgence.200.t" 
-	desc = "incidents_byzantine_resurgence.200.d"
-	picture = ORTHODOX_eventPicture
+#Cut in favour of it triggering as part of the Byzantine missions now.
+# country_event = { #200 Incident starter of Byzantine Resurges
+	# id = incidents_byzantine_resurgence.200
+	# title = "incidents_byzantine_resurgence.200.t" 
+	# desc = "incidents_byzantine_resurgence.200.d"
+	# picture = ORTHODOX_eventPicture
 	
-	#major = yes
-	hidden = yes
-	fire_only_once = yes
+	# #major = yes
+	# hidden = yes
+	# fire_only_once = yes
 	
-	mean_time_to_happen = {
-		days = 30
-	}
+	# mean_time_to_happen = {
+		# days = 30
+	# }
 	
 	
-	trigger = {
-		tag = BYZ
-		is_part_of_hre = no
-		is_emperor = no #I believe being emperor of the HRE is possible without actually being part of the HRE in some fringe cases.
-		total_development = 1000
-		num_of_cities = 50 #Should likely be reached by the time you have 1000 dev.
-		owns = 151 #Constantinople, just in case something breaks somehow.
-	}
+	# trigger = {
+		# tag = BYZ
+		# is_part_of_hre = no
+		# is_emperor = no #I believe being emperor of the HRE is possible without actually being part of the HRE in some fringe cases.
+		# total_development = 1000
+		# num_of_cities = 50 #Should likely be reached by the time you have 1000 dev.
+		# owns = 151 #Constantinople, just in case something breaks somehow.
+	# }
 	
-	option = { #Byzantium has resurged!
-		name = "incidents_byzantine_resurgence.200.a"
-		emperor = {
-			if = {
-				limit = {
-					has_dlc = "Emperor"
-				}
-				set_imperial_incident = incident_byzantine_resurgence
-			}
-			else = {
-				country_event = {
-					id = incidents_byzantine_resurgence.2
-					days = 5
-				}
-			}
-		}
-	}
-}
+	# option = { #Byzantium has resurged!
+		# name = "incidents_byzantine_resurgence.200.a"
+		# emperor = {
+			# if = {
+				# limit = {
+					# has_dlc = "Emperor"
+				# }
+				# set_imperial_incident = incident_byzantine_resurgence
+			# }
+			# else = {
+				# country_event = {
+					# id = incidents_byzantine_resurgence.2
+					# days = 5
+				# }
+			# }
+		# }
+	# }
+# }
 
 country_event = { #201 The Emperor has denounced us!
 	id = incidents_byzantine_resurgence.201
