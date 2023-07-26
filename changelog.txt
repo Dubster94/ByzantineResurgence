@@ -37,7 +37,7 @@ Features:
 				-Upon completing the mission "Byzantine Resurgence" you are awarded with a better T1 government reform, and you can start accumulating unique government mechanics.
 					-This reformed Byzantine monarchy has the following unlockable government mechanics:
 						-Pronoiar: Upon completing "Revoke the Latifundia!", Byzantium gets three incredibly immersive buttons to press, similar to the old Iqta system in previous patches. These however give bonuses not based on subjects, but on own state development. As a sidenote, completing this mission also renames the nobles from Dynatoi to Penetes.
-						-Militarization of State: Upon completing "Basileus Protostrategos", the Byzantines get access to Protostrategos Prominence. This mechanic resets upon monarch death, and forces your ruler as a general. In order to raise Protostrategos Prominence, you need to win battles with the monarch as the army leader. Doing so nets bonuses to army drilling, as well as Strategoi loyalty.
+						-Militarization of State: Upon completing "Basileus Protostrategos", the Byzantines get access to Protostrategos Prominence. This mechanic resets upon monarch death, and forces your ruler as a general. Protostrategos Prominence grows as part of winning battles, and decreases as part of losing battles, with your monarch. Increasing it nets bonuses to army drilling, as well as Strategoi loyalty.
 						-Byzantine Bureaucracy: Upon completing "Byzantine Bureacucracy", Byzantium gets access to three ever-increasing government powers that grant scaling bonuses to the state. However, these government powers also severely increase corruption in the country, and they have several bad events tied to them if the power is high. To reduce it, you pay monarch points in the relevant category.
 					-As a sidenote, with regards to these government mechanics, I could not get the interface to align more than 3 icons per line, causing the interface to take up much more space than required. This appears to be a hardcoded limit that other modders have stumbled upon, so there is little I can do to fix the necessary scrolling to see all buttons. A bandaid would be to adjust the entire interface, but that is not something I am willing to do at the moment.
 					-I would also take the opportunity to credit the user by the name of Roi that created the Byzantine Militarization icon as well as the Pronoiar icons back in the day. The graphics for all three government mechanics are derived from those that Roi created.
@@ -48,6 +48,7 @@ Features:
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
 -Fixed Chariot Races event localisation such that, if you move your capital to Rome, the event text will recognise that.
+-Fixed Basileus Protostrategos ruler generals getting shit stats because apparently the effect does not use army tradition or ruler skill by default.
 
 ###########################################
 

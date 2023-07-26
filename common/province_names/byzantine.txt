@@ -167,6 +167,9 @@
 321 = { "Lemesos" "Lemesos" }
 5139 = { "Leukosia" "Leukosia" } #Comes from Leuke Ousia
 5145 = { "Ammochostos" "Ammochostos" }
+6076 = { "Kourion" "Episkope" } #Using ancient name even though it was abandoned at this point.
+6077 = { "Krommyakon" "Krommyakon" } #Using Roman naming for Cape Kormakitis
+6078 = { "Keryneia" "Keryneia" }
 
 #Sirmion
 3000 = { "Nysos" "Nysos" }
@@ -327,7 +330,7 @@
 #Mysia
 5130 = { "Achyraous" "Achyraous" } #Found as a fortress of Mysia from a detailed map during the Nicaean period.
 2296 = { "Troas" "Abydos" }
-5131 = { "Adramytteion" "Herakleia" } #Using Adramyttium because bigger and more important. Herakleia is given by Pleiades, wiki gives Kydonies. Other maps don't include the town whatsoever.
+#5131 = { "Adramytteion" "Herakleia" } #Using Adramyttium because bigger and more important. Herakleia is given by Pleiades, wiki gives Kydonies. Other maps don't include the town whatsoever.
 5156 = { "Pegai" "Pegai" } #
 5171 = { "Kyzikos" "Michailites" } #Miletoupolis is ancient. I'm using a more Byzantine name, the one which Mihalich actually derives from. Kyzikos is the island, an important city during Byzantine times
 #6003 = { "Pegadeia" "Pegadeia" }
@@ -338,6 +341,10 @@
 6005 = { "Phokaia" "Phokaia" }
 #6006 = { "Kysos" "Erythrai" }
 6007 = { "Ephesos" "Hagios Theologos" } #Using Efes, close by.
+2297 = { "Sardeis" "Magnesia" } #Manisa is Magnesia, yes, but Sardeis was way more important.
+5172 = { "Thrakesion" "Philadelphia" }
+#6008 = { "Pyrgion" "Pyrgion" }
+6041 = { "Thyateira" "Thyateira" }
 
 #Caria
 4309 = { "Tralleis" "Andronikoupolis" } #Using Tralleis for now, but considering its utter destruction in the 13th century and then an attempted rebuild by Andronikos to rename it to Andronikopolis or Palaiologopolis.
@@ -345,9 +352,10 @@
 319 = { "Stadeia" "Mogalla" } #Mylasa is technically further west. Physkos is the province port, however it together with Mogalla (Mughla) is painfully insignificant in Byzantine history. Stadeia at least is mentioned a couple of times, and is on the peninsula of the province.
 6009 = { "Mylasa" "Mylasa" } #There is an argument to use Miletos instead of Mylasa, because it is painfully insignificant. Miletos also apparently had a Byzantine castle known as Palation
 6010 = { "Tabai" "Tabai" }
+4308 = { "Chonai" "Laodikeia" } #I keep going back and forth on this one. Once again I change this to accomodate for Chonai, which was quite important considering Laodikeia was long gone by the 13th century. Pre 1.24 was 5132
 
 #Lycia-Pamphylia
-5162 = { "Makre" "Makre" } #Alternative names for Makre are Telmessos & Anastasioupolis
+5162 = { "Kibyra" "Makre" } #Alternative names for Makre are Telmessos & Anastasioupolis
 #6012 = { "Kibyra" "Kibyra" } #Namesake for Kibyraeot theme.
 2298 = { "Attaleia" "Attaleia" }
 5147 = { "Korakesion" "Kalon Oros" } #Kalon Oros is most definitely a correct name. I guess I just like Korakesion so much.
@@ -383,16 +391,10 @@
 3248 = { "Rhizaion" "Rhizaion" }
 6040 = { "Maurokastron" "Maurokastron" } #This is yet another Koloneia otherwise.
 
-#Lydia
-2297 = { "Sardeis" "Magnesia" } #Manisa is Magnesia, yes, but Sardeis was way more important.
-5172 = { "Thrakesion" "Philadelphia" }
-#6008 = { "Pyrgion" "Pyrgion" }
-6041 = { "Thyateira" "Thyateira" }
 
 #Phrygia
 322 = { "Dorylaion" "Dorylaion" }
 1848 = { "Akroinon" "Nikopolis" } #Akroinon is the old name of Afyon before it was named Nikopolis (City of Victory)
-4308 = { "Chonai" "Laodikeia" } #I keep going back and forth on this one. Once again I change this to accomodate for Chonai, which was quite important considering Laodikeia was long gone by the 13th century. Pre 1.24 was 5132
 4311 = { "Kotyaion" "Kotyaion" }  #Pre 1.24 was 5133
 5155 = { "Anatolikon" "Germe" }  #Gordion wasn't exactly an important city. It also leaves Amorion without representation. I happened to come across a Colonia Augusta Felix Germa that was marked on a Byzantium 1045 map as Germe close by, so I pick that.
 5163 = { "Temenouthyrai" "Ousakeion" } #Ancient greek name of the city, which I do prefer over the newer Ousakeion
@@ -404,6 +406,8 @@
 #Lycaonia
 323 = { "Ikonion" "Konio" } #Wikipedia claims medieval Greek had turned city name into Kónio. The turkish name Konya makes a lot more sense then.
 324 = { "Laranda" "Laranda" }
+4307 = { "Kappadokia" "Koron" } #Put Koron as the Cappadocian Theme Capital here instead of Archelais/Garsaura/Whatever, moving Koloneia over to where its Theme was.. Pre 1.24 was 5136
+5146 = { "Magida" "Tyana" } #Historical capital of the Cappadocian theme was Tyana. The only reason why the city of Magida even became big was because of resettlement from Magida after muslim conquests. It's similar to Amorion, but yeah, let's leave it as Magida for now
 #6024 = { "Kybistra" "Kybistra" } #Best I could find, outside of adding yet another Herakleia
 
 
@@ -418,10 +422,8 @@
 
 #Cappadocia
 5150 = { "Mokissos" "Justinianoupolis" } #Cutting Korama because the province moved. Using old Mokissos simply because it's shorter, so it looks better on the map.
-5146 = { "Magida" "Tyana" } #Historical capital of the Cappadocian theme was Tyana. The only reason why the city of Magida even became big was because of resettlement from Magida after muslim conquests. It's similar to Amorion, but yeah, let's leave it as Magida for now
 2301 = { "Kaisareia" "Kaisareia" }
 332 = { "Lykandos" "Germanikeia" } #Ditched previous Lykandos. Germanikeia is probably more important.
-4307 = { "Kappadokia" "Koron" } #Put Koron as the Cappadocian Theme Capital here instead of Archelais/Garsaura/Whatever, moving Koloneia over to where its Theme was.. Pre 1.24 was 5136
 4314 = { "Nyssa" "Nyssa" } #Discarding latin Cochisia. Technically Kochisar means (travelling) coach fortress, i.e fortress on the road basically, so I suppose I could transliterate that. Nyssa was decently important however. Pre 1.24 was 5153
 6028 = { "Taranton" "Taranton" } #Using an important Byzantine fortress during Byzantine-Arab wars that is situated next to Darende.
 6029 = { "Arabissos" "Ablastha" } #This one was difficult to find, but it seems to stem from the Armenian Ablasta, transliterated into Greek. It is also next to Arabissos, which was an important fort during Byzantine times.
@@ -764,14 +766,12 @@
 #Levant#
 ########
 
-#Bargylus
+#Lower Syria
 2313 = { "Antiocheia" "Antiocheia" }
 5170 = { "Theodorias" "Laodikeia" } #City is a Laodicea, yes, but this is what Justinian called the area, after his wide Theodora
 6094 = { "Myriandros" "Alexandreia" } #Using province port for province name.
 #6079 = { "Marakas" "Marakas" } #Maraccas
 6080 = { "Antarados" "Arados" } #Antaradus, later Tartus/Tartous
-
-#Aleppo
 377 = { "Beroia" "Beroia" }
 4271 = { "Apameia" "Apameia" } #There's literally nothing here pre-Ottomans. Technically this city was actually located way south in another province, but frankly I cannot do better at this point. Used to be called Arrha, which was "North of Idlib", then Emathous. I now go with Apameia due to it being pointed out on the map in 400AD as the capital of Syria IV.
 #6087 = { "Telmenissos" "Telmenissos" } #Telmenissus at Tell Menis, next to what the province is in-game.
@@ -801,13 +801,7 @@
 5180 = { "Gaza" "Gaza" }
 6071 = { "Berosaba" "Berosaba" } #Bersabee/Bersabe in Latin.
 #6072 = { "Georgioupolis" "Georgioupolis" } #Using Lod/Lydda, which was in the 6th century named Georgiopolis. Was once known as Diospolis, but we already have several of those.
-
-#Hauran
-#6069 = { "Bostra" "Bostra" }
-#6070 = { "Dekapolis" "Arbela" } #Using the Dekapolis area because I don't want to double up on Arbela (Erbil in Mesopotamia)
-6081 = { "Adraa" "Adraa" } #Adraha/Adraa. Supposedly the latter is Greek, but I presume the H is herely there to show pronounciation.
-#6082 = { "Dionysias" "Dionysias" } #Found a reference to Soada which might be the namesake of as-Suwayda.
-#6083 = { "Aire" "Aire" } #Aere, as identified by the wiki.
+364 = { "Rhinokoloura" "Rhinokoloura" }
 
 #Transjordan
 380 = { "Harreketh" "Harreketh" }
@@ -817,6 +811,12 @@
 #6066 = { "Arindela" "Arindela" } #Using Gharandal a bit further south because Tafilah has no Roman name.
 #6067 = { "Philadelpheia" "Philadelpheia" } #Philadelphia.
 #6068 = { "Basienis" "Basienis" } #Basienis
+#6069 = { "Bostra" "Bostra" }
+#6070 = { "Dekapolis" "Arbela" } #Using the Dekapolis area because I don't want to double up on Arbela (Erbil in Mesopotamia)
+6081 = { "Adraa" "Adraa" } #Adraha/Adraa. Supposedly the latter is Greek, but I presume the H is herely there to show pronounciation.
+#6082 = { "Dionysias" "Dionysias" } #Found a reference to Soada which might be the namesake of as-Suwayda.
+#6083 = { "Aire" "Aire" } #Aere, as identified by the wiki.
+
 
 #Unused nowadays.
 #{ "Petra" "Petra" }
@@ -826,9 +826,8 @@
 
 #Sinai
 4268 = { "Ailana" "Ailana" } #Pre 1.24 was 5202
-5181 = { "Hagia Aikaterine" "Hagia Aikaterine" } #There is no documentation of the actual name for Nekhel, despite its apparent existence since ancient Egypt. Hence I pick Justinian I's monastery (St. Catherine) a bit further south in the Sinai province.
+5181 = { "Sinai" "Kastron" } #There is no documentation of the actual name for Nekhel, despite its apparent existence since ancient Egypt. Unfortunately, I cannot use Saint Catherine's Monastery any more due to it now being a monument down south. This area has no real history whatsoever according to what I've been able to find and I seriously doubt Nekhel was a thing in Ancient Egyptian times or it would've been mentioned during Graeco-Roman rule. Hence, I'm just calling it "Castle" and using the generic Sinai name.
 365 = { "Rhaithou" "Rhaithou" }
-364 = { "Rhinokoloura" "Rhinokoloura" }
 
 #Mecca & Medina
 2327 = { "Makna" "Makna" }

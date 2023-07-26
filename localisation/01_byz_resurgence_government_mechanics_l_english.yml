@@ -70,6 +70,7 @@
  ability_byzantine_militarization_mechanic:0 "Protostrategos Prominence"
  byzantine_militarization_tooltip:0 "Enables the §YProtostrategos Prominence§! Government mechanic for the §YReformed Byzantine Monarchy§!."
  byzantine_militarization:0 "Protostrategos Prominence"
+ byzantine_militarization_desc:0 "Protostrategos Prominence is a measure of your ruler's general ability to lead armies. A high Protostrategos Prominence results in a better army in general, and future Emperors being more oriented towards warring. It also increases the [Root.Monarch.GetTitle]'s leader capabilities.\n\nProtostrategos Prominence increases by the following factors:\n - Winning Battles with the [Root.Monarch.GetTitle] as a leader.\n\nProtostrategos Prominence decreases by the following factors:\n - Losing Battles with the [Root.Monarch.GetTitle] as a leader.\n "
  monthly_byzantine_militarization:0 "Monthly Protostrategos Prominence"
  byzantine_militarization_gain_modifier:0 "Protostrategos Prominence Gain Modifier"
  

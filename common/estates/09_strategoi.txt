@@ -31,15 +31,18 @@ estate_generals =
 		shock_damage_received = -0.1
 		fire_damage_received = -0.1
 		garrison_size = 0.25
+		byzantine_militarization_gain_modifier = 1
 	}
 	country_modifier_neutral = {
 		defensiveness = 0.2
+		byzantine_militarization_gain_modifier = 0.5
 	}	
 	country_modifier_angry = {			
 		defensiveness = -0.4
 		shock_damage_received = 0.2
 		fire_damage_received = 0.2
 		garrison_size = -0.5
+		byzantine_militarization_gain_modifier = -1
 	}
 	
 	#New in 1.30. Seems to be a modifier scaled to the percentage of crown land.

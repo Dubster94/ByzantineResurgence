@@ -1,7 +1,5 @@
 MKB = "countries/PatriarchMeccaMedina.txt"
 DAC = "countries/Dacia.txt"
-#Imported from Shattered Europa
-ALN = "countries/Alans.txt"
 
 #Exarchates
 HSP = "countries/Hesperia.txt"

@@ -113,7 +113,7 @@ estate_nobles_latifundia_kantakouzenos = {
 	on_granted = {
 	}
 	can_revoke = {
-		has_idea = byz_formalize_succession_laws
+		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
 		random_owned_province = {
@@ -125,10 +125,6 @@ estate_nobles_latifundia_kantakouzenos = {
 			}
 		}
 		byz_revoke_latifundia_effect = { large = yes }
-		change_estate_land_share = {
-			estate = estate_nobles
-			share = -20
-		}
 	}
 	on_invalid = {
 	}
@@ -159,7 +155,7 @@ estate_nobles_latifundia_philantropenos = {
 	on_granted = {
 	}
 	can_revoke = {
-		has_idea = byz_formalize_succession_laws
+		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
 		random_owned_province = {
@@ -171,10 +167,6 @@ estate_nobles_latifundia_philantropenos = {
 			}
 		}
 		byz_revoke_latifundia_effect = { medium = yes }
-		change_estate_land_share = {
-			estate = estate_nobles
-			share = -10
-		}
 	}
 	on_invalid = {
 	}
@@ -205,7 +197,7 @@ estate_nobles_latifundia_metochites = {
 	on_granted = {
 	}
 	can_revoke = {
-		has_idea = byz_formalize_succession_laws
+		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
 		random_owned_province = {
@@ -217,10 +209,6 @@ estate_nobles_latifundia_metochites = {
 			}
 		}
 		byz_revoke_latifundia_effect = { medium = yes }
-		change_estate_land_share = {
-			estate = estate_nobles
-			share = -10
-		}
 	}
 	on_invalid = {
 	}
@@ -251,7 +239,7 @@ estate_nobles_latifundia_choumnos = {
 	on_granted = {
 	}
 	can_revoke = {
-		has_idea = byz_formalize_succession_laws
+		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
 		random_owned_province = {
@@ -263,10 +251,6 @@ estate_nobles_latifundia_choumnos = {
 			}
 		}
 		byz_revoke_latifundia_effect = { small = yes }
-		change_estate_land_share = {
-			estate = estate_nobles
-			share = -5
-		}
 	}
 	on_invalid = {
 	}
@@ -297,7 +281,7 @@ estate_nobles_latifundia_melissenos = {
 	on_granted = {
 	}
 	can_revoke = {
-		has_idea = byz_formalize_succession_laws
+		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
 		random_owned_province = {
@@ -309,10 +293,6 @@ estate_nobles_latifundia_melissenos = {
 			}
 		}
 		byz_revoke_latifundia_effect = { small = yes }
-		change_estate_land_share = {
-			estate = estate_nobles
-			share = -5
-		}
 	}
 	on_invalid = {
 	}
@@ -343,7 +323,7 @@ estate_nobles_latifundia_tornikes = {
 	on_granted = {
 	}
 	can_revoke = {
-		has_idea = byz_formalize_succession_laws
+		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
 		random_owned_province = {
@@ -355,10 +335,6 @@ estate_nobles_latifundia_tornikes = {
 			}
 		}
 		byz_revoke_latifundia_effect = { small = yes }
-		change_estate_land_share = {
-			estate = estate_nobles
-			share = -5
-		}
 	}
 	on_invalid = {
 	}

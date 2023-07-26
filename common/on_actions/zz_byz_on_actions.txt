@@ -180,24 +180,10 @@ on_startup = {
 		limit = {
 			has_global_flag = byz_resurgence_loaded
 		}
-		#Adding the Schismatic Relations province triggered modifier. Does cause certain savegame bloat, but it is frankly quite necessary for now unless I only add it to Orthodox provinces and add it dynamically as more are converted.
-		#Cut because of new estate privileges in 1.35 (?)
-		# if = {
-			# limit = {
-				# NOT = { has_global_flag = br_schismatic_relations_added }
-			# }
-			# every_province = {
-				# limit = {
-					# NOT = { has_province_modifier = orthodox_catholic_relations }
-				# }
-				# add_province_triggered_modifier = orthodox_catholic_relations
-			# }
-			# set_global_flag = br_schismatic_relations_added
-		# }
 		set_global_flag = bt_april_storms_passed
 	}
 }
-#Byz adding Demetrios Palaiologos as pretender event, as well as the Basileus Protostrategos mechanic.
+#April fools fun stuff
 on_monarch_death = {
 	if = {
 		limit = {
@@ -249,8 +235,8 @@ on_monarch_death = {
 	}
 	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes
-	#choc_FrederickIII_dies_first = yes	#BT
-	#choc_AlbrechtVI_dies_first = yes	#BT
+	BT_AU_FrederickIII_dies_first = yes	#BT
+	BT_AU_FrederickIII_dies_first = yes	#BT
 	joan_de_trastamara_king_died_effect = yes
 	#BT
 	#if = {
@@ -612,143 +598,5 @@ on_five_year_pulse_2 = {
 		100 = peasants_estate_events.8
 		100 = peasants_estate_events.9
 		100 = peasants_estate_events.10 #Bonus
-	}
-}
-#Byz Military Parades mechanic
-# country
-# root = winning country, from = loser country
-on_war_won = {
-	#Vanilla
-	FROM = { country_event = { id = flavor_cri.6 } }
-	ROOT = { country_event = { id = tributary_events.32 } }
-	if = {
-		limit = {
-			has_country_flag = can_gain_legendary_pirates_flag
-			NOT = { has_ruler_flag = historical_pirate }
-			has_government_attribute = is_pirate_republic_reform
-			FROM = { total_development = ROOT }
-		}
-		random = {
-			chance = 5
-			country_event = {
-				id = pirates.25
-			}
-		}
-	}
-	
-	if = {
-		limit = {
-			is_part_of_hre = yes
-			FROM  = { is_part_of_hre = yes }
-		}
-		ROOT = { save_global_event_target_as = hre_winner }
-		FROM = { save_global_event_target_as = hre_loser }
-		random_known_country = {
-			limit = {
-				has_reform = free_city
-				NOT = {
-					prestige = 40
-				}
-				NOT = {
-					has_country_modifier = fc_treatyconference_timer
-				}
-			}
-			add_country_modifier = {
-				name = fc_treatyconference_timer
-				duration = 3650
-				hidden = yes
-			}
-			country_event = {
-				id = free_cities.7
-				days = 7
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			tag = MLO
-			NOT = { has_country_flag = emp_mlo_won_war_with_swiss_mercs }
-			any_hired_mercenary_company = {
-				home_province = {
-					OR = {
-						area = switzerland_area
-						area = romandie_area
-					}
-				}
-			}
-		}
-		set_country_flag = emp_mlo_won_war_with_swiss_mercs
-	}
-	
-	if = {
-		limit = {
-			is_hiring_condottiere_from = SWI
-		}
-		SWI = { set_country_flag = won_condottiere_war }
-		if = {
-			limit = {
-				tag = PAP
-			}
-			SWI = {
-				set_country_flag = hired_to_pope
-			}
-		}
-	}
-	
-	if = {
-		limit = {
-			primary_culture = melanesian
-			NOT = { has_country_modifier = warlord_mod }
-		}
-		FROM = {
-			country_event = {
-				id = polynesian.17
-			}
-		}
-	}
-	if = {
-		limit = {
-			ROOT = { 
-				tag = SWE
-				has_country_modifier = swe_vasa_leads_the_rebellion
-				is_subject = no
-			}
-			FROM = { tag = DAN }
-		}
-		country_event = {
-			id = flavor_swe.111
-		}
-	}
-	if = {
-		limit = {
-			ROOT = { 
-				tag = SWE
-				has_country_modifier = swe_any_vasa_leads_the_rebellion
-				is_subject = no
-			}
-			FROM = { tag = DAN }
-		}
-		country_event = {
-			id = flavor_swe.105
-		}
-	}
-	if = {
-		limit = {
-			ROOT = { 
-				tag = SWE
-				has_country_flag = swe_declared_independence_war
-				is_subject = no
-			}
-			FROM = { tag = DAN }
-		}
-		country_event = {
-			id = flavor_swe.121
-		}
-	}
-	#BR
-	if = {
-		limit = { tag = BYZ }
-		country_event = { id = strategoi_estate_events.31 }
 	}
 }

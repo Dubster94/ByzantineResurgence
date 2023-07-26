@@ -1542,8 +1542,6 @@ byz_syria_provinces = {
 	4298
 	382 405 1849 6084 6085 6086 6088
 	378 4297 5205 6074 6075
-	#Adding Cyprus here because why not. Also means those claims from earlier now become permaclaims when Bastion of Christendom is done.
-	321 5139 5145 6076 6077 6078
 }
 
 byz_palestine_provinces = {

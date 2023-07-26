@@ -300,8 +300,8 @@ byzantine_militarization_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					generals_loyalty_modifier = 0.4
-					drill_decay_modifier = -0.5
-					drill_gain_modifier = 0.5
+					drill_decay_modifier = -1.0
+					drill_gain_modifier = 1.0
 				}
 			}
 			range_modifier = {

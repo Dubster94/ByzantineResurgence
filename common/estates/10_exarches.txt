@@ -53,7 +53,6 @@ estate_exarches =
 		}
 	}
 	
-	
 	country_modifier_happy = {
 		land_forcelimit_modifier = 0.2
 		naval_forcelimit_modifier = 0.2
