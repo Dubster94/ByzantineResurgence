@@ -1354,7 +1354,7 @@ byz_monuments = { #Separated because uncompletable without Leviathan DLC.
 	byz_imperial_great_projects = { #New in BR 8.0
 		icon = mission_parthenon
 		position = 10 #4-10
-		required_missions = { byz_revoke_latifundia byz_city_of_cities }
+		required_missions = { byz_revoke_latifundia byz_restore_city_of_cities }
 		
 		provinces_to_highlight = {
 			has_great_project = {
@@ -1664,7 +1664,7 @@ byz_innovative_1 = {
 	byz_pandidakterion = { #New in BR 8.0
 		icon = mission_pandidakterion
 		position = 9 #5-9
-		required_missions = { byz_bureaucracy byz_new_renaissance }
+		required_missions = { byz_new_renaissance }
 		
 		provinces_to_highlight = {
 			province_id = 151
