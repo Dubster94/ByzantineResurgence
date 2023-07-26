@@ -30,10 +30,10 @@ set_estate_privilege = estate_nobles_latifundia_melissenos
 set_estate_privilege = estate_nobles_latifundia_tornikes
 
 #Gov mechanics debug
-add_government_reform = reformed_byzantine_monarchy_reform
-set_country_flag = byz_restored_bureaucracy_mechanic
-set_country_flag = byz_restored_pronoia_mechanic
-set_country_flag = byz_restored_militarization_mechanic
+# add_government_reform = reformed_byzantine_monarchy_reform
+# set_country_flag = byz_restored_bureaucracy_mechanic
+# set_country_flag = byz_restored_pronoia_mechanic
+# set_country_flag = byz_restored_militarization_mechanic
 
 #Starting modifiers
 add_country_modifier = {
