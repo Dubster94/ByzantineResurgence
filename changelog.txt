@@ -44,6 +44,7 @@ Features:
 -The Latin Imperial mission trees have been cut as a result of vanilla adding the Latin Empire, while me simultaneously not having updated them for a while, simultaneously to them not being particularly impressive.
 	-In general, Latin Imperial content has been put on hold for a while.
 -The Varangian Guards mercenary companies can now drill by default.
+-The Strategoi estate finally has Estate Agendas. Now featuring 8 different Estate Agendas, all about dealing with your Theme Capitals and improving them, or recruiting generals and giving them privileges.
 
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.

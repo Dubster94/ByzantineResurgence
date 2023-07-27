@@ -25,6 +25,63 @@ estate_generals_country_has_num_of_theme_capitals_trigger = {
 	}
 }
 
+#Different version of vanilla trigger
+root_can_build_alternate_manufactory_here_trigger = {
+	num_free_building_slots = 1
+	OR = {
+		has_no_manufactory_trigger = yes #No manufactory - go ahead!
+		AND = { #Has at least one extra manufactory slot.
+			OR = {
+				root = {
+					has_global_modifier_value = {
+						which = global_allowed_num_of_manufactories 
+						value = 1
+					}
+				}
+				has_local_modifier_value = {
+					which = allowed_num_of_manufactories
+					value = 1
+				}
+			}
+			calc_true_if = { #Has one manufactory building	
+				has_building = wharf
+				has_building = weapons
+				has_building = textile
+				has_building = tradecompany
+				has_building = farm_estate
+				has_building = mills
+				has_building = plantations
+				has_building = furnac
+				has_building = ramparts
+				has_building = soldier_households
+				has_building = impressment_offices
+				has_building = state_house
+				amount = 1
+			}
+			NOT = { #NOT has two manufactory buildings.
+				calc_true_if = {		
+					has_building = wharf
+					has_building = weapons
+					has_building = textile
+					has_building = tradecompany
+					has_building = farm_estate
+					has_building = mills
+					has_building = plantations
+					has_building = furnac
+					has_building = ramparts
+					has_building = soldier_households
+					has_building = impressment_offices
+					has_building = state_house
+					amount = 2
+				}
+			}
+		}
+	}
+}
+
+
+
+
 #Used to check for Exarchate tags
 is_exarch_tag_and_exarch_of_root_trigger = {
 	custom_trigger_tooltip = { 

@@ -434,8 +434,7 @@ estate_generals =
 		}
 		influence = -20
 	}
-	
-	
+		
 	# Influence modifiers from Events:
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
@@ -448,9 +447,7 @@ estate_generals =
 		}	
 		influence = -40
 	}
-	
-	influence_from_dev_modifier = 0.667
-	
+		
 	# Loyalty modifiers
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
@@ -488,8 +485,15 @@ estate_generals =
 	}
 	
 	agendas = {
-		#None at the moment, TODO.
+		estate_generals_develop_theme_capital_x
+		estate_generals_build_army_building_in_y
+		estate_generals_build_fort_building_in_y
+		estate_generals_hire_a_general
+		estate_generals_update_fort_building_in_theme_capital_x
+		estate_generals_fortify_theme_capital_x
+		estate_generals_soldier_households_in_theme_capital_x
+		estate_generals_two_privileges
 	}
-	influence_from_dev_modifier = 1.0
+	influence_from_dev_modifier = 0.667
 	
 }
