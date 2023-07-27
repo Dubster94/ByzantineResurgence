@@ -1,0 +1,5 @@
+on_completed_agenda_effect_estate_generals = {}
+
+on_completed_agenda_effect_estate_exarches = {}
+
+on_completed_agenda_effect_estate_knightly_orders = {}

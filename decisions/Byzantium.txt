@@ -226,6 +226,35 @@ country_decisions = {
 		ai_importance = 400
 	}	
 
+	#Restore the Alexandrine Library
+	restore_library_of_alexandria = {
+		potential = {
+			tag = BYZ
+			owns = 358 #Alexandria
+		}
+		trigger = {
+			mission_completed = byz_pandidakterion
+			OR = {
+				full_idea_group = innovativeness_ideas
+				philosopher = 3
+				natural_scientist = 3
+			}
+			358 = {
+				has_building = university
+			}
+		}
+		effect = {
+			358 = {
+				custom_tooltip = restore_library_of_alexandria_tooltip
+				change_trade_goods = bt_trade_good_books
+				add_province_modifier = {
+					name = "byz_library_of_alexandria"
+					duration = -1
+				}
+			}
+		}
+	}
+	
 	#Patriarch of Mecca & Medina, as it was not part of the Pentarchy itself.
 	establish_the_patriarch_of_mecca_medina = {
 		potential = {

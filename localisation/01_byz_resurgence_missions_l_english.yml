@@ -110,7 +110,7 @@
  byz_balkan_hegemony_claims:0 "Grants permanent claims on the provinces required for the mission §YBalkan Hegemony§!"
  byz_balkan_hegemony_provinces: ""
  byz_balkan_hegemony_title:0 "Balkan Hegemony"
- byz_balkan_hegemony_desc:0 "As our subjugation of the Serbs has been finalized, the rest of the Balkan slavs shall follow suit!"
+ byz_balkan_hegemony_desc:0 "As we have subjugated both Serbs and Bulgars and re-established Themes in the region, the rest of the Balkan slavs shall follow suit!"
  byz_land_access_to_italy_claims:0 "Grants permanent claims on the provinces required for the mission §YLand Access to Italy§!"
  byz_land_access_to_italy_provinces: ""
  byz_land_access_to_italy_title:0 "Land Access to Italy"
@@ -636,6 +636,9 @@
  desc_byz_steel_of_noricum:0 "With the weapon manufactories in Noricum built, we have control over some of the finest steel that man can make."
  byz_exarchate:0 "A Grand Exarchate"
  desc_byz_exarchate:0 "We have been blessed by the [BYZ.Monarch.GetTitle] of [BYZ.GetName] as a grand Exarchate of their Empire. This has granted us several benefits in our rule."
+ byz_granary_of_the_mediterranean:0 "Granary of the Mediterranean Reclaimed"
+ desc_byz_granary_of_the_mediterranean:0 "We have reclaimed Lower Egypt, known as the Granary of the Mediterranean. This has resulted in supplies of staple foods surging in and around Constantinople."
+ 
  #From prior mission tree. Some have been cut.
  byz_last_stand:0 "Last Stand"
  desc_byz_last_stand:0 ""

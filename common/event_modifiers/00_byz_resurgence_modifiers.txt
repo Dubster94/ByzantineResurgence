@@ -26,12 +26,6 @@ byz_megas_logothetes_bad_2 = {
 	diplomatic_reputation = -4
 }
 
-
-
-
-
-
-
 lenient_state_tax_mod = {
 	global_unrest = -2
 	monthly_reform_progress_modifier = 0.1
@@ -179,6 +173,11 @@ byz_production_boom_chariot_race = {
 
 br_treaty_of_two_romes_violated = {
 	diplomatic_reputation = -2
+}
+
+byz_library_of_alexandria = {
+	local_institution_spread = 1
+	innovativeness_gain = 0.5
 }
 
 #Modifiers stemming from Byzantium Events incorporation

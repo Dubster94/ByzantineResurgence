@@ -377,8 +377,6 @@ spawn_rebels_from_unhappy_estate = {
 	}
 }
 
-
-
 re_add_loyalty_from_seized_land = {
 	hidden_effect = {
 		if = {

@@ -2247,6 +2247,30 @@ country_event = { #26 The Genoese Decline our Offer...
 	}
 }
 
+country_event = { #27 The Return of De Architectura
+	
+	#Option 1: Focus on stable constructions (Great project upgrade cost modifier)
+	#Option 2: Focus on water drainage wheels (Goods produced modifier)
+	#Option 3: Look into the Aeolipile (First steam engine, early coal)
+	#Option 4: This Caeruleum substance looks interesting... (Egyptian synthetic dye event chain)
+}
+
+country_event = { #28 Roman Constructional Engineering
+	
+}
+
+country_event = { #29 Roman Waterwheels
+	
+}
+
+country_event = { #30 The Aeolipile
+	
+}
+
+country_event = { #31 The Rediscovery of Egyptian Blue
+	
+}
+
 country_event = { #32 The city of Ailia and the Jews
 	id = resurgent_BYZ.32
 	title = "resurgent_BYZ.32.t" 
@@ -2555,7 +2579,7 @@ country_event = { #37 The Rediscovery of Greek Fire
 		years = 400 #Adjusted from 200 due to it firing wayy too often, I feel.
 		modifier = {
 			factor = 0.5
-			AND = {
+			AND = { #Two important centers where the naphta used in Greek Fire was supposedly produced, or discovered.
 				owns = 2447
 				owns = 4297
 			}
@@ -2568,11 +2592,15 @@ country_event = { #37 The Rediscovery of Greek Fire
 			}
 		}	
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			OR = { #Navally focused Byzantium should definitely be able to pick up Greek Fire more easily.
 				full_idea_group = naval_ideas
 				full_idea_group = maritime_ideas
 			}
+		}
+		modifier = {
+			factor = 0.5
+			358 = { has_province_modifier = byz_library_of_alexandria }
 		}
 	} #The rediscovery should be a lucky one, not something that should happen every game (Except if Naval Byzantium I suppose).
 	
