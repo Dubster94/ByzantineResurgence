@@ -1837,15 +1837,18 @@ byz_armenia_1 = {
 		}
 		
 		effect = {
-			every_owned_province = {
-				limit = {
-					province_group = byz_reconquer_lesser_armenia_provinces
-					fort_level = 2
-				}
-				add_base_manpower = 2
-				add_province_modifier = {
-					name = local_fortress
-					duration = -1
+			custom_tooltip = byz_fortify_armenia_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						province_group = byz_reconquer_lesser_armenia_provinces
+						fort_level = 2
+					}
+					add_base_manpower = 2
+					add_province_modifier = {
+						name = local_fortress
+						duration = -1
+					}
 				}
 			}
 		}
@@ -1854,7 +1857,6 @@ byz_armenia_1 = {
 			factor = 500	#AI gogo!
 		}
 	}
-
 }
 
 byz_armenia_2 = {
@@ -3061,10 +3063,6 @@ byz_east_1 = {
 		}
 		
 		effect = {
-			add_country_modifier = {
-				name = byz_flowing_spice
-				duration = 365
-			}
 			
 			#Dev bonuses
 			408 = { #Apologos
@@ -3565,12 +3563,12 @@ byz_italy_2 = {
 		}
 		
 		effect = {
-			1933 = { #Syrakousai, Theme capital.
+			2982 = { #Syrakousai, Theme capital.
 				add_base_tax = 4
 				add_base_production = 4
 				add_base_manpower = 3
 			}	
-			123 = { #Messene, Theme capital.
+			124 = { #Messene, Theme capital.
 				add_base_tax = 3
 				add_base_production = 3
 				add_base_manpower = 2
@@ -3660,7 +3658,6 @@ byz_italy_3 = {
 			factor = 500	#AI gogo!
 		}
 	}
-
 }
 
 byz_egypt_1 = {
@@ -3696,22 +3693,25 @@ byz_egypt_1 = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
-			thrace_area = {
-				add_province_modifier = {
-					name = "byz_granary_of_the_mediterranean"
-					duration = 7300
+			custom_tooltip = byz_granary_of_the_mediterranean_tooltip
+			hidden_effect = {
+				thrace_area = {
+					add_province_modifier = {
+						name = "byz_granary_of_the_mediterranean"
+						duration = 7300
+					}
 				}
-			}
-			hudavendigar_area = {
-				add_province_modifier = {
-					name = "byz_granary_of_the_mediterranean"
-					duration = 7300
+				hudavendigar_area = {
+					add_province_modifier = {
+						name = "byz_granary_of_the_mediterranean"
+						duration = 7300
+					}
 				}
-			}
-			karasi_area = {
-				add_province_modifier = {
-					name = "byz_granary_of_the_mediterranean"
-					duration = 7300
+				karasi_area = {
+					add_province_modifier = {
+						name = "byz_granary_of_the_mediterranean"
+						duration = 7300
+					}
 				}
 			}
 			#Claims
@@ -3742,7 +3742,13 @@ byz_egypt_1 = {
 		}
 		
 		effect = {
-			give_permaclaims_for_mission = { mission=byz_cyrenaica } #Push to Themes of Egypt
+			358 = { #Alexandria
+				add_base_tax = 4
+				add_base_production = 4
+				add_base_manpower = 3
+			}
+			
+			give_permaclaims_for_mission = { mission=byz_cyrenaica }
 		}
 	
 		ai_weight = {
@@ -3954,7 +3960,6 @@ byz_tyrian_purple_1 = {
 			}
 		}
 	}
-	
 }
 
 byz_egypt_2 = {
@@ -3987,6 +3992,7 @@ byz_egypt_2 = {
 		}
 		
 		effect = {
+			
 		}
 	
 		ai_weight = {
@@ -4032,7 +4038,6 @@ byz_egypt_3 = {
 			factor = 500	#AI gogo!
 		}
 	}
-	
 }
 
 

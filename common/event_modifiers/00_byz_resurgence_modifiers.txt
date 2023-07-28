@@ -175,9 +175,22 @@ br_treaty_of_two_romes_violated = {
 	diplomatic_reputation = -2
 }
 
-byz_library_of_alexandria = {
-	local_institution_spread = 1
-	innovativeness_gain = 0.5
+#The following 4 modifiers are permanent, but Byzantium can only choose one of them unless they're a Scholar ruler, at which point they get all 4.
+byz_de_architectura_magnificent_monuments = { 
+	great_project_upgrade_cost = -0.2
+}
+
+byz_de_architectura_water_drainage_wheels = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+br_egyptian_blue = { #Is applied to 3 provinces in Egypt producing Dyes.
+	trade_goods_size_modifier = 2.0
+}
+
+byz_steam_powered_boats = {
+	galley_hull_size_modifier = 0.2 #Would be better as a speed modifier for galleys only, but that does not exist.
+	sailor_maintenance_modifer = -0.33
 }
 
 #Modifiers stemming from Byzantium Events incorporation

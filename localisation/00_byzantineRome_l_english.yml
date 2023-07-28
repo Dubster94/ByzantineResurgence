@@ -104,11 +104,14 @@
  patriarch_mecca_medina:0 "The Patriarch of Mecca"
  desc_patriarch_mecca_medina:0 "The muslim holy city of Mecca has been conquered in the name of Christ and is now the seat of an Orthodox Patriarch."
  
+ restore_library_of_alexandria_title:0 "Restore the Library of Alexandria"
+ restore_library_of_alexandria_desc:0 "The Library of Alexandria was a place of learning where knowledge from the entire world would be stored, gathered, and iterated upon. Built after Alexander the Great's conquest of Egypt in the Ptolemaic Kingdom, it saw little use in Roman Egypt as a result of focus in other parts of the Empire and was eventually destroyed during a rebellion and its subsequent quelling. With Egypt and the city of Alexandria once more under our control, we may decide to restore the city to its greatness by rebuilding the Great Library."
  mending_east_oriental_schism_title:0 "Mend the East-Oriental Schism"
  mending_east_oriental_schism_desc:0 "In the Council of Chalcedon in 451, when it was declared that Christ was indeed a single person but existed \"in two complete natures\" as human and divine, the Patriarchs of Antioch and Alexandria saw the council as a concession to Nestorianism that 20 years earlier in the Council of Ephesus had been rejected. Referring to themselves as miaphysites, believeing that Christ has one nature that is both human and divine, they gradually separated from the then Chalcedonian belief to form their own branch of christendom. Through our conquests, we now have a chance to undo their secession from the one true faith, by mending the East-Oriental Schism."
  
  convert_to_orthodox_title:0 "Convert to Orthodox"
  convert_to_orthodox_desc:0 "The Orthodox christians have shown their authority and mended the wound that had our faith split off from theirs. At this point, our church heads are no more and our religion is seen as a mere heresy to theirs. It might be in our best interest to peacefully convert in order to maintain the legitimacy of our faith."
+ 
  
  #Latin Empire
  restore_latin_empire_title:0 "Restore the Latin Empire"

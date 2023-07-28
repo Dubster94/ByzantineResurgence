@@ -219,7 +219,7 @@
  byz_rebuild_armenia_effect_tooltip:0 "Gain §G+50.00§! prosperity progress in §YEvery State§! in §YAnatolia§! region."
  byz_fortify_armenia_title:0 "Fortify Lesser Armenia"
  byz_fortify_armenia_desc:0 "The lands in Lesser Armenia proved vital defense against our many enemies in the East. Whether Persians and Arabs, our defensive frontier that was Lesser Armenia stood strong and repelled them every time. It is said that the sole reason for Seljuk victory at Mantzikert leading to the loss of Anatolia was because up until that point, previous Emperors had successively dismantled this vital defensive frontier in an attempt at curbing Armenian influence. We must not make the same mistake - Let us rebuild this frontier so that Anatolia may remain unthreatened for centuries to come."
- 
+ byz_fortify_armenia_tooltip:0 "Gain §G2§! Base Manpower in §YProvinces that fulfilled the mission requirements§!\nProvinces that fulfilled the mission requirements get '§YLocal Fortifications§!' until the end of the game, giving the following effects:\nLocal Defensiveness: §G+25.0%§!"
  #Africa and Iberia chain
  byz_africa_claims:0 "Grants permanent claims on the provinces required for the mission §YRestore Roman Africa§!"
  byz_africa_provinces: ""
@@ -638,7 +638,7 @@
  desc_byz_exarchate:0 "We have been blessed by the [BYZ.Monarch.GetTitle] of [BYZ.GetName] as a grand Exarchate of their Empire. This has granted us several benefits in our rule."
  byz_granary_of_the_mediterranean:0 "Granary of the Mediterranean Reclaimed"
  desc_byz_granary_of_the_mediterranean:0 "We have reclaimed Lower Egypt, known as the Granary of the Mediterranean. This has resulted in supplies of staple foods surging in and around Constantinople."
- 
+ byz_granary_of_the_mediterranean_tooltip:0 "§YThrace§!, §YBithynia§! and §YMysia§! Areas get '§YGranary of the Mediterranean Reclaimed§!' for 20 years, giving the following effects:\nLocal Development Cost: §G-10.0%§!"
  #From prior mission tree. Some have been cut.
  byz_last_stand:0 "Last Stand"
  desc_byz_last_stand:0 ""

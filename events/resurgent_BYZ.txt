@@ -1741,6 +1741,7 @@ country_event = { #18 The Return of the Triumphal Quadriga
 					type = hippodrome_of_constantinople
 					instant = yes
 				}
+				custom_tooltip = resurgent_BYZ.13.a_tooltip
 			}
 			else = {
 				add_province_modifier = {
@@ -2248,6 +2249,100 @@ country_event = { #26 The Genoese Decline our Offer...
 }
 
 country_event = { #27 The Return of De Architectura
+	id = resurgent_BYZ.27
+	title = "resurgent_BYZ.27.t"
+	desc = "resurgent_BYZ.27.d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		358 = { 
+			has_great_project = {
+				type = library_of_alexandria
+				tier = 1
+			}
+		}
+		tag = BYZ
+		#NOT = { is_at_war = yes }
+	}
+	
+	mean_time_to_happen = {
+		months = 1200 #100 years
+		modifier = { #1/100th if Scholar
+			factor = 0.01
+			ruler_has_personality_ancestor = { key = scholar }
+		}
+		modifier = { #Halved if Printing Press is embraced
+			factor = 0.5
+			has_institution = printing_press
+		}
+	}
+	
+	option = {	#We shall invest in how to construct magnificent monuments!
+		name = "resurgent_BYZ.27.a"
+		ai_chance = { factor = 10 }
+		
+		add_country_modifier = { #-20% great project upgrade cost
+			name = "byz_de_architectura_magnificent_monuments"
+			duration = -1
+		}
+	}
+	option = { #Let's install these water drainage wheels in our production facilities!
+		name = "resurgent_BYZ.27.b"
+		ai_chance = { factor = 10 }
+		
+		add_country_modifier = { #+10% goods produced modifier
+			name = "byz_de_architectura_water_drainage_wheels"
+			duration = -1
+		}
+	}
+	option = { #Look into the Aeolipile.
+		name = "resurgent_BYZ.27.c"
+		ai_chance = { factor = 10 }
+		
+		custom_tooltip = resurgent_BYZ.27.c.tooltip
+		set_country_flag = byz_looked_into_aeolipile
+	}
+	option = { #This Caeruleum substance looks interesting...
+		name = "resurgent_BYZ.27.e"
+		ai_chance = { factor = 70 }
+		
+		custom_tooltip = resurgent_BYZ.27.e.tooltip
+		hidden_effect = {
+			country_event = {
+				id = resurgent_BYZ.28
+				days = 30
+			}
+		}
+	}
+	option = { #I will not rest until I have finished this entire book myself!
+		name = "resurgent_BYZ.27.f"
+		ai_chance = { factor = 1000 }
+		highlight = yes
+		trigger = {
+			ruler_has_personality_ancestor = { key = scholar }
+		}
+		
+		custom_tooltip = resurgent_BYZ.27.f.tooltip
+		add_country_modifier = { #-20% great project upgrade cost
+			name = "byz_de_architectura_magnificent_monuments"
+			duration = -1
+		}
+		add_country_modifier = { #+10% goods produced modifier
+			name = "byz_de_architectura_water_drainage_wheels"
+			duration = -1
+		}
+		custom_tooltip = resurgent_BYZ.27.c.tooltip
+		set_country_flag = byz_looked_into_aeolipile
+		custom_tooltip = resurgent_BYZ.27.e.tooltip
+		hidden_effect = {
+			country_event = {
+				id = resurgent_BYZ.28
+				days = 60
+			}
+		}
+	}
 	
 	#Option 1: Focus on stable constructions (Great project upgrade cost modifier)
 	#Option 2: Focus on water drainage wheels (Goods produced modifier)
@@ -2255,20 +2350,225 @@ country_event = { #27 The Return of De Architectura
 	#Option 4: This Caeruleum substance looks interesting... (Egyptian synthetic dye event chain)
 }
 
-country_event = { #28 Roman Constructional Engineering
+country_event = { #28 The Rediscovery of Egyptian Blue
+	id = resurgent_BYZ.28
+	title = "resurgent_BYZ.28.t"
+	desc = "resurgent_BYZ.28.d"
+	picture = TRADEGOODS_eventPicture
 	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	major = yes #To notify others because price change.
+	
+	trigger = {
+		358 = { 
+			has_great_project = {
+				type = library_of_alexandria
+				tier = 1
+			}
+		}
+		tag = BYZ
+	}
+	
+	option = { #Let us create an industry centered around this new dye!
+		name = "resurgent_BYZ.28.a" 
+		ai_chance = { factor = 80 }
+		
+		random_owned_province = {
+			limit = {
+				region = egypt_region
+				NOT = { has_province_flag = br_egyptian_blue }
+			}
+			change_trade_goods = dyes
+			add_permanent_province_modifier = {
+				name = "br_egyptian_blue"
+				duration = -1
+			}
+			set_province_flag = br_egyptian_blue
+		}
+		random_owned_province = {
+			limit = {
+				region = egypt_region
+				NOT = { has_province_flag = br_egyptian_blue }
+			}
+			change_trade_goods = dyes
+			add_permanent_province_modifier = {
+				name = "br_egyptian_blue"
+				duration = -1
+			}
+			set_province_flag = br_egyptian_blue
+		}
+		
+		random_owned_province = {
+			limit = {
+				region = egypt_region
+				NOT = { has_province_flag = br_egyptian_blue }
+			}
+			change_trade_goods = dyes
+			add_permanent_province_modifier = {
+				name = "br_egyptian_blue"
+				duration = -1
+			}
+			set_province_flag = br_egyptian_blue
+		}
+		change_price = {
+			trade_goods = dyes
+			key = byz_egyptian_blue
+			value = -0.25
+			duration = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				clr_province_flag = br_egyptian_blue
+			}
+		}
+	}
+	
+	option = { #Let us take care not to impact the overall price of dyes too much
+		name = "resurgent_BYZ.28.b" 
+		ai_chance = { factor = 10 }
+		
+		
+		random_owned_province = {
+			limit = {
+				region = egypt_region
+				NOT = { has_province_flag = br_egyptian_blue }
+			}
+			change_trade_goods = dyes
+			set_province_flag = br_egyptian_blue
+		}
+		random_owned_province = {
+			limit = {
+				region = egypt_region
+				NOT = { has_province_flag = br_egyptian_blue }
+			}
+			change_trade_goods = dyes
+			set_province_flag = br_egyptian_blue
+		}
+		change_price = {
+			trade_goods = dyes
+			key = byz_egyptian_blue
+			value = -0.1
+			duration = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				clr_province_flag = br_egyptian_blue
+			}
+		}
+		
+	}
+	
+	option = { #We shall forget we ever discovered this substance
+		name = "resurgent_BYZ.28.c" 
+		ai_chance = { factor = 10 }
+		
+		custom_tooltip = resurgent_BYZ.28.c.tooltip
+	}
 }
 
-country_event = { #29 Roman Waterwheels
+country_event = { #29 The Return of Pneumatica
+	id = resurgent_BYZ.29
+	title = "resurgent_BYZ.29.t"
+	desc = "resurgent_BYZ.29.d"
+	picture = BIG_BOOK_eventPicture
 	
+	fire_only_once = yes
+	
+	trigger = {
+		is_institution_enabled = global_trade
+		358 = { 
+			has_great_project = {
+				type = library_of_alexandria
+				tier = 1
+			}
+		}
+		tag = BYZ
+		has_country_flag = byz_looked_into_aeolipile
+		
+	}
+	
+	mean_time_to_happen = {
+		years = 20
+	}
+	
+	option = { #It appears that the Aeolipile has some practical use!
+		name = "resurgent_BYZ.29.a"
+		ai_chance = { factor = 1 }
+		151 = {  #Constantinople lacks Manufactories
+			if = {
+				limit = {
+					NOT = { manufactories = 100 }
+				}
+				add_institution_embracement = {
+					which = manufactories
+					value = 100
+				}
+			}
+			else = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+		}
+		358 = { #Alexandria lacks Manufactories
+			if = { 
+				limit = {
+					NOT = { manufactories = 100 }
+				}
+				add_institution_embracement = {
+					which = manufactories
+					value = 100
+				}
+			}
+			else = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+		}
+		add_country_modifier = {
+			name = "byz_steam_powered_boats"
+			duration = -1
+		}
+	}
 }
 
-country_event = { #30 The Aeolipile
+country_event = { #Coal to Power the Aeolipile
+	id = resurgent_BYZ.30
+	title = "resurgent_BYZ.30.t"
+	desc = "resurgent_BYZ.30.d"
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
 	
-}
-
-country_event = { #31 The Rediscovery of Egyptian Blue
+	fire_only_once = yes
 	
+	trigger = {
+		has_institution = manufactories
+		358 = { 
+			has_great_project = {
+				type = library_of_alexandria
+				tier = 1
+			}
+		}
+		tag = BYZ
+		has_country_flag = byz_looked_into_aeolipile
+		has_country_modifier = byz_steam_powered_boats
+	}
+	
+	
+	mean_time_to_happen = {
+		years = 20
+	}
+	
+	option = { #Let us dig greedily and deep!
+		name = "resurgent_BYZ.30.a"
+		ai_chance = { factor = 1 }
+		
+		if = {
+			limit = { has_dlc = "Rule Britannia" }
+			custom_tooltip = earlier_coal_available_tt
+		}
+		set_country_flag = earlier_coal_available
+	}
 }
 
 country_event = { #32 The city of Ailia and the Jews

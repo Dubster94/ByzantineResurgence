@@ -229,27 +229,31 @@ country_decisions = {
 	#Restore the Alexandrine Library
 	restore_library_of_alexandria = {
 		potential = {
+			has_dlc = "Leviathan" #Because I'm too lazy to create a non-Leviathan equivalent.
 			tag = BYZ
 			owns = 358 #Alexandria
+			NOT = { 358 = { has_province_flag = br_rebuilt_library_of_alexandria } }
 		}
-		trigger = {
-			mission_completed = byz_pandidakterion
-			OR = {
-				full_idea_group = innovativeness_ideas
-				philosopher = 3
-				natural_scientist = 3
-			}
-			358 = {
-				has_building = university
-			}
+		allow = {
+			# mission_completed = byz_pandidakterion
+			# OR = {
+				# full_idea_group = innovativeness_ideas
+				# philosopher = 3
+				# natural_scientist = 3
+			# }
+			# 358 = {
+				# has_building = university
+			# }
+			# treasury = 1000
 		}
 		effect = {
+			add_treasury = -1000
 			358 = {
-				custom_tooltip = restore_library_of_alexandria_tooltip
+				set_province_flag = br_rebuilt_library_of_alexandria
 				change_trade_goods = bt_trade_good_books
-				add_province_modifier = {
-					name = "byz_library_of_alexandria"
-					duration = -1
+				add_great_project = {
+					type = library_of_alexandria
+					instant = yes
 				}
 			}
 		}

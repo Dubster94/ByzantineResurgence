@@ -152,6 +152,42 @@
  resurgent_BYZ.26.t:0 "The Genoese Deny our Offer..."
  resurgent_BYZ.26.d:0 "An envoy from Genoa has come before us to inform that they find our offer unreasonable and unjust. They are not accepting our terms at all."
  
+ resurgent_BYZ.27.t:0 "The Return of De Architectura"
+ resurgent_BYZ.27.d:0 "With us restoring the Library of Alexandria, a peculiar book known as 'De Architectura' has made it into the library and has been translated into Greek. The book, originally written by a Roman known as Marcus Vitruvius Pollio for Augustus Caesar, contains a variety of interesting points on architectural theory, about how Greeks and Romans built monumental buildings that so far have stood the test of time. It also contains chapters on the construction and design of cities, camps, buildings as well as both war and civil machines and instruments. In particular, it mentions the constructions of great aqueducts, mills, as well as a peculiar machine known as the Aeolipile that seemingly generates torque with the use of boiling water. Not only that, it also describes how to pump and elevate water upwards, something which is certain to come in handy for the purposes of mining, but also sawing timber and grinding wheat. Finally, there's this very small passage about how to create a substance he calls 'Caeruleum', called 'Kyanos' in Greek, meaning 'blue'.\n\nIt is clear that this book houses many marvels and things that we could benefit from. The question is, what should we focus on?"
+ resurgent_BYZ.27.a:0 "We shall invest in how to construct magnificent monuments!"
+ resurgent_BYZ.27.b:0 "Let's install these water drainage wheels in our production facilities!"
+ resurgent_BYZ.27.c:0 "Look into the Aeolipile!"
+ resurgent_BYZ.27.c.tooltip:0 "The inner workings of the Aeolipile will be investigated. Who knows, maybe it'll find a use other than for recreation someday."
+ resurgent_BYZ.27.e:0 "This Caeruleum substance looks interesting..."
+ resurgent_BYZ.27.e.tooltip:0 "Our scholars will investigate this mysterious 'blue' substance."
+ resurgent_BYZ.27.f:0 "I will not rest until I have finished this entire book myself!"
+ resurgent_BYZ.27.f.tooltip:0 "[Root.Monarch.GetName] [Root.Monarch.Dynasty.GetName] will spend the next couple of weeks studying every detail of this book."
+ 
+ byz_de_architectura_magnificent_monuments:0 "Magnificent Monuments"
+ desc_byz_de_architectura_magnificent_monuments:0 "The scriptures of De Architectura contained a lot of information about constructing magnificent monuments that can stand the test of time. This has granted us much knowledge in how to construct massive monuments."
+ byz_de_architectura_water_drainage_wheels:0 "Water Drainage Wheels"
+ desc_byz_de_architectura_water_drainage_wheels:0 "The scriptures of De Architectura contained a lot of information about the usage of water drainage wheels to move water from one place to another, as well as how to utilize it in several production methods. This has allowed us to increase production in many of our manufactories."
+ 
+ resurgent_BYZ.28.t:0 "The Rediscovery of Egyptian Blue"
+ resurgent_BYZ.28.d:0 "It appears that Marcus Vitruvius Pollio was right about the Caeruleum substance! [Root.GetAdjective] scholars attempted to grind the suggested ingredients, those being sand, copper and natron soda ash, together into balls, and then heating the mixture in a furnace. Initially, there was little success, but once they started using sand from the region of Egypt, the balls had indeed turned blue. With this discovery, there is little need importing otherwise valuable dyes such as Lapis Lazuli from Asia!"
+ resurgent_BYZ.28.a:0 "Let us create an industry centered around this new dye!"
+ resurgent_BYZ.28.b:0 "Let us take care not to impact the overall price of dyes too much"
+ resurgent_BYZ.28.c:0 "We shall forget we ever discovered this substance"
+ resurgent_BYZ.28.c.tooltip:0 "The book of De Architectura will be burned, ensuring that this dye will not be discovered ever again."
+ byz_egyptian_blue:0 "Egyptian Blue Synthesized"
+ br_egyptian_blue:0 "Egyptian Blue"
+ desc_br_egyptian_blue:0 "This province produces Egyptian Blue, a dye made by mixing sand, copper and natron and then heated together in a furnace. The fabrication is an incredibly simple process, allowing large amounts of blue dye to be produced."
+ 
+ resurgent_BYZ.29.t:0 "The Return of Pneumatica"
+ resurgent_BYZ.29.d:0 "After having learned of the Aeolipile and its marvels, another book that piqued the interest of the head of the Mouseion has made it to the Library of Alexandria. This one, called Pneumatica, details several mechanical devices with little to no practical purpose, but once more, the Aeolipile appears within its pages. However, the idea of the Aeolipile in conjunction with the other mechanical devices detailed in the book has inspired our merchants' guild as a potential means of turning big axles. Another scholar suggests the Aeolipile can be used to pump water. A particular scientist and captain under our Megas Doux placed an Aeolipile on board one of our ships, which powered paddlewheels to turn the oars, thereby replacing the need for several oarsmen."
+ resurgent_BYZ.29.a:0 "It appears that the Aeolipile has some practical use!"
+ byz_steam_powered_boats:0 "'Steam-powered' Boats"
+ desc_byz_steam_powered_boats:0 "With the experiments conducted using the Aeolipile to power wheels that turn the oars of our boats, we have created the first ever version of what can be considered boats running using the power of steam."
+  
+ resurgent_BYZ.30.t:0 "Coal to Power the Aeolipile"
+ resurgent_BYZ.30.d:0 "With the Aeolipile becoming more and more widespread as manufacturing industries demand more and more production, it is clear that the idea behind the Aeolipile has gained traction. However, the need for fuel to power the Aeolipile is growing ever more. We must turn towards coal to satisfy the needs of the Aeolipile and expand our coal extraction sites."
+ resurgent_BYZ.30.a:0 "Let us dig greedily and deep!"
+ 
  resurgent_BYZ.32.t:0 "The city of Ailia and the Jews"
  resurgent_BYZ.32.d:0 "The city of Jerusalem, or Hierosolyma in greek tongue, has since the founding of Judaism been the holy city in its theos. Once the city fell to the Roman Empire after a disastrous siege, however, the city was left in such a poor state that it was considered uninhabitable. Emperor Hadrian in year 130 vowed to rebuild the city of Jerusalem as a gift to the Jewish people and restore the Second Temple that had been so thoroughly destroyed. When visiting the ruins, however, he was advised that rebuilding it would cause the Jews to rebel against the Empire. As such, Jerusalem instead was rebuilt into a Roman colony, including temples for Roman paganism. Perhaps ironically, this sparked an event known as the Bar Kokhba revolt, one of three conflicts conducted between the Roman Emperors and the Jews. This uprising enraged Hadrian, who put down the revolt and placed a ban on the Jewish people, prohibiting them from ever setting foot in the city except on the day of Tisha B'Av. Entering the city on any other day as a Jew was punishable by death. The city was renamed Aelia Capitolina and the roman province changed from Judea to Syria Palestina. As such, the city was transformed into a soldier camp up until Emperor Constantine I, when the Church of the Holy Sepulchre was built and the city's See was granted special honour, to later on become the seat of a Patriarch. These events resulted in the city becoming completely depopulated of Jews, which remained the case for the remainder of Roman rule. The Arabs later conquered the city, but the Jewish people would not return to their city until much later (Aside from a brief period under Saladin and the Ottomans). \n\nAs the city once more is in Roman hands, our [Root.Monarch.GetTitle] will get to decide its future."
  resurgent_BYZ.32.a:0 "Let's keep the ban on the Jews"
@@ -217,6 +253,10 @@
  circus_maximus:0 "Circus Maximus"
  great_project_circus_maximus:0 "Circus Maximus"
  circus_maximus_title:0 "Circus Maximus"
+ 
+ library_of_alexandria:0 "Library of Alexandria"
+ great_project_library_of_alexandria:0 "Library of Alexandria"
+ library_of_alexandria_title:0 "Library of Alexandria"
  
  byz_chariot_race_events.1.t:0 "The Quadrennial Chariot Race"
  byz_chariot_race_events.1.d:0 "The time has come for the Quadrennial Chariot Races to begin. Factions from all over the Empire have flocked in [Root.Capital.GetName] to compete and the populace have donned the color of their favorite competitors. As usual, the traditional Prasinoi (Greens), Venetoi (Blues), Rousioi (Reds) and Leukoi (Whites) are ready to compete for glory, but other independent factions are also trying their hand at it, including a particular newcomer, a crowd favorite, that may have a chance at completely dominating the others. As per tradition, the races are funded from the state treasury, to ensure quick preparations and a fair competition. \n\nNow, my [Root.Monarch.GetTitle], shall we head out the balcony of the Great Palace and take our rightful seats to watch the games?"
