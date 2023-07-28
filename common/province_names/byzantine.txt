@@ -935,15 +935,17 @@
 #Tripolitania
 2451 = { "Theobaktis" "Theobaktis" }
 354 = { "Tripolitana" "Tripolis" }
-2452 = { "Pisida" "Pisida" } #Province port
-355 = { "Syrtis" "Syrtis" } #Changed from Charax to Syrtis to make way for Charax in Mesopotamia. Macomedes and Euphranta were Phoenician names
+2452 = { "Sabratha" "Pisida" } #Province port, Pisida is a bit further west, but important nevertheless.
+355 = { "Syrtis" "Makomedes Euphranta" } #Changed from Charax to Syrtis to make way for Charax in Mesopotamia. Macomedes and Euphranta were Phoenician names
 5311 = { "Leptis" "Leptis Megale" } #(Megale)
 
 #Gulf of Gabes
 353 = { "Gigthis" "Gigthis" } #Province port-ish
-2954 = { "Gerbes"  "Gerbes"  }
+2954 = { "Meninx"  "Gerbes"  }
 5312 = { "Takape" "Takape" }
-4566 = { "Obiskai" "Obiskai" } #Oviscae supposedly nearby in Oglet-el-Hadjela. Remind me why Hbira is on the map?
+352 = { "Kapsa" "Kapsa Ioustiniana" } #(Ioustiniana)
+5316 = { "Thusuros" "Thusuros" } #Civitas Tusuritana
+2450 = { "Tillibari" "Tillibari" }
 
 #Tunisia
 341 = { "Karchidon" "Karchidon" }
@@ -954,6 +956,7 @@
 2454 = { "Thysdros" "Thysdros" } #There's no real roman city nearby, so I take one closer to the coast instead that was quite important to the Romans.
 5225 = { "Thapsos" "Thapsos" } #Thapsus. Wiki claims Mahdia was known as Aphrodisium, but I'm picking this one as wiki does not cite any sources on it.
 2453 = { "Thenai" "Thenai" } #Replacing Sfax's Taparura with Thenae
+4566 = { "Obiskai" "Obiskai" } #Oviscae supposedly nearby in Oglet-el-Hadjela. Remind me why Hbira is on the map?
 
 #Medjerda
 5315 = { "Xiros" "Xiros" } #This is what the author of Limes Oriens used. Essentially, Sicca is Latin for 'dry', which is Xiros in Greek.
@@ -1019,14 +1022,12 @@
 5309 = { "Thenteos" "Thenteos" }
 4567 = { "Kedamos" "Kedamos" } #Was 5308 pre-1.28
 5310 = { "Tabuinati" "Tabuinati" }
-
-#Djerid
-352 = { "Kapsa" "Kapsa Ioustiniana" } #(Ioustiniana)
-5316 = { "Thusuros" "Thusuros" } #Civitas Tusuritana
-2450 = { "Tillibari" "Tillibari" }
+2449 = { "Gholaia" "Gholaia" } #Waddan is too far south. Representing Gholaia 
+5306 = { "Garbia" "Gairisa" } #Not quite correct, but this works for now. Gairisa is in the province in its eastern part.
 
 #Fezzan
-2448 = { "Gamara" "Gamara" }
+2448 = { "Sabai" "Sabai" }
+5307 = { "Gamara" "Gamara" } #Not quite correct. Gamara is in the province however. Possibly.
 
 #North Sahara
 351 = { "Beskera" "Beskera" } #Vescera in Latin

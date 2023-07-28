@@ -3992,7 +3992,18 @@ byz_egypt_2 = {
 		}
 		
 		effect = {
-			
+			357 = { #Silphium
+				change_trade_goods = spices
+			}
+			cyrenaica_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_province_modifier = {
+					name = "byz_pentapolis"
+					duration = -1
+				}
+			}
 		}
 	
 		ai_weight = {
@@ -4200,6 +4211,15 @@ byz_africa_1 = {
 		}
 		
 		effect = {
+			tripolitania_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_province_modifier = {
+					name = "byz_centenarium"
+					duration = -1
+				}
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_africa }
 		}
@@ -4228,6 +4248,20 @@ byz_africa_1 = {
 		}
 		
 		effect = {
+			340 = { #Constantia
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			if = {
+				limit = {
+					NOT = { MIL = 6 }
+				}
+				change_mil = 1
+			}
+			else = {
+				add_mil_power = 50
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_east_mauretania }
 		}
@@ -4808,6 +4842,10 @@ byz_africa_2 = {
 		}
 		
 		effect = {
+			add_great_project = {
+				type = great_harbor_of_carthage
+				instant = yes
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_sardinia_corsica }
 		}
@@ -7076,10 +7114,10 @@ byz_hre_1 = {
 		}
 		
 		effect = {
-			add_country_modifier = {
-				name = "byz_danube_border_restored"
-				duration = 5475
-			}
+			# add_country_modifier = {
+				# name = "byz_danube_border_restored"
+				# duration = 5475
+			# }
 		}
 	
 		ai_weight = {
@@ -7148,10 +7186,10 @@ byz_hre_2 = {
 		}
 		
 		effect = {
-			add_country_modifier = {
-				name = "byz_european_ambition"
-				duration = 5475
-			}
+			# add_country_modifier = {
+				# name = "byz_european_ambition"
+				# duration = 5475
+			# }
 		}
 	
 		ai_weight = {

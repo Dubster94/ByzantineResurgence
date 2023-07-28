@@ -81,6 +81,15 @@ byz_granary_of_the_mediterranean = {
 	local_development_cost = -0.10
 }
 
+byz_pentapolis = {
+	trade_goods_size_modifier = 1
+}
+
+byz_centenarium = {
+	local_defensiveness = 0.25
+	local_monthly_devastation = -0.1
+}
+
 #Old modifiers
 byz_last_stand = {
 	land_morale = 0.1
@@ -144,15 +153,15 @@ byz_anatolian_restoration = {
 	# trade_steering  = 0.1
 # }
 
-# byz_naval_ambition = {
-	# sailors_recovery_speed = 0.25
-	# global_ship_recruit_speed = -0.3
-# }
+byz_naval_ambition = {
+	sailors_recovery_speed = 0.25
+	global_ship_recruit_speed = -0.3
+}
 
-# byz_imperial_navy = {
-	# galley_cost = -0.2
-	# galley_power = 0.1
-# }
+byz_imperial_navy = {
+	galley_cost = -0.2
+	galley_power = 0.1
+}
 
 byz_crusade = {
 	manpower_recovery_speed = 0.1
@@ -177,9 +186,9 @@ byz_balkan_hegemony = {
 	# tolerance_own = 2
 # }
 
-# byz_armenian_ambition = {
-	# global_manpower_modifier = 0.15
-# }
+byz_armenian_ambition = {
+	global_manpower_modifier = 0.15
+}
 
 byz_armenian_auxillaries = {
 	infantry_shock = 0.25

@@ -1576,14 +1576,13 @@ byz_mecca_medina_provinces = {
 	2329 2331 4278 5233
 }
 
-byz_cyrenaica_provinces = { #Contains uncolonized provinces
-	356 357 2326 5274 5303
+byz_cyrenaica_provinces = {
+	356 357 2326 5274
 }
 
 byz_tripolitania_provinces = {
 	354 355 2451 2452 5311 
 	352 353 2954 5312
-	5309
 }
 
 #byz_sicily_and_byzacena chain

@@ -50,6 +50,10 @@ Features:
 		-A modifier that grants global production efficiency
 		-Learn about the Aeoliopile. A peculiar machine that, initially, does not seem to give any benefits, but may in time.
 		-Learn about this mysterious substance known as Caeruleum, or Kyanos, as the Greeks referred it as.
+-Another new monument, the Great Harbor of Carthage, is constructed as part of conquering Roman Africa. Starting at tier 1, it gives the following modifiers:
+	T1: +5 trade power, +100% provincial sailor modifier
+	T2: +15 trade power, +100% areal sailor modifier
+	T3: +15 trade power, +100% areal sailor modifier, -1% naval tradition decay, +10% trade steering, +1 blockade impact on sieges
 
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
