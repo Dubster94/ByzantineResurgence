@@ -90,6 +90,11 @@ byz_centenarium = {
 	local_monthly_devastation = -0.1
 }
 
+roman_production_hub = { #Permanent province modifier in Iberian provinces
+	trade_goods_size_modifier = 0.5
+	trade_value_modifier = 0.2
+}
+
 #Old modifiers
 byz_last_stand = {
 	land_morale = 0.1

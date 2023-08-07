@@ -13,7 +13,7 @@ lte_LES_provinces = {
 		province_id = 3195
 		province_id = 4700
 		province_id = 2296
-		province_id = 5131
+#		province_id = 5131
 	}
 }
 lte_CYP_provinces = {

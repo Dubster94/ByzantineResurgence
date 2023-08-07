@@ -2343,11 +2343,6 @@ country_event = { #27 The Return of De Architectura
 			}
 		}
 	}
-	
-	#Option 1: Focus on stable constructions (Great project upgrade cost modifier)
-	#Option 2: Focus on water drainage wheels (Goods produced modifier)
-	#Option 3: Look into the Aeolipile (First steam engine, early coal)
-	#Option 4: This Caeruleum substance looks interesting... (Egyptian synthetic dye event chain)
 }
 
 country_event = { #28 The Rediscovery of Egyptian Blue
@@ -2477,7 +2472,7 @@ country_event = { #29 The Return of Pneumatica
 	fire_only_once = yes
 	
 	trigger = {
-		is_institution_enabled = global_trade
+		is_institution_enabled = manufactories
 		358 = { 
 			has_great_project = {
 				type = library_of_alexandria
@@ -2900,7 +2895,11 @@ country_event = { #37 The Rediscovery of Greek Fire
 		}
 		modifier = {
 			factor = 0.5
-			358 = { has_province_modifier = byz_library_of_alexandria }
+			358 = { 
+				has_great_project = {
+					type = byz_library_of_alexandria
+				}
+			}
 		}
 	} #The rediscovery should be a lucky one, not something that should happen every game (Except if Naval Byzantium I suppose).
 	

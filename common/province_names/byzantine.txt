@@ -400,7 +400,7 @@
 5163 = { "Temenouthyrai" "Ousakeion" } #Ancient greek name of the city, which I do prefer over the newer Ousakeion
 #6011 = { "Akrokos" "Tiberioupolis" } #Found a mention of the Egrigoz castle on the Turkish wikipage of Emet, which Pleiades had a location of called Akrokos. It matches Egrigoz phonetically as well, so that's what I'm going for. Tiberioupolis is fairly far away, but it seems somewhat connected.
 #6015 = { "Polydorion" "Polydorion" }
-6018 = { "Amorion" "Amorion" } #This being here hurts so much.
+#6018 = { "Amorion" "Amorion" } #This being here hurts so much.
 6019 = { "Philomelion" "Philomelion" }
 
 #Lycaonia
@@ -476,7 +476,7 @@
 5151 = { "Baiberdon" "Baiberdon" } #Not sure about the legitimacy of "Paipert". This is at least Justinian I's possible name of the place
 5158 = { "Leontokome" "Tephrike" }
 6106 = { "Chozanon" "Chozanon" }
-6149 = { "Lykos" "Satala" } #Using the Greek river name for the province because why not. Kelkit seems to stem from the Armenian 'wolf river' 'Kayl Ked'
+#6149 = { "Lykos" "Satala" } #Using the Greek river name for the province because why not. Kelkit seems to stem from the Armenian 'wolf river' 'Kayl Ked'
 
 #Ararat
 3254 = { "Taroua" "Taroua" } #FINALLY found a name for Daruynk.
