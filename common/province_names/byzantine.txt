@@ -1521,7 +1521,7 @@
 8076 = { "Astigon" "Astigi" } #Astigi. Province becomes Astigum/Astigon
 8075 = { "Kanama" "Kanama" } #Canama
 8077 = { "Tourobrie" "Tourobrie" } #Turobriga. Cannot find an equivalent for Aracena, but this one was close by and I figured it would work.
-8078 = { "Asidos" "Asidos" } #Asido
+8078 = { "Asidona" "Asidona" } #Asido
 8079 = { "Kilpe" "Kilpe" } #Cilpe, close by. Zahara wasn't a Roman city.
 8080 = { "Saldoua" "Saldoua" } #Salduba
 

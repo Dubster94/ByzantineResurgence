@@ -90,9 +90,18 @@ byz_centenarium = {
 	local_monthly_devastation = -0.1
 }
 
+byz_roman_iberia = { #Permanent province modifier in Iberian provinces
+	allowed_num_of_manufactories = 1
+}
+
 roman_production_hub = { #Permanent province modifier in Iberian provinces
-	trade_goods_size_modifier = 0.5
-	trade_value_modifier = 0.2
+	trade_goods_size_modifier = 0.2
+	trade_value_modifier = 0.1
+}
+
+byz_roman_iberia_restored = {
+	global_prosperity_growth = 0.5
+	governing_capacity_modifier = 0.1
 }
 
 #Old modifiers
@@ -140,7 +149,7 @@ byz_rid_of_turkish_influence = { #Represents a more unified, hegemonic Anatolia.
 	manpower_recovery_speed = 0.20
 }
 
-byz_anatolian_restoration = {
+byz_anatolian_restoration = { #Permanent, in Anatolian provinces
 	local_manpower_modifier = 0.33
 	local_tax_modifier = 0.25
 }
@@ -263,9 +272,9 @@ byz_patriarch_blessing = {
 	# global_trade_power = 0.2
 # }
 
-# byz_danube_border_restored = {
-	# defensiveness = 0.1
-# }
+byz_danube_border_restored = {
+	defensiveness = 0.1
+}
 
 # byz_atlantic_window = {
 	# global_colonial_growth = 10

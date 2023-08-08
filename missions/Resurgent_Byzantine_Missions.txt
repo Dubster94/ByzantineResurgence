@@ -4878,6 +4878,13 @@ byz_africa_2 = {
 		}
 		
 		effect = {
+			#Effect is based off of the idea that Byzantine Sardinia remained quite content under the Byzantine Empire post-Justinian.
+			corsica_sardinia_area = {
+				add_nationalism = -10
+			}
+			sardinia_area = {
+				add_nationalism = -10
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_baleares }
 		}
@@ -5985,7 +5992,13 @@ byz_iberia_1 = {
 			}
 		}
 		
-		effect = {			
+		effect = {
+			333 = { #Red Ochre
+				change_trade_goods = dyes
+			}
+			328 = { #Sinope, the namesake of the red ochre, Sinopia.
+				change_trade_goods = dyes
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_tarraconia }
 		}
@@ -6014,6 +6027,27 @@ byz_iberia_1 = {
 		}
 		
 		effect = {
+			#The four Colonia of Tarraconensis. Technically there's a 5th, but it isn't represented in EU4 because the thing has like 200 inhabitants today.
+			213 = { #Barcino
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			2988 = { #Tarracona
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			8114 = { #Emporiae
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			214 = { #Caesar Augusta
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1				
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_narbonia }
 		}
@@ -6052,7 +6086,12 @@ byz_iberia_2 = {
 		}
 		
 		effect = {
-			
+			add_prestige_or_monarch_power = { amount = 25 }
+			225 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_lusitania }
 			give_permaclaims_for_mission = { mission=byz_karchidonia }
@@ -6081,7 +6120,13 @@ byz_iberia_2 = {
 			}
 		}
 		
-		effect = {			
+		effect = {	
+			3099 = {
+				add_base_tax = 4
+				add_base_production = 4
+				add_base_manpower = 3
+				add_or_spawn_center_of_trade = { level = 1 }
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_galicia }
 		}
@@ -6120,6 +6165,12 @@ byz_iberia_3 = {
 		}
 		
 		effect = {
+			8067 = {
+				add_base_tax = 4
+				add_base_production = 4
+				add_base_manpower = 3
+				add_or_spawn_center_of_trade = { level = 1 }
+			}
 		}
 	
 		ai_weight = {
@@ -6146,6 +6197,13 @@ byz_iberia_3 = {
 		}
 		
 		effect = {	
+			add_prestige_or_monarch_power = { amount = 50 }
+			iberia_region = {
+				add_province_modifier = {
+					name = "byz_roman_iberia"
+					duration = -1
+				}
+			}
 		}
 	
 		ai_weight = {
@@ -6531,7 +6589,10 @@ byz_iberia_4 = {
 		}
 		
 		effect = {
-			
+			add_country_modifier = {
+				name = "byz_roman_iberia_restored"
+				duration = -1
+			}
 		}
 	
 	}
@@ -6985,7 +7046,18 @@ byz_galatia_1 = {
 			}
 		}
 		
-		effect = {			
+		effect = {
+			2753 = { #Narbo
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 2
+				add_or_spawn_center_of_trade = { level = 1 }
+			}
+			201 = { #Massalia
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 2
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_aquitania }
 		}
@@ -7014,6 +7086,12 @@ byz_galatia_1 = {
 		}
 		
 		effect = {
+			add_prestige_or_monarch_power = { amount = 25 }
+			174 = { #Bourdigala
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 2
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_lougdonia }
 		}
@@ -7042,6 +7120,15 @@ byz_galatia_1 = {
 		}
 		
 		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			203 = { #Lougdon. Honestly, this city deserves a monument, but I cannot find any good candidates that simultaneously have a good picture.
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 3
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_belgica }
 			give_permaclaims_for_mission = { mission=byz_albion }
@@ -7070,7 +7157,13 @@ byz_galatia_1 = {
 			}
 		}
 		
-		effect = {			
+		effect = {
+			add_prestige_or_monarch_power = { amount = 25 }
+			80 = { #Augusta Treverorum
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 2
+			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_germania_minor }
 		}
@@ -7128,11 +7221,30 @@ byz_endgame = {
 		
 		provinces_to_highlight = {
 			owned_by = ROOT
-			#Honestly not sure how to do a good highlight for this mission. 
-			#If it's a state, you want it developed to a point. If it's not, you want to state it.
-			#There's also no trigger to check if you're above governing capacity.
-			#If there was, I could do some funky checks that, if you're below, target territories.
-			#If above, just dev existing ones, or something like that.
+			OR = {
+				AND = { #If above govcap, target state provinces with no town hall, or out of date courthouse building
+					owner = { governing_capacity_percentage = 1 }
+					is_state = yes
+					OR = {
+						AND = {
+							has_building = courthouse
+							owner = { adm_tech = 22 }
+						}
+						NOT = { has_building = town_hall }
+					}
+				}
+				AND = { #If not above govcap, show non-stated provinces, or provinces with highest possible courthouse building.
+					NOT = { owner = { governing_capacity_percentage = 1 } }
+					OR = {
+						NOT = { is_state = yes }
+						has_building = town_hall
+						AND = {
+							NOT = { owner = { adm_tech = 22 } }
+							has_building = courthouse
+						}
+					}
+				}
+			}
 		}
 		
 		trigger = {
@@ -7144,11 +7256,11 @@ byz_endgame = {
 		}
 		
 		effect = {
+			add_prestige_or_monarch_power = { amount = 200 }
 			add_country_modifier = {
 				name = "byz_empire_restored"
 				duration = -1
 			}
-			
 			hidden_effect = { 1321 = { change_province_name = "Thanks for Playing!" } }
 		}
 	}
@@ -7182,10 +7294,10 @@ byz_hre_1 = {
 		}
 		
 		effect = {
-			# add_country_modifier = {
-				# name = "byz_danube_border_restored"
-				# duration = 5475
-			# }
+			add_country_modifier = {
+				name = "byz_danube_border_restored"
+				duration = -1
+			}
 		}
 	
 		ai_weight = {
@@ -7254,10 +7366,7 @@ byz_hre_2 = {
 		}
 		
 		effect = {
-			# add_country_modifier = {
-				# name = "byz_european_ambition"
-				# duration = 5475
-			# }
+			add_prestige_or_monarch_power = { amount = 100 }
 		}
 	
 		ai_weight = {
@@ -7403,7 +7512,7 @@ byz_themes_10 = {
 }
 
 byz_hre_3 = {
-	slot = 4
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
@@ -7417,7 +7526,13 @@ byz_hre_3 = {
 		required_missions = { byz_northern_themes }
 		
 		provinces_to_highlight = {
-			
+			owned_by = ROOT
+			region = south_german_region
+			OR = { #I count 11 potential iron provinces and 1 copper.
+				trade_goods = copper
+				trade_goods = iron
+			}
+			NOT = { has_building = weapons }
 		}
 		
 		trigger = {
@@ -7649,7 +7764,7 @@ byz_galatia_2 = {
 					num_of_times_expanded_infrastructure = 2
 				}
 				else = {
-					development = 40 #Starts at 31 in 1444
+					development = 50 #Starts at 31 in 1444, gets +13 from mission.
 				}
 			}
 			trade_goods_produced_amount = {
@@ -7912,7 +8027,6 @@ byz_exarch_5 = {
 			factor = 500	#AI gogo!
 		}
 	}
-	
 }
 
 byz_england_1 = {
@@ -7943,6 +8057,45 @@ byz_england_1 = {
 		}
 		
 		effect = {
+			if = { #Antonine Wall
+				limit = {
+					owns_or_non_sovereign_subject_of = 248
+					owns_or_non_sovereign_subject_of = 3019
+				}
+				248 = {
+					add_province_modifier = {
+						name = local_fortress
+						duration = -1
+					}
+				}
+				3019 = {
+					add_province_modifier = {
+						name = local_fortress
+						duration = -1
+					}
+				}
+			}
+			else = { #You're my Hadrian's Wall
+				8137 = {
+					add_province_modifier = {
+						name = local_fortress
+						duration = -1
+					}
+				}
+				8136 = {
+					add_province_modifier = {
+						name = local_fortress
+						duration = -1
+					}
+				}
+				247 = {
+					add_province_modifier = {
+						name = local_fortress
+						duration = -1
+					}
+				}
+			}
+			
 		}
 	
 		ai_weight = {
@@ -7966,7 +8119,7 @@ byz_exarch_6 = {
 		required_missions = { byz_albion }
 		
 		provinces_to_highlight = {
-			province_id = 114
+			province_id = 236
 		}
 		
 		trigger = {
