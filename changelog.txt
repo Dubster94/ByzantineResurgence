@@ -54,7 +54,15 @@ Features:
 	T1: +5 trade power, +100% provincial sailor modifier
 	T2: +15 trade power, +100% areal sailor modifier
 	T3: +15 trade power, +100% areal sailor modifier, -1% naval tradition decay, +10% trade steering, +1 blockade impact on sieges
-
+-Another new monument, the Basilica of San Vitale, is placed in Ravenna at game start. Starting at tier 1, it gives the following modifiers:
+	T1: +0.5 yearly patriarch authority or +50% papal influence from cardinals
+	T2: -10% provincial development cost, +0.5 yearly patriarch authority or +50% papal influence from cardinals, +10 relations with heretics
+	T3: -30% provincial development cost, +0.5 yearly patriarch authority or +50% papal influence from cardinals, +25 relations with heretics and +1 missionaries
+-Another new monument, the Tsarevets Church of Ascension, is placed in Tarnovo at game start. Starting at tier 0 due to its utter sacking by the Ottomans, it gives the following modifiers:
+	T1: +1 fort level in province, -0.1 monthly areal devastation
+	T2: +1 fort level in province, -0.1 monthly areal devastation, +5% clergy & nobility loyalty modifier
+	T3: +1 fort level in province, +1 local dice bonus to defender, +0.1 monthly prosperity growth, -0.1 monthly areal devastation, +5% clergy & nobility loyalty modifier and +2% missionary strength
+	
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
 -Fixed Chariot Races event localisation such that, if you move your capital to Rome, the event text will recognise that.
