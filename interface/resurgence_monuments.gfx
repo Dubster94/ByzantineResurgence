@@ -11,4 +11,16 @@ spriteTypes = {
 			name = "GFX_great_project_library_of_alexandria"	
 			texturefile = "gfx//interface//great_projects//great_project_library_of_alexandria.dds"
 		}
+		spriteType = {
+			name = "GFX_great_project_great_harbor_of_carthage"	
+			texturefile = "gfx//interface//great_projects//great_project_great_harbor_of_carthage.dds"
+		}
+		spriteType = {
+			name = "GFX_great_project_church_of_san_vitale"	
+			texturefile = "gfx//interface//great_projects//great_project_church_of_san_vitale.dds"
+		}
+		spriteType = {
+			name = "GFX_great_project_tsarevets_church_of_ascension"	
+			texturefile = "gfx//interface//great_projects//great_project_tsarevets_church_of_ascension.dds"
+		}
 }
