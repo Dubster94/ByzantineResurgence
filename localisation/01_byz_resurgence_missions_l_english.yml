@@ -490,7 +490,7 @@
  byz_military_education_title:0 "Military Education"
  byz_military_education_desc:0 "What with the restoration of the Pandidakterion and our educational system, it would only be natural that we let these institutions teach military tactics as well. To do so however, we need to find the right source of knowledge first, as well as finding suitable students for our first programmes."
  byz_new_renaissance_title:0 "A New Renaissance"
- byz_new_renaissance_desc:0 "With the restoration of both capitals and our educational system, the [Root.GetAdjective] Empire is about to flourish in a grand new Renaissance. It only needs a small push to get going. We shall provide it, for it can only lead to good!"
+ byz_new_renaissance_desc:0 "With our recover from the edge of the abyss, the [Root.GetAdjective] Empire is about to flourish in a grand new Renaissance. It only needs a small push to get going. We shall provide it, and in the process, we may see the return of the learned people that [Root.Capital.GetName] once housed."
  byz_new_renaissance_event_insight:0 "The event will let us ask nations in Italy for the Byzantine freethinkers to return to §Y[Root.Capital.GetName]§!"
  byz_basileus_protostrategos_title:0 "Basileus Protostrategos"
  byz_basileus_protostrategos_desc:0 "In our grand Empire, the Emperor shall not only be the king of kings - he shall also be the general of generals. Our Emperor shall ride forth into battle with his men, greatly bolstering our armies' fighting strength."
@@ -645,6 +645,11 @@
  desc_byz_centenarium:0 "The Romans built several Centenaria - fortified farmhouses - in the area in and around Tripolitania as part of the Limes Tripolitanus, mainly to protect against berber tribes such as the Garamantes that would raid the area at the time. This system survived up until Byzantine times and remained in use after Arab conquest in North Africa up until the 11th Century."
  roman_production_hub:0 "Roman Export Hub"
  desc_roman_production_hub:0 "The region of Iberia under the Romans was famous for supplying Italy and the rest of the Imperial Citizens with any and all goods they could need. Whether it was metals, wine or fruits, it was oftentimes exported from Iberia."
+ byz_roman_iberia:0 "Roman Iberia"
+ desc_byz_roman_iberia:0 "With all of Iberia under our banner, the administration of the region can now be focused on economic prosperity."
+ byz_roman_iberia_restored:0 "Restored Roman Iberia"
+ desc_byz_roman_iberia_restored:0 "With the Iberian Peninsula firmly under our control and its status as a prime production hub of the Empire restored, the rest of our vast Empire has seen much peace and prosperity as a result."
+ 
  #From prior mission tree. Some have been cut.
  byz_last_stand:0 "Last Stand"
  desc_byz_last_stand:0 ""

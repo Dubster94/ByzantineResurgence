@@ -6,7 +6,7 @@ destroy_ayyubids_provinces = {
 }
 
 defeat_black_sheep_provinces = {
-	420 2306 2306 2307 4296 5332 6112 6113 419 2202 2205 3256 416 2211 2206 2207 4304 4294 6124 6129 6130 6131 6133 415 2310 6126 6127 6132 2308 4292 6100 6100
+	420 2306 2306 2307 4296 5332 6112 6113 419 2202 2205 3256 416 2211 2206 2207 4304 4294 6124 6129 6130 6131 6133 415 2310 6126 6127 6132 2308 4292 6100
 }
 
 conquer_the_caucasus_akk_provinces = {
@@ -163,11 +163,11 @@ consolidate_asia_minor_provinces = {
 }
 
 safeguard_eastern_anatolia_provinces = {
-	4303 2306 2307 4296 5332 6112 6113 331 2305 5151 5158 6106 2308 4292 6100 6100
+	4303 2306 2307 4296 5332 6112 6113 331 2305 5151 5158 6106 2308 4292 6100
 }
 
 conquer_mesopotamia_provinces = {
-	409 2311 2312 6141 6142 6143 6144 415 2310 6126 6127 6132 4294 6124 6129 6130 6131 6133 407 2303 2314 6101
+	409 2311 2312 6141 6142 6143 6144 415 2310 6126 6127 6132 4294 6124 6129 6130 6131 6133 407 2303 4298 6091 6101
 }
 
 conquer_haasa_provinces = {
@@ -554,7 +554,7 @@ adu_fatimid_lands_provinces = { #Needs is_empty check
 }
 
 adu_levantine_restoration_provinces = {
-	364 379 1854 1855 5180 6071 382 405 1849 6084 6085 6086 6088 377 4271 6095 415 2310 6126 6127 6132 407 2303 2314 4298 6101 365 4268 5181 380 381 4270 5203 378 4297 5205 6074 6075
+	364 379 1854 1855 5180 6071 382 405 1849 6084 6085 6086 6088 377 4271 6095 415 2310 6126 6127 6132 407 2303 4298 6091 6101 365 4268 5181 380 381 4270 5203 378 4297 5205 6074 6075
 }
 
 adu_reclaim_mecca_provinces = {
@@ -621,37 +621,56 @@ hun_ottoman_borders_four_provinces = {
 	149 151 3170 4705 4779 7130 7134 7136 7137 7138 2750 3168 3169 7149 7150 7151 1764 7139 7152 7155 7156
 }
 
-conquer_al_jazira_hsn_provinces = {
+conquer_al_jazira_hsn_provinces = { #num_of_provinces mission
+	4179 4295 5295 5331 6114 6119 6121 
+	411 2309 4293 5296 6118 6120 6123 6125 
+}
+
+hsn_take_baghdad_provinces = { #num_of_provinces mission
 	415 2310 6126 6127 6132
+	406 6089 6099 6135 6136
+	409 2311 2312 6141 6142 6143 6144 
+	408 2340 4288 6145
 }
 
-hsn_take_baghdad_provinces = {
-	409 2311 2312 6141 6142 6143 6144 408 2340 4288 6145
+hsn_white_sheep_provinces = { #num_of_provinces mission
+	4310 6104 6107 5330
+	418 2308 4292 6100
 }
 
-hsn_white_sheep_provinces = {
-	4310 2308 4292 6100
+conquer_aleppo_hsn_provinces = { #num_of_provinces mission
+	377 2313 4271 5170 6080 6094 6095
+	407 2303 4298 6091 6101
 }
 
-conquer_aleppo_hsn_provinces = {
-	377 4271 6095
-}
-
-hsn_conquer_jerusalem_provinces = {
-	378 4297 5205 6074 6075 382 405 1849 6084 6085 6086 6088 364 379 1854 1855 5180 6071 380 381 4270 5203 365 4268 5181
+hsn_conquer_jerusalem_provinces = { #num_of_provinces mission
+	378 4297 5205 6074 6075 
+	382 405 1849 6084 6085 6086 6088 
+	364 379 1854 1855 5180 6071 
+	380 381 4270 5203 365 4268 5181
 }
 
 #NB: Identical to adu_fatimid_lands_provinces
-hsn_destroy_mamluks_provinces = { #Needs is_empty check
+hsn_destroy_mamluks_provinces = { #Needs is_empty check #num_of_provinces mission
 	# the source trigger for this provincegroup contained triggers not representable in provincegroups, please move these triggers to the mission this provincegroup is referenced in. 
+	356 357 2326 5274 5303 5304 
+	358 362 363 2316 4316 4317 5261 
+	359 361 4318 5264 5267
+	2315 2320 2321 4321 5271 
+	1233 2318 2325 4323 5272 5273 5301 
+	360 1231 2317 2319 4319 4320
 }
 
 hsn_conquer_crusaders_provinces = {
-	320 321 5139 5145 6076 6077 6078
+	320 
+	321 5139 5145 6076 6077 6078
 }
 
-hsn_custodian_of_holy_cities_provinces = {
-	384 385
+hsn_custodian_of_holy_cities_provinces = { #num_of_provinces mission
+	383 2327 4269
+	384 5231 5232
+	385 2330 4277
+	2331 4278 5233
 }
 
 tim_persia_one_provinces = {
@@ -1342,11 +1361,11 @@ bav_expand_in_bavaria_provinces = {
 }
 
 conquer_franken_provinces = {
-	4716 4718 3207 71 4715 71 79 4715 4718 8449 8450
+	66 67 71 79 4715 4716 4717 4718 8449 8450 8451 8452 
 }
 
 conquer_ansbach_provinces = {
-	3206 70 4713 3204 1872 69 1872 3204 4712 4713 8442 8443 8444 8445
+	68 69 70 71 1868 1872 3204 3206 4711 4712 4713 8434 8435 8436 8437 8438 8442 8443 8444 8445 8446 8447 8448
 }
 
 emp_bav_union_with_palatinate_provinces = {
@@ -1354,7 +1373,7 @@ emp_bav_union_with_palatinate_provinces = {
 }
 
 emp_bav_conquer_tirol_provinces = {
-	4710 73 1768
+	73 110 1768 3048 4758 7095 8482 8483 
 }
 
 emp_bav_sway_cologne_provinces = {
@@ -1366,11 +1385,11 @@ emp_bav_tame_brandenburg_provinces = {
 }
 
 emp_bav_union_with_austria_provinces = {
-	134 1770 4762 8470 8471 8472 8473 8474 132 1863 3050 4751 8216 8475 8476 8477 8478 8479 128 4759 8480 8481
+	133 134 1770 4760 4761 4762 8470 8471 8472 8473 8474 132 1863 3050 4751 8216 8466 8467 8468 8469 8475 8476 8477 8478 8479 128 4759 8480 8481
 }
 
 emp_bav_italian_sun_provinces = {
-	108 112 1774 4729 7076 7081 7084 7085 7086 7087 7088 7089 7094 7098 111 1769 4738 7091 7096 128 4759 8480 8481
+	108 112 1774 4729 7076 7081 7084 7085 7086 7087 7088 7089 7094 7098 111 1769 4738 7091 7096
 }
 
 emp_bav_netherlands_provinces = {
@@ -2030,7 +2049,7 @@ gre_ellenika_provinces = {
 
 #Armenia
 arm_restore_armenia_proper_provinces = { #Used in arm_unite_armenia_provinces
-	419 2202 2204 2205 3253 3256 
+	419 2202 2204 2205 3253 3256 7288
 	3254 4302 6109 6110
 	2306 2307 4296 5332 6112 6113
 }
@@ -2042,7 +2061,7 @@ arm_along_euphrates_provinces = { #Used in arm_unite_armenia_provinces
 }
 
 arm_unite_armenia_provinces = { #Combination of arm_restore_armenia_proper_provinces & arm_along_euphrates_provinces
-	419 2202 2204 2205 3253 3256 
+	419 2202 2204 2205 3253 3256 7288
 	3254 4302 6109 6110
 	2306 2307 4296 5332 6112 6113
 	331 2305 5151 5158 6106
@@ -2063,7 +2082,7 @@ arm_conquer_lesser_armenia_provinces = { #Used in arm_drive_off_turks_provinces
 arm_conquer_syria_provinces = {
 	2313 5170 6080 6094 
 	377 4271 6095
-	4298
+	4298 6091
 	382 405 1849 6084 6085 6086 6088
 	378 4297 5205 6074 6075
 	379 1854 1855 5180
@@ -2093,11 +2112,15 @@ arm_drive_off_turks_provinces = { #Combination of arm_conquer_lesser_armenia_pro
 	325 328 2299 4313 5164 6033 
 	329 2300 2304 5152 6034 6035 6037 6038 
 	330 1846 3248 4315 5206 6040
-	420 421 424 4299 4305 4340 
+	420 
+	421 4299 4305 7284 7286
+	424 4340 7285
 }
 
 arm_city_of_winds_provinces = { #Used in arm_drive_off_turks_provinces
-	420 421 424 4299 4305 4340 
+	420 
+	421 4299 4305 7284 7286
+	424 4340 7285
 }
 
 arm_reclaim_atropatene_provinces = {
@@ -2123,6 +2146,7 @@ arm_third_rome_provinces = {
 }
 
 arm_union_with_georgia_provinces = {
-	423 2203 3250 3251 4301 4303 
-	422 462 1856 2196 
+	423 2203 4301 7289 7290 7291 7292 7293 7294
+	3250 3251 4303 7296 7297
+	422 462 1856 2196 7295 7298 7299
 }

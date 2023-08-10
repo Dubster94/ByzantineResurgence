@@ -766,10 +766,6 @@ byz_reconquest_2 = {
 					duration = -1
 				}
 			}
-			319 = { #To prep it for coal!
-				add_base_tax = 7
-				add_base_production = 7
-			}
 		}
 	
 		ai_weight = {
