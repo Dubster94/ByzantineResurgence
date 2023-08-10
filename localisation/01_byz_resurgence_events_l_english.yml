@@ -262,6 +262,14 @@
  great_project_great_harbor_of_carthage:0 "Great Harbor of Carthage"
  great_harbor_of_carthage_title:0 "Great Harbor of Carthage"
  
+ church_of_san_vitale:0 "Basilica of San Vitale"
+ great_project_church_of_san_vitale:0 "Basilica of San Vitale"
+ church_of_san_vitale_title:0 "Basilica of San Vitale"
+ 
+ tsarevets_church_of_ascension:0 "Tsarevets Church of Ascension"
+ great_project_tsarevets_church_of_ascension:0 "Tsarevets Church of Ascension"
+ tsarevets_church_of_ascension_title:0 "Tsarevets Church of Ascension"
+ 
  
  byz_chariot_race_events.1.t:0 "The Quadrennial Chariot Race"
  byz_chariot_race_events.1.d:0 "The time has come for the Quadrennial Chariot Races to begin. Factions from all over the Empire have flocked in [Root.Capital.GetName] to compete and the populace have donned the color of their favorite competitors. As usual, the traditional Prasinoi (Greens), Venetoi (Blues), Rousioi (Reds) and Leukoi (Whites) are ready to compete for glory, but other independent factions are also trying their hand at it, including a particular newcomer, a crowd favorite, that may have a chance at completely dominating the others. As per tradition, the races are funded from the state treasury, to ensure quick preparations and a fair competition. \n\nNow, my [Root.Monarch.GetTitle], shall we head out the balcony of the Great Palace and take our rightful seats to watch the games?"
