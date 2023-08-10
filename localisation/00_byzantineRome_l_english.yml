@@ -92,7 +92,7 @@
  byz_rival:0 "Has at least one rival whose capital is located in Europe that also is rivalling [Root.GetName]."
  
  byzantine_empire_provinces:0 " owned provinces in §YGreece§! and §YAnatolia§!."
- byzantine_claims_tooltip:0 "Grants claims on §YGreece§! and §YAnatolia§!."
+ byzantine_claims_tooltip:0 "§Y[Root.GetName]§! gains claims on §YGreece§! and §YAnatolia§!."
  
  restore_roman_empire_byzantium_title:0 "Renovatio Imperii"
  restore_roman_empire_byzantium_desc:0 "The great Justinian I, together with with his friend and general Belisarius, once proved that the Roman Empire could rise once more and defeat the petty barbarians that felled our western brethren. While his successors could not hold the vast lands that he conquered, we have now managed to prove our legitimacy as true successors by mending the schism, recovered the lands of old and obliterated the horrible mess that is neither holy, roman nor an empire. As such we shall finally reclaim the title as the one true Rome, or as we always have called ourselves - Basileia Rhomaion!"

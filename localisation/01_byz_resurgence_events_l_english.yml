@@ -197,7 +197,7 @@
  resurgent_BYZ.33.d:0 "With the conquest and conversion of the heathen holy city of [385.GetName], the decision to establish a Patriarch in the city has followed a natural progression. There is but one unanswered question; its governance. Shall the Patriarch be governed as an autonomous Patriarchate, or should the Patriarch be part of a centralized realm?"
  resurgent_BYZ.33.a:0 "Rule the Patriarchate from [Root.Capital.GetName]!"
  resurgent_BYZ.33.b:0 "Create the Autonomous Patriarchate!"
- resurgent_BYZ.33.b.tooltip:0 "Grants §YMakoraba§! cores on the areas surrounding Mecca & Medina."
+ resurgent_BYZ.33.b.tooltip:0 "§Y[MKB.GetName]§! gains cores on the areas surrounding Mecca & Medina."
  
  
  resurgent_BYZ.36.t:0 "[byz_immigration_province.GetName] attracts the countryside populace"
