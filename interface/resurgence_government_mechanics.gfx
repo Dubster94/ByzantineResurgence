@@ -41,14 +41,14 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_pronoia_demand_state_tax"
+		name = "GFX_pronoia_demand_state_tax_button"
 		texturefile = "gfx/interface/government_mechanics/pronoia/pronoia_demand_state_tax_button.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
 	
 	spriteType = {
-		name = "GFX_pronoia_lenient_state_tax"
+		name = "GFX_pronoia_lenient_state_tax_button"
 		texturefile = "gfx/interface/government_mechanics/pronoia/pronoia_lenient_state_tax_button.dds"
 		loadType = "INGAME"
 		transparencecheck = yes

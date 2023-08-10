@@ -142,7 +142,7 @@ byzantine_pronoia_mechanic = {
 	interactions = {
 		demand_state_tax = {
 			gui = byzantine_pronoia_gov_mech_button
-			icon = GFX_pronoia_demand_state_tax
+			icon = GFX_pronoia_demand_state_tax_button
 			cost_type = byzantine_pronoia_power
 			cost = 100
 			trigger = {
@@ -238,7 +238,7 @@ byzantine_pronoia_mechanic = {
 		}
 		lenient_state_tax = {
 			gui = byzantine_pronoia_gov_mech_button
-			icon = GFX_pronoia_lenient_state_tax
+			icon = GFX_pronoia_lenient_state_tax_button
 			cost_type = byzantine_pronoia_power
 			cost = 100
 			trigger = {
