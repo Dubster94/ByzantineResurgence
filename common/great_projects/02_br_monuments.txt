@@ -998,10 +998,10 @@ church_of_san_vitale = {
 
 tsarevets_church_of_ascension = {
 	# province it starts in
-	start = 4701		#Tarnovo
+	start = 4704		#Tarnovo
 	
 	# date built in real life (so anything built during game time will be there if you start a game after that date)
-	date = 1185.01.01	#Technically speaking,
+	date = 1185.01.01
 	
 	#time to build
 	time = {
