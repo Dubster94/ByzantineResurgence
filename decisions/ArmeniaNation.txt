@@ -104,8 +104,8 @@ country_decisions = {
 				limit = {
 					mission_completed = arm_along_euphrates
 				}
-				give_permaclaims_for_mission_provgroup = { mission=arm_conquer_lesser_armenia }
-				give_permaclaims_for_mission_provgroup = { mission=arm_city_of_winds }
+				give_permaclaims_for_mission = { mission=arm_conquer_lesser_armenia }
+				give_permaclaims_for_mission = { mission=arm_city_of_winds }
 			}
 			#Swap culture, government, government reform & ideas, plus set flag
 			if = {
