@@ -56,7 +56,7 @@ guiTypes = {
 
 	windowType = {
 		name = "byzantine_bureaucracy_gov_mech_button_with_power"
-		size = { x = 100 y = 53 }
+		size = { x = 100 y = 60 }
 		#moveable = 0
 		#orientation = "UPPER_RIGHT"
 
@@ -72,13 +72,13 @@ guiTypes = {
 		iconType = {
 			name = "government_power_bar"
 			spriteType = "GFX_byz_bureaucracy_progress_bar"
-			position = { x = 25 y = 36 }
+			position = { x = 25 y = 45 }
 		}
 
 		iconType = {
 			name = "government_power_bar_frame"
 			spriteType = "GFX_byz_bureaucracy_bar_frame"
-			position = { x = 22 y = 35 }
+			position = { x = 22 y = 44 }
 			alwaystransparent = yes
 		}
 	}

@@ -94,20 +94,38 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress.lua"
 	}
 	spriteType = {
-		name = "GFX_byz_megas_domestikos_button"
-		texturefile = "gfx/interface/government_mechanics/bureaucracy/byz_megas_domestikos_button.dds"
+		name = "GFX_logothete_general_button"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/logothete_general_button.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_byz_megas_logariastes_button"
-		texturefile = "gfx/interface/government_mechanics/bureaucracy/byz_megas_logariastes_button.dds"
+		name = "GFX_logothete_postal_button"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/logothete_postal_button.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_byz_megas_logothetes_button"
-		texturefile = "gfx/interface/government_mechanics/bureaucracy/byz_megas_logothetes_button.dds"
+		name = "GFX_logothete_military_button"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/logothete_military_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_logothete_praetorium_button"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/logothete_praetorium_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_logothete_special_affairs_button"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/logothete_special_affairs_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_logothete_waters_button"
+		texturefile = "gfx/interface/government_mechanics/bureaucracy/logothete_waters_button.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
 	}

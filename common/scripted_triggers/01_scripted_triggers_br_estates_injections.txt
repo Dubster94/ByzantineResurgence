@@ -34,3 +34,13 @@ has_exempt_from_seize_land_for_estate_exarches = {
 has_exempt_from_seize_land_for_estate_knightly_orders = {
 	always = no
 }
+
+#Adding these here because I believe it requires these to be declared after the others.
+estate_has_exempt_from_seize_land_privilege = {
+	has_estate = $estate$
+	has_exempt_from_seize_land_for_$estate$ = yes
+}
+
+estate_not_has_exempt_from_seize_land_privilege = {
+	NOT = { has_exempt_from_seize_land_for_$estate$ = yes }
+}

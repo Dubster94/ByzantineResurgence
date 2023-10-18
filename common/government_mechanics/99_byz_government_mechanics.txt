@@ -14,109 +14,311 @@ byzantine_bureaucracy_mechanic = {
 	available = {
 		has_country_flag = byz_restored_bureaucracy_mechanic
 	}
+	#There's six Logothetes:
+	#Genikou: General (Taxation)
+	#Dromou: Postal (Diplomacy)
+	#Stratiotikou: Military (Land)
+	#Praitoriou: Praetorium (Law & Order)
+	#Eidikou: Special Affairs (Production & Trade)
+	#Hydaton: Waters (Naval)
+	#The idea of the mechanic is the following:
+	#All of these have a powerbase between 0 to 100.
+	#Between 0 to 100, they provide nice bonuses to the Empire.
+	#However, if any individual power goes above 50, it starts decreasing all others' powers as it grows, at -0.5 monthly at 100 power. If a power reaches above 75, you also get +0.2 yearly corruption for mismanaging your administration.
+	#All Logothete grow by 0.01 monthly for one click of expand administration.
+	#The base growth of all Logothete is 0 monthly otherwise.
+	#Their power grows dynamically based on a variety of factors.
+	#Each power can be paid down by 5 points for 5 monarch points of their respective category.
 	
-	powers = {
-		byzantine_megas_domestikos_power = {
+	#Genikou:
+	#The Logothetes tou Genikou, or General Logothete, manages the taxation of the Imperial provinces.
+	#
+	#The Logothetes tou Genikou's power changes by the following:
+	#+0.05 monthly per point of stability
+	#-0.05 monthly per point of negative stability
+	#+0.1 monthly if at peace
+	
+	#Dromou:
+	#The Logothetes tou Dromou, or Postal Logothete, manages the Empire's foreign affairs.
+	#
+	#The Logothetes tou Dromou's power changes by the following:
+	#+0.05 monthly per point of diplomatic reputation
+	
+	#Stratiotikou:
+	#The Logothetes tou Stratiotikou, or Military Logothete, manages the pay and provision of the Imperial Army. 
+	#
+	#The Logothetes tou Stratiotikou's power changes by the following:
+	#+0.1 monthly per 100 army tradition
+	#+0.1 monthly per 100 army professionalism
+	#+0.1 monthly during war taxes
+	#-0.1 monthly during slackening recruitment
+	#-0.1 monthly if at peace
+	
+	#Praitoriou:
+	#The Logothetes tou Praitoriou, or Praetorium Logothete, manages the Empire's law and order. 
+	#
+	#The Logothetes tou Praitoriou's power changes by the following:
+	#+0.2 monthly at 0% average global autonomy
+	#-0.2 monthly at 100% average global autonomy
+	
+	#Eidikou:
+	#The Logothetes tou Eidikou, or Special Affairs Logothete, manages the Empire's manufacturing and storehouses for war and trade alike.
+	#
+	#The Logothetes tou Eidikou's power changes by the following:
+	#+0.2 monthly per 100 mercantilism
+	#+0.01 monthly per "trading in"-modifier
+	
+	#Hydaton:
+	#The Logothetes ton Hydaton, or Waters Logothete, manages the supplies for the Imperial Navy.
+	#
+	#The Logothetes ton Hydaton's power changes by the following:
+	#+0.2 monthly per 100 naval tradition
+	
+	#Boni at 100 power:
+	#Genikou: +50% national tax modifier
+	#Dromou: +50% improve relations modifier
+	#Stratiotikou: +50% manpower recovery speed
+	#Praitoriou +50% governing capacity modifier
+	#Eidikou: +50% trade efficiency
+	#Hydaton: +10% ship durability & +50% sailor recovery speed
+	
+	powers = { #Revamp to above
+		logothete_general_power = {
 			gui = byzantine_bureaucracy_gov_mech_button_with_power
 			max = 100
-			base_monthly_growth = 0.5
+			base_monthly_growth = 0
 			scaled_modifier = {
 				modifier = {
-					manpower_recovery_speed = 0.4
-					general_cost = -0.2
-					mil_advisor_cost = -0.4
-					monthly_byzantine_megas_domestikos_power = 0.5
-					byzantine_megas_domestikos_power_gain_modifier = 1
-					yearly_corruption  = 0.3
+					global_tax_modifier = 0.5
 				}
 			}
-			reverse_scaled_modifier = {
+			scaled_modifier = {
+				start_value = 50
 				modifier = {
-					yearly_corruption  = -0.1
+					yearly_corruption = 0.5
+					monthly_logothete_postal_power = -0.5
+					monthly_logothete_military_power = -0.5
+					monthly_logothete_praetorium_power = -0.5
+					monthly_logothete_special_affairs_power = -0.5
+					monthly_logothete_waters_power = -0.5
 				}
 			}
 		}
-		byzantine_megas_logariastes_power = {
+		logothete_postal_power = {
 			gui = byzantine_bureaucracy_gov_mech_button_with_power
 			max = 100
-			base_monthly_growth = 0.5
+			base_monthly_growth = 0
 			scaled_modifier = {
 				modifier = {
-					global_tax_modifier = 0.2
-					production_efficiency = 0.2
-					interest = -2
-					adm_advisor_cost = -0.4
-					monthly_byzantine_megas_logariastes_power = 0.5
-					byzantine_megas_logariastes_power_gain_modifier = 1
-					yearly_corruption  = 0.3
+					improve_relation_modifier = 0.5
 				}
 			}
-			reverse_scaled_modifier = {
+			scaled_modifier = {
+				start_value = 50
 				modifier = {
-					yearly_corruption  = -0.1
+					yearly_corruption = 0.5
+					monthly_logothete_general_power = -0.5
+					monthly_logothete_military_power = -0.5
+					monthly_logothete_praetorium_power = -0.5
+					monthly_logothete_special_affairs_power = -0.5
+					monthly_logothete_waters_power = -0.5
 				}
 			}
 		}
-		byzantine_megas_logothetes_power = {
+		logothete_military_power = {
 			gui = byzantine_bureaucracy_gov_mech_button_with_power
 			max = 100
-			base_monthly_growth = 0.5
+			base_monthly_growth = 0
 			scaled_modifier = {
 				modifier = {
-					improve_relation_modifier = 0.4
-					diplomatic_reputation = 4
-					dip_advisor_cost = -0.4
-					monthly_byzantine_megas_logothetes_power = 0.5
-					byzantine_megas_logothetes_power_gain_modifier = 1
-					yearly_corruption  = 0.3
+					manpower_recovery_speed = 0.5
 				}
 			}
-			reverse_scaled_modifier = {
+			scaled_modifier = {
+				start_value = 50
 				modifier = {
-					yearly_corruption  = -0.1
+					yearly_corruption = 0.5
+					monthly_logothete_general_power = -0.5
+					monthly_logothete_postal_power = -0.5
+					monthly_logothete_praetorium_power = -0.5
+					monthly_logothete_special_affairs_power = -0.5
+					monthly_logothete_waters_power = -0.5
+				}
+			}
+		}
+		logothete_praetorium_power = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
+			max = 100
+			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					governing_capacity_modifier = 0.5
+				}
+			}
+			scaled_modifier = {
+				start_value = 50
+				modifier = {
+					yearly_corruption = 0.5
+					monthly_logothete_general_power = -0.5
+					monthly_logothete_postal_power = -0.5
+					monthly_logothete_military_power = -0.5
+					monthly_logothete_special_affairs_power = -0.5
+					monthly_logothete_waters_power = -0.5
+				}
+			}
+		}
+		logothete_special_affairs_power = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
+			max = 100
+			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					trade_efficiency = 0.5
+				}
+			}
+			scaled_modifier = {
+				start_value = 50
+				modifier = {
+					yearly_corruption = 0.5
+					monthly_logothete_general_power = -0.5
+					monthly_logothete_postal_power = -0.5
+					monthly_logothete_military_power = -0.5
+					monthly_logothete_praetorium_power = -0.5
+					monthly_logothete_waters_power = -0.5
+				}
+			}
+		}
+		logothete_waters_power = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
+			max = 100
+			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					sailors_recovery_speed = 0.5
+					ship_durability = 0.1
+				}
+			}
+			scaled_modifier = {
+				start_value = 50
+				modifier = {
+					yearly_corruption = 0.5
+					monthly_logothete_general_power = -0.5
+					monthly_logothete_postal_power = -0.5
+					monthly_logothete_military_power = -0.5
+					monthly_logothete_praetorium_power = -0.5
+					monthly_logothete_special_affairs_power = -0.5
 				}
 			}
 		}
 	}
 	
 	interactions = {
-		megas_domestikos_interaction = {
+		logothete_general_interaction = {
 			gui = byzantine_bureaucracy_gov_mech_button_with_power
-			icon = GFX_byz_megas_domestikos_button
-			cost_type = byzantine_megas_domestikos_power
-			cost = 25
+			icon = GFX_logothete_general_button
+			cost_type = logothete_general_power
+			cost = 5
 			trigger = {
-				mil_power = 25
+				adm_power = 5
+				has_government_power = { 
+					mechanic_type = byzantine_bureaucracy_mechanic 
+					power_type = logothete_general_power
+					value = 50 
+				}
 			}
 			
 			effect = {
-				add_mil_power = -25
+				add_adm_power = -5
 			}
 		}
-		megas_logariastes_interaction = {
+		logothete_postal_interaction = {
 			gui = byzantine_bureaucracy_gov_mech_button_with_power
-			icon = GFX_byz_megas_logariastes_button
-			cost_type = byzantine_megas_logariastes_power
-			cost = 25
+			icon = GFX_logothete_postal_button
+			cost_type = logothete_postal_power
+			cost = 5
 			trigger = {
-				adm_power = 25
+				dip_power = 5
+				has_government_power = { 
+					mechanic_type = byzantine_bureaucracy_mechanic 
+					power_type = logothete_postal_power
+					value = 50 
+				}
 			}
 			
 			effect = {
-				add_adm_power = -25
+				add_dip_power = -5
 			}
 		}
-		megas_logothetes_interaction = {
+		logothete_military_interaction = {
 			gui = byzantine_bureaucracy_gov_mech_button_with_power
-			icon = GFX_byz_megas_logothetes_button
-			cost_type = byzantine_megas_logothetes_power
-			cost = 25
+			icon = GFX_logothete_military_button
+			cost_type = logothete_military_power
+			cost = 5
 			trigger = {
-				dip_power = 25
+				mil_power = 5
+				has_government_power = { 
+					mechanic_type = byzantine_bureaucracy_mechanic 
+					power_type = logothete_military_power
+					value = 50 
+				}
 			}
 			
 			effect = {
-				add_dip_power = -25
+				add_mil_power = -5
+			}
+		}
+		logothete_praetorium_interaction = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
+			icon = GFX_logothete_praetorium_button
+			cost_type = logothete_praetorium_power
+			cost = 5
+			trigger = {
+				adm_power = 5
+				has_government_power = { 
+					mechanic_type = byzantine_bureaucracy_mechanic 
+					power_type = logothete_praetorium_power
+					value = 50 
+				}
+			}
+			
+			effect = {
+				add_adm_power = -5
+			}
+		}
+		logothete_special_affairs_interaction = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
+			icon = GFX_logothete_special_affairs_button
+			cost_type = logothete_special_affairs_power
+			cost = 5
+			trigger = {
+				dip_power = 5
+				has_government_power = { 
+					mechanic_type = byzantine_bureaucracy_mechanic 
+					power_type = logothete_special_affairs_power
+					value = 50 
+				}
+			}
+			
+			effect = {
+				add_dip_power = -5
+			}
+		}
+		logothete_waters_interaction = {
+			gui = byzantine_bureaucracy_gov_mech_button_with_power
+			icon = GFX_logothete_waters_button
+			cost_type = logothete_waters_power
+			cost = 5
+			trigger = {
+				mil_power = 5
+				has_government_power = { 
+					mechanic_type = byzantine_bureaucracy_mechanic 
+					power_type = logothete_waters_power
+					value = 50 
+				}
+			}
+			
+			effect = {
+				add_mil_power = -5
 			}
 		}
 	}
@@ -133,7 +335,7 @@ byzantine_pronoia_mechanic = {
 		byzantine_pronoia_power = {
 			gui = byzantine_pronoia_gov_mech_power
 			max = 150
-			base_monthly_growth = 1
+			base_monthly_growth = 1 #Countered by -2 at 80% nobility estate influence
 			monarch_power = ADM
 			is_good = yes
 		}

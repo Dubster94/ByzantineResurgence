@@ -51,6 +51,16 @@ add_country_modifier = {
 	duration = -1
 }
 
+add_country_modifier = {
+	name = "byz_bad_religion"
+	duration = -1
+}
+
+add_country_modifier = {
+	name = "byz_bad_trade"
+	duration = -1
+}
+
 		
 1391.2.16 = {
 	monarch = {

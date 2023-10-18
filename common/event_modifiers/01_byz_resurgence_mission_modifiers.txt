@@ -4,6 +4,18 @@
 #Byzantium
 
 #Starting modifiers
+
+byz_bad_religion = {
+	tolerance_own = -3
+	relation_with_heretics = 25
+	religion = yes
+}
+
+byz_bad_trade = {
+	trade_efficiency = -0.1
+	global_trade_power = -0.2
+}
+
 byz_bad_navy = {
 	disengagement_chance = -0.05
 	ship_durability = -0.1

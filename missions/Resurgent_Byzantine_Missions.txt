@@ -190,6 +190,7 @@ byz_economic_2 = {
 		
 		effect = {
 			add_mercantilism = 5
+			remove_country_modifier = byz_bad_trade
 			add_country_modifier = {
 				name = "byz_restored_trade_hegemon"
 				duration = 9125
@@ -283,6 +284,7 @@ byz_religious_1 = {
 				limit = {
 					religion = orthodox
 				}
+				remove_country_modifier = byz_bad_religion
 				add_estate_loyalty = {
 					estate = estate_church
 					loyalty = 10
