@@ -422,7 +422,12 @@ country_event = {
 		name = "purple_phoenix.11.a"
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
-			power_type = byzantine_megas_domestikos_power
+			power_type = logothete_military_power
+			value = 5
+		}	
+		add_government_power = { 
+			mechanic_type = byzantine_bureaucracy_mechanic  
+			power_type = logothete_waters_power
 			value = 5
 		}	
 	}
@@ -456,7 +461,12 @@ country_event = {
 		name = "purple_phoenix.12.a"
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
-			power_type = byzantine_megas_domestikos_power
+			power_type = logothete_military_power
+			value = -5
+		}	
+		add_government_power = { 
+			mechanic_type = byzantine_bureaucracy_mechanic  
+			power_type = logothete_waters_power
 			value = -5
 		}	
 	}
@@ -489,7 +499,12 @@ country_event = {
 		name = "purple_phoenix.13.a"
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
-			power_type = byzantine_megas_logothetes_power
+			power_type = logothete_postal_power
+			value = 5
+		}	
+		add_government_power = { 
+			mechanic_type = byzantine_bureaucracy_mechanic  
+			power_type = logothete_special_affairs_power
 			value = 5
 		}	
 	}
@@ -522,9 +537,14 @@ country_event = {
 		name = "purple_phoenix.14.a"
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
-			power_type = byzantine_megas_logothetes_power
+			power_type = logothete_postal_power
 			value = -5
-		}
+		}	
+		add_government_power = { 
+			mechanic_type = byzantine_bureaucracy_mechanic  
+			power_type = logothete_special_affairs_power
+			value = -5
+		}	
 	}
 }
 
@@ -555,7 +575,12 @@ country_event = {
 		name = "purple_phoenix.15.a"
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
-			power_type = byzantine_megas_logariastes_power
+			power_type = logothete_general_power
+			value = 5
+		}
+		add_government_power = { 
+			mechanic_type = byzantine_bureaucracy_mechanic  
+			power_type = logothete_praetorium_power
 			value = 5
 		}
 	}
@@ -588,7 +613,12 @@ country_event = {
 		name = "purple_phoenix.16.a"
 		add_government_power = { 
 			mechanic_type = byzantine_bureaucracy_mechanic  
-			power_type = byzantine_megas_logariastes_power
+			power_type = logothete_general_power
+			value = -5
+		}
+		add_government_power = { 
+			mechanic_type = byzantine_bureaucracy_mechanic  
+			power_type = logothete_praetorium_power
 			value = -5
 		}
 	}
