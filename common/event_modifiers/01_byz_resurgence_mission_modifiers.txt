@@ -7,6 +7,7 @@
 
 byz_bad_religion = {
 	tolerance_own = -3
+	yearly_patriarch_authority = -1
 	relation_with_heretics = 25
 	religion = yes
 }
