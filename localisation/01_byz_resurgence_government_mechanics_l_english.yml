@@ -12,7 +12,7 @@
  monthly_logothete_postal_power:0 "Monthly Logothetes tou Dromou Influence"
  logothete_postal_interaction:0 "Curb Postal Logothete Influence"
  logothete_postal_interaction_desc:0 ""
- logothete_military_power:0 "Logothetes tou Strateotikou Influence"
+ logothete_military_power:0 "Logothetes tou Stratiotikou Influence"
  logothete_military_power_desc:0 "The Logothetes tou Stratiotikou, or Military Logothete, manages the pay and provision of the Imperial Army.\n\nThe Logothetes tou Stratiotikou's power changes by the following:\n§G+0.1§! monthly per 100 army tradition.\n§G+0.1§! monthly per 100 army professionalism.\n§G+0.1§! monthly while collecting war taxes.\n§R-0.1§! monthly while slackening recruitment.\n§R-0.1§! monthly if at peace.\n "
  monthly_logothete_military_power:0 "Monthly Logothetes tou Stratiotikou Influence"
  logothete_military_interaction:0 "Curb Military Logothete Influence"

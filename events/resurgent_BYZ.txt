@@ -2364,6 +2364,13 @@ country_event = { #28 The Rediscovery of Egyptian Blue
 			}
 		}
 		tag = BYZ
+		calc_true_if = {
+			amount = 10
+			egypt_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
 	}
 	
 	option = { #Let us create an industry centered around this new dye!
@@ -3122,6 +3129,18 @@ country_event = { #40 The Freethinkers return!
 	
 	is_triggered_only = yes
 	
+	after = {
+		hidden_effect = {
+			event_target:byz_capital = {
+				set_variable = {
+					which = byzConstantinopleFreeThinkers
+					value = 0
+				}
+			}
+			clear_global_event_target = byz_capital
+		}
+	}
+	
 	option = { #Guards! Let them in!
 		name = "resurgent_BYZ.40.a"
 		trigger = {
@@ -3132,25 +3151,23 @@ country_event = { #40 The Freethinkers return!
 				}
 			}
 		}
-		event_target:byz_capital = {
-			for = {
-				custom_tooltip = byz_refugees_return_tooltip
-				amount = "byzConstantinopleFreeThinkers"
-				effect = "
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				"
-			}
-		}
-		hidden_effect = {
-			event_target:byz_capital = {
-				set_variable = {
+		event_target:byz_capital = { #Cannot use for-loop scripted effect because amount is a variable. Scripted triggers/effects do not support exporting variables apparently.
+			custom_tooltip = byz_refugees_return_tooltip
+			while = {
+				limit = {
+					check_variable = {
+						which = byzConstantinopleFreeThinkers
+						value = 1
+					}
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				subtract_variable = {
 					which = byzConstantinopleFreeThinkers
-					value = 0
+					value = 1
 				}
 			}
-			clear_global_event_target = byz_capital
 		}
 	}
 	

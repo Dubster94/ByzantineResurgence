@@ -227,7 +227,7 @@
  resurgent_BYZ.38.b:0 "Do not"
  
  resurgent_BYZ.39.t:0 "Return of Byzantine Freethinkers"
- resurgent_BYZ.39.d:0 "It appears that the Empire of the Greeks has risen once again, and a new renaissance is flourishing in [event_target:byz_capital.GetName]. People in our lands whose ancestors fled from the city in 1204 now wish to return. Do we let them go?"
+ resurgent_BYZ.39.d:0 "It appears that the Empire of the Greeks has risen once again, and a new renaissance is flourishing in [byz_capital.GetName]. People in our lands whose ancestors fled from the city in 1204 now wish to return. Do we let them go?"
  resurgent_BYZ.39.a:0 "Let them go"
  resurgent_BYZ.39.b:0 "We must keep them here!"
  
@@ -235,7 +235,7 @@
  resurgent_BYZ.40.da:0 "Today, a huge flock of people approached the gates of Constantinople. It appears that they have left Italy to live in our capital!"
  resurgent_BYZ.40.db:0 "... Or so we thought. We've been waiting for months, but it appears nobody came to live in Constantinople. Whether because they were forced to stay or not is uncertain, or whether they simply didn't make it here, we'll never know..."
  resurgent_BYZ.40.a:0 "Guards! Open the gates!"
- byz_refugees_return_tooltip:0 "Gain §G[Root.Capital.byzConstantinopleFreeThinkers.GetValue]§! Base Tax in §Y[Root.Capital.GetName]§!\n      Gain §G[Root.Capital.byzConstantinopleFreeThinkers.GetValue]§! Base Production in §Y[Root.Capital.GetName]§!\n      Gain §G[Root.Capital.byzConstantinopleFreeThinkers.GetValue]§! Base Manpower in §Y[Root.Capital.GetName]§!"
+ byz_refugees_return_tooltip:0 "Gain §G[Root.Capital.byzConstantinopleFreeThinkers.GetValue]§! Base Tax in §Y[Root.Capital.GetName]§!\n   Gain §G[Root.Capital.byzConstantinopleFreeThinkers.GetValue]§! Base Production in §Y[Root.Capital.GetName]§!\n   Gain §G[Root.Capital.byzConstantinopleFreeThinkers.GetValue]§! Base Manpower in §Y[Root.Capital.GetName]§!"
  resurgent_BYZ.40.b:0 "I suppose we'll have to take our people back by force!"
  
  sufi_shrine_removal.1.t:0 "A Sufi shrine within our borders"

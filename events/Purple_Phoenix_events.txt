@@ -393,7 +393,7 @@ country_event = {
 		add_army_tradition = 10
 	}
 }
-
+#TODO: Likely split events into 12 of them, each interacting with one of the logothetes.
 country_event = {
 	id = purple_phoenix.11
 	

@@ -1822,8 +1822,8 @@ byz_armenia_1 = {
 			calc_true_if = {
 				desc = byz_rebuild_armenia_tooltip
 				amount = 4
-				all_owned_province = {
-					province_group = byz_reconquer_lesser_armenia_provinces
+				byz_reconquer_lesser_armenia_provinces = {
+					type = all
 					fort_level = 2
 				}
 			}
@@ -1832,9 +1832,8 @@ byz_armenia_1 = {
 		effect = {
 			custom_tooltip = byz_fortify_armenia_tooltip
 			hidden_effect = {
-				every_owned_province = {
+				byz_reconquer_lesser_armenia_provinces = {
 					limit = {
-						province_group = byz_reconquer_lesser_armenia_provinces
 						fort_level = 2
 					}
 					add_base_manpower = 2
@@ -6611,6 +6610,7 @@ byz_exarch_4 = {
 		}
 		
 		trigger = {
+			mission_completed = byz_establish_exarches
 			OR = {
 				HSP = {
 					exists = yes
@@ -7925,6 +7925,7 @@ byz_exarch_5 = {
 		}
 		
 		trigger = {
+			mission_completed = byz_establish_exarches
 			OR = {
 				GLT = {
 					exists = yes
@@ -8116,6 +8117,7 @@ byz_exarch_6 = {
 		}
 		
 		trigger = {
+			mission_completed = byz_establish_exarches
 			OR = {
 				ABN = {
 					exists = yes
