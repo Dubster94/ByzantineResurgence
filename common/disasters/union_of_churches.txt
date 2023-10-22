@@ -1,0 +1,104 @@
+union_of_churches = {
+	potential = {
+		always = no #Not done yet
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = had_byz_church_crisis }
+		tag = BYZ
+		normal_or_historical_nations = yes
+		uses_doom = no #Why is this trigger here? Oh well
+        num_of_cities = 15 #Upped from 6 to compensate for more provinces in BT.
+		is_lesser_in_union = no
+		government = monarchy #Apparently Republic Byzantium is a thing...
+		has_country_modifier = byz_bad_religion #Needs to have the Council of Florence modifier.
+	}
+	
+	can_start = {
+		has_any_disaster = no
+		religion = orthodox
+        is_at_war = no
+	}
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			NOT = { religion = orthodox }
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			religion = orthodox
+		}
+		modifier = {
+			factor = 1
+			ruler_religion = orthodox
+		}
+		modifier = {
+			factor = 1
+			heir_religion = orthodox     
+		}	
+		modifier = {
+			factor = 1
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 30
+				}
+			}
+		}
+	}
+	
+	can_end = {
+		stability = 1
+		OR = {
+			AND = {
+				NOT = { num_of_rebel_armies = 1	}
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+			}
+			OR = {
+				AND = {
+					religion = orthodox
+					NOT = {
+						any_owned_province = {
+							religion = catholic
+						}
+					}
+				}
+				AND = {
+					religion = catholic
+					NOT = {
+						any_owned_province = {
+							religion = orthodox
+						}
+					}
+				}
+			}
+			NOT = { has_country_modifier = byz_bad_religion }
+		}
+	}
+	
+	modifier = {
+		can_not_build_missionaries = yes
+		stability_cost_modifier = 0.5
+		tolerance_own = -3
+	}
+
+	on_start = succession_crisis.34
+	on_end = succession_crisis.36
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			1000 = 0
+			100 = union_of_churches.35
+			100 = succession_crisis.38
+			100 = succession_crisis.39
+			100 = succession_crisis.41
+			100 = succession_crisis.42
+			100 = succession_crisis.43
+			100 = succession_crisis.44
+		}
+	}
+}

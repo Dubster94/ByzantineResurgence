@@ -1,0 +1,56 @@
+
+
+namespace = union_of_churches
+
+country_event = { #Startup event
+    id = union_of_churches.1
+    title = union_of_churches.1.t
+    desc = union_of_churches.1.d
+    picture = RELIGIOUS_TURMOIL_eventPicture
+	
+    is_triggered_only = yes
+        
+	mean_time_to_happen = {
+		days = 1
+	}
+    major = yes
+    
+    immediate = {
+        hidden_effect = {
+			change_religion = catholic #Byzantium is at least Catholic for the duration of this disaster
+            set_country_flag = had_byz_church_crisis
+            add_stability = -3
+            random_owned_province = {
+                limit = {
+                    is_capital = no
+                }
+                spawn_rebels = {
+                    type = orthodox_rebels
+                    size = 1
+                }
+            }
+			random_owned_province = {
+                limit = {
+                    is_capital = no
+                }
+                spawn_rebels = {
+                    type = orthodox_rebels
+                    size = 2
+                }
+            }
+			random_owned_province = {
+                limit = {
+                    is_capital = no
+                }
+                spawn_rebels = {
+                    type = orthodox_rebels
+                    size = 2
+                }
+            }       
+        }
+    }
+    
+    option = {
+        name = succession_crisis.34.a #There must be a way to come to an agreement?!
+    }
+}

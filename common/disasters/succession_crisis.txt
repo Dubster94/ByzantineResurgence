@@ -5,7 +5,6 @@ succession_crisis = {
 		tag = BYZ
 		normal_or_historical_nations = yes
 		uses_doom = no #Why is this trigger here? Oh well
-        NOT = { has_idea = byz_formalize_succession_laws } #The idea that Paradox gave them makes sense.
         num_of_cities = 15 #Upped from 6 to compensate for more provinces in BT.
 		is_lesser_in_union = no
 		government = monarchy #Apparently Republic Byzantium is a thing...
@@ -43,7 +42,6 @@ succession_crisis = {
 				}
 			}
 		}
-		
 	}
 	
 	progress = { #Taking all the above triggers, splitting them and thus getting something that looks like good modifiers, methinks.
