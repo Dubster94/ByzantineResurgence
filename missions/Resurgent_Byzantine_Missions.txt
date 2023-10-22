@@ -1220,11 +1220,6 @@ byz_navy_1 = {
 		}
 		
 		effect = {
-			add_country_modifier = {
-				name = "byz_imperial_navy"
-				duration = 7300
-			}
-			
 			148 = { #Thessalonica grows as an important port city and trade prospers as Byzantium controls the Aegean.
 				add_base_tax = 4
 				add_base_production = 4
