@@ -83,7 +83,7 @@ country_event = { #Cede lands Albion
 	}
 	immediate = {
 		cede_land_to_exarch_effect = {
-			exarch = ABN
+			exarch = ABO
 			provinces = byz_exarch_albion_provinces
 		}
 	}
@@ -312,7 +312,7 @@ country_event = { #Establish Albion
 	immediate = {
 		establish_vassal_byz_effect = {
 			capital = 236
-			tag = ABN
+			tag = ABO
 			culture = albian
 			provinces = byz_exarch_albion_provinces
 		}

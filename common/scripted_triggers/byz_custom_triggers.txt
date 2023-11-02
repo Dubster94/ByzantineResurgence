@@ -93,7 +93,7 @@ is_exarch_tag_and_exarch_of_root_trigger = {
 			tag = ATL
 			tag = PSI
 			tag = RVN
-			tag = ABN
+			tag = ABO
 			tag = AEG
 		}
 		is_subject_of_type = byz_exarch

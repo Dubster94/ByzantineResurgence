@@ -8,7 +8,7 @@ KCD = "countries/Karchidon.txt"
 ATL = "countries/Anatolia.txt"
 PSI = "countries/Persis.txt"
 RVN = "countries/ExarchRavenna.txt"
-ABN = "countries/Albion.txt"
+ABO = "countries/Albion.txt"
 AEG = "countries/Aegyptus.txt"
 
 #New tag, Pontus.

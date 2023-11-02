@@ -5953,6 +5953,7 @@ byz_estates_1 = {
 			}
 			custom_tooltip = byz_emperor_of_romans_tooltip
 			set_country_flag = byz_generals_no_absolutism_privilege_cost
+			set_country_flag = no_absolutism_loss_for_parliament_seat_reward
 		}
 	}
 }
@@ -7810,7 +7811,7 @@ byz_themes_12 = {
 			if = {
 				limit = {
 					236 = {
-						owned_by = ABN
+						owned_by = ABO
 					}
 				}
 				236 = {
@@ -8119,7 +8120,7 @@ byz_exarch_6 = {
 		trigger = {
 			mission_completed = byz_establish_exarches
 			OR = {
-				ABN = {
+				ABO = {
 					exists = yes
 					is_subject_of_type = byz_exarch
 					is_subject_of = ROOT
@@ -8145,7 +8146,7 @@ byz_exarch_6 = {
 		effect = {
 			custom_tooltip = byz_exarch_albion_1
 			tooltip = {
-				ABN = {
+				ABO = {
 					add_liberty_desire = -50
 					add_country_modifier = {
 						name = "byz_exarchate"
@@ -8160,14 +8161,14 @@ byz_exarch_6 = {
 			hidden_effect = {
 				if = {
 					limit = {
-						ABN = {
+						ABO = {
 							exists = yes
 							is_subject_of_type = byz_exarch
 							is_subject_of = ROOT
 							total_development = 600
 						}
 					}
-					ABN = {
+					ABO = {
 						add_liberty_desire = -50
 						add_country_modifier = {
 							name = "byz_exarchate"

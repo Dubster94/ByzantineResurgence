@@ -13,7 +13,7 @@ exarchate_reform = {
 			tag = ATL
 			tag = PSI
 			tag = RVN
-			tag = ABN
+			tag = ABO
 			tag = AEG
 		}
 		is_subject = yes
@@ -26,7 +26,7 @@ exarchate_reform = {
 			tag = ATL
 			tag = PSI
 			tag = RVN
-			tag = ABN
+			tag = ABO
 			tag = AEG
 		}
 		is_subject = yes
@@ -59,7 +59,7 @@ exarchate_reform = {
 			# tag = ATL
 			# tag = PSI
 			# tag = RVN
-			# tag = ABN
+			# tag = ABO
 			# tag = AEG
 		# }
 	# }
@@ -112,7 +112,7 @@ exarchate_reform = {
 			# tag = ATL
 			# tag = PSI
 			# tag = RVN
-			# tag = ABN
+			# tag = ABO
 			# tag = AEG
 		# }
 	# }
@@ -149,7 +149,7 @@ theme_system_reform = {
 			tag = ATL
 			tag = PSI
 			tag = RVN
-			tag = ABN
+			tag = ABO
 			tag = AEG
 		}
 	}
@@ -208,7 +208,7 @@ theme_system_reform = {
 			# tag = ATL
 			# tag = PSI
 			# tag = RVN
-			# tag = ABN
+			# tag = ABO
 			# tag = AEG
 		# }
 		# has_dlc = "Rights of Man"
@@ -259,7 +259,7 @@ exarch_system_reform = {
 			tag = ATL
 			tag = PSI
 			tag = RVN
-			tag = ABN
+			tag = ABO
 			tag = AEG
 		}
 	}
@@ -300,7 +300,7 @@ revoke_exarch_autonomy_reform = {
 			tag = ATL
 			tag = PSI
 			tag = RVN
-			tag = ABN
+			tag = ABO
 			tag = AEG
 		}
 	}

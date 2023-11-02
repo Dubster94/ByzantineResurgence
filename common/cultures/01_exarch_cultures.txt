@@ -601,7 +601,7 @@ byzantine = { #Contains their names inside, because I am worried moving them out
 	}
 	
 	albian = {
-		#primary = ABN
+		#primary = ABO
 		graphical_culture = easterngfx
 		male_names = {
 			Adrianos Adrian Akakios Alexandros Alexander Alexios Alexis Anastasios Anastasius Anatolios 

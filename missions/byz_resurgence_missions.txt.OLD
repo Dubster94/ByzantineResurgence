@@ -3465,7 +3465,7 @@ byz_england = { #COPIED OVER
 			if = {
 				limit = {
 					236 = {
-						owned_by = ABN
+						owned_by = ABO
 					}
 				}
 				236 = {
@@ -3692,7 +3692,7 @@ byz_galatia = { #COPIED OVER
 			if = {
 				limit = {
 					80 = {
-						owned_by = ABN
+						owned_by = ABO
 					}
 				}
 				80 = {
@@ -3709,7 +3709,7 @@ byz_galatia = { #COPIED OVER
 			if = {
 				limit = {
 					174 = {
-						owned_by = ABN
+						owned_by = ABO
 					}
 				}
 				174 = {

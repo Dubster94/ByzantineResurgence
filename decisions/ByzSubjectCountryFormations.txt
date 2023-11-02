@@ -973,8 +973,8 @@ country_decisions = {
 			tag = BYZ
 			#ai = yes
 			#Exarch specific:
-			exists = ABN
-			ABN = { is_subject_of = ROOT }
+			exists = ABO
+			ABO = { is_subject_of = ROOT }
 			any_owned_province = {
 				byz_exarch_albion_provinces = yes
 			}
@@ -999,7 +999,7 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				ABN = { #If disloyal
+				ABO = { #If disloyal
 					liberty_desire = 50
 				}
 			}

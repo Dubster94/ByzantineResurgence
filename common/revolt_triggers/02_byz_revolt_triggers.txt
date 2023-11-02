@@ -42,10 +42,10 @@ RVN = { #Ravenna
 		exists = RVN
 	}
 }
-ABN = { #Albion
+ABO = { #Albion
 	OR = {
-		is_core = ABN
-		exists = ABN
+		is_core = ABO
+		exists = ABO
 	}
 }
 AEG = { #Aegyptus

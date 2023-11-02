@@ -66,10 +66,17 @@ Features:
 	T1: +1 fort level in province, -0.1 monthly areal devastation
 	T2: +1 fort level in province, -0.1 monthly areal devastation, +5% clergy & nobility loyalty modifier
 	T3: +1 fort level in province, +1 local dice bonus to defender, +0.1 monthly prosperity growth, -0.1 monthly areal devastation, +5% clergy & nobility loyalty modifier and +2% missionary strength
+-A new disaster can now fire for Byzantium: Union of Two Churches, representing the situation after the Council of Florence. It can start firing after the Ottoman threat has been dealt with, i.e, when Byzantium has pushed back from the brink of death.
+	-This disaster disables regular conversion of the populace, and relies on religious rebels and event conversions to convert your country.
+	-During the disaster, events will pop up spawning orthodox zealots and catholic zealots in a variety of provinces in your realm. The starting setup is 2 orthodox zealot stacks, one in Thrace and one in Morea, and 2 catholic zealot stacks in East/West Macedonia
+	-When the disaster fires, Byzantium will swap to Catholic. If Byzantium desires to stay Catholic, it needs to not surrender to Orthodox zealots.
+	-If Byzantium desires to stay Orthodox and solve the council of Florence, it needs to defeat all rebels and surrender to Orthodox zealots.
+	-Finishing this disaster is required for the "A Question of Schismatics" mission, or enter the Age of Reformation without triggering it.
 
 Tweaks:
 -Altered Absolutism to give +2 yearly Pronoiar power and +1 yearly Protostrategos Prominence at 100 absolutism.
 -Altered the Nobility estate to give -2 yearly Pronoiar power at max influence if not loyal, double that if disloyal, and half of that if loyal.
+-Changed Albion's tag from ABN to ABO because BT added ABN in Horn of Africa
 
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
