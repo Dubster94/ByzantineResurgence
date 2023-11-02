@@ -7,6 +7,14 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	
+	#Union of Churches image
+	spriteType = {
+		name = "GFX_disaster_union_of_churches"
+		texturefile = "gfx//interface//disasters//union_of_churches.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
 	#Strategoi disaster image
 	spriteType = {
 		name = "GFX_disaster_estate_generals_disaster"

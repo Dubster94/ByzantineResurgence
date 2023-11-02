@@ -1,6 +1,6 @@
 union_of_churches = {
 	potential = {
-		always = no #Not done yet
+		#always = no #Not done yet
 		is_free_or_tributary_trigger = yes
 		NOT = { has_country_flag = had_byz_church_crisis }
 		tag = BYZ
@@ -15,6 +15,7 @@ union_of_churches = {
 		is_lesser_in_union = no
 		government = monarchy #Apparently Republic Byzantium is a thing...
 		has_country_modifier = byz_bad_religion #Needs to have the Council of Florence modifier.
+		current_age = age_of_discovery
 	}
 	
 	can_start = {
@@ -37,11 +38,11 @@ union_of_churches = {
 		}
 		modifier = {
 			factor = 1
-			ruler_religion = orthodox
+			ruler_religion = catholic
 		}
 		modifier = {
 			factor = 1
-			heir_religion = orthodox     
+			heir_religion = catholic     
 		}	
 		modifier = {
 			factor = 1
@@ -56,30 +57,25 @@ union_of_churches = {
 	
 	can_end = {
 		stability = 1
+		NOT = { num_of_rebel_armies = 1	}
+		NOT = { num_of_rebel_controlled_provinces = 1 }
 		OR = {
 			AND = {
-				NOT = { num_of_rebel_armies = 1	}
-				NOT = { num_of_rebel_controlled_provinces = 1 }
-			}
-			OR = {
-				AND = {
-					religion = orthodox
-					NOT = {
-						any_owned_province = {
-							religion = catholic
-						}
-					}
-				}
-				AND = {
-					religion = catholic
-					NOT = {
-						any_owned_province = {
-							religion = orthodox
-						}
+				religion = orthodox
+				NOT = {
+					any_owned_province = {
+						religion = catholic
 					}
 				}
 			}
-			NOT = { has_country_modifier = byz_bad_religion }
+			AND = {
+				religion = catholic
+				NOT = {
+					any_owned_province = {
+						religion = orthodox
+					}
+				}
+			}
 		}
 	}
 	
@@ -102,8 +98,6 @@ union_of_churches = {
 			100 = union_of_churches.4
 			100 = union_of_churches.5
 			100 = union_of_churches.6
-			100 = union_of_churches.7
-			100 = union_of_churches.8
 		}
 	}
 }

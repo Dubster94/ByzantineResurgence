@@ -223,68 +223,55 @@ byz_religious_1 = {
 		required_missions = { byz_reconquer_ottoman_greece }
 		
 		provinces_to_highlight = {
-			OR = {
-				province_group = byz_deny_ottoman_access_provinces
-				province_group = byz_reconquer_ottoman_greece_provinces
-				province_group = byz_no_latins_in_greece_provinces
-			}
-			NOT = { religion = ROOT }
 		}
 		
 		trigger = {
 			OR = {
-				AND = {
-					religion = orthodox
-					custom_trigger_tooltip = {
-						tooltip = obj_convert_10_provinces_tooltip
-						check_variable = { which = num_converted_religion value = 10 }
+				custom_trigger_tooltip = {
+					tooltip = byz_question_of_schismatics_had_union_of_churches
+					AND = {
+						NOT = { has_disaster = union_of_churches }
+						has_country_flag = had_byz_church_crisis
 					}
 				}
-				AND = {
-					religion = catholic
-					151 = { religion = catholic }
-				}
-			}
-			temple = 15
-			custom_trigger_tooltip = {
-				tooltip = byz_question_of_schismatics_tooltip
-				NOT = {
-					OR = {
-						byz_deny_ottoman_access_provinces = {
-							NOT = { religion = ROOT }
-						}
-						byz_reconquer_ottoman_greece_provinces = {
-							NOT = { religion = ROOT }
-						}
-						byz_no_latins_in_greece_provinces = {
-							NOT = { religion = ROOT }
-						}
-					}
+				custom_trigger_tooltip = {
+					tooltip = byz_question_of_schismatics_avoided_union_of_churches
+					NOT = { current_age = age_of_discovery }
 				}
 			}
 		}
 		
 		effect = {
-			increase_religious_currency_effect = yes
-			if = {
+			if = { #If Union of Two Churches hasn't fired
 				limit = {
-					ruler_religion = catholic
-					religion = orthodox
+					NOT = { has_country_flag = had_byz_church_crisis }
 				}
-				set_ruler_religion = orthodox
+				increase_religious_currency_effect = yes
+				if = {
+					limit = {
+						ruler_religion = catholic
+						religion = orthodox
+					}
+					set_ruler_religion = orthodox
+				}
+				if = {
+					limit = {
+						heir_religion = catholic
+						religion = orthodox
+					}
+					set_heir_religion = orthodox
+				}
+				if = {
+					limit = {
+						has_country_modifier = byz_bad_religion
+					}
+					remove_country_modifier = byz_bad_religion
+				}
 			}
 			if = {
 				limit = {
-					heir_religion = catholic
 					religion = orthodox
 				}
-				set_heir_religion = orthodox
-			}
-			if = {
-				limit = {
-					religion = orthodox
-				}
-				remove_country_modifier = byz_bad_religion
 				add_estate_loyalty = {
 					estate = estate_church
 					loyalty = 10
@@ -295,6 +282,33 @@ byz_religious_1 = {
 					loyalty = 10
 					duration = -1
 				}
+				every_country = {
+					limit = {
+						religion = orthodox
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = byz_brothers_in_faith
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					religion = catholic
+				}
+				add_papal_influence = 5
+				every_country = {
+					limit = {
+						religion = catholic
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = catholic_convert
+					}
+				}
+			}
+			else = { #Dump reward. Pending other addition if Pagan Wrath wants to do something fun with this or whatever. I don't know. This mission branch would probably be removed at that point.
+				add_prestige = 10
 			}
 		}
 	
@@ -7746,7 +7760,7 @@ byz_galatia_2 = {
 		
 	byz_lougdon_minting = { #New in BR 8.0
 		icon = mission_establish_mint_towns
-		position = 34 #4-34
+		position = 35 #4-35
 		required_missions = { byz_lougdonia }
 	
 		trigger = {

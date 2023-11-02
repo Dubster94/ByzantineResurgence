@@ -350,7 +350,7 @@
  union_of_churches.1.t:0 "Union of Two Churches"
  union_of_churches.1.d:0 "As we have recovered from the brink, the negotiations that were conducted in 1437, the Council of Florence, have surfaced to become a thorn in our side. The [Root.Monarch.GetTitle] converted to Catholicism and made a promise that the [PAP.Monarch.GetTitle] in Rome holds primary authority in religious matters. With the Turkish invaders having been repelled, the matters of the Council of Florence has sprung to light. Whether it has actually allowed us to repel the Turkish onslaught is less important - the fact that the negotiations were accepted by prior Emperor Ioannes VIII is the cause of the conflict. Religious heads around Constantinople have taken up arms to protect and restore Orthodoxy, once more placing the Ecumenical Patriarch of Constantinople as first among equals, whilst religious heads in other parts of the country, no doubt funded by [PAP.Monarch.GetTitle] [PAP.Monarch.GetName], have taken up arms to prevent the restoration of the Ecumenical Patriarch."
  union_of_churches.1.a:0 "Troubling times are ahead of us..."
- union_of_churches.1.a.tt:0 "The state religion of §Y[Root.GetName]§! has changed to §YCatholic§!. §RMissionaries may not be used to convert provinces§!. We are forced to rely on supporting or negotiating with one side, while simultaneously crushing the other, to come out of this situation."
+ union_of_churches.1.a.tt:0 "The state religion of §Y[Root.GetName]§! has changed to §YCatholic§!. \n§RMissionaries may not be used to convert provinces§!. We are forced to rely on supporting or negotiating with one side, while simultaneously crushing the other, to come out of this situation.\n\nTo restore Orthodoxy, we §Rmust accept the Orthodox Zealots' demands§! and ensure that §Ynone of our provinces flip to Catholicism§!.\n\nTo convert to Catholicism, we §Ymust defeat the Orthodox Zealots§! and §Rlet the Catholic Zealots convert our provinces§!. Once done, we can finally rid the state of the Zealots, either by defeating them, or accepting their demands."
  
  union_of_churches.2.t:0 "Catholics receive Papal support!"
  union_of_churches.2.d:0 "[PAP.Monarch.GetTitle] [PAP.Monarch.GetName] has sent support to the Catholic side in order to ensure papal primacy remains accepted in [Root.GetName]. They're gathering in [byz_catholic_province.GetName] and are storming the streets in full revolt!"
@@ -371,8 +371,16 @@
  union_of_churches.5.d:0 "An envoy from [byz_orthodox_supporter.GetName] has arrived in [Root.Capital.GetName] with a gift to help us rid the country of Catholic sympathizers, supporting us in our time of need."
  union_of_churches.5.a:0 "Together we stand united!"
  
- union_of_churches.6.t:0 ""
+ union_of_churches.6.t:0 "Restoration of Orthodoxy in [byz_restored_orthodox_province.GetName]!"
+ union_of_churches.6.d:0 "Our missionaries have made an attempt at converting the populace in the province of [byz_restored_orthodox_province.GetName]. The people there now once more follow the Orthodox faith!"
+ union_of_churches.6.a:0 "Rejoice!"
  
+ union_of_churches.100.t:0 "An End to the Religious Turmoil in [Root.GetName]!"
+ union_of_churches.100.da:0 "We have finally brought an end to the Union of Churches and remedied what was the Council of Florence. Once more, the Ecumenical Patriarch of Constantinople holds the title of first among equals, and we have showed the Pope that we are yet alive and kicking. No more shall these pesky Latins hold any leverage over the [Root.Monarch.GetTitle] or [Root.Monarch.GetHerHim] subjects!"
+ union_of_churches.100.db:0 "We have finally managed to convince the populace that subjecting ourselves to Papal primacy is the right way forward. The Ecumenical Patriarch of Constantinople has been relegated to serve [PAP.Monarch.GetTitle] [PAP.Monarch.GetName] and the East-West Schism has finally been mended. Finally, we may reconciliate with the West, and bring Catholicism to the Holy Land ourselves!"
+ union_of_churches.100.aa:0 "One day, the Pope will bow before us!"
+ union_of_churches.100.ab:0 "The Pope shall remain supreme!"
+ union_of_churches.100.tt:0 "The mission §YA Question of Schismatics§! can now be completed."
  #Incidents
  incident_byzantine_resurgence:0 "Byzantine Resurgence"
  incident_byzantine_resurgence_emperor_alert:0 "The Greeks have risen from the ashes. We must decide on how to handle them."

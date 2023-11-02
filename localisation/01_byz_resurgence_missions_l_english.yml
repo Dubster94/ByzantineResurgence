@@ -73,7 +73,8 @@
  #Byz Religious Tree chain
  byz_question_of_schismatics_title:0 "A Question of Schismatics"
  byz_question_of_schismatics_desc:0 "With the Council of Florence culminating in the conversion of John VIII and the rest of the Palaiologos except Demetrios, the religious question of the Empire is a difficult one - what John VIII and the now dead Patriarch Joseph II did was not something that the [Root.GetAdjective] monks would abide to, not only due to the separation of power in the Orthodox Church, but also due to principles. This created a divide of unionists and anti-unionists which up until this point has not been solved and causes great turmoil among our populace. We need to pick a side and then \"convince\" the other that our faith is the future of [Root.GetName]!"
- byz_question_of_schismatics_tooltip:0 "None of the highlighted provinces are following a heretic or heathen religion."
+ byz_question_of_schismatics_had_union_of_churches:0 "Has gone through the §YUnion of Two Churches§! disaster"
+ byz_question_of_schismatics_avoided_union_of_churches:0 "Has reached the §YAge of Reformation§! without triggering the §YUnion of Two Churches§! disaster"
  EST_REMAINED_ORTHODOX:0 "Remained loyal to Orthodoxy: $VAL$"
  convert_anatolia_title:0 "Convert Anatolia"
  convert_anatolia_desc:0 "The people of Anatolia were once proud followers of Christianity, however have since the conquests by the Turk been forced into heathenism. We need to undo this and bring them back to the true faith if these lands are to remain in our hands!"
@@ -609,7 +610,7 @@
  byz_exarch_galatia_2:0 "\nIf the provinces of §Y[174.GetName]§! and §Y[80.GetName]§! are developed instead:"
  byz_exarch_albion_title:0 "Exarch of Albion"
  byz_exarch_albion_desc:0 "Now that the region of Albion once more responds to the [Root.Monarch.GetTitle], considering its distance from our capital, the region, much like that of others, would do well to be governed by its own Exarch. Whether directly under the [Root.Monarch.GetTitle], or with greater autonomy, is up to us."
- byz_exarch_albion_1:0 "If the Exarchate of §Y[ABN.GetName]§! is established:"
+ byz_exarch_albion_1:0 "If the Exarchate of §Y[ABO.GetName]§! is established:"
  byz_exarch_albion_2:0 "\nIf one of the province of §Y[236.GetName]§! is developed instead:"
  
  
