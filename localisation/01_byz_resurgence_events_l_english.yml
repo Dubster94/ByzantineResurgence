@@ -345,13 +345,33 @@
  byz_chariot_race_events.14.d:0 "During this year's chariot races, a comet was seen travelling through the sky. As everybody was looking towards the comet, a high-ranked person close to the Emperor's seat took the opportunity to draw his musket. Before our captains could disarm him, a single bullet was shot towards the [Root.Monarch.GetTitle], striking [Root.Monarch.GetHerHim] down. Alas, the doctors could not save [Root.Monarch.GetHerHim]."
  byz_chariot_race_events.14.a:0 "Dark times lie ahead..."
  
+ #Union of Two Churches disaster + events
+ union_of_churches: "Union of Two Churches"
+ union_of_churches.1.t:0 "Union of Two Churches"
+ union_of_churches.1.d:0 "As we have recovered from the brink, the negotiations that were conducted in 1437, the Council of Florence, have surfaced to become a thorn in our side. The [Root.Monarch.GetTitle] converted to Catholicism and made a promise that the [PAP.Monarch.GetTitle] in Rome holds primary authority in religious matters. With the Turkish invaders having been repelled, the matters of the Council of Florence has sprung to light. Whether it has actually allowed us to repel the Turkish onslaught is less important - the fact that the negotiations were accepted by prior Emperor Ioannes VIII is the cause of the conflict. Religious heads around Constantinople have taken up arms to protect and restore Orthodoxy, once more placing the Ecumenical Patriarch of Constantinople as first among equals, whilst religious heads in other parts of the country, no doubt funded by [PAP.Monarch.GetTitle] [PAP.Monarch.GetName], have taken up arms to prevent the restoration of the Ecumenical Patriarch."
+ union_of_churches.1.a:0 "Troubling times are ahead of us..."
+ union_of_churches.1.a.tt:0 "The state religion of §Y[Root.GetName]§! has changed to §YCatholic§!. §RMissionaries may not be used to convert provinces§!. We are forced to rely on supporting or negotiating with one side, while simultaneously crushing the other, to come out of this situation."
  
+ union_of_churches.2.t:0 "Catholics receive Papal support!"
+ union_of_churches.2.d:0 "[PAP.Monarch.GetTitle] [PAP.Monarch.GetName] has sent support to the Catholic side in order to ensure papal primacy remains accepted in [Root.GetName]. They're gathering in [byz_catholic_province.GetName] and are storming the streets in full revolt!"
+ union_of_churches.2.aa:0 "They will pay for this in time..."
+ union_of_churches.2.ab:0 "Help has arrived!"
  
+ union_of_churches.3.t:0 "The local populace supports the Patriarch!"
+ union_of_churches.3.d:0 "The Orthodox locals in [byz_orthodox_province.GetName] have expressed their support for the Ecumenical Patriarch of Constantinople. Wanting nothing to do with the pesky Latins and their papal primacy, they have risen up in open revolt!"
+ union_of_churches.3.aa:0 "Together we will ensure that Rome holds no power here!"
+ union_of_churches.3.ab:0 "Crush them!"
  
+ union_of_churches.4.t:0 "Catholicism in [byz_catholic_province_convert.GetName]!"
+ union_of_churches.4.d:0 "It appears that the populace in [byz_catholic_province_convert.GetName] has converted to Catholicism. No doubt this is the work of [PAP.Monarch.GetTitle] [PAP.Monarch.GetName]."
+ union_of_churches.4.aa:0 "Oh no!"
+ union_of_churches.4.ab:0 "Splendid!"
  
+ union_of_churches.5.t:0 "Orthodox neighbours support the [Root.Monarch.GetTitle]!"
+ union_of_churches.5.d:0 "An envoy from [byz_orthodox_supporter.GetName] has arrived in [Root.Capital.GetName] with a gift to help us rid the country of Catholic sympathizers, supporting us in our time of need."
+ union_of_churches.5.a:0 "Together we stand united!"
  
- 
- 
+ union_of_churches.6.t:0 ""
  
  #Incidents
  incident_byzantine_resurgence:0 "Byzantine Resurgence"

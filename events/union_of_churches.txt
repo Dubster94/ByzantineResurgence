@@ -22,35 +22,45 @@ country_event = { #Startup event
             add_stability = -3
             random_owned_province = {
                 limit = {
-                    is_capital = no
+                    area = thrace_area
                 }
                 spawn_rebels = {
                     type = orthodox_rebels
+                    size = 3
+                }
+            }
+			random_owned_province = {
+                limit = {
+                    area = morea_area
+                }
+                spawn_rebels = {
+                    type = orthodox_rebels
+                    size = 2
+                }
+            }  
+			random_owned_province = {
+                limit = {
+                    area = macedonia_area
+                }
+                spawn_rebels = {
+                    type = catholic_rebels
+                    size = 2
+                }
+            } 
+			random_owned_province = {
+                limit = {
+                    area = eastern_macedonia_area
+                }
+                spawn_rebels = {
+                    type = catholic_rebels
                     size = 1
                 }
-            }
-			random_owned_province = {
-                limit = {
-                    is_capital = no
-                }
-                spawn_rebels = {
-                    type = orthodox_rebels
-                    size = 2
-                }
-            }
-			random_owned_province = {
-                limit = {
-                    is_capital = no
-                }
-                spawn_rebels = {
-                    type = orthodox_rebels
-                    size = 2
-                }
-            }       
+            }    
         }
     }
     
     option = {
-        name = succession_crisis.34.a #There must be a way to come to an agreement?!
+        name = union_of_churches.1.a #There must be a way to come to an agreement?!
+		custom_tooltip = union_of_churches.1.a.tt
     }
 }

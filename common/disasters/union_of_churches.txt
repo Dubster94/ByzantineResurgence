@@ -6,7 +6,12 @@ union_of_churches = {
 		tag = BYZ
 		normal_or_historical_nations = yes
 		uses_doom = no #Why is this trigger here? Oh well
-        num_of_cities = 15 #Upped from 6 to compensate for more provinces in BT.
+        num_of_cities = 25
+		#Require 1 province in 4 different areas for the purposes of rebel spawning.
+		thrace_area = { owned_by = ROOT } #Orthodox
+		morea_area = { owned_by = ROOT } #Orthodox
+		macedonia_area = { owned_by = ROOT } #Catholic
+		eastern_macedonia_area = { owned_by = ROOT } #Catholic
 		is_lesser_in_union = no
 		government = monarchy #Apparently Republic Byzantium is a thing...
 		has_country_modifier = byz_bad_religion #Needs to have the Council of Florence modifier.
@@ -84,21 +89,21 @@ union_of_churches = {
 		tolerance_own = -3
 	}
 
-	on_start = succession_crisis.34
-	on_end = succession_crisis.36
+	on_start = union_of_churches.1
+	on_end = union_of_churches.100
 	
 	on_monthly = {
 		events = {
 		}
 		random_events = { 
 			1000 = 0
-			100 = union_of_churches.35
-			100 = succession_crisis.38
-			100 = succession_crisis.39
-			100 = succession_crisis.41
-			100 = succession_crisis.42
-			100 = succession_crisis.43
-			100 = succession_crisis.44
+			100 = union_of_churches.2
+			100 = union_of_churches.3
+			100 = union_of_churches.4
+			100 = union_of_churches.5
+			100 = union_of_churches.6
+			100 = union_of_churches.7
+			100 = union_of_churches.8
 		}
 	}
 }
