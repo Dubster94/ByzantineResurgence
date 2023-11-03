@@ -521,7 +521,7 @@
 #Middle Euphrates
 406 = { "Dakira" "Dakira" }
 #2314 = { "Azdra" "Azdra" } #Found on the wikipage. Uncertain claim. Halaibe further north is known as Zenobia. #NOTE: This is a very dodgy cut by JP as this is a vanilla ID.
-6089 = { "Europos" "Doura Europos" }
+2314 = { "Europos" "Doura Europos" }
 6099 = { "Kirkesion" "Kirkesion" }
 6135 = { "Anatho" "Anatho" }
 6136 = { "Misiche" "Misiche" } #It's this or the older Besechana. Not quite Fallujah, but it'll do.
