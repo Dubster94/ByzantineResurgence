@@ -104,7 +104,8 @@
  estate_generals_bring_to_court_revoke_effect_tooltip:0 "Disables the Military General advisor type."
  
  #Agendas
- estate_privileges_and_agendas_events.3.o:0 "The Proposal of the [Root.GetGeneralsName]"
+ estate_privileges_and_agendas_events.3.n:0 "The Proposal of the [Root.GetGeneralsName]"
+ local_theme_displeased:0 "Local Thema Displeased"
  
  estate_generals_develop_theme_capital_x:0 "Increase Recruitment in [agenda_province.GetName]"
  estate_generals_develop_theme_capital_x_desc:0 "The [Root.GetGeneralsName] request that we invest in the recruitable population of the Theme of [agenda_province.GetName]."
@@ -122,7 +123,6 @@
  estate_generals_soldier_households_in_theme_capital_x_desc:0 "The [Root.GetGeneralsName] seek a place to house their soldiers in the Theme of [agenda_province.GetName]. They demand we construct Soldier Households in the province."
  estate_generals_two_privileges:0 "Extend [Root.GetGeneralsName] Privileges"
  estate_generals_two_privileges_desc:0 "The [Root.GetGeneralsName] claim that they are suffering from constant infringements on their rights by the [Root.GetNobilityName] and the Crown. They call for greater privileges to be bestowed upon them."
- local_theme_displeased:0 "Local Thema Displeased"
  has_one_general_not_heir_or_monarch_tooltip:0 "Has hired at least one general."
  
  #RAISE_TOURMA:0 "Raise Tourma"
