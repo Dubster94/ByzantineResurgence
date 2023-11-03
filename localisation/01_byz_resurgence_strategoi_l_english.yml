@@ -13,6 +13,7 @@
  
  generals_loyalty_modifier:0 "[Country.GetGeneralsName] Loyalty Equilibrium"
  generals_influence_modifier:0 "[Country.GetGeneralsName] Influence"
+ estate_privileges_and_agendas_events.7.p:0 "Seize it from the [Root.GetGeneralsName]"
  
  estate_generals_is_theme_capital_tooltip:0 " non-capital provinces are Theme Capitals (Has both a Fort and a Regimental Camp)."
 

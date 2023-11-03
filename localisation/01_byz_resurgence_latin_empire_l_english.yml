@@ -19,10 +19,13 @@
  estate_knightly_orders:0 "Knightly Orders"
  estate_knightly_orders_desc:0 "This estate represent the less autonomous Crusaders that inhabit the Empire after the Imperial reform, and any provinces granted to them will serve as their local headquarters. Rowdy but mostly true to God, they specialize in providing mercenaries to the Empire's cause and do not share the same commitment as the other estates of the Empire, which can lead to some unconventional actions performed by them, giving rise to conflicts with the other powers of the realm."
  
- estate_knightly_orders_ownership:0 "[Country.GetExarchesName] Land Ownership"
+ estate_knightly_orders_ownership:0 "Knightly Orders Land Ownership"
  
- knightly_orders_loyalty_modifier:0 "[Country.GetExarchesName] Loyalty Equilibrium"
- knightly_orders_influence_modifier:0 "[Country.GetExarchesName] Influence"
+ knightly_orders_loyalty_modifier:0 "Knightly Orders Loyalty Equilibrium"
+ knightly_orders_influence_modifier:0 "Knightly Orders Influence"
+ estate_privileges_and_agendas_events.7.r:0 "Seize it from the Knightly Orders"
+ 
+ 
  
  #Influence modifiers:
  EST_VAL_HIGH_DEVELOPMENT_KNIGHTLY_SEAT:0 "Knightly Seat with at least 20 development: §Y$VAL$%§!"
