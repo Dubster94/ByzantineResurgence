@@ -42,6 +42,9 @@ Features:
 					-I would also take the opportunity to credit the user by the name of Roi that created the Byzantine Militarization icon as well as the Pronoiar icons back in the day. The graphics for these two government mechanics are using those that Roi created.
 -The Latin Imperial mission trees have been cut as a result of vanilla adding the Latin Empire, while me simultaneously not having updated them for a while, simultaneously to them not being particularly impressive.
 	-In general, Latin Imperial content has been put on hold for a while.
+	-Plans for the Latin Empire includes:
+		-Custom UI for the Latin Imperial Authority
+		-Custom mechanics, akin to that of Empire of China, for the Latin Empire such that it can centralise itself.
 -The Varangian Guards mercenary companies can now drill by default.
 -The Strategoi estate finally has Estate Agendas. Now featuring 8 different Estate Agendas, all about dealing with your Theme Capitals and improving them, or recruiting generals and giving them privileges.
 -A new monument: The Library of Alexandria. Only restorable by decision, restoring this monument allows you to bring important books from all over the world to it, making it a beacon of knowledge once more. The province now produces Books.
@@ -77,6 +80,7 @@ Tweaks:
 -Altered Absolutism to give +2 yearly Pronoiar power and +1 yearly Protostrategos Prominence at 100 absolutism.
 -Altered the Nobility estate to give -2 yearly Pronoiar power at max influence if not loyal, double that if disloyal, and half of that if loyal.
 -Changed Albion's tag from ABN to ABO because BT added ABN in Horn of Africa
+-Completing Court Ideas now increase Exarches loyalty by +5%.
 
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.

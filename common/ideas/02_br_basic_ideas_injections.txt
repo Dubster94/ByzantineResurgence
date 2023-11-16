@@ -35,3 +35,22 @@ quantity_ideas = {
 		generals_loyalty_modifier = 0.05
 	}
 }
+
+court_ideas = {
+	bonus = {
+		legitimacy = 0.5 
+		republican_tradition = 0.2
+		devotion = 0.5 
+		horde_unity = 0.5
+		meritocracy = 0.25 
+		imperial_mandate = 0.1
+		imperial_authority = 0.05
+		exarches_loyalty_modifier = 0.05
+		monthly_logothete_general_power = 0.05
+		monthly_logothete_postal_power = 0.05
+		monthly_logothete_military_power = 0.05
+		monthly_logothete_praetorium_power = 0.05
+		monthly_logothete_special_affairs_power = 0.05
+		monthly_logothete_waters_power = 0.05
+	}
+}
