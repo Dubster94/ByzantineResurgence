@@ -272,7 +272,7 @@ on_monarch_death = {
 		CSC = {
 			if = {
 				limit = {
-					has_ruler = "Chairman Meow"
+					has_ruler = "Chairman Meow I"
 				}
 				define_heir = {
 					name = "HR"
@@ -289,7 +289,7 @@ on_monarch_death = {
 			}
 			else_if = {
 				limit = {
-					has_ruler = "HR"
+					has_ruler = "HR I"
 				}
 				define_heir = {
 					name = "Dub"
@@ -306,7 +306,7 @@ on_monarch_death = {
 			}
 			else_if = {
 				limit = {
-					has_ruler = "Dub"
+					has_ruler = "Dub I"
 				}
 				define_heir = {
 					name = "neo"
@@ -323,7 +323,7 @@ on_monarch_death = {
 			}
 			else_if = {
 				limit = {
-					has_ruler = "neo"
+					has_ruler = "neo I"
 				}
 				define_heir = {
 					name = "Chrysocyon"
@@ -340,7 +340,7 @@ on_monarch_death = {
 			}
 			else_if = {
 				limit = {
-					has_ruler = "Chrysocyon"
+					has_ruler = "Chrysocyon I"
 				}
 				define_heir = {
 					name = "Nikicaga"
@@ -357,7 +357,7 @@ on_monarch_death = {
 			}
 			else_if = {
 				limit = {
-					has_ruler = "Nikicaga"
+					has_ruler = "Nikicaga I"
 				}
 				define_heir = {
 					name = "Math5615"
@@ -374,7 +374,7 @@ on_monarch_death = {
 			}
 			else_if = { #Cycle resets
 				limit = {
-					has_ruler = "Math5615"
+					has_ruler = "Math5615 I"
 				}
 				define_heir = {
 					name = "Draíocht"

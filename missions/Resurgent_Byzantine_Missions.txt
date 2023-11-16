@@ -2095,6 +2095,7 @@ byz_crusade_1 = {
 			365 = {
 				if = {
 					limit = {
+						has_dlc = "Leviathan"
 						NOT = {
 							has_great_project = {
 								type = st_catherines

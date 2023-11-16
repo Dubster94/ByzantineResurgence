@@ -23,7 +23,8 @@
  
  knightly_orders_loyalty_modifier:0 "Knightly Orders Loyalty Equilibrium"
  knightly_orders_influence_modifier:0 "Knightly Orders Influence"
- estate_privileges_and_agendas_events.7.r:0 "Seize it from the Knightly Orders"
+ estate_privileges_and_agendas_events.6.t:0 "Seize it from the Knightly Orders"
+ estate_privileges_and_agendas_events.7.t:0 "Seize it from the Knightly Orders"
  
  
  

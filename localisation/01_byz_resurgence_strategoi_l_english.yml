@@ -13,7 +13,6 @@
  
  generals_loyalty_modifier:0 "[Country.GetGeneralsName] Loyalty Equilibrium"
  generals_influence_modifier:0 "[Country.GetGeneralsName] Influence"
- estate_privileges_and_agendas_events.7.p:0 "Seize it from the [Root.GetGeneralsName]"
  
  estate_generals_is_theme_capital_tooltip:0 " non-capital provinces are Theme Capitals (Has both a Fort and a Regimental Camp)."
 
@@ -105,7 +104,9 @@
  estate_generals_bring_to_court_revoke_effect_tooltip:0 "Disables the Military General advisor type."
  
  #Agendas
- estate_privileges_and_agendas_events.3.n:0 "The Proposal of the [Root.GetGeneralsName]"
+ estate_privileges_and_agendas_events.3.r:0 "The Proposal of the [Root.GetGeneralsName]"
+ estate_privileges_and_agendas_events.6.r:0 "Sell it to the [Root.GetGeneralsName]"
+ estate_privileges_and_agendas_events.7.r:0 "Seize it from the [Root.GetGeneralsName]"
  local_theme_displeased:0 "Local Thema Displeased"
  
  estate_generals_develop_theme_capital_x:0 "Increase Recruitment in [agenda_province.GetName]"

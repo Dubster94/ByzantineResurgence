@@ -12,7 +12,8 @@
  
  exarches_loyalty_modifier:0 "[Country.GetExarchesName] Loyalty Equilibrium"
  exarches_influence_modifier:0 "[Country.GetExarchesName] Influence"
- estate_privileges_and_agendas_events.7.q:0 "Seize it from the [Root.GetExarchesName]"
+ estate_privileges_and_agendas_events.6.s:0 "Sell it to the [Root.GetExarchesName]"
+ estate_privileges_and_agendas_events.7.s:0 "Seize it from the [Root.GetExarchesName]"
  
  #build_exarch_seat_in_former_exarch_capital:0 "Create Exarch Seats in former Exarch Capitals"
  #build_exarch_seat_in_former_exarch_capital_desc:0 "While the Exarches' privileges have been revoked, there are still some administative fizzles that need to be taken care of before we can properly assign the Exarches their capital. Until that has been done, you may find that the Exarches are particularly uppity." 
