@@ -20,7 +20,7 @@ Features:
 		-Byzantium now starts with 6 negative estate privileges for the Dynatoi called <Family name> Latifundia. These indicate the incredibly influential and wealthy dynasties of the Byzantine Empire that crippled the central government during the Palaiologan period. Each of these prevent seizing land from the Dynatoi, and revoking them is the only way to curb their massive land share in the Empire. Revoking them, however, results in massive revolts throughout the Empire, the size depending on how large the Latifundia is, signified by how much influence it gives.
 		-Byzantium also has several bad modifiers at the game start.
 			-"Council of Florence", which negatively impacts the state, giving -3 tolerance of true faith, but gives +25 relations with heretics.
-				-This modifier is revoked through the Byzantine mission "A Question of Schismatics" if you take the Orthodox path
+				-This modifier is revoked through the Byzantine mission "A Question of Schismatics" if you complete the mission without triggering the the disaster "Union of Two Churches".
 			-"Foreign Merchants", which negative impacts Byzantine economy, giving -10% trade efficiency and -20% global trade power.
 				-This modifier is revoked through the new Byzantine mission "State Trade Hegemon"
 			-"Foreign Fleet", which negatively impacts the Byzantine navy, giving them -5% disengagement chance as well -10% ship durability.
@@ -65,7 +65,7 @@ Features:
 	T1: +0.5 yearly patriarch authority or +50% papal influence from cardinals
 	T2: -10% provincial development cost, +0.5 yearly patriarch authority or +50% papal influence from cardinals, +10 relations with heretics
 	T3: -30% provincial development cost, +0.5 yearly patriarch authority or +50% papal influence from cardinals, +25 relations with heretics and +1 missionaries
--Another new monument, the Tsarevets Church of Ascension, is placed in Tarnovo at game start. Starting at tier 0 due to its utter sacking by the Ottomans, it gives the following modifiers:
+-Another new monument, the Tsarevets Church of Ascension, is placed in Tarnovo at game start (Thanks to Pleibos of Aetas Inventionum for the picture reference). Starting at tier 0 due to its utter sacking by the Ottomans, it gives the following modifiers:
 	T1: +1 fort level in province, -0.1 monthly areal devastation
 	T2: +1 fort level in province, -0.1 monthly areal devastation, +5% clergy & nobility loyalty modifier
 	T3: +1 fort level in province, +1 local dice bonus to defender, +0.1 monthly prosperity growth, -0.1 monthly areal devastation, +5% clergy & nobility loyalty modifier and +2% missionary strength
