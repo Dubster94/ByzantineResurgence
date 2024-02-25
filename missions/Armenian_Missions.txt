@@ -21,8 +21,13 @@ armenian_missions_religious_slot_2 = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
+	}
+	
 	potential = {
 		primary_culture = armenian
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	has_country_shield = yes
 	
@@ -82,11 +87,13 @@ armenian_missions_religious_slot_2_dlc = { #Because monuments are Leviathan-excl
 	
 	potential_on_load = {
 		has_dlc = "Leviathan"
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	
 	potential = {
 		primary_culture = armenian
 		has_dlc = "Leviathan"
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	has_country_shield = yes
 	
@@ -132,8 +139,13 @@ armenian_missions_conquest_slot_3 = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
+	}
+	
 	potential = {
 		primary_culture = armenian
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	has_country_shield = yes
 	
@@ -255,8 +267,13 @@ armenian_missions_internal_slot_4 = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
+	}
+	
 	potential = {
 		primary_culture = armenian
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	has_country_shield = yes
 	
@@ -380,8 +397,13 @@ armenian_missions_bagratids_slot_5 = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
+	}
+	
 	potential = {
 		primary_culture = armenian
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	has_country_shield = yes
 	
@@ -426,8 +448,13 @@ arm_missions_conquest_slot_2 = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
+	}
+	
 	potential = {
 		tag = ARM
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	has_country_shield = yes
 	
@@ -558,8 +585,13 @@ arm_missions_internal_slot_3 = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
+	}
+	
 	potential = {
 		tag = ARM
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	has_country_shield = yes
 	
@@ -748,8 +780,13 @@ arm_missions_conquest_slot_4 = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
+	}
+	
 	potential = {
 		tag = ARM
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	has_country_shield = yes
 	
@@ -951,8 +988,13 @@ arm_missions_bagratids_slot_5 = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = { 
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
+	}
+	
 	potential = {
 		tag = ARM
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 	has_country_shield = yes
 	

@@ -11,6 +11,7 @@ apostolic_missions = {
 	potential = {
 		religion = apostolic
 		has_dlc = "Rights of Man"
+		NOT = { has_dlc = "King of Kings" } #Disabling because Armenian missions in KoK
 	}
 
 	apostolic_conquest_of_yerevan = {
