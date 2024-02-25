@@ -7,7 +7,7 @@ Patch notes:
 Byz Resurgence 8.0.0
 
 Features:
--This patch features a fairly comprehensive rework of Byzantium, implementing and applying previously infeasible due to modding limitations or gameplay meta, and ideas pondered over the years.
+-This patch features a fairly comprehensive rework of Byzantium, implementing and applying previously infeasible due to modding limitations or gameplay meta, and ideas pondered over the years. This should ensure a fresh new experience for Byzantium.
 	-The Byzantine mission tree has been overhauled for a 4th time, marking the entry of the 4th iteration of the Byzantine mission tree, with a grand total of 123 missions.
 		-The mission tree has been reworked to include a LOT more flavour-related missions. Previously, there were a mere 14 flavour missions in the Byzantine tree. Now it includes a total of 69 flavour missions.
 			-Flavour missions now span the entirety of the Roman Empire, though a lot of them are concentrated around the central parts of the Empire, that being the Balkans and Anatolia.
@@ -16,8 +16,8 @@ Features:
 		-The addition of so many flavour missions necessitated a complete redrawal of the tree. Now where the Rhenus border mission was at row 22, the mission tree has only reached its midpoint, now ending at row 38.
 		-Unfortunately, due to the change and work put into the new iteration, the Persian branch of the mission tree, which consisted of about 10 conquest missions and nothing else, was cut for the time being.
 			-This particular branch is likely to resurface as part of a future Greece mission tree update. Byzantium as a tag has become a Roman Restoration as far as this is concerned.
-			-Plans for Greece includes:
-				-Two branches, one focusing on creating a tall Greece focusing on Greek philosophy and ideas, and the other a wide Greece that emulates ancient Alexander's Persianate Greece.
+			-Future long-term plans for Greece includes:
+				-Two separate branches, one focusing on creating a tall Greece focusing on Greek philosophy and ideas, and the other a wide Greece that emulates ancient Alexander's Persianate Greece.
 				-A path for Byzantium forming Greece, dropping the Roman identity and embracing old Greek ideals.
 					-If possible, this path would be co-authored with Pagan Wrath's dev.
 	-Byzantium's startup is heavily overhauled.
@@ -37,6 +37,7 @@ Features:
 				-The starting government reform has major maluses in the beginning of the game to symbolize the large decentralization of the Empire and the lack of power in the Byzantine Crown.
 					-This government reform has -10% reform progress as well as +0.05 autonomy change.
 					-The mechanic of "civil war on every new ruler" is now re-enabled. As such, Byzantium has to deal with a stack of Pretender Rebels each time a new monarch comes onto the throne.
+						-The first "civil war on every new ruler" is custom-flavoured, repurposing the Demetrios Palaiologos event.
 				-Upon completing the mission "Byzantine Resurgence" you are awarded with a better T1 government reform, and you can start accumulating unique government mechanics.
 					-This reformed Byzantine monarchy has the following unlockable government mechanics:
 						-Pronoiar: 
@@ -55,7 +56,7 @@ Features:
 					-I would also take the opportunity to credit the user by the name of Roi that created the Byzantine Militarization icon as well as the Pronoiar icons back in the day. The graphics for these two government mechanics are using those that Roi created.
 -The Latin Imperial mission trees have been cut as a result of vanilla adding the Latin Empire, while me simultaneously not having updated them for a while, simultaneously to them not being particularly impressive.
 	-In general, Latin Imperial content has been put on hold for a while.
-	-Plans for the Latin Empire includes:
+	-Future long-term plans for the Latin Empire includes:
 		-Custom UI for the Latin Imperial Authority
 		-Custom mechanics, akin to that of Empire of China, for the Latin Empire such that it can centralise itself.
 		-A tweaking of the Knightly Orders to become akin to that of Byzantium's new Pronoiar mechanic, being establishable using existing tags.
@@ -97,7 +98,7 @@ Tweaks:
 -Completing Court Ideas now increase Exarches loyalty by +5%.
 -Overhauling the grand KoK:
 	-Pronoiars are now renamed as Couropalates, and are now only available after reforming the Theme System. Mechanically they work similarly to what vanilla implemented.
-	-A lot of mechanics present in King of Kings for Byzantium have been cut entirely, replaced by other mechanics, including Byzantine missions, the startup events, starting modifiers and privileges.
+	-A lot of mechanics present in King of Kings for Byzantium have been cut entirely, replaced by other mechanics in BR, including Byzantine missions, the startup events, starting modifiers and privileges.
 	-Cut holy order tweaks implemented by BR.
 	-The Armenian mission tree in BR has been disabled for KoK users.
 
