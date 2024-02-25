@@ -7,7 +7,7 @@ Patch notes:
 Byz Resurgence 8.0.0
 
 Features:
--This patch features a fairly comprehensive rework of Byzantium.
+-This patch features a fairly comprehensive rework of Byzantium, implementing and applying previously infeasible due to modding limitations or gameplay meta, and ideas pondered over the years.
 	-The Byzantine mission tree has been overhauled for a 4th time, marking the entry of the 4th iteration of the Byzantine mission tree, with a grand total of 123 missions.
 		-The mission tree has been reworked to include a LOT more flavour-related missions. Previously, there were a mere 14 flavour missions in the Byzantine tree. Now it includes a total of 69 flavour missions.
 			-Flavour missions now span the entirety of the Roman Empire, though a lot of them are concentrated around the central parts of the Empire, that being the Balkans and Anatolia.
@@ -15,7 +15,11 @@ Features:
 				-In addition, pure conquest missions' rewards have been retooled, moving away from 10 year modifiers most of the time to give a more instantaneous bonus.
 		-The addition of so many flavour missions necessitated a complete redrawal of the tree. Now where the Rhenus border mission was at row 22, the mission tree has only reached its midpoint, now ending at row 38.
 		-Unfortunately, due to the change and work put into the new iteration, the Persian branch of the mission tree, which consisted of about 10 conquest missions and nothing else, was cut for the time being.
-			-This particular branch is likely to resurface as part of a future Greece mission tree update, to emulate Alexander's Empire of Macedon.
+			-This particular branch is likely to resurface as part of a future Greece mission tree update. Byzantium as a tag has become a Roman Restoration as far as this is concerned.
+			-Plans for Greece includes:
+				-Two branches, one focusing on creating a tall Greece focusing on Greek philosophy and ideas, and the other a wide Greece that emulates ancient Alexander's Persianate Greece.
+				-A path for Byzantium forming Greece, dropping the Roman identity and embracing old Greek ideals.
+					-If possible, this path would be co-authored with Pagan Wrath's dev.
 	-Byzantium's startup is heavily overhauled.
 		-Byzantium now starts with 6 negative estate privileges for the Dynatoi called <Family name> Latifundia. These indicate the incredibly influential and wealthy dynasties of the Byzantine Empire that crippled the central government during the Palaiologan period. Each of these prevent seizing land from the Dynatoi, and revoking them is the only way to curb their massive land share in the Empire. Revoking them, however, results in massive revolts throughout the Empire, the size depending on how large the Latifundia is, signified by how much influence it gives.
 		-Byzantium also has several bad modifiers at the game start.
@@ -35,9 +39,18 @@ Features:
 					-The mechanic of "civil war on every new ruler" is now re-enabled. As such, Byzantium has to deal with a stack of Pretender Rebels each time a new monarch comes onto the throne.
 				-Upon completing the mission "Byzantine Resurgence" you are awarded with a better T1 government reform, and you can start accumulating unique government mechanics.
 					-This reformed Byzantine monarchy has the following unlockable government mechanics:
-						-Pronoiar: Upon completing "Revoke the Latifundia!", Byzantium gets three incredibly immersive buttons to press, similar to the old Iqta system in previous patches. These however give bonuses not based on subjects, but on own state development. The ability to press them is also dependent on the amount of pronoia power that has been accumulated, which grows based on monarch administrative skill. As a sidenote, completing this mission also renames the nobles from Dynatoi to Penetes.
-						-Protostrategos Prominence: Upon completing "Basileus Protostrategos", the Byzantines get access to Protostrategos Prominence. This mechanic resets upon monarch death, and forces your ruler as a general. Protostrategos Prominence grows as part of winning battles, and decreases as part of losing battles, with your monarch. Increasing it nets bonuses to army drilling, as well as Strategoi loyalty.
-						-Byzantine Bureaucracy: Upon completing "Byzantine Bureacucracy", Byzantium gets access to six government powers representing different Logothetes, or 'accountants', that deal with different things in your Empire. Their power growth is dependent on a variety of factors similar to the old Byzantine Factions such as stability, army tradition, mercantilism, and so on. Up until 50 power, these Logothete simply grant a bonus to your nation. Once they go above 50 however, they start reducing all other Logothetes' power, and also grant a yearly corruption modifier. You can reduce their power by 5 by paying 5 monarch points in their respective category to balance them.
+						-Pronoiar: 
+							-Upon completing "Revoke the Latifundia!", Byzantium gets three incredibly immersive buttons to press, similar to the old Iqta system in previous patches. These however give bonuses not based on subjects, but on own state development. 
+							-The ability to press them is also dependent on the amount of pronoia power that has been accumulated, which grows based on monarch administrative skill. 
+							-As a sidenote, completing this mission also renames the nobles from Dynatoi to Penetes.
+						-Protostrategos Prominence: 
+							-Upon completing "Basileus Protostrategos", the Byzantines get access to Protostrategos Prominence. This mechanic resets upon monarch death, and forces your ruler as a general. 
+							-Protostrategos Prominence grows as part of winning battles, and decreases as part of losing battles, with your monarch. Increasing it nets bonuses to army drilling, as well as Strategoi loyalty.
+						-Byzantine Bureaucracy: 
+							-Upon completing "Byzantine Bureacucracy", Byzantium gets access to six government powers representing different Logothetes, or 'accountants', that deal with different things in your Empire. 
+							-Their power growth is dependent on a variety of factors similar to the old Byzantine Factions such as stability, army tradition, mercantilism, and so on. 
+							-Up until 50 power, these Logothete simply grant a bonus to your nation. Once they go above 50 however, they start reducing all other Logothetes' power, and also grant a yearly corruption modifier. 
+							-You can reduce their power by 5 by paying 5 monarch points in their respective category to balance them.
 					-As a sidenote, with regards to these government mechanics, I could not get the interface to align more than 3 icons per line, causing the interface to take up much more space than required. This appears to be a hardcoded limit that other modders have stumbled upon, so there is little I can do to fix the necessary scrolling to see all buttons. A bandaid would be to adjust the entire interface, but that is not something I am willing to do at the moment.
 					-I would also take the opportunity to credit the user by the name of Roi that created the Byzantine Militarization icon as well as the Pronoiar icons back in the day. The graphics for these two government mechanics are using those that Roi created.
 -The Latin Imperial mission trees have been cut as a result of vanilla adding the Latin Empire, while me simultaneously not having updated them for a while, simultaneously to them not being particularly impressive.
@@ -45,14 +58,15 @@ Features:
 	-Plans for the Latin Empire includes:
 		-Custom UI for the Latin Imperial Authority
 		-Custom mechanics, akin to that of Empire of China, for the Latin Empire such that it can centralise itself.
+		-A tweaking of the Knightly Orders to become akin to that of Byzantium's new Pronoiar mechanic, being establishable using existing tags.
 -The Varangian Guards mercenary companies can now drill by default.
 -The Strategoi estate finally has Estate Agendas. Now featuring 8 different Estate Agendas, all about dealing with your Theme Capitals and improving them, or recruiting generals and giving them privileges.
--A new monument: The Library of Alexandria. Only restorable by decision, restoring this monument allows you to bring important books from all over the world to it, making it a beacon of knowledge once more. The province now produces Books.
+-A new monument: The Library of Alexandria. Only restorable by decision, restoring this monument allows you to bring important books from all over the world to it, making it a beacon of knowledge once more. The restoration changes the province trade goods to Books.
 	-The monument has the following bonuses:
 		T1: +50% Provincial Institution Spread (Starting Tier)
 		T2: +50% Provincial Institution Spread, +1 Goods Produced, +50% Areal Institution Spread, +50% Innovativeness Gain
 		T3: +100% Areal Institution Spread, +3 Goods Produced,  +100% Innovativeness Gain, -10% Idea Cost
-	-This monument has an event chain associated with it, rediscovering the book known as De Architectura. From this book you can choose between one of four important things, or do all four if your ruler is a scholar:
+	-This monument has a branching event chain associated with it, rediscovering the book known as De Architectura. From this book you can choose between one of four important things, or do all four if your ruler is a scholar:
 		-A modifier that grants great project upgrade cost reductions
 		-A modifier that grants global production efficiency
 		-Learn about the Aeoliopile. A peculiar machine that, initially, does not seem to give any benefits, but may in time.
@@ -81,6 +95,11 @@ Tweaks:
 -Altered the Nobility estate to give -2 yearly Pronoiar power at max influence if not loyal, double that if disloyal, and half of that if loyal.
 -Changed Albion's tag from ABN to ABO because BT added ABN in Horn of Africa
 -Completing Court Ideas now increase Exarches loyalty by +5%.
+-Overhauling the grand KoK:
+	-Pronoiars are now renamed as Couropalates, and are now only available after reforming the Theme System. Mechanically they work similarly to what vanilla implemented.
+	-A lot of mechanics present in King of Kings for Byzantium have been cut entirely, replaced by other mechanics, including Byzantine missions, the startup events, starting modifiers and privileges.
+	-Cut holy order tweaks implemented by BR.
+	-The Armenian mission tree in BR has been disabled for KoK users.
 
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
