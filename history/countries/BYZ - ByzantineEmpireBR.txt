@@ -61,6 +61,11 @@ add_country_modifier = {
 	duration = -1
 }
 
+#The grand KoK purge
+remove_estate_privilege = estate_nobles_deteriorating_army
+remove_estate_privilege = estate_church_union_of_the_churches
+remove_estate_privilege = estate_burghers_reliance_on_republics
+remove_estate_privilege = estate_burghers_exkousseiai_for_latins
 		
 1391.2.16 = {
 	monarch = {

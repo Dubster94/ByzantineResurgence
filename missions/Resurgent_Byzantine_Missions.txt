@@ -144,13 +144,13 @@ byz_economic_2 = {
 			1320 = { #Constantinople
 				trade_share = {
 					country = ROOT
-					share = 0.75
+					share = 75
 				}
 			}
 			5493 = { #Aegean Sea
 				trade_share = {
 					country = ROOT
-					share = 0.75
+					share = 75
 				}
 			}
 			custom_trigger_tooltip = {

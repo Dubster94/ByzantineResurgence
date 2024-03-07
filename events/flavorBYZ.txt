@@ -3634,7 +3634,7 @@ country_event = {
 	}
 }
 
-country_event = { #Sorry PDX, but what is this? AFAIK, you do not have something like this for Eyalets. This never fires anyway, so I guess this is some weird remnant.
+country_event = { #Sorry PDX, but what is this? AFAIK, you do not have something like this for Eyalets. This never fires anyway, so I guess this is some weird remnant, likely from the integration of this into vanilla.
 	id = MEE_Byzantine_Events.56
 	title = MEE_Byzantine_Events.56.t # What is a Pronoia Subject
 	desc = MEE_Byzantine_Events.56.d

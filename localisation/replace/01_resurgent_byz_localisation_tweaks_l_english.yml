@@ -1,0 +1,5 @@
+﻿l_english:
+ #BR Estate loc fixes
+ estate_klirikoi:0 "Klerikoi"
+ estate_eugeneis:0 "Dynatoi" #Byzantines call their landed nobility Dynatoi. Eugeneis literally just means 'Nobles'
+ estate_emporoi:0 "Syntechnoi" #Using the term for (merchant) guilds

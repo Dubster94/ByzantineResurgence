@@ -23,9 +23,8 @@ country_decisions = {
 			NOT = { tag = LAE }
 			NOT = { tag = TUR }
 			OR = {
-				#primary_culture = greek # BT removed
-				#primary_culture = pontic_greek # BT removed
-				culture_group = byzantine # BT
+				culture_group = byzantine
+				not = { primary_culture = goths }
 				AND = {
 					has_idea = MFA_byzantine_claimants
 					dynasty = "Palaiologos"
@@ -160,6 +159,13 @@ country_decisions = {
 			set_government_rank = 3
 			swap_ideas = yes
 			set_country_flag = formed_byzantium_flag
+			
+			if = {
+				limit = {
+					has_country_flag = BYZ_accepted_ottoman_threat
+				}
+				clr_country_flag = BYZ_accepted_ottoman_threat 
+			}
 			
 			#####################
 			#Mission shenanigans#

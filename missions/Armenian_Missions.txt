@@ -15,7 +15,7 @@
 #	+1 merchant
 #Estate privilege giving -50% dev cost in mountains & highlands terrain, granting +10% nobility loyalty & influence.
 
-
+#Tree disabled if KoK is enabled.
 
 armenian_missions_religious_slot_2 = {
 	slot = 2

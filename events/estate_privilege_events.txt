@@ -8,6 +8,7 @@ namespace = estate_privilege_events
 #...
 #1200s = estate_generals
 #1300s = estate_exarches
+#1400s = estate_peasants
 
 country_event = { #200 Nakharar Overseers privilege modifiers application for newly conquered provinces because on_actions is bad.
 	id = estate_privilege_events.200

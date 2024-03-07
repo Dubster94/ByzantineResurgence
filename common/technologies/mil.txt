@@ -293,7 +293,7 @@ technology = {
 	enable = north_american_rifle_cavalry
 	enable = central_american_rifle_cavalry
 	enable = south_american_rifle_cavalry	
-	enable = qizilbash_cavalry	
+	enable = qizilbash_cavalry_unit	
 	enable = east_mongolian_steppe	
 	enable = indian_elephant	
 	enable = steppe_riders
@@ -584,7 +584,6 @@ technology = {
 	
 	#infantry_fire		= 	0.5			#BTAddOn removed - Part of tech shock and fire overhaul
 	artillery_fire 		= 	0.70			#BTAddOn new - Part of tech shock and fire overhaul
-	
 	enable = swivel_cannon		
 	enable = howitzer
 

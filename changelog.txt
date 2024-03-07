@@ -20,6 +20,7 @@ Features:
 				-Two separate branches, one focusing on creating a tall Greece focusing on Greek philosophy and ideas, and the other a wide Greece that emulates ancient Alexander's Persianate Greece.
 				-A path for Byzantium forming Greece, dropping the Roman identity and embracing old Greek ideals.
 					-If possible, this path would be co-authored with Pagan Wrath's dev.
+					-The path would involve the advisor Gemisthos Plethon, as well as losing Constantinople tag-swapping Byzantium into Morea, as this is the only feasible path I can see towards a Byzantium forming Greece.
 	-Byzantium's startup is heavily overhauled.
 		-Byzantium now starts with 6 negative estate privileges for the Dynatoi called <Family name> Latifundia. These indicate the incredibly influential and wealthy dynasties of the Byzantine Empire that crippled the central government during the Palaiologan period. Each of these prevent seizing land from the Dynatoi, and revoking them is the only way to curb their massive land share in the Empire. Revoking them, however, results in massive revolts throughout the Empire, the size depending on how large the Latifundia is, signified by how much influence it gives.
 		-Byzantium also has several bad modifiers at the game start.
@@ -97,7 +98,11 @@ Tweaks:
 -Changed Albion's tag from ABN to ABO because BT added ABN in Horn of Africa
 -Completing Court Ideas now increase Exarches loyalty by +5%.
 -Overhauling the grand KoK:
-	-Pronoiars are now renamed as Couropalates, and are now only available after reforming the Theme System. Mechanically they work similarly to what vanilla implemented.
+	-Pronoiars:
+		-Hereditary Pronoiar are now renamed as Couropalates
+		-Non-hereditary Pronoiars are called Katepanates. 
+		-Pronoiar are now only available after reforming the Byzantine monarchy through the mission tree.
+		-Mechanically they work similarly to what vanilla implemented, barring mission and event interactions.
 	-A lot of mechanics present in King of Kings for Byzantium have been cut entirely, replaced by other mechanics in BR, including Byzantine missions, the startup events, starting modifiers and privileges.
 	-Cut holy order tweaks implemented by BR.
 	-The Armenian mission tree in BR has been disabled for KoK users.

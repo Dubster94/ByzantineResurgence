@@ -27,10 +27,7 @@
  #########
  
  #Greek Estates
- estate_dynatoi:0 "Dynatoi"
  estate_penetes:0 "Penetes"
- estate_syntekhnioi:0 "Syntechnioi"
- estate_klerikoi:0 "Klerikoi"
  #Strategoi have been moved to a separate localisation file due to their extreme scope.
  #Same with Exarches.
  #Knightly Orders are in LatinEmpire.

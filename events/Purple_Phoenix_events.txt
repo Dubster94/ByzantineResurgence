@@ -31,9 +31,9 @@ country_event = {
 		trigger = {
 			NOT = { legitimacy = 50 }
 		}
-		# random_owned_province = {
-			# pretender_rebels = 2
-		# }
+		random_owned_province = {
+			pretender_rebels = 2
+		}
 	}
 	option = { #I noticed that if this event triggers because Byzantium has a regency, but still has high enough legitimacy, this event breaks.
 		name = "purple_phoenix.1.a"
