@@ -38,17 +38,6 @@ reformed_byzantine_monarchy_reform = {
 		global_autonomy = -0.05
 		#culture_conversion_cost = -0.2 #BR Cut because Byzantium gets this in their idea set. It gets other modifiers in the below stuff anyway.
 		years_of_nationalism = -5
-		#max_possible_parliament_seats = 8 #BR Cut senate
-	}
-	
-	conditional = {
-		allow = { 
-			OR = {
-				has_dlc = "Common Sense"
-				has_dlc = "Domination"
-			}
-		}
-		has_parliament = yes
 	}
 	
 	government_abilities = {
@@ -57,6 +46,12 @@ reformed_byzantine_monarchy_reform = {
 		byzantine_militarization_mechanic
 	}
 	
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
+	}
 	
 	custom_attributes = {
 		forces_ruler_general = yes

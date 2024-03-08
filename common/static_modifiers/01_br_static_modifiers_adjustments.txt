@@ -189,3 +189,17 @@ tolerance = {
 	local_unrest = -0.5 #BR lowered from -1. Getting at least 5 unrest from religion on its own means that negative stability barely has any impact on your nation. It also meant that you can comfortably go well beyond 300% overextension if you have decent tolerance and high stability without getting rebels in core lands. That, to me, made no sense.
 }
 
+pronoia_base_overlord_modifiers = {
+	land_forcelimit = -1
+	pronoia_amount_check_influence = 1 #used for exporting, invisible by default
+}
+
+pronoia_base_modifiers = {
+	development_cost = 0.5
+	core_creation = 1
+	overextension_impact_modifier = 1
+	administrative_efficiency = -0.2
+	global_manpower = 5
+	global_manpower_modifier = 0.5 
+	global_regiment_cost = -0.5
+}

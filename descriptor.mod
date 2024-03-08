@@ -1,7 +1,7 @@
 version="8.0.0"
 dependencies={
 	"Beyond Typus"
-	"Beyond TypusInternal"
+	"BeyondTypusInternal"
 }
 tags={
 	"Alternative History"

@@ -1,0 +1,118 @@
+
+
+hereditary_pronoia_subject_type = {
+	copy_from = vassal
+	count = vassal
+	
+	# Graphics:
+	sprite = GFX_icon_hereditary_pronoia_subject_type
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_hereditary_pronoia_subject_type
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_hereditary_pronoia_subject_type
+
+	# Properties:
+	created_by_overlord = yes
+	extend_trading_range = yes
+
+	takes_diplo_slot = no
+	can_be_integrated = no #can be inherited
+	
+	place_relative_on_throne = no #exploitable
+	
+	base_liberty_desire = 25.0
+	
+	pays_overlord = 0.1 #purely military subject. Pays very little by default.
+	forcelimit_to_overlord = 0.1
+	naval_forcelimit_to_overlord = 0.1		
+	manpower_to_overlord = 0.2		    
+	sailors_to_overlord = 0.2		
+	military_focus = 1.0
+	
+	subsidize_armies = yes
+	scutage = no
+	send_officers = yes
+	send_additional_troops = yes
+	
+	modifier_subject = clear #Clearing to reset the UI, then re-applying all the modifiers because damn is this UI broken.
+	modifier_overlord = clear #Ditto
+	modifier_subject = {
+		modifier = pronoia_base_modifiers
+	}
+	# modifier_subject = {
+		# modifier = BYZ_extra_forcelimit_for_pronoiars
+		# trigger = {
+			# custom_trigger_tooltip = {
+				# tooltip = BYZ_extra_forcelimit_for_pronoiars_tt
+				# overlord = { has_country_flag = BYZ_extra_forcelimit_for_pronoiars_flag }
+			# }
+		# }
+	# }
+	# modifier_subject = {
+		# modifier = BYZ_army_trad
+		# trigger = {
+			# custom_trigger_tooltip = {
+				# tooltip = BYZ_army_trad_tt
+				# overlord = { has_country_flag = BYZ_pronoia_subjects_get_3_yearly_army_tradition_flag }
+			# }
+		# }
+	# }
+	# modifier_subject = {
+		# modifier = BYZ_discipline
+		# trigger = {
+			# custom_trigger_tooltip = {
+				# tooltip = BYZ_discipline_tt
+				# overlord = { has_country_flag = BYZ_pronoia_will_get_5_discipline_flag }
+			# }
+		# }
+	# }
+	modifier_overlord = {
+		modifier = pronoia_base_overlord_modifiers
+	}
+	# modifier_overlord = {
+		# modifier = BYZ_pronoia_buff_army_tradition_modifier
+		# trigger = {
+			# army_size = 20
+			# overlord = {
+				# mission_completed = BYZ_strategoi_realms
+			# }
+		# }
+	# }
+	# modifier_overlord = {
+		# modifier = BYZ_pronoia_land_forcelimit_penalty
+		# trigger = {
+			# custom_trigger_tooltip = {
+				# tooltip = BYZ_pronoia_land_forcelimit_penalty_tt
+				# NOT = { overlord = { has_country_flag = BYZ_no_pronoia_forcelimit_penalty } }
+			# }
+		# }
+	# }
+	modifier_subject = {
+		modifier = subject_tax_modifier
+		trigger = {
+			overlord = {
+				has_government_attribute = subject_tax_modifier_25
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = same_religion_subject_bonus_mod
+		trigger = {
+			overlord = {
+				has_government_attribute = same_religion_subject_bonus
+				religion = PREV
+			}
+		}
+	}
+}
+
+pronoia_subject_type = { #can be inherited
+
+	# Graphics:
+	sprite = GFX_icon_pronoia_subject_type
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_pronoia_subject_type
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_pronoia_subject_type
+
+	copy_from = hereditary_pronoia_subject_type
+	count = hereditary_pronoia_subject_type
+	disable_inheritance = yes # Use this for Personal Union types of subjects to disallow the inheriting mechanic
+	base_liberty_desire = 50.0
+}

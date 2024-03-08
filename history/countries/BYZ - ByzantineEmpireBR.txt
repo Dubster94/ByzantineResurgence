@@ -66,6 +66,7 @@ remove_estate_privilege = estate_nobles_deteriorating_army
 remove_estate_privilege = estate_church_union_of_the_churches
 remove_estate_privilege = estate_burghers_reliance_on_republics
 remove_estate_privilege = estate_burghers_exkousseiai_for_latins
+remove_country_modifier = BYZ_alienation_of_western_merchants #Because the way I remove it necessitates the removal of the country modifier as well.
 		
 1391.2.16 = {
 	monarch = {
