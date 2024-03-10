@@ -2822,31 +2822,32 @@ country_event = { #BR Disabled as a result of privilege disabled
 	}
 }
 
-# country_event = { #BR Cut
-	# id = MEE_Byzantine_Events.42
-	# title = MEE_Byzantine_Events.42.t #demetrios claims the throne
-	# desc = MEE_Byzantine_Events.42.d
-	# picture = BAD_WITH_MONARCH_eventPicture
+country_event = { #BR Cut
+	id = MEE_Byzantine_Events.42
+	title = MEE_Byzantine_Events.42.t #demetrios claims the throne
+	desc = MEE_Byzantine_Events.42.d
+	picture = BAD_WITH_MONARCH_eventPicture
 	
-	# is_triggered_only = yes #on action
-	# trigger = {
-		# NOT = { is_year = 1460 }
-		# has_ruler = "Konstantinos"
-	# }
+	is_triggered_only = yes #on action
+	trigger = {
+		NOT = { is_year = 1460 }
+		has_ruler = "Konstantinos"
+		always = no #BR Disabled
+	}
 	
-	# option = {
-		# name = MEE_Byzantine_Events.42.a
+	option = {
+		name = MEE_Byzantine_Events.42.a
 		
-		# ai_chance = {
-			# factor = 25
-		# }
+		ai_chance = {
+			factor = 25
+		}
 
-		# add_ruler_modifier = {
-			# name = BYZ_demetrios_claims_the_throne
-			# duration = -1
-		# }
-	# }
-# }
+		add_ruler_modifier = {
+			name = BYZ_demetrios_claims_the_throne
+			duration = -1
+		}
+	}
+}
 
 country_event = {
 	id = MEE_Byzantine_Events.43
