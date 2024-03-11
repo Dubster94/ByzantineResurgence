@@ -133,7 +133,7 @@ exarchate_reform = {
 # }
 
 theme_system_reform = {
-	icon = "soldiers_3"
+	icon = "theme_system_reform"
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
 	potential = {
@@ -241,6 +241,111 @@ theme_system_reform = {
 		# factor = 100
 	# }
 # }
+
+#BR 8.0 Religious reforms:
+#First reform: Ecumenical Patriarch of Constantinople
+#Reform modifiers:
+#+2% missionary strength
+#+1 missionaries
+#Religious Culture estate privilege no longer costs absolutism
+
+ecumenical_patriarch_of_constantinople_reform = {
+	icon = "ecumenical_patriarch"
+	allow_normal_conversion = yes
+	potential = {
+		tag = BYZ
+		owns = 151 #Constantinople
+	}
+	
+	trigger = {
+		religion = orthodox
+		OR = {
+			has_reform = ecumenical_patriarch_of_constantinople_reform
+			mission_completed = byz_question_of_schismatics
+		}
+	}
+	
+	modifiers = {
+		global_heathen_missionary_strength = 0.02
+		missionaries = 1
+	}
+	
+	custom_attributes = {
+		free_religious_culture = yes
+	}
+}
+
+pentarchy_reform = {
+	icon = "pentarchy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = BYZ
+		owns = 151 #Constantinople
+	}
+	
+	trigger = {
+		religion = orthodox
+		OR = {
+			has_reform = ecumenical_patriarch_of_constantinople_reform
+			has_reform = pentarchy_reform
+			mission_completed = byz_question_of_schismatics
+		}
+	}
+	
+	modifiers = {
+		global_missionary_strength = 0.02
+		missionaries = 1
+	}
+	
+	custom_attributes = {
+		free_religious_culture = yes
+		free_expansionist_zealotry = yes
+	}
+}
+
+united_orthodoxy_reform = {
+	icon = "united_orthodoxy"
+	allow_normal_conversion = yes
+	potential = {
+		tag = BYZ
+		owns = 151 #Constantinople
+	}
+	
+	trigger = {
+		religion = orthodox
+		OR = {
+			has_reform = pentarchy_reform
+			has_reform = united_orthodoxy_reform
+			mission_completed = byz_question_of_schismatics
+		}
+	}
+	
+	modifiers = {
+		global_missionary_strength = 0.03
+		missionaries = 1
+	}
+	
+	custom_attributes = {
+		free_religious_culture = yes
+		free_expansionist_zealotry = yes
+		no_church_loyalty_loss_from_absolutism = yes
+	}
+}
+
+#Second reform: The Pentarchy - available after completing the Pentarchy mission
+#Reform modifiers:
+#+3% missionary strength
+#+1 missionaries
+#Religious culture estate privilege no longer costs absolutism
+#Enforced Unity of Faith estate privilege no longer costs absolutism
+
+#Third reform: Unified Orthodoxy - available after completing Unified Orthodoxy
+#Reform modifiers:
+#+3% missionary strength
+#+1 missionaries
+#Religious Culture estate privilege no longer costs absolutism
+#Enforced Unity of Faith estate privilege no longer costs absolutism
+#Clergy estate loyalty is no longer affected by absolutism
 
 exarch_system_reform = {
 	icon = "maurice"

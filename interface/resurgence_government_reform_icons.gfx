@@ -23,4 +23,16 @@ spriteTypes = {
 		name = "government_reform_heraclius"
 		texturefile = "gfx//interface//government_reform_icons//heraclius.dds"
 	}
+	spriteType = {
+		name = "government_reform_ecumenical_patriarch"
+		texturefile = "gfx//interface//government_reform_icons//ecumenical_patriarch.dds"
+	}
+	spriteType = {
+		name = "government_reform_pentarchy"
+		texturefile = "gfx//interface//government_reform_icons//pentarchy.dds"
+	}
+	spriteType = {
+		name = "government_reform_united_orthodoxy"
+		texturefile = "gfx//interface//government_reform_icons//united_orthodoxy.dds"
+	}
 }

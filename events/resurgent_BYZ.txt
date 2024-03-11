@@ -2535,7 +2535,7 @@ country_event = { #29 The Return of Pneumatica
 	}
 }
 
-country_event = { #Coal to Power the Aeolipile
+country_event = { #30 Coal to Power the Aeolipile
 	id = resurgent_BYZ.30
 	title = "resurgent_BYZ.30.t"
 	desc = "resurgent_BYZ.30.d"

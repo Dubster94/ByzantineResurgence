@@ -239,6 +239,10 @@ monarchy = {
 				#1.36
 				legacy_of_the_safavid_reform
 				state_madrasas_reform
+				#BR Added
+				ecumenical_patriarch_of_constantinople_reform
+				pentarchy_reform
+				united_orthodoxy_reform
 			}
 		}
 		military_doctrines = {

@@ -7,6 +7,15 @@ estate_generals = {
 			has_estate = estate_generals
 		}
 	}
+	
+	modifier_definition = {
+		type = loyalty
+		key = generals_absolutism_loyalty_modifier
+		trigger = {
+			has_estate = estate_generals
+			has_government_attribute = no_generals_loyalty_loss_from_absolutism
+		}
+	}
 
 	modifier_definition = {
 		type = influence
@@ -33,6 +42,15 @@ estate_exarches = {
 			has_estate = estate_exarches
 		}
 	}
+	
+	modifier_definition = {
+		type = loyalty
+		key = exarches_absolutism_loyalty_modifier
+		trigger = {
+			has_estate = estate_exarches
+			has_government_attribute = no_exarches_loyalty_loss_from_absolutism
+		}
+	}
 
 	modifier_definition = {
 		type = influence
@@ -57,6 +75,15 @@ estate_knightly_orders = {
 		key = knightly_orders_loyalty_modifier
 		trigger = {
 			has_estate = estate_knightly_orders
+		}
+	}
+	
+	modifier_definition = {
+		type = loyalty
+		key = knightly_orders_absolutism_loyalty_modifier
+		trigger = {
+			has_estate = estate_knightly_orders
+			has_government_attribute = no_knightly_orders_loyalty_loss_from_absolutism
 		}
 	}
 
