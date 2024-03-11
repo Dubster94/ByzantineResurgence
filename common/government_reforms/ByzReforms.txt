@@ -281,14 +281,17 @@ pentarchy_reform = {
 	potential = {
 		tag = BYZ
 		owns = 151 #Constantinople
+		OR = {
+			has_reform = ecumenical_patriarch_of_constantinople_reform
+			has_reform = pentarchy_reform
+		}
 	}
 	
 	trigger = {
 		religion = orthodox
 		OR = {
-			has_reform = ecumenical_patriarch_of_constantinople_reform
 			has_reform = pentarchy_reform
-			mission_completed = byz_question_of_schismatics
+			mission_completed = the_pentarchy
 		}
 	}
 	
@@ -309,14 +312,17 @@ united_orthodoxy_reform = {
 	potential = {
 		tag = BYZ
 		owns = 151 #Constantinople
+		OR = {
+			has_reform = pentarchy_reform
+			has_reform = united_orthodoxy_reform
+		}
 	}
 	
 	trigger = {
 		religion = orthodox
 		OR = {
-			has_reform = pentarchy_reform
 			has_reform = united_orthodoxy_reform
-			mission_completed = byz_question_of_schismatics
+			mission_completed = byz_unite_orthodox_churches
 		}
 	}
 	

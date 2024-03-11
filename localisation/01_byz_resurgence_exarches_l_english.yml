@@ -13,7 +13,7 @@
  exarches_loyalty_modifier:0 "[Country.GetExarchesName] Loyalty Equilibrium"
  exarches_influence_modifier:0 "[Country.GetExarchesName] Influence"
  exarches_absolutism_loyalty_modifier:0 "[Country.GetExarchesName] Loyalty Equilibrium Negator"
- mechanic_no_exarches_loyalty_loss_from_absolutism_yes:0 "Absolutism no longer reduces §Y[Root.GetExarchesName]§! loyalty."
+ mechanic_no_exarches_loyalty_loss_from_absolutism_yes:0 "Absolutism no longer reduces §YExarches§! loyalty."
  
  estate_privileges_and_agendas_events.6.s:0 "Sell it to the [Root.GetExarchesName]"
  estate_privileges_and_agendas_events.7.s:0 "Seize it from the [Root.GetExarchesName]"

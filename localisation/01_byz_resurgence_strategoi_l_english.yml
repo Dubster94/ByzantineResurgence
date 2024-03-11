@@ -14,7 +14,7 @@
  generals_loyalty_modifier:0 "[Country.GetGeneralsName] Loyalty Equilibrium"
  generals_influence_modifier:0 "[Country.GetGeneralsName] Influence"
  generals_absolutism_loyalty_modifier:0 "[Country.GetGeneralsName] Loyalty Equilibrium Negator"
- mechanic_no_generals_loyalty_loss_from_absolutism_yes:0 "Absolutism no longer reduces §Y[Root.GetGeneralsName]§! loyalty."
+ mechanic_no_generals_loyalty_loss_from_absolutism_yes:0 "Absolutism no longer reduces §YGenerals§! loyalty."
  
  estate_generals_is_theme_capital_tooltip:0 " non-capital provinces are Theme Capitals (Has both a Fort and a Regimental Camp)."
 

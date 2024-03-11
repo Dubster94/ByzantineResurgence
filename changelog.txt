@@ -91,6 +91,10 @@ Features:
 	-When the disaster fires, Byzantium will swap to Catholic. If Byzantium desires to stay Catholic, it needs to not surrender to Orthodox zealots, while letting the Catholic zealots convert all of Byzantium.
 	-If Byzantium desires to stay Orthodox and refute the council of Florence, it needs to defeat all rebels and surrender to Orthodox zealots, while ensuring that no province flips to Catholicism.
 	-Finishing this disaster is required for the "A Question of Schismatics" mission, or enter the Age of Reformation without triggering it.
+-Three new government reforms for Byzantium:
+	-Ecumenical Patriarch of Constantinople, available after finishing the "A Question of Schismatics" mission, which when enacted gives +2% missionary strength against heathens, +1 missionary, as well as a buff to the Religious Culture estate privilege.
+	-The Pentarchy, available after finishing the "Restore the Pentarchy" mission, which when enacted gives +2% missionary strength, +1 missionary, as well as a buff to the Religious Culture as well as the Expansionist Zealotry estate privileges
+	-United Orthodoxy, available after finishing the "Unite Orthodoxy" mission, which when enacted gives +3% missionary strength, +1 missionary, as well as a buff to the Religious Culture as well as the Expansionist Zealotry estate privileges, while simultaneously removing the loyalty malus of the Clergy from Absolutism.
 
 Tweaks:
 -Altered Absolutism to give +2 yearly Pronoiar power and +1 yearly Protostrategos Prominence at 100 absolutism.

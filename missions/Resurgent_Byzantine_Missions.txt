@@ -5136,10 +5136,19 @@ byz_unite_orthodox_1 = {
 			}
 		}
 		effect = {
-			add_country_modifier = { #Adjusted modifier to only include heretic missionary strength.
-				name = "byz_pentarchy"
-				duration = -1
+			if = {
+				limit = {
+					has_reform = ecumenical_patriarch_of_constantinople_reform
+				}
+				add_government_reform = pentarchy_reform
 			}
+			else = {
+				add_prestige_or_monarch_power = { amount = 50 }
+			}
+			# add_country_modifier = { #Adjusted modifier to only include heretic missionary strength.
+				# name = "byz_pentarchy"
+				# duration = -1
+			# }
 			hidden_effect = {
 				if = {
 					limit = {
@@ -5282,10 +5291,19 @@ byz_unite_orthodox_1 = {
 			owns_or_non_sovereign_subject_of = 295
 		}
 		effect = {
-			add_country_modifier = {
-				name = "byz_united_orthodox"
-				duration = -1
+			if = {
+				limit = {
+					has_reform = pentarchy_reform
+				}
+				add_government_reform = united_orthodoxy_reform
 			}
+			else = {
+				add_prestige_or_monarch_power = { amount = 75 }
+			}
+			# add_country_modifier = {
+				# name = "byz_united_orthodox"
+				# duration = -1
+			# }
 			add_patriarch_authority = 0.2
 		}
 		

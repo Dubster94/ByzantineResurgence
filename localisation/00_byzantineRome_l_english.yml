@@ -179,7 +179,12 @@
  mechanic_enables_exarches_estate_yes:0 "Enables Exarches estate."
  revoke_exarch_autonomy_reform:0 "Reduce Exarch Autonomy"
  revoke_exarch_autonomy_reform_desc:0 "As our government is growing ever more centralized, it is now only right for us to demand our Exarches be a more integral part of our Empire."
- 
+ ecumenical_patriarch_of_constantinople_reform:0 "Ecumenical Patriarch of Constantinople"
+ ecumenical_patriarch_of_constantinople_reform_desc:0 "The Ecumenical Patriarch of Constantinople, first among equals, resides in the city of Constantinople. The representative of our faith and therefore our people, their word is law and by extent, the conferrer of our divine right as Emperor and Autocrat of the Romans."
+ pentarchy_reform:0 "The Pentarchy"
+ pentarchy_reform_desc:0 "The Pentarchy, the idea of the five seats of Orthodoxy, that is Constantinople, Antioch, Jerusalem, Alexandria and Rome, has been fully restored and re-established by our hands. With its restoration, no matter where our citizens reside, they have a spiritual leader to attend to."
+ united_orthodoxy_reform:0 "United Orthodoxy"
+ united_orthodoxy_reform_desc:0 "With the final Patriarch in Moscow having been relieved of autocephaly, the Ecumenical Patriarch of Constantinople, first among many equals across the Orthodox world, has the final word on all of Christianity and its theological matters. Naturally, blessing the State with all that is Roman, amongst which, its Emperor and Autocrat."
  
  #Senate
  BYZ_parliament_name:0 "Senate"

@@ -171,7 +171,7 @@ absolutism = {
 	qizilbash_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
 	generals_absolutism_loyalty_modifier = 0.10 #BR Added: Allows for government mechanics to negate loyalty loss from absolutism
 	exarches_absolutism_loyalty_modifier = 0.20 #BR Added: Allows for government mechanics to negate loyalty loss from absolutism
-	knightly_absolutism_orders_loyalty_modifier = 0.10 #BR Added: Allows for government mechanics to negate loyalty loss from absolutism
+	knightly_orders_absolutism_loyalty_modifier = 0.10 #BR Added: Allows for government mechanics to negate loyalty loss from absolutism
 	peasants_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
 }
 
