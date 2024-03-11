@@ -483,7 +483,7 @@ country_event = {
 	
     option = {
         name = union_of_churches.100.ab #The Pope shall remain supreme!
-		trigger = { religion = orthodox }
+		trigger = { religion = catholic }
 		add_stability = 2
 		increase_religious_currency_effect = yes
 		if = {

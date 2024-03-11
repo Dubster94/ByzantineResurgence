@@ -32,7 +32,7 @@ byz_economic_1 = {
 		
 		trigger = {
 			treasury = 250
-			share_of_starting_income = 7 #Byzantium starts with 7.24 starting income. This should in theory require about 50 ducats/month.
+			share_of_starting_income = 4 #Byzantium starts with 6.24 starting income. This should in theory require about 25 ducats/month.
 			NOT = { num_of_loans = 1 }
 			NOT = { inflation = 0.1 }
 		}
@@ -1115,8 +1115,8 @@ byz_navy_2 = {
 		}
 		
 		trigger = {
-			shipyard = 7
-			dock = 7
+			shipyard = 10
+			dock = 10
 			navy_tradition = 40
 			max_sailors = 10000
 			if = { limit = { has_dlc = "Rule Britannia" }
@@ -1171,8 +1171,8 @@ byz_navy_1 = {
 		}
 		
 		trigger = {
-			naval_forcelimit = 70
-			num_of_galley = 50
+			naval_forcelimit = 50
+			num_of_galley = 30
 		}
 		
 		effect = {
@@ -1262,7 +1262,7 @@ byz_military_1 = {
 		}
 		
 		trigger = {
-			army_size = 100
+			army_size = 50
 			army_tradition = 75
 			num_of_generals = 3
 		}
