@@ -12,7 +12,10 @@ country_decisions = {
 		allow = {
 			has_idea = basilics_law
 			mil_power = 100
-			mil = 5
+			OR = {
+				mil = 5
+				advisor = army_organizer
+			}
 		}
 		effect = {
 			add_years_of_income = -1
