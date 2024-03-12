@@ -90,17 +90,18 @@ byzantine_bureaucracy_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					global_tax_modifier = 0.5
+					monthly_logothete_general_power = -0.25
 				}
 			}
 			scaled_modifier = {
 				start_value = 50
 				modifier = {
-					yearly_corruption = 0.5
-					monthly_logothete_postal_power = -0.5
-					monthly_logothete_military_power = -0.5
-					monthly_logothete_praetorium_power = -0.5
-					monthly_logothete_special_affairs_power = -0.5
-					monthly_logothete_waters_power = -0.5
+					yearly_corruption = 0.1
+					monthly_logothete_postal_power = -0.1
+					monthly_logothete_military_power = -0.1
+					monthly_logothete_praetorium_power = -0.1
+					monthly_logothete_special_affairs_power = -0.1
+					monthly_logothete_waters_power = -0.1
 				}
 			}
 		}
@@ -111,17 +112,18 @@ byzantine_bureaucracy_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					improve_relation_modifier = 0.5
+					monthly_logothete_postal_power = -0.25
 				}
 			}
 			scaled_modifier = {
 				start_value = 50
 				modifier = {
-					yearly_corruption = 0.5
-					monthly_logothete_general_power = -0.5
-					monthly_logothete_military_power = -0.5
-					monthly_logothete_praetorium_power = -0.5
-					monthly_logothete_special_affairs_power = -0.5
-					monthly_logothete_waters_power = -0.5
+					yearly_corruption = 0.1
+					monthly_logothete_general_power = -0.1
+					monthly_logothete_military_power = -0.1
+					monthly_logothete_praetorium_power = -0.1
+					monthly_logothete_special_affairs_power = -0.1
+					monthly_logothete_waters_power = -0.1
 				}
 			}
 		}
@@ -132,17 +134,18 @@ byzantine_bureaucracy_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					manpower_recovery_speed = 0.5
+					monthly_logothete_military_power = -0.25
 				}
 			}
 			scaled_modifier = {
 				start_value = 50
 				modifier = {
-					yearly_corruption = 0.5
-					monthly_logothete_general_power = -0.5
-					monthly_logothete_postal_power = -0.5
-					monthly_logothete_praetorium_power = -0.5
-					monthly_logothete_special_affairs_power = -0.5
-					monthly_logothete_waters_power = -0.5
+					yearly_corruption = 0.1
+					monthly_logothete_general_power = -0.1
+					monthly_logothete_postal_power = -0.1
+					monthly_logothete_praetorium_power = -0.1
+					monthly_logothete_special_affairs_power = -0.1
+					monthly_logothete_waters_power = -0.1
 				}
 			}
 		}
@@ -153,17 +156,18 @@ byzantine_bureaucracy_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					governing_capacity_modifier = 0.5
+					monthly_logothete_praetorium_power = -0.25
 				}
 			}
 			scaled_modifier = {
 				start_value = 50
 				modifier = {
-					yearly_corruption = 0.5
-					monthly_logothete_general_power = -0.5
-					monthly_logothete_postal_power = -0.5
-					monthly_logothete_military_power = -0.5
-					monthly_logothete_special_affairs_power = -0.5
-					monthly_logothete_waters_power = -0.5
+					yearly_corruption = 0.1
+					monthly_logothete_general_power = -0.1
+					monthly_logothete_postal_power = -0.1
+					monthly_logothete_military_power = -0.1
+					monthly_logothete_special_affairs_power = -0.1
+					monthly_logothete_waters_power = -0.1
 				}
 			}
 		}
@@ -174,17 +178,18 @@ byzantine_bureaucracy_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					trade_efficiency = 0.5
+					monthly_logothete_special_affairs_power = -0.25
 				}
 			}
 			scaled_modifier = {
 				start_value = 50
 				modifier = {
-					yearly_corruption = 0.5
-					monthly_logothete_general_power = -0.5
-					monthly_logothete_postal_power = -0.5
-					monthly_logothete_military_power = -0.5
-					monthly_logothete_praetorium_power = -0.5
-					monthly_logothete_waters_power = -0.5
+					yearly_corruption = 0.1
+					monthly_logothete_general_power = -0.1
+					monthly_logothete_postal_power = -0.1
+					monthly_logothete_military_power = -0.1
+					monthly_logothete_praetorium_power = -0.1
+					monthly_logothete_waters_power = -0.1
 				}
 			}
 		}
@@ -196,17 +201,18 @@ byzantine_bureaucracy_mechanic = {
 				modifier = {
 					sailors_recovery_speed = 0.5
 					ship_durability = 0.1
+					monthly_logothete_waters_power = -0.25
 				}
 			}
 			scaled_modifier = {
 				start_value = 50
 				modifier = {
-					yearly_corruption = 0.5
-					monthly_logothete_general_power = -0.5
-					monthly_logothete_postal_power = -0.5
-					monthly_logothete_military_power = -0.5
-					monthly_logothete_praetorium_power = -0.5
-					monthly_logothete_special_affairs_power = -0.5
+					yearly_corruption = 0.1
+					monthly_logothete_general_power = -0.1
+					monthly_logothete_postal_power = -0.1
+					monthly_logothete_military_power = -0.1
+					monthly_logothete_praetorium_power = -0.1
+					monthly_logothete_special_affairs_power = -0.1
 				}
 			}
 		}

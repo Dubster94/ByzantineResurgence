@@ -34,7 +34,7 @@ peace = {
 	monthly_militarized_society = -0.1
 	monthly_ottoman_decadence = 0.1
 	monthly_logothete_general_power = 0.1
-	monthly_logothete_military_power = -0.1
+	#monthly_logothete_military_power = -0.1 #BT Cut. It felt better without it.
 }
 
 mercantilism = {
