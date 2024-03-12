@@ -101,6 +101,7 @@ Tweaks:
 -Altered the Nobility estate to give -2 yearly Pronoiar power at max influence if not loyal, double that if disloyal, and half of that if loyal.
 -Changed Albion's tag from ABN to ABO because BT added ABN in Horn of Africa
 -Completing Court Ideas now increase Exarches loyalty by +5%.
+-Reform the Varangian Guard decision is now available with an employed army organizer if you do not have a ruler with a military skill of 5.
 -Overhauling the grand KoK:
 	-Pronoiars:
 		-Hereditary Pronoiar are now renamed as Couropalates
