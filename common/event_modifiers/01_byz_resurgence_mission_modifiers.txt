@@ -21,6 +21,7 @@ byz_bad_trade = {
 byz_bad_navy = {
 	disengagement_chance = -0.05
 	ship_durability = -0.1
+	global_sailors_modifier = -0.5
 }
 
 byz_bad_economy = {

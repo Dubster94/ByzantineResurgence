@@ -28,7 +28,7 @@ Features:
 				-This modifier is revoked through the Byzantine mission "A Question of Schismatics" if you complete the mission without triggering the the disaster "Union of Two Churches".
 			-"Foreign Merchants", which negative impacts Byzantine economy, giving -10% trade efficiency and -20% global trade power.
 				-This modifier is revoked through the new Byzantine mission "State Trade Hegemon"
-			-"Foreign Fleet", which negatively impacts the Byzantine navy, giving them -5% disengagement chance as well -10% ship durability.
+			-"Foreign Fleet", which negatively impacts the Byzantine navy, giving them -5% disengagement chance, -10% ship durability as well as -50% national sailors modifier.
 				-This modifier is revoked through the new Byzantine mission "Restore the Navy"
 			-"Hyperinflation", which gives +0.2 yearly inflation.
 				-This modifier is revoked through the new Byzantine mission "Revive the Hyperpyron".
