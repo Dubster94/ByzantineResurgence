@@ -2968,11 +2968,11 @@ country_event = {
 		name = MEE_Byzantine_Events.45.a
 		
 		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0
-				BYZ = { ai = no }
-			}
+			factor = 10
+			# modifier = {
+				# factor = 0
+				# BYZ = { ai = no }
+			# }
 		}
 
 		add_prestige_or_monarch_power = { amount = 10 }
@@ -2982,11 +2982,11 @@ country_event = {
 		name = MEE_Byzantine_Events.45.b
 		
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				BYZ = { ai = yes }
-			}
+			factor = 90
+			# modifier = {
+				# factor = 0
+				# BYZ = { ai = yes }
+			# }
 		}
 
 		BYZ = {
@@ -3011,6 +3011,12 @@ country_event = {
 						thrace_area = { country_or_non_sovereign_subject_holds = BYZ }
 					}
 					thrace_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = BYZ 
+						}
+						cede_province = ROOT
+					}
+					northern_thrace_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = BYZ 
 						}
@@ -3063,6 +3069,12 @@ country_event = {
 					thrace_area = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				thrace_area = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
+					cede_province = TUR
+				}
+				northern_thrace_area = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT 
 					}
