@@ -356,7 +356,7 @@ byzantine_pronoia_mechanic = {
 			trigger = {
 			}
 			effect = {
-				add_years_of_income = 2
+				add_years_of_income = 1
 			}
 			ai_chance = {
 				factor = 20
