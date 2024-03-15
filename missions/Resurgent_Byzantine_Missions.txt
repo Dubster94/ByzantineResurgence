@@ -771,7 +771,7 @@ byz_reconquest_2 = {
 	byz_anatolian_restoration = { #Anatolian Restoration
 		icon = mission_monarch_in_throne_room
 		position = 12 #2-12
-		required_missions = { byz_turkic_question }
+		required_missions = { byz_turkic_question convert_anatolia }
 		
 		provinces_to_highlight = {
 			region = anatolia_region
@@ -1003,7 +1003,7 @@ byz_reconquest_3 = {
 				name = "byz_latin_expulsion"
 				duration = 9125
 			}
-			add_accepted_culture_or_dip_power = { culture = aromanian_culture dip_reward = yes }
+			add_accepted_culture_or_dip_power = { culture = arvanite dip_reward = yes }
 			if = { #If Genoa controls Chios & has capital in Italy still (Genoa)
 				limit = {
 					exists = GEN
@@ -1801,7 +1801,7 @@ byz_innovative_1 = {
 }
 
 byz_armenia_1 = {
-	slot = 3
+	slot = 4
 	generic = no
 	ai = yes
 	potential = {
@@ -1811,7 +1811,7 @@ byz_armenia_1 = {
 	
 	byz_reconquer_lesser_armenia = { #Protect Lesser Armenia!
 		icon = mission_mesopotamia
-		position = 11 #5-11
+		position = 11 #4-11
 		required_missions = { byz_reclaim_anatolia }
 		
 		provinces_to_highlight = {
@@ -1828,10 +1828,6 @@ byz_armenia_1 = {
 		}
 		
 		effect = {			
-			#Claims
-			give_permaclaims_for_mission = { mission=byz_conquer_armenia_major }
-			give_permaclaims_for_mission = { mission=byz_subjugate_lazica }
-			
 			#Misc
 			add_accepted_culture = cilician
 		}
@@ -1843,7 +1839,7 @@ byz_armenia_1 = {
 	
 	byz_fortify_armenia = {
 		icon = mission_conquer_50_development
-		position = 12 #3-12
+		position = 12 #4-12
 		required_missions = { byz_reconquer_lesser_armenia }
 		
 		provinces_to_highlight = {
@@ -1885,7 +1881,7 @@ byz_armenia_1 = {
 }
 
 byz_armenia_2 = {
-	slot = 4
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
@@ -1895,7 +1891,7 @@ byz_armenia_2 = {
 	
 	byz_rebuild_armenia = {
 		icon = mission_pf_soldier
-		position = 12 #4-12
+		position = 12 #5-12
 		required_missions = { byz_reconquer_lesser_armenia }
 		
 		provinces_to_highlight = {
@@ -2150,8 +2146,8 @@ byz_themes_1 = {
 	
 	byz_theme_system = { #New in BR 8.0
 		icon = mission_strategoi
-		position = 13 #1-13
-		required_missions = { byz_anatolian_restoration byz_fortify_armenia byz_rebuild_armenia }
+		position = 11 #3-11
+		required_missions = { byz_reclaim_anatolia }
 		
 		provinces_to_highlight = {
 			OR = {
@@ -2266,10 +2262,6 @@ byz_themes_1 = {
 					}
 				}
 			}
-			#Claims
-			give_permaclaims_for_mission = { mission=byz_reconquer_albania }
-			give_permaclaims_for_mission = { mission=byz_subjugate_lazica }
-			give_permaclaims_for_mission = { mission=byz_conquer_armenia_major }
 		}
 	
 		ai_weight = {
@@ -2279,7 +2271,7 @@ byz_themes_1 = {
 	
 	byz_greek_themes = { #New in BR 8.0
 		icon = mission_frangokastello
-		position = 14 #1-13
+		position = 13 #3-13
 		required_missions = { byz_theme_system }
 		
 		provinces_to_highlight = {
@@ -2432,6 +2424,8 @@ byz_themes_1 = {
 			
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_reconquer_albania }
+			give_permaclaims_for_mission = { mission=byz_conquer_armenia_major }
+			give_permaclaims_for_mission = { mission=byz_subjugate_lazica }
 		}
 	
 		ai_weight = {
@@ -2451,7 +2445,7 @@ byz_balkan_1 = {
 	byz_reconquer_albania = { #Reconquer Albania
 		icon = mission_dyrrachium
 		position = 14 #2-14
-		required_missions = { byz_theme_system }
+		required_missions = { byz_greek_themes }
 		
 		provinces_to_highlight = {
 			province_group = byz_reconquer_albania_provinces
@@ -2919,7 +2913,7 @@ byz_georgia_1 = {
 	byz_subjugate_lazica = { #Subjugate Lazica
 		icon = mission_cannons_firing
 		position = 14 #4-14
-		required_missions = { byz_theme_system }
+		required_missions = { byz_greek_themes }
 		
 		provinces_to_highlight = {
 			province_group = byz_subjugate_lazica_provinces
@@ -2957,7 +2951,7 @@ byz_east_1 = {
 	byz_conquer_armenia_major = { #Put Greater Armenia into the fold!
 		icon = mission_have_two_subjects
 		position = 14 #5-14
-		required_missions = { byz_theme_system }
+		required_missions = { byz_greek_themes }
 		
 		provinces_to_highlight = {
 			province_group = byz_conquer_armenia_major_provinces
@@ -3344,7 +3338,7 @@ byz_italy_1 = {
 	byz_gain_foothold_in_italy = { #Gain Foothold in Italy!
 		icon = mission_invade_island
 		position = 15 #4-15
-		required_missions = { byz_greek_themes }
+		required_missions = { byz_reconquer_albania }
 		
 		provinces_to_highlight = {
 			province_group = byz_gain_foothold_in_italy_provinces
