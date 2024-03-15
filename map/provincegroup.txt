@@ -2027,7 +2027,7 @@ byz_reconquer_lesser_armenia_provinces = { #Used in tre_conquer_lesser_armenia_p
 	2303 6101
 	3254 4302 6109 6110
 	2306 2307 4296 5332 6112 6113
-	418 4310 5330 6104 6107
+	4310 5330 6104 6107
 	4303
 	2204	
 }
@@ -2041,7 +2041,7 @@ byz_conquer_armenia_major_provinces = {
 }
 
 byz_north_mesopotamia_provinces = {
-	2308 4292 6100
+	418 2308 4292 6100
 	4179 4295 5295 5331 6114 6119 6121
 	411 2309 4293 5296 6118 6120 6123 6125
 	406 2314 6099 6135 6136
