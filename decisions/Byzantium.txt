@@ -238,16 +238,16 @@ country_decisions = {
 			NOT = { 358 = { has_province_flag = br_rebuilt_library_of_alexandria } }
 		}
 		allow = {
-			# mission_completed = byz_pandidakterion
-			# OR = {
-				# full_idea_group = innovativeness_ideas
-				# philosopher = 3
-				# natural_scientist = 3
-			# }
-			# 358 = {
-				# has_building = university
-			# }
-			# treasury = 1000
+			mission_completed = byz_pandidakterion
+			OR = {
+				full_idea_group = innovativeness_ideas
+				philosopher = 3
+				natural_scientist = 3
+			}
+			358 = {
+				has_building = university
+			}
+			treasury = 1000
 		}
 		effect = {
 			add_treasury = -1000
