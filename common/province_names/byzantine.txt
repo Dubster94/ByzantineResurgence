@@ -459,7 +459,7 @@
 4292 = { "Margdis" "Margdis" } #Not sure where Merida comes from - Pleiades has completely disregarded this name and it seems very much like Latin anyway, even so I only find it on Wikipedia. Ancient Greek was Marde/Margdis, so I'm going for the latter. Previously I had used a Nea Ioustiniana, however I don't know where I got that from. Was 5295 pre 1.24
 #5293 = { "Rhaisena" "Rhaisena" }
 6090 = { "Dabana" "Dabana" } #There's nothing here.
-#6100 = { "Konstantia" "Konstantia" } #This city has so many names it's not even funny, from Konstantina, Maximianopolis, Antinopolis, Nikephorion, Antiochia, even Konstantinoupolis. I took Konstantia because it was pretty much the only one not already present.
+6100 = { "Konstantia" "Konstantia" } #This city has so many names it's not even funny, from Konstantina, Maximianopolis, Antinopolis, Nikephorion, Antiochia, even Konstantinoupolis. I took Konstantia because it was pretty much the only one not already present.
 #6102 = { "Chasanara" "Chasanara " } #Escorial Taktikon, from wiki.
 
 #Sophene
