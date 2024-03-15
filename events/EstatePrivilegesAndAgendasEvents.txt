@@ -1490,7 +1490,7 @@ country_event = {
 
 	#Grant knightly orders land
 	option = {
-		name = estate_privileges_and_agendas_events.6.t
+		name = estate_privileges_and_agendas_events.6.u
 		trigger = { has_estate = estate_knightly_orders }
 		give_estate_land_share_gigantic = { estate = estate_knightly_orders }
 		add_estate_loyalty = {
@@ -1930,7 +1930,7 @@ country_event = { #TODO: Add new estates
 	
 	#Seize from knightly orders
 	option = {
-		name = estate_privileges_and_agendas_events.7.t
+		name = estate_privileges_and_agendas_events.7.u
 		trigger = {
 			has_estate = estate_knightly_orders
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_knightly_orders } }

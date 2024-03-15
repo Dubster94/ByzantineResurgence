@@ -26,8 +26,8 @@
  knightly_orders_absolutism_loyalty_modifier:0 "Knightly Orders Loyalty Equilibrium Negator"
  mechanic_no_knightly_orders_loyalty_loss_from_absolutism_yes:0 "Absolutism no longer reduces §YKnightly Orders§! loyalty."
  
- estate_privileges_and_agendas_events.6.t:0 "Seize it from the Knightly Orders"
- estate_privileges_and_agendas_events.7.t:0 "Seize it from the Knightly Orders"
+ estate_privileges_and_agendas_events.6.u:0 "Sell it to the Knightly Orders"
+ estate_privileges_and_agendas_events.7.u:0 "Seize it from the Knightly Orders"
  
  
  
