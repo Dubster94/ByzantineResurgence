@@ -1829,7 +1829,7 @@ byz_armenia_1 = {
 		
 		effect = {			
 			#Misc
-			add_accepted_culture = cilician
+			add_accepted_culture_or_dip_power = { culture = cilician dip_reward = yes }
 		}
 	
 		ai_weight = {
@@ -2930,7 +2930,7 @@ byz_georgia_1 = {
 		
 		effect = {			
 			#Misc
-			add_accepted_culture = laz_culture
+			add_accepted_culture_or_dip_power = { culture = laz_culture dip_reward = yes }
 		}
 	
 		ai_weight = {
@@ -3030,7 +3030,7 @@ byz_east_1 = {
 			}
 			
 			#Misc
-			add_accepted_culture = armenian
+			add_accepted_culture_or_dip_power = { culture = armenian dip_reward = yes }
 			
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_north_mesopotamia }
