@@ -2275,8 +2275,8 @@ byz_themes_1 = {
 		required_missions = { byz_theme_system }
 		
 		provinces_to_highlight = {
-			OR = {
-				AND = {
+			if = {
+				limit = {
 					ROOT = {
 						NOT = { 
 							num_of_owned_provinces_with = {
@@ -2290,28 +2290,17 @@ byz_themes_1 = {
 							} 
 						}
 					}
-					OR = {
-						province_group = byz_reconquer_ottoman_greece_provinces
-						province_group = byz_no_latins_in_greece_provinces
-						area = thrace_area
-					}
-					NOT = { estate_generals_is_theme_capital_trigger = yes }
 				}
-				AND = {
-					ROOT = { 
-						num_of_owned_provinces_with = {
-							value = 6
-							OR = {
-								province_group = byz_reconquer_ottoman_greece_provinces
-								province_group = byz_no_latins_in_greece_provinces
-								area = thrace_area
-							}
-							estate_generals_is_theme_capital_trigger = yes
-						} 
-					}
-					province_group = byz_retake_greek_islands_provinces
-					NOT = { estate_generals_is_theme_capital_trigger = yes }
+				OR = {
+					province_group = byz_reconquer_ottoman_greece_provinces
+					province_group = byz_no_latins_in_greece_provinces
+					area = thrace_area
 				}
+				NOT = { estate_generals_is_theme_capital_trigger = yes }
+			}
+			else = {
+				province_group = byz_retake_greek_islands_provinces
+				NOT = { estate_generals_is_theme_capital_trigger = yes }
 			}
 		}
 		
@@ -2496,6 +2485,7 @@ byz_balkan_1 = {
 				}
 			}
 			give_permaclaims_for_mission = { mission=byz_subjugate_serbia }
+			give_permaclaims_for_mission = { mission=byz_gain_foothold_in_italy }
 		}
 	}
 		
