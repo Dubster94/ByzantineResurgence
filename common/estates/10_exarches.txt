@@ -1,6 +1,6 @@
 estate_exarches =
 {
-	icon = 13
+	icon = 17
 	
 	# Used for when declaring independence
 	independence_government = monarchy

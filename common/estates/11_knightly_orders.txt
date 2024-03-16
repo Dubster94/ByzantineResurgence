@@ -1,6 +1,6 @@
 estate_knightly_orders = 
 {
-	icon = 14
+	icon = 18
 	
 	# If true, country will get estate
 	trigger = {	
