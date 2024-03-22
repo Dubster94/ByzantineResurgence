@@ -14,7 +14,7 @@ country_decisions = {
 			mil_power = 100
 			OR = {
 				mil = 5
-				advisor = army_organizer
+				advisor = army_organiser
 			}
 		}
 		effect = {
