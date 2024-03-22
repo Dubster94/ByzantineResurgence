@@ -414,6 +414,61 @@ pretender_rebels = {
 			clr_country_flag = byz_current_ruler_is_not_deposed
 			country_event = { id = strategoi_estate_events.22 }
 		}
+		#Byz_resurgence added: If one of the nobility privileges are the cause of the rebels, restore the latifundia.
+		if = {
+			limit = { 
+				had_country_flag = {
+					flag = byz_revoked_latifundia_kantakouzenos
+					days = 3650
+				}
+			}
+			set_estate_privilege = estate_nobles_latifundia_kantakouzenos
+		}
+		if = {
+			limit = { 
+				had_country_flag = {
+					flag = byz_revoked_latifundia_philantropenos
+					days = 3650
+				}
+			}
+			set_estate_privilege = estate_nobles_latifundia_philantropenos
+		}
+		if = {
+			limit = { 
+				had_country_flag = {
+					flag = byz_revoked_latifundia_metochites
+					days = 3650
+				}
+			}
+			set_estate_privilege = estate_nobles_latifundia_metochites
+		}
+		if = {
+			limit = { 
+				had_country_flag = {
+					flag = byz_revoked_latifundia_choumnos
+					days = 3650
+				}
+			}
+			set_estate_privilege = estate_nobles_latifundia_choumnos
+		}
+		if = {
+			limit = { 
+				had_country_flag = {
+					flag = byz_revoked_latifundia_melissenos
+					days = 3650
+				}
+			}
+			set_estate_privilege = estate_nobles_latifundia_melissenos
+		}
+		if = {
+			limit = { 
+				had_country_flag = {
+					flag = byz_revoked_latifundia_tornikes
+					days = 3650
+				}
+			}
+			set_estate_privilege = estate_nobles_latifundia_tornikes
+		}
 		
 	}
 }

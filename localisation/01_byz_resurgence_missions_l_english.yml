@@ -456,7 +456,7 @@
  estate_nobles_latifundia_melissenos_desc:0 "One of the oldest noble families of Byzantium, their posessions mainly centered around Anatolia and in the Peloponnese. The family held several civil offices as well, however their importance during the last decades of the Empire has waned."
  estate_nobles_latifundia_tornikes:0 "Tornikioi Latifundia"
  estate_nobles_latifundia_tornikes_desc:0 "A family supposedly stemming from 10th Century Byzantine Armenia, during the last decades of the Empire, their lands were centered around Macedonia. A notable Greek noble family that helped the Palaiologoi rise to power during the recovery of Constantinople in 1263."
- 
+ byz_revoke_latifundia_tooltip:0 "§RIf the below rebels enforce demands within§! §Y10 years§! §Rof revoking this privilege, the privilege will be restored!§!"
  byz_bad_trade:0 "Latin Merchants"
  desc_byz_bad_trade:0 "As the Empire continued to lose land after the reconquest of Constantinople, the Empire made itself dependent on the wealthy Latin merchant republics to survive. With the ever waning power of the Emperor, Latin merchants have taken control over the once state-regulated trade in Constantinople."
  byz_bad_religion:0 "Council of Florence"

@@ -116,6 +116,8 @@ estate_nobles_latifundia_kantakouzenos = {
 		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
+		custom_tooltip = byz_revoke_latifundia_tooltip
+		set_country_flag = estate_nobles_latifundia_kantakouzenos
 		random_owned_province = {
 			spawn_rebels = {
 				size = 3
@@ -158,6 +160,8 @@ estate_nobles_latifundia_philantropenos = {
 		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
+		custom_tooltip = byz_revoke_latifundia_tooltip
+		set_country_flag = estate_nobles_latifundia_philantropenos
 		random_owned_province = {
 			spawn_rebels = {
 				size = 3
@@ -200,6 +204,8 @@ estate_nobles_latifundia_metochites = {
 		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
+		custom_tooltip = byz_revoke_latifundia_tooltip
+		set_country_flag = estate_nobles_latifundia_metochites
 		random_owned_province = {
 			spawn_rebels = {
 				size = 3
@@ -242,6 +248,8 @@ estate_nobles_latifundia_choumnos = {
 		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
+		custom_tooltip = byz_revoke_latifundia_tooltip
+		set_country_flag = estate_nobles_latifundia_choumnos
 		random_owned_province = {
 			spawn_rebels = {
 				size = 3
@@ -284,6 +292,8 @@ estate_nobles_latifundia_melissenos = {
 		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
+		custom_tooltip = byz_revoke_latifundia_tooltip
+		set_country_flag = estate_nobles_latifundia_melissenos
 		random_owned_province = {
 			spawn_rebels = {
 				size = 3
@@ -315,7 +325,7 @@ estate_nobles_latifundia_tornikes = {
 	loyalty = 0.03
 	influence = 0.01
 	is_valid = {
-		has_estate_privilege = estate_nobles_latifundia_kantakouzenos
+		has_estate_privilege = estate_nobles_latifundia_tornikes
 	}
 	can_select = {
 		always = no
@@ -326,6 +336,8 @@ estate_nobles_latifundia_tornikes = {
 		#has_idea = byz_formalize_succession_laws
 	}
 	on_revoked = {
+		custom_tooltip = byz_revoke_latifundia_tooltip
+		set_country_flag = estate_nobles_latifundia_tornikes
 		random_owned_province = {
 			spawn_rebels = {
 				size = 3
