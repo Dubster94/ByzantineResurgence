@@ -68,7 +68,7 @@ byz_economic_1 = {
 		trigger = {
 			trade_goods_produced_amount = {
 				trade_goods = gold
-				amount = 2 #This corresponds to 20 production dev in gold provinces. Byzantium has 4 potential gold provinces to collect from, so this should be fairly easy.
+				amount = 1 #This corresponds to 10 production dev in gold provinces. Byzantium has 2 potential gold provinces to collect from, so this should be fairly easy.
 			}
 		}
 		
