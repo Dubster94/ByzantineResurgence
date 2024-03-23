@@ -76,6 +76,7 @@
  byz_question_of_schismatics_had_union_of_churches:0 "Has gone through the §YUnion of Two Churches§! disaster"
  byz_question_of_schismatics_avoided_union_of_churches:0 "Has reached the §YAge of Reformation§! without triggering the §YUnion of Two Churches§! disaster"
  EST_REMAINED_ORTHODOX:0 "Remained loyal to Orthodoxy: $VAL$"
+ byz_brothers_in_faith:0 "Brothers in Faith"
  convert_anatolia_title:0 "Convert Anatolia"
  convert_anatolia_desc:0 "The people of Anatolia were once proud followers of Christianity, however have since the conquests by the Turk been forced into heathenism. We need to undo this and bring them back to the true faith if these lands are to remain in our hands!"
  
