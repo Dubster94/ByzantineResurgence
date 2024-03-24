@@ -111,6 +111,7 @@ Tweaks:
 	-A lot of mechanics present in King of Kings for Byzantium have been cut entirely, replaced by other mechanics in BR, including Byzantine missions, the startup events, starting modifiers and privileges.
 	-Cut holy order tweaks implemented by BR.
 	-The Armenian mission tree in BR has been disabled for KoK users.
+-Altered the Succession Crisis to stop appearing when the idea "Formalization of Succession Laws" has been picked up.
 
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
