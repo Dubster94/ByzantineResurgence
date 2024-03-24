@@ -8,6 +8,7 @@ succession_crisis = {
         num_of_cities = 15 #Upped from 6 to compensate for more provinces in BT.
 		is_lesser_in_union = no
 		government = monarchy #Apparently Republic Byzantium is a thing...
+		NOT = { has_idea = byz_formalize_succession_laws }
 	}
 
 	#Need to look into this, as for some reason it didn't trigger for me when I should've had it. I wonder why. It triggered for me the last time.
