@@ -73,7 +73,7 @@ byz_economic_1 = {
 		}
 		
 		effect = {
-			add_years_of_income = 2.5
+			add_years_of_income = 1
 			remove_country_modifier = byz_bad_economy
 			add_country_modifier = {
 				name = "byz_restored_hyperpyron"
@@ -1136,7 +1136,7 @@ byz_navy_2 = {
 		trigger = {
 			shipyard = 10
 			dock = 10
-			navy_tradition = 40
+			navy_tradition = 30 #40 navy tradition is pretty darn hard.
 			max_sailors = 10000
 			if = { limit = { has_dlc = "Rule Britannia" }
 				has_naval_doctrine = any
