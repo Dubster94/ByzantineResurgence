@@ -1791,6 +1791,7 @@ byz_innovative_1 = {
 		
 		effect = {
 			custom_tooltip = byzantine_militarization_tooltip
+			set_country_flag = byz_restored_militarization_mechanic
 			hidden_effect = { #In order to reset the gov mechanics. For some reason this is required by the game.
 				remove_government_reform = reformed_byzantine_monarchy_reform
 				add_government_reform = reformed_byzantine_monarchy_reform
