@@ -154,11 +154,9 @@ theme_system_reform = {
 		}
 	}
 	trigger = {
-		if = {
-			limit = {
-				tag = BYZ
-			}
+		OR = {
 			mission_completed = byz_theme_system
+			has_reform = theme_system_reform
 		}
 	}
 	
