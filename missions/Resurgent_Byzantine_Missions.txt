@@ -2282,7 +2282,6 @@ byz_themes_1 = {
 				area = thrace_area
 			}
 			NOT = { estate_generals_is_theme_capital_trigger = yes }
-			}
 		}
 		
 		trigger = {
