@@ -2275,32 +2275,13 @@ byz_themes_1 = {
 		required_missions = { byz_theme_system }
 		
 		provinces_to_highlight = {
-			if = {
-				limit = {
-					ROOT = {
-						NOT = { 
-							num_of_owned_provinces_with = {
-								value = 6
-								OR = {
-									province_group = byz_reconquer_ottoman_greece_provinces
-									province_group = byz_no_latins_in_greece_provinces
-									area = thrace_area
-								}
-								estate_generals_is_theme_capital_trigger = yes
-							} 
-						}
-					}
-				}
-				OR = {
-					province_group = byz_reconquer_ottoman_greece_provinces
-					province_group = byz_no_latins_in_greece_provinces
-					area = thrace_area
-				}
-				NOT = { estate_generals_is_theme_capital_trigger = yes }
-			}
-			else = {
+			OR = {
+				province_group = byz_reconquer_ottoman_greece_provinces
+				province_group = byz_no_latins_in_greece_provinces
 				province_group = byz_retake_greek_islands_provinces
-				NOT = { estate_generals_is_theme_capital_trigger = yes }
+				area = thrace_area
+			}
+			NOT = { estate_generals_is_theme_capital_trigger = yes }
 			}
 		}
 		
