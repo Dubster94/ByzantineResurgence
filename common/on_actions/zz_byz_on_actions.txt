@@ -193,3 +193,10 @@ on_five_year_pulse_2 = {
 		100 = exarches_estate_events.4
 	}
 }
+
+on_main_war_won = {
+	events = {
+		strategoi_estate_events.31
+	}
+	
+}
