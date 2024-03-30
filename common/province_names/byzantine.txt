@@ -581,22 +581,28 @@
 2205 = { "Naxouana" "Naxouana" }
 3256 = { "Balaberdon" "Balaberdon" } #I pick Baghaberd instead as it's probably more important. Using same logic for Baybird -> Baiberdon. If you like Paipert, then this would be Palapert
 2202 = { "Amaras" "Amaras" } #Picked instead due to historical importance
+7288 = { "Lychnitis" "Theispa" } #Province name is Greek for Lake Sevan. The city name is weird, using the city of Teyseba/Odzaberd close by, which was named after an Armenian god called Theispas. Not sure if this is the Greek name, but it sounds sufficiently Greek and there literally aren't any better names here.
 
 #Shirvan
 420 = { "Gantzaka" "Gantzaka" } 
 4305 = { "Sakion" "Sakion" } #Pre 1.24 was 3259
 4299 = { "Chabala" "Chabala" } #Pre 1.24 was 3258
 421 = { "Bagaban" "Bagaban" } #This is what armenian historians call the city before ~800 AD, i.e city of winds (Baga-avan)
-4340 = { "Balanrot" "Balanrot" } #Not really sure where this one comes from, it was found on Pleiades as an old name to Bilasuvar, which is what the city marker actually signifies. Pre 1.24 was 3257
-424 = { "Arbandon""Arbandon" } #Aharawa (Which is what province marker signifies), moved to Shirvan in 1.24
+4340 = { "Kaspiane" "Balanrot" } #Not really sure where this one comes from, it was found on Pleiades as an old name to Bilasuvar, which is what the city marker actually signifies. Pre 1.24 was 3257
+424 = { "Arbandon" "Arbandon" } #Aharawa (Which is what province marker signifies), moved to Shirvan in 1.24
+7284 = { "Parthaoua" "Parthaoua" } #Using Parthian Parthau
+7286 = { "Sataphara" "Sataphara" } #Some name found on Ptolemaios Geography
+7287 = { "Toga" "Toga" } #Found a "Toga" on Ptolemaios Geography way down the river. I figured I'd just go with this one.
 
 #Georgia
 4303 = { "Pharangion" "Pharangion" } #Actually a persian name, but it sounds sufficiently greek so I'll go for it. In Latin it was Pharangium. Alternatively we have Taochoi. This one is hell on earth to find a name for otherwise. Was 3249 pre 1.24
-3250 = { "Ardanoutzin" "Ardanoutzin" } #Found in Escorial Taktikon.
+3250 = { "Apsaros" "Apsyrtos" } #Using the name of Gonio fortress. Used to be Ardanuj, but BT16's Caucasus overhaul moved the province.
+7296 = { "Ardanoutzin" "Ardanoutzin" } #Found in Escorial Taktikon.
 3251 = { "Achaltskai" "Achaltskai" } #The Armenian name is Achaltscha, Achaltsiche means "New castle", so if we want to drop the armenian/georgian names we could go for Neokastron. I went with assuming Achaltscha would turn into Achaltskae.
 4301 = { "Meschistha" "Meschistha" } #Old capital of Georgia - Gori has no importance whatsoever from what I can tell. Pre 1.24 was 3252
 423 = { "Tiphlida" "Tiphlida" } #Tiphilis is ancient greek. One can also use the name for its fortress Narikala, although that's a name given by the Mongols in Arabic.
 2203 = { "Teleda" "Teleda" } #Greek geographer's name for Telavi? No source, and it is also claimed to be the name of a city in Azerbaijan, but what do I know.
+7297 = { "Chichanion" "Chichanion" } #Using the Khikhani Fortress, transliterating it and adding on "-on"
 
 #Odishi (Lazica)
 2196 = { "Bathys" "Bathys" } #Phasis is further on the coast. Bathys is the province port (Batumi)
@@ -604,6 +610,10 @@
 422 = { "Lazion" "Kotais" } #Also contains the important Lazic fortresses of Skandis and Sarapanis. Kotais seems to also have been known as Cytaea in Latin, or Kytaeia seemingly greekified.
 1856 = { "Sebastopolis" "Sebastopolis" }
 2195 = { "Palaia Achaia" "Palaia Achaia" }
+7299 = { "Pityous" "Nitike" } #Supposedly named Nitica by Romans. Also found a Soteriopolis on a Latin map, presumably hellenized as Soterioupolis
+7296 = { "Artaanion" "Artaanion" } #Hellenizing Artaani. I have no sources whatsoever claiming this to be the case, but this'll have to do.
+7295 = { "Onion" "Onion" } #As was the case of Ani, using the same root and adding -on
+7298 = { "Lentechion" "Lentechion" } #See above. There's no info whatsoever here.
 
 #Tabriz
 4304 = { "Chauon" "Chauon" } #Pre 1.24 was 3255
