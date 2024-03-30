@@ -1775,7 +1775,7 @@ byz_innovative_1 = {
 	byz_basileus_protostrategos = { #New in BR 8.0
 		icon = mission_basileus_protostrategos
 		position = 11 #5-11
-		required_missions = { byz_military_education byz_co_capital }
+		required_missions = { byz_military_education byz_restore_imperial_co_capital }
 		
 		provinces_to_highlight = {
 			#None
