@@ -982,11 +982,11 @@ country_event = { #13 The Hippodrome of Constantinople
 	id = resurgent_BYZ.13
 	title = "resurgent_BYZ.13.t"
 	desc = { #If event fires after Chastening of Venice
-		trigger = { 112 = {	has_province_modifier = chastening_of_venice } }
+		trigger = { 112 = {	has_province_modifier = BYZ_chastening_of_venice } }
 		desc = "resurgent_BYZ.13.da"
 	}
 	desc = { #If event fires before Chastening of Venice
-		trigger = { NOT = { 112 = {	has_province_modifier = chastening_of_venice } } }
+		trigger = { NOT = { 112 = {	has_province_modifier = BYZ_chastening_of_venice } } }
 		desc = "resurgent_BYZ.13.db"
 	}
 	picture = CONSTANTINOPLE_eventPicture
@@ -1000,7 +1000,7 @@ country_event = { #13 The Hippodrome of Constantinople
 		OR = {
 			is_year = 1500
 			112 = {
-				has_province_modifier = chastening_of_venice
+				has_province_modifier = BYZ_chastening_of_venice
 			}
 		}
 	}
@@ -1026,7 +1026,7 @@ country_event = { #13 The Hippodrome of Constantinople
 		modifier = {
 			factor = 0.05
 			112 = {
-				has_province_modifier = chastening_of_venice
+				has_province_modifier = BYZ_chastening_of_venice
 			}
 		}
 	}
@@ -1041,7 +1041,7 @@ country_event = { #13 The Hippodrome of Constantinople
 		if = { #Venice has been chastised
 			limit = {
 				112 = {
-					has_province_modifier = chastening_of_venice
+					has_province_modifier = BYZ_chastening_of_venice
 				}
 			}
 			151 = {
@@ -1716,7 +1716,7 @@ country_event = { #18 The Return of the Triumphal Quadriga
 		tag = BYZ
 		capital = 151
 		112 = {
-			has_province_modifier = chastening_of_venice
+			has_province_modifier = BYZ_chastening_of_venice
 		}
 		151 = {
 			has_province_flag = byz_hippodrome_foundation
