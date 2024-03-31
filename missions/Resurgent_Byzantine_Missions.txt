@@ -2814,12 +2814,47 @@ byz_venice_1 = {
 		effect = {
 			add_prestige_or_monarch_power = { amount = 20 }
 			add_adm_power = 100
-			country_event = { id = flavor_byz.1 }
-			112 = {
-				add_province_modifier = {
-					name = "faster_integration"
-					duration = 9125
-				}
+			
+			custom_tooltip = " "
+			
+			country_event_with_option_insight = {
+				id = flavor_byz.1
+				option_1 = "
+					112 = {
+						custom_tooltip = BYZ_this_province_will_lose_development
+						custom_tooltip = \" \"
+						add_permanent_province_modifier = {
+							name = BYZ_chastening_of_venice
+							duration = -1
+						}
+					}
+					capital_scope = {
+						add_province_modifier = {
+							name = byzantine_treasures_returned
+							duration = 7300
+						}
+					}
+				"
+				option_2 = "
+					if = {
+						limit = {
+							has_dlc = \"Domination\"
+						}
+						add_country_modifier = { 
+							name = BYZ_may_construct_galleass
+							duration = -1
+						}
+						custom_tooltip = BYZ_may_only_build_in_112
+					}
+					else = {
+						112 = {
+							add_province_modifier = {
+								name = BYZ_arsenal
+								duration = -1
+							}
+						}
+					}
+				"
 			}
 		}
 	
