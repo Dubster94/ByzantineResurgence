@@ -95,6 +95,7 @@ country_event = {
 			}
 		}
 		capital_scope = {
+			custom_tooltip = br_triumphal_quadriga_tt
 			add_province_modifier = {
 				name = "byzantine_treasures_returned"
 				duration = 7300

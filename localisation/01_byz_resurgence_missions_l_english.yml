@@ -95,6 +95,7 @@
  byz_reconquer_albania_provinces: ""
  byz_reconquer_albania_title:0 "Recover Albania"
  byz_reconquer_albania_desc:0 "Albania has since before the 4th crusade been an integral part of the Empire. It was since then wrestled from us by the Latins. We need to undo this and reclaim the city of Dyrrachium!"
+ br_triumphal_quadriga_tt:0 "Treasures stolen in the sacking that still remain within the city of §Y[112.GetName]§! will be returned."
  
  #Byz Balkans mission chain
  byz_safeguard_balkan_border_claims:0 "§Y[Root.GetName]§! gains permanent claims on the provinces required for the mission §YSafeguard the Balkan Border§!"
