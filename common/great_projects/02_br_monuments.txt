@@ -239,6 +239,7 @@ circus_maximus = {
 				tag = ROM #Added because there might be somebody out there who wants to create flavour for Rome, and this would make sense for them.
 			}
 		}
+		is_capital = yes #Capital needs to have been moved to Rome.
 	}
 
 	#what to do when it's built
