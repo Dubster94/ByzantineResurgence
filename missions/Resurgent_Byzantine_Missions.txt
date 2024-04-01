@@ -4889,9 +4889,11 @@ byz_africa_2 = {
 		}
 		
 		effect = {
-			add_great_project = {
-				type = great_harbor_of_carthage
-				instant = yes
+			341 = {
+				add_great_project = {
+					type = great_harbor_of_carthage
+					instant = yes
+				}
 			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_sardinia_corsica }
