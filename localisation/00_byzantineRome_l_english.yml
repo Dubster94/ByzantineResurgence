@@ -110,6 +110,12 @@
  convert_to_orthodox_title:0 "Convert to Orthodox"
  convert_to_orthodox_desc:0 "The Orthodox christians have shown their authority and mended the wound that had our faith split off from theirs. At this point, our church heads are no more and our religion is seen as a mere heresy to theirs. It might be in our best interest to peacefully convert in order to maintain the legitimacy of our faith."
  
+ exarch_seat_modifier_med_dev:0 "Exarch Seat"
+ desc_exarch_seat_modifier_med_dev:0 "This province is the seat of an Exarch, giving us administrative benefits.\n\nNext level of benefits unlock at §Y80§! Development"
+ exarch_seat_modifier_high_dev:0 "Exarch Seat"
+ desc_exarch_seat_modifier_high_dev:0 "This province is the seat of an Exarch, giving us large administrative benefits.\n\nNext level of benefits unlock at §Y100§! Development"
+ exarch_seat_modifier_very_high_dev:0 "Exarch Seat"
+ desc_exarch_seat_modifier_very_high_dev:0 "This province is the seat of an Exarch, giving us huge administrative benefits."
  
  #Latin Empire
  restore_latin_empire_title:0 "Restore the Latin Empire"
