@@ -175,3 +175,63 @@ has_non_capital_state_province_of_dev = {
 		development = $dev$
 	}
 }
+
+#Gov mechanics triggers for ease of checking with a single line instead of the multiscope trigger.
+#Usage: has_<gov_mechanic> = { value = X }
+has_logothete_general_power = {
+	has_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_general_power 
+		value = $value$ 
+	}
+}
+has_logothete_postal_power = {
+	has_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_postal_power 
+		value = $value$ 
+	}
+}
+has_logothete_military_power = {
+	has_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_military_power 
+		value = $value$ 
+	}
+}
+has_logothete_praetorium_power = {
+	has_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_praetorium_power 
+		value = $value$ 
+	}
+}
+has_logothete_special_affairs_power = {
+	has_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_special_affairs_power 
+		value = $value$ 
+	}
+}
+has_logothete_waters_power = {
+	has_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_waters_power 
+		value = $value$ 
+	}
+}
+has_byzantine_pronoia_power = {
+	has_government_power = { 
+		mechanic_type = byzantine_pronoia_mechanic 
+		power_type = byzantine_pronoia_power 
+		value = $value$ 
+	}
+}
+has_byzantine_militarization = {
+	has_government_power = { 
+		mechanic_type = byzantine_militarization_mechanic 
+		power_type = byzantine_militarization 
+		value = $value$ 
+	}
+}
+

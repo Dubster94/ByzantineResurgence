@@ -325,7 +325,6 @@ spawn_rebels_in_state_province_of_dev = {
 #Effect used to spawn rebels when revoking a Latifundia privilege for Byzantium.
 #Takes one of three optional parameters:
 #$small$, $medium$ & $large$
-#Supply parameters $name$ and $dynasty$
 byz_revoke_latifundia_effect = {
 	if = {
 		limit = {
@@ -638,5 +637,520 @@ byz_revoke_latifundia_effect = {
 			}
 			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
 		]
+	}
+}
+
+#Gov mechanics effects for adding with a single line instead of the multiscope effect.
+#Usage: add_<gov_mechanic> = { value = X }
+add_logothete_general_power = {
+	add_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_general_power
+		value = $value$
+	}
+}
+add_logothete_postal_power = {
+	add_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_postal_power
+		value = $value$
+	}
+}
+add_logothete_military_power = {
+	add_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_military_power
+		value = $value$
+	}
+}
+add_logothete_praetorium_power = {
+	add_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_praetorium_power
+		value = $value$
+	}
+}
+add_logothete_special_affairs_power = {
+	add_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_special_affairs_power
+		value = $value$
+	}
+}
+add_logothete_waters_power = {
+	add_government_power = { 
+		mechanic_type = byzantine_bureaucracy_mechanic 
+		power_type = logothete_waters_power
+		value = $value$
+	}
+}
+add_byzantine_pronoia_power = {
+	add_government_power = { 
+		mechanic_type = byzantine_pronoia_mechanic 
+		power_type = byzantine_pronoia_power
+		value = $value$
+	}
+}
+add_byzantine_militarization = {
+	add_government_power = { 
+		mechanic_type = byzantine_militarization_mechanic 
+		power_type = byzantine_militarization
+		value = $value$
+	}
+}
+
+#It appears that government powers are reset when you add a new government mechanic to a government type and reset the gov reform to apply it. That's why this exists.
+#Part 1 saves the gov power in a variable. Run for each gov_power you wish to pick up prior to disabling the reform.
+#Usage: restore_gov_power_part_1_effect = { gov_power=X } [NOTE: Cannot use spaces here]
+restore_gov_power_part_1_effect = {
+	#Unfortunately this effect is needlessly complicated. Reason for this is that the trigger to check for a gov mechanic value requires a subscoped trigger.
+	#This means that I cannot export it using export_to_variable, and I also cannot trigger_switch it.
+	#Hence... enjoy 100 if-statements checking the gov power from 0 to 100.
+	#This might become an issue actually because some gov powers to above 100. But honestly, if you have that much saved up, I cannot be bothered to help you.
+	if = {
+		limit = {
+			has_$gov_power$ = { value = 100 }
+		}
+		set_variable = {
+			which = $gov_power$_var
+			value = 100
+		}
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 99 } }
+		set_variable = { which = $gov_power$_var	value = 99 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 98 } }
+		set_variable = { which = $gov_power$_var	value = 98 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 97 } }
+		set_variable = { which = $gov_power$_var	value = 97 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 96 } }
+		set_variable = { which = $gov_power$_var	value = 96 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 95 } }
+		set_variable = { which = $gov_power$_var	value = 95 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 94 } }
+		set_variable = { which = $gov_power$_var	value = 94 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 93 } }
+		set_variable = { which = $gov_power$_var	value = 93 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 92 } }
+		set_variable = { which = $gov_power$_var	value = 92 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 91 } }
+		set_variable = { which = $gov_power$_var	value = 91 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 90 } }
+		set_variable = { which = $gov_power$_var	value = 90 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 89 } }
+		set_variable = { which = $gov_power$_var	value = 89 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 88 } }
+		set_variable = { which = $gov_power$_var	value = 88 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 87 } }
+		set_variable = { which = $gov_power$_var	value = 87 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 86 } }
+		set_variable = { which = $gov_power$_var	value = 86 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 85 } }
+		set_variable = { which = $gov_power$_var	value = 85 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 84 } }
+		set_variable = { which = $gov_power$_var	value = 84 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 83 } }
+		set_variable = { which = $gov_power$_var	value = 83 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 82 } }
+		set_variable = { which = $gov_power$_var	value = 82 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 81 } }
+		set_variable = { which = $gov_power$_var	value = 81 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 80 } }
+		set_variable = { which = $gov_power$_var	value = 80 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 79 } }
+		set_variable = { which = $gov_power$_var	value = 79 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 78 } }
+		set_variable = { which = $gov_power$_var	value = 78 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 77 } }
+		set_variable = { which = $gov_power$_var	value = 77 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 76 } }
+		set_variable = { which = $gov_power$_var	value = 76 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 75 } }
+		set_variable = { which = $gov_power$_var	value = 75 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 74 } }
+		set_variable = { which = $gov_power$_var	value = 74 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 73 } }
+		set_variable = { which = $gov_power$_var	value = 73 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 72 } }
+		set_variable = { which = $gov_power$_var	value = 72 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 71 } }
+		set_variable = { which = $gov_power$_var	value = 71 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 70 } }
+		set_variable = { which = $gov_power$_var	value = 70 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 69 } }
+		set_variable = { which = $gov_power$_var	value = 69 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 68 } }
+		set_variable = { which = $gov_power$_var	value = 68 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 67 } }
+		set_variable = { which = $gov_power$_var	value = 67 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 66 } }
+		set_variable = { which = $gov_power$_var	value = 66 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 65 } }
+		set_variable = { which = $gov_power$_var	value = 65 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 64 } }
+		set_variable = { which = $gov_power$_var	value = 64 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 63 } }
+		set_variable = { which = $gov_power$_var	value = 63 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 62 } }
+		set_variable = { which = $gov_power$_var	value = 62 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 61 } }
+		set_variable = { which = $gov_power$_var	value = 61 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 60 } }
+		set_variable = { which = $gov_power$_var	value = 60 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 59 } }
+		set_variable = { which = $gov_power$_var	value = 59 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 58 } }
+		set_variable = { which = $gov_power$_var	value = 58 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 57 } }
+		set_variable = { which = $gov_power$_var	value = 57 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 56 } }
+		set_variable = { which = $gov_power$_var	value = 56 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 55 } }
+		set_variable = { which = $gov_power$_var	value = 55 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 54 } }
+		set_variable = { which = $gov_power$_var	value = 54 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 53 } }
+		set_variable = { which = $gov_power$_var	value = 53 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 52 } }
+		set_variable = { which = $gov_power$_var	value = 52 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 51 } }
+		set_variable = { which = $gov_power$_var	value = 51 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 50 } }
+		set_variable = { which = $gov_power$_var	value = 50 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 49 } }
+		set_variable = { which = $gov_power$_var	value = 49 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 48 } }
+		set_variable = { which = $gov_power$_var	value = 48 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 47 } }
+		set_variable = { which = $gov_power$_var	value = 47 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 46 } }
+		set_variable = { which = $gov_power$_var	value = 46 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 45 } }
+		set_variable = { which = $gov_power$_var	value = 45 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 44 } }
+		set_variable = { which = $gov_power$_var	value = 44 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 43 } }
+		set_variable = { which = $gov_power$_var	value = 43 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 42 } }
+		set_variable = { which = $gov_power$_var	value = 42 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 41 } }
+		set_variable = { which = $gov_power$_var	value = 41 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 40 } }
+		set_variable = { which = $gov_power$_var	value = 40 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 39 } }
+		set_variable = { which = $gov_power$_var	value = 39 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 38 } }
+		set_variable = { which = $gov_power$_var	value = 38 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 37 } }
+		set_variable = { which = $gov_power$_var	value = 37 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 36 } }
+		set_variable = { which = $gov_power$_var	value = 36 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 35 } }
+		set_variable = { which = $gov_power$_var	value = 35 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 34 } }
+		set_variable = { which = $gov_power$_var	value = 34 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 33 } }
+		set_variable = { which = $gov_power$_var	value = 33 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 32 } }
+		set_variable = { which = $gov_power$_var	value = 32 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 31 } }
+		set_variable = { which = $gov_power$_var	value = 31 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 30 } }
+		set_variable = { which = $gov_power$_var	value = 30 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 29 } }
+		set_variable = { which = $gov_power$_var	value = 29 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 28 } }
+		set_variable = { which = $gov_power$_var	value = 28 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 27 } }
+		set_variable = { which = $gov_power$_var	value = 27 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 26 } }
+		set_variable = { which = $gov_power$_var	value = 26 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 25 } }
+		set_variable = { which = $gov_power$_var	value = 25 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 24 } }
+		set_variable = { which = $gov_power$_var	value = 24 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 23 } }
+		set_variable = { which = $gov_power$_var	value = 23 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 22 } }
+		set_variable = { which = $gov_power$_var	value = 22 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 21 } }
+		set_variable = { which = $gov_power$_var	value = 21 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 20 } }
+		set_variable = { which = $gov_power$_var	value = 20 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 19 } }
+		set_variable = { which = $gov_power$_var	value = 19 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 18 } }
+		set_variable = { which = $gov_power$_var	value = 18 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 17 } }
+		set_variable = { which = $gov_power$_var	value = 17 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 16 } }
+		set_variable = { which = $gov_power$_var	value = 16 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 15 } }
+		set_variable = { which = $gov_power$_var	value = 15 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 14 } }
+		set_variable = { which = $gov_power$_var	value = 14 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 13 } }
+		set_variable = { which = $gov_power$_var	value = 13 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 12 } }
+		set_variable = { which = $gov_power$_var	value = 12 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 11 } }
+		set_variable = { which = $gov_power$_var	value = 11 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 10 } }
+		set_variable = { which = $gov_power$_var	value = 10 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 9 } }
+		set_variable = { which = $gov_power$_var	value = 9 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 8 } }
+		set_variable = { which = $gov_power$_var	value = 8 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 7 } }
+		set_variable = { which = $gov_power$_var	value = 7 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 6 } }
+		set_variable = { which = $gov_power$_var	value = 6 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 5 } }
+		set_variable = { which = $gov_power$_var	value = 5 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 4 } }
+		set_variable = { which = $gov_power$_var	value = 4 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 3 } }
+		set_variable = { which = $gov_power$_var	value = 3 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 2 } }
+		set_variable = { which = $gov_power$_var	value = 2 }
+	}
+	else_if = {
+		limit = { has_$gov_power$ = { value = 1 } }
+		set_variable = { which = $gov_power$_var	value = 1 }
+	}
+	else = {
+		set_variable = { which = $gov_power$_var	value = 0 }
+	}
+}
+
+#Part 2 adds the gov power from the variable. Run for each gov_power you wish to restore after re-enabling the reform.
+restore_gov_power_part_2_effect = { #Created using two separate while loops to decrease the amount of steps required. This way, the maximum required steps is 18 (99 --> 9*10 + 9*1)
+	while = {
+		limit = {
+			check_variable = {
+				which = $gov_power$_var
+				value = 10
+			}
+		}
+		change_variable = {
+			which = $gov_power$_var
+			value = -10
+		}
+		add_$gov_power$ = {
+			value = 10
+		}
+	}
+	multiply_variable = {
+		which = monarch_kill
+		value = 10
+	}
+	while = {
+		limit = {
+			check_variable = {
+				which = $gov_power$_var
+				value = 10
+			}
+		}
+		change_variable = {
+			which = $gov_power$_var
+			value = -10
+		}
+		add_$gov_power$ = {
+			value = 1
+		}
 	}
 }

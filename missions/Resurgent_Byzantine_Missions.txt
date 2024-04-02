@@ -1360,8 +1360,26 @@ byz_admin = {
 			custom_tooltip = byzantine_pronoia_tooltip
 			set_country_flag = byz_restored_pronoia_mechanic
 			hidden_effect = { #In order to reset the gov mechanics. For some reason this is required by the game.
+				#Bureaucracys
+				restore_gov_power_part_1_effect = { gov_power=logothete_general_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_postal_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_military_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_praetorium_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_special_affairs_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_waters_power  }
+				#Militarization
+				restore_gov_power_part_1_effect = { gov_power=byzantine_militarization }
 				remove_government_reform = reformed_byzantine_monarchy_reform
 				add_government_reform = reformed_byzantine_monarchy_reform
+				#Bureaucracys
+				restore_gov_power_part_2_effect = { gov_power=logothete_general_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_postal_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_military_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_praetorium_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_special_affairs_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_waters_power  }
+				#Militarization
+				restore_gov_power_part_2_effect = { gov_power=byzantine_militarization }
 			}
 		}
 		
@@ -1505,8 +1523,16 @@ byz_resurgence = {
 			custom_tooltip = byzantine_bureaucracy_tooltip
 			set_country_flag = byz_restored_bureaucracy_mechanic
 			hidden_effect = { #In order to reset the gov mechanics. For some reason this is required by the game.
+				#Pronoia
+				restore_gov_power_part_1_effect = { gov_power=byzantine_pronoia_power }
+				#Militarization
+				restore_gov_power_part_1_effect = { gov_power=byzantine_militarization }
 				remove_government_reform = reformed_byzantine_monarchy_reform
 				add_government_reform = reformed_byzantine_monarchy_reform
+				#Pronoia
+				restore_gov_power_part_1_effect = { gov_power=byzantine_pronoia_power }
+				#Militarization
+				restore_gov_power_part_2_effect = { gov_power=byzantine_militarization }
 			}
 		}
 		
@@ -1793,8 +1819,26 @@ byz_innovative_1 = {
 			custom_tooltip = byzantine_militarization_tooltip
 			set_country_flag = byz_restored_militarization_mechanic
 			hidden_effect = { #In order to reset the gov mechanics. For some reason this is required by the game.
+				#Bureaucracys
+				restore_gov_power_part_1_effect = { gov_power=logothete_general_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_postal_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_military_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_praetorium_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_special_affairs_power  }
+				restore_gov_power_part_1_effect = { gov_power=logothete_waters_power  }
+				#Pronoia
+				restore_gov_power_part_1_effect = { gov_power=byzantine_pronoia_power }
 				remove_government_reform = reformed_byzantine_monarchy_reform
 				add_government_reform = reformed_byzantine_monarchy_reform
+				#Bureaucracys
+				restore_gov_power_part_2_effect = { gov_power=logothete_general_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_postal_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_military_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_praetorium_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_special_affairs_power  }
+				restore_gov_power_part_2_effect = { gov_power=logothete_waters_power  }
+				#Pronoia
+				restore_gov_power_part_2_effect = { gov_power=byzantine_pronoia_power }
 			}
 			if = {
 				limit = {

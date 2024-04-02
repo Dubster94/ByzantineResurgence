@@ -7,6 +7,168 @@
 # This government will not generate heirs automatically - the "Introduce heir" button must be used in order to name someone co-emperor, and this button will generate a heir
 # of your dynasty.
 
+#Clearly I never used the above. Oh well. Maybe one of these days I'll properly represent the ridiculous succession of the Byzantines. Or maybe I'll never do it. It's not exactly easy to model in EU4 mechanics.
+
+byzantine_pronoia_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics_byzantium
+	alert_icon_index = 1
+	available = {
+		has_country_flag = byz_restored_pronoia_mechanic
+	}
+	
+	powers = {
+		byzantine_pronoia_power = {
+			gui = byzantine_pronoia_gov_mech_power
+			max = 150
+			base_monthly_growth = 1 #Countered by -2 at 80% nobility estate influence
+			monarch_power = ADM
+			is_good = yes
+		}
+	}
+	
+	interactions = {
+		demand_state_tax = {
+			gui = byzantine_pronoia_gov_mech_button
+			icon = GFX_pronoia_demand_state_tax_button
+			cost_type = byzantine_pronoia_power
+			cost = 100
+			trigger = {
+			}
+			effect = {
+				add_years_of_income = 1
+			}
+			ai_chance = {
+				factor = 20
+				modifier = {
+					factor = 0
+					NOT = { num_of_loans = 1 }
+				}
+				modifier = {
+					factor = 0.5
+					is_in_deficit = no
+				}
+				modifier = {
+					factor = 1.25
+					has_any_disaster = yes
+				}
+				modifier = {
+					factor = 1.5
+					num_of_loans = 2
+					is_in_deficit = yes
+				}
+				modifier = {
+					factor = 20
+					num_of_loans = 1
+				}
+				modifier = {
+					factor = 100
+					num_of_loans = 3
+				}
+				modifier = {
+					factor = 100
+					num_of_loans = 5
+				}
+				modifier = {
+					factor = 100
+					num_of_loans = 7
+				}
+
+			}
+		}
+		raise_tagmata = {
+			gui = byzantine_pronoia_gov_mech_button
+			icon = GFX_pronoia_raise_tagmata_button
+			cost_type = byzantine_pronoia_power
+			cost = 100
+			trigger = { 
+			}
+			effect = { 
+				add_yearly_manpower = 2
+				add_yearly_sailors = 2
+			}
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 0
+					is_at_war = no
+					OR = {
+						NOT = {
+							any_neighbor_country = {
+								NOT = { truce_with = ROOT }
+							}
+						}
+						manpower_percentage = 0.9
+					}
+				}
+				modifier = {
+					factor = 1.5
+					not = { manpower_percentage = 0.3 }
+				}
+				modifier = {
+					factor = 1.5
+					not = { manpower_percentage = 0.2 }
+				}
+				modifier = {
+					factor = 1.5
+					not = { manpower_percentage = 0.1 }
+				}
+				modifier = {
+					factor = 10
+					is_in_important_war = yes
+				}
+				modifier = {
+					factor = 3
+					is_at_war = yes
+					is_in_deficit = no
+				}
+			}
+		}
+		lenient_state_tax = {
+			gui = byzantine_pronoia_gov_mech_button
+			icon = GFX_pronoia_lenient_state_tax_button
+			cost_type = byzantine_pronoia_power
+			cost = 100
+			trigger = {
+			}
+			effect = { 
+				add_country_modifier = {
+					name = lenient_state_tax_mod
+					duration = 9125 #In theory, this power grows by an average of 4/year, or a click every 25 years.
+				}
+			}
+			ai_chance = {
+				factor = 5
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 40
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					any_subject_country = {
+						liberty_desire = 45
+					}
+				}
+				modifier = {
+					factor = 5
+					any_subject_country = {
+						liberty_desire = 50
+					}
+				}
+				modifier = {
+					factor = 10
+					any_subject_country = {
+						liberty_desire = 60
+					}
+				}
+			}
+		}
+	}
+	
+}
 
 byzantine_bureaucracy_mechanic = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics_byzantium
@@ -330,168 +492,6 @@ byzantine_bureaucracy_mechanic = {
 	}
 }
 
-byzantine_pronoia_mechanic = {
-	alert_icon_gfx = GFX_alerticons_government_mechanics_byzantium
-	alert_icon_index = 1
-	available = {
-		has_country_flag = byz_restored_pronoia_mechanic
-	}
-	
-	powers = {
-		byzantine_pronoia_power = {
-			gui = byzantine_pronoia_gov_mech_power
-			max = 150
-			base_monthly_growth = 1 #Countered by -2 at 80% nobility estate influence
-			monarch_power = ADM
-			is_good = yes
-		}
-	}
-	
-	interactions = {
-		demand_state_tax = {
-			gui = byzantine_pronoia_gov_mech_button
-			icon = GFX_pronoia_demand_state_tax_button
-			cost_type = byzantine_pronoia_power
-			cost = 100
-			trigger = {
-			}
-			effect = {
-				add_years_of_income = 1
-			}
-			ai_chance = {
-				factor = 20
-				modifier = {
-					factor = 0
-					NOT = { num_of_loans = 1 }
-				}
-				modifier = {
-					factor = 0.5
-					is_in_deficit = no
-				}
-				modifier = {
-					factor = 1.25
-					has_any_disaster = yes
-				}
-				modifier = {
-					factor = 1.5
-					num_of_loans = 2
-					is_in_deficit = yes
-				}
-				modifier = {
-					factor = 20
-					num_of_loans = 1
-				}
-				modifier = {
-					factor = 100
-					num_of_loans = 3
-				}
-				modifier = {
-					factor = 100
-					num_of_loans = 5
-				}
-				modifier = {
-					factor = 100
-					num_of_loans = 7
-				}
-
-			}
-		}
-		raise_tagmata = {
-			gui = byzantine_pronoia_gov_mech_button
-			icon = GFX_pronoia_raise_tagmata_button
-			cost_type = byzantine_pronoia_power
-			cost = 100
-			trigger = { 
-			}
-			effect = { 
-				add_yearly_manpower = 2
-				add_yearly_sailors = 2
-			}
-			ai_chance = {
-				factor = 2
-				modifier = {
-					factor = 0
-					is_at_war = no
-					OR = {
-						NOT = {
-							any_neighbor_country = {
-								NOT = { truce_with = ROOT }
-							}
-						}
-						manpower_percentage = 0.9
-					}
-				}
-				modifier = {
-					factor = 1.5
-					not = { manpower_percentage = 0.3 }
-				}
-				modifier = {
-					factor = 1.5
-					not = { manpower_percentage = 0.2 }
-				}
-				modifier = {
-					factor = 1.5
-					not = { manpower_percentage = 0.1 }
-				}
-				modifier = {
-					factor = 10
-					is_in_important_war = yes
-				}
-				modifier = {
-					factor = 3
-					is_at_war = yes
-					is_in_deficit = no
-				}
-			}
-		}
-		lenient_state_tax = {
-			gui = byzantine_pronoia_gov_mech_button
-			icon = GFX_pronoia_lenient_state_tax_button
-			cost_type = byzantine_pronoia_power
-			cost = 100
-			trigger = {
-			}
-			effect = { 
-				add_country_modifier = {
-					name = lenient_state_tax_mod
-					duration = 9125 #In theory, this power grows by an average of 4/year, or a click every 25 years.
-				}
-			}
-			ai_chance = {
-				factor = 5
-				modifier = {
-					factor = 0
-					NOT = {
-						any_subject_country = {
-							liberty_desire = 40
-						}
-					}
-				}
-				modifier = {
-					factor = 2
-					any_subject_country = {
-						liberty_desire = 45
-					}
-				}
-				modifier = {
-					factor = 5
-					any_subject_country = {
-						liberty_desire = 50
-					}
-				}
-				modifier = {
-					factor = 10
-					any_subject_country = {
-						liberty_desire = 60
-					}
-				}
-			}
-		}
-	}
-	
-}
-
-#Militarization
 byzantine_militarization_mechanic = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics_byzantium
 	alert_icon_index = 2
