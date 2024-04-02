@@ -52,7 +52,6 @@ hippodrome_of_constantinople = {
 				tag = ROM #Added because there might be somebody out there who wants to create flavour for Rome, and this would make sense for them.
 			}
 		}
-		is_capital = yes #Capital needs to be here if the Hippodrome functions
 	}
 
 	#can our country upgrade it?
@@ -63,7 +62,6 @@ hippodrome_of_constantinople = {
 				tag = ROM #Added because there might be somebody out there who wants to create flavour for Rome, and this would make sense for them.
 			}
 		}
-		is_capital = yes #Capital needs to be here if the Hippodrome functions
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -188,7 +186,15 @@ hippodrome_of_constantinople = {
 		country_modifiers = {
 			global_unrest = -1
 			legitimacy = 1
-			all_estate_loyalty_equilibrium = 0.05
+		}
+		
+		conditional_modifier = {
+			trigger = {
+				is_capital = yes
+			}
+			modifier = {
+				all_estate_loyalty_equilibrium = 0.05
+			}
 		}
 
 		#what effects happen when this tier is achieved
@@ -239,7 +245,6 @@ circus_maximus = {
 				tag = ROM #Added because there might be somebody out there who wants to create flavour for Rome, and this would make sense for them.
 			}
 		}
-		is_capital = yes #Capital needs to have been moved to Rome.
 	}
 
 	#what to do when it's built
@@ -258,7 +263,6 @@ circus_maximus = {
 				tag = ROM #Added because there might be somebody out there who wants to create flavour for Rome, and this would make sense for them.
 			}
 		}
-		is_capital = yes #Capital needs to have been moved to Rome.
 	}
 
 	#can our country upgrade it?
@@ -269,7 +273,6 @@ circus_maximus = {
 				tag = ROM #Added because there might be somebody out there who wants to create flavour for Rome, and this would make sense for them.
 			}
 		}
-		is_capital = yes #Capital needs to have been moved to Rome.
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -394,8 +397,16 @@ circus_maximus = {
 		country_modifiers = {
 			global_unrest = -1
 			prestige = 1
-			great_project_upgrade_cost = -0.25 #Feels fitting here, and I want some slight variation between this Hippodrome and the Constantinopolitan one.
-			war_exhaustion = -0.05 #To offset the project upgrade cost being slightly weaker than estate loyalty equilibrium.
+		}
+		
+		conditional_modifier = {
+			trigger = {
+				is_capital = yes
+			}
+			modifier = {
+				great_project_upgrade_cost = -0.25 #Feels fitting here, and I want some slight variation between this Hippodrome and the Constantinopolitan one.
+				war_exhaustion = -0.05 #To offset the project upgrade cost being slightly weaker than estate loyalty equilibrium.
+			}
 		}
 
 		#what effects happen when this tier is achieved

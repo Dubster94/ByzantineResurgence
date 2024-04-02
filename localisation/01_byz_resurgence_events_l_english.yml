@@ -245,7 +245,7 @@
  
  
  #Hippodrome monument because all other stuff relating to it is in this file.
- byz_hippodrome_upgrade_tooltip:0 "Will magnify the positive effects from Chariot Races"
+ byz_hippodrome_upgrade_tooltip:0 "Will magnify the positive effects from Chariot Races, if the province is the capital."
  hippodrome_of_constantinople:0 "Hippodrome of Constantinople"
  great_project_hippodrome_of_constantinople:0 "Hippodrome of Constantinople"
  hippodrome_of_constantinople_title:0 "Hippodrome of Constantinople"
