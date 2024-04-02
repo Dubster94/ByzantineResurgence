@@ -117,6 +117,8 @@ Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
 -Fixed Chariot Races event localisation such that, if you move your capital to Rome, the event text will recognise that.
 -Fixed Basileus Protostrategos ruler generals getting crap stats because apparently the effect does not use army tradition or ruler skill by default.
+-Fixed Arms Training privileges tech swapping for the Generals estate taking new crown land upon swapping from tech.
+-Fixed Circus Maximus being buildable when Rome is not the capital.
 
 ###########################################
 
