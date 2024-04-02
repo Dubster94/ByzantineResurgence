@@ -119,6 +119,7 @@ Bugfixes:
 -Fixed Basileus Protostrategos ruler generals getting crap stats because apparently the effect does not use army tradition or ruler skill by default.
 -Fixed Arms Training privileges tech swapping for the Generals estate taking new crown land upon swapping from tech.
 -Fixed Circus Maximus being buildable when Rome is not the capital.
+-Fixed Cimmerian Bosporus event firing when the toll is already there (Created by a prior owner)
 
 ###########################################
 

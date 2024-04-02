@@ -167,8 +167,9 @@ country_event = { #3 The Cimmerian Bosporus
 	trigger = {
 		owns = 3245
 		owns = 2447
-		1322 = {
+		2447 = {
 			is_strongest_trade_power = ROOT
+			NOT = { has_province_modifier = cimmerian_bosporus_sound_toll }
 		}
 		NOT = { has_country_flag = had_cimmerian_bosporus_event }
 	}
