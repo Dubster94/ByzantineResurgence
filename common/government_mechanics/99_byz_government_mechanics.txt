@@ -506,10 +506,11 @@ byzantine_militarization_mechanic = {
 			monarch_power = MIL
 			reset_on_new_ruler = yes
 			scaled_modifier = {
+				end_value = 200
 				modifier = {
 					generals_loyalty_modifier = 0.4
 					drill_decay_modifier = -1.0
-					drill_gain_modifier = 1.0
+					drill_gain_modifier = 2.0
 				}
 			}
 			range_modifier = {
