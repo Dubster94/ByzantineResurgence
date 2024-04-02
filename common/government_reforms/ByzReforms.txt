@@ -419,9 +419,6 @@ revoke_exarch_autonomy_reform = {
 			AND = {
 				has_reform = exarch_system_reform
 				absolutism = 65
-				any_country = {
-					is_exarch_tag_and_exarch_of_root_trigger = yes
-				}
 				NOT = {
 					any_country = {
 						is_exarch_tag_and_exarch_of_root_trigger = yes
