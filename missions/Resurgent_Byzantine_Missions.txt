@@ -4126,7 +4126,7 @@ byz_egypt_3 = {
 		trigger = {
 			trade_goods_produced_amount = {
 				trade_goods = grain
-				amount = 30 #This is 300 grain production dev, post-goods produced + production efficiency and manufactory stuff. I feel like Byzantium should have this, and if they don't at this rate, just build farm estates in Egypt, mkay?
+				amount = 75 #This is 750 grain production dev, post-goods produced + production efficiency and manufactory stuff. I feel like Byzantium should have this, and if they don't at this rate, just build farm estates in Egypt, mkay?
 			}
 		}
 		
