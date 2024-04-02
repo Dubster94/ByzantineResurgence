@@ -420,6 +420,10 @@ estate_generals_pike_formation_training = {
 				estate_generals_country_has_num_of_theme_capitals_trigger = { value = 1 }
 			}
 			set_estate_privilege = estate_generals_combined_arms_training
+			change_estate_land_share = {
+				estate = estate_generals
+				share = -5
+			}
 		}
 	}
 	modifier_by_land_ownership = {
@@ -480,6 +484,10 @@ estate_generals_combined_arms_training = {
 				estate_generals_country_has_num_of_theme_capitals_trigger = { value = 1 }
 			}
 			set_estate_privilege = estate_generals_flintlock_musket_training
+			change_estate_land_share = {
+				estate = estate_generals
+				share = -5
+			}
 		}
 	}
 	modifier_by_land_ownership = {
