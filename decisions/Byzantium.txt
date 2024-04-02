@@ -258,6 +258,7 @@ country_decisions = {
 					type = library_of_alexandria
 					instant = yes
 				}
+				custom_tooltip = restore_library_of_alexandria_tooltip
 			}
 		}
 	}
