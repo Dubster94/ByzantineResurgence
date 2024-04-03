@@ -5492,8 +5492,8 @@ byz_italy_5 = {
 		}
 		
 		trigger = {
-			development_in_provinces = { #This is 2130 dev at game start. Given that it'll develop as the game goes on, 2500 feels fair.
-				value = 2500
+			development_in_provinces = { #This is 2130 dev at game start. Given that it'll develop as the game goes on, 3000 feels fair.
+				value = 3000
 				custom_trigger_tooltip = {
 					tooltip = byz_development_in_provinces_mission_tooltip
 					OR = {
@@ -6652,10 +6652,18 @@ byz_iberia_4 = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = wine
-				amount = 40 #This corresponds to 400 production dev in wine provinces. That should not be a problem.
+				amount = 80 #This corresponds to 800 production dev in wine provinces. That should not be a problem.
+			}
+			trade_goods_produced_amount = {
+				trade_goods = bt_trade_good_fruit
+				amount = 80 #This corresponds to 800 production dev in fruit provinces. That should not be a problem.
 			}
 			trading_bonus = {
 				trade_goods = wine
+				value = yes
+			}
+			trading_bonus = {
+				trade_goods = bt_trade_good_fruit
 				value = yes
 			}
 		}
@@ -6692,7 +6700,7 @@ byz_iberia_4 = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = coal
-				amount = 6 #This corresponds to 60 production dev in coal provinces. That should not be a problem.
+				amount = 15 #This corresponds to 150 production dev in coal provinces. That should not be a problem.
 			}
 		}
 		
@@ -7358,7 +7366,7 @@ byz_endgame = {
 		
 		trigger = {
 			development_in_provinces = {
-				value = 15000
+				value = 25000
 				is_state = yes
 				is_state_core = ROOT
 			}
@@ -7878,7 +7886,11 @@ byz_galatia_2 = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = gold
-				amount = 25 #This corresponds to 250 production dev in gold provinces. Given where you are at this point, I do not think this will be hard to achieve.
+				amount = 10 #This corresponds to 100 production dev in gold provinces. Given where you are at this point, I do not think this will be hard to achieve.
+			}
+			trade_goods_produced_amount = {
+				trade_goods = bt_trade_good_silver
+				amount = 25 #This corresponds to 250 production dev in silver provinces. Given where you are at this point, I do not think this will be hard to achieve.
 			}
 		}
 		
