@@ -85,7 +85,7 @@ estate_exarches =
 	
 	#New in 1.30. Seems to be a modifier scaled to the percentage of crown land.
 	land_ownership_modifier = {
-		exarches_loyalty_modifier = 0.40 #Normal ones tend to be at 0.2
+		exarches_loyalty_modifier = 0.50 #Normal ones tend to be at 0.2
 	}
 
 	province_independence_weight = {
