@@ -7664,7 +7664,7 @@ byz_hre_3 = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = copper
-				amount = 15 #This corresponds to 150 production dev in copper provinces. That should not be a problem.
+				amount = 30 #This corresponds to 300 production dev in copper provinces. That should not be a problem.
 			}
 			trading_bonus = {
 				trade_goods = copper
@@ -7672,7 +7672,7 @@ byz_hre_3 = {
 			}
 			trade_goods_produced_amount = {
 				trade_goods = iron
-				amount = 25 #This corresponds to 100 production dev in iron provinces. That should not be a problem.
+				amount = 40 #This corresponds to 400 production dev in iron provinces. That should not be a problem.
 			}
 			trading_bonus = {
 				trade_goods = iron
