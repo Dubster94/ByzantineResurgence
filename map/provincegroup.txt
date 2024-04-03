@@ -591,7 +591,7 @@ adu_retake_sicily_provinces = {
 }
 
 adu_moroccan_conquest_provinces = {
-	5213 334 335 1751 4561 5210 5218 344 345 348 2469 2470 4564 4568 5226 342 343 2467 2468 4563 5211 5219
+	5213 334 335 1751 4561 5210 5218 344 345 348 2469 2470 4564 4568 5226 342 343 2467 2468 4563 5211 5219 
 }
 
 adu_own_tunisia_1_provinces = {
@@ -2273,7 +2273,7 @@ byz_east_mauretania_provinces = {
 byz_west_mauretania_provinces = {
 	342 343 2467 4563 5219 
 	334 335 1751 4561 5210 5218 
-	2465
+	2465 5213
 }
 
 byz_galicia_provinces = {
