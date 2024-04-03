@@ -2765,6 +2765,7 @@ province_event = { #36 The Theme capital [ROOT.GetName] attracts the countryside
 				NOT = { province_has_center_of_trade_of_level = 3 }
 			}
 			NOT = { is_at_war = yes }
+			NOT = { has_country_modifier = byz_disallowed_migration_country }
 		}		
 	}
 	
@@ -2787,8 +2788,8 @@ province_event = { #36 The Theme capital [ROOT.GetName] attracts the countryside
 	}
 	
 	mean_time_to_happen = {
-		years = 25
-	} #This only happens for Katepano theme capitals and such doesn't happen too often
+		years = 200 #As it's a province event, it needs to have a high MTTH, as multiple provinces having the potential of this to fire lowers this drastically.
+	} 
 	
 	option = { 
 		name = "resurgent_BYZ.36.a" #Let them move in

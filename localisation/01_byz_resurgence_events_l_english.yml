@@ -201,7 +201,7 @@
  
  
  resurgent_BYZ.36.t:0 "[byz_immigration_province.GetName] attracts the countryside populace"
- resurgent_BYZ.36.d:0 "The city of [byz_immigration_province.GetName] is prospering. In fact, it is doing so well that people from other cities in our Empire wish to relocate. The influx of people is so great that the local [Root.GetGeneralsName] has asked us for advice in what to do in this situation. If we don't let them relocate, the people will most certainly not appreciate it."
+ resurgent_BYZ.36.d:0 "The city of [byz_immigration_province.GetName], the seat of a Katepano, is prospering. In fact, it is doing so well that people from other cities in our Empire wish to relocate. The influx of people is so great that the local Katepano has asked us for advice in what to do in this situation. If we don't let them relocate, the people will most certainly not appreciate it."
  resurgent_BYZ.36.a:0 "Let them move to [byz_immigration_province.GetName]"
  resurgent_BYZ.36.b:0 "Stop the relocation attempt"
  byz_disallowed_migration_province:0 "Disallowed Relocation of Populace"
