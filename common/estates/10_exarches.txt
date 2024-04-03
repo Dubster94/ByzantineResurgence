@@ -164,5 +164,5 @@ estate_exarches =
 	agendas = {
 		#None at the moment, TODO.	
 	}
-	influence_from_dev_modifier = 1.0
+	influence_from_dev_modifier = 3.0
 }
