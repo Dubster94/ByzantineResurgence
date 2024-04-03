@@ -299,7 +299,7 @@ estate_generals =
 		influence = 40
 	}
 	influence_modifier = { #9
-		desc = EST_VAL_NUM_OF_GENERALS_NINE_OR_MORE
+		desc = EST_VAL_NUM_OF_GENERALS_NINE
 		trigger = {
 			if = {
 				limit = {
@@ -307,6 +307,7 @@ estate_generals =
 					is_monarch_leader = yes
 				}
 				num_of_generals = 11
+				NOT = { num_of_generals = 12 }
 			}
 			else_if = {
 				limit = {
@@ -316,12 +317,39 @@ estate_generals =
 					}
 				}
 				num_of_generals = 10
+				NOT = { num_of_generals = 11 }
 			}
 			else = {
 				num_of_generals = 9
+				NOT = { num_of_generals = 10 }
 			}
 		}
 		influence = 45
+	}
+	influence_modifier = { #10
+		desc = EST_VAL_NUM_OF_GENERALS_TEN_OR_MORE
+		trigger = {
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 12
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 11
+			}
+			else = {
+				num_of_generals = 10
+			}
+		}
+		influence = 50
 	}
 	#Well-developed theme capital
 	influence_modifier = {	
