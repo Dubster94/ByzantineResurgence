@@ -4382,6 +4382,15 @@ byz_africa_1 = {
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					NOT = { ADM = 6 }
+				}
+				change_adm = 1
+			}
+			else = {
+				add_adm_power = 50
+			}
 			
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_west_mauretania }
@@ -4411,6 +4420,28 @@ byz_africa_1 = {
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					NOT = { DIP = 6 }
+				}
+				change_dip = 1
+			}
+			else = {
+				add_dip_power = 50
+			}
+			151 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			western_morocco_area = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				add_claim = ROOT
+			}
+			marrekesh_area = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				add_claim = ROOT
+			}
 		}
 	
 		ai_weight = {
