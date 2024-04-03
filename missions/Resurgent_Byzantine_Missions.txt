@@ -4972,6 +4972,7 @@ byz_africa_2 = {
 			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_sardinia_corsica }
+			give_permaclaims_for_mission = { mission=byz_numidia }
 		}
 	
 		ai_weight = {
