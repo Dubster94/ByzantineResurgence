@@ -122,6 +122,10 @@ remove_country_modifier = BYZ_alienation_of_western_merchants #Because the way I
 	add_heir_personality = well_connected_personality
 }
 
+1437.1.1 = { #Grand Domestic Andronikos Palaiologos Kantakouzenos
+	leader = {	name = "Andronikos Palaiologos Kantakouzenos"	type = general	fire = 2	shock = 2	manuever = 2	siege = 0	death_date = 1453.5.29 }
+}
+
 1439.4.9 = { #Council of Florence ratified.
 	set_ruler_religion = catholic
 	set_heir_religion = catholic
