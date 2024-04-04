@@ -1,0 +1,14 @@
+
+
+advisor = {
+	advisor_id = 2000
+	name = "Demetrios Palaiologos Kantakouzenos" #Mesazon of the Byzantines
+	location = 151 #Thrace
+	discount = yes
+	skill = 2
+	religion = orthodox
+	culture = greek
+	type = statesman
+	date = 1433.1.1 #This is the date the person becomes 30 years old, but I honestly have no idea how old this person was. We know he served in the 1420s and that he was a cousin of John VIII.
+	death_date = 1453.5.26 #Died in the conquest of Constantinople
+}
