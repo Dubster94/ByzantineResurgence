@@ -334,7 +334,7 @@
 5156 = { "Pegai" "Pegai" } #
 5171 = { "Kyzikos" "Michailites" } #Miletoupolis is ancient. I'm using a more Byzantine name, the one which Mihalich actually derives from. Kyzikos is the island, an important city during Byzantine times
 #6003 = { "Pegadeia" "Pegadeia" }
-6004 = { "Pergamon" "Pergamon" }
+6004 = { "Neokastra" "Pergamon" } #Using the Theme of Neokastra established by the Komnenos. Though I presume it was more a province than an actual theme at that point, given the Komnenoi removal of Themes' military role.
 
 #Ionia
 318 = { "Smyrna" "Smyrna" }
@@ -611,7 +611,7 @@
 1856 = { "Sebastopolis" "Sebastopolis" }
 2195 = { "Palaia Achaia" "Palaia Achaia" }
 7299 = { "Pityous" "Nitike" } #Supposedly named Nitica by Romans. Also found a Soteriopolis on a Latin map, presumably hellenized as Soterioupolis
-7296 = { "Artaanion" "Artaanion" } #Hellenizing Artaani. I have no sources whatsoever claiming this to be the case, but this'll have to do.
+#7296 = { "Artaanion" "Artaanion" } #Hellenizing Artaani. I have no sources whatsoever claiming this to be the case, but this'll have to do.
 7295 = { "Onion" "Onion" } #As was the case of Ani, using the same root and adding -on
 7298 = { "Lentechion" "Lentechion" } #See above. There's no info whatsoever here.
 
