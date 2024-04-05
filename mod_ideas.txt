@@ -1,10 +1,14 @@
 #Future potential content:
 -Tie unique parliamentary issues to missions?
+	-A possibility, but enforcing a senate on the Byzantines is weird as that is not how the Byzantines did government. Besides, it's a Roman fantasy.
 -Tie new government mechanics to parliamentary issues?
+	-A possibility, but see above.
 
 -Adjust Latin Imperial Authority to a new government mechanic.
+	-Certainly a plan in the future.
 -Work on additional LTE missions to show up below Emperor Crusader missions, akin to what Russia has in Domination.
-
+	-Possibly, but the LTE missions need a full overhaul to actually show up below.
+	
 Latin Empire's Knightly Orders:
 -------------------------------
 - Needs estate privileges
@@ -15,9 +19,8 @@ Privilege ideas:
 -Need their other estate interactions reworked into privileges.
 
 #1.30 ideas:
--Estates: Can no longer own provinces directly. How to solve?
 -Align Pentarchy/East Oriental Schism missions to the system the new Papal mission "Mend the Schism" mission will use?
-
+	-Deemed not necessary as that system is literally just a conversion of all Orthodox into Catholic. Which is... weird.
 
 
 
@@ -58,7 +61,7 @@ Initial idea layout:
 						-Conceding Patras				(75% chance)
 						-Transferring Lesbian vassal	(100% chance)
 					Success chance increases as offers get greater.
-					If Genoa joins, theit trade league members also get an event where they decide to join, again based on relations and if they're at war already.
+					If Genoa joins, their trade league members also get an event where they decide to join, again based on relations and if they're at war already.
 					Byzantium will in return get the famous Genoese leader Giovanni Guistiniani for the duration of the war.
 					
 					
@@ -78,16 +81,17 @@ Decision to form Dacia as a Romanian-cultured nation. Should rename Hunedoara to
 #Ideas#
 #######
 
--Exarch Ravenna: Option to not cede Magna Graecia to Ravenna? Will cause issues with Exarch state blocking stating of provinces. Not sure.
-
+-Exarch Ravenna: Option to not cede Magna Graecia to Ravenna? Not sure.
 -Something mentioning the Monastery of the Pantocrator (Zeyrek Mosque) and how Byzantine emperors upon their death were buried there since the Komnenoi period.
 
 Byzantine Succession Mechanics:
 -------------------------------
-Byzantine succession was non-hereditary, but was especially in the late Empire treated as if it was, with the firstborn son generally being expected to rule, being named co-emperor rather early. Generally, that is how it worked.
+Byzantine succession was non-hereditary, but was especially in the late Empire treated as if it was, with the firstborn son generally being expected to rule, 
+being named co-emperor rather early. Generally, that is how it worked.
 Second sons and whatever were of course also granted land to govern, in the event that an emperor had no sons, meaning the rule would go to their younger brothers.
 This has led me to think that all Byzantium needs are flavour events to send your heirs to govern in a region.
-Akin to that of the Ottoman succession, there has been times where ambitious sons have attempted to exploit their position of governance being closer to Constantinople to overthrow whoever is next in line.
+Akin to that of the Ottoman succession, there has been times where ambitious sons have attempted to exploit their position of governance being closer to 
+Constantinople to overthrow whoever is next in line.
 Thus, this means we shall create an event where provincial governors that are second or third sons can rebel, spawning pretender rebels.
 
 Add event to pick heir to Byzantium before formalizing succession laws:
@@ -114,10 +118,6 @@ Potential succesion mechanics?
 - You get your last chance if your ruler hits 50.
 	- Here's a 25% chance of producing a child.
 - If you do not have a child, it fires the Succession Crisis disaster upon your ruler dying?
-
-Disasters:
-----------
-A disaster for Byzantium that converts to Catholic, perhaps also applicable for a Byzantium whose ruler is still Catholic as well.
 
 Events:
 -------
