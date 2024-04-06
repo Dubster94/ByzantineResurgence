@@ -3051,7 +3051,7 @@ country_event = {
 			factor = 100
 		}
 
-		if = {
+		if = { #Who coded this? This has *no* effect whatsoever if you've released Morea.
 			limit = {
 				NOT = { exists = MOE }
 			}
@@ -3067,20 +3067,32 @@ country_event = {
 			}
 			if = {
 				limit = {
-					thrace_area = { country_or_non_sovereign_subject_holds = ROOT }
+					thrace_area = { owned_by = ROOT }
 				}
 				thrace_area = {
 					limit = {
-						country_or_non_sovereign_subject_holds = ROOT 
+						owned_by = ROOT 
+						
 					}
 					cede_province = TUR
+				}
+			}
+			if = {
+				limit = {
+					northern_thrace_area = { owned_by = ROOT }
 				}
 				northern_thrace_area = {
 					limit = {
-						country_or_non_sovereign_subject_holds = ROOT 
+						owned_by = ROOT 
 					}
 					cede_province = TUR
 				}
+			}
+			thrace_area = {
+				remove_core = MOE
+			}
+			northern_thrace_area = {
+				remove_core = MOE
 			}
 			TUR = {
 				white_peace = ROOT
