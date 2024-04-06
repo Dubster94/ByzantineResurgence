@@ -112,6 +112,7 @@ Tweaks:
 	-Cut holy order tweaks implemented by BR.
 	-The Armenian mission tree in BR has been disabled for KoK users.
 -Altered the Succession Crisis to stop appearing when the idea "Formalization of Succession Laws" has been picked up.
+-Made Byzantium's flag less purple and more red.
 
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.
