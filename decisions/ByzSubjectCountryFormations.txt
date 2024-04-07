@@ -270,6 +270,7 @@ country_decisions = {
 				hidden_effect = { #Because this caused issues with government names???
 					ALN = {
 						change_government = monarchy
+						change_religion = ROOT
 					}
 				}
 				
