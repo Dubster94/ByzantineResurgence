@@ -188,7 +188,7 @@ apostolic_missions = {
 		}
 	}
 	apostolic_conquest_of_constantinople = {
-		icon = mission_constantinople
+		icon = mission_byz_constantinople
 		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 151

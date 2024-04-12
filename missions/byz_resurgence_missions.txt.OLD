@@ -361,7 +361,7 @@ byz_economic_1 = { #COPIED OVER
 	}
 	
 	byz_restore_city_of_cities = { #Restore the City of Cities
-		icon = mission_constantinople
+		icon = mission_byz_constantinople
 		position = 3 #5-3
 		required_missions = { byz_refill_imperial_treasury }
 		
@@ -601,7 +601,7 @@ byz_resurges = { #COPIED OVER
 	has_country_shield = yes
 	
 	byz_turn_the_tide = { #Turn the Tide
-		icon = mission_constantinople
+		icon = mission_byz_constantinople
 		position = 1 #1-1
 		required_missions = {  } #None, first mission
 		

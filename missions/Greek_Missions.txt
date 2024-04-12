@@ -85,7 +85,7 @@ gre_conquest_1 = {
 	}
 
 	gre_take_constantinople = { #Take Constantinople
-		icon = mission_constantinople
+		icon = mission_byz_constantinople
 		position = 5 #1-5
 		required_missions = { gre_consolidate_north_greece }
 		
