@@ -1040,7 +1040,7 @@ tribal = {
 				#Turkomen
 				turkoman_ottoman_institutions
 				#BT
-				somali_clan
+				somali_clan_reform
 				arabic_tribe_reform
 			}
 		}
