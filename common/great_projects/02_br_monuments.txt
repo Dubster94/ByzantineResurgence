@@ -1153,6 +1153,18 @@ tsarevets_church_of_ascension = {
 			nobles_loyalty_modifier = 0.05
 			church_loyalty_modifier = 0.05
 		}
+		
+		conditional_modifier = { #Bulgarian missions bonus
+			tooltip_potential = {
+				owner = { has_mission = bul_autocephaly }
+			}
+			trigger = {
+				owner = { mission_completed = bul_autocephaly }
+			}
+			modifier = {
+				missionaries = 1
+			}
+		}
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
@@ -1187,6 +1199,19 @@ tsarevets_church_of_ascension = {
 			nobles_loyalty_modifier = 0.05
 			church_loyalty_modifier = 0.05
 			global_missionary_strength = 0.02
+		}
+		
+		conditional_modifier = { #Bulgarian missions bonus
+			tooltip_potential = {
+				owner = { has_mission = bul_autocephaly }
+			}
+			trigger = {
+				owner = { mission_completed = bul_autocephaly }
+			}
+			modifier = {
+				missionaries = 1
+				manpower_in_own_culture_provinces = 0.33
+			}
 		}
 
 		#what effects happen when this tier is achieved
