@@ -67,6 +67,7 @@ br_varangian_guard_rowdy = {
 }
 br_turkic_cavalry = {
     regiments_per_development = 0.02
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
     cavalry_weight = 0.8
 	artillery_weight = 0.2
     cavalry_cap = 200
