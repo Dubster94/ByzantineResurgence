@@ -3,9 +3,20 @@ country_decisions = {
 	restore_roman_empire = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			normal_or_historical_nations = yes
 			NOT = { has_country_flag = restored_rome_flag }
 			owns = 118
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = PAP }
 			NOT = { exists = ROM }
 			#Byz_resurgence added
 			NOT = { tag = BYZ }
@@ -17,69 +28,36 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				region = italy_region
-				region = france_region
-				region = iberia_region
-				region = balkan_region
-				region = anatolia_region
-				region = mashriq_region
-				province_id = 343 # Fez
-				province_id = 341 # Tunis
-				province_id = 361 # Cairo
-				province_id = 236 # London
-				province_id = 245 # Yorkshire
-				province_id = 96 # Zeeland
-				province_id = 134 # Vienna
-			}
+			BYZ_roman_empire_decision_trigger = yes
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			italy_region = {
-				type = all
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				custom_trigger_tooltip = {
+					tooltip = BYZ_highlighted_by_decision
+					BYZ_roman_empire_decision_trigger = yes
+				}
+				value = 425
 			}
-			france_region = {
-				type = all
-				owned_by = ROOT
-			}
-			iberia_region = {
-				type = all
-				owned_by = ROOT
-			}
-			balkan_region = {
-				type = all
-				owned_by = ROOT
-			}
-			anatolia_region = {
-				type = all
-				owned_by = ROOT
-			}
-			mashriq_region = {
-				type = all
-				owned_by = ROOT
-			}
-			owns = 343 # Fez
-			owns = 341 # Tunis
-			owns = 361 # Cairo
-			owns = 236 # London
-			owns = 245 # Yorkshire
-			owns = 96 # Zeeland
-			owns = 134 # Vienna
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
+			118 = {
+				is_state = yes
+			}
 		}
 		effect = {
 			118 = {
 				move_capital_effect = yes
 			}
+			restore_country_name = yes
 			change_tag = ROM
+			on_change_tag_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						has_owner_accepted_culture = yes
+						culture_group = ROOT
 					}
 					change_culture = roman
 				}
@@ -95,7 +73,51 @@ country_decisions = {
 				}
 			}
 			set_government_rank = 3
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}
+				if = {
+					limit = {
+						government = monarchy
+						is_revolutionary = no
+						NOT = { has_reform = celestial_empire }
+					}
+					hidden_effect = {
+						unlock_government_reform = {
+							government_reform = roman_empire_reform
+						}
+						unlock_government_reform = {
+							government_reform = roman_republic_government
+						}
+					}
+					add_government_reform = roman_empire_reform
+				}
+				else_if = {
+					limit = {
+						government = republic
+						is_revolutionary = no
+					}
+					hidden_effect = {
+						unlock_government_reform = {
+							government_reform = roman_empire_reform
+						}
+						unlock_government_reform = {
+							government_reform = roman_republic_government
+						}
+					}
+					add_government_reform = roman_republic_government
+				}
+				else = {
+					unlock_government_reform = {
+						government_reform = roman_empire_reform
+					}
+					unlock_government_reform = {
+						government_reform = roman_republic_government
+					}
+				}
+			}
 			add_core = 118 # Rome
 			#if = {
 			#	limit = {
@@ -118,9 +140,18 @@ country_decisions = {
 				duration = 7300
 			}
 			set_country_flag = restored_rome_flag
+			
+			
+			if = {
+				limit = {
+					has_country_modifier = ITA_blatant_roman_larp
+				}
+				remove_country_modifier = ITA_blatant_roman_larp
+			}
+			set_country_flag = was_end_game_tag #BT Added: Forming an end-game tag.
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 	

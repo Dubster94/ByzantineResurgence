@@ -113,6 +113,7 @@ Tweaks:
 	-The Armenian mission tree in BR has been disabled for KoK users.
 -Altered the Succession Crisis to stop appearing when the idea "Formalization of Succession Laws" has been picked up.
 -Made Byzantium's flag less purple and more red.
+-Disabled Trebizonder missions if Winds of Change is enabled. The tree is otherwise untouched in BR as I lack the DLC.
 
 Bugfixes:
 -Fixed Antioch/Anatolia/Exarchate of the East not getting Exarchate ideas.

@@ -8,6 +8,7 @@ tre_reclaim_anatolia = {
 	ai = yes
 	potential = {
 		tag = TRE
+		NOT = { has_dlc = "Winds of Change" }
 	}
 	has_country_shield = yes
 	
@@ -380,6 +381,7 @@ tre_reclaim_anatolia_2 = {
 	ai = yes
 	potential = {
 		tag = TRE
+		NOT = { has_dlc = "Winds of Change" }
 	}
 	has_country_shield = yes
 	
@@ -423,6 +425,7 @@ tre_reclaim_chersonesus = {
 	ai = yes
 	potential = {
 		tag = TRE
+		NOT = { has_dlc = "Winds of Change" }
 	}
 	has_country_shield = yes
 	
@@ -527,6 +530,7 @@ tre_komnenoi_restoration = {
 	ai = yes
 	potential = {
 		tag = TRE
+		NOT = { has_dlc = "Winds of Change" }
 	}
 	has_country_shield = yes
 	

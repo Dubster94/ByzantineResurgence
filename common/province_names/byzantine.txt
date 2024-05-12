@@ -595,7 +595,7 @@
 7287 = { "Toga" "Toga" } #Found a "Toga" on Ptolemaios Geography way down the river. I figured I'd just go with this one.
 
 #Georgia
-4303 = { "Pharangion" "Pharangion" } #Actually a persian name, but it sounds sufficiently greek so I'll go for it. In Latin it was Pharangium. Alternatively we have Taochoi. This one is hell on earth to find a name for otherwise. Was 3249 pre 1.24
+4303 = { "Syspiritis" "Pharangion" } #Actually a persian name, but it sounds sufficiently greek so I'll go for it. In Latin it was Pharangium. Alternatively we have Taochoi. This one is hell on earth to find a name for otherwise. Was 3249 pre 1.24
 3250 = { "Apsaros" "Apsyrtos" } #Using the name of Gonio fortress. Used to be Ardanuj, but BT16's Caucasus overhaul moved the province.
 7296 = { "Ardanoutzin" "Ardanoutzin" } #Found in Escorial Taktikon.
 3251 = { "Achaltskai" "Achaltskai" } #The Armenian name is Achaltscha, Achaltsiche means "New castle", so if we want to drop the armenian/georgian names we could go for Neokastron. I went with assuming Achaltscha would turn into Achaltskae.

@@ -4,20 +4,23 @@ aristocracy_ideas = {
 	bonus = {
 		leader_siege = 1
 		nobles_loyalty_modifier = 0.1
+		rajput_loyalty_modifier = 0.1
+		maratha_loyalty_modifier = 0.1
 		generals_loyalty_modifier = -0.1
 	}
 }
 
 offensive_ideas = {
 	bonus = {
-		recover_army_morale_speed = 0.05
-		generals_loyalty_modifier = 0.05
+		recover_army_morale_speed = 0.1
+		qizilbash_loyalty_modifier = 0.1
 	}
 }
 
 defensive_ideas = {
 	bonus = {
 		hostile_attrition = 1
+		max_hostile_attrition = 1 
 		generals_loyalty_modifier = 0.05
 	}
 }
@@ -25,13 +28,15 @@ defensive_ideas = {
 quality_ideas = {
 	bonus = {
 		discipline = 0.05
+		janissaries_loyalty_modifier = 0.1
+		ghulams_loyalty_modifier = 0.1
 		generals_loyalty_modifier = 0.05
 	}
 }
 
 quantity_ideas = {
 	bonus = {
-		land_forcelimit_modifier  = 0.50
+		land_forcelimit_modifier  = 0.33
 		generals_loyalty_modifier = 0.05
 	}
 }
@@ -45,6 +50,7 @@ court_ideas = {
 		meritocracy = 0.25 
 		imperial_mandate = 0.1
 		imperial_authority = 0.05
+		monthly_cultural_unity = 0.5
 		exarches_loyalty_modifier = 0.05
 		monthly_logothete_general_power = 0.05
 		monthly_logothete_postal_power = 0.05

@@ -1505,7 +1505,7 @@ country_event = {
 }
 
 #Seize crownland
-country_event = { #TODO: Add new estates
+country_event = {
 	id = estate_privileges_and_agendas_events.7
 	title = estate_privileges_and_agendas_events.7.t
 	desc = estate_privileges_and_agendas_events.7.desc
@@ -1626,7 +1626,7 @@ country_event = { #TODO: Add new estates
 		ai_chance = { factor = 1 }
 	}
 
-	#Seize from church #TODO; REDO
+	#Seize from church
 	option = {
 		name = estate_privileges_and_agendas_events.7.b
 		trigger = {

@@ -92,7 +92,7 @@ estate_church = {
 
 	# Influence modifiers
 	base_influence = 10
-	influence_modifier = { #Should be a gov reform for Hejaz, imo.
+	influence_modifier = {
 		desc = EST_VAL_SHARIFS
 		trigger = {
 			tag = HED
@@ -265,6 +265,13 @@ estate_church = {
 		}
 	}
 	custom_name = {
+		desc = HORDE_SHAMANS
+		trigger = {
+			has_country_flag = hordes_devout_tengri_completion_flag
+			religion = tengri_pagan_reformed
+		}
+	}
+	custom_name = {
 		desc = estate_gurus
 		trigger = {
 			religion = sikhism
@@ -430,6 +437,13 @@ estate_church = {
 		estate_church_fund_madrasas
 		estate_church_sponsor_waqf_payments
 		estate_church_muslim_integration
+		#1.37
+		estate_church_INC_idol_making
+		estate_church_MAY_cocoa_monopoly
+		estate_church_religious_tolerance
+		estate_church_TIM_yasa_supremacy
+		estate_church_TIM_promote_ijazah
+		estate_church_MUG_promote_divine_religion
 		#BT
 		estate_church_monopoly_of_books
 		estate_church_monopoly_of_apiculture

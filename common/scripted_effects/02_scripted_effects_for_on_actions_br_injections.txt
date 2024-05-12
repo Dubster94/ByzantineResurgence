@@ -2,6 +2,15 @@
 on_new_monarch_effect = {
 	if = {
 		limit = {
+			has_government_attribute = orangist_cause
+		}
+		set_variable = {
+			which = NEDOrangistCauseVar
+			value = 0
+		}
+	}
+	if = {
+		limit = {
 			has_consort_regency = no
 			any_owned_province = {
 				has_province_modifier = domain_of_spouses_family
