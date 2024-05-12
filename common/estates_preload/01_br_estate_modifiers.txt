@@ -13,7 +13,7 @@ estate_generals = {
 		key = generals_absolutism_loyalty_modifier
 		trigger = {
 			has_estate = estate_generals
-			has_government_attribute = no_generals_loyalty_loss_from_absolutism
+			NOT = { has_government_attribute = no_generals_loyalty_loss_from_absolutism }
 		}
 	}
 
@@ -48,7 +48,7 @@ estate_exarches = {
 		key = exarches_absolutism_loyalty_modifier
 		trigger = {
 			has_estate = estate_exarches
-			has_government_attribute = no_exarches_loyalty_loss_from_absolutism
+			NOT = { has_government_attribute = no_exarches_loyalty_loss_from_absolutism }
 		}
 	}
 
@@ -83,7 +83,7 @@ estate_knightly_orders = {
 		key = knightly_orders_absolutism_loyalty_modifier
 		trigger = {
 			has_estate = estate_knightly_orders
-			has_government_attribute = no_knightly_orders_loyalty_loss_from_absolutism
+			NOT = { has_government_attribute = no_knightly_orders_loyalty_loss_from_absolutism }
 		}
 	}
 

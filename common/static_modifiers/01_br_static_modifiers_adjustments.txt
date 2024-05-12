@@ -21,6 +21,9 @@ war_taxes = {
 stability = {
 	global_trade_power = 0.01			#1% chance each step.
 	global_spy_defence = 0.05				#-15 to +15% modifier
+	monthly_cultural_unity = 0.1
+	monthly_divine_authority = 0.05
+	country_dev_points_modifier = 0.05 #BT Added
 	monthly_logothete_general_power = 0.05 #BR Added
 }
 
@@ -33,16 +36,20 @@ peace = {
 	pr_smugglers_influence = 0.1
 	monthly_militarized_society = -0.1
 	monthly_ottoman_decadence = 0.1
-	monthly_logothete_general_power = 0.1
-	#monthly_logothete_military_power = -0.1 #BT Cut. It felt better without it.
+	monthly_asha_vahishta = 0.25
+	monthly_arabic_trade_influence_power = 0.1
+	monthly_cultural_unity = 0.1
+	monthly_blood = -0.05
+	monthly_authority_power = 0.1
+	monthly_logothete_general_power = 0.1 #BR Added
 }
 
 mercantilism = {
 	global_prov_trade_power_modifier = 2.0
-	embargo_efficiency = 1 #BT Vanilla doubled effects
 	burghers_loyalty_modifier = 0.1 #BT Vanilla doubled effects
 	vaisyas_loyalty_modifier = 0.1 #BT Vanilla doubled effects
-	monthly_logothete_special_affairs_power = 0.2
+	embargo_efficiency = 1 #BT Vanilla doubled effects
+	monthly_logothete_special_affairs_power = 0.2 #BR Added
 }
 
 army_tradition = {
@@ -59,6 +66,8 @@ army_tradition = {
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
 	janissaries_loyalty_modifier = 0.05
+	qizilbash_loyalty_modifier = 0.05
+	ghulams_loyalty_modifier = 0.05
 	allowed_tercio_fraction = 0.1
 	allowed_samurai_fraction = 0.1
 	generals_loyalty_modifier = 0.1 #BR Added
@@ -74,6 +83,7 @@ navy_tradition = {
 	mr_traders_influence = 0.1
 	blockade_efficiency = 1
 	sailors_recovery_speed = 0.2
+	monthly_arabic_trade_influence_power = 0.2
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
 	allowed_geobukseon_fraction = 0.5
@@ -95,21 +105,6 @@ legitimacy = {
 	exarches_loyalty_modifier = 0.1 #BR Added
 }
 
-prestige = {
-	global_trade_power = 0.15			#+15/-15 total bonus from prestige.
-	land_morale = 0.1
-	naval_morale = 0.1
-	global_spy_defence = 0.1				#+10/-10
-	legitimacy = 1.0
-	improve_relation_modifier = 0.5
-	monthly_fervor_increase = 1
-	ae_impact = -0.10
-	#embracement_cost = -0.1			#BTAddOn removed - no real reason other than I don't like it. It does make balance easier to plan too, though, when not having to factor this into AI chance to embrace.
-	monthly_heir_claim_increase = 0.05
-	
-	all_estate_loyalty_equilibrium = 0.05 #BR Tweaked for better interface.
-}
-
 absolutism = {
 	stability_cost_modifier = -0.2			#BTAddOn added. Compensation for losing the Admin Efficiency and offsets higher global unrest. Also just logical sense... Note to self, watch out for stability cost reduction stacking, and perhaps do some number crunching soon.
 	administrative_efficiency = 0.2			#BTAddOn changed from 0.4. Too exploitable, moving the 0.1 of the lost 0.2 back into tech.
@@ -121,58 +116,31 @@ absolutism = {
 	monthly_ottoman_decadence = -0.5
 	
 	#I feel the idea behind absolutism is relegating all power away from, well, the estates of the realm, leaving the Monarch absolute. As such, estates should definitely become disloyal. This also makes a lot more sense mechanically, since now the player has a lot more control over how they handle their state. If they run headfirst into high absolutism with highly influential estates, they will definitely run into issues, what with them turning disloyal. As well, unrest will naturally rise as estates become disloyal at high absolutism, and other modifiers will have a degree of impact to try and offset Absolutism's bonuses.
-	church_loyalty_modifier = -0.20 #BTIP Added.
-	nobles_loyalty_modifier = -0.20 #BTIP Added. 
-	burghers_loyalty_modifier = -0.20 #BTIP Added.
+	church_absolutism_loyalty_modifier = -0.20 #BTIP Added.
+	nobles_absolutism_loyalty_modifier = -0.20 #BTIP Added. 
+	burghers_absolutism_loyalty_modifier = -0.20 #BTIP Added.
 	#Indian Castes
-	brahmins_hindu_loyalty_modifier = -0.20 #BTIP Added.
-	brahmins_muslim_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
-	brahmins_other_loyalty_modifier = -0.20 #BTIP Added.
-	maratha_exclusive_loyalty_modifier = -0.20 #BTIP Added. For nations whose nobles are Marathas, reduce by -20%
-	maratha_muslim_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
-	vaisyas_loyalty_modifier = -0.20 #BTIP Added. 
-	jains_loyalty_modifier = -0.20 #BTIP Added. I have pondered to split between -10% for Hindu indians and -20% for Muslim indians. However, there's no loyalty modifier to do this in vanilla, and I like the symmetry of all Indian nations having -20% loyalty.
-	rajput_exclusive_loyalty_modifier = -0.20 #BTIP Added. For nations whose nobles are Rajputs, reduce by -20%
-	rajput_muslim_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	brahmins_hindu_absolutism_loyalty_modifier = -0.20 #BTIP Added.
+	brahmins_muslim_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	brahmins_other_absolutism_loyalty_modifier = -0.20 #BTIP Added.
+	maratha_exclusive_absolutism_loyalty_modifier = -0.20 #BTIP Added. For nations whose nobles are Marathas, reduce by -20%
+	maratha_muslim_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	vaisyas_absolutism_loyalty_modifier = -0.20 #BTIP Added. 
+	jains_absolutism_loyalty_modifier = -0.20 #BTIP Added. I have pondered to split between -10% for Hindu indians and -20% for Muslim indians. However, there's no loyalty modifier to do this in vanilla, and I like the symmetry of all Indian nations having -20% loyalty.
+	rajput_exclusive_absolutism_loyalty_modifier = -0.20 #BTIP Added. For nations whose nobles are Rajputs, reduce by -20%
+	rajput_muslim_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
 	#Unique estates
-	cossacks_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
-	nomadic_tribes_loyalty_modifier = -0.20 #BTIP Added.
-	dhimmi_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
-	janissaries_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
-	eunuchs_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
-	qizilbash_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
-	ghulams_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
-	generals_loyalty_modifier = -0.10 #BR Added estate. Halved because unique estate
-	exarches_loyalty_modifier = -0.20 #BR Added estate.
-	knightly_orders_loyalty_modifier = -0.10 #BR Added estate. Halved because unique estate
-	peasants_loyalty_modifier = -0.10 #BTIP Added: Peasants estate. There is an argument that this shouldn't be here given that historically Absolutism granted the peasants more power relatively, but I think halving it works nicely.
-
-	#Below follows a bunch of loyalty modifiers that are here in order to allow government reforms to negate loyalty loss from absolutism.
-	church_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	nobles_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	burghers_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	#Indian Castes
-	brahmins_hindu_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	brahmins_muslim_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	brahmins_other_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	maratha_exclusive_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	maratha_muslim_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	vaisyas_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	jains_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	rajput_exclusive_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	rajput_muslim_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	#Unique estates
-	cossacks_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	nomadic_tribes_absolutism_loyalty_modifier = 0.20 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	dhimmi_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	janissaries_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	eunuchs_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	ghulams_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	qizilbash_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
-	generals_absolutism_loyalty_modifier = 0.10 #BR Added: Allows for government mechanics to negate loyalty loss from absolutism
-	exarches_absolutism_loyalty_modifier = 0.20 #BR Added: Allows for government mechanics to negate loyalty loss from absolutism
-	knightly_orders_absolutism_loyalty_modifier = 0.10 #BR Added: Allows for government mechanics to negate loyalty loss from absolutism
-	peasants_absolutism_loyalty_modifier = 0.10 #BT Added: Allows for government mechanics to negate loyalty loss from absolutism
+	cossacks_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	nomadic_tribes_absolutism_loyalty_modifier = -0.20 #BTIP Added.
+	dhimmi_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	janissaries_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	eunuchs_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	qizilbash_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	ghulams_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	generals_absolutism_loyalty_modifier = -0.10 #BR Added estate. Halved because unique estate
+	exarches_absolutism_loyalty_modifier = -0.20 #BR Added estate.
+	knightly_orders_absolutism_loyalty_modifier = -0.10 #BR Added estate. Halved because unique estate
+	peasants_absolutism_loyalty_modifier = -0.10 #BTIP Added: Peasants estate. There is an argument that this shouldn't be here given that historically Absolutism granted the peasants more power relatively, but I think halving it works nicely.
 }
 
 high_army_professionalism = {
@@ -197,18 +165,20 @@ expand_administation_modifier = {
 }
 
 diplomatic_reputation = {
+	num_of_soyurghals = 0.5
 	chance_to_inherit = 0.05 #BT added: Base inheritance chance is +5%/diplorep, -1% per province. Since we cannot modify this value, this is a bandaid fix. Since only Christians can form PUs and inherit, I think this is fine. //Dub
 	monthly_logothete_postal_power = 0.05 #BR Added
 }
 
 slackening_modifier = {
     yearly_army_professionalism = -0.05
-    manpower_recovery_speed = 1
+    manpower_recovery_speed = 2
 	monthly_logothete_military_power = -0.1 #BR Added
 }
 
 average_global_autonomy = { #100% autonomy => 100% modifier
 	monthly_ottoman_decadence = 0.25
+	monthly_divine_authority = -0.5
 	monthly_logothete_praetorium_power = -0.2 #BR Added
 }
 
