@@ -5006,6 +5006,7 @@ byz_africa_2 = {
 			sardinia_area = {
 				add_nationalism = -10
 			}
+			2986 = { add_building = road_network }
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_baleares }
 		}
