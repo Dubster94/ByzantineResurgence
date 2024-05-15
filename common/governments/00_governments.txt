@@ -354,6 +354,8 @@ monarchy = {
 				#1.37 Bohemia
 				vozove_hradby_reform
 				russian_mercenary_guard_reform 
+				#BT
+				bul_katepans_reform
 			}
 		}
 		deliberative_assembly = {
