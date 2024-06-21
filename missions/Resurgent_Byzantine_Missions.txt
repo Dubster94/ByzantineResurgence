@@ -1127,7 +1127,7 @@ byz_navy_2 = {
 	byz_modernize_navy = { #New in BR 8.0
 		icon = mission_establish_high_seas_navy
 		position = 5 #4-5
-		required_missions = { byz_no_latins_in_greece }
+		required_missions = { byz_no_latins_in_greece byz_expand_naval_dominance }
 		
 		provinces_to_highlight = {
 		
