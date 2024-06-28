@@ -1135,7 +1135,7 @@ restore_gov_power_part_2_effect = { #Created using two separate while loops to d
 		}
 	}
 	multiply_variable = {
-		which = monarch_kill
+		which = $gov_power$_var
 		value = 10
 	}
 	while = {
