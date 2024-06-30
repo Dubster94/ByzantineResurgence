@@ -13,5 +13,5 @@ tags={
 }
 picture="thumbnail.png"
 name="-BT Addon: Byzantine Resurgence"
-supported_version="1.37.*.*"
+supported_version="v1.37.2.0"
 remote_file_id="1088606279"
