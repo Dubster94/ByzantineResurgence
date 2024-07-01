@@ -2174,6 +2174,10 @@ pol_tend_east_provinces = {
 	3223 3225 7211 
 }
 
+anc_secure_ancona_provinces = {
+	119 2977 7025 7026 7027 7029 7030 7034 7035 7037 
+}
+
 
 
 
