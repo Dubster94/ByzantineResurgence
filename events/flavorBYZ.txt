@@ -2948,7 +2948,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { #BR Cut
 	id = MEE_Byzantine_Events.45
 	title = MEE_Byzantine_Events.45.t #Fall of Constantinople
 	desc = MEE_Byzantine_Events.45.d
@@ -2961,7 +2961,7 @@ country_event = {
 			owned_by = BYZ
 			controlled_by = ROOT
 		}
-		
+		always = no #BR Disabled
 		NOT = { exists = MOE }
 	}
 	
