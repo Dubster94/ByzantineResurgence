@@ -2,6 +2,18 @@ Patch notes:
 
 ###########################################
 ###########################################
+
+Byz Resurgence 8.0.1
+
+Features:
+
+Tweaks:
+-Cut KoK event to vassalize Byzantium as Ottomans because it's a buggy mess and BR has a sturdier option.
+
+Bugfixes:
+-Fixed Fall of Constantinople? event firing when Byzantium is not the leader of a defensive war against Ottomans
+
+
 ###########################################
 
 Byz Resurgence 8.0.0
