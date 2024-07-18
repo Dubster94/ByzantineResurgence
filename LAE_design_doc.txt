@@ -1,0 +1,9 @@
+1. Retool Latin Imperial Authority into a government mechanic.
+2. Tweak EMP_Crusader_Missions such that this is how the Latin Empire is formed with the Emperor DLC.
+3. Retool decisions to release latin duchies into a diplomatic action for your vassals. Works like Pronoiar from KoK.
+4. Allow establishment of knightly orders using local organisations.
+5. Expand EMP_Crusader_Missions tree to include:
+	-Conquests of Levant + Egypt
+	-Establish Knightly orders
+	-Convert Antioch, Jerusalem, Alexandria and Constantinople
+	-Spread Christianity to India and/or the New World
