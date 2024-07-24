@@ -5687,44 +5687,39 @@ byz_italy_4 = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = byz_roman_italy_tooltip
-				byz_gain_foothold_in_italy_provinces = {
-					type = all
-					is_state = yes
-					is_state_core = ROOT
-				}
-				byz_conquer_greater_greece_provinces = {
-					type = all
-					is_state = yes
-					is_state_core = ROOT
-				}
-				byz_sicily_provinces = {
-					type = all
-					is_state = yes
-					is_state_core = ROOT
-				}
-				byz_subjugate_pope_provinces = {
-					type = all
-					is_state = yes
-					is_state_core = ROOT
-				}
-				byz_central_italy_provinces = {
-					type = all
-					is_state = yes
-					is_state_core = ROOT
-				}
-				byz_lombardy_provinces = {
-					type = all
-					is_state = yes
-					is_state_core = ROOT
-				}
-				byz_land_access_to_italy_provinces = {
-					type = all
-					is_state = yes
-					is_state_core = ROOT
-				}
-				112 = {
-					is_state = yes
-					is_state_core = ROOT
+				NOT = {
+					byz_gain_foothold_in_italy_provinces = {
+						NOT = { is_state = yes }
+						NOT = { is_state_core = ROOT }
+					}
+					byz_conquer_greater_greece_provinces = {
+						NOT = { is_state = yes }
+						NOT = { is_state_core = ROOT }
+					}
+					byz_sicily_provinces = {
+						NOT = { is_state = yes }
+						NOT = { is_state_core = ROOT }
+					}
+					byz_subjugate_pope_provinces = {
+						NOT = { is_state = yes }
+						NOT = { is_state_core = ROOT }
+					}
+					byz_central_italy_provinces = {
+						NOT = { is_state = yes }
+						NOT = { is_state_core = ROOT }
+					}
+					byz_lombardy_provinces = {
+						NOT = { is_state = yes }
+						NOT = { is_state_core = ROOT }
+					}
+					byz_land_access_to_italy_provinces = {
+						NOT = { is_state = yes }
+						NOT = { is_state_core = ROOT }
+					}
+					112 = {
+						NOT = { is_state = yes }
+						NOT = { is_state_core = ROOT }
+					}
 				}
 			}
 		}
