@@ -404,12 +404,13 @@
  incidents_byzantine_resurgence.202.d:0 "The Emperor has made the choice - [br_emperor.Monarch.GetTitle] [br_emperor.Monarch.GetName] [br_emperor.Monarch.Dynasty.GetName] of the Holy Roman Empire has sent a diplomat to negotiate with us. They desire to sign a treaty. It states that the Empire of the Greeks shall not, under any circumstances or opportunity, encroach on HRE territory. In return, the Holy Roman Emperor, King of the Germans, shall refrain from expanding any further into the Balkans, leaving it for the Greeks to foster and maintain. This treaty shall be known forever as the Treaty of Two Romes. \n\nShall the treaty be signed?"
  incidents_byzantine_resurgence.202.a:0 "Just like that of the Franks, these barbarians cannot be trusted!"
  incidents_byzantine_resurgence.202.b:0 "Let's sign the treaty. Maybe they've come to their senses."
+ incidents_byzantine_resurgence.202.c:0 "Send the diplomat to the Oubliette so that I may cut out his eyes, personally..."
  
  incidents_byzantine_resurgence.203.tt:0 "Will send the diplomat back to [br_emperor.GetName], letting them know that their attempts at negotiation are futile."
  incidents_byzantine_resurgence.203.ttb:0 "[br_emperor.Monarch.GetTitle] [br_emperor.Monarch.GetName] [br_emperor.Monarch.Dynasty.GetName] will remember that."
  incidents_byzantine_resurgence.203.t:0 "The Greeks reject the treaty!"
  incidents_byzantine_resurgence.203.da:0 "Alas, despite our best efforts to negotiate with the Greeks, they regrettably have decided that hostility is the way forward. They have failed to see reason and therefore leave us with little choice."
- incidents_byzantine_resurgence.203.db:0 "The nerve of the Greeks. Not only did they completely reject our attempts at signing a treaty. They also decided that it was a good idea to blind our diplomat! May God have no mercy for the Greeks, and that they burn in the wretched Hells from whence they came!"
+ incidents_byzantine_resurgence.203.db:0 "The nerve of the Greeks! Not only did they completely reject our attempts at signing a treaty. They also decided that it was a good idea to blind our diplomat! May God have no mercy for the Greeks, and that they burn in the wretched Hells from whence they came!"
  incidents_byzantine_resurgence.203.a:0 "We did at least try to negotiate"
  
  incidents_byzantine_resurgence.204.tt:0 "Will send the diplomat back to [br_emperor.GetName], confirming that the terms of the deal have been accepted. \n\nThe terms of the treaty will be: \nByzantium may not encroach on §YHRE§! territory, whilst the Holy Roman Empire may not expand further into the §YBalkans§! region. \n\nAny land owned by §YByzantium§! will no longer be part of the HRE. \nAny HRE land in the §YBalkans§! region not owned by §YByzantium§! will remain in the HRE."
