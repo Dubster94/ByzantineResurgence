@@ -155,7 +155,7 @@ high_army_professionalism = {
 
 expand_administation_modifier = {
 	expand_administration_cost = 0.25 #Up from 0.2 to compensate the x2.5 increase below.
-	governing_capacity = 50 #x2.5, but it makes a nicer number.
+	governing_capacity = 25 #x2.5, but it makes a nicer number.
 	monthly_logothete_general_power = 0.01 #BR Added
 	monthly_logothete_postal_power = 0.01 #BR Added
 	monthly_logothete_military_power = 0.01 #BR Added
@@ -179,6 +179,7 @@ slackening_modifier = {
 average_global_autonomy = { #100% autonomy => 100% modifier
 	monthly_ottoman_decadence = 0.25
 	monthly_divine_authority = -0.5
+	global_autonomy = 0.2
 	monthly_logothete_praetorium_power = -0.2 #BR Added
 }
 
