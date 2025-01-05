@@ -3,9 +3,10 @@ Patch notes:
 ###########################################
 ###########################################
 
-Byz Resurgence 8.0.1
+Byz Resurgence 9.0.9
 
 Features:
+-Updated mod to BT17
 
 Tweaks:
 -Cut KoK event to vassalize Byzantium as Ottomans because it's a buggy mess and BR has a sturdier option.
