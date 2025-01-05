@@ -181,7 +181,7 @@ slackening_modifier = {
 }
 
 average_global_autonomy = { #100% autonomy => 100% modifier
-	monthly_ottoman_decadence = 0.1 # Harb's Autonomy Overhaul
+	monthly_ottoman_decadence = 0.2 # Harb's Autonomy Overhaul
 	monthly_divine_authority = -0.5
 	global_autonomy = 0.4 # Harb's Autonomy Overhaul
 	monthly_logothete_praetorium_power = -0.2 #BR Added
