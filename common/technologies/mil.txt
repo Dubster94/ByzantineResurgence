@@ -3,9 +3,7 @@ monarch_power = MIL
 # applied when a country is ahead of time in this technology
 ahead_of_time = {
 	monthly_russian_modernization = 0.05
-	fire_damage = 0.05			#BTAddOn new
-	shock_damage = 0.05			#BTAddOn new
-	#military_tactics 	= 	0.20			#BTAddOn new, but cut again as it didn't work.
+	land_maintenance_modifier = 0.20
 	ahead_of_time_benefit_mil = 1
 }
 
@@ -16,11 +14,13 @@ technology = {
 	
 	sprite_level = 1
 
-	infantry_fire		= 	0.5			#BTAddOn changed from 0.25 - Part of tech shock and fire overhaul
-	infantry_shock 		= 	0.75				#BTAddOn changed from 0.20 - Part of tech shock and fire overhaul
-	cavalry_shock  		= 	1.8				#BTAddOn changed from 0.8 - Part of tech shock and fire overhaul
-	cavalry_fire		= 	0.20			#BTAddOn new - Part of tech shock and fire overhaul
-	land_morale 		= 	3.0			#BTAddOn changed from 2.0, increasing base morale
+	land_morale 		= 	1.25
+	infantry_fire		= 	0.2
+	infantry_shock 		= 	0.4
+	cavalry_fire		= 	0.2
+	cavalry_shock  		= 	1.5
+	#artillery_fire 	= 	0.0		# Here to show starting values
+	#artillery_shock 	=	0.0		# Here to show starting values
 }
 
 technology = {
@@ -29,9 +29,6 @@ technology = {
 	expects_institution = {
 		feudalism = 0.25
 	}
-	
-	#infantry_shock		= 	0.1			#BTAddOn removed - Part of tech shock and fire overhaul
-	#infantry_fire 		= 	0.1			#BTAddOn removed - Part of tech shock and fire overhaul
 	
 	fort_15th = yes
 	
@@ -83,8 +80,13 @@ technology = {
 		feudalism = 0.5
 	}
 	
-	infantry_shock		= 	0.2
-	cavalry_shock		= 	0.4			#BTAddOn changed from 0.2 - Part of tech shock and fire overhaul
+	land_morale 		= 	0.25
+	infantry_fire		= 	0.1
+	infantry_shock 		= 	0.2
+	cavalry_fire		= 	0.1
+	cavalry_shock  		= 	0.5
+	artillery_shock 	= 	0.05
+	military_tactics	=	0.25
 	
 	combat_width = 5
 }
@@ -98,7 +100,14 @@ technology = {
 		feudalism = 0.5
 	}
 	
-	land_morale = 	0.5
+	land_morale 		= 	0.50
+	infantry_fire		= 	0.1
+	infantry_shock 		= 	0.2
+	cavalry_fire		= 	0.1
+	cavalry_shock  		= 	0.5
+	artillery_shock 	= 	0.05
+	military_tactics	=	0.25
+	
 	may_drill = yes
 }
 
@@ -109,12 +118,11 @@ technology = {
 		feudalism = 0.5
 	}
 
-	#Pike Square
+	#Pike Square	
+	infantry_shock 		= 	0.2
+	artillery_shock 	= 	0.05
+	military_tactics	=	0.2
 	
-	infantry_shock		= 	0.20			#BTAddOn new - Part of tech shock and fire overhaul
-
-	land_morale = 	0.5
-	military_tactics 	= 	0.25
 	armory = yes #BT More Buildings added
 }
 
@@ -125,11 +133,15 @@ technology = {
 		feudalism = 0.5
 		renaissance = 0.15
 	}
-	
+
 	#Standardised Pikes
 	supply_limit 		= 	0.2			#BTAddOn changed from 0.5, reducing tech supply limit bonus and increasing development bonus
-	#infantry_shock		= 	0.15			#BTAddOn removed - Part of tech shock and fire overhaul
-	cavalry_shock		= 	0.4
+
+	infantry_shock 		= 	0.2
+	cavalry_shock  		= 	0.5
+	artillery_shock 	= 	0.05
+	military_tactics	=	0.1
+
 	march_building = yes #BT More Buildings added
 
 	enable = western_men_at_arms	
@@ -176,13 +188,11 @@ technology = {
 	}
 	
 	#Arquebus
-	military_tactics 	= 	0.25
-	#infantry_shock		= 	0.30			#BTAddOn removed - Part of tech shock and fire overhaul
-	infantry_fire 		= 	0.30			#BTAddOn changed from 0.20 - Part of tech shock and fire overhaul
 	
+	land_morale 		= 	0.50
+	infantry_fire		= 	0.2
 	
 	ramparts = yes
-
 
 	enable = african_somali_cavalry
 	enable = african_tuareg_cavalry
@@ -228,9 +238,9 @@ technology = {
 
 	
 	#Pike and Shot
-	#infantry_fire		= 	0.25			#BTAddOn removed - Part of tech shock and fire overhaul
-	infantry_shock		= 	0.20			#BTAddOn new - Part of tech shock and fire overhaul
-	cavalry_shock		=	0.40			#BTAddOn changed from 0.8 - Part of tech shock and fire overhaul
+	infantry_fire		= 	0.2
+	military_tactics	=	0.15
+	
 	regimental_camp = yes
 }
 
@@ -243,9 +253,8 @@ technology = {
 		new_world_i = 0.15
 	}
 	
-	#Ditch
-	infantry_fire		= 	0.30			#BTAddOn new - Part of tech shock and fire overhaul
-	artillery_fire 		= 	0.60			#BTAddOn new - Part of tech shock and fire overhaul
+	land_morale 		= 	0.50
+	military_tactics	=	0.15
 	
 	enable = south_indian_musketeer	
 	enable = mughal_musketeer		
@@ -261,8 +270,6 @@ technology = {
 	#Byz_resurgence added Renovatio Imperii units
 	enable = eastern_raiders
 	enable = varangian_infantry
-	
-	military_tactics 	= 	0.25
 	combat_width = 1	
 }
 
@@ -277,8 +284,11 @@ technology = {
 	
 	#Reiter
 	maneuver_value 		= 	0.25
-	cavalry_fire		= 	0.2			#BTAddOn new - Part of tech shock and fire overhaul
-
+	
+	cavalry_fire		= 	0.6
+	cavalry_shock  		= 	0.5
+	
+	
 	enable = hungarian_hussar
 	enable = ottoman_spahi		
 	enable = culverin		
@@ -316,12 +326,7 @@ technology = {
 	}
 	
 	#Matchlock Musket
-	#infantry_shock		= 	0.20			#BTAddOn removed - Part of tech shock and fire overhaul
-	#cavalry_fire		= 	0.5			#BTAddOn removed - Part of tech shock and fire overhaul
-	infantry_fire		= 	0.30			#BTAddOn new - Part of tech shock and fire overhaul
-	cavalry_shock		= 	0.40			#BTAddOn new - Part of tech shock and fire overhaul
-	artillery_fire 		= 	0.60			#BTAddOn new - Part of tech shock and fire overhaul
-
+	infantry_fire		= 	0.2
 	
 	weapons = yes
 	
@@ -341,7 +346,12 @@ technology = {
 	sprite_level = 2
 	
 	supply_limit 		= 	0.3			#BTAddOn changed from 0.5, reducing tech supply limit bonus and increasing development bonus
-	military_tactics	=	0.25
+
+	land_morale 		= 	0.50
+	infantry_fire		= 	0.4
+	infantry_shock		= 	0.2
+	artillery_shock 	= 	0.05
+	military_tactics	=	0.15
 
 	enable = tofongchis_musketeer		
 	enable = ottoman_sekban		
@@ -373,8 +383,7 @@ technology = {
 	}
 	
 	#Trunnions
-	artillery_shock 	= 	0.2			#BTAddOn changed from 0.1 - Part of tech shock and fire overhaul
-	artillery_fire 		= 	0.70			#BTAddOn changed from 0.4 - Part of tech shock and fire overhaul
+	artillery_fire	 	= 	1
 	
 	enable = small_cast_iron_bombard
 	enable = large_cast_iron_bombard
@@ -392,9 +401,6 @@ technology = {
 	
 	#Star Bastions
 	fort_16th = yes
-	#infantry_fire		=	0.3			#BTAddOn removed - Part of tech shock and fire overhaul
-	artillery_fire 		= 	0.70			#BTAddOn new - Part of tech shock and fire overhaul
-	cavalry_shock		= 	0.40			#BTAddOn new - Part of tech shock and fire overhaul
 	
 	enable = african_hussar
 	enable = french_caracolle 
@@ -435,9 +441,8 @@ technology = {
 	}
 	
 	#Maurician Infantry
-	land_morale 		=	0.5			#BTAddOn changed from 1.0, increasing base morale
+	infantry_shock 		= 	0.2
 	military_tactics	=	0.25
-	
 
 	
 	enable = irish_charge 
@@ -464,9 +469,10 @@ technology = {
 	}
 	
 	#Standardisation of Calibre
-	#artillery_shock 	= 	0.1			#BTAddOn removed - Part of tech shock and fire overhaul
-	artillery_fire 		= 	0.70			#BTAddOn changed from 1.0 - Part of tech shock and fire overhaul
-
+	land_morale 		= 	0.50
+	infantry_fire		= 	0.15
+	cavalry_fire		= 	0.25
+	artillery_fire	 	= 	1
 
 	training_fields = yes
 	
@@ -487,8 +493,10 @@ technology = {
 		global_trade = 0.15
 	}
 	
-	#cavalry_shock		=	1.0			#BTAddOn removed - Part of tech shock and fire overhaul
-	infantry_fire		=	0.30			#BTAddOn new - Part of tech shock and fire overhaul
+	infantry_fire		= 	0.15
+	cavalry_fire		= 	0.25
+	cavalry_shock  		= 	0.5
+	
 	supply_limit		= 	0.2			#BTAddOn changed from 0.5, reducing tech supply limit bonus and increasing development bonus
 	
 	enable = maharathan_cavalry		
@@ -509,10 +517,12 @@ technology = {
 	
 	#Carbine
 	maneuver_value 		= 	0.25
-	cavalry_shock		= 	0.40			#BTAddOn new - Part of tech shock and fire overhaul
-	cavalry_fire		= 	0.20			#BTAddOn new - Part of tech shock and fire overhaul
+	
+	infantry_fire		= 	0.15
+	cavalry_fire		= 	0.25
+	
+	
 	#war_college = yes #BT More Buildings added
-
 		
 	enable = swedish_gallop	
 	enable = sikh_hit_and_run
@@ -542,13 +552,17 @@ technology = {
 	}
 	
 	#Gustavian Infantry
-	military_tactics 	= 	0.25
+	
+	land_morale 		= 	0.50
+	infantry_fire		= 	0.15
+	artillery_fire	 	= 	1
+	military_tactics	=	0.2
+	
+	
 	supply_limit		=	0.3			#BTAddOn changed from 0.5, reducing tech supply limit bonus and increasing development bonus
-	infantry_fire		=	0.30			#BTAddOn new - Part of tech shock and fire overhaul
 
 	fort_17th = yes
 
-	
 	enable = austrian_tercio   
 	enable = swedish_gustavian		
 	enable = scottish_highlander	
@@ -585,9 +599,6 @@ technology = {
 	
 	#Killing Grounds
 	
-	#infantry_fire		= 	0.5			#BTAddOn removed - Part of tech shock and fire overhaul
-	artillery_fire 		= 	0.70			#BTAddOn new - Part of tech shock and fire overhaul
-	
 	arsenal = yes #BT More Buildings added	
 	
 	enable = swivel_cannon		
@@ -610,9 +621,11 @@ technology = {
 	
 	#Line Infantry
 	sprite_level = 3
-	military_tactics 	= 	0.25
 	
-	infantry_shock 		=	0.20			#BTAddOn changed from 0.5 - Part of tech shock and fire overhaul
+	infantry_shock 		= 	0.2
+	artillery_shock 	= 	0.05
+	military_tactics	=	0.25
+	
 }
 
 technology = {
@@ -628,10 +641,9 @@ technology = {
 	}
 	
 	#Cartridge	(1620)?)
-	#cavalry_fire		=	0.5			#BTAddOn removed - Part of tech shock and fire overhaul
-	#artillery_shock 	=	0.1			#BTAddOn removed - Part of tech shock and fire overhaul
-	artillery_fire		=	0.7			#BTAddOn changed from 2.0 - Part of tech shock and fire overhaul
-	infantry_fire		= 	0.3			#BTAddOn new - Part of tech shock and fire overhaul
+	infantry_fire		= 	0.3
+	cavalry_fire		= 	0.25
+	artillery_fire	 	= 	1
 	
 	combat_width = 2
 	
@@ -661,9 +673,10 @@ technology = {
 	
 	#Light Cavalry
 	
-	cavalry_shock		=	0.4			#BTAddOn changed from 1.0 - Part of tech shock and fire overhaul
-	cavalry_fire		=	0.2			#BTAddOn new - Part of tech shock and fire overhaul
-	military_tactics 	= 	0.25
+	land_morale 		= 	0.50
+	cavalry_shock  		= 	1
+	military_tactics	=	0.25
+	
 	maneuver_value 		= 	0.5
 
 	enable = swedish_arme_blanche	
@@ -713,7 +726,6 @@ technology = {
 	
 	#Covered Way
 	fort_18th	= yes	
-	military_tactics 	= 	0.25
 
 	combat_width = 2
 }
@@ -732,8 +744,9 @@ technology = {
 	}
 	
 	#Metallurgy
-	artillery_shock 	=	0.2			#BTAddOn changed from 0.1 - Part of tech shock and fire overhaul
-	artillery_fire		=	0.7			#BTAddOn changed from 2.0 - Part of tech shock and fire overhaul
+	
+	artillery_fire	 	= 	1
+	artillery_shock 	= 	0.1
 	
 	enable = royal_mortar	
 	enable = licorne
@@ -754,10 +767,10 @@ technology = {
 	
 	#Light Infantry Companies
 	sprite_level = 4
-
-	infantry_fire		= 	0.4			#BTAddOn new - Part of tech shock and fire overhaul
-	land_morale			=	0.5			#BTAddOn changed from 1.0, increasing base morale
-
+	
+	land_morale 		= 	0.50
+	military_tactics	=	0.3
+	
 	enable = austrian_white_coat	
 	enable = french_bluecoat	
 	enable = british_redcoat	
@@ -809,9 +822,11 @@ technology = {
 	}
 	
 	#Bayonet
+	infantry_fire		= 	0.3
+	infantry_shock 		= 	0.2
+	military_tactics	=	0.25
+	
 	supply_limit		=	0.2			#BTAddOn changed from 0.5, reducing tech supply limit bonus and increasing development bonus
-	#infantry_fire		= 	0.4			#BTAddOn removed - Part of tech shock and fire overhaul
-	infantry_shock		= 	0.3			#BTAddOn new - Part of tech shock and fire overhaul
 }
 
 technology = {
@@ -830,8 +845,8 @@ technology = {
 	
 	#Cuirassier
 	maneuver_value 		= 	0.25
-	#infantry_shock		=	0.5			#BTAddOn removed - Part of tech shock and fire overhaul
-	cavalry_shock		=	0.4			#BTAddOn new - Part of tech shock and fire overhaul
+	
+	cavalry_shock  		= 	1
 	
 	enable = african_cuirassier
 	enable = russian_cuirassier	
@@ -869,8 +884,7 @@ technology = {
 	}
 	
 	#Defense in Depth
-	artillery_fire		=	0.7			#BTAddOn new - Part of tech shock and fire overhaul
-		
+	
 	enable = flying_battery  
 	enable = grand_battery
 }
@@ -890,12 +904,11 @@ technology = {
 	}
 	
 	#Impulse Warfare
-	#sprite_level = 5	
-	
+	#sprite_level = 5
+	land_morale 		= 	0.50
 	military_tactics	=	0.25
-	land_morale			=	1.0
+	
 	maneuver_value = 0.25
-	infantry_shock		=	0.3			#BTAddOn new - Part of tech shock and fire overhaul
 	
 	enable = russian_mass
 	enable = mixed_order_infantry	
@@ -931,10 +944,11 @@ technology = {
 	}
 	
 	#Rifle
-	#cavalry_shock		=	1.0			#BTAddOn removed - Part of tech shock and fire overhaul
-	cavalry_fire		=	0.2			#BTAddOn new - Part of tech shock and fire overhaul
-	infantry_fire		=	0.4			#BTAddOn changed from 1.0 - Part of tech shock and fire overhaul
+	infantry_fire		= 	0.4
+	cavalry_fire		= 	1
+
 	supply_limit		=	0.3			#BTAddOn changed from 0.5, reducing tech supply limit bonus and increasing development bonus
+
 }
 
 technology = {
@@ -952,7 +966,6 @@ technology = {
 	}
 	
 	#Field Howitzer
-	military_tactics	=	0.25
-	#artillery_shock		=	0.1			#BTAddOn removed - Part of tech shock and fire overhaul
-	artillery_fire		=	0.7			#BTAddOn changed from 1.0 - Part of tech shock and fire overhaul
+	artillery_fire	 	= 	2
+	
 }
