@@ -14,7 +14,7 @@ provincial_governor = {
 			}
 		}
 		modifier = {
-			governing_capacity_modifier = 0.03
+			governing_capacity_modifier = 0.05
 		}
 	}	
 
@@ -94,7 +94,7 @@ military_general = {
 			}
 		}
 		modifier = {
-			governing_capacity_modifier = 0.03
+			governing_capacity_modifier = 0.05
 		}
 	}	
 

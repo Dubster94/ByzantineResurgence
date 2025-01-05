@@ -13,8 +13,8 @@ byzantine_autocracy_reform = {
 	modifiers = {
 		max_absolutism = -25
 		prestige = 0.5
-		monthly_reform_progress_modifier = -0.1
-		global_autonomy = 0.05
+		monthly_reform_progress_modifier = -0.1 #BR Added? Or vanilla cut and BR kept
+		global_autonomy = 0.05 #BR Added? Or vanilla cut and BR kept
 	}
 	
 	custom_attributes = { #Enabling this because it's truly this bad.
@@ -38,6 +38,8 @@ reformed_byzantine_monarchy_reform = {
 		global_autonomy = -0.05
 		#culture_conversion_cost = -0.2 #BR Cut because Byzantium gets this in their idea set. It gets other modifiers in the below stuff anyway.
 		years_of_nationalism = -5
+		yearly_absolutism = 1
+		governing_capacity = 200 # Harb's Autonomy Overhaul
 	}
 	
 	government_abilities = {

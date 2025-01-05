@@ -57,7 +57,7 @@ estate_exarches =
 		land_forcelimit_modifier = 0.2
 		naval_forcelimit_modifier = 0.2
 		global_unrest = -2
-		governing_capacity_modifier = 0.5
+		global_autonomy = -0.05
 	}
 	country_modifier_neutral = {
 		state_maintenance_modifier = 1
@@ -66,7 +66,7 @@ estate_exarches =
 		state_maintenance_modifier = 5
 		land_forcelimit_modifier = -0.4
 		naval_forcelimit_modifier = -0.4
-		governing_capacity_modifier = -0.5
+		global_autonomy = 0.1
 	}
 	
 	# These do not scale, but only applied in provinces owned by the estate

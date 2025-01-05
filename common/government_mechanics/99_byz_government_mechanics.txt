@@ -240,7 +240,7 @@ byzantine_bureaucracy_mechanic = {
 	#Genikou: +50% national tax modifier
 	#Dromou: +50% improve relations modifier
 	#Stratiotikou: +50% manpower recovery speed
-	#Praitoriou +50% governing capacity modifier
+	#Praitoriou -50% Expand administration cost modifier
 	#Eidikou: +50% trade efficiency
 	#Hydaton: +10% ship durability & +50% sailor recovery speed
 	
@@ -317,7 +317,7 @@ byzantine_bureaucracy_mechanic = {
 			base_monthly_growth = 0
 			scaled_modifier = {
 				modifier = {
-					governing_capacity_modifier = 0.5
+					expand_administration_cost = -0.5
 					monthly_logothete_praetorium_power = -0.25
 				}
 			}

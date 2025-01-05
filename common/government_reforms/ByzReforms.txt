@@ -32,10 +32,10 @@ exarchate_reform = {
 		is_subject = yes
 	}
 	modifiers = {
-		administrative_efficiency = 0.1
+		#administrative_efficiency = 0.1
 		culture_conversion_cost = -0.8
 		#New idea: Exarchates should just convert cultures, not accept them.
-		num_accepted_cultures = -5
+		promote_culture_cost = 2
 	}
 	ai = {
 		factor = 100
@@ -380,7 +380,7 @@ exarch_system_reform = {
 		}
 	}
 	modifiers = {
-		governing_capacity = 500
+		governing_capacity_modifier = 0.05
 		max_absolutism = -20
 		generals_influence_modifier = -0.1
 	}

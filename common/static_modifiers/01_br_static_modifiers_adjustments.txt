@@ -23,7 +23,7 @@ stability = {
 	global_spy_defence = 0.05				#-15 to +15% modifier
 	monthly_cultural_unity = 0.1
 	monthly_divine_authority = 0.05
-	country_dev_points_modifier = 0.05 #BT Added
+	country_dev_points_modifier = 0.05 #BT Added for Dev Points. Needs to also be changed in dev_points_l_english.yml to actually update the GUI
 	monthly_logothete_general_power = 0.05 #BR Added
 }
 
@@ -101,6 +101,8 @@ legitimacy = {
 	monthly_militarized_society = 0.05
 	max_absolutism = 20
 	nobles_loyalty_modifier = 0.1
+	monthly_cultural_unity = 0.2
+	monthly_divine_authority = 0.3
 	generals_loyalty_modifier = 0.1 #BR Added
 	exarches_loyalty_modifier = 0.1 #BR Added
 }
@@ -114,6 +116,7 @@ absolutism = {
 	#global_unrest = 10			#BTAddOn added. Further disuading exploitation and just makes logical sense... the description even says absolutism is how 'ruthless' the government is. BTIP Cut to replace with estate loyalty equilibrium
 	#core_decay_on_your_own = -0.5			#BTAddOn removed. This is a fun idea that I might have to use elsewhere, but I'm just not seeing the link here with absolute governments specifically.
 	monthly_ottoman_decadence = -0.5
+	global_autonomy = -0.5 # Harb's Autonomy Overhaul
 	
 	#I feel the idea behind absolutism is relegating all power away from, well, the estates of the realm, leaving the Monarch absolute. As such, estates should definitely become disloyal. This also makes a lot more sense mechanically, since now the player has a lot more control over how they handle their state. If they run headfirst into high absolutism with highly influential estates, they will definitely run into issues, what with them turning disloyal. As well, unrest will naturally rise as estates become disloyal at high absolutism, and other modifiers will have a degree of impact to try and offset Absolutism's bonuses.
 	church_absolutism_loyalty_modifier = -0.20 #BTIP Added.
@@ -137,10 +140,11 @@ absolutism = {
 	eunuchs_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
 	qizilbash_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
 	ghulams_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
+	
+	peasants_absolutism_loyalty_modifier = -0.10 #BTIP Added: Peasants estate. There is an argument that this shouldn't be here given that historically Absolutism granted the peasants more power relatively, but I think halving it works nicely.
 	generals_absolutism_loyalty_modifier = -0.10 #BR Added estate. Halved because unique estate
 	exarches_absolutism_loyalty_modifier = -0.20 #BR Added estate.
 	knightly_orders_absolutism_loyalty_modifier = -0.10 #BR Added estate. Halved because unique estate
-	peasants_absolutism_loyalty_modifier = -0.10 #BTIP Added: Peasants estate. There is an argument that this shouldn't be here given that historically Absolutism granted the peasants more power relatively, but I think halving it works nicely.
 }
 
 high_army_professionalism = {
@@ -154,8 +158,8 @@ high_army_professionalism = {
 }
 
 expand_administation_modifier = {
-	expand_administration_cost = 0.25 #Up from 0.2 to compensate the x2.5 increase below.
-	governing_capacity = 50 #x2.5, but it makes a nicer number.
+	expand_administration_cost = 0.05 # Harb's Autonomy Overhaul
+	governing_capacity = 10 # Harb's Autonomy Overhaul
 	monthly_logothete_general_power = 0.01 #BR Added
 	monthly_logothete_postal_power = 0.01 #BR Added
 	monthly_logothete_military_power = 0.01 #BR Added
@@ -177,8 +181,9 @@ slackening_modifier = {
 }
 
 average_global_autonomy = { #100% autonomy => 100% modifier
-	monthly_ottoman_decadence = 0.25
+	monthly_ottoman_decadence = 0.1 # Harb's Autonomy Overhaul
 	monthly_divine_authority = -0.5
+	global_autonomy = 0.4 # Harb's Autonomy Overhaul
 	monthly_logothete_praetorium_power = -0.2 #BR Added
 }
 
@@ -194,6 +199,7 @@ tolerance = {
 
 pronoia_base_overlord_modifiers = {
 	land_forcelimit = -1
+	governing_capacity_modifier = -0.025 # Harb's Autonomy Overhaul
 	pronoia_amount_check_influence = 1 #used for exporting, invisible by default
 }
 
