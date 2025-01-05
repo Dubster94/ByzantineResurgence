@@ -3,16 +3,18 @@ Patch notes:
 ###########################################
 ###########################################
 
-Byz Resurgence 9.0.9
+Byz Resurgence 9.0.0
 
 Features:
 -Updated mod to BT17
 
 Tweaks:
 -Cut KoK event to vassalize Byzantium as Ottomans because it's a buggy mess and BR has a sturdier option.
+-Varangian Guard Elites & Reserves' names shortened to fit the unit screen (Varangian Elites & Varangian Reserves).
 
 Bugfixes:
--Fixed Fall of Constantinople? event firing when Byzantium is not the leader of a defensive war against Ottomans
+-Fixed Fall of Constantinople? event firing when Byzantium is not the leader of a defensive war against Ottomans.
+-Fixed Varangian Guard mercenary companies costing army professionalism due to a file order load bug.
 
 
 ###########################################
