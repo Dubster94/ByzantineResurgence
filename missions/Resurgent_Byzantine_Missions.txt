@@ -4356,6 +4356,10 @@ byz_africa_1 = {
 			}
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_east_mauretania }
+			east_maghreb_region = {
+				limit = { NOT = { is_permanent_claim = ROOT } }
+				add_claim = ROOT
+			}
 		}
 	
 		ai_weight = {
@@ -4434,11 +4438,7 @@ byz_africa_1 = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
-			western_morocco_area = {
-				limit = { NOT = { is_permanent_claim = ROOT } }
-				add_claim = ROOT
-			}
-			marrekesh_area = {
+			maghreb_region = {
 				limit = { NOT = { is_permanent_claim = ROOT } }
 				add_claim = ROOT
 			}
