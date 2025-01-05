@@ -52,7 +52,10 @@ country_decisions = {
 			change_tag = ARM
 			on_change_tag_effect = yes
 			restore_country_name_effect = yes
-			swap_non_generic_missions = yes #Armenia no missions yet has
+			if = {
+				limit = { has_dlc = "King of Kings" }
+				swap_non_generic_missions = yes
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"

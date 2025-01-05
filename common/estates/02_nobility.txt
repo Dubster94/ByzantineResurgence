@@ -45,6 +45,7 @@ estate_nobles = {
 		monthly_support_heir_gain = 0.1
 		rr_royalists_influence = 0.2
 		legitimacy = 1.0			#BTAddOn new - estates rebalancing
+		country_dev_points_modifier = 0.02
 		monthly_byzantine_pronoia_power = -1 #BR Added: Pronoiar gov mechanic
 	}
 	country_modifier_neutral = {
@@ -52,13 +53,15 @@ estate_nobles = {
 		rr_royalists_influence = 0.1
 		monthly_byzantine_pronoia_power = -2 #BR Added: Pronoiar gov mechanic
 	}	
-	country_modifier_angry = {
+	country_modifier_angry = { #BR doubling modifiers across the board, because you really want to feel them going disloyal.
 		manpower_recovery_speed = -0.4			#BTAddOn changed from 0.1 - estates rebalancing
 		land_maintenance_modifier = 0.2
+		monthly_support_heir_gain = -0.4
 		legitimacy = -2.0			#BTAddOn new - estates rebalancing
 		stability_cost_modifier = 0.66			#BTAddOn new - estates rebalancing
 		global_unrest = 4 			#New in 1.30
 		rr_royalists_influence = -0.1
+		country_dev_points_modifier = -0.04
 		monthly_byzantine_pronoia_power = -4 #BR Added: Pronoiar gov mechanic
 	}
 	land_ownership_modifier = {

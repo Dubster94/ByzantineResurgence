@@ -2965,15 +2965,11 @@ country_event = { #BR Cut
 		NOT = { exists = MOE }
 	}
 	
-	option = {
+	option = {						#BT Changed this is the wrong way round the ottomans with only ask the player changed to always ask
 		name = MEE_Byzantine_Events.45.a
 		
 		ai_chance = {
-			factor = 10
-			# modifier = {
-				# factor = 0
-				# BYZ = { ai = no }
-			# }
+			factor = 0
 		}
 
 		add_prestige_or_monarch_power = { amount = 10 }
@@ -2982,12 +2978,8 @@ country_event = { #BR Cut
 	option = {
 		name = MEE_Byzantine_Events.45.b
 		
-		ai_chance = {
-			factor = 90
-			# modifier = {
-				# factor = 0
-				# BYZ = { ai = yes }
-			# }
+		ai_chance = {				#BT Changed this is the wrong way round the ottomans with only ask the player changed to always ask
+			factor = 1
 		}
 
 		BYZ = {
@@ -3090,9 +3082,11 @@ country_event = {
 			}
 			thrace_area = {
 				remove_core = MOE
+				remove_core = BYZ
 			}
 			northern_thrace_area = {
 				remove_core = MOE
+				remove_core = BYZ
 			}
 			TUR = {
 				white_peace = ROOT
@@ -3477,6 +3471,7 @@ country_event = { #BR Disabled as a result of privilege disabled, thereby disabl
 			set_country_flag = byz_dishonoring_justinian
 		}
 		set_country_flag = BYZ_gave_in_to_papal_pressure
+		set_country_flag = was_end_game_tag #BT Added: Forming an end-game tag. Though probably not necessary here as Byzantium should be an end-game tag.
 		set_country_flag = has_byz_missions
 		hidden_effect = {
 			save_event_target_as = byz_latin_empire

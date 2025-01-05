@@ -620,10 +620,10 @@ monarchy = {
 	}
 
 	#Effects conflict with each other
-	exclusive_reforms = {
-		mughal_government
-		decentralize_reform
-	}
+	#exclusive_reforms = {
+	#	mughal_government
+	#	decentralize_reform
+	#} #BT Dev Note: This has been cut now. Not sure why it's still in BT. Do they conflict?
 
 	exclusive_reforms = {
 		states_general_reform
@@ -1127,6 +1127,7 @@ tribal = {
 				#BT
 				somali_clan_reform
 				arabic_tribe_reform
+				saharan_tribe_reform
 			}
 		}
 		tribal_cultural_values = {
@@ -1472,7 +1473,9 @@ theocracy = {
 				cuman_lancers_reform
 				#1.37 Bohemia
 				vozove_hradby_reform
-				russian_mercenary_guard_reform 
+				russian_mercenary_guard_reform
+				#BT
+				bul_katepans_reform
 			}
 		}
 		secularization = {
