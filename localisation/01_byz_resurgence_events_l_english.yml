@@ -32,11 +32,11 @@
  byz_cataphract_recruitment:0 "Allows for recruitment of Cataphract"
  
  resurgent_BYZ.5.t:0 "The Restoration of Constantinopolitan Manufactories"
- resurgent_BYZ.5.d:0 "The recent recovery of Constantinople has given rise to a great renaissance in the city. Merchants have flocked to the city for the two of Byzantium's most prized goods; glass and silk. While the silk exports were cut short during the events of the 4th Crusade, the byzantine glass industry has been attributed to the bridging of the silver-staining technique from the Arab world to Europe. As the city grows prosperous once more, the question arises whether to popularize the long-forgotten Byzantine silk, or focus on the art of glassmaking."
- resurgent_BYZ.5.a:0 "Favor the glassmakers!"
+ resurgent_BYZ.5.d:0 "The recent recovery of Constantinople has given rise to a great renaissance in the city. Merchants have flocked to the city for the two of Byzantium's most prized goods; ceramics and silk. While the silk exports were cut short during the events of the 4th Crusade, the Byzantine ceramics industry has been multifaceted: The Byzantine glassmaking being attributed to the bridging of the silver-staining technique from the Arab world to Europe, whilst Byzantine mosaicists have created famous works of art in many churches, amongst which are portraits from the Justinian period in the Basilica of San Vitale, as well as the many mosaics in the Hagia Sophia. \n\nAs the city grows prosperous once more, the question arises whether to popularize the long-forgotten Byzantine silk, or focus on the art of glassmaking."
+ resurgent_BYZ.5.a:0 "Favor the glassmakers & mosaicists!"
  resurgent_BYZ.5.b:0 "Let's reintroduce the Byzantine Silk!"
  byz_byzantine_silk:0 "Byzantine Silk"
- byz_byzantine_glass:0 "Byzantine Glass"
+ byz_byzantine_glass:0 "Byzantine Mosaics"
  
  resurgent_BYZ.6.t:0 "Rebuilding the Great Palace"
  resurgent_BYZ.6.d:0 "The Great Palace of Constantinople has since the sacking of the city during the 4th Crusade been in a state of disrepair. While the imperial residence had already been moved to the palace of Blachernae by Alexios I Komnenos, the Great Palace continued to be used for administrative and ceremonial purposes. After the recapture of Constantinople by the Palaiologoi, the building was used mainly as a prison vault. Now come the recovery of Constantinople, there's a call to rebuild the Great Palace and reinstate its former function."

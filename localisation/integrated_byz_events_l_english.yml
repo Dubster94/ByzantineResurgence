@@ -136,3 +136,5 @@
  desc_ceremonial_theodosian_walls:0 "While the Theodosian Walls would provide great defense in the past against any invaders, against modern artillery they stand no chance and are merely kept in repair for ceremonial purposes."
  succession_crisis: "Succession Crisis"
  integrated_searching_for_better_allies: "Searching for Better Allies"
+ 
+ byz_pretender_rebels_disaster_tooltip:0 "§RThe Succession Crisis disaster may fire again in the future§!"

@@ -116,13 +116,14 @@ estate_nobles_latifundia_kantakouzenos = {
 		#has_idea = byz_formalize_succession_laws
 		NOT = { num_of_rebel_armies = 1	}
 		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = { is_at_war = yes }
 	}
 	on_revoked = {
 		custom_tooltip = byz_revoke_latifundia_tooltip
 		set_country_flag = estate_nobles_latifundia_kantakouzenos
 		random_owned_province = {
 			spawn_rebels = {
-				size = 3
+				size = 2
 				type = pretender_rebels
 				leader = "Alexios Kantakouzenos"
 				leader_dynasty = "Kantakouzenos"
@@ -162,13 +163,14 @@ estate_nobles_latifundia_philantropenos = {
 		#has_idea = byz_formalize_succession_laws
 		NOT = { num_of_rebel_armies = 1	}
 		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = { is_at_war = yes }
 	}
 	on_revoked = {
 		custom_tooltip = byz_revoke_latifundia_tooltip
 		set_country_flag = estate_nobles_latifundia_philantropenos
 		random_owned_province = {
 			spawn_rebels = {
-				size = 3
+				size = 1
 				type = pretender_rebels
 				leader = "Georgios Philantropenos"
 				leader_dynasty = "Philantropenos"
@@ -208,13 +210,14 @@ estate_nobles_latifundia_metochites = {
 		#has_idea = byz_formalize_succession_laws
 		NOT = { num_of_rebel_armies = 1	}
 		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = { is_at_war = yes }
 	}
 	on_revoked = {
 		custom_tooltip = byz_revoke_latifundia_tooltip
 		set_country_flag = estate_nobles_latifundia_metochites
 		random_owned_province = {
 			spawn_rebels = {
-				size = 3
+				size = 1
 				type = pretender_rebels
 				leader = "Ioannes Metochites"
 				leader_dynasty = "Metochites"
@@ -254,13 +257,14 @@ estate_nobles_latifundia_choumnos = {
 		#has_idea = byz_formalize_succession_laws
 		NOT = { num_of_rebel_armies = 1	}
 		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = { is_at_war = yes }
 	}
 	on_revoked = {
 		custom_tooltip = byz_revoke_latifundia_tooltip
 		set_country_flag = estate_nobles_latifundia_choumnos
 		random_owned_province = {
 			spawn_rebels = {
-				size = 3
+				size = 1
 				type = pretender_rebels
 				leader = "Leon Choumnos"
 				leader_dynasty = "Choumnos"
@@ -300,13 +304,14 @@ estate_nobles_latifundia_melissenos = {
 		#has_idea = byz_formalize_succession_laws
 		NOT = { num_of_rebel_armies = 1	}
 		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = { is_at_war = yes }
 	}
 	on_revoked = {
 		custom_tooltip = byz_revoke_latifundia_tooltip
 		set_country_flag = estate_nobles_latifundia_melissenos
 		random_owned_province = {
 			spawn_rebels = {
-				size = 3
+				size = 1
 				type = pretender_rebels
 				leader = "Ioulianos Melissenos"
 				leader_dynasty = "Melissenos"
@@ -346,13 +351,14 @@ estate_nobles_latifundia_tornikes = {
 		#has_idea = byz_formalize_succession_laws
 		NOT = { num_of_rebel_armies = 1	}
 		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = { is_at_war = yes }
 	}
 	on_revoked = {
 		custom_tooltip = byz_revoke_latifundia_tooltip
 		set_country_flag = estate_nobles_latifundia_tornikes
 		random_owned_province = {
 			spawn_rebels = {
-				size = 3
+				size = 1
 				type = pretender_rebels
 				leader = "Demetrios Tornikes"
 				leader_dynasty = "Tornikes"

@@ -166,7 +166,7 @@ country_event = { #3 Chariot Riots!
 		151 = {
 			spawn_rebels = {
 				type = anti_tax_rebels
-				size = 2
+				size = 1
 			}
 		}
 	}

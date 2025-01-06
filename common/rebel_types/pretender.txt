@@ -405,6 +405,7 @@ pretender_rebels = {
 			limit = { has_disaster = succession_crisis }
 			end_disaster = succession_crisis
 			clr_country_flag = had_byz_succ_crisis
+			custom_tooltip = byz_pretender_rebels_disaster_tooltip
 			country_event = { id = succession_crisis.36 }
 		}
 		#Byz_resurgence added: Clears Military Coup upon enforcing demands.

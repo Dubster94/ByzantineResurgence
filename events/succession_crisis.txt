@@ -39,7 +39,7 @@ country_event = {
                 }
                 spawn_rebels = {
                     type = pretender_rebels
-                    size = 2
+                    size = 1
                 }
             }
             if = {
@@ -65,7 +65,7 @@ country_event = {
                     }
                     spawn_rebels = {
                         type = pretender_rebels
-                        size = 2
+                        size = 1
                         friend = TUR
                     }
                 } 
@@ -150,7 +150,7 @@ country_event = {
                 }
                 spawn_rebels = {
                     type = pretender_rebels
-                    size = 2
+                    size = 1
                     leader = "Alexander Gabras"
                     friend = FEO
                 }
@@ -286,6 +286,14 @@ country_event = {
             }
             clr_country_flag = accepted_pal
         }
+		if = {
+			limit = {
+				NOT = { has_country_flag = accepted_goth }
+				NOT = { has_country_flag = accepted_tre }
+				NOT = { has_country_flag = accepted_pal }
+			}
+			custom_tooltip = byz_pretender_rebels_disaster_tooltip
+		}
 		remove_country_modifier = byz_succession_crisis
     }
 	
@@ -365,7 +373,7 @@ country_event = {
                 }
                 spawn_rebels = {
                     type = pretender_rebels
-                    size = 2
+                    size = 1
                     leader = "Alexios Komnenos"
                     friend = TRE
                 }
@@ -378,7 +386,7 @@ country_event = {
 			330 = {
 				spawn_rebels = {
                     type = pretender_rebels
-                    size = 2
+                    size = 1
                     leader = "Alexios Komnenos"
                     friend = TRE
                 }
@@ -486,7 +494,7 @@ country_event = {
                 }
                 spawn_rebels = {
                     type = pretender_rebels
-                    size = 2
+                    size = 1
                     leader = "Teodoro Palaiologos"
                     friend = MFA
                 }
@@ -575,7 +583,7 @@ country_event = {
         147 = {
             spawn_rebels = {
                 type = pretender_rebels
-                size = 2
+                size = 1
                 leader = "Manuel Angelos Philanthropenos"
             }
         }
@@ -801,7 +809,7 @@ country_event = {
                 }
                 spawn_rebels = {
                     type = pretender_rebels
-                    size = 2
+                    size = 1
                     leader = "Ioannes Laskaris"
                     friend = TND
                 }

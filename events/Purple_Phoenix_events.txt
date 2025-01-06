@@ -21,6 +21,7 @@ country_event = {
 			has_regency = yes
 		}
 		has_government_attribute = civil_war_on_every_new_ruler
+		always = no #BR Disabled: There's already other events that can fire
 	}
 		
 	title = "purple_phoenix.1.t"

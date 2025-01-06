@@ -96,7 +96,64 @@ byz_economic_1 = {
 		
 		trigger = {
 			crown_land_share = 50
-			NOT = { average_home_autonomy = 10 }
+			calc_true_if = {
+				if = {
+					limit = {
+						has_estate = estate_nobles
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_church
+					}
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 60
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 60
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_generals
+					}
+					estate_loyalty = {
+						estate = estate_generals
+						loyalty = 60
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_exarches
+					}
+					estate_loyalty = {
+						estate = estate_exarches
+						loyalty = 60
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_cossacks
+					}
+					estate_loyalty = {
+						estate = estate_cossacks
+						loyalty = 60
+					}
+				}
+				amount = 2
+			}
+			#NOT = { average_home_autonomy = 10 } #Cut as part of BT's autonomy overhaul
 		}
 		
 		effect = {
