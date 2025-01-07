@@ -1247,8 +1247,8 @@ byz_navy_1 = {
 		}
 		
 		trigger = {
-			naval_forcelimit = 50
-			num_of_galley = 30
+			naval_forcelimit = 30
+			num_of_galley = 20
 		}
 		
 		effect = {
@@ -1338,9 +1338,9 @@ byz_military_1 = {
 		}
 		
 		trigger = {
-			army_size = 50
+			army_size = 30
 			army_tradition = 75
-			num_of_generals = 3
+			num_of_generals = 2
 		}
 		effect = {
 			add_legitimacy = 20
