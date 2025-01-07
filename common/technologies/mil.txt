@@ -221,9 +221,8 @@ technology = {
 	}
 	
 	#The limber
-	artillery_fire 		= 	1.6			#BTAddOn changed from 1 - Part of tech shock and fire overhaul
-	artillery_shock 	=	0.2			#BTAddOn changed from 0.05 - Part of tech shock and fire overhaul
-	military_tactics 	= 	0.25
+	artillery_fire		= 	1
+	
 	enable = large_cast_bronze_mortar 
 	enable = houfnice
 }
