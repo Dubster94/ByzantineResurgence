@@ -696,12 +696,51 @@ byz_reconquest_2 = {
 				}
 			}
 			
-			NOT = { exists = TRE }
-			NOT = { exists = EPI }
-			NOT = { exists = CAP }
+			custom_trigger_tooltip = {
+				tooltip = byz_reclaim_anatolia_tt
+				TRE = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+				EPI = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+				CAP = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+				FEO = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
 		}
 		
-		effect = {			
+		effect = {
+			anatolia_region = {
+				add_nationalism = -10 #To allow for faster culture conversions (It always takes me ages to get the Cappadocians in central Anatolia over to the west). Why not, huh?
+			}
 			#Dev bonuses
 			326 = { #Ancyra
 				add_base_tax = 3
