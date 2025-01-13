@@ -205,7 +205,7 @@ byz_economic_2 = {
 				is_strongest_trade_power = ROOT
 			}
 			151 = { #No Galata prov trigmod
-				NOT = { has_province_triggered_modifier = BYZ_galata }
+				NOT = { has_province_modifier = BYZ_galata }
 			}
 			custom_trigger_tooltip = {
 				tooltip = byz_restore_trade_hegemon_tooltip
