@@ -14,22 +14,24 @@ country_decisions = {
 			mil_power = 100
 			OR = {
 				mil = 5
-				advisor = army_organiser
+				army_organiser = 2
+				army_reformer = 2
+				quartermaster = 2
+				recruitmaster = 2
 			}
 		}
 		effect = {
-			add_years_of_income = -1
 			add_mil_power = -100
 			custom_tooltip = br_varangian_guard_enabled_tooltip
 			set_country_flag = br_varangian_guard_enabled
-			capital_scope = {
-				area = {
-					add_province_modifier = {
-						name = varangians
-						duration = -1
-					}
-				}
-			}
+			# capital_scope = { #BR Cut - feels unnecessary now.
+				# area = {
+					# add_province_modifier = {
+						# name = varangians
+						# duration = -1
+					# }
+				# }
+			# }
 		}
 		ai_will_do = {
 			factor = 1

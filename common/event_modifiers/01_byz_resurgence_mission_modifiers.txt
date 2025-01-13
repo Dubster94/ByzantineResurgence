@@ -40,6 +40,7 @@ byz_restored_hyperpyron = {
 
 byz_crown_authority_restored = { #Permanent
 	all_estate_influence_modifier = -0.1
+	global_autonomy = -0.05 #To counteract bad mod in starting reform, and makes sense given autonomy changes in BT17
 }
 
 byz_restored_trade_hegemon = {

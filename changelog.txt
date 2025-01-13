@@ -10,7 +10,18 @@ Features:
 
 Tweaks:
 -Cut KoK event to vassalize Byzantium as Ottomans because it's a buggy mess and BR has a sturdier option.
--Varangian Guard Elites & Reserves' names shortened to fit the unit screen (Varangian Elites & Varangian Reserves).
+-Made numerous tweaks to BR Mercenary companies:
+	-Varangian Guard Elites & Reserves' names shortened to fit the unit screen (Varangian Elites & Varangian Reserves)
+	-Made the Varangian Elites mercenary company not cost forcelimit to maintain and added a maximum size of 20.
+	-Tweaked composition of Varangian & Turkic Cavalry companies to not include artillery - not entirely sure why they had that in the first place.
+	-Tweaked Varangian Reserves/Guard/Elites costs from 30/60/90% of default to 50/75/125%
+-Tweaked early Byzantine missions to allow for a swifter path towards revoking the Byzantine Autocracy reform because of BT17 changes resulting in a major difficulty shift from the first Ottoman war over to the rest of the reconquest and restoration:
+	-Reduced navy and army size requirements for Byzantine missions to account for the autonomy changes in BT resulting in smaller armies and navies overall.
+	-Adjusted Trade Hegemon mission to require strongest trade power instead of 75% trade power due to how the AI gets disproportionate amounts of trade power.
+	-Adjusted No Latins in Greece to require the three tags to either not exist, or be your subjects and not catholic, to account for vassal integration time going up to 25 years and vassal play being practically necessary with such low government capacity.
+	-Similarly, Protect the Aegean has received the same treatment to its tag requirements.
+	-Tweaked Restore Naval Prominence mission to require 10 docks only due to Naval Arsenals moving up to dip tech 9. Also cut the naval tradition requirement as it specifically requires a large light ship investment to achieve. Given you need to navally defeat Venice, this feels way too harsh.
+-Added the Galata province triggered modifier to Constantinople and its relevant decision to remove it.
 
 Bugfixes:
 -Fixed Fall of Constantinople? event firing when Byzantium is not the leader of a defensive war against Ottomans.

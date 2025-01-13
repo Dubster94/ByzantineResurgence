@@ -32,7 +32,7 @@ byz_economic_1 = {
 		
 		trigger = {
 			treasury = 250
-			share_of_starting_income = 4 #Byzantium starts with 6.24 starting income. This should in theory require about 25 ducats/month.
+			share_of_starting_income = 3 #For some reason Byz now makes +2 extra ducats/month at game start. Reducing. #4 #Byzantium starts with 6.24 starting income. This should in theory require about 25 ducats/month.
 			NOT = { num_of_loans = 1 }
 			NOT = { inflation = 0.1 }
 		}
@@ -199,16 +199,13 @@ byz_economic_2 = {
 		
 		trigger = {
 			1320 = { #Constantinople
-				trade_share = {
-					country = ROOT
-					share = 75
-				}
+				is_strongest_trade_power = ROOT
 			}
 			5493 = { #Aegean Sea
-				trade_share = {
-					country = ROOT
-					share = 75
-				}
+				is_strongest_trade_power = ROOT
+			}
+			151 = { #No Galata prov trigmod
+				NOT = { has_province_triggered_modifier = BYZ_galata }
 			}
 			custom_trigger_tooltip = {
 				tooltip = byz_restore_trade_hegemon_tooltip
@@ -1045,9 +1042,36 @@ byz_reconquest_3 = {
 		}
 		
 		trigger = {
-			NOT = { exists = ATH }
-			NOT = { exists = EPI }
-			NOT = { exists = LES }
+			custom_trigger_tooltip = {
+				tooltip = byz_no_latins_in_greece_tt
+				ATH = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+				EPI = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+				LES = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
 			has_fulfiled_province_requirement_for_mission_trigger = {
 				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
 				provinces=byz_no_latins_in_greece_provinces
@@ -1191,9 +1215,9 @@ byz_navy_2 = {
 		}
 		
 		trigger = {
-			shipyard = 10
+			#shipyard = 10
 			dock = 10
-			navy_tradition = 30 #40 navy tradition is pretty darn hard.
+			#navy_tradition = 30 #40 navy tradition is pretty darn hard.
 			max_sailors = 10000
 			if = { limit = { has_dlc = "Rule Britannia" }
 				has_naval_doctrine = any
@@ -1298,10 +1322,45 @@ byz_navy_1 = {
 		}
 		
 		trigger = {
-			NOT = { exists = NAX }
-			NOT = { exists = CDA }
-			NOT = { exists = KNI }
-			NOT = { exists = CYP }
+			custom_trigger_tooltip = {
+				tooltip = byz_retake_greek_islands_tt #Wish there was a way for me to dynamically make this not require two identical localisation strings. Unfortunately, I do not see how without sacrificing something in the process.
+				NAX = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+				CDA = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+				KNI = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+				CYP = {
+					OR = {
+						exists = no
+						AND = {
+							NOT = { religion = catholic }
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
 			has_fulfiled_province_requirement_for_mission_trigger = {
 				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
 				provinces=byz_retake_greek_islands_provinces

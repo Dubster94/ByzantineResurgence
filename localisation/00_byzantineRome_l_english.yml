@@ -130,8 +130,9 @@
  br_varangian_guard_elite:0 "Varangian Elites"
  br_varangian_guard:0 "Varangian Guard"
  br_varangian_guard_rowdy:0 "Varangian Reserves"
+ FREE_OF_ARMY_PROFESSIONALISM_COST:0 "§JThis Mercenary Company costs no §YArmy Professionalism§! when recruited.§!\nThis Mercenary Company costs no §YForcelimit§! to maintain."
  #desc_varangian_guard:0 "The Varangian Guard is an elite mercenary unit feared for their fighting strength in the Imperial Army."
- br_varangian_guard_enabled_tooltip:0 "Enables the Varangian Guard mercenary company"
+ br_varangian_guard_enabled_tooltip:0 "Enables the §YVarangian Guard§!, §YVarangian Reserves§! & §YVarangian Elites§! mercenary companies"
  varangians:0 "Varangian Quarters"
  desc_varangians:0 "The Varangian Guard are quartered in the capital theme of the Empire. Unfortunately, they tend to be rather rowdy, and the locals are upset with the Varangians and the government over it."
  

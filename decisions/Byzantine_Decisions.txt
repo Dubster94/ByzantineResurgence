@@ -518,51 +518,51 @@
 			# factor = 100
 		# }
 	# }
-	
-	# BYZ_integrate_galata = {
-		# major = yes
-		# potential = {
-			# owns = 151
-			# 151 = {
-				# has_province_modifier = BYZ_galata 
-			# }
-		# }
-		# allow = {
-			# 151 = {
-				# has_most_province_trade_power = ROOT
-				# trade_share = {
-					# country = ROOT
-					# share = 50
-				# }
-			# }
-		# }
-		# effect = {
-			# 151 = {
-				# remove_province_triggered_modifier = BYZ_galata
+country_decisions = { #BR: Re-enabled as I kind of like it. Not a bad way to represent Galata I think.
+	BYZ_integrate_galata = {
+		major = yes
+		potential = {
+			owns = 151
+			151 = {
+				has_province_modifier = BYZ_galata 
+			}
+		}
+		allow = {
+			151 = {
+				has_most_province_trade_power = ROOT
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			151 = {
+				remove_province_triggered_modifier = BYZ_galata
 				
-				# if = {
-					# limit = {
-						# NOT = { owned_by = TUR } #Ottomans already get plenty dev bonuses and can do it as soon as they conquer...
-					# }
-					# add_base_tax = 3
-					# add_base_production = 1
-				# }
-				# if = {
-					# limit = {
-						# has_trade_modifier = {
-							# who = GEN
-							# key = BYZ_colony_in_galata
-						# }
-					# }
-					# remove_trade_modifier = {
-						# who = GEN
-						# key = BYZ_colony_in_galata
-					# }
-				# }
-			# }
-		# }
-		# ai_will_do = {
-			# factor = 100
-		# }
-	# }
-# }
+				if = {
+					limit = {
+						NOT = { owned_by = TUR } #Ottomans already get plenty dev bonuses and can do it as soon as they conquer...
+					}
+					add_base_tax = 2 #BT; 3
+					add_base_production = 2 #BT; 1
+				}
+				if = {
+					limit = {
+						has_trade_modifier = {
+							who = GEN
+							key = BYZ_colony_in_galata
+						}
+					}
+					remove_trade_modifier = {
+						who = GEN
+						key = BYZ_colony_in_galata
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
