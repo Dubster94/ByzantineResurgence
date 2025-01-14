@@ -32,7 +32,7 @@ byz_economic_1 = {
 		
 		trigger = {
 			treasury = 250
-			share_of_starting_income = 3 #For some reason Byz now makes +2 extra ducats/month at game start. Reducing. #4 #Byzantium starts with 6.24 starting income. This should in theory require about 25 ducats/month.
+			share_of_starting_income = 4 #Byzantium starts with 6.24 starting income. This should in theory require about 25 ducats/month.
 			NOT = { num_of_loans = 1 }
 			NOT = { inflation = 0.1 }
 		}
