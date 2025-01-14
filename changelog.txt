@@ -23,6 +23,7 @@ Tweaks:
 	-Tweaked Restore Naval Prominence mission to require 10 docks only due to Naval Arsenals moving up to dip tech 9. Also cut the naval tradition requirement as it specifically requires a large light ship investment to achieve. Given you need to navally defeat Venice, this feels way too harsh.
 -Added the Galata province triggered modifier to Constantinople and its relevant decision to remove it.
 -Tweaked Reclaim Anatolia mission to be similar in requirements to No Latins in Greece & Protect the Aegean, as well as adding a -10 years of separatism reward to the Anatolia region.
+-Tweaked Byzantine Resurgence CBs for Anatolia to become available earlier to match the mission tree better.
 
 Bugfixes:
 -Fixed Fall of Constantinople? event firing when Byzantium is not the leader of a defensive war against Ottomans.

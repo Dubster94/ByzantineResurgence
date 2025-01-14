@@ -3,7 +3,7 @@ monarch_power = MIL
 # applied when a country is ahead of time in this technology
 ahead_of_time = {
 	monthly_russian_modernization = 0.05
-	land_maintenance_modifier = 0.20
+	#land_maintenance_modifier = 0.20
 	ahead_of_time_benefit_mil = 1
 }
 

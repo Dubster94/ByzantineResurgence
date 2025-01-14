@@ -3,8 +3,7 @@ cb_recover_balkans = {
 	prerequisites = {
 		tag = BYZ
 		is_free_or_tributary_trigger = yes
-		any_province = {
-			region = balkan_region
+		balkan_region = {
 			owned_by = TUR
 		}
 		FROM = { tag = TUR }
@@ -18,13 +17,17 @@ cb_recover_anatolia = {
 	prerequisites = {
 		tag = BYZ
 		is_free_or_tributary_trigger = yes
-		any_province = {
-			region = anatolia_region
+		anatolia_region = {
 			owned_by = TUR
 		}
 		NOT = {
-			any_province = {
-				region = balkan_region
+			byz_deny_ottoman_access_provinces = {
+				owned_by = TUR
+			}
+			byz_reconquer_ottoman_greece_provinces = {
+				owned_by = TUR
+			}
+			byz_no_latins_in_greece_provinces = {
 				owned_by = TUR
 			}
 		}
