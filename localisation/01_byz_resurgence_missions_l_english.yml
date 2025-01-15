@@ -465,7 +465,7 @@
  byz_bad_trade:0 "Latin Merchants"
  desc_byz_bad_trade:0 "As the Empire continued to lose land after the reconquest of Constantinople, the Empire made itself dependent on the wealthy Latin merchant republics to survive. With the ever waning power of the Emperor, Latin merchants have taken control over the once state-regulated trade in Constantinople."
  byz_bad_religion:0 "Council of Florence"
- desc_byz_bad_religion:0 "The Council of Florence cited that the Byzantine Empire and its inhabitants shall bow down to the Papal authority in Rome, thereby unifying the two churches under Papal primacy. While never fully ratified, the decision made by the [Root.Monarch.GetTitle] to accept it still linger."
+ desc_byz_bad_religion:0 "The Council of Florence cited that the Byzantine Empire and its inhabitants shall bow down to the Papal authority in Rome, thereby unifying the two churches under Papal primacy. While never fully ratified, the decision made by the [Root.Monarch.GetTitle] to accept it still lingers."
  byz_bad_navy:0 "Foreign Fleet"
  desc_byz_bad_navy:0 "Since the neglect of the navy by the Angeloi prior to the 4th Crusade, the Byzantines have yet to manage a domestic fleet of their own. As a result of this, the Byzantines have been forced to rely on Genoese and Venetian seamen for their ventures, whose loyalties lie only in their greed."
  byz_bad_economy:0 "Hyperinflation"
