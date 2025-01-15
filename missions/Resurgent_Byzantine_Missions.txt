@@ -1175,7 +1175,15 @@ byz_diplomacy = {
 		trigger = {
 			OR = {
 				alliance_with = POL
-				alliance_with = HAB
+				if = {
+					limit = {
+						HAB = { is_subject = yes }
+					}
+					alliance_with = STY
+				}
+				else = {
+					alliance_with = HAB
+				}
 				alliance_with = HUN
 				num_of_allies = 3
 			}
