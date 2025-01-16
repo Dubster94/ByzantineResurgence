@@ -24,7 +24,7 @@ br_varangian_guard_elite = {
 	}
 }
 br_varangian_guard = {
-    regiments_per_development = 0.02
+    regiments_per_development = 0.015
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
     cavalry_weight = 0.2
 	#artillery_weight = 0.2
@@ -47,7 +47,7 @@ br_varangian_guard = {
 	}
 }
 br_varangian_guard_rowdy = {
-    regiments_per_development = 0.04
+    regiments_per_development = 0.02
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
     cavalry_weight = 0.1
 	#artillery_weight = 0.05
