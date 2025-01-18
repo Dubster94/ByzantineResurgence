@@ -22,12 +22,15 @@ Tweaks:
 	-Similarly, Protect the Aegean has received the same treatment to its tag requirements.
 	-Tweaked Restore Naval Prominence mission to require 10 docks only due to Naval Arsenals moving up to dip tech 9. Also cut the naval tradition requirement as it specifically requires a large light ship investment to achieve. Given you need to navally defeat Venice, this feels way too harsh.
 -Added the Galata province triggered modifier to Constantinople and its relevant decision to remove it.
--Tweaked Reclaim Anatolia mission to be similar in requirements to No Latins in Greece & Protect the Aegean, as well as adding a -10 years of separatism reward to the Anatolia region.
+-Tweaked Reclaim Anatolia mission to be similar in requirements to No Latins in Greece & Protect the Aegean, as well as adding a -10 years of separatism reward to the Anatolia region. It also no longer requires no Turkish cultured nation to exist
+-Tweaked Anatolian Restoration mission to require 900 dev in Anatolia instead of 750.
 -Tweaked Byzantine Resurgence CBs for Anatolia to become available earlier to match the mission tree better.
 
 Bugfixes:
 -Fixed Fall of Constantinople? event firing when Byzantium is not the leader of a defensive war against Ottomans.
 -Fixed Varangian Guard mercenary companies costing army professionalism due to a file order load bug.
+-Fixed bad english in several events and/or missions
+-Fixed Catholics not converting Byzantine provinces during Union of Churches disaster.
 
 
 ###########################################

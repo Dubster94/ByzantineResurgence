@@ -32,7 +32,7 @@ byz_economic_1 = {
 		
 		trigger = {
 			treasury = 250
-			share_of_starting_income = 4 #Byzantium starts with 6.24 starting income. This should in theory require about 25 ducats/month.
+			share_of_starting_income = 2 #Byzantium starts with 6.24 starting income. This should in theory require about 12.5 ducats/month.
 			NOT = { num_of_loans = 1 }
 			NOT = { inflation = 0.1 }
 		}
@@ -687,14 +687,6 @@ byz_reconquest_2 = {
 				provinces=byz_reclaim_anatolia_provinces
 				owner_type=country_or_non_sovereign_subject_holds
 			}
-			custom_trigger_tooltip = {
-				tooltip = byz_no_turkish_country
-				NOT = {
-					any_country = {
-						primary_culture = turkish
-					}
-				}
-			}
 			
 			custom_trigger_tooltip = {
 				tooltip = byz_reclaim_anatolia_tt
@@ -871,8 +863,8 @@ byz_reconquest_2 = {
 		}
 		
 		trigger = {
-			development_in_provinces = { #Anatolia starts with 524 dev (Used to be 702 dev in BT 15, 665 in BT 13 and 593 dev in BT 12 with Bugfixes). You also get a lot of dev in a lot of the missions as well, and you are expected to dev west Anatolia quite a bit with its rewards.
-				value = 750
+			development_in_provinces = { #Anatolia starts with 524 dev (Used to be 702 dev in BT 15, 665 in BT 13 and 593 dev in BT 12 with Bugfixes). You also get a lot of dev in a lot of the missions as well, and you are expected to dev west Anatolia quite a bit with its rewards. With dev points and the autonomy overhaul, this is not at all ridiculous.
+				value = 900
 				region = anatolia_region
 			}
 		}
@@ -1318,8 +1310,8 @@ byz_navy_1 = {
 		}
 		
 		trigger = {
-			naval_forcelimit = 30
-			num_of_galley = 20
+			naval_forcelimit = 20
+			num_of_galley = 15
 		}
 		
 		effect = {
