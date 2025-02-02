@@ -3985,6 +3985,7 @@ byz_egypt_1 = {
 				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
 				provinces=byz_upper_egypt_provinces
 				owner_type=country_or_non_sovereign_subject_holds
+				is_empty = yes #For prov 9085
 			}
 		}
 		
