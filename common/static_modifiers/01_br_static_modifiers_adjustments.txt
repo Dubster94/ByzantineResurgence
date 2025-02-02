@@ -108,16 +108,16 @@ legitimacy = {
 }
 
 absolutism = {
-	stability_cost_modifier = -0.2			#BTAddOn added. Compensation for losing the Admin Efficiency and offsets higher global unrest. Also just logical sense... Note to self, watch out for stability cost reduction stacking, and perhaps do some number crunching soon.
-	administrative_efficiency = 0.2			#BTAddOn changed from 0.4. Too exploitable, moving the 0.1 of the lost 0.2 back into tech.
-	production_efficiency = 0.2			#BTAddOn added. Compensation for losing the Admin efficiency, and also just logical sense... the description even says absolutism is how 'efficient' the government is. (Plus, 1.25 cut 0.3 from tech)
-	#discipline = 0.05			#BTAddOn removed. I see why this is here and appreciate the reasoning, but upon extensive consideration, I want to keep discipline out of absolutism. Absolute governments can have well trained, well drilled troops, but it can also be the sort of government that treats soldiers as fodder. Moving this bonus to professionalism, for what should be obvious reasons.
-	all_power_cost	= -0.05			#BTAddOn added. Very powerful compensation for losing Admin Efficiency, hopefully putting to rest any whining about that. Note again, the description of absolutism does read 'how efficient' the government is, so this seems fitting.
-	#global_unrest = 10			#BTAddOn added. Further disuading exploitation and just makes logical sense... the description even says absolutism is how 'ruthless' the government is. BTIP Cut to replace with estate loyalty equilibrium
+	#stability_cost_modifier = -0.2			#BTAddOn added. Compensation for losing the Admin Efficiency and offsets higher global unrest. Also just logical sense... Note to self, watch out for stability cost reduction stacking, and perhaps do some number crunching soon. # Harb's Autonomy Overhaul
+	#administrative_efficiency = 0.2			#BTAddOn changed from 0.4. Too exploitable, moving the 0.1 of the lost 0.2 back into tech. # Harb's Autonomy Overhaul # Harb's Autonomy Overhaul
+	#production_efficiency = 0.2			#BTAddOn added. Compensation for losing the Admin efficiency, and also just logical sense... the description even says absolutism is how 'efficient' the government is. (Plus, 1.25 cut 0.3 from tech) # Harb's Autonomy Overhaul
+	#discipline = 0.05			#BTAddOn removed. I see why this is here and appreciate the reasoning, but upon extensive consideration, I want to keep discipline out of absolutism. Absolute governments can have well trained, well drilled troops, but it can also be the sort of government that treats soldiers as fodder. Moving this bonus to professionalism, for what should be obvious reasons. # Harb's Autonomy Overhaul
+	#all_power_cost	= -0.05			#BTAddOn added. Very powerful compensation for losing Admin Efficiency, hopefully putting to rest any whining about that. Note again, the description of absolutism does read 'how efficient' the government is, so this seems fitting. # Harb's Autonomy Overhaul
+	#global_unrest = 10			#BTAddOn added. Further disuading exploitation and just makes logical sense... the description even says absolutism is how 'ruthless' the government is. BTIP Cut to replace with estate loyalty equilibrium # Harb's Autonomy Overhaul
 	#core_decay_on_your_own = -0.5			#BTAddOn removed. This is a fun idea that I might have to use elsewhere, but I'm just not seeing the link here with absolute governments specifically.
 	monthly_ottoman_decadence = -0.5
 	global_autonomy = -0.5 # Harb's Autonomy Overhaul
-	
+	#reelection_cost = -0.25
 	#I feel the idea behind absolutism is relegating all power away from, well, the estates of the realm, leaving the Monarch absolute. As such, estates should definitely become disloyal. This also makes a lot more sense mechanically, since now the player has a lot more control over how they handle their state. If they run headfirst into high absolutism with highly influential estates, they will definitely run into issues, what with them turning disloyal. As well, unrest will naturally rise as estates become disloyal at high absolutism, and other modifiers will have a degree of impact to try and offset Absolutism's bonuses.
 	church_absolutism_loyalty_modifier = -0.20 #BTIP Added.
 	nobles_absolutism_loyalty_modifier = -0.20 #BTIP Added. 
@@ -140,7 +140,7 @@ absolutism = {
 	eunuchs_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
 	qizilbash_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
 	ghulams_absolutism_loyalty_modifier = -0.10 #BTIP Added. Halved because unique estate
-	
+
 	peasants_absolutism_loyalty_modifier = -0.10 #BTIP Added: Peasants estate. There is an argument that this shouldn't be here given that historically Absolutism granted the peasants more power relatively, but I think halving it works nicely.
 	generals_absolutism_loyalty_modifier = -0.10 #BR Added estate. Halved because unique estate
 	exarches_absolutism_loyalty_modifier = -0.20 #BR Added estate.
