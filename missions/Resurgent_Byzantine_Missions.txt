@@ -21,44 +21,10 @@ byz_economic_1 = {
 	}
 	has_country_shield = yes
 	
-	byz_refill_imperial_treasury = { #Refill Imperial Treasury
-		icon = mission_war_chest
-		position = 1 #1-1
-		required_missions = {}
-		
-		provinces_to_highlight = {
-			#None
-		}
-		
-		trigger = {
-			treasury = 250
-			share_of_starting_income = 2 #Byzantium starts with 6.24 starting income. This should in theory require about 12.5 ducats/month.
-			NOT = { num_of_loans = 1 }
-			NOT = { inflation = 0.1 }
-		}
-		
-		effect = {
-			define_advisor = {
-				type = treasurer
-				skill = 3
-				discount = yes
-			}
-			define_advisor = {
-				type = master_of_mint
-				skill = 3
-				discount = yes
-			}
-		}
-		
-		ai_weight = {
-			factor = 500	#AI gogo!
-		}
-	}
-
 	byz_revive_hyperpyron = { #New in BR 8.0
 		icon = dominant_economy
-		position = 2 #1-2
-		required_missions = { byz_refill_imperial_treasury }
+		position = 1 #1-1
+		required_missions = { }
 		
 		provinces_to_highlight = {
 			trade_goods = gold
@@ -86,6 +52,40 @@ byz_economic_1 = {
 		}
 	}
 	
+	byz_refill_imperial_treasury = { #Refill Imperial Treasury
+		icon = mission_war_chest
+		position = 2 #1-2
+		required_missions = { byz_revive_hyperpyron }
+		
+		provinces_to_highlight = {
+			#None
+		}
+		
+		trigger = {
+			treasury = 250
+			share_of_starting_income = 3 #Byzantium starts with 6.24 starting income. This should in theory require about 20 ducats/month.
+			NOT = { num_of_loans = 1 }
+			NOT = { inflation = 0.1 }
+		}
+		
+		effect = {
+			define_advisor = {
+				type = treasurer
+				skill = 3
+				discount = yes
+			}
+			define_advisor = {
+				type = master_of_mint
+				skill = 3
+				discount = yes
+			}
+		}
+		
+		ai_weight = {
+			factor = 500	#AI gogo!
+		}
+	}
+
 	byz_restore_crown_authority = { #New in BR 8.0
 		icon = mission_crown_authority
 		position = 3 #1-3
@@ -178,11 +178,10 @@ byz_economic_2 = {
 	}
 	has_country_shield = yes
 	
-	
 	byz_state_trade_hegemon = { #New in BR 8.0
 		icon = mission_dominate_home_trade_node
 		position = 2 #2-2
-		required_missions = { byz_refill_imperial_treasury }
+		required_missions = { byz_revive_hyperpyron }
 		
 		provinces_to_highlight = {
 			OR = {
@@ -1311,7 +1310,11 @@ byz_navy_1 = {
 		
 		trigger = {
 			naval_forcelimit = 20
-			num_of_galley = 15
+			OR = {
+				num_of_galley = 15
+				num_of_light_ship = 15
+				num_of_heavy_ship = 3
+			}
 		}
 		
 		effect = {
