@@ -89,7 +89,7 @@ byz_economic_1 = {
 	byz_restore_crown_authority = { #New in BR 8.0
 		icon = mission_crown_authority
 		position = 3 #1-3
-		required_missions = { byz_revive_hyperpyron byz_state_trade_hegemon }
+		required_missions = { byz_refill_imperial_treasury byz_state_trade_hegemon }
 		
 		provinces_to_highlight = {
 		}
