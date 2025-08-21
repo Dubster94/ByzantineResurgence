@@ -49,11 +49,14 @@ country_event = { #2 The Genoese Merchants
 		capital_scope = {
 			is_strongest_trade_power = ROOT
 		}
-		NOT = {
-			military_strength = {
-				who = GEN
-				value = 3.0
+		OR = {
+			NOT = {
+				military_strength = {
+					who = GEN
+					value = 3.0
+				}
 			}
+			alliance_with = GEN
 		}
 		has_opinion = {
 			who = GEN
