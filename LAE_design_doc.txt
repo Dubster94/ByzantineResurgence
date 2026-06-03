@@ -4,7 +4,7 @@ Created diplomatic actions for your vassals to turn them into Knightly Orders. W
 
 Left to do:
 ===========
--Tweak Knightly Orders vassal type to interface with new Latin Imperial Authority gov mechanic.
+-Tweak Knightly Orders vassal type to interface with new Latin Imperial Authority gov mechanic. How?
 -Add Knightly Orders T3 government reform and move the mechanic over to that one.
 -Add Latin Imperial Authority changes:
 +0.01/loyal Knightly Order

@@ -7,6 +7,16 @@ Byz Resurgence 9.0.0
 
 Features:
 -Updated mod to BT17
+-Updated the Latin Imperial side of the mod to be more feature-complete and up-to-date with new mechanics, vanilla content and other things.
+	-The Latin Empire is now formed uniquely through the Crusader missions from the Emperor DLC
+	-Upon forming the Latin Empire this way, the Crusader mission tree is expanded to include 13 new missions that eventually sends you all across the world that the original tree did not.
+		-If you lack the Emperor DLC, you're unfortunately out of luck. If you're still playing EU4 now and don't have it, just go buy it in the summer sale or fetch it in other ways.
+	-The Knightly Order vassal type is now akin to vanilla Byzantine Pronoiar subjects in that they can be established from regular, loyal vassals.
+	-The Latin Imperial Authority mechanic is now a proper government mechanic.
+	-The Latin Empire has two unique government reforms: One that enables the Latin Imperial Authority mechanic, and the other that enables the establishment of Knightly Order vassals.
+	-A mission in the mission tree that relates to establishing Knightly Orders  and reaching 100 Latin Imperial Authority unlocks a second diplomatic action that lets the Latin Empire revoke land rights of Knightly Orders, allowing you to inherit them once their ruler dies.
+	-The Latin Empire gets early access to client states, facilitating the removal of BR's 30 or so crusader state tags.
+	-All the decisions to establish these knightly orders were also deprecated, as well as the variable system and all related scripted triggers, effects and province triggered modifiers.
 
 Tweaks:
 -Cut KoK event to vassalize Byzantium as Ottomans because it's a buggy mess and BR has a sturdier option.
@@ -21,7 +31,7 @@ Tweaks:
 	-Adjusted No Latins in Greece to require the three tags to either not exist, or be your subjects and not catholic, to account for vassal integration time going up to 25 years and vassal play being practically necessary with such low government capacity.
 	-Similarly, Protect the Aegean has received the same treatment to its tag requirements.
 	-Tweaked Restore Naval Prominence mission to require 10 docks only due to Naval Arsenals moving up to dip tech 9. Also cut the naval tradition requirement as it specifically requires a large light ship investment to achieve. Given you need to navally defeat Venice, this feels way too harsh.
--Added the Galata province triggered modifier to Constantinople and its relevant decision to remove it.
+-Added the Galata province triggered modifier to Constantinople from the grand KoK and its relevant decision to remove it.
 -Tweaked missions:
 	-Anatolian Reclamation is now similar in requirements to No Latins in Greece & Protect the Aegean, as well as adding a -10 years of separatism reward to the Anatolia region. It also no longer requires no Turkish cultured nation to exist
 	-Anatolian Restoration mission now requires 900 dev in Anatolia instead of 750.
@@ -33,6 +43,7 @@ Bugfixes:
 -Fixed Varangian Guard mercenary companies costing army professionalism due to a file order load bug.
 -Fixed bad english in several events and/or missions
 -Fixed Catholics not converting Byzantine provinces during Union of Churches disaster.
+-Fixed a BT bug that caused Knightly Orders to be erroneously known as Hanseatic League Members
 
 
 ###########################################
