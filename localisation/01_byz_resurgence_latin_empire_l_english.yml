@@ -7,6 +7,9 @@
  latin_imperial_authority_desc:0 "Latin Imperial Authority represents the authority the ruler holds over the landed Latin Knights. "
  monthly_latin_imperial_authority:0 "Monthly Latin Imperial Authority"
  latin_imperial_authority_gain_modifier:0 "Latin Imperial Authority Gain Modifier"
+ 
+ 
+ LAE_NOT_SAME_RELIGION:0 "§R- Not same religion as overlord.§!"
 
  byz_crusader_vassal_title:0 "Knightly Order"
  byz_crusader_vassal_title_plural:0 "Knightly Orders"

@@ -1,9 +1,27 @@
-1. Retool Latin Imperial Authority into a government mechanic.
-2. Tweak EMP_Crusader_Missions such that this is how the Latin Empire is formed with the Emperor DLC.
-3. Retool decisions to release latin duchies into a diplomatic action for your vassals. Works like Pronoiar from KoK.
-4. Allow establishment of knightly orders using local organisations.
-5. Expand EMP_Crusader_Missions tree to include:
-	-Conquests of Levant + Egypt
-	-Establish Knightly orders
-	-Convert Antioch, Jerusalem, Alexandria and Constantinople
-	-Spread Christianity to India and/or the New World
+Implemented Latin Imperial Authority into a government mechanic.
+Tweaked EMP_Crusader_Missions such that this is how the Latin Empire is formed with the Emperor DLC.
+
+Left to do:
+===========
+-Tweak Knightly Orders vassal type to interface with new Latin Imperial Authority gov mechanic.
+-Retool decisions to release latin duchies into a diplomatic action for your vassals. Works like Pronoiar from KoK.
+-Expand EMP_Crusader_Missions tree to include:
+
+1-5: Convert Egypt 					(Convert Egypt) 										- Permaclaims on Arabia. Permanent Latin Imperial Authority tick
+1-6: Defile Mecca 					(Conquer Mecca & Medina) 								- A large pile of money
+
+3-5: Convert Constantinople 		(Constantinople Catholic) 								- Local organisations (Franciskans and all that jazz)
+3-6: Restore Constantinople 		(T3 Hagia Sophia + 75 dev) 								- Buff Frankokratia national idea to give +33% manpower in true faith provinces
+
+3-8: The Tale of Two Romes 			(Challenge the HRE - dismantle it or be HREmperor) 		- 5% admin efficiency (Meme)
+3-9: A True Roman Empire			(Claim Rome. Specifically, *claim* the province.) 		- Gives permaclaims on Italy region
+
+4-5: Venture Further East 			(Conquer Mesopotamia) 									- 20 year can recruit explorers & conquistadors
+
+4-6: Reward the Knights 			(Claim T2 Landed Knights reform) 						- Get early client states
+4-7: Establish Knightly Orders 		(10 Knightly Orders established) 						- Reduce LD from subject dev modifier
+4-8: Amass the Orders 				(30 Knightly Orders established) 						- Right of Counsel costs no absolutism
+5-8: Enforce Authority 				(100 Latin Imperial Authority) 							- 1. Freeze Latin Imperial Authority. 2. Unlock inheritance ability for Knightly Orders
+
+5-6: Christianity to India			(1 Catholic province in India superregion)				- Center of Reformation in India??
+5-7: Christianity in Far East		(1 Catholic province in Far East superregion)			- Center of Reformation in China/Japan depending on where it is.

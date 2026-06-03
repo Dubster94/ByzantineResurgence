@@ -478,12 +478,14 @@ latin_knights_reform = {
 	government_abilities = {
 		latin_imperial_authority_mechanic
 	}
-	
+	custom_attributes = { #TODO: Move to T3 gov reform "Knightly Orders"
+		enables_knightly_orders = yes
+	}
 	effect = {
 		hidden_effect = {
 			set_government_power = {
 				mechanic_type = latin_imperial_authority_mechanic
-				power = latin_imperial_authority
+				power_type = latin_imperial_authority
 				value = 50
 			}
 		}

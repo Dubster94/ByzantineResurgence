@@ -1,0 +1,217 @@
+create_knightly_order = {
+	category = influence
+
+	alert_index = 17 #doesn't matter. it is forced onto the subject
+	alert_tooltip = sell_indulgence_alert_tooltip #doesn't matter. it is forced onto the subject
+
+	require_acceptance = no
+
+	is_visible = {
+		has_government_attribute = enables_knightly_orders
+		FROM = {
+			is_subject_of = ROOT
+			NOT = {
+				OR = {
+					is_subject_of_type = byz_crusader_vassal_revoked_land_rights
+					is_subject_of_type = byz_crusader_vassal
+				}
+			}
+			is_subject_other_than_tributary_trigger = yes
+		}
+	}
+	is_allowed = {
+		#Not relevant as of right now.
+		# if = {
+			# limit = { BYZ_reached_pronia_slot_limit = yes }
+			# custom_trigger_tooltip = {
+				# tooltip = BYZ_not_enough_free_pronoia_slots
+				# BYZ_enough_pronoia_slots = yes
+			# }
+		# }
+		if = {
+			limit = { from = { liberty_desire = 15 } }
+			custom_trigger_tooltip = {
+				tooltip = BYZ_too_much_liberty_desire
+				from = { not = { liberty_desire = 15 } }
+			}
+		}
+		if = {
+			limit = { from = { not = { religion = root } } }
+			custom_trigger_tooltip = {
+				tooltip = LAE_NOT_SAME_RELIGION
+				from = { religion = root }
+			}
+		}
+		if = {
+			limit = { from = { total_development = 400 } }
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_NOT_400_TOTAL_DEV
+				from = { not = { total_development = 400 } }
+			}
+		}
+		if = {
+			limit = { from = { not = { government = monarchy } } }
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_NOT_MONARCHY
+				from = { government = monarchy }
+			}
+		}
+		if = {
+			limit = {
+				from = {
+					not = { is_subject_of_type = vassal }
+					not = { is_subject_of_type = client_vassal }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_NOT_VASSAL_OF_ROOT
+				FROM = {
+					OR = {
+						is_subject_of_type = vassal
+						is_subject_of_type = client_vassal
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		from = { grant_independence = { keep_liberty_desire = yes } }
+		hidden_effect = {
+			#country_event = { id = MEE_Byzantine_Events.56 }
+			FROM = {
+				set_saved_name = {
+					key = byzantine_general
+					type = advisor
+					scope = ROOT
+				}
+				define_ruler = {
+					name = byzantine_general
+					change_mil = 4
+					change_adm = 1
+					change_dip = 0
+					min_age = 30
+					male = yes
+					religion = ROOT
+					culture = ROOT
+				}
+				if = {
+					limit = {
+						has_heir = yes
+					}
+					kill_heir = { allow_new_heir = no }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = LAE_inherited_knightly_orders
+			}
+			create_subject = {
+				subject_type = byz_crusader_vassal
+				subject = FROM
+				keep_liberty_desire = yes
+			}
+		}
+		else = {
+			create_subject = {
+				subject_type = byz_crusader_vassal_revoked_land_rights
+				subject = FROM
+				keep_liberty_desire = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+release_knightly_order = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			OR = {
+				is_subject_of_type = byz_crusader_vassal
+				is_subject_of_type = byz_crusader_vassal_revoked_land_rights
+			}
+		}
+	}
+	is_allowed = {
+		always = yes
+	}
+	on_accept = {
+		from = {
+			if = {
+				limit = { not = { liberty_desire = 50 } }
+				add_opinion = {
+					who = root
+					modifier = vassal_abandoned
+				}
+			}
+			grant_independence = yes
+			every_owned_province = {
+				limit = {
+					or = {
+						is_claim = root
+						is_permanent_claim = root
+						is_core = root
+					}
+				}
+				if = {
+					limit = { is_permanent_claim = root }
+					remove_claim = root
+				}
+				if = {
+					limit = { is_claim = root }
+					remove_claim = root
+				}
+				if = {
+					limit = { is_core = root }
+					remove_core = root
+				}
+			}
+		}
+		add_prestige = -25
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+revoke_knightly_order_land_rights = {
+	category = influence
+
+	alert_index = 17 #doesn't matter. it is forced onto the subject
+	alert_tooltip = sell_indulgence_alert_tooltip #doesn't matter. it is forced onto the subject
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = byz_crusader_vassal
+		}
+	}
+	is_allowed = {
+		if = {
+			limit = { from = { liberty_desire = 15 } }
+			custom_trigger_tooltip = {
+				tooltip = BYZ_too_much_liberty_desire
+				from = { not = { liberty_desire = 15 } }
+			}
+		}
+	}
+	on_accept = {
+		ROOT = {
+			create_subject = {
+				subject_type = byz_crusader_vassal_revoked_land_rights
+				subject = FROM
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
