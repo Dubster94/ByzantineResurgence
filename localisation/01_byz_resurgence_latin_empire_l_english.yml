@@ -7,7 +7,23 @@
  latin_imperial_authority_desc:0 "Latin Imperial Authority represents the authority the ruler holds over the landed Latin Knights. "
  monthly_latin_imperial_authority:0 "Monthly Latin Imperial Authority"
  latin_imperial_authority_gain_modifier:0 "Latin Imperial Authority Gain Modifier"
+ mechanic_enables_knightly_orders_yes:0 "Enables the establishment of Knightly Order vassals through diplomatic actions"
+ create_knightly_order:0 "Create Knightly Order"
+ create_knightly_order_title:0 "Create Knightly Order"
+ create_knightly_order_tooltip:0 "Converts the vassal into a Knightly Order. \n\nKnightly Orders are special militant vassals that do not take up a §YDiplomatic Relation§! and calculate their liberty desire individually from other vassals. If they grow large enough, they'll contribute positively to your Latin Imperial Authority."
+ create_knightly_order_desc:0 "Are you sure you want to Create a Knightly Order in §Y[From.GetName]§!?\n\nKnightly Orders are a unique subject type available to the §Y[LAE.GetName]§!\nKnightly Orders are special militant vassals. By default, Knightly Orders do <Stuff>"
+ # take away §R-5§! Land Forcelimit from their overlord while providing §G10.0%§! Forcelimit and §G20.0%§! Manpower and Sailors. Moreover, Pronoiars receive the following modifiers:\n§G-50.0%§! Regiment Cost\n§G+5000§! Manpower Increase\n§G+50.0%§! National Manpower Modifier\n§R+50.0%§! Core Creation Cost\n§R-20.0%§! Administrative Efficiency
  
+ release_knightly_order:0 "Release the Knightly Order"
+ release_knightly_order_title:0 "Release the Knightly Order"
+ release_knightly_order_desc:0 "Do you wish to release the Knightly Order of §Y[From.GetName]§!?\nThis will cost us §R25.00§! Prestige.\n[From.GetLoyaltyHitTooltip]We will also lose any cores and claims we have on their provinces."
+ release_knightly_order_tooltip:0 "Cancel our relationship with our Knightly Order and release their land of all of their services to us."
+ 
+ revoke_knightly_order_land_rights:0 "Retract Land Rights"
+ revoke_knightly_order_land_rights_title:0 "Retract Land Rights"
+ revoke_knightly_order_land_rights_desc:0 "Are you sure you want to revoke the land rights in [From.GetName]? This will greatly upset the Knightly Order in question but will allow you to inherit the country."
+ revoke_knightly_order_land_rights_tooltip:0 "The Knightly Order in [From.GetName] will no longer be able to pass on his land to his heirs. This will cause a major spike in Liberty Desire but will return those lands to us once the ruler dies."
+
  
  LAE_NOT_SAME_RELIGION:0 "§R- Not same religion as overlord.§!"
 

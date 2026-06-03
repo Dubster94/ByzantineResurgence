@@ -1,10 +1,11 @@
 Implemented Latin Imperial Authority into a government mechanic.
 Tweaked EMP_Crusader_Missions such that this is how the Latin Empire is formed with the Emperor DLC.
+Created diplomatic actions for your vassals to turn them into Knightly Orders. Works like Pronoiar from KoK.
 
 Left to do:
 ===========
 -Tweak Knightly Orders vassal type to interface with new Latin Imperial Authority gov mechanic.
--Retool decisions to release latin duchies into a diplomatic action for your vassals. Works like Pronoiar from KoK.
+-Look into Achaea missing cores.
 -Expand EMP_Crusader_Missions tree to include:
 
 1-5: Convert Egypt 					(Convert Egypt) 										- Permaclaims on Arabia. Permanent Latin Imperial Authority tick

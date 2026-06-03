@@ -102,22 +102,10 @@ create_knightly_order = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				has_country_flag = LAE_inherited_knightly_orders
-			}
-			create_subject = {
-				subject_type = byz_crusader_vassal
-				subject = FROM
-				keep_liberty_desire = yes
-			}
-		}
-		else = {
-			create_subject = {
-				subject_type = byz_crusader_vassal_revoked_land_rights
-				subject = FROM
-				keep_liberty_desire = yes
-			}
+		create_subject = {
+			subject_type = byz_crusader_vassal
+			subject = FROM
+			keep_liberty_desire = yes
 		}
 	}
 

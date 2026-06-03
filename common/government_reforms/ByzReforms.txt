@@ -482,13 +482,13 @@ latin_knights_reform = {
 		enables_knightly_orders = yes
 	}
 	effect = {
-		hidden_effect = {
+		#hidden_effect = {
 			set_government_power = {
 				mechanic_type = latin_imperial_authority_mechanic
 				power_type = latin_imperial_authority
 				value = 50
 			}
-		}
+		#}
 	}
 	
 	ai = {
