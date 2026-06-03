@@ -2,6 +2,7 @@ country_decisions = {
 	restore_latin_empire = {
 		major = yes
 		potential = {
+			NOT = { has_dlc = "Emperor" } #Disabled with Emperor DLC because the Crusader Missions allow you to form it.
 			NOT = { has_country_flag = restored_latin_empire }
 			NOT = { exists = LAE }
 			NOT = { tag = BYZ } #Forgot to add this.
