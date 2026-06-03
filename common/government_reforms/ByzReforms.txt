@@ -461,3 +461,25 @@ revoke_exarch_autonomy_reform = {
 		factor = 100
 	}
 }
+
+#Latin Empire!
+latin_knights_reform = {
+	icon = "gendarmes_reform"
+	allow_normal_conversion = no
+	potential = {
+		tag = LAE
+	}
+	
+	modifiers = {
+		nobles_influence_modifier = 0.1
+		nobles_loyalty_modifier = 0.15
+	}
+
+	government_abilities = {
+		latin_imperial_authority_mechanic
+	}
+	
+	ai = {
+		factor = 100
+	}
+}

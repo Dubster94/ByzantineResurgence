@@ -201,6 +201,8 @@ monarchy = {
 				#1.37 Trebizond
 				crusader_nobility_reform
 				TIM_plunder_economy
+				#BR Added:
+				latin_knights_reform
 			}
 		}
 		bureaucracy = {
