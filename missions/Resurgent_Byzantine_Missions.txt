@@ -669,15 +669,8 @@ byz_reconquest_2 = {
 		required_missions = { byz_reconquer_west_anatolia }
 		
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_group = byz_reclaim_anatolia_provinces
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				owner = { #Added because people don't understand Aq Qoyunlu is Turkish culture.
-					primary_culture = turkish
-				}
-			}
+			province_group = byz_reclaim_anatolia_provinces
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -2362,7 +2355,7 @@ byz_themes_1 = {
 	byz_theme_system = { #New in BR 8.0
 		icon = mission_strategoi
 		position = 11 #3-11
-		required_missions = { byz_reclaim_anatolia }
+		required_missions = { }
 		
 		provinces_to_highlight = {
 			OR = {
@@ -2373,6 +2366,7 @@ byz_themes_1 = {
 		}
 		
 		trigger = {
+			mission_completed = byz_resurgent
 			reform_level = 4
 			calc_true_if = {
 				desc = byz_theme_system_tooltip
