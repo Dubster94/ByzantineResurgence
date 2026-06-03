@@ -120,1026 +120,1026 @@ orthodox_catholic_relations = {
 
 
 #LTE Knightly Orders province modifier.
-lte_latin_imperial_authority_ld_modifier_1 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_1_tooltip
+# lte_latin_imperial_authority_ld_modifier_1 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_1_tooltip
 					
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 5
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_1_tooltip
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 5
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_1_tooltip
 					
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 5
-						}
-					}
-				}
-			}
-		}
-	}
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 5
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 50
-}
-lte_latin_imperial_authority_ld_modifier_2 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_2_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 50
+# }
+# lte_latin_imperial_authority_ld_modifier_2 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_2_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 5
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 10
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_2_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 5
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 10
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_2_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 5
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 10
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 5
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 10
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 40
-}
-lte_latin_imperial_authority_ld_modifier_3 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_3_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 40
+# }
+# lte_latin_imperial_authority_ld_modifier_3 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_3_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 10
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 15
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_3_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 10
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 15
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_3_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 10
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 15
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 10
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 15
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 30
-}
-lte_latin_imperial_authority_ld_modifier_4 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_4_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 30
+# }
+# lte_latin_imperial_authority_ld_modifier_4 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_4_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 15
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 20
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_4_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 15
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 20
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_4_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 15
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 20
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 15
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 20
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 25
-}
-lte_latin_imperial_authority_ld_modifier_5 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_5_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 25
+# }
+# lte_latin_imperial_authority_ld_modifier_5 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_5_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 20
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 25
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_5_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 20
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 25
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_5_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 20
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 25
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 20
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 25
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 20
-}
-lte_latin_imperial_authority_ld_modifier_6 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_6_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 20
+# }
+# lte_latin_imperial_authority_ld_modifier_6 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_6_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 25
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 30
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_6_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 25
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 30
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_6_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 25
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 30
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 25
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 30
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 15
-}
-lte_latin_imperial_authority_ld_modifier_7 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_7_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 15
+# }
+# lte_latin_imperial_authority_ld_modifier_7 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_7_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 30
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 35
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_7_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 30
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 35
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_7_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 30
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 35
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 30
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 35
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 10
-}
-lte_latin_imperial_authority_ld_modifier_8 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_8_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 10
+# }
+# lte_latin_imperial_authority_ld_modifier_8 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_8_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 35
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 40
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_8_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 35
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 40
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_8_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 35
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 40
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 35
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 40
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 7.5
-}
-lte_latin_imperial_authority_ld_modifier_9 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_9_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 7.5
+# }
+# lte_latin_imperial_authority_ld_modifier_9 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_9_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 40
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 45
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_9_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 40
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 45
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_9_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 40
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 45
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 40
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 45
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 5
-}
-lte_latin_imperial_authority_ld_modifier_10 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_10_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 5
+# }
+# lte_latin_imperial_authority_ld_modifier_10 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_10_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 45
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 50
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_10_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 45
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 50
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_10_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 45
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 50
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 45
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 50
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_negative_authority"
-	liberty_desire = 2.5
-}
-lte_latin_imperial_authority_ld_modifier_11 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_11_tooltip
+	# picture = "lte_negative_authority"
+	# liberty_desire = 2.5
+# }
+# lte_latin_imperial_authority_ld_modifier_11 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_11_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 50
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 55
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_11_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 50
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 55
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_11_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 50
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 55
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 50
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 55
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -2.5
-	global_tax_modifier = 0.05
-	global_manpower_modifier = 0.05
-	global_trade_goods_size_modifier = 0.05
-}
-lte_latin_imperial_authority_ld_modifier_12 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_12_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -2.5
+	# global_tax_modifier = 0.05
+	# global_manpower_modifier = 0.05
+	# global_trade_goods_size_modifier = 0.05
+# }
+# lte_latin_imperial_authority_ld_modifier_12 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_12_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 55
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 60
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_12_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 55
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 60
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_12_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 55
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 60
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 55
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 60
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -5
-	global_tax_modifier = 0.1
-	global_manpower_modifier = 0.1
-	global_trade_goods_size_modifier = 0.1
-}
-lte_latin_imperial_authority_ld_modifier_13 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_13_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -5
+	# global_tax_modifier = 0.1
+	# global_manpower_modifier = 0.1
+	# global_trade_goods_size_modifier = 0.1
+# }
+# lte_latin_imperial_authority_ld_modifier_13 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_13_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 60
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 65
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_13_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 60
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 65
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_13_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 60
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 65
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 60
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 65
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -7.5
-	global_tax_modifier = 0.15
-	global_manpower_modifier = 0.15
-	global_trade_goods_size_modifier = 0.15
-}
-lte_latin_imperial_authority_ld_modifier_14 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_14_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -7.5
+	# global_tax_modifier = 0.15
+	# global_manpower_modifier = 0.15
+	# global_trade_goods_size_modifier = 0.15
+# }
+# lte_latin_imperial_authority_ld_modifier_14 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_14_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 65
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 70
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_14_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 65
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 70
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_14_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 65
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 70
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 65
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 70
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -10
-	global_tax_modifier = 0.2
-	global_manpower_modifier = 0.2
-	global_trade_goods_size_modifier = 0.2
-}
-lte_latin_imperial_authority_ld_modifier_15 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_15_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -10
+	# global_tax_modifier = 0.2
+	# global_manpower_modifier = 0.2
+	# global_trade_goods_size_modifier = 0.2
+# }
+# lte_latin_imperial_authority_ld_modifier_15 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_15_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 70
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 75
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_15_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 70
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 75
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_15_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 70
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 75
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 70
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 75
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -15
-	global_tax_modifier = 0.3
-	global_manpower_modifier = 0.3
-	global_trade_goods_size_modifier = 0.3
-}
-lte_latin_imperial_authority_ld_modifier_16 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_16_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -15
+	# global_tax_modifier = 0.3
+	# global_manpower_modifier = 0.3
+	# global_trade_goods_size_modifier = 0.3
+# }
+# lte_latin_imperial_authority_ld_modifier_16 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_16_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 75
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 80
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_16_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 75
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 80
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_16_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 75
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 80
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 75
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 80
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -20
-	global_tax_modifier = 0.4
-	global_manpower_modifier = 0.4
-	global_trade_goods_size_modifier = 0.4
-}
-lte_latin_imperial_authority_ld_modifier_17 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_17_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -20
+	# global_tax_modifier = 0.4
+	# global_manpower_modifier = 0.4
+	# global_trade_goods_size_modifier = 0.4
+# }
+# lte_latin_imperial_authority_ld_modifier_17 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_17_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 80
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 85
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_17_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 80
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 85
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_17_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 80
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 85
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 80
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 85
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -25
-	global_tax_modifier = 0.5
-	global_manpower_modifier = 0.5
-	global_trade_goods_size_modifier = 0.5
-}
-lte_latin_imperial_authority_ld_modifier_18 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_18_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -25
+	# global_tax_modifier = 0.5
+	# global_manpower_modifier = 0.5
+	# global_trade_goods_size_modifier = 0.5
+# }
+# lte_latin_imperial_authority_ld_modifier_18 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_18_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 85
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 90
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_18_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 85
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 90
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_18_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 85
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 90
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 85
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 90
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -30
-	global_tax_modifier = 0.6
-	global_manpower_modifier = 0.6
-	global_trade_goods_size_modifier = 0.6
-}
-lte_latin_imperial_authority_ld_modifier_19 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_19_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -30
+	# global_tax_modifier = 0.6
+	# global_manpower_modifier = 0.6
+	# global_trade_goods_size_modifier = 0.6
+# }
+# lte_latin_imperial_authority_ld_modifier_19 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_19_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 90
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 95
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_19_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 90
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 95
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_19_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 90
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 95
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 90
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 95
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -40
-	global_tax_modifier = 0.8
-	global_manpower_modifier = 0.8
-	global_trade_goods_size_modifier = 0.8
-}
-lte_latin_imperial_authority_ld_modifier_20 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_20_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -40
+	# global_tax_modifier = 0.8
+	# global_manpower_modifier = 0.8
+	# global_trade_goods_size_modifier = 0.8
+# }
+# lte_latin_imperial_authority_ld_modifier_20 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_20_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 95
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 100
-						}
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_20_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 95
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 100
+						# }
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_20_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 95
-					}
-					NOT = {
-						check_variable = {
-							which = latinImperialAuthorityVariable
-							value = 100
-						}
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 95
+					# }
+					# NOT = {
+						# check_variable = {
+							# which = latinImperialAuthorityVariable
+							# value = 100
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -50
-	global_tax_modifier = 1
-	global_manpower_modifier = 1
-	global_trade_goods_size_modifier = 1
-}
-lte_latin_imperial_authority_ld_modifier_21 = {
-	potential = {
-		is_capital = yes
-		owner = {
-			overlord = {
-				tag = LAE
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_14_tooltip
+	# picture = "lte_positive_authority"
+	# liberty_desire = -50
+	# global_tax_modifier = 1
+	# global_manpower_modifier = 1
+	# global_trade_goods_size_modifier = 1
+# }
+# lte_latin_imperial_authority_ld_modifier_21 = {
+	# potential = {
+		# is_capital = yes
+		# owner = {
+			# overlord = {
+				# tag = LAE
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_14_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 100
-					}
-				}
-			}
-		}
-		NOT = { has_global_flag = lte_absolutism_vassals_revoked }
-	}
-	trigger = {
-		owner = {
-			overlord = {
-				variable_arithmetic_trigger = {
-					custom_tooltip = lte_latin_imperial_authority_ld_modifier_14_tooltip
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 100
+					# }
+				# }
+			# }
+		# }
+		# NOT = { has_global_flag = lte_absolutism_vassals_revoked }
+	# }
+	# trigger = {
+		# owner = {
+			# overlord = {
+				# variable_arithmetic_trigger = {
+					# custom_tooltip = lte_latin_imperial_authority_ld_modifier_14_tooltip
 					
-					check_variable = {
-						which = latinImperialAuthorityVariable
-						value = 100
-					}
-				}
-			}
-		}
-	}
+					# check_variable = {
+						# which = latinImperialAuthorityVariable
+						# value = 100
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	picture = "lte_positive_authority"
-	liberty_desire = -50
-	global_tax_modifier = 1
-	global_manpower_modifier = 1
-	global_trade_goods_size_modifier = 1
-	land_forcelimit_modifier = 1
-	local_development_cost = -0.25
-}
+	# picture = "lte_positive_authority"
+	# liberty_desire = -50
+	# global_tax_modifier = 1
+	# global_manpower_modifier = 1
+	# global_trade_goods_size_modifier = 1
+	# land_forcelimit_modifier = 1
+	# local_development_cost = -0.25
+# }
