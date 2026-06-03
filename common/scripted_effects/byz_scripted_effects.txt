@@ -698,6 +698,14 @@ add_byzantine_militarization = {
 		value = $value$
 	}
 }
+add_latin_imperial_authority = {
+	add_government_power = { 
+		mechanic_type = add_latin_imperial_authority_mechanic 
+		power_type = add_latin_imperial_authority
+		value = $value$
+	}
+}
+
 
 #It appears that government powers are reset when you add a new government mechanic to a government type and reset the gov reform to apply it. That's why this exists.
 #Part 1 saves the gov power in a variable. Run for each gov_power you wish to pick up prior to disabling the reform.

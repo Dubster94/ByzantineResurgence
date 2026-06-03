@@ -1,4 +1,13 @@
 ﻿l_english:
+ #Gov reforms
+ latin_knights_reform:0 "Landed Knights"
+ latin_knights_reform_desc:0 "The Latin Knights have helped us claim the City of Cities that is Constantinople. It is only natural we reward them with the chance to establish local lordships within our realm, carved out of our conquests. With this, we can more efficiently govern our realm through decentralization and, eventually, bring their subjects closer to us."
+ ability_latin_imperial_authority_mechanic:0 "Latin Imperial Authority"
+ latin_imperial_authority:0 "Latin Imperial Authority"
+ latin_imperial_authority_desc:0 "Latin Imperial Authority represents the authority the ruler holds over the landed Latin Knights. "
+ monthly_latin_imperial_authority:0 "Monthly Latin Imperial Authority"
+ latin_imperial_authority_gain_modifier:0 "Latin Imperial Authority Gain Modifier"
+
  byz_crusader_vassal_title:0 "Knightly Order"
  byz_crusader_vassal_title_plural:0 "Knightly Orders"
  byz_crusader_vassal_long_desc:0 "A Knightly Order is a special type of subject for the Latin Empire which functions identially to a vassal in that he cannot make certain diplomatic actions and will pay a fraction of his income to his overlord."

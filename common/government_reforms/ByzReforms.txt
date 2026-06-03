@@ -479,6 +479,16 @@ latin_knights_reform = {
 		latin_imperial_authority_mechanic
 	}
 	
+	effect = {
+		hidden_effect = {
+			set_government_power = {
+				mechanic_type = latin_imperial_authority_mechanic
+				power = latin_imperial_authority
+				value = 50
+			}
+		}
+	}
+	
 	ai = {
 		factor = 100
 	}
