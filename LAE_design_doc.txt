@@ -5,7 +5,16 @@ Created diplomatic actions for your vassals to turn them into Knightly Orders. W
 Left to do:
 ===========
 -Tweak Knightly Orders vassal type to interface with new Latin Imperial Authority gov mechanic.
--Look into Achaea missing cores.
+-Add Knightly Orders T3 government reform and move the mechanic over to that one.
+-Add Latin Imperial Authority changes:
++0.01/loyal Knightly Order
++0.02/loyal Knightly Order with at least 50 dev, total +0.03
++0.03/loyal Knightly Order with at least 100 dev, total +0.06
++0.04/loyal Knightly Order with at least 200 dev, total +0.1
++0.2/100 legitimacy
+-0.1/100 directly owned dev
++2/100 absolutism
+
 -Expand EMP_Crusader_Missions tree to include:
 
 1-5: Convert Egypt 					(Convert Egypt) 										- Permaclaims on Arabia. Permanent Latin Imperial Authority tick

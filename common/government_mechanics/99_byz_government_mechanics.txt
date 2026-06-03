@@ -557,12 +557,13 @@ latin_imperial_authority_mechanic = {
 	powers = {
 		latin_imperial_authority = {
 			gui = byzantine_pronoia_gov_mech_power
+			min = -100
 			max = 100
 			base_monthly_growth = 0
 			is_good = yes
 			scaled_modifier = {
-				start_value = 50
-				extend_beyond_value = no
+				#start_value = 50
+				#extend_beyond_value = no
 				modifier = { 	
 					vassal_forcelimit_bonus = 1 
 					vassal_naval_forcelimit_bonus = 1
@@ -571,8 +572,9 @@ latin_imperial_authority_mechanic = {
 					vassal_income = 1
 				}
 			}
-			reverse_scaled_modifier = {
-				end_value = 50
+			scaled_modifier = {
+				start_value = 0
+				end_value = -100
 				extend_beyond_value = no
 				modifier = { 	
 					reduced_liberty_desire = -50
