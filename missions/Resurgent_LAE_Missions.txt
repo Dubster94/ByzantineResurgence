@@ -14,7 +14,7 @@ Resurgent_LAE_1 = {
 	has_country_shield = yes
 
 	lae_convert_egypt = {
-		icon = restore_the_hospitallers
+		icon = show_piety
 		required_missions = { EMP_crusader_egypt }
 		position = 5
 		
@@ -36,7 +36,7 @@ Resurgent_LAE_1 = {
 	}
 
 	lae_defile_mecca = {
-		icon = restore_the_hospitallers
+		icon = mission_into_arabia
 		required_missions = { lae_convert_egypt }
 		position = 6
 		
@@ -73,7 +73,7 @@ Resurgent_LAE_3 = {
 	has_country_shield = yes
 
 	lae_convert_constantinople = {
-		icon = restore_the_hospitallers
+		icon = mission_religious
 		required_missions = { }
 		position = 5
 		
@@ -95,7 +95,7 @@ Resurgent_LAE_3 = {
 	}
 
 	lae_restore_constantinople = {
-		icon = restore_the_hospitallers
+		icon = take_constantinople
 		required_missions = { lae_convert_constantinople }
 		position = 6
 		
@@ -117,7 +117,7 @@ Resurgent_LAE_3 = {
 	}
 
 	lae_tale_of_two_romes = {
-		icon = restore_the_hospitallers
+		icon = mission_dismantle_hre
 		required_missions = { lae_restore_constantinople }
 		position = 8
 		
@@ -139,7 +139,7 @@ Resurgent_LAE_3 = {
 	}
 
 	lae_true_rome = {
-		icon = restore_the_hospitallers
+		icon = mission_administrating_a_roman_empire
 		required_missions = { lae_tale_of_two_romes }
 		position = 9
 		
@@ -176,20 +176,20 @@ Resurgent_LAE_4 = {
 	has_country_shield = yes
 
 	lae_venture_further_east = {
-		icon = restore_the_hospitallers
+		icon = mission_mesopotamia
 		required_missions = { EMP_crusader_catholic }
 		position = 5
 		
 		provinces_to_highlight = {
-		
+			
 		}
 		
 		trigger = {
-		
+			
 		}
 		
 		effect = {
-		
+			
 		}
 		
 		ai_weight = {
@@ -198,7 +198,7 @@ Resurgent_LAE_4 = {
 	}
 
 	lae_reward_knights = {
-		icon = restore_the_hospitallers
+		icon = reform_bergordnung
 		required_missions = {  }
 		position = 6
 		
@@ -220,7 +220,7 @@ Resurgent_LAE_4 = {
 	}
 
 	lae_establish_orders = {
-		icon = restore_the_hospitallers
+		icon = support_the_orders
 		required_missions = { lae_reward_knights }
 		position = 7
 		
@@ -242,7 +242,7 @@ Resurgent_LAE_4 = {
 	}
 
 	lae_amass_orders = {
-		icon = restore_the_hospitallers
+		icon = league_of_the_public_weal
 		required_missions = { lae_establish_orders }
 		position = 8
 		
@@ -279,7 +279,7 @@ Resurgent_LAE_5 = {
 	has_country_shield = yes
 
 	lae_christian_india = {
-		icon = restore_the_hospitallers
+		icon = mission_embassy_to_the_west
 		required_missions = { lae_venture_further_east }
 		position = 6
 		
@@ -301,7 +301,7 @@ Resurgent_LAE_5 = {
 	}
 
 	lae_christian_far_east = {
-		icon = restore_the_hospitallers
+		icon = mission_to_china
 		required_missions = { lae_christian_india }
 		position = 7
 		
@@ -323,7 +323,7 @@ Resurgent_LAE_5 = {
 	}
 
 	lae_enforce_authority = {
-		icon = restore_the_hospitallers
+		icon = holy_state
 		required_missions = { lae_establish_orders }
 		position = 8
 		
