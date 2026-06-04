@@ -231,7 +231,7 @@ Resurgent_LAE_3 = {
 		
 		provinces_to_highlight = {
 			is_capital = yes
-			owner = emperor
+			owned_by = emperor
 		}
 		
 		trigger = {
@@ -306,6 +306,7 @@ Resurgent_LAE_4 = {
 		
 		provinces_to_highlight = {
 			region = mesopotamia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
