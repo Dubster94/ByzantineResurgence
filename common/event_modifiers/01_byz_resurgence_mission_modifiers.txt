@@ -402,6 +402,19 @@ gre_ellenika_mod = {
 }
 
 #Latin Empire
+lae_custodian_of_egypt = {
+	monthly_latin_imperial_authority = 0.1
+}
+lae_eastern_missions = {
+	may_explore = yes
+}
+lae_imperial_land_praemia = {
+	allow_client_states = yes
+}
+lae_imperial_land_praemia_2 = {
+	allow_client_states = yes
+	liberty_desire_from_subject_development = -0.2
+}
 # lte_legacy_asserted = {
 	# papal_influence = 1
 	# legitimacy = 1

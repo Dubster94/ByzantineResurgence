@@ -307,6 +307,8 @@
  lae_restore_constantinople_title:0 "Restore Constantinople"
  lae_restore_constantinople_desc:0 "TODO"
  lae_restore_constantinople_tt:0 "Modifies the §YFrankokratia§! national idea to give §G+33.0%§! manpower in true faith provinces instead of §G15.0%§!"
+ lae_frankokratia_2:0 "Frankokratia"
+ lae_frankokratia_2_desc:0 "'Frank' is the generic term that encompasses all the countries of Western and 
  lae_tale_of_two_romes_title:0 "The Tale of Two Romes"
  lae_tale_of_two_romes_desc:0 "TODO"
  lae_true_rome_title:0 "A True Roman Empire"
@@ -317,6 +319,7 @@
  lae_reward_knights_desc:0 "TODO"
  lae_establish_orders_title:0 "Establish the Orders"
  lae_establish_orders_desc:0 "TODO"
+ lae_establish_orders_tt:0 "Augments the §YImperial Land Praemia§! country modifier to include §G-20%§! Liberty Desire from Subjects Development."
  lae_amass_orders_title:0 "Amass the Orders"
  lae_amass_orders_desc:0 "TODO"
  lae_christian_india_title:0 "Christianity in India"

@@ -305,15 +305,23 @@ Resurgent_LAE_4 = {
 		position = 5
 		
 		provinces_to_highlight = {
-			
+			region = mesopotamia_region
 		}
 		
 		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 35
+				region = mesopotamia_region
+			}
+			408 = { country_or_non_sovereign_subject_holds = ROOT }
 			
 		}
 		
 		effect = {
-			
+			add_country_modifier = {
+				name = "lae_eastern_missions"
+				duration = 7300
+			}
 		}
 		
 		ai_weight = {
@@ -327,15 +335,18 @@ Resurgent_LAE_4 = {
 		position = 6
 		
 		provinces_to_highlight = {
-		
+			
 		}
 		
 		trigger = {
-		
+			has_reform = latin_knights_reform
 		}
 		
 		effect = {
-		
+			add_country_modifier = {
+				name = "lae_imperial_land_praemia"
+				duration = -1
+			}
 		}
 		
 		ai_weight = {
@@ -353,11 +364,18 @@ Resurgent_LAE_4 = {
 		}
 		
 		trigger = {
-		
+			byz_crusader_vassal = 10
 		}
 		
 		effect = {
-		
+			custom_tooltip = lae_establish_orders_tt
+			hidden_effect = {
+				remove_country_modifier = lae_imperial_land_praemia
+				add_country_modifier = {
+					name = "lae_imperial_land_praemia_2"
+					duration = -1
+				}
+			}
 		}
 		
 		ai_weight = {
@@ -375,11 +393,12 @@ Resurgent_LAE_4 = {
 		}
 		
 		trigger = {
-		
+			byz_crusader_vassal = 30
 		}
 		
 		effect = {
-		
+			custom_tooltip = lae_amass_orders_tt
+			set_country_flag = estate_nobles_right_of_counsel_no_absolutism_privilege_cost
 		}
 		
 		ai_weight = {
