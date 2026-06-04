@@ -15,7 +15,7 @@ Resurgent_LAE_1 = {
 
 	lae_convert_egypt = {
 		icon = show_piety
-		required_missions = { EMP_crusader_egypt }
+		required_missions = { EMP_crusader_convert_the_holy_land EMP_crusader_egypt }
 		position = 5
 		
 		provinces_to_highlight = {
