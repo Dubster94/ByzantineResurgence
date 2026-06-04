@@ -18,16 +18,51 @@ Resurgent_LAE_1 = {
 		required_missions = { EMP_crusader_convert_the_holy_land EMP_crusader_egypt }
 		position = 5
 		
-		provinces_to_highlight = {
+		provinces_to_highlight = { #Shall follow EMP_crusader_egypt. Tweak if that one gets tweaked.
+			OR = {
+				AND = {
+					OR = { 
+						region = egypt_region
+						area = cyrenaica_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						religion = ROOT
+					}
+				}
+				AND = {
+					province_id = 358
+					NOT = { religion = ROOT }
+				}
+			}
+			is_wasteland = no
 		
 		}
 		
 		trigger = {
-		
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 27
+				religion = ROOT
+				OR = {
+					region = egypt_region
+					area = cyrenaica_area
+				}
+			}
+			358 = { religion = ROOT }
 		}
 		
 		effect = {
-		
+			arabia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "lae_custodian_of_egypt"
+				duration = -1
+			}
 		}
 		
 		ai_weight = {
@@ -45,11 +80,57 @@ Resurgent_LAE_1 = {
 		}
 		
 		trigger = {
-		
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 14
+				region = arabia_region
+			}
+			385 = {
+				owned_by = ROOT
+			}
 		}
 		
 		effect = {
-		
+			add_years_of_income = 2
+			#Derping in KoK's KoKy Kaaba code
+			custom_tooltip = " "
+			
+			country_event_with_option_insight = {
+				id = MEE_Byzantine_Events.9
+				option_1 = "
+					add_adm_power = 100
+					custom_tooltip = \" \"
+					385 = {
+						if = {
+							limit = {
+								NOT = { has_tax_building_trigger = yes }
+							}
+							add_building = cathedral
+						}
+						else = {
+							add_or_upgrade_tax_building = yes
+						}
+					}
+					if = {
+						limit = {
+							BYZ_has_leviathan = yes
+						}
+						custom_tooltip = \" \"
+						custom_tooltip = BYZ_kaaba_but_only_gives_prestige_and_half_of_religious_unity
+					}
+				"
+				option_2 = "
+					add_dip_power = 100
+					custom_tooltip = \" \"
+					custom_tooltip = BYZ_relations
+					custom_tooltip = \" \"
+					385 = {
+						add_province_modifier = {
+							name = BYZ_masjid_local_pilgrimages
+							duration = -1
+						}
+					}
+				"
+			}
 		}
 		
 		ai_weight = {
@@ -78,15 +159,17 @@ Resurgent_LAE_3 = {
 		position = 5
 		
 		provinces_to_highlight = {
-		
+			province_id = 151
+			NOT = { religion = ROOT }
 		}
 		
 		trigger = {
-		
+			151 = { religion = ROOT }
 		}
 		
 		effect = {
-		
+			custom_tooltip = lae_enable_holy_orders_tt
+			set_country_flag = enable_holy_orders_flag
 		}
 		
 		ai_weight = {
@@ -100,15 +183,40 @@ Resurgent_LAE_3 = {
 		position = 6
 		
 		provinces_to_highlight = {
-		
+			province_id = 151
 		}
 		
-		trigger = {
+		trigger = { #Identical to City of Cities mission for Byz
+			151 = {
+				if = {
+					limit = {
+						has_dlc = "Leviathan"
+					}
+					development = 75 #Because this is the capital and dev in capital in Leviathan is craycray
+					OR = {
+						has_great_project = {
+							type = hagia_sophia
+							tier = 3
+						}
+						has_great_project = {
+							type = theodosian_walls
+							tier = 3
+						}
+					}
+					num_of_times_expanded_infrastructure = 2
+				}
+				else = {
+					development = 50
+				}
+			}
 		
 		}
 		
 		effect = {
-		
+			custom_tooltip = lae_restore_constantinople_tt
+			hidden_effect = {
+				swap_free_idea_group = yes
+			}
 		}
 		
 		ai_weight = {
@@ -122,15 +230,22 @@ Resurgent_LAE_3 = {
 		position = 8
 		
 		provinces_to_highlight = {
-		
+			is_capital = yes
+			owner = emperor
 		}
 		
 		trigger = {
-		
+			custom_trigger_tooltip = {
+				tooltip = restore_roman_empire_byzantium_dismantle_hre_tooltip
+				NOT = { hre_size = 1 }
+			}
 		}
 		
 		effect = {
-		
+			add_permanent_power_projection = {
+				type = 25_permanent_power_projection
+				amount = 25
+			}
 		}
 		
 		ai_weight = {
@@ -144,15 +259,24 @@ Resurgent_LAE_3 = {
 		position = 9
 		
 		provinces_to_highlight = {
-		
+			province_id = 118
 		}
 		
 		trigger = {
-		
+			OR = {
+				is_claim = 118
+				is_permanent_claim = 118
+			}
 		}
 		
 		effect = {
-		
+			italy_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 		
 		ai_weight = {

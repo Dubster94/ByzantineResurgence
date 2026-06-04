@@ -18,12 +18,12 @@ Left to do:
 -Expand EMP_Crusader_Missions tree to include:
 
 1-5: Convert Egypt 					(Convert Egypt) 										- Permaclaims on Arabia. Permanent Latin Imperial Authority tick
-1-6: Defile Mecca 					(Conquer Mecca & Medina) 								- A large pile of money
+1-6: Defile Mecca 					(Conquer Mecca & Medina) 								- A large pile of money + Byz event to convert Kaaba mosque into church
 
 3-5: Convert Constantinople 		(Constantinople Catholic) 								- Local organisations (Franciskans and all that jazz)
 3-6: Restore Constantinople 		(T3 Hagia Sophia + 75 dev) 								- Buff Frankokratia national idea to give +33% manpower in true faith provinces
 
-3-8: The Tale of Two Romes 			(Challenge the HRE - dismantle it or be HREmperor) 		- 5% admin efficiency (Meme)
+3-8: The Tale of Two Romes 			(Challenge the HRE - dismantle it or be HREmperor) 		- 25 permanent power projection
 3-9: A True Roman Empire			(Claim Rome. Specifically, *claim* the province.) 		- Gives permaclaims on Italy region
 
 4-5: Venture Further East 			(Conquer Mesopotamia) 									- 20 year can recruit explorers & conquistadors
