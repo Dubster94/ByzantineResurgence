@@ -1,0 +1,346 @@
+#LAE addon-missions to Emperor Crusader missions. They require the Emperor DLC because they would be impossible to complete without the EMP tree which is DLC.
+Resurgent_LAE_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		tag = LAE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	lae_convert_egypt = {
+		icon = restore_the_hospitallers
+		required_missions = { EMP_crusader_egypt }
+		position = 5
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+
+	lae_defile_mecca = {
+		icon = restore_the_hospitallers
+		required_missions = { lae_convert_egypt }
+		position = 6
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+}
+
+Resurgent_LAE_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		tag = LAE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	lae_convert_constantinople = {
+		icon = restore_the_hospitallers
+		required_missions = { }
+		position = 5
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+
+	lae_restore_constantinople = {
+		icon = restore_the_hospitallers
+		required_missions = { lae_convert_constantinople }
+		position = 6
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+
+	lae_tale_of_two_romes = {
+		icon = restore_the_hospitallers
+		required_missions = { lae_restore_constantinople }
+		position = 8
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+
+	lae_true_rome = {
+		icon = restore_the_hospitallers
+		required_missions = { lae_tale_of_two_romes }
+		position = 9
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+}
+
+Resurgent_LAE_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		tag = LAE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	lae_venture_further_east = {
+		icon = restore_the_hospitallers
+		required_missions = { EMP_crusader_catholic }
+		position = 5
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+
+	lae_reward_knights = {
+		icon = restore_the_hospitallers
+		required_missions = {  }
+		position = 6
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+
+	lae_establish_orders = {
+		icon = restore_the_hospitallers
+		required_missions = { lae_reward_knights }
+		position = 7
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+
+	lae_amass_orders = {
+		icon = restore_the_hospitallers
+		required_missions = { lae_establish_orders }
+		position = 8
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+}
+
+Resurgent_LAE_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		tag = LAE
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	lae_christian_india = {
+		icon = restore_the_hospitallers
+		required_missions = { lae_venture_further_east }
+		position = 6
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+
+	lae_christian_far_east = {
+		icon = restore_the_hospitallers
+		required_missions = { lae_christian_india }
+		position = 7
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+
+	lae_enforce_authority = {
+		icon = restore_the_hospitallers
+		required_missions = { lae_establish_orders }
+		position = 8
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+		
+		ai_weight = {
+			factor = 500	#Natural conquest
+		}
+	}
+}
