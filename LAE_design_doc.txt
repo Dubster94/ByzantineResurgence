@@ -5,7 +5,7 @@ Made a mission tree to expand the EMP_Crusader missions upon forming the Latin E
 
 Left to do:
 ===========
--Tweak Knightly Orders vassal type to interface with new Latin Imperial Authority gov mechanic. How?
+-Tweak Knightly Orders vassal type to make it follow the below LIA changes, as well as the subject's modifiers and/or interactions.
 -Add Knightly Orders T3 government reform and move the mechanic over to that one.
 -Add Latin Imperial Authority changes:
 +0.01/loyal Knightly Order
@@ -16,8 +16,4 @@ Left to do:
 -0.1/100 directly owned dev #
 +2/100 absolutism #
 
--Expand EMP_Crusader_Missions tree to include:
-5-8: Enforce Authority 				(100 Latin Imperial Authority) 							- 1. Freeze Latin Imperial Authority. 2. Unlock inheritance ability for Knightly Orders
-
-5-6: Christianity to India			(1 Catholic province in India superregion)				- Center of Reformation in India??
-5-7: Christianity in Far East		(1 Catholic province in China superregion)
+Idea: Latin Imperial Authority buttons: Costs X monthly Latin Imperial Authority, gives buffs to Knightly Order subjects?

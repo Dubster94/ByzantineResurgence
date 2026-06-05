@@ -444,19 +444,47 @@ Resurgent_LAE_5 = {
 				desc = emp_pap_mission_to_india_tt2
 				india_superregion = {
 					type = all
-					OR = {
-						owner = { religion = catholic }
-						is_wasteland = yes
-					}
+					owner = { religion = catholic }
 				}
-				amount = 6 # Taiwan is three provinces, so at least one non-Taiwanese province must be taken
+				amount = 6 # Get an Indian foothold.
 			}
 		
 		
 		}
 		
 		effect = {
-		
+			custom_tooltip = emp_pap_mission_to_china_noncatholic_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						superregion = india_superregion
+						owner = {
+							religion = catholic
+						}
+						NOT = { religion = catholic }
+					}
+					add_province_modifier = {
+						name = pap_chinese_jesuits_noncatholic
+						duration = 7300
+					}
+				}
+			}
+			custom_tooltip = emp_pap_mission_to_china_catholic_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						superregion = india_superregion
+						owner = {
+							religion = catholic
+						}
+						religion = catholic
+					}
+					add_province_modifier = {
+						name = pap_chinese_jesuits_catholic
+						duration = 7300
+					}
+				}
+			}
 		}
 		
 		ai_weight = {
@@ -492,17 +520,11 @@ Resurgent_LAE_5 = {
 				desc = emp_pap_mission_to_china_tt2
 				north_china_region = {
 					type = all
-					OR = {
-						owner = { religion = catholic }
-						is_wasteland = yes
-					}
+					owner = { religion = catholic }
 				}
 				south_china_region = {
 					type = all
-					OR = {
-						owner = { religion = catholic }
-						is_wasteland = yes
-					}
+					owner = { religion = catholic }
 				}
 				amount = 6 # Taiwan is three provinces, so at least one non-Taiwanese province must be taken
 			}
