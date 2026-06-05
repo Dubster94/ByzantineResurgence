@@ -415,6 +415,18 @@ lae_imperial_land_praemia_2 = {
 	allow_client_states = yes
 	liberty_desire_from_subject_development = -0.2
 }
+
+pap_indian_jesuits_catholic = {
+	local_missionary_strength  = -0.05
+	local_development_cost = -0.1
+}
+
+pap_indian_jesuits_noncatholic = {
+	local_missionary_maintenance_cost = -0.25
+	local_missionary_strength = 0.03
+	local_unrest = -3
+}
+
 # lte_legacy_asserted = {
 	# papal_influence = 1
 	# legitimacy = 1

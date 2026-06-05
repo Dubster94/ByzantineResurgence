@@ -448,12 +448,10 @@ Resurgent_LAE_5 = {
 				}
 				amount = 6 # Get an Indian foothold.
 			}
-		
-		
 		}
 		
 		effect = {
-			custom_tooltip = emp_pap_mission_to_china_noncatholic_tt
+			custom_tooltip = emp_pap_mission_to_india_noncatholic_tt
 			hidden_effect = {
 				every_province = {
 					limit = {
@@ -464,12 +462,12 @@ Resurgent_LAE_5 = {
 						NOT = { religion = catholic }
 					}
 					add_province_modifier = {
-						name = pap_chinese_jesuits_noncatholic
+						name = pap_indian_jesuits_noncatholic
 						duration = 7300
 					}
 				}
 			}
-			custom_tooltip = emp_pap_mission_to_china_catholic_tt
+			custom_tooltip = emp_pap_mission_to_india_catholic_tt
 			hidden_effect = {
 				every_province = {
 					limit = {
@@ -480,7 +478,7 @@ Resurgent_LAE_5 = {
 						religion = catholic
 					}
 					add_province_modifier = {
-						name = pap_chinese_jesuits_catholic
+						name = pap_indian_jesuits_catholic
 						duration = 7300
 					}
 				}
