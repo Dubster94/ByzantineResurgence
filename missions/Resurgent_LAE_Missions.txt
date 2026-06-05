@@ -428,10 +428,30 @@ Resurgent_LAE_5 = {
 		position = 6
 		
 		provinces_to_highlight = {
-		
+			superregion = india_superregion
+			has_discovered = ROOT
+			is_wasteland = no
 		}
 		
 		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = emp_pap_mission_to_india_tt
+				india_superregion = {
+					has_discovered = ROOT
+				}
+			}
+			calc_true_if = {
+				desc = emp_pap_mission_to_india_tt2
+				india_superregion = {
+					type = all
+					OR = {
+						owner = { religion = catholic }
+						is_wasteland = yes
+					}
+				}
+				amount = 6 # Taiwan is three provinces, so at least one non-Taiwanese province must be taken
+			}
+		
 		
 		}
 		
@@ -450,14 +470,141 @@ Resurgent_LAE_5 = {
 		position = 7
 		
 		provinces_to_highlight = {
-		
+			OR = {
+				region = north_china_region
+				region = south_china_region
+			}
+			has_discovered = ROOT
+			is_wasteland = no
 		}
 		
 		trigger = {
-		
+			custom_trigger_tooltip = {
+				tooltip = emp_pap_mission_to_china_tt
+				north_china_region = {
+					has_discovered = ROOT
+				}
+				south_china_region = {
+					has_discovered = ROOT
+				}
+			}
+			calc_true_if = {
+				desc = emp_pap_mission_to_china_tt2
+				north_china_region = {
+					type = all
+					OR = {
+						owner = { religion = catholic }
+						is_wasteland = yes
+					}
+				}
+				south_china_region = {
+					type = all
+					OR = {
+						owner = { religion = catholic }
+						is_wasteland = yes
+					}
+				}
+				amount = 6 # Taiwan is three provinces, so at least one non-Taiwanese province must be taken
+			}
 		}
 		
 		effect = {
+			custom_tooltip = emp_pap_mission_to_china_noncatholic_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							region = north_china_region
+							region = south_china_region
+						}
+						owner = {
+							religion = catholic
+						}
+						NOT = { religion = catholic }
+					}
+					add_province_modifier = {
+						name = pap_chinese_jesuits_noncatholic
+						duration = 7300
+					}
+				}
+			}
+			custom_tooltip = emp_pap_mission_to_china_catholic_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							region = north_china_region
+							region = south_china_region
+						}
+						owner = {
+							religion = catholic
+						}
+						religion = catholic
+					}
+					add_province_modifier = {
+						name = pap_chinese_jesuits_catholic
+						duration = 7300
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = MNG
+					MNG = {
+						NOT = {
+							OR = {
+								has_country_flag = mng_accepted_jesuits
+								has_country_flag = mng_rejects_jesuits
+							}
+						}
+					}
+				}
+				MNG = {
+					country_event = { id = flavor_mng.7 }
+				}
+			}
+			else_if = {
+				limit = {
+					exists = MNG
+					MNG = {
+						OR = {
+							has_country_flag = mng_accepted_jesuits
+							has_country_flag = mng_rejects_jesuits
+						}
+					}
+				}
+				MNG = {
+					country_event = { id = flavor_pap.13 }
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { exists = MNG }
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				every_country = {
+					limit = { is_emperor_of_china = yes }
+					country_event = { id = flavor_pap.14 }
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { exists = MNG }
+					any_country = {
+						NOT = { is_emperor_of_china = yes }
+					}
+					1816 = { NOT = { owned_by = PAP } }
+				}
+				every_country = {
+					limit = { owns = 1816 }
+					country_event = { id = flavor_pap.14 }
+				}
+			}
+			else = {
+				add_adm_power = 100
+			}
 		
 		}
 		
@@ -476,11 +623,20 @@ Resurgent_LAE_5 = {
 		}
 		
 		trigger = {
-		
+			has_government_power = {
+				mechanic_type = latin_imperial_authority_mechanic
+				power_type = latin_imperial_authority
+				value = 100
+			}
 		}
 		
 		effect = {
-		
+			freeze_government_power = {
+				mechanic_type = latin_imperial_authority_mechanic
+				power_type = latin_imperial_authority
+			}
+			custom_tooltip = lae_enforce_authority_tt
+			set_country_flag = lae_can_inherit_knightly_orders
 		}
 		
 		ai_weight = {

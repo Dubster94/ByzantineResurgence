@@ -91,6 +91,12 @@ navy_tradition = {
 	monthly_logothete_waters_power = 0.2 #BR Added
 }
 
+country_development = { #COUNTY_DEVELOPMENT_SCALE = 100 000 right now.
+	#horde_unity = -3 #BT not halved not needed because COUNTRY_DEVELOPMENT_SCALE is doubled	= -0.125 horde unity at 100 dev #BT removed broke below modifier
+	governing_capacity = 10000 	# BT added this means there is always an incentive to grow bigger = 10 free governing capacity at 100 dev
+	monthly_latin_imperial_authority = -10 #BR Added - -0.01/100 dev.
+}
+
 legitimacy = {
 	global_unrest = -4
 	tolerance_own = 2
@@ -105,6 +111,7 @@ legitimacy = {
 	monthly_divine_authority = 0.3
 	generals_loyalty_modifier = 0.1 #BR Added
 	exarches_loyalty_modifier = 0.1 #BR Added
+	monthly_latin_imperial_authority = 0.02 #BR Added
 }
 
 absolutism = {
@@ -145,6 +152,8 @@ absolutism = {
 	generals_absolutism_loyalty_modifier = -0.10 #BR Added estate. Halved because unique estate
 	exarches_absolutism_loyalty_modifier = -0.20 #BR Added estate.
 	knightly_orders_absolutism_loyalty_modifier = -0.10 #BR Added estate. Halved because unique estate
+	
+	monthly_latin_imperial_authority = 2 #BR Added
 }
 
 high_army_professionalism = {

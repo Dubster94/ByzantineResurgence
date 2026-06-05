@@ -1,6 +1,7 @@
 Implemented Latin Imperial Authority into a government mechanic.
 Tweaked EMP_Crusader_Missions such that this is how the Latin Empire is formed with the Emperor DLC.
 Created diplomatic actions for your vassals to turn them into Knightly Orders. Works like Pronoiar from KoK.
+Made a mission tree to expand the EMP_Crusader missions upon forming the Latin Empire.
 
 Left to do:
 ===========
@@ -11,27 +12,12 @@ Left to do:
 +0.02/loyal Knightly Order with at least 50 dev, total +0.03
 +0.03/loyal Knightly Order with at least 100 dev, total +0.06
 +0.04/loyal Knightly Order with at least 200 dev, total +0.1
-+0.2/100 legitimacy
--0.1/100 directly owned dev
-+2/100 absolutism
++0.2/100 legitimacy #
+-0.1/100 directly owned dev #
++2/100 absolutism #
 
 -Expand EMP_Crusader_Missions tree to include:
-
-1-5: Convert Egypt 					(Convert Egypt) 										- Permaclaims on Arabia. Permanent Latin Imperial Authority tick
-1-6: Defile Mecca 					(Conquer Mecca & Medina) 								- A large pile of money + Byz event to convert Kaaba mosque into church
-
-3-5: Convert Constantinople 		(Constantinople Catholic) 								- Local organisations (Franciskans and all that jazz)
-3-6: Restore Constantinople 		(T3 Hagia Sophia + 75 dev) 								- Buff Frankokratia national idea to give +33% manpower in true faith provinces
-
-3-8: The Tale of Two Romes 			(Challenge the HRE - dismantle it or be HREmperor) 		- 25 permanent power projection
-3-9: A True Roman Empire			(Claim Rome. Specifically, *claim* the province.) 		- Gives permaclaims on Italy region
-
-4-5: Venture Further East 			(Conquer Mesopotamia) 									- 20 year can recruit explorers & conquistadors
-
-4-6: Reward the Knights 			(Claim T2 Landed Knights reform) 						- Get early client states
-4-7: Establish Knightly Orders 		(10 Knightly Orders established) 						- Reduce LD from subject dev modifier
-4-8: Amass the Orders 				(30 Knightly Orders established) 						- Right of Counsel costs no absolutism
 5-8: Enforce Authority 				(100 Latin Imperial Authority) 							- 1. Freeze Latin Imperial Authority. 2. Unlock inheritance ability for Knightly Orders
 
 5-6: Christianity to India			(1 Catholic province in India superregion)				- Center of Reformation in India??
-5-7: Christianity in Far East		(1 Catholic province in Far East superregion)			- Center of Reformation in China/Japan depending on where it is.
+5-7: Christianity in Far East		(1 Catholic province in China superregion)

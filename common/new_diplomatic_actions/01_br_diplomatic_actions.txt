@@ -189,6 +189,13 @@ revoke_knightly_order_land_rights = {
 				from = { not = { liberty_desire = 15 } }
 			}
 		}
+		if = {
+			limit = { root = { not = { has_country_flag = lae_can_inherit_knightly_orders } }
+			custom_trigger_tooltip = {
+				tooltip = LAE_TOO_LOW_LATIN_IMPERIAL_AUTHORITY
+				from = { has_country_flag = lae_can_inherit_knightly_orders } }
+			}
+		}
 	}
 	on_accept = {
 		ROOT = {

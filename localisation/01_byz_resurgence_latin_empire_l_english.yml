@@ -25,7 +25,8 @@
  revoke_knightly_order_land_rights_tooltip:0 "The Knightly Order in [From.GetName] will no longer be able to pass on his land to his heirs. This will cause a major spike in Liberty Desire but will return those lands to us once the ruler dies."
 
  LAE_NOT_SAME_RELIGION:0 "§R- Not same religion as overlord.§!"
-
+ LAE_TOO_LOW_LATIN_IMPERIAL_AUTHORITY:0 "§R- Cannot retract land rights without reaching and freezing maximum Latin Imperial Authority.§!"
+ 
  byz_crusader_vassal_title:0 "Knightly Order"
  byz_crusader_vassal_title_plural:0 "Knightly Orders"
  byz_crusader_vassal_long_desc:0 "A Knightly Order is a special type of subject for the Latin Empire which functions identially to a vassal in that he cannot make certain diplomatic actions and will pay a fraction of his income to his overlord."
@@ -94,8 +95,8 @@
  neo_seafaring_people: "Seafaring People"
  neo_seafaring_people_desc: "Both the Catalan rulers and Greek people of Neopatria have a long tradition of being avid seafarers, so let us continue this tradition, whether it be dominating the Mare Nostrum or exploring far-flung lands."
  
- revoke_knightly_order_autonomy_title:0 "Revoke Knightly Order Autonomy"
- revoke_knightly_order_autonomy_desc:0 "Through the dawn of the Age of Absolutism, countries start shifting away from religious crusades and feudalism to absolute rulers and standing armies. We should join in this shift and move away from our very feudal structure by bringing our Knightly Orders... closer, to us."
+ # revoke_knightly_order_autonomy_title:0 "Revoke Knightly Order Autonomy"
+ # revoke_knightly_order_autonomy_desc:0 "Through the dawn of the Age of Absolutism, countries start shifting away from religious crusades and feudalism to absolute rulers and standing armies. We should join in this shift and move away from our very feudal structure by bringing our Knightly Orders... closer, to us."
  
  #Shattered Europe Crusader state ideas:
  crusader_ideas: "Crusader Ideas"
@@ -328,6 +329,7 @@
  lae_christian_far_east_desc:0 "TODO"
  lae_enforce_authority_title:0 "Enforce Authority"
  lae_enforce_authority_desc:0 "TODO"
+ lae_enforce_authority_tt:0 "Allows the Retract Land Rights diplomatic action on §YKnightly Order§!"
  
  
  
