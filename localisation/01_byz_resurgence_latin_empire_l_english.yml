@@ -46,18 +46,18 @@
  # revoke_knightly_order_autonomy_tooltip:0 "Revokes the privileges of our current Knightly Orders, inheriting them and enabling the Knightly Orders estate, creating seats of the Knightly Orders in their former capitals."
  
  # #Knightly Orders estate
- # estate_knightly_orders:0 "Knightly Orders"
- # estate_knightly_orders_desc:0 "This estate represent the less autonomous Crusaders that inhabit the Empire after the Imperial reform, and any provinces granted to them will serve as their local headquarters. Rowdy but mostly true to God, they specialize in providing mercenaries to the Empire's cause and do not share the same commitment as the other estates of the Empire, which can lead to some unconventional actions performed by them, giving rise to conflicts with the other powers of the realm."
+ estate_knightly_orders:0 "Knightly Orders"
+ estate_knightly_orders_desc:0 "This estate represent the less autonomous Crusaders that inhabit the Empire after the Imperial reform, and any provinces granted to them will serve as their local headquarters. Rowdy but mostly true to God, they specialize in providing mercenaries to the Empire's cause and do not share the same commitment as the other estates of the Empire, which can lead to some unconventional actions performed by them, giving rise to conflicts with the other powers of the realm."
  
- # estate_knightly_orders_ownership:0 "Knightly Orders Land Ownership"
+ estate_knightly_orders_ownership:0 "Knightly Orders Land Ownership"
  
- # knightly_orders_loyalty_modifier:0 "Knightly Orders Loyalty Equilibrium"
- # knightly_orders_influence_modifier:0 "Knightly Orders Influence"
- # knightly_orders_absolutism_loyalty_modifier:0 "Knightly Orders Loyalty Equilibrium Negator"
- # mechanic_no_knightly_orders_loyalty_loss_from_absolutism_yes:0 "Absolutism no longer reduces §YKnightly Orders§! loyalty."
+ knightly_orders_loyalty_modifier:0 "Knightly Orders Loyalty Equilibrium"
+ knightly_orders_influence_modifier:0 "Knightly Orders Influence"
+ knightly_orders_absolutism_loyalty_modifier:0 "Knightly Orders Loyalty Equilibrium Negator"
+ mechanic_no_knightly_orders_loyalty_loss_from_absolutism_yes:0 "Absolutism no longer reduces §YKnightly Orders§! loyalty."
  
- # estate_privileges_and_agendas_events.6.u:0 "Sell it to the Knightly Orders"
- # estate_privileges_and_agendas_events.7.u:0 "Seize it from the Knightly Orders"
+ estate_privileges_and_agendas_events.6.u:0 "Sell it to the Knightly Orders"
+ estate_privileges_and_agendas_events.7.u:0 "Seize it from the Knightly Orders"
  
  
  

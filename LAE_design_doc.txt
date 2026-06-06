@@ -5,8 +5,7 @@ Made a mission tree to expand the EMP_Crusader missions upon forming the Latin E
 
 Left to do:
 ===========
--Tweak Knightly Orders vassal type to make it follow the below LIA changes, as well as the subject's modifiers and/or interactions.
--Add Knightly Orders T3 government reform and move the mechanic over to that one.
+-Tweak Knightly Orders vassal type to make it follow the below LIA changes, as well as the subject's modifiers and/or interactions. Also adjust Latin Imperial Authority modifiers above 0. Not sure I like the current ones.
 -Add Latin Imperial Authority changes:
 +0.01/loyal Knightly Order
 +0.02/loyal Knightly Order with at least 50 dev, total +0.03
@@ -15,5 +14,8 @@ Left to do:
 +0.2/100 legitimacy #
 -0.1/100 directly owned dev #
 +2/100 absolutism #
-
+Change Latin Imperial Authority graphics.
 Idea: Latin Imperial Authority buttons: Costs X monthly Latin Imperial Authority, gives buffs to Knightly Order subjects?
+Button 1: Extra dev cost OR extra dev points for subjects
+Button 2: Extra reinforce speed or leader shock/fire or extra morale damage or whatevs for subjects
+Button 3: Extra production or goods produced for subjects.
