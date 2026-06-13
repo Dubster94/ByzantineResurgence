@@ -82,4 +82,24 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 	}
+	
+	windowType = {
+		name = "latin_imperial_authority_gov_mech_power"
+		size = { x = 300 y = 87 }
+		#moveable = 0
+
+		#bar and frame
+		iconType = {
+			name = "government_power_bar"
+			spriteType = "GFX_lae_authority_progress_bar"
+			position = { x = 15 y = 65 }
+		}
+
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_lae_authority_bar_frame"
+			position = { x = -1 y = 0 }
+			alwaystransparent = yes
+		}
+	}
 }
