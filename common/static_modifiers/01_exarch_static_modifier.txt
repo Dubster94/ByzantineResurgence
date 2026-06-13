@@ -4,7 +4,26 @@ large_exarch_modifier = {
 	global_manpower = 25 #25000 manpower for every 1k dev Exarch and at least 40 provinces.
 }
 
-crusader_vassal_subject = {
-	land_forcelimit = 1 #I think Miscellanea has this at 2. I keep it at 1 because it otherwise gets quite ridiculous.
+crusader_vassal_subject = { #Close to BT Vassal with some minor tweaks.
+	development_cost = 0.25 #Halved malus
+	tolerance_heretic = 2
+	tolerance_heathen = 2
+}
+
+crusader_vassal_50_dev = {
+	monthly_latin_imperial_authority = 0.02
+}
+
+crusader_vassal_100_dev = {
+	monthly_latin_imperial_authority = 0.03
+}
+
+crusader_vassal_200_dev = {
+	monthly_latin_imperial_authority = 0.04
+}
+
+crusader_vassal_overlord = {
+	land_forcelimit = 0.5 #Same as BT Vassal
 	global_manpower = 0.5 #500 manpower for every vassal.
+	monthly_latin_imperial_authority = 0.01
 }

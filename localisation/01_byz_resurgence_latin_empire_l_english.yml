@@ -11,7 +11,7 @@
  create_knightly_order:0 "Create Knightly Order"
  create_knightly_order_title:0 "Create Knightly Order"
  create_knightly_order_tooltip:0 "Converts the vassal into a Knightly Order. \n\nKnightly Orders are special militant vassals that do not take up a §YDiplomatic Relation§! and calculate their liberty desire individually from other vassals. If they grow large enough, they'll contribute positively to your Latin Imperial Authority."
- create_knightly_order_desc:0 "Are you sure you want to Create a Knightly Order in §Y[From.GetName]§!?\n\nKnightly Orders are a unique subject type available to the §Y[LAE.GetName]§!\nKnightly Orders are special militant vassals. By default, Knightly Orders do <Stuff>"
+ create_knightly_order_desc:0 "Are you sure you want to Create a Knightly Order in §Y[From.GetName]§!?\n\nKnightly Orders are a unique subject type available to the §Y[LAE.GetName]§!\nKnightly Orders are special militant vassals. By default, Knightly Orders provide §G10.0%§! Forcelimit and §G20.0%§! Manpower and Sailors to their overlord, and will grant §G+0.01/0.03/0.06/0.10§! monthly Latin Imperial Authority if they own at least §Y0/50/100/200§! total development."
  # take away §R-5§! Land Forcelimit from their overlord while providing §G10.0%§! Forcelimit and §G20.0%§! Manpower and Sailors. Moreover, Pronoiars receive the following modifiers:\n§G-50.0%§! Regiment Cost\n§G+5000§! Manpower Increase\n§G+50.0%§! National Manpower Modifier\n§R+50.0%§! Core Creation Cost\n§R-20.0%§! Administrative Efficiency
  
  release_knightly_order:0 "Release the Knightly Order"
@@ -29,8 +29,13 @@
  
  byz_crusader_vassal_title:0 "Knightly Order"
  byz_crusader_vassal_title_plural:0 "Knightly Orders"
- byz_crusader_vassal_long_desc:0 "A Knightly Order is a special type of subject for the Latin Empire which functions identially to a vassal in that he cannot make certain diplomatic actions and will pay a fraction of his income to his overlord."
+ byz_crusader_vassal_long_desc:0 "A Knightly Order is a special type of subject for the Latin Empire which functions identially to a vassal in that he cannot make certain diplomatic actions and will pay a fraction of his income to his overlord. He contributes positively to Latin Imperial Authority over time."
  byz_crusader_vassal_is_our:0 "$NAME|Y$ is our Knightly Order."
+ 
+ byz_crusader_vassal_revoked_land_rights_title:0 "Knightly Order"
+ byz_crusader_vassal_revoked_land_rights_title_plural:0 "Knightly Orders"
+ byz_crusader_vassal_revoked_land_rights_long_desc:0 "A Knightly Order is a special type of subject for the Latin Empire which functions identially to a vassal in that he cannot make certain diplomatic actions and will pay a fraction of his income to his overlord. He contributes positively to Latin Imperial Authority over time."
+ byz_crusader_vassal_revoked_land_rights_is_our:0 "$NAME|Y$ is our Knightly Order."
  
  
  #Deprecated strings

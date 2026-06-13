@@ -1,14 +1,70 @@
 byz_crusader_vassal = {
 	copy_from = vassal
+	count = vassal
+	
+	
+	sprite = GFX_icon_hereditary_pronoia_subject_type
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_hereditary_pronoia_subject_type
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_hereditary_pronoia_subject_type
+	
+	# Properties:
+	created_by_overlord = yes
+	extend_trading_range = yes
 	
 	relative_power_class = 1
-	pays_overlord = 0.5 #Down from Vassal's 1.0 to compensate for smaller amount of LD. Does this even work though?
+	base_liberty_desire = 25.0
+	liberty_desire_development_ratio = 0.2 #33% higher than a regular vassal in BT.
+	
+	pays_overlord = 0.1 #purely military subject. Pays very little by default.
+	forcelimit_to_overlord = 0.1
+	naval_forcelimit_to_overlord = 0.1		
+	manpower_to_overlord = 0.2		    
+	sailors_to_overlord = 0.2		
+	military_focus = 1.0
+	
 	takes_diplo_slot = no
 	can_be_annexed = no
+	can_be_integrated = no #can be inherited
 	
-	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
-	modifier_overlord = {
+	modifier_subject = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = {
 		modifier = crusader_vassal_subject
 	}
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_overlord = {
+		modifier = crusader_vassal_overlord
+	}
+	modifier_overlord = {
+		modifier = crusader_vassal_50_dev
+		trigger = {
+			total_development = 50
+		}
+	}
+	modifier_overlord = {
+		modifier = crusader_vassal_100_dev
+		trigger = {
+			total_development = 100
+		}
+	}
+	modifier_overlord = {
+		modifier = crusader_vassal_200_dev
+		trigger = {
+			total_development = 200
+		}
+	}
+	
+}
+
+byz_crusader_vassal_revoked_land_rights = {
+
+	# Graphics:
+	sprite = GFX_icon_pronoia_subject_type
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_pronoia_subject_type
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_pronoia_subject_type
+
+	copy_from = byz_crusader_vassal
+	count = byz_crusader_vassal
+	disable_inheritance = yes # Use this for Personal Union types of subjects to disallow the inheriting mechanic
+	base_liberty_desire = 50.0
 	
 }
