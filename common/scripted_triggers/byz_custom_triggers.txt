@@ -110,49 +110,49 @@ is_byz_or_hellenic_rome_trigger = { #Deprecated
 #LTE knightly order province triggers found in separate file.
 
 #Used to check for Knightly Order tags
-is_knightly_order_tag_and_knightly_order_of_root_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = any_knightly_order_tag_under_root_exists_trigger
-		OR = { #I wonder if this is even necessary to check for.
-			#Vanilla & BT:
-			tag = ATH
-			tag = LES
-			tag = CYP
-			tag = NAX
-			tag = CEP
-			tag = ACH
-			#SE:
-			tag = EDE
-			tag = ATC
-			tag = TPL
-			tag = NEG
-			tag = NEO
-			#New tags:
-			tag = DYR
-			tag = TSL
-			tag = PHP
-			tag = VNA
-			tag = NCP
-			tag = AMK
-			tag = NCA
-			tag = PFG
-			tag = ATO
-			tag = TCS
-			tag = CSM
-			tag = CSN
-			tag = CLO
-			tag = CBT
-			tag = MSP
-			tag = TBZ
-			tag = CRS
-			tag = CDA
-			tag = EPR
-			tag = TSY
-			tag = OHR
-		}
-		is_subject_of_type = byz_crusader_vassal
-		is_subject_of = ROOT
-	}
+is_knightly_order_tag_and_knightly_order_of_root_trigger = { #Deprecated
+	# custom_trigger_tooltip = {
+		# tooltip = any_knightly_order_tag_under_root_exists_trigger
+		# OR = { #I wonder if this is even necessary to check for.
+			# #Vanilla & BT:
+			# tag = ATH
+			# tag = LES
+			# tag = CYP
+			# tag = NAX
+			# tag = CEP
+			# tag = ACH
+			# #SE:
+			# tag = EDE
+			# tag = ATC
+			# tag = TPL
+			# tag = NEG
+			# tag = NEO
+			# #New tags:
+			# tag = DYR
+			# tag = TSL
+			# tag = PHP
+			# tag = VNA
+			# tag = NCP
+			# tag = AMK
+			# tag = NCA
+			# tag = PFG
+			# tag = ATO
+			# tag = TCS
+			# tag = CSM
+			# tag = CSN
+			# tag = CLO
+			# tag = CBT
+			# tag = MSP
+			# tag = TBZ
+			# tag = CRS
+			# tag = CDA
+			# tag = EPR
+			# tag = TSY
+			# tag = OHR
+		# }
+		# is_subject_of_type = byz_crusader_vassal
+		# is_subject_of = ROOT
+	# }
 }
 
 #Used to check if province has no religious center modifier.
@@ -231,6 +231,13 @@ has_byzantine_militarization = {
 	has_government_power = { 
 		mechanic_type = byzantine_militarization_mechanic 
 		power_type = byzantine_militarization 
+		value = $value$ 
+	}
+}
+has_latin_imperial_authority = {
+	has_government_power = { 
+		mechanic_type = latin_imperial_authority_mechanic 
+		power_type = latin_imperial_authority 
 		value = $value$ 
 	}
 }
