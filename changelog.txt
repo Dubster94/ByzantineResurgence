@@ -13,7 +13,7 @@ Features:
 		-If you lack the Emperor DLC, you're unfortunately out of luck. If you're still playing EU4 now and don't have it, just go buy it in the summer sale or fetch it in other ways.
 	-The Knightly Order vassal type is now akin to vanilla Byzantine Pronoiar subjects in that they can be established from regular, loyal vassals.
 	-The Latin Imperial Authority mechanic is now a proper government mechanic.
-	-The Latin Empire has two unique government reforms: One that enables the Latin Imperial Authority mechanic, and the other that enables the establishment of Knightly Order vassals.
+	-The Latin Empire has a unique government reform that enables the Latin Imperial Authority mechanic, and enables the establishment of Knightly Order vassals.
 	-A mission in the mission tree that relates to establishing Knightly Orders  and reaching 100 Latin Imperial Authority unlocks a second diplomatic action that lets the Latin Empire revoke land rights of Knightly Orders, allowing you to inherit them once their ruler dies.
 	-The Latin Empire gets early access to client states, facilitating the removal of BR's 30 or so crusader state tags.
 	-All the decisions to establish these knightly orders were also deprecated, as well as the variable system and all related scripted triggers, effects and province triggered modifiers.
