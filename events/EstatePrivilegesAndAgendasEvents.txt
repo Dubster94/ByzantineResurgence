@@ -1797,9 +1797,9 @@ country_event = {
 		}
 		seize_land_estate_effect = { estate = estate_nomadic_tribes }
 		#BTIP's land seizure loyalty mod
-		if = { 		limit = { has_country_flag = ned_lands_generality_flag } 	add_estate_loyalty_modifier = { estate = estate_tribes desc = EST_RECENTLY_SEIZED_LAND loyalty = -10 duration = 1825 } } 
-		else_if = { limit = { has_government_attribute = seizing_land_loyalty } add_estate_loyalty_modifier = { estate = estate_tribes desc = EST_RECENTLY_SEIZED_LAND loyalty = -15 duration = 1825 } }
-		else = { 																add_estate_loyalty_modifier = { estate = estate_tribes desc = EST_RECENTLY_SEIZED_LAND loyalty = -20 duration = 1825 } } 
+		if = { 		limit = { has_country_flag = ned_lands_generality_flag } 	add_estate_loyalty_modifier = { estate = estate_nomadic_tribes desc = EST_RECENTLY_SEIZED_LAND loyalty = -10 duration = 1825 } } 
+		else_if = { limit = { has_government_attribute = seizing_land_loyalty } add_estate_loyalty_modifier = { estate = estate_nomadic_tribes desc = EST_RECENTLY_SEIZED_LAND loyalty = -15 duration = 1825 } }
+		else = { 																add_estate_loyalty_modifier = { estate = estate_nomadic_tribes desc = EST_RECENTLY_SEIZED_LAND loyalty = -20 duration = 1825 } } 
 		
 		ai_chance = {
 			factor = 0
@@ -2217,7 +2217,7 @@ country_event = {
 	#Select Grand Vizier from Peasants
 	option = {
 		name = estate_privileges_and_agendas_events.8.q
-		trigger = { has_estate_privilege = estate_peasants_advisor }
+		trigger = { always = no }
 		select_grand_vizier_from_estate = { estate = estate_peasants type = adm }
 		ai_chance = { factor = 0 }
 	}
@@ -2225,7 +2225,7 @@ country_event = {
 	#Select Grand Vizier from Generals
 	option = {
 		name = estate_privileges_and_agendas_events.8.r
-		trigger = { has_estate_privilege = estate_generals_advisor }
+		trigger = { always = no }
 		select_grand_vizier_from_estate = { estate = estate_generals type = mil }
 		ai_chance = { factor = 0 }
 	}
@@ -2233,7 +2233,7 @@ country_event = {
 	#Select Grand Vizier from Exarches
 	option = {
 		name = estate_privileges_and_agendas_events.8.s
-		trigger = { has_estate_privilege = estate_exarches_advisor }
+		trigger = { always = no }
 		select_grand_vizier_from_estate = { estate = estate_exarches type = adm }
 		ai_chance = { factor = 0 }
 	}
@@ -2241,7 +2241,7 @@ country_event = {
 	#Select Grand Vizier from Knightly Orders
 	option = {
 		name = estate_privileges_and_agendas_events.8.u
-		trigger = { has_estate_privilege = estate_knightly_orders_advisor }
+		trigger = { always = no }
 		select_grand_vizier_from_estate = { estate = estate_knightly_orders type = mil }
 		ai_chance = { factor = 0 }
 	}
