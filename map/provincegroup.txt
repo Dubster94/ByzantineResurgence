@@ -584,6 +584,7 @@ tr_access_to_the_baltic_sea_provinces = { #Identical to mos_rus_window_on_the_we
 	35 36 1842 3230 3231 7853 7855 7856 7857 
 	38 4241 7843 7844 7845 7848 7849 
 	1834 3229 7850 7851 7852 37 273 7846 7847
+	1935 7841 3293
 }
 
 tr_consolidate_russia_mission_provinces = {
@@ -1796,6 +1797,7 @@ mos_rus_window_on_the_west_provinces = { #Identical to tr_access_to_the_baltic_s
 	35 36 1842 3230 3231 7853 7855 7856 7857 
 	38 4241 7843 7844 7845 7848 7849 
 	1834 3229 7850 7851 7852 37 273 7846 7847
+	1935 7841 3293
 }
 
 mos_rus_conquer_finland_provinces = { #Identical to ukr_finnish_borderlands_provinces, and must remain identical as both missions use this specific one in their flavour event.
