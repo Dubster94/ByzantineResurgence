@@ -56,25 +56,25 @@ crusader_ideas = {
 			#Missing vanilla tags:
 			tag = ACH
 			#New tags:
-			tag = DYR
-			tag = TSL
-			tag = PHP
-			tag = VNA
-			tag = NCP
-			tag = AMK
-			tag = NCA
-			tag = PFG
-			tag = ATO
-			tag = TCS
-			tag = CSM
-			tag = CSN
-			tag = CLO
-			tag = CBT
-			tag = MSP
-			tag = TBZ
-			tag = CRS
-			tag = EPR
-			tag = CDA
+			# tag = DYR
+			# tag = TSL
+			# tag = PHP
+			# tag = VNA
+			# tag = NCP
+			# tag = AMK
+			# tag = NCA
+			# tag = PFG
+			# tag = ATO
+			# tag = TCS
+			# tag = CSM
+			# tag = CSN
+			# tag = CLO
+			# tag = CBT
+			# tag = MSP
+			# tag = TBZ
+			# tag = CRS
+			# tag = EPR
+			# tag = CDA
 		}
 	}
 	free = yes	
