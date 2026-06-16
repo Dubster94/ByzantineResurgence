@@ -317,6 +317,9 @@ spawn_rebels_in_state_province_of_dev = {
 			is_state = yes
 			NOT = { is_capital = yes }
 			development = $dev$
+			[[dev_max]
+				NOT = { development = $dev_max$ }
+			]
 		}
 		spawn_$rebel_type$_rebels = yes
 	}
@@ -332,80 +335,80 @@ byz_revoke_latifundia_effect = {
 		}
 		[[large] #30
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[medium] #15
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[small] #8
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 	}
 	else_if = {
@@ -414,67 +417,67 @@ byz_revoke_latifundia_effect = {
 		}
 		[[large] #22
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[medium] #11
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[small] #7
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 	}
 	else_if = {
@@ -483,60 +486,60 @@ byz_revoke_latifundia_effect = {
 		}
 		[[large] #16
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[medium] #9
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[small] #6
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
 		]
 	}
 	else_if = {
@@ -545,97 +548,97 @@ byz_revoke_latifundia_effect = {
 		}
 		[[large] #13
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[medium] #7
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[small] #5
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
 		]
 	}
 	else = {
 		[[large] #10
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=noble }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[medium] #6
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=noble }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=noble }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=noble }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=noble }
 		]
 		[[small] #4
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=30 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=30 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=30 dev_max=50 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=20 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=20 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=20 dev_max=30 rebel_type=pretender }
 			}
 			if = { limit = { has_non_capital_state_province_of_dev = { dev=10 } } 
-				spawn_rebels_in_state_province_of_dev = { dev=10 rebel_type=pretender }
+				spawn_rebels_in_state_province_of_dev = { dev=10 dev_max=20 rebel_type=pretender }
 			}
-			spawn_rebels_in_state_province_of_dev = { dev=3 rebel_type=pretender }
+			spawn_rebels_in_state_province_of_dev = { dev=3 dev_max=10 rebel_type=pretender }
 		]
 	}
 }
