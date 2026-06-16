@@ -475,7 +475,7 @@
  
  #New BR 8.0 missions
  byz_revive_hyperpyron_title:0 "Revive the Hyperpyron"
- byz_revive_hyperpyron_desc:0 "The Empire has been through dire times. With massive debts that need repaying and a state treasury that only just has been restored, we must ensure that we establish a permanent currency. One that lies in the past is the Hyperpyron, a solid gold coin that has not been minted in [Root.GetName] for centuries, instead being replaced with silver coins of ever degrading quality. Let us instead secure a steady supply of gold, such that we once more may mint this shining coin of brilliance!"
+ byz_revive_hyperpyron_desc:0 "The Empire has been through dire times. With massive debts that need repaying and a state treasury ever depleting, we must ensure that we establish a permanent currency. One that lies in the past is the Hyperpyron, a solid gold coin that has not been minted in [Root.GetName] for centuries, instead being replaced with silver coins of ever degrading quality. Let us instead secure a steady supply of gold, such that we once more may mint this shining coin of brilliance!"
  byz_restore_crown_authority_title:0 "Restore Crown Authority"
  byz_restore_crown_authority_desc:0 "With state financials being sorted, we must now move towards reasserting the authority of the [Root.Monarch.GetTitle] that has waned since several centuries past. Only then may we finally achieve what we seek, the rise like a Purple Phoenix!"
  byz_state_trade_hegemon_title:0 "State Trade Hegemon"
@@ -625,7 +625,7 @@
  byz_restored_hyperpyron:0 "Revived the Hyperpyron"
  desc_byz_restored_hyperpyron:0 "The Hyperpyron, the gold coin that once proved the most valuable, has returned to the minting facilities of Constantinople. Finally, we can pay our armies!"
  byz_crown_authority_restored:0 "Crown Authority Restored"
- desc_byz_crown_authority_restored:0 "With most of the lands now belonging to the [Root.Monarch], we finally stand a chance against the many peoples that lust for the Imperial Crown."
+ desc_byz_crown_authority_restored:0 "With most of the lands now belonging to the [Root.Monarch.GetTitle], we finally stand a chance against the many peoples that lust for the Imperial Crown."
  byz_restored_trade_hegemon:0 "Restored Trade Hegemon"
  desc_byz_restored_trade_hegemon:0 "Trade has finally returned to Constantinople, but this time, it's under our control!"
  byz_great_projects:0 "Great Monuments of Byzantium"
