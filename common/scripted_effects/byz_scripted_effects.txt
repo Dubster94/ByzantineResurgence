@@ -301,13 +301,13 @@ cede_land_to_exarch_effect = {
 
 spawn_pretender_rebels = {
 	spawn_rebels = {
-		size = 3
+		size = 2
 		type = pretender_rebels
 	}
 }
 spawn_noble_rebels = {
 	spawn_rebels = {
-		size = 3
+		size = 2
 		type = noble_rebels
 	}	
 }
