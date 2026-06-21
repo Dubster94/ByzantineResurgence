@@ -616,7 +616,7 @@
 7298 = { "Lentechion" "Lentechion" } #See above. There's no info whatsoever here.
 7292 = { "Sanaria" "Seusamora" } #Sanaria from Ptolemy's name of "Sanars" to the Tsanaretis. Seusamora because a town existed on Pleiades.
 7294 = { "Zalissa" "Zalissa" } #Could not find a name for Tskhinval. Using a name of Zalissa I found on Pleiades
-7290 = { "Alazon" "Alazonus" } #Using the name for the river that is close to the settlement - Alazon. Then using Alazonos as a sort of "placename" because this place has no good name otherwise. I would otherwise love to represent Khornabuji but I could not find any reference to this fortress being named in Greek or Latin.
+7290 = { "Alazon" "Alazonos" } #Using the name for the river that is close to the settlement - Alazon. Then using Alazonos as a sort of "placename" because this place has no good name otherwise. I would otherwise love to represent Khornabuji but I could not find any reference to this fortress being named in Greek or Latin.
 7291 = { "Balakan" "Balakan" } #Couldn't find anyhting good here.
 7289 = { "Sakasene" "Sakasene" } #Pleiades in the area just north of Ganja.
 
