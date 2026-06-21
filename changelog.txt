@@ -1,6 +1,13 @@
 Patch notes:
 
 ###########################################
+
+Byz Resurgence 9.0.1
+
+Bugfixes:
+-Fixed Strategoi estate agendas not showing up.
+-Fixed Syrmia/Sirmion province not being part of Subjugate Serbia mission (& Balkan Themes as a result) whilst rewards apply to it.
+
 ###########################################
 
 Byz Resurgence 9.0.0
