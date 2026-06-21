@@ -7,8 +7,16 @@ Byz Resurgence 9.0.1
 Features:
 -Greek Fire event now affects BT's Gunpowder trade good, such that it increases its price by 0.5 ducats and the provinces of Heliopolis in Syria & Tamatarcha start producing gunpowder, if you own them.
 
+Tweaks:
+-Altered Latifundia rebellion sizes:
+	-Now the revolts that are meant to be smaller cannot target provinces of high dev resulting in them sometimes being 50% bigger than intended.
+	-Reduced revolt size from 3 to 2, and increased main rebel revolt size from 2 to 4/3/2 dependent on Latifundia size.
+-Added missing GOTO in event options for Strategoi agendas
+
 Bugfixes:
 -Fixed Strategoi estate agendas not showing up.
+-Fixed Demetrios Palaiologos event not firing upon Ioannes VII dying.
+-Fixed two Strategoi estate agendas not having localisation for their description.
 -Fixed Syrmia/Sirmion province not being part of Subjugate Serbia mission (& Balkan Themes as a result) whilst rewards apply to it.
 
 ###########################################

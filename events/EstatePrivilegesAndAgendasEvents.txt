@@ -954,6 +954,7 @@ country_event = {
 		name = estate_privileges_and_agendas_events.3.q
 		trigger = { has_country_flag = estate_peasants_present_agenda }
 		start_estate_agenda = estate_peasants
+		goto = estate_peasants
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -1001,6 +1002,7 @@ country_event = {
 		name = estate_privileges_and_agendas_events.3.r
 		trigger = { has_country_flag = estate_generals_present_agenda }
 		start_estate_agenda = estate_generals
+		goto = estate_generals
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -1047,6 +1049,7 @@ country_event = {
 		# name = estate_privileges_and_agendas_events.3.s
 		# trigger = { has_country_flag = estate_exarches_present_agenda }
 		# start_estate_agenda = estate_exarches
+		# goto = estate_exarches
 		# ai_chance = {
 			# factor = 1
 			# modifier = {
@@ -1093,6 +1096,7 @@ country_event = {
 		# name = estate_privileges_and_agendas_events.3.v
 		# trigger = { has_country_flag = estate_knightly_orders_present_agenda }
 		# start_estate_agenda = estate_knightly_orders
+		# goto = estate_knightly_orders
 		# ai_chance = {
 			# factor = 1
 			# modifier = {

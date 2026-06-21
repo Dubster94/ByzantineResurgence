@@ -603,6 +603,7 @@
 423 = { "Tiphlida" "Tiphlida" } #Tiphilis is ancient greek. One can also use the name for its fortress Narikala, although that's a name given by the Mongols in Arabic.
 2203 = { "Teleda" "Teleda" } #Greek geographer's name for Telavi? No source, and it is also claimed to be the name of a city in Azerbaijan, but what do I know.
 7297 = { "Chichanion" "Chichanion" } #Using the Khikhani Fortress, transliterating it and adding on "-on"
+7293 = { "Alania" "Kaspiai Pylai" } #I am really not liking this name - this is technically further east, south of Vladikavkaz. But there's nothing else here, so it'll do.
 
 #Odishi (Lazica)
 2196 = { "Bathys" "Bathys" } #Phasis is further on the coast. Bathys is the province port (Batumi)
@@ -611,7 +612,6 @@
 1856 = { "Sebastopolis" "Sebastopolis" }
 2195 = { "Palaia Achaia" "Palaia Achaia" }
 7299 = { "Pityous" "Nitike" } #Supposedly named Nitica by Romans. Also found a Soteriopolis on a Latin map, presumably hellenized as Soterioupolis
-#7296 = { "Artaanion" "Artaanion" } #Hellenizing Artaani. I have no sources whatsoever claiming this to be the case, but this'll have to do.
 7295 = { "Onion" "Onion" } #As was the case of Ani, using the same root and adding -on
 7298 = { "Lentechion" "Lentechion" } #See above. There's no info whatsoever here.
 
