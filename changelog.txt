@@ -4,6 +4,9 @@ Patch notes:
 
 Byz Resurgence 9.0.1
 
+Features:
+-Greek Fire event now affects BT's Gunpowder trade good, such that it increases its price by 0.5 ducats and the provinces of Heliopolis in Syria & Tamatarcha start producing gunpowder, if you own them.
+
 Bugfixes:
 -Fixed Strategoi estate agendas not showing up.
 -Fixed Syrmia/Sirmion province not being part of Subjugate Serbia mission (& Balkan Themes as a result) whilst rewards apply to it.

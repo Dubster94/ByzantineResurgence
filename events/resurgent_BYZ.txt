@@ -2936,6 +2936,28 @@ country_event = { #37 The Rediscovery of Greek Fire
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				owns = 2447
+			}
+			2447 = {
+				change_trade_goods = bt_trade_good_gunpowder
+			}
+		}
+		if = {
+			limit = {
+				owns = 4297
+			}
+			4297 = {
+				change_trade_goods = bt_trade_good_gunpowder
+			}
+		}
+		change_price = {
+			trade_goods = bt_trade_good_gunpowder
+			key = byz_greek_fire
+			value = 0.2
+			duration = -1
+		}
 		ai_chance = {
 			factor = 90
 		}
@@ -2956,6 +2978,28 @@ country_event = { #37 The Rediscovery of Greek Fire
 				name = "byz_greek_fire"
 				duration = -1
 			}
+		}
+		if = {
+			limit = {
+				owns = 2447
+			}
+			2447 = {
+				change_trade_goods = bt_trade_good_gunpowder
+			}
+		}
+		if = {
+			limit = {
+				owns = 4297
+			}
+			4297 = {
+				change_trade_goods = bt_trade_good_gunpowder
+			}
+		}
+		change_price = {
+			trade_goods = bt_trade_good_gunpowder
+			key = byz_greek_fire
+			value = 0.2
+			duration = -1
 		}
 		ai_chance = {
 			factor = 5
