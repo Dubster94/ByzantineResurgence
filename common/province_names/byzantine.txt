@@ -584,7 +584,7 @@
 7288 = { "Lychnitis" "Theispa" } #Province name is Greek for Lake Sevan. The city name is weird, using the city of Teyseba/Odzaberd close by, which was named after an Armenian god called Theispas. Not sure if this is the Greek name, but it sounds sufficiently Greek and there literally aren't any better names here.
 
 #Shirvan
-420 = { "Gantzaka" "Gantzaka" } 
+420 = { "Gantzaka" "Gantzaka" }
 4305 = { "Sakion" "Sakion" } #Pre 1.24 was 3259
 4299 = { "Chabala" "Chabala" } #Pre 1.24 was 3258
 421 = { "Bagaban" "Bagaban" } #This is what armenian historians call the city before ~800 AD, i.e city of winds (Baga-avan)
@@ -614,6 +614,11 @@
 7299 = { "Pityous" "Nitike" } #Supposedly named Nitica by Romans. Also found a Soteriopolis on a Latin map, presumably hellenized as Soterioupolis
 7295 = { "Onion" "Onion" } #As was the case of Ani, using the same root and adding -on
 7298 = { "Lentechion" "Lentechion" } #See above. There's no info whatsoever here.
+7292 = { "Sanaria" "Seusamora" } #Sanaria from Ptolemy's name of "Sanars" to the Tsanaretis. Seusamora because a town existed on Pleiades.
+7294 = { "Zalissa" "Zalissa" } #Could not find a name for Tskhinval. Using a name of Zalissa I found on Pleiades
+7290 = { "Alazon" "Alazonus" } #Using the name for the river that is close to the settlement - Alazon. Then using Alazonos as a sort of "placename" because this place has no good name otherwise. I would otherwise love to represent Khornabuji but I could not find any reference to this fortress being named in Greek or Latin.
+7291 = { "Balakan" "Balakan" } #Couldn't find anyhting good here.
+7289 = { "Sakasene" "Sakasene" } #Pleiades in the area just north of Ganja.
 
 #Tabriz
 4304 = { "Chauon" "Chauon" } #Pre 1.24 was 3255
