@@ -839,10 +839,6 @@
 
 
 
-#Sinai
-4268 = { "Ailana" "Ailana" } #Pre 1.24 was 5202
-5181 = { "Sinai" "Kastron" } #There is no documentation of the actual name for Nekhel, despite its apparent existence since ancient Egypt. Unfortunately, I cannot use Saint Catherine's Monastery any more due to it now being a monument down south. This area has no real history whatsoever according to what I've been able to find and I seriously doubt Nekhel was a thing in Ancient Egyptian times or it would've been mentioned during Graeco-Roman rule. Hence, I'm just calling it "Castle" and using the generic Sinai name.
-365 = { "Rhaithou" "Rhaithou" }
 
 #Mecca & Medina
 2327 = { "Makna" "Makna" }
@@ -864,43 +860,63 @@
 ##########
 
 #Nile Delta
-362 = { "Bolbitine" "Bolbitine" }
-358 = { "Alexandreia" "Alexandreia" }
-2316 = { "Sebennytos" "Sebennytos" }
-5261 = { "Tamiathis" "Tamiathis" }
-4316 = { "Pharbaithos" "Pharbaithos" } #Pre 1.24 was 5262
-4317 = { "Naukratis" "Naukratis" } #Technically speaking it should be slightly further south, but there's no big city up there that works. Apparently vanilla goes with Temenhor, but from what I've seen it's not a name chosen by the Romans/Greeks. Pre 1.24 was 5263
-
-#Suez
+362 = { "Bolbitine" "Bolbitine" } #Rosetta
+358 = { "Alexandreia" "Alexandreia" } #Do I need to explain myself?
+5261 = { "Tamiathis" "Tamiathis" } #Damietta
 363 = { "Pelousion" "Pelousion" }
+9077 = { "Tanis" "Tanis" } #This default name, Salheya/As-salihiya, has me very confused. Looking it up online, it is way further south IRL. I'm using an old Egyptian capital called Tanis. The city does exist today still, but it technically got abandoned during Roman times due to Nile silting.
+
+#Lower Egypt
+4317 = { "Naukratis" "Naukratis" } #Damanhur was known as Hermopolis (Mikra), which seems to suggest this particular city was insignificant. As such, I'm going with Naukratis which was more important to the Romans. Technically speaking it should be slightly further south, but there's no big city up there that works. Apparently vanilla goes with Temenhor, but from what I've seen it's not a name chosen by the Romans/Greeks. Pre 1.24 was 5263
+9076 = { "Sketis" "Skete" } #Sketis is "Hellenistic Greek", whereas "Skete" is ecclesiastical Greek. Given the oasis is historically known for monasticism in conjunction with the other two monasteries in the desert - Kellia & Nitria, I think this is fair naming. Pleiades also suggests Skiathis, Skithis, and also adds the two monasteries of "Oros Nitrias" and Nitria/Kellia here for some reason. For once, I am essentially spoiled for choice! :D
+9078 = { "Phelbes" "Phelbes" } #This one is annoying. The fortress was clearly a Byzantine one, but the recorded names are all either Arabic or Coptic, not Greek. I'll use the coptic one for now since they do use the Greek alphabet, or at least a version of it, for now, and I can see ecclesiastically that it would be named such in Greek. We could also do Boubastos (Bubastis), but I think this one may just be more important to the Byzantines.
+2316 = { "Athribis" "Athribis" } #Tanta is known as Taua. However, this particular city was, again, irrelevant to the Romans/Greeks. Hence I go with Athribis, a bit further south.
+4316 = { "Sebennytos" "Sebennytos" } #Used to be Pharbaithos but I don't think that fits geographically any more. Mansoura is close to that of Sebennytos (Literally just slightly further downriver). #Pre 1.24 was 5262
+361 = { "Helios" "Helioupolis" } #Cairo is technically further south but I figure this would be the most sensible option. The fortress of Babylon exists right on top of Cairo, but there's already other Babylons around.
+5264 = { "Letos" "Letoupolis" } #I've abandoned Memphis, as reading into the history it apparently was abandoned as well during Byzantine times. There was a Byzantine village known as Teresa according to Wikipedia, but yeah, this'll do.
+
+#Sinai
+4268 = { "Ailana" "Ailana" } #Pre 1.24 was 5202
+5181 = { "Sinai" "Kastron" } #There is no documentation of the actual name for Nekhel, despite its apparent existence since ancient Egypt. Unfortunately, I cannot use Saint Catherine's Monastery any more due to it now being a monument down south. This area has no real history whatsoever according to what I've been able to find and I seriously doubt Nekhel was a thing in Ancient Egyptian times or it would've been mentioned during Graeco-Roman rule. Hence, I'm just calling it "Castle" and using the generic Sinai name.
+365 = { "Rhaithou" "Rhaithou" }
 2315 = { "Klysma" "Klysma" }
 
 #Eastern Desert
 2320 = { "Myos" "Myos Hormos" } #Removing Hormos meaning "core"
 2321 = { "Leukos" "Leukos Limen" } #Removing Limen, meaning "port"
 4321 = { "Klaudianon" "Klaudianon" } #I honestly can't even find this place on google maps or anything like that. This was a settlement that at least made some sense. Pre 1.24 was 5270
+9084 = { "Persou" "Persou" } #Persou was found on Pleiades for the place. There are other cool army outpost names in the vicinity however.
+9083 = { "Philotera" "Philotera" } #Going with what the wikipage claims.
+9079 = { "Hagios Antonios" "Hagios Antonios" } #Saint Anthony, translated. The Ptolemaic Egypt map suggests another Philotera here, which is even weirder given there's another Philotera further south for Safaga.
+9086 = { "Nechesia" "Nechesia" } #Found on Pleiades close to the place. Province is uncolonised at game start so we'll see how relevant it is.
+
+#Red Sea Coast
 5271 = { "Berenike" "Berenike" }
 
 #Nubian Desert
-4322 = { "Paneia" "Paneia" } #Looking at sources, there seems to have been a roman water temple at Bir Abraq. Supposedly these water places are referred to as Paneia by the Greeks. Therefore I'll name it as such. Pre 1.24 was 5276
+#4322 = { "Paneia" "Paneia" } #Looking at sources, there seems to have been a roman water temple at Bir Abraq. Supposedly these water places are referred to as Paneia by the Greeks. Therefore I'll name it as such. Pre 1.24 was 5276
 
-#Lower Egypt
-361 = { "Helioupolis" "Helioupolis" }
-5264 = { "Letoupolis" "Letoupolis" } #I've abandoned Memphis, as reading into the history it apparently was abandoned as well during Byzantine times. There was a Byzantine village known as Teresa according to Wikipedia, but yeah, this'll do.
+#Middle Egypt
 359 = { "Arsinoion" "Arsinoion" } #Changing Arsinoe into Arsinoion to represent evolution from Ancient Greek
-5267 = { "Oxyrrhynchos" "Oxyrrhynchos" }
-4318 = { "Aphroditopolis" "Aphroditopolis" } #Busiris was the hellenistic name, not the Byzantine one. Pre 1.24 was 5265
+5267 = { "Herakleios" "Herakleioupolis" } #Beni Suef is placed right next to "Thmoinepsi", but this place had no significance in ancient times, so I'm picking Herakleopolis a bit further west. Used to be Oxyrrhynchos but that is further south and is better for the new province.
+9080 = { "Oxyrrhynchos" "Oxyrrhynchos" } #Samalut is "Somolo", but tiny and insignificant so going with this major one.
+4318 = { "Aphroditou" "Aphroditopolis" } #Busiris was the hellenistic name, not the Byzantine one. Let's hope I named the shortening of this one as it was "Aphrodito" in Latin. Pre 1.24 was 5265
+2317 = { "Antinoe" "Antinoupolis" }
+2319 = { "Lykoupolis" "Lykoupolis" }
+9081 = { "Koussai" "Koussai" }
 
 
 #Upper Egypt
 360 = { "Kaine" "Kaine" }
-2319 = { "Lykoupolis" "Lykoupolis" }
-2317 = { "Antinoe" "Antinoupolis" } #To shorten for shorter names
+1231 = { "Syene" "Elephantine" } #Could also be Elephantine
 4320 = { "This" "This" } #Pre 1.24 was 5268
 4319 = { "Diospolis" "Thebai" } #Called Diospolis because I don't want too many Thebai. Pre 1.24 was 5269
+9082 = { "Chemmis" "Panoupolis" } #Using both names here to represent Ancient & later Greek. The actual city of Sohag was Bompae, which is insignificant.
+9087 = { "Omboi" "Omboi" } #There's also a "Contra Ombos" on the other side of the river which I found funny.
+
+
 
 #Lower Nubia
-1231 = { "Syene" "Elephantine" } #Could also be Elephantine
 5278 = { "Philai" "Philai" }
 1234 = { "Premis" "Premis" }
 2322 = { "Pachora" "Pachora" }
@@ -917,22 +933,27 @@
 #Unsure
 5302 = "Chamant" #I put the arabic into google translate and got this (Accent on the a, though, but since no other names in this localization has accents, I removed it)
 2323 = "Sanka" #Again arabic google translate and got this (Again accent on the a). There was a mine in the region according to some Ayyubid literature stuff, but there's not even a town here today on Google Maps...
-
-#al-Wahat (Pre 1.24 Libyan Desert)
-1233 = { "Hibis" "Hibis" }
-2318 = { "Pouka" "Oasis Tritos" }
-5272 = { "Paraitonion" "Paraitonion" }
-2325 = { "Antiphrai" "Antiphrai" }
-5273 = { "Ammon" "Oasis Ammon" }
-4323 = { "Trimithis" "Trimithis" } #Pre 1.24 was 5275
-
-#Egyptian Coast
+1229 = { "Panchrysos" "Berenike Panchrysos" } #Randomly found on Pleiades.
 5282 = { "Soteiron" "Theo Soteiron" } #Theo Soteiron from Ptolemy, according to German wiki.
 1232 = { "Evangelis" "Limen Evangelis" } #Ptolemy's "Port of Good Hope" (Limen Evangelis)
 2324 = { "Chersos" "Chersonesos" } #Using a very vague reference that Aydhab/Halaib was supposedly Ptolemy's Chersonesus (Peninsula), I use the greek word Chersos (Dry land) to name this place.
 5283 = { "Theron" "Ptolemais Theron" } #Ptolemais Theron
 
-#Just need some minor details on two provinces now and I'll have all of Egypt named in Greek!
+#Marmarica
+2325 = { "Antiphrai" "Antiphrai" }
+5272 = { "Paraitonion" "Paraitonion" }
+2326 = { "Antipyrgos" "Antipyrgos" }
+9093 = { "Plynos" "Plynos Limen" }
+9094 = { "Petras Megas" "Petras Megas" }
+
+#Egyptian Oases
+1233 = { "Hibis" "Hibis" }
+4323 = { "Trimithis" "Trimithis" } #Pre 1.24 was 5275
+9090 = { "Kysis" "Kysis" } #The only place here in Greek I could find.
+2318 = { "Pouka" "Oasis Tritos" }
+5273 = { "Ammon" "Oasis Ammon" }
+9092 = { "Trinytheos" "Trinytheos" } #Big dodge on this one - found on Finnish wikipedia page suggesting Farafra was known as "Trinytheus". Word means "Trinity", so I guess that's that.
+9091 = { "Oasis Kastron" "Kastron" } #Abu Minqar. This name is completely made up because I have now officially given up after looking around for almost an entire hour. No map of Ptolemaic/Roman Egypt shows this, Pleiades/DARE has nothing, wikipages have nothing, a book online called Roads in the Deserts of Roman Egypt claims this place existed, but I could not get ahold of any info from it. Some googling suggested Abu Minqar was built in 1987 so this place had nothing around it I suppose, and there's not even proper etymology on this. The wikipage claims it was inhabited by Romans, but no info suggests any sort of name or similar. I'm just going for Oasis Castle now because there's nothing here.
 
 
 ############
@@ -942,7 +963,6 @@
 #Cyrenaica
 357 = { "Darnis" "Darnis" }
 356 = { "Ptolemais" "Berenike" } #Certainly not where the province city is, but it's important enough and I have too many berenike.
-2326 = { "Antipyrgos" "Antipyrgos" }
 5274 = { "Korniklanon" "Korniklanon" }
 5303 = { "Ierabou" "Ierabou" } #New in 1.24, made up name using phonetics of the Italian name Giarabub for the sake of completion.
 5304 = { "Augila" "Oasis Augila" } #New in 1.24
