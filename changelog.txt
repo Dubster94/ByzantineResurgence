@@ -6,6 +6,7 @@ Byz Resurgence 9.0.1
 
 Features:
 -Greek Fire event now affects BT's Gunpowder trade good, such that it increases its price by 0.5 ducats and the provinces of Heliopolis in Syria & Tamatarcha start producing gunpowder, if you own them.
+-There's now Greek dynamic province naming for new provinces in Georgia & Egypt.
 
 Tweaks:
 -Altered Latifundia rebellion sizes:
@@ -18,6 +19,7 @@ Bugfixes:
 -Fixed Demetrios Palaiologos event not firing upon Ioannes VII dying.
 -Fixed two Strategoi estate agendas not having localisation for their description.
 -Fixed Syrmia/Sirmion province not being part of Subjugate Serbia mission (& Balkan Themes as a result) whilst rewards apply to it.
+-Fixed edge-case of Strategoi estate agenda calling a null province.
 
 ###########################################
 

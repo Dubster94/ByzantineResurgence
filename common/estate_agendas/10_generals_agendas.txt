@@ -10,18 +10,18 @@ estate_generals_develop_theme_capital_x = {
 	}
 	pre_effect = {
 		random_list = {
-			1 = {
-				random_owned_province = {
-					limit = {
-						is_state_core = root
-						area_for_scope_province = {
-							is_capital_of = root
-						}
-						estate_generals_is_theme_capital_trigger = yes
-					}
-					save_event_target_as = agenda_province
-				}
-			}
+			# 1 = { #Disabled as it caused null provinces
+				# random_owned_province = {
+					# limit = {
+						# is_state_core = root
+						# area_for_scope_province = {
+							# is_capital_of = root
+						# }
+						# estate_generals_is_theme_capital_trigger = yes
+					# }
+					# save_event_target_as = agenda_province
+				# }
+			# }
 			2 = {
 				trigger = {
 					any_owned_province = {
