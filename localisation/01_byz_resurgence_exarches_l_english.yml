@@ -186,7 +186,7 @@
  establish_exarch_of_anatolia_title:0 "Establish the Exarch of the Orient"
  establish_exarch_of_anatolia_desc:0 "As our eurocentric policies have set our sights on the West with the moving of the Imperial capital to Italy, the lands in the East are no longer as close to our seat of administration. As such, establishing an Exarch of the Orient, Anatolia in Greek tongue, could prove beneficial as to allow efficient governance."
  establish_exarch_of_aegyptus_title:0 "Establish the Exarch of Egypt"
- establish_exarch_of_aegyptus_desc:0 "Considering our seat of administration has been moved to Italy, the region of Egypt has moved further away from our capital. While the region historically has been very easy to hold onto, since the rise of the Arabs and the muslims, the region has become increasingly violent. This move thus necessitates us establishing an Exarch in the region if we wish the region to be governed effectively."
+ establish_exarch_of_aegyptus_desc:0 "While the region of Egypt historically has been very easy to hold onto, since the rise of the Arabs and the muslims, the region has become increasingly violent. This move thus necessitates us establishing an Exarch in the region if we wish the region to be governed effectively."
  
  ai_cede_lands_karchidon_title:0 "Grant Karchidoniac Lands"
  ai_cede_lands_karchidon_desc:0 "This decision allows you to automatically grant Karchidon any provinces intended to be given to them by the mod author. If you do not like the borders this makes, please either refrain from using this decision and grant lands through subject interactions instead, or modify the scripted trigger in the mod files that determines what lands should be part of the Exarch."
