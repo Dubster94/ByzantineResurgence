@@ -800,9 +800,9 @@ country_decisions = {
 			}
 		}
 		allow = {
-			capital_scope = {
-				region = italy_region
-			}
+			# capital_scope = {
+				# region = italy_region
+			# }
 			is_at_war = no
 			adm_power = 50
 			358 = { #Alexandria, important city in the region.
