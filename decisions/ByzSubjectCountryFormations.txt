@@ -34,11 +34,6 @@ country_decisions = {
 				area = moldavia_area
 				area = bukovina_area
 				area = western_moldovia_area
-				province_id = 7744
-				province_id = 7746
-				province_id = 7745
-				province_id = 7743
-				province_id = 156
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -112,26 +107,12 @@ country_decisions = {
 			#Claims, corresponding to ancient Dacian region.
 			transylvania_area = { add_permanent_claim = DAC }
 			southern_transylvania_area = { add_permanent_claim = DAC }
-			7744 = { add_permanent_claim = DAC  }
-			7746 = { add_permanent_claim = DAC  }
-			7745 = { add_permanent_claim = DAC  }
-			7743 = { add_permanent_claim = DAC  }
-			156 = { add_permanent_claim = DAC  }
 			oltenia_area = { add_permanent_claim = DAC }
 			upper_muntenia_area = { add_permanent_claim = DAC }
 			wallachia_area = { add_permanent_claim = DAC }
 			moldavia_area = { add_permanent_claim = DAC }
 			bukovina_area = { add_permanent_claim = DAC }
 			western_moldovia_area = { add_permanent_claim = DAC }
-			1952 = { add_claim = DAC  }
-			7273 = { add_claim = DAC  }
-			8204 = { add_claim = DAC  }
-			
-			8203 = { add_claim = DAC  }
-			8493 = { add_claim = DAC  }
-			157 = { add_claim = DAC  }
-			8206 = { add_claim = DAC  }
-			3152 = { add_claim = DAC  }
 			#Iron spread
 			random_province = {
 				limit = {
