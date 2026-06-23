@@ -2960,16 +2960,6 @@ byz_balkan_2 = {
 		}
 		
 		effect = {
-			if = {
-				limit = {
-					mission_completed = byz_gain_foothold_in_italy
-				}
-				add_country_modifier = {
-					name = "byz_prep_italy_invasion"
-					duration = 1825
-				}
-				112 = { add_permanent_claim  = ROOT }
-			}
 			7718 = { #Sirmion, Theme capital.
 				add_base_tax = 5
 				add_base_production = 5
@@ -2994,7 +2984,7 @@ byz_venice_1 = {
 	destroy_venice = { #Taken from vanilla, adjusted to limit to Venice itself
 		icon = mission_monarch_in_throne_room
 		position = 16 #3-16
-		required_missions = { byz_subjugate_serbia byz_gain_foothold_in_italy }
+		required_missions = { byz_gain_foothold_in_italy }
 		
 		provinces_to_highlight = {
 			province_id = 112 #Venice
@@ -3572,17 +3562,12 @@ byz_italy_1 = {
 				add_base_tax = 3
 				add_base_production = 3
 				add_base_manpower = 1
-			}	
-			if = {
-				limit = {
-					mission_completed = byz_subjugate_serbia
-				}
-				add_country_modifier = {
-					name = "byz_prep_italy_invasion"
-					duration = 1825
-				}
-				112 = { add_permanent_claim  = ROOT }
-			}		
+			}
+			add_country_modifier = {
+				name = "byz_prep_italy_invasion"
+				duration = 1825
+			}
+			112 = { add_permanent_claim  = ROOT }	
 			#Claims
 			give_permaclaims_for_mission = { mission=byz_conquer_greater_greece }
 		}
