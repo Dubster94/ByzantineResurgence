@@ -39,3 +39,6 @@
  make_pronoia_inheritable_title:0 "Retract Right to Inheritance"
  make_pronoia_inheritable_desc:0 "Are you sure you want to restrict the inheritance laws in [From.GetName], turning them into a Catepanate? This will greatly upset the Curopalate in question but will allow you to inherit the country."
  make_pronoia_inheritable_tooltip:0 "The Curopalate in [From.GetName] will no longer be able to pass on his land to his heirs. This will cause a major spike in Liberty Desire but will return those lands to us once the ruler dies."
+ 
+ reform_the_pronoiars_reform:0 "Expanded Honorific Court Titles"
+ reform_the_pronoiars_reform_desc:0 "With the loss of land experienced in the centuries leading to the Crusade at Varna, the prestige in honorific titles granted by the Emperor to foreign rulers have diminished significantly. As we resurge and expand our borders, these titles may once more become significant. Let us restore their perceived value!
