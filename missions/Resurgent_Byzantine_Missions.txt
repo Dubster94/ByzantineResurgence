@@ -4150,17 +4150,15 @@ byz_tyrian_purple_1 = {
 				trade_goods = silk
 				amount = 20 #This is 200 silk production dev, post-goods produced + production efficiency and manufactory stuff.
 			}
-			trading_bonus = {
+			production_leader = {
 				trade_goods = silk
-				value = yes
 			}
 			trade_goods_produced_amount = {
 				trade_goods = dyes
 				amount = 10 #This is 100 dyes production dev, post-goods produced + production efficiency and manufactory stuff.
 			}
-			trading_bonus = {
+			production_leader = {
 				trade_goods = dyes
-				value = yes
 			}
 		}
 		
@@ -6824,13 +6822,11 @@ byz_iberia_4 = {
 				trade_goods = bt_trade_good_fruit
 				amount = 80 #This corresponds to 800 production dev in fruit provinces. That should not be a problem.
 			}
-			trading_bonus = {
+			production_leader = {
 				trade_goods = wine
-				value = yes
 			}
-			trading_bonus = {
+			production_leader = {
 				trade_goods = bt_trade_good_fruit
-				value = yes
 			}
 		}
 		
@@ -7832,17 +7828,15 @@ byz_hre_3 = {
 				trade_goods = copper
 				amount = 30 #This corresponds to 300 production dev in copper provinces. That should not be a problem.
 			}
-			trading_bonus = {
+			production_leader = {
 				trade_goods = copper
-				value = yes
 			}
 			trade_goods_produced_amount = {
 				trade_goods = iron
 				amount = 40 #This corresponds to 400 production dev in iron provinces. That should not be a problem.
 			}
-			trading_bonus = {
+			production_leader = {
 				trade_goods = iron
-				value = yes
 			}
 		}
 		

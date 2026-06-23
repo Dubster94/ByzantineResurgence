@@ -16,6 +16,7 @@ Tweaks:
 -Added missing GOTO in event options for Strategoi agendas
 -Annihilate Venice mission now no longer requires Subjugate Serbia mission and adjusted relevant mission rewards.
 -March of Dacia decision now no longer considers single provinces, only the set few areas. 
+-Tweaked all Byzantine missions regarding "Trading in" bonuses to require you to be the production leader instead.
 
 Bugfixes:
 -Fixed Strategoi estate agendas not showing up.
