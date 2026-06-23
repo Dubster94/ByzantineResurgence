@@ -592,7 +592,7 @@
  
  
  #Exarch missions
- byz_establish_exarch_seat_tooltip:0 "Establishes an §YExarch Seat§! in the province, enabling a province triggered modifier giving governing capacity to its owner based on its development.\nIt will give:\n     §G+250§! Governing Capacity at 50 §YDevelopment§!\n     §G+500§! Governing Capacity at 80 §YDevelopment§!\n     §G+750§! Governing Capacity at 100 §YDevelopment§!"
+ byz_establish_exarch_seat_tooltip:0 "Establishes an §YExarch Seat§! in the province, enabling a province triggered modifier giving governing capacity to its owner based on its development.\nIt will give:\n     §G+10§! Governing Capacity at 50 §YDevelopment§!\n     §G+20§! Governing Capacity at 80 §YDevelopment§!\n     §G+30§! Governing Capacity at 100 §YDevelopment§!\n\nAs well as:\n     Governing Capacity Modifier: §G+5.0%§!\n     Monthly Autonomy Change: §R+0.02§!"
  byz_exarchate_of_africa_title:0 "Exarchate of Africa"
  byz_exarchate_of_africa_desc:0 "Perhaps the most successful Exarchate established in the history of our Empire, the Exarchate of Africa, seated in the city of Carthage or Karchidon, held great ties to the Imperial dynasty in Constantinople, at one point even coming to our aid against pretenders attempting to seize the throne. Unfortunately lost to the Muslim invasions in the 7th century, it is time we re-establish this entity, either with great autonomy, or directly under the [Root.Monarch.GetTitle]."
  byz_exarchate_of_africa_1:0 "If the Exarchate of §Y[KCD.GetName]§! is established:"

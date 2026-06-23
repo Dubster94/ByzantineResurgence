@@ -30,7 +30,9 @@ exarch_seat_modifier_med_dev = {
 	}
 	
 	picture = "exarch_seat_modifier_states"
-	governing_capacity = 25
+	governing_capacity = 10
+	governing_capacity_modifier = 0.05
+	global_autonomy = 0.02
 }
 
 exarch_seat_modifier_high_dev = {
@@ -50,7 +52,9 @@ exarch_seat_modifier_high_dev = {
 	}
 	
 	picture = "exarch_seat_modifier_states_big"
-	governing_capacity = 50
+	governing_capacity = 20
+	governing_capacity_modifier = 0.05
+	global_autonomy = 0.02
 }
 
 exarch_seat_modifier_very_high_dev = {
@@ -66,7 +70,9 @@ exarch_seat_modifier_very_high_dev = {
 	}
 	
 	picture = "exarch_seat_modifier_states_bigger"
-	governing_capacity = 75
+	governing_capacity = 30
+	governing_capacity_modifier = 0.05
+	global_autonomy = 0.02
 }
 
 orthodox_religious_center = {
