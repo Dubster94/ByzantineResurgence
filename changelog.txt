@@ -8,6 +8,7 @@ Features:
 -Greek Fire event now affects BT's Gunpowder trade good, such that it increases its price by 0.5 ducats and the provinces of Heliopolis in Syria & Tamatarcha start producing gunpowder, if you own them.
 -There's now Greek dynamic province naming for new provinces in Georgia & Egypt.
 -Dacia now has unique ideas.
+-The 6 monuments added by Byzantine Resurgence (Basilica of San Vitale, Hippodrome of Constantinople, Circus Maximus, Library of Alexandria, Great Harbor of Carthage & Tsarevets Church of Ascension) now have monument descriptions.
 
 Tweaks:
 -Altered Latifundia rebellion sizes:
@@ -17,6 +18,8 @@ Tweaks:
 -Annihilate Venice mission now no longer requires Subjugate Serbia mission and adjusted relevant mission rewards.
 -March of Dacia decision now no longer considers single provinces, only the set few areas. 
 -Tweaked all Byzantine missions regarding "Trading in" bonuses to require you to be the production leader instead.
+-The Egypt Exarch decision no longer requires your capital to be in Italy to be established, thus leaving the amount of possible Exarches equal for capitals in Rome vs Constantinople.
+
 
 Bugfixes:
 -Fixed Strategoi estate agendas not showing up.
@@ -24,6 +27,7 @@ Bugfixes:
 -Fixed two Strategoi estate agendas not having localisation for their description.
 -Fixed Syrmia/Sirmion province not being part of Subjugate Serbia mission (& Balkan Themes as a result) whilst rewards apply to it.
 -Fixed edge-case of Strategoi estate agenda calling a null province.
+-Fixed KoK reform "Reform Pronoia System" referencing Pronoia which makes no sense in this mod any more.
 
 ###########################################
 
