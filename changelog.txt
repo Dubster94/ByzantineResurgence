@@ -14,6 +14,8 @@ Tweaks:
 	-Now the revolts that are meant to be smaller cannot target provinces of high dev resulting in them sometimes being 50% bigger than intended.
 	-Reduced revolt size from 3 to 2, and increased main rebel revolt size from 2 to 4/3/2 dependent on Latifundia size.
 -Added missing GOTO in event options for Strategoi agendas
+-Annihilate Venice mission now no longer requires Subjugate Serbia mission and adjusted relevant mission rewards.
+-March of Dacia decision now no longer considers single provinces, only the set few areas. 
 
 Bugfixes:
 -Fixed Strategoi estate agendas not showing up.
