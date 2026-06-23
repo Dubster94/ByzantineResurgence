@@ -1,41 +1,49 @@
-DAC_ideas = { #Stolen from Romanian Ideas
+DAC_ideas = {
 	start = {
-		discipline = 0.05
-		tolerance_own = 2
+		global_trade_goods_size_modifier = 0.2 #Iron mines & gold (Although these were closed quite early).
+		global_manpower_modifier = 0.33 #Roman legions went in and did fun.
 	}
 
 	bonus = {
-		improve_relation_modifier = 0.25
+		prestige = 1 #It's a roman march. Why not?
 	}
 
 	trigger = {
 		tag = DAC
 	}
-
 	free = yes # will be added at load
-
-	flexible_recruiting = {
-		manpower_recovery_speed = 0.2
+	
+	dac_roman_legions = { #Initially a base for roman legions, afterwards it was a settlement for retired soldiers.
+		discipline = 0.05
 	}
-	skilled_commanders = {
-		leader_land_manuever = 1
+	
+	dac_road_networks = { #Paved roman roads, in particular arterial roads. "Only two roads attested", but certainly there's plenty of other roads elsewhere.
+		expand_infrastructure_cost_modifier = -0.25
+		global_prosperity_growth = 0.1
 	}
-	scorch_the_land_and_poison_the_wells = {
-		hostile_attrition = 1
+	
+	dac_soldier_local_marriages = { #Soldiers were allowed to marry local populace.
+		global_unrest = -2
+		years_of_nationalism = -5
 	}
-	latin_island = {
+	
+	dac_latifundia = { #With roman colonisation came settlements that were both urbanised as well as rural settlements with latifundia.
+		development_cost = -0.1
+	}
+	
+	dac_romanization = { #Romans colonised the regions.
+		culture_conversion_cost = -0.25
+		promote_culture_cost = -0.1
+	}
+	
+	dac_mines_and_foundries = { #Province was heavily invested in mining, casting and other similar production
+		fire_damage = 0.10
+	}
+	
+	dac_memorials = { #One feature pertaining to Dacia was that they had some funerary rites that predate Christianity and persisted after the province ended.
 		legitimacy = 1
 	}
-	rom_peasant_soldiers = {
-		infantry_cost = -0.1
-		global_manpower_modifier = 0.1
-	}
-	phanariote_traders = {
-		global_trade_power = 0.15
-	}
-	phanariote_taxes = {
-		global_tax_modifier = 0.1
-	}
+
 }
 
 ALN_ideas = { #Stolen from Caucasian ideas

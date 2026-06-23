@@ -7,6 +7,7 @@ Byz Resurgence 9.0.1
 Features:
 -Greek Fire event now affects BT's Gunpowder trade good, such that it increases its price by 0.5 ducats and the provinces of Heliopolis in Syria & Tamatarcha start producing gunpowder, if you own them.
 -There's now Greek dynamic province naming for new provinces in Georgia & Egypt.
+-Dacia now has unique ideas.
 
 Tweaks:
 -Altered Latifundia rebellion sizes:
