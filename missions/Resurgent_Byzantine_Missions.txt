@@ -5991,12 +5991,10 @@ byz_exarch_1 = {
 						}
 					}
 				}
-				else = {
-					341 = {
-						add_province_triggered_modifier = exarch_seat_modifier_med_dev
-						add_province_triggered_modifier = exarch_seat_modifier_high_dev
-						add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
-					}
+				341 = {
+					add_province_triggered_modifier = exarch_seat_modifier_med_dev
+					add_province_triggered_modifier = exarch_seat_modifier_high_dev
+					add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
 				}
 			}
 			

@@ -4,10 +4,11 @@
 -Tie new government mechanics to parliamentary issues?
 	-A possibility, but see above.
 
--Adjust Latin Imperial Authority to a new government mechanic.
-	-Certainly a plan in the future.
--Work on additional LTE missions to show up below Emperor Crusader missions, akin to what Russia has in Domination.
-	-Possibly, but the LTE missions need a full overhaul to actually show up below.
+Adjust Latin Imperial Authority modifiers above 0. Not sure I like the current ones.
+Idea: Latin Imperial Authority buttons: Costs X monthly Latin Imperial Authority, gives buffs to Knightly Order subjects?
+Button 1: Extra dev cost OR extra dev points for subjects
+Button 2: Extra reinforce speed or leader shock/fire or extra morale damage or whatevs for subjects
+Button 3: Extra production or goods produced for subjects.
 	
 Latin Empire's Knightly Orders:
 -------------------------------
@@ -18,15 +19,13 @@ Privilege ideas:
 -Knightly Orders: Allow for a unique type of mercenary company for the Latin Empire.
 -Need their other estate interactions reworked into privileges.
 
-#1.30 ideas:
+#Incident ideas:
 -Align Pentarchy/East Oriental Schism missions to the system the new Papal mission "Mend the Schism" mission will use?
 	-Deemed not necessary as that system is literally just a conversion of all Orthodox into Catholic. Which is... weird.
 
 
 
-WIP: The below is currently in the process of being implemented.
-Started work on the following. It is currently not fully implemented however.
--Added two new Imperial incidents. If the Emperor DLC is not detected, these events will fire regardless, as all that is DLC content is the HRE voting on the issue.
+-A new Imperial incident. If the Emperor DLC is not detected, these events will fire regardless, as all that is DLC content is the HRE voting on the issue.
 	-The Siege of Constantinople: Fires upon Ottomans declaring war on a Catholic Byzantium.
 		-The Emperor gets the choice to join in against the Ottomans to help Byzantium or not through an imperial incident.
 			-If the Emperor chooses to join in, Byzantium must concede to join the Empire in order for the Emperor to actually join in.
@@ -69,17 +68,10 @@ Initial idea layout:
 			The Genoese part is already represented as part of the Aragonese chain. Venice would likely also rather just opportunistically knock on their door.
 			Alternatively, Venice could be considered as a separate event and/or offer.
 
-#####################
-#Things to implement#
-#####################
 
-Decisions:
-----------
-Decision to form Dacia as a Romanian-cultured nation. Should rename Hunedoara to Sarmisegetusa.
-
-#######
-#Ideas#
-#######
+#############
+#Other Ideas#
+#############
 
 -Exarch Ravenna: Option to not cede Magna Graecia to Ravenna? Not sure.
 -Something mentioning the Monastery of the Pantocrator (Zeyrek Mosque) and how Byzantine emperors upon their death were buried there since the Komnenoi period.
@@ -159,6 +151,3 @@ Alternatively some other sort of elite unit of the Empire.
 To my knowledge, this feature isn't fully moddable yet.
 
 Another thing could be the Cataphract unique unit. Preliminary, you'd be limited by a scale that depends on your total goods produced of the Iron trade good.
-
-In all honesty as a side note, making a mod for Ottoderp that allows them to draft Janissary regiments from Dhimmi provinces or just provinces that are not of turkish culture wouldn't be half bad either.
-It's funny I said that back in 1.22 because it did flippin' happen in 1.23. ^^
