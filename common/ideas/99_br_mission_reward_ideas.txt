@@ -12,6 +12,7 @@ LAE_ideas_2 = {
 	
 	trigger = {
 		tag = LAE
+		mission_completed = lae_restore_constantinople
 	}
 	free = yes
     
