@@ -1,5 +1,3 @@
-
-
 LAE_ideas_2 = {
 	start = {
         discipline = 0.05
