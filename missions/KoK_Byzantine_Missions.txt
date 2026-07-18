@@ -999,7 +999,7 @@ MEE_BYZ_conquest_4 = {
 				custom_tooltip = " "
 			}
 			else = {
-				add_accepted_culture_or_dip_power = { culture = turkish dip_reward = yes }
+				add_accepted_culture_or_dip_power_stated = { culture = turkish dip_reward = yes }
 				
 				custom_tooltip = " "
 			}
@@ -1047,7 +1047,7 @@ MEE_BYZ_conquest_4 = {
 				id = MEE_Byzantine_Events.8
 				
 				option_1 = "
-					add_accepted_culture_or_dip_power = { culture = turkish dip_reward = yes }
+					add_accepted_culture_or_dip_power_stated = { culture = turkish dip_reward = yes }
 			
 					custom_tooltip = \" \"
 					

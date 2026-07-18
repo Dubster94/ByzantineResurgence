@@ -596,7 +596,7 @@ country_event = {
 			factor = 1
 		}
 		
-		add_accepted_culture_or_dip_power = { culture = turkish dip_reward = yes }
+		add_accepted_culture_or_dip_power_stated = { culture = turkish dip_reward = yes }
 		
 		custom_tooltip = " "
 		
