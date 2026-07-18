@@ -9,6 +9,7 @@ Features:
 -There's now Greek dynamic province naming for new provinces in Georgia & Egypt.
 -Dacia now has unique ideas.
 -The 6 monuments added by Byzantine Resurgence (Basilica of San Vitale, Hippodrome of Constantinople, Circus Maximus, Library of Alexandria, Great Harbor of Carthage & Tsarevets Church of Ascension) now have monument descriptions.
+-Generals estate event strategoi_estate_events.7 now has a specific fallback easter egg/fun thing if Constantinople was chosen as the province for using the local Basilica.
 
 Tweaks:
 -Altered Latifundia rebellion sizes:

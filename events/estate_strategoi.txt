@@ -634,7 +634,22 @@ country_event = { #6 [revolting_theme_capital.GetName] revolts!
 country_event = { #7 [estate_generals.GetName] wish to use the local Basilica
 	id = strategoi_estate_events.7
 	title = strategoi_estate_events.7.t
-	desc = strategoi_estate_events.7.d
+	desc = {
+		trigger = {
+			event_target:theme_capital_no_army_camp = {
+				province_id = 151
+			}
+		}
+		desc = strategoi_estate_events.7.d_extra
+	}
+	desc = {
+		trigger = {
+			event_target:theme_capital_no_army_camp = {
+				NOT = { province_id = 151 }
+			}
+		}
+		desc = strategoi_estate_events.7.d
+	}
 	picture = ST_PETERS_CHURCH_eventPicture
 	
 	immediate = {
@@ -700,6 +715,11 @@ country_event = { #7 [estate_generals.GetName] wish to use the local Basilica
 		ai_chance = {
 			factor = 50
 		}
+		trigger = {
+			event_target:theme_capital_no_army_camp = {
+				NOT = { province_id = 151 }
+			}
+		}
 		
 		add_patriarch_authority = -0.1
 		add_estate_loyalty = {
@@ -722,11 +742,45 @@ country_event = { #7 [estate_generals.GetName] wish to use the local Basilica
 		ai_chance = {
 			factor = 50
 		}
+		trigger = {
+			event_target:theme_capital_no_army_camp = {
+				NOT = { province_id = 151 }
+			}
+		}
 		
 		add_patriarch_authority = 0.05
 		add_estate_loyalty = {
 			estate = estate_generals
 			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_generals
+			desc = EST_VAL_DISALLOWED_TO_USE_BASILICA
+			influence = -10
+			duration = 3650
+		}
+	}
+	option = { #Option specifically for if Constantinople was picked.
+		name = strategoi_estate_events.7.c #Reprimand? They deserve to be replaced and then banished from this country for committing such an act!
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			event_target:theme_capital_no_army_camp = {
+				province_id = 151
+			}
+		}
+		
+		kill_leader = {
+			type = general
+		}
+		add_estate_loyalty = {
+			estate = estate_generals
+			loyalty = -20
 		}
 		add_estate_loyalty = {
 			estate = estate_church
@@ -747,6 +801,9 @@ country_event = { #7 [estate_generals.GetName] wish to use the local Basilica
 		highlight = yes
 		trigger = {
 			ruler_has_personality_ancestor = { key = zealot }
+			event_target:theme_capital_no_army_camp = {
+				NOT = { province_id = 151 }
+			}
 		}
 		
 		add_patriarch_authority = 0.1

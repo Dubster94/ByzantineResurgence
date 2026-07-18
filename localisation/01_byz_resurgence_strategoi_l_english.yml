@@ -275,7 +275,8 @@
  strategoi_estate_events.7.b:0 "Reprimand them for attempting such an act of desecration!"
  EST_VAL_ALLOWED_TO_USE_BASILICA:0 "Allowed Basilica to be used for military operations: §Y$VAL$%§!"
  EST_VAL_DISALLOWED_TO_USE_BASILICA:0 "Disallowed the use of religious buildings for military purposes: §Y$VAL$%§!"
- strategoi_estate_events.7.c:0 "Reprimand? They deserve to be replaced for committing such an act!"
+ strategoi_estate_events.7.c:0 "Reprimand? They deserve to be blinded for committing such an act!"
+ strategoi_estate_events.7.d_extra:0 "The lack of a proper army camp in [theme_capital_no_army_camp.GetName] has resulted in one of the most prominent generals of the Byzantine Empire entering the Hagia Sophia itself, proclaiming it shall now be a military barrack for the Palace Guard. While he may have served us well, they have clearly overstepped their boundaries. The $ESTATE_CHURCH$ is simply waiting for the [Root.Monarch.GetTitle] to say the word."
  
  strategoi_estate_events.8.t:0 "The [Root.GetGeneralsName] suggest building a Foundry"
  strategoi_estate_events.8.d:0 "With the advent of cannons on the battlefield, the local Strategos in [cannon_factory_province.GetName] has asked us to invest in building a foundry in the city. Doing so would please the [Root.GetGeneralsName] and could lead to great advancements in bombard technology."
