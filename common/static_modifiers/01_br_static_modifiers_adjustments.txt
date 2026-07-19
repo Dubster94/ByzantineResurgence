@@ -30,7 +30,7 @@ stability = {
 peace = {
 	war_exhaustion = -0.1
 	monthly_fervor_increase = 1
-	#global_autonomy = -0.1
+	#global_autonomy = -0.1 # Harb's Autonomy Overhaul - Really Important this isn't given here so commented rather than just removed
 	global_institution_spread = 0.1
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
@@ -46,9 +46,9 @@ peace = {
 
 mercantilism = {
 	global_prov_trade_power_modifier = 2.0
-	burghers_loyalty_modifier = 0.1 #BT Vanilla doubled effects
-	vaisyas_loyalty_modifier = 0.1 #BT Vanilla doubled effects
-	embargo_efficiency = 1 #BT Vanilla doubled effects
+	burghers_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
+	embargo_efficiency = 1
 	monthly_logothete_special_affairs_power = 0.2 #BR Added
 }
 
@@ -122,8 +122,8 @@ absolutism = {
 	#all_power_cost	= -0.05			#BTAddOn added. Very powerful compensation for losing Admin Efficiency, hopefully putting to rest any whining about that. Note again, the description of absolutism does read 'how efficient' the government is, so this seems fitting. # Harb's Autonomy Overhaul
 	#global_unrest = 10			#BTAddOn added. Further disuading exploitation and just makes logical sense... the description even says absolutism is how 'ruthless' the government is. BTIP Cut to replace with estate loyalty equilibrium # Harb's Autonomy Overhaul
 	#core_decay_on_your_own = -0.5			#BTAddOn removed. This is a fun idea that I might have to use elsewhere, but I'm just not seeing the link here with absolute governments specifically.
-	monthly_ottoman_decadence = -0.5
-	global_autonomy = -0.5 # Harb's Autonomy Overhaul
+	#monthly_ottoman_decadence = -0.50
+	global_autonomy = -0.6 # Harb's Autonomy Overhaul
 	#reelection_cost = -0.25
 	#I feel the idea behind absolutism is relegating all power away from, well, the estates of the realm, leaving the Monarch absolute. As such, estates should definitely become disloyal. This also makes a lot more sense mechanically, since now the player has a lot more control over how they handle their state. If they run headfirst into high absolutism with highly influential estates, they will definitely run into issues, what with them turning disloyal. As well, unrest will naturally rise as estates become disloyal at high absolutism, and other modifiers will have a degree of impact to try and offset Absolutism's bonuses.
 	church_absolutism_loyalty_modifier = -0.20 #BTIP Added.
@@ -163,6 +163,8 @@ high_army_professionalism = {
 	#siege_ability = 0.2			#BTAddOn removed. Replaced by discipline, plus I'm getting closer with sieges reblancing in this addon, I don't really want (or think we need) another wild card.
 	drill_decay_modifier = -0.5
 	allowed_samurai_fraction = 0.1
+	monthly_prussian_militarized_society_2 = 0.02 #BT Moved here away from dev_scaled because of Autonomy Overhaul changes to COUNTRY_DEVELOPMENT_SCALE
+	monthly_prussian_militarized_society_3 = 0.03 #BT Moved here away from dev_scaled because of Autonomy Overhaul changes to COUNTRY_DEVELOPMENT_SCALE
 	monthly_logothete_military_power = 0.1 #BR Added
 }
 

@@ -384,6 +384,8 @@ monarchy = {
 				great_council_of_mechelen_reform
 				parliament_vs_monarchy_reform
 				restoration_of_the_senate_reform
+				#BT
+				privy_council_reform
 			}
 		}
 		growth_of_administration = {
