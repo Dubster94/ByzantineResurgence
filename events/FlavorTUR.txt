@@ -6028,7 +6028,8 @@ country_event = {
 }
 
 # Collapse of the Mamluks - Ottoman event - written by Big Boss
-country_event = {
+# BT Harb event basically depreciated
+country_event = { #Can't deprecate it by commenting it without causing error log spam due to it being mentioned in vanilla on_actions. //Dub
 	id = flavor_tur.240
 	title = flavor_tur.240.t
 	desc = flavor_tur.240.desc
@@ -6036,6 +6037,10 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	is_triggered_only = yes
+
+	trigger = { #Deprecated this way.
+		always = no 
+	}
 
 	option = {
 		name = flavor_tur.240.a
@@ -6053,27 +6058,29 @@ country_event = {
 		}
 	}
 
-	option = {
-		name = flavor_tur.240.b
-		custom_tooltip = flavor_tur.240.b.tt
-		add_war_exhaustion = -2
-		add_prestige = 20
-		MAM = {
-			country_event = {
-				id = flavor_tur.241
-			}
-		}
-		add_country_modifier = {
-			name = tur_egyptian_annexation
-			duration = 7300
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
+	# BT Harb - Removed as this is a horrible choice and makes my job a lot harder if we keep it. ;-;
+	# option = {
+		# name = flavor_tur.240.b
+		# custom_tooltip = flavor_tur.240.b.tt
+		# add_war_exhaustion = -2
+		# add_prestige = 20
+		# MAM = {
+			# country_event = {
+				# id = flavor_tur.241
+			# }
+		# }
+		# add_country_modifier = {
+			# name = tur_egyptian_annexation
+			# duration = 7300
+		# }
+		# ai_chance = {
+			# factor = 0
+		# }
+	# }
 }
 
 # Collapse of the Mamluks - Mamluk event
+# BT Harb event basically depreciated
 country_event = {
 	id = flavor_tur.241
 	title = flavor_tur.241.t
@@ -6093,6 +6100,7 @@ country_event = {
 }
 
 # Collapse of the Mamluks - Creation of the Egyptian Eyalet
+# BT Harb - This entire thing has been moved into the peace treaty file 00_egyptian_eyalet.txt and is just here to spawn the major event thing for other nations.
 country_event = {
 	id = flavor_tur.242
 	title = flavor_tur.242.t
@@ -6100,85 +6108,182 @@ country_event = {
 	picture = COUNTRY_COLLAPSE_eventPicture
 	major = yes
 	fire_only_once = yes
+	hidden = yes
 	trigger = {
 		has_dlc = "Domination"
-		tag = TUR
-		has_country_flag = tur_decided_to_go_eyalet
-		or = {
-			and = {
-				ai = yes
-				had_country_flag = {
-					flag = tur_decided_to_go_eyalet
-					days = 365
-				}
-			}
-			and = {
-				ai = no
-				had_country_flag = {
-					flag = tur_decided_to_go_eyalet
-					days = 1095
-				}
-			}
-		}
-		is_in_war = {
-			casus_belli = cb_ottoman_invasion
-			defender_leader = MAM
-		}
-		war_score_against = {
-			who = MAM
-			value = 90
-		}
-		MAM = {
-			capital_scope = {
-				controlled_by = ROOT
-			}
-		}
-		NOT = { exists = EGY }
+		# tag = TUR
+		# has_country_flag = tur_decided_to_go_eyalet
+		# or = {
+			# and = {
+				# ai = yes
+				# had_country_flag = {
+					# flag = tur_decided_to_go_eyalet
+					# days = 365
+				# }
+			# }
+			# and = {
+				# ai = no
+				# had_country_flag = {
+					# flag = tur_decided_to_go_eyalet
+					# days = 1095
+				# }
+			# }
+		# }
+		# is_in_war = {
+			# casus_belli = cb_ottoman_invasion
+			# defender_leader = MAM
+		# }
+		# war_score_against = {
+			# who = MAM
+			# value = 90
+		# }
+		# MAM = {
+			# capital_scope = {
+				# controlled_by = ROOT
+			# }
+		# }
+		# NOT = { exists = EGY }
 	}
 	mean_time_to_happen = {
 		days = 1
 	}
 
-	option = {
-		name = flavor_tur.242.a
-		white_peace = MAM
-		MAM = {
-			remove_historical_rival = ROOT
-			every_subject_country = {
+	immediate = {
+		every_owned_province = {
 				limit = {
-					NOT = { total_development = 75 }
-					capital_scope = {
-						superregion = near_east_superregion
-					}
-				}
-				overlord = {
-					inherit = PREV
-				}
+				OR = {
+					region = egypt_region
+					province_id = 364
+					province_id = 2327
+					area = cyrenaica_area 
 			}
-			change_tag = EGY
-			on_change_tag_effect = yes
-		}
-		create_subject = {
-			who = EGY
-			subject_type = core_eyalet
-		}
-		EGY = {
-			if = {
-				limit = { NOT = { government = monarchy } }
-				change_government = monarchy
 			}
-			add_government_reform = eyalet_government
-			eyalet_effect = {
-				tag = EY7
-			}
-			add_liberty_desire = -50
-			add_country_modifier = {
-				name = tur_mamlukian_administration
-				duration = -1
-				desc = tur_mamlukian_administration_tt
+			cede_province = EGY
+			add_core = EGY
+			remove_core = TUR
 			}
 		}
 
+	option = {
+		name = flavor_tur.242.a
+		# white_peace = MAM
+		# MAM = {
+			# every_subject_country = {
+				# limit = {
+					# NOT = { total_development = 150 }
+					# capital_scope = {
+						# OR = {
+							# region = mesopotamia_region
+							# region = anatolia_region
+							# region = egypt_region
+							# region = mashriq_region
+						# }
+					# }
+				# }
+				# overlord = {
+					# inherit = PREV
+				# }
+			# }
+			# release_all_subjects = yes
+			# change_tag = EGY
+			# on_change_tag_effect = yes
+		# }
+		# hidden_effect = {
+			# every_core_province = {	# BT Harb - Made it so TUR returns Egypt region if they stole that
+				# limit = { 
+					# OR = {
+						# region = egypt_region
+						# province_id = 364
+						# province_id = 2327
+						# area = cyrenaica_area 
+					# }
+				# }
+				# cede_province = EGY
+			# }
+			# mesopotamia_region = {	#BT Harb - Added to create a more historic Egyptian Eyalet
+				# limit = {
+					# owned_by = EGY
+				# }
+				# cede_province = TUR
+				# add_territorial_core = TUR
+				# remove_core = EGY
+			# }
+			# anatolia_region = {	#BT Harb - Added to create a more historic Egyptian Eyalet
+				# limit = {
+					# owned_by = EGY
+				# }
+				# cede_province = TUR
+				# add_territorial_core = TUR
+				# remove_core = EGY
+			# }
+			# mashriq_region = {	#BT Harb - Added to create a more historic Egyptian Eyalet
+				# limit = {
+					# owned_by = EGY
+					# NOT = {
+						# province_id = 364
+					# }
+				# }
+				# cede_province = TUR
+				# add_territorial_core = TUR
+				# remove_core = EGY
+			# }
+		# }
+		# EGY = {
+			# hidden_effect = {
+				# every_claimed_province = { remove_claim = EGY }
+				# every_core_province = {
+					# limit = {
+						# NOT = {
+							# region = egypt_region
+							# province_id = 364
+							# province_id = 2327
+							# area = cyrenaica_area 
+						# }
+					# }
+					# remove_core = EGY
+					# random_core_country = {
+						# limit = { 
+							# NOT = { 
+								# tag = MAM 
+								# tag = EGY 
+							# } 
+						# }
+						# every_core_province = {
+							# limit = { 
+								# owned_by = EGY 
+								# NOT = {
+									# region = egypt_region
+									# province_id = 364
+									# province_id = 2327
+									# area = cyrenaica_area 
+								# }
+							# }
+							# cede_province = PREV
+						# }
+					# }
+				# }
+			# }
+		# }
+		# create_subject = {
+			# who = EGY
+			# subject_type = core_eyalet
+		# }
+		# EGY = {
+			# if = {
+				# limit = { NOT = { government = monarchy } }
+				# change_government = monarchy
+			# }
+			# add_government_reform = eyalet_government
+			# eyalet_effect = {
+				# tag = EY7
+			# }
+			# add_liberty_desire = -50
+			# add_country_modifier = {
+				# name = tur_mamlukian_administration
+				# duration = -1
+				# desc = tur_mamlukian_administration_tt
+			# }
+		# }
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -6192,22 +6297,22 @@ country_event = {
 			}
 		}
 	}
+	# BT Harb - Disabled because of new peace deal to make Egyptian Eyalet
+	# option = {
+		# name = flavor_tur.242.b
+		# add_adm_power = 300
 
-	option = {
-		name = flavor_tur.242.b
-		add_adm_power = 300
-
-		ai_chance = {
-			factor = 1
-			modifier = {
-				MAM = {
-					ai = yes
-					was_player = no
-				}
-				factor = 0
-			}
-		}
-	}
+		# ai_chance = {
+			# factor = 1
+			# modifier = {
+				# MAM = {
+					# ai = yes
+					# was_player = no
+				# }
+				# factor = 0
+			# }
+		# }
+	# }
 }
 
 # Egyptian Eyalet breaks free!
@@ -8062,6 +8167,14 @@ country_event = {
 			is_rival = HAB
 			NOT = { is_rival = FRA }
 			NOT = { war_with = FRA }
+			NOT = {	# BT Harb - Added to only create the alliance if they are both diplomatically isolated
+				num_of_allies = 2
+				num_of_diplomatic_relations = 4
+			}
+		}
+		NOT = {	# BT Harb - Added to only create the alliance if they are both diplomatically isolated
+			num_of_allies = 2
+			num_of_diplomatic_relations = 4
 		}
 	}
 	mean_time_to_happen = {
