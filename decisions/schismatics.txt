@@ -112,7 +112,10 @@ country_decisions = {
 					has_global_flag = east_west_schism_healed
 				}
 				AND = {
-					religion = coptic
+					OR = {
+						religion = coptic
+						religion = apostolic
+					}
 					has_global_flag = east_oriental_schism_healed
 				}
 			}
@@ -163,7 +166,7 @@ country_decisions = {
 					}
 					is_emperor = yes #The HREmperor really should never take this decision as it would remove their emperorship.
 					NOT = { prestige = 0 } #
-					total_development = 200 #Apparently "development" only applies to provinces...
+					total_development = 500 #Apparently "development" only applies to provinces...
 				}
 			}
 		}

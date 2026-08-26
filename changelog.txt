@@ -20,6 +20,7 @@ Tweaks:
 -March of Dacia decision now no longer considers single provinces, only the set few areas. 
 -Tweaked all Byzantine missions regarding "Trading in" bonuses to require you to be the production leader instead.
 -The Egypt Exarch decision no longer requires your capital to be in Italy to be established, thus leaving the amount of possible Exarches equal for capitals in Rome vs Constantinople.
+-Nations now need less than 500 dev to convert to Orthodox after schisms, up from 200.
 
 
 Bugfixes:
@@ -29,6 +30,7 @@ Bugfixes:
 -Fixed Syrmia/Sirmion province not being part of Subjugate Serbia mission (& Balkan Themes as a result) whilst rewards apply to it.
 -Fixed edge-case of Strategoi estate agenda calling a null province.
 -Fixed KoK reform "Reform Pronoia System" referencing Pronoia which makes no sense in this mod any more.
+-Fixed Convert to Orthodoxy decision not allowing Apostolic nations to convert - the decision was hidden for them.
 
 ###########################################
 
