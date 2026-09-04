@@ -657,7 +657,12 @@ great_harbor_of_carthage = {
 				overlord = { tag = BYZ } #For an Africa Exarch
 			}
 		}
-		owner = { mission_completed = byz_africa }
+		owner = { 
+			OR = {
+				mission_completed = byz_africa 
+				overlord = { mission_completed = byz_africa } #For an Africa Exarch
+			}
+		}
 	}
 
 	#what to do when it's built

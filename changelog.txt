@@ -31,6 +31,7 @@ Bugfixes:
 -Fixed edge-case of Strategoi estate agenda calling a null province.
 -Fixed KoK reform "Reform Pronoia System" referencing Pronoia which makes no sense in this mod any more.
 -Fixed Convert to Orthodoxy decision not allowing Apostolic nations to convert - the decision was hidden for them.
+-Fixed Harbor of Carthage getting destroyed upon making the Karchidon exarch.
 
 ###########################################
 
